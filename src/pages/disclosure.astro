@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const disclosureSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "How EasternAlignment Works",
+  "description": "An open and honest look at how EasternAlignment is funded through affiliate partnerships, and my commitment to unbiased reviews.",
+};
+---
+
+<BaseLayout
+  title="How This Site Works (Disclosure)"
+  description="Understanding how EasternAlignment is funded, my commitment to honest testing, and my affiliate partnerships."
+  jsonLd={disclosureSchema}
+>
+  <div class="disclosure-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Disclosure' }]} />
+      
+      <header class="disclosure-hero">
+        <span class="disclosure-icon">Transparency First</span>
+        <h1 class="disclosure-title">How EasternAlignment Works</h1>
+        <p class="disclosure-subtitle text-muted">
+          I believe you deserve to know exactly how this site operates, how it makes money, and why you can trust the reviews here.
+        </p>
+      </header>
+    </div>
+
+    <!-- The Cycle Section -->
+    <div class="container">
+      <div class="cycle-grid">
+        <div class="cycle-card card">
+          <div class="cycle-step">01</div>
+          <h3 class="cycle-title">Independent Testing</h3>
+          <p class="cycle-desc text-muted">
+            I personally sign up for every psychic platform using my own money. I don't accept free readings, sponsorships, or VIP treatment from the platforms. The experience I review is the exact experience you'll get.
+          </p>
+        </div>
+
+        <div class="cycle-card card">
+          <div class="cycle-step" style="color: var(--color-primary);">02</div>
+          <h3 class="cycle-title">Honest Reviews</h3>
+          <p class="cycle-desc text-muted">
+            I write detailed, uncompromising reviews outlining the good, the bad, and everything in between. If a platform underperforms or has predatory practices, I call it out. My loyalty is to the reader.
+          </p>
+        </div>
+
+        <div class="cycle-card card">
+          <div class="cycle-step" style="color: var(--color-sage);">03</div>
+          <h3 class="cycle-title">Affiliate Support</h3>
+          <p class="cycle-desc text-muted">
+            If a platform genuinely impresses me, I'll recommend it. If you click my recommendation link and sign up, I may earn a small commission at <strong>no extra cost to you</strong>. This funds my research and keeps the site ad-free.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deep Dive -->
+    <div class="container container--narrow">
+      <article class="disclosure-content prose">
+        <h2>Why I Do It This Way</h2>
+        <p>
+          When I was going through my darkest time, I relied on psychic reviews to find help. Instead, I found a maze of generic listicles written by people who clearly had never even spoken to a psychic. Many of these sites were essentially paid advertisements disguised as advice.
+        </p>
+        <p>
+          I built EasternAlignment to be the antidote to that. However, testing psychic platforms effectively is expensive. Thorough reviews require spending hundreds of dollars on readings across different mediums, tarot readers, and astrologers. 
+        </p>
+        
+        <div class="highlight-box">
+          <strong>The Affiliate Promise</strong>
+          <p>
+            The affiliate structure allows me to fund this massive ongoing research project without cluttering the site with annoying ads or charging you a subscription fee. But I have a strict rule: <em>A high affiliate commission will never buy a positive review.</em> Period.
+          </p>
+        </div>
+
+        <h2>What This Means For You</h2>
+        <ul>
+          <li><strong>You never pay more:</strong> The price per minute is exactly the same whether you use my link or go directly to the platform.</li>
+          <li><strong>You get the truth:</strong> I actively maintain a list of platforms I advise <em>against</em> using, regardless of whether they have an affiliate program or not.</li>
+          <li><strong>You support independent research:</strong> Using my links is the best way to say "thank you" and ensure EasternAlignment can continue testing and holding these platforms accountable.</li>
+        </ul>
+
+        <h2>Questions?</h2>
+        <p>
+          Transparency isn't just a buzzword here—it's the foundation of the site. If you have any questions about how this works, or if you've had a bad experience on a platform I recommended, I want to hear about it.
+        </p>
+        <p>
+          Drop me an email at: <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a>
+        </p>
+      </article>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .disclosure-page {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-16);
+  }
+
+  .disclosure-hero {
+    text-align: center;
+    margin-bottom: var(--space-12);
+    padding: var(--space-8) 0;
+  }
+
+  .disclosure-icon {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-warning-bg);
+    color: var(--color-primary-dark);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-6);
+  }
+
+  .disclosure-title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-4);
+  }
+
+  .disclosure-subtitle {
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Grid Section */
+  .cycle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-16);
+  }
+
+  .cycle-card {
+    padding: var(--space-8);
+    border-top: 4px solid transparent;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .cycle-card:nth-child(1) {
+    border-top-color: var(--color-accent-light);
+  }
+
+  .cycle-card:nth-child(2) {
+    border-top-color: var(--color-primary);
+  }
+
+  .cycle-card:nth-child(3) {
+    border-top-color: var(--color-sage);
+  }
+
+  .cycle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cycle-step {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    color: var(--color-accent-light);
+    margin-bottom: var(--space-4);
+    line-height: 1;
+  }
+
+  .cycle-title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-4);
+  }
+
+  .cycle-desc {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Content Section */
+  .highlight-box {
+    background: var(--color-bg-alt);
+    border-left: 4px solid var(--color-sage);
+    padding: var(--space-6) var(--space-8);
+    margin: var(--space-8) 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .highlight-box strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+  }
+
+  .highlight-box p {
+    margin: 0;
+    font-size: var(--text-base);
+  }
+
+  @media (max-width: 900px) {
+    .cycle-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .disclosure-title {
+      font-size: var(--text-3xl);
+    }
+    .highlight-box {
+      padding: var(--space-4) var(--space-6);
+    }
+  }
+</style>

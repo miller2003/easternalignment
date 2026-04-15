@@ -1,0 +1,128 @@
+---
+interface Props {
+  pros: string[];
+  cons: string[];
+}
+
+const { pros, cons } = Astro.props;
+---
+
+<div class="pros-cons">
+  <div class="pros-cons-col pros-col">
+    <h4 class="pros-cons-title">
+      <span class="pros-icon" aria-hidden="true">✓</span>
+      What I Liked
+    </h4>
+    <ul class="pros-cons-list">
+      {pros.map(pro => (
+        <li>{pro}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="pros-cons-col cons-col">
+    <h4 class="pros-cons-title">
+      <span class="cons-icon" aria-hidden="true">✕</span>
+      Could Be Better
+    </h4>
+    <ul class="pros-cons-list">
+      {cons.map(con => (
+        <li>{con}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    margin: var(--space-8) 0;
+  }
+
+  .pros-cons-col {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+  }
+
+  .pros-col {
+    background: var(--color-success-bg);
+    border: 1px solid rgba(107, 143, 94, 0.15);
+  }
+
+  .cons-col {
+    background: var(--color-error-bg);
+    border: 1px solid rgba(184, 92, 74, 0.15);
+  }
+
+  .pros-cons-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 var(--space-4) 0;
+  }
+
+  .pros-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-success);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: var(--weight-bold);
+  }
+
+  .cons-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-error);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: var(--weight-bold);
+  }
+
+  .pros-cons-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pros-cons-list li {
+    position: relative;
+    padding: var(--space-2) 0;
+    padding-left: var(--space-5);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-text);
+  }
+
+  .pros-cons-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-muted);
+  }
+
+  .pros-cons-list li + li {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  @media (max-width: 640px) {
+    .pros-cons {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

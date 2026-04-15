@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "description": "How EasternAlignment collects, uses, and protects your personal information.",
+  "url": "https://easternalignment.com/privacy/",
+};
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="How EasternAlignment collects, uses, and protects your personal information."
+  noindex={true}
+  jsonLd={pageSchema}
+>
+  <div class="section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Privacy Policy' }]} />
+      <h1>Privacy Policy</h1>
+
+      <div class="prose">
+        <p><em>Last updated: April 2026</em></p>
+
+        <h2>Information I Collect</h2>
+        <p>EasternAlignment ("I," "my," or "me") is committed to protecting your privacy. This Privacy Policy explains how I collect, use, and safeguard information when you visit easternalignment.com.</p>
+
+        <h3>Automatically Collected Information</h3>
+        <p>When you visit this website, I may automatically collect certain information, including:</p>
+        <ul>
+          <li>IP address (anonymized where possible)</li>
+          <li>Browser type and version</li>
+          <li>Pages visited and time spent on pages</li>
+          <li>Referring website</li>
+          <li>Device type and operating system</li>
+        </ul>
+
+        <h3>Information You Provide</h3>
+        <p>If you contact me via email or subscribe to any future newsletter, I may collect your email address and any information you voluntarily provide.</p>
+
+        <h2>How I Use Your Information</h2>
+        <p>I use the information I collect to:</p>
+        <ul>
+          <li>Improve the website content and user experience</li>
+          <li>Analyze website traffic and usage patterns</li>
+          <li>Respond to your inquiries</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>I may use third-party analytics services (such as Google Analytics) to help understand website usage. These services may collect information about your visit using cookies and similar technologies. You can opt out of Google Analytics by installing the Google Analytics Opt-out Browser Add-on.</p>
+
+        <h2>Affiliate Links</h2>
+        <p>This website contains affiliate links to third-party psychic reading platforms. When you click on these links, the destination platform may use cookies or other tracking technologies to track the referral. I do not control the privacy practices of these third parties. Please review their privacy policies before creating an account.</p>
+
+        <h2>Cookies</h2>
+        <p>I may use cookies to enhance your experience on this website. You can control cookie settings through your browser preferences.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>This website is not intended for children under 18 years of age. I do not knowingly collect personal information from children.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>I may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+
+        <h2>Contact Me</h2>
+        <p>If you have questions about this Privacy Policy, please contact me at <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

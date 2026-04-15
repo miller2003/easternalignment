@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PlatformCard from '../../components/PlatformCard.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+
+const reviewModules = import.meta.glob('../../content/reviews/*.md', { eager: true });
+const reviews = Object.entries(reviewModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .sort((a, b) => (a.rank || 99) - (b.rank || 99));
+---
+
+<BaseLayout
+  title="Psychic Platform Reviews 2026 — Tested & Ranked"
+  description="Independently tested and ranked reviews of the top online psychic reading platforms. Every review is based on real personal experience."
+>
+  <div class="reviews-hub section">
+    <div class="container">
+      <Breadcrumb items={[{ label: 'Reviews' }]} />
+
+      <header class="hub-header">
+        <h1>Psychic Platform Reviews</h1>
+        <p class="hub-description text-muted">
+          Every platform below has been personally tested through multiple paid readings. My reviews reflect real experiences — not sponsored content. I update these reviews regularly to keep them accurate.
+        </p>
+        <AffiliateDisclosure variant="inline" />
+      </header>
+
+      <div class="review-list stagger">
+        {reviews.map(review => (
+          <PlatformCard
+            rank={review.rank}
+            name={review.platformName}
+            slug={review.slug}
+            rating={review.rating}
+            verdict={review.verdict}
+            bestFor={review.bestFor || 'General readings'}
+            highlights={review.highlights || []}
+            affiliateUrl={review.affiliateUrl}
+            freeOffer={review.freeOffer}
+            isTopPick={review.rank === 1}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .hub-header {
+    margin-bottom: var(--space-10);
+    max-width: var(--max-width-content);
+  }
+
+  .hub-header h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .hub-description {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-4);
+  }
+
+  .review-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: 800px;
+  }
+</style>

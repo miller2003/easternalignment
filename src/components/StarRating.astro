@@ -1,0 +1,108 @@
+---
+interface Props {
+  rating: number;       /* 0 to 5, supports 0.5 increments */
+  label?: string;       /* e.g. "Overall Rating" */
+  showValue?: boolean;  /* Show the numeric value next to stars */
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const {
+  rating,
+  label = '',
+  showValue = true,
+  size = 'md'
+} = Astro.props;
+
+const fullStars = Math.floor(rating);
+const hasHalf = rating % 1 >= 0.5;
+const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+const ratingLabel = `${rating} out of 5 stars${label ? ` for ${label}` : ''}`;
+---
+
+<div class:list={['star-rating', `star-rating--${size}`]} role="img" aria-label={ratingLabel}>
+  {label && <span class="star-rating-label">{label}</span>}
+  <span class="stars">
+    {Array(fullStars).fill(0).map(() => (
+      <span class="star star--full" aria-hidden="true">★</span>
+    ))}
+    {hasHalf && (
+      <span class="star star--half" aria-hidden="true">
+        <span class="star-bg">★</span>
+        <span class="star-fg">★</span>
+      </span>
+    )}
+    {Array(emptyStars).fill(0).map(() => (
+      <span class="star star--empty" aria-hidden="true">★</span>
+    ))}
+  </span>
+  {showValue && <span class="star-value">{rating.toFixed(1)}</span>}
+</div>
+
+<style>
+  .star-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    line-height: 1;
+  }
+
+  .star-rating-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stars {
+    display: inline-flex;
+    gap: 1px;
+  }
+
+  .star {
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .star--full {
+    color: var(--color-star);
+  }
+
+  .star--empty {
+    color: var(--color-star-empty);
+  }
+
+  /* Half star implementation */
+  .star--half {
+    position: relative;
+    display: inline-block;
+  }
+
+  .star--half .star-bg {
+    color: var(--color-star-empty);
+  }
+
+  .star--half .star-fg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 50%;
+    color: var(--color-star);
+  }
+
+  .star-value {
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+  }
+
+  /* Sizes */
+  .star-rating--sm .star { font-size: 0.85rem; }
+  .star-rating--sm .star-value { font-size: var(--text-xs); }
+
+  .star-rating--md .star { font-size: 1.15rem; }
+  .star-rating--md .star-value { font-size: var(--text-sm); }
+
+  .star-rating--lg .star { font-size: 1.5rem; }
+  .star-rating--lg .star-value { font-size: var(--text-lg); }
+</style>

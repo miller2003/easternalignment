@@ -1,0 +1,153 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import AuthorBio from '../components/AuthorBio.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  category?: string;
+  publishDate: string;
+  updatedDate?: string;
+  breadcrumbParent?: { label: string; href: string };
+}
+
+const {
+  title,
+  description,
+  category,
+  publishDate,
+  updatedDate,
+  breadcrumbParent = { label: 'Guides', href: '/guides/' },
+} = Astro.props;
+
+const displayDate = updatedDate || publishDate;
+const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+/* Estimate reading time: ~200 words per minute */
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": {
+    "@type": "Person",
+    "name": "Sarah",
+  },
+  "datePublished": publishDate,
+  ...(updatedDate ? { "dateModified": updatedDate } : {}),
+  "publisher": {
+    "@type": "Organization",
+    "name": "EasternAlignment",
+    "url": "https://easternalignment.com",
+  },
+};
+---
+
+<BaseLayout title={title} description={description} ogType="article" jsonLd={articleSchema}>
+  <div class="article-page">
+    <!-- Breadcrumb -->
+    <div class="container container--narrow">
+      <Breadcrumb items={[
+        breadcrumbParent,
+        { label: title }
+      ]} />
+    </div>
+
+    <!-- Article Hero -->
+    <header class="article-hero">
+      <div class="container container--narrow">
+        <div class="article-hero-meta">
+          {category && <span class="badge badge--sage">{category}</span>}
+          <span class="article-date">
+            {updatedDate ? 'Updated' : 'Published'} {formattedDate}
+          </span>
+        </div>
+
+        <h1 class="article-title">{title}</h1>
+
+        <p class="article-excerpt">{description}</p>
+
+        <div class="article-author-line">
+          <img src="/sarah-avatar.jpg" alt="Sarah" class="author-avatar-sm" width="32" height="32" loading="lazy" />
+          <span class="author-name-sm">Sarah</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="article-content container container--narrow">
+      <div class="prose">
+        <slot />
+      </div>
+
+      <AuthorBio />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .article-page {
+    padding-top: var(--space-8);
+  }
+
+  .article-hero {
+    padding: var(--space-8) 0 var(--space-12);
+    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--space-12);
+  }
+
+  .article-hero-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .article-date {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .article-title {
+    margin-bottom: var(--space-4);
+  }
+
+  .article-excerpt {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+    max-width: 600px;
+  }
+
+  .article-author-line {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .author-avatar-sm {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 1.5px solid var(--color-border-light);
+  }
+
+  .author-name-sm {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+  }
+
+  .article-content {
+    padding-bottom: var(--space-16);
+  }
+</style>

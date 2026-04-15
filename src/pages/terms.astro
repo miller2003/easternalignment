@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Use",
+  "description": "Terms and conditions governing your use of the EasternAlignment website.",
+  "url": "https://easternalignment.com/terms/",
+};
+---
+
+<BaseLayout
+  title="Terms of Use"
+  description="Terms and conditions governing your use of the EasternAlignment website."
+  noindex={true}
+  jsonLd={pageSchema}
+>
+  <div class="section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Terms of Use' }]} />
+      <h1>Terms of Use</h1>
+
+      <div class="prose">
+        <p><em>Last updated: April 2026</em></p>
+
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing and using EasternAlignment (easternalignment.com), you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use this website.</p>
+
+        <h2>Content Disclaimer</h2>
+        <p>The content on EasternAlignment is provided for <strong>informational and entertainment purposes only</strong>. My reviews, guides, and articles represent my personal opinions based on first-hand experience and are not intended as professional advice of any kind — including but not limited to medical, financial, legal, or psychological advice.</p>
+
+        <h2>Psychic Services Disclaimer</h2>
+        <p>EasternAlignment is a review and information website. I do not provide psychic readings or spiritual services directly. When you click on links to third-party psychic platforms, you are leaving this website and engaging with independent services. I am not responsible for the quality, accuracy, or outcome of any psychic reading you receive through a third-party platform.</p>
+
+        <p>Psychic readings should not be used as a substitute for professional counseling, therapy, medical treatment, legal advice, or financial planning.</p>
+
+        <h2>Affiliate Relationships</h2>
+        <p>Some links on this website are affiliate links. This means I may earn a commission if you sign up for a service through my links. See my <a href="/disclosure/">Disclosure page</a> for full details.</p>
+
+        <h2>Intellectual Property</h2>
+        <p>All content on EasternAlignment — including text, images, graphics, and design elements — is the property of EasternAlignment and is protected by applicable copyright laws. You may not reproduce, distribute, or republish this content without written permission.</p>
+
+        <h2>User Conduct</h2>
+        <p>When using this website, you agree not to:</p>
+        <ul>
+          <li>Use the site for any unlawful purpose</li>
+          <li>Attempt to gain unauthorized access to this website</li>
+          <li>Interfere with the proper functioning of the website</li>
+          <li>Scrape or harvest content without permission</li>
+        </ul>
+
+        <h2>Limitation of Liability</h2>
+        <p>EasternAlignment and its owner shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of the website or any third-party services linked from the website.</p>
+
+        <h2>Changes to Terms</h2>
+        <p>I reserve the right to modify these Terms of Use at any time. Changes will be posted on this page with an updated revision date. Your continued use of the website after any modifications constitutes your acceptance of the updated terms.</p>
+
+        <h2>Contact</h2>
+        <p>For questions about these Terms of Use, please contact me at <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

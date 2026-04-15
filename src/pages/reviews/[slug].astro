@@ -1,0 +1,176 @@
+---
+import ReviewLayout from '../../layouts/ReviewLayout.astro';
+import ProsCons from '../../components/ProsCons.astro';
+import CTABox from '../../components/CTABox.astro';
+import FAQ from '../../components/FAQ.astro';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../../content/reviews/*.md');
+  const paths = [];
+  for (const path in posts) {
+    const post = await posts[path]();
+    const slug = path.split('/').pop().replace('.md', '');
+    paths.push({
+      params: { slug },
+      props: post,
+    });
+  }
+  return paths;
+}
+
+const { default: Content, frontmatter } = Astro.props;
+const currentSlug = Astro.params.slug;
+
+/* Fetch all reviews for cross-linking */
+const allReviewModules = import.meta.glob('../../content/reviews/*.md', { eager: true });
+const otherReviews = Object.entries(allReviewModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(r => r.slug !== currentSlug)
+  .sort((a, b) => (a.rank || 99) - (b.rank || 99));
+
+const faqItems = [
+  {
+    question: `Is ${frontmatter.platformName} legitimate?`,
+    answer: `Yes. ${frontmatter.platformName} is one of the longest-running online psychic reading platforms and has served millions of users. I've personally tested it through multiple paid sessions over an extended period.`
+  },
+  {
+    question: `How much does ${frontmatter.platformName} cost?`,
+    answer: `${frontmatter.platformName} pricing starts from ${frontmatter.pricing || '$1.99/min'} and varies depending on the psychic's experience level. ${frontmatter.freeOffer ? `New users can take advantage of ${frontmatter.freeOffer}.` : ''}`
+  },
+  {
+    question: `Does ${frontmatter.platformName} offer a money-back guarantee?`,
+    answer: `${frontmatter.platformName} does offer a satisfaction guarantee. If you're unhappy with your reading, you can reach out to customer support for credit or resolution. Check their current terms for specific details.`
+  },
+];
+---
+
+<ReviewLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  platformName={frontmatter.platformName}
+  rating={frontmatter.rating}
+  verdict={frontmatter.verdict}
+  affiliateUrl={frontmatter.affiliateUrl}
+  freeOffer={frontmatter.freeOffer}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+>
+  <Content />
+
+  {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
+    <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
+  )}
+
+  <CTABox
+    title={`Ready to try ${frontmatter.platformName}?`}
+    description={frontmatter.freeOffer ? `Take advantage of their current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.'}
+    buttonText={`Visit ${frontmatter.platformName} →`}
+    buttonUrl={frontmatter.affiliateUrl || '#'}
+    variant="highlight"
+  />
+
+  <FAQ items={faqItems} title={`${frontmatter.platformName} FAQ`} />
+
+  {otherReviews.length > 0 && (
+    <section class="other-reviews">
+      <h2 class="other-reviews-title">Other Platform Reviews</h2>
+      <div class="other-reviews-grid">
+        {otherReviews.map(review => (
+          <a href={`/reviews/${review.slug}/`} class="other-review-card">
+            <span class="other-review-rank">#{review.rank}</span>
+            <div class="other-review-info">
+              <span class="other-review-name">{review.platformName}</span>
+              <span class="other-review-rating">★ {review.rating}/5</span>
+            </div>
+            <span class="other-review-arrow">→</span>
+          </a>
+        ))}
+      </div>
+      <div class="other-reviews-cta">
+        <a href="/reviews/" class="btn btn--ghost">View All Reviews →</a>
+      </div>
+    </section>
+  )}
+</ReviewLayout>
+
+<style>
+  .other-reviews {
+    margin: var(--space-12) 0;
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .other-reviews-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .other-reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .other-review-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    min-height: 44px;
+  }
+
+  .other-review-card:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .other-review-rank {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    min-width: 32px;
+  }
+
+  .other-review-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .other-review-name {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    font-size: var(--text-base);
+  }
+
+  .other-review-rating {
+    font-size: var(--text-sm);
+    color: var(--color-star);
+  }
+
+  .other-review-arrow {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    transition: transform var(--transition-fast);
+  }
+
+  .other-review-card:hover .other-review-arrow {
+    transform: translateX(4px);
+    color: var(--color-primary);
+  }
+
+  .other-reviews-cta {
+    text-align: center;
+    margin-top: var(--space-6);
+  }
+</style>
+

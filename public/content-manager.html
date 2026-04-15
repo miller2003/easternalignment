@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eastern Alignment — Content Manager</title>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #1c2129;
+  --bg-input: #0d1117;
+  --border: #30363d;
+  --border-light: #21262d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+  --accent: #c4956a;
+  --accent-hover: #d4a57a;
+  --accent-dim: rgba(196, 149, 106, 0.15);
+  --success: #3fb950;
+  --success-bg: rgba(63, 185, 80, 0.12);
+  --error: #f85149;
+  --error-bg: rgba(248, 81, 73, 0.12);
+  --warning: #d29922;
+  --radius: 6px;
+  --font-mono: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --sidebar-w: 260px;
+  --header-h: 48px;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* ===== BROWSER WARNING ===== */
+.browser-notice {
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+  padding: 6px 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ===== ONBOARDING ===== */
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 28px);
+  gap: 20px;
+}
+
+.onboarding h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.onboarding p {
+  color: var(--text-secondary);
+  max-width: 420px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.btn-pick-dir {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-pick-dir:hover { background: var(--accent-hover); }
+
+/* ===== APP SHELL ===== */
+.app { display: none; height: calc(100vh - 28px); }
+.app.active { display: flex; }
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-header span { color: var(--accent); }
+
+.content-types { border-bottom: 1px solid var(--border); }
+
+.type-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s, color 0.1s;
+}
+
+.type-btn:hover { background: var(--bg-tertiary); color: var(--text-primary); }
+
+.type-btn.active {
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.type-btn .type-icon { font-size: 15px; width: 20px; text-align: center; }
+.type-btn .type-count {
+  margin-left: auto;
+  background: var(--bg-primary);
+  color: var(--text-muted);
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.type-btn.active .type-count { background: var(--accent-dim); color: var(--accent); }
+
+.file-list-header {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-list-header span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.btn-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-new:hover { background: var(--accent-hover); }
+
+.file-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 8px;
+}
+
+.file-list::-webkit-scrollbar { width: 6px; }
+.file-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: background 0.1s;
+  border: 1px solid transparent;
+}
+
+.file-item:hover { background: var(--bg-tertiary); color: var(--text-primary); }
+
+.file-item.active {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-color: rgba(196,149,106,0.2);
+}
+
+.file-item .file-icon { font-size: 13px; opacity: 0.6; }
+.file-item .file-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.sidebar-footer {
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-footer button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ===== MAIN ===== */
+.main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+/* Editor toolbar */
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  min-height: 44px;
+}
+
+.editor-toolbar .filename-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.editor-toolbar .filename-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.editor-toolbar .filename-input {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: var(--font-mono);
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  width: 280px;
+}
+
+.editor-toolbar .filename-ext {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.btn-save {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: var(--success);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-save:hover { opacity: 0.9; }
+.btn-save:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-delete {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--error-bg);
+  color: var(--error);
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(248,81,73,0.3);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn-delete:hover { background: rgba(248,81,73,0.2); }
+
+/* ===== EDITOR AREA ===== */
+.editor-area {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Frontmatter panel */
+.frontmatter-panel {
+  width: 380px;
+  min-width: 380px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.frontmatter-panel::-webkit-scrollbar { width: 6px; }
+.frontmatter-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.fm-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fm-field { margin-bottom: 12px; }
+
+.fm-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.fm-field input,
+.fm-field textarea,
+.fm-field select {
+  width: 100%;
+  padding: 6px 8px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 13px;
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  transition: border-color 0.15s;
+}
+
+.fm-field input:focus,
+.fm-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.fm-field textarea { resize: vertical; min-height: 60px; font-family: var(--font-mono); font-size: 12px; }
+
+.fm-field .field-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.fm-field-array .array-items { display: flex; flex-direction: column; gap: 4px; }
+
+.fm-field-array .array-item {
+  display: flex;
+  gap: 4px;
+}
+
+.fm-field-array .array-item input { flex: 1; font-size: 12px; padding: 4px 6px; }
+
+.fm-field-array .array-item button {
+  padding: 2px 8px;
+  background: var(--error-bg);
+  color: var(--error);
+  border: 1px solid rgba(248,81,73,0.2);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-add-item {
+  margin-top: 4px;
+  padding: 3px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.btn-add-item:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Markdown panes */
+.markdown-panes {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pane-header {
+  padding: 6px 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+}
+
+.pane-divider {
+  width: 1px;
+  background: var(--border);
+}
+
+#md-editor {
+  flex: 1;
+  width: 100%;
+  padding: 16px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: none;
+  resize: none;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  outline: none;
+  tab-size: 2;
+}
+
+#md-preview {
+  flex: 1;
+  padding: 16px 24px;
+  overflow-y: auto;
+  background: var(--bg-primary);
+  line-height: 1.7;
+}
+
+#md-preview::-webkit-scrollbar { width: 6px; }
+#md-preview::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Preview typography */
+#md-preview h1 { font-size: 24px; margin: 24px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+#md-preview h2 { font-size: 20px; margin: 20px 0 10px; border-bottom: 1px solid var(--border-light); padding-bottom: 6px; }
+#md-preview h3 { font-size: 16px; margin: 16px 0 8px; }
+#md-preview h4 { font-size: 14px; margin: 14px 0 6px; }
+#md-preview p { margin: 0 0 12px; color: var(--text-secondary); }
+#md-preview a { color: var(--accent); }
+#md-preview ul, #md-preview ol { margin: 0 0 12px; padding-left: 24px; color: var(--text-secondary); }
+#md-preview li { margin-bottom: 4px; }
+#md-preview code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 3px; font-size: 12px; font-family: var(--font-mono); }
+#md-preview pre { background: var(--bg-tertiary); padding: 12px; border-radius: var(--radius); overflow-x: auto; margin: 12px 0; }
+#md-preview pre code { background: none; padding: 0; }
+#md-preview blockquote { border-left: 3px solid var(--accent); padding: 4px 12px; margin: 12px 0; color: var(--text-muted); }
+#md-preview strong { color: var(--text-primary); }
+#md-preview table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+#md-preview th, #md-preview td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; font-size: 13px; }
+#md-preview th { background: var(--bg-tertiary); font-weight: 600; }
+#md-preview hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+#md-preview img { max-width: 100%; border-radius: var(--radius); }
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  gap: 12px;
+}
+
+.empty-state .empty-icon { font-size: 36px; opacity: 0.4; }
+.empty-state p { font-size: 14px; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 1000;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: 480px;
+}
+
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { background: var(--success-bg); color: var(--success); border: 1px solid rgba(63,185,80,0.3); }
+.toast.error { background: var(--error-bg); color: var(--error); border: 1px solid rgba(248,81,73,0.3); }
+
+/* Unsaved indicator */
+.unsaved-dot {
+  display: none;
+  width: 8px;
+  height: 8px;
+  background: var(--warning);
+  border-radius: 50%;
+}
+
+.unsaved-dot.show { display: inline-block; }
+
+/* Loading spinner */
+.loading { color: var(--text-muted); font-size: 13px; padding: 20px 16px; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="browser-notice">⚠ 仅支持 Chrome / Edge（需要 File System Access API）</div>
+
+<!-- ONBOARDING -->
+<div id="onboarding" class="onboarding">
+  <h1>✦ Eastern Alignment — Content Manager</h1>
+  <p>本地可视化内容管理工具。选择项目根目录后即可管理 <code>src/content/</code> 下的所有 Markdown 文件。</p>
+  <button class="btn-pick-dir" id="btn-pick-root" onclick="pickDirectory()">📁 选择项目根目录</button>
+  <p style="font-size:12px; color:var(--text-muted);">选择包含 <code>src/content/</code> 的文件夹</p>
+</div>
+
+<!-- APP -->
+<div id="app" class="app">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header"><span>✦</span> Content Manager</div>
+
+    <div class="content-types" id="content-types">
+      <button class="type-btn active" data-type="reviews" onclick="switchType('reviews')">
+        <span class="type-icon">⭐</span> Reviews <span class="type-count" id="count-reviews">0</span>
+      </button>
+      <button class="type-btn" data-type="comparisons" onclick="switchType('comparisons')">
+        <span class="type-icon">⚖️</span> Comparisons <span class="type-count" id="count-comparisons">0</span>
+      </button>
+      <button class="type-btn" data-type="guides" onclick="switchType('guides')">
+        <span class="type-icon">📖</span> Guides <span class="type-count" id="count-guides">0</span>
+      </button>
+      <button class="type-btn" data-type="blog" onclick="switchType('blog')">
+        <span class="type-icon">✏️</span> Blog <span class="type-count" id="count-blog">0</span>
+      </button>
+    </div>
+
+    <div class="file-list-header">
+      <span>Files</span>
+      <button class="btn-new" onclick="newFile()">+ New</button>
+    </div>
+
+    <div class="file-list" id="file-list"></div>
+
+    <div class="sidebar-footer">
+      📂 <span id="root-path" style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"></span>
+      <button onclick="pickDirectory()">切换</button>
+    </div>
+  </aside>
+
+  <!-- Main Area -->
+  <div class="main" id="main-area">
+    <!-- Empty state -->
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon">📝</div>
+      <p>选择一个文件或点击 <strong>+ New</strong> 创建新内容</p>
+    </div>
+
+    <!-- Editor (hidden by default) -->
+    <div id="editor-wrap" style="display:none; flex:1; display:none; flex-direction:column; overflow:hidden;">
+      <!-- Toolbar -->
+      <div class="editor-toolbar">
+        <div class="filename-group">
+          <span class="filename-label">文件名:</span>
+          <input type="text" class="filename-input" id="filename-input" placeholder="my-article" oninput="markUnsaved()">
+          <span class="filename-ext">.md</span>
+          <div class="unsaved-dot" id="unsaved-dot" title="有未保存的更改"></div>
+        </div>
+        <button class="btn-delete" id="btn-delete" onclick="deleteFile()" style="display:none;">🗑 删除</button>
+        <button class="btn-save" id="btn-save" onclick="saveFile()">💾 保存 <kbd style="font-size:11px;opacity:0.7;">Ctrl+S</kbd></button>
+      </div>
+
+      <!-- Editor panels -->
+      <div class="editor-area">
+        <!-- Frontmatter panel -->
+        <div class="frontmatter-panel" id="fm-panel">
+          <div class="fm-title">📋 Frontmatter 字段</div>
+          <div id="fm-fields"></div>
+        </div>
+
+        <!-- Markdown panes -->
+        <div class="markdown-panes">
+          <div class="pane">
+            <div class="pane-header">✎ Markdown 正文</div>
+            <textarea id="md-editor" placeholder="在此编写正文内容..." oninput="onEditorInput()"></textarea>
+          </div>
+          <div class="pane-divider"></div>
+          <div class="pane">
+            <div class="pane-header">👁 实时预览</div>
+            <div id="md-preview"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== STATE =====
+let rootHandle = null;        // FileSystemDirectoryHandle for project root
+let contentHandle = null;     // FileSystemDirectoryHandle for src/content/
+let typeHandles = {};         // { reviews: handle, comparisons: handle, ... }
+let currentType = 'reviews';
+let currentFileName = null;   // currently editing file name (without .md)
+let isNewFile = false;
+let hasUnsaved = false;
+
+// Cached file list & frontmatter schemas per type
+let fileCache = {};           // { reviews: [{name, frontmatter, body},...], ... }
+let schemaCache = {};         // { reviews: [{key, type, sample},...], ... }
+
+const CONTENT_TYPES = ['reviews', 'comparisons', 'guides', 'blog'];
+
+// ===== DIRECTORY PICKER =====
+async function pickDirectory() {
+  try {
+    rootHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    // Locate src/content/
+    const srcHandle = await rootHandle.getDirectoryHandle('src');
+    contentHandle = await srcHandle.getDirectoryHandle('content');
+
+    // Get type sub-dirs
+    for (const type of CONTENT_TYPES) {
+      try {
+        typeHandles[type] = await contentHandle.getDirectoryHandle(type);
+      } catch {
+        // Create if missing
+        typeHandles[type] = await contentHandle.getDirectoryHandle(type, { create: true });
+      }
+    }
+
+    document.getElementById('root-path').textContent = rootHandle.name;
+    document.getElementById('onboarding').style.display = 'none';
+    document.getElementById('app').classList.add('active');
+
+    // Load all files
+    await loadAllFiles();
+    switchType(currentType);
+
+  } catch (err) {
+    if (err.name !== 'AbortError') {
+      showToast('❌ 无法定位 src/content/ 目录，请确认选择了正确的项目根目录', 'error');
+    }
+  }
+}
+
+// ===== FILE LOADING =====
+async function loadAllFiles() {
+  for (const type of CONTENT_TYPES) {
+    fileCache[type] = [];
+    const dirHandle = typeHandles[type];
+    if (!dirHandle) continue;
+
+    for await (const entry of dirHandle.values()) {
+      if (entry.kind === 'file' && entry.name.endsWith('.md')) {
+        const file = await entry.getFile();
+        const text = await file.text();
+        const parsed = parseFrontmatter(text);
+        fileCache[type].push({
+          name: entry.name.replace('.md', ''),
+          frontmatter: parsed.frontmatter,
+          body: parsed.body,
+          raw: text,
+        });
+      }
+    }
+
+    // Sort by rank or title
+    fileCache[type].sort((a, b) => {
+      if (a.frontmatter.rank && b.frontmatter.rank) return a.frontmatter.rank - b.frontmatter.rank;
+      return (a.frontmatter.title || a.name).localeCompare(b.frontmatter.title || b.name);
+    });
+
+    // Build schema from all files in this type
+    schemaCache[type] = buildSchema(fileCache[type]);
+
+    // Update count
+    document.getElementById(`count-${type}`).textContent = fileCache[type].length;
+  }
+}
+
+// ===== FRONTMATTER PARSER =====
+function parseFrontmatter(text) {
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!match) return { frontmatter: {}, body: text };
+
+  const fm = {};
+  const lines = match[1].split('\n');
+  let currentKey = null;
+  let currentArrayKey = null;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Array item
+    if (currentArrayKey && /^\s+-\s/.test(line)) {
+      const val = line.replace(/^\s+-\s+/, '').replace(/^["']|["']$/g, '').trim();
+      fm[currentArrayKey].push(val);
+      continue;
+    }
+
+    // Key-value pair
+    const kvMatch = line.match(/^(\w[\w-]*)\s*:\s*(.*)$/);
+    if (kvMatch) {
+      currentArrayKey = null;
+      const key = kvMatch[1];
+      let val = kvMatch[2].trim();
+
+      // Check if next lines are array items
+      if (val === '' && i + 1 < lines.length && /^\s+-\s/.test(lines[i + 1])) {
+        fm[key] = [];
+        currentArrayKey = key;
+      } else {
+        // Remove quotes
+        val = val.replace(/^["']|["']$/g, '');
+        // Type coerce
+        if (val === 'true') val = true;
+        else if (val === 'false') val = false;
+        else if (/^\d+(\.\d+)?$/.test(val) && !key.toLowerCase().includes('date')) val = parseFloat(val);
+        fm[key] = val;
+      }
+    }
+  }
+
+  return { frontmatter: fm, body: match[2].trim() };
+}
+
+// ===== SCHEMA BUILDER =====
+function buildSchema(files) {
+  const fieldMap = {};  // key -> { type, samples: [], count }
+
+  for (const file of files) {
+    for (const [key, val] of Object.entries(file.frontmatter)) {
+      if (!fieldMap[key]) {
+        fieldMap[key] = { key, type: detectType(val), samples: [], count: 0 };
+      }
+      fieldMap[key].count++;
+      if (fieldMap[key].samples.length < 3 && val !== '' && val !== undefined) {
+        fieldMap[key].samples.push(val);
+      }
+      // upgrade type if needed
+      if (Array.isArray(val)) fieldMap[key].type = 'array';
+    }
+  }
+
+  // Sort: title first, then description, then by frequency
+  const priority = ['title', 'description', 'platformName', 'rating', 'verdict', 'affiliateUrl', 'freeOffer', 'pricing', 'bestFor', 'highlights', 'pros', 'cons', 'platforms', 'winner', 'category', 'publishDate', 'updatedDate', 'rank'];
+
+  return Object.values(fieldMap).sort((a, b) => {
+    const ai = priority.indexOf(a.key);
+    const bi = priority.indexOf(b.key);
+    if (ai !== -1 && bi !== -1) return ai - bi;
+    if (ai !== -1) return -1;
+    if (bi !== -1) return 1;
+    return b.count - a.count;
+  });
+}
+
+function detectType(val) {
+  if (Array.isArray(val)) return 'array';
+  if (typeof val === 'number') return 'number';
+  if (typeof val === 'boolean') return 'boolean';
+  if (typeof val === 'string' && /^\d{4}-\d{2}-\d{2}/.test(val)) return 'date';
+  if (typeof val === 'string' && val.length > 100) return 'textarea';
+  return 'string';
+}
+
+// ===== SWITCH TYPE =====
+function switchType(type) {
+  currentType = type;
+
+  // Update type buttons
+  document.querySelectorAll('.type-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.type === type);
+  });
+
+  // Render file list
+  renderFileList();
+
+  // Clear editor
+  showEmptyState();
+}
+
+function renderFileList() {
+  const list = document.getElementById('file-list');
+  const files = fileCache[currentType] || [];
+
+  if (files.length === 0) {
+    list.innerHTML = `<div class="loading">此目录暂无文件</div>`;
+    return;
+  }
+
+  list.innerHTML = files.map(f => `
+    <div class="file-item ${currentFileName === f.name ? 'active' : ''}" onclick="openFile('${f.name}')" title="${f.frontmatter.title || f.name}">
+      <span class="file-icon">📄</span>
+      <span class="file-name">${f.frontmatter.title || f.name}</span>
+    </div>
+  `).join('');
+}
+
+// ===== UI STATES =====
+function showEmptyState() {
+  currentFileName = null;
+  isNewFile = false;
+  hasUnsaved = false;
+  document.getElementById('empty-state').style.display = 'flex';
+  document.getElementById('editor-wrap').style.display = 'none';
+}
+
+function showEditor() {
+  document.getElementById('empty-state').style.display = 'none';
+  const wrap = document.getElementById('editor-wrap');
+  wrap.style.display = 'flex';
+  wrap.style.flexDirection = 'column';
+}
+
+// ===== OPEN FILE =====
+async function openFile(name) {
+  if (hasUnsaved && !confirm('有未保存的更改，确定要切换文件吗？')) return;
+
+  currentFileName = name;
+  isNewFile = false;
+  hasUnsaved = false;
+
+  const file = fileCache[currentType].find(f => f.name === name);
+  if (!file) return;
+
+  showEditor();
+
+  // Filename
+  document.getElementById('filename-input').value = name;
+  document.getElementById('btn-delete').style.display = 'inline-flex';
+  document.getElementById('unsaved-dot').classList.remove('show');
+
+  // Build frontmatter form
+  renderFrontmatterForm(file.frontmatter);
+
+  // Body
+  document.getElementById('md-editor').value = file.body;
+  updatePreview();
+  renderFileList();
+}
+
+// ===== NEW FILE =====
+function newFile() {
+  if (hasUnsaved && !confirm('有未保存的更改，确定要创建新文件吗？')) return;
+
+  currentFileName = null;
+  isNewFile = true;
+  hasUnsaved = false;
+
+  showEditor();
+
+  document.getElementById('filename-input').value = '';
+  document.getElementById('btn-delete').style.display = 'none';
+  document.getElementById('unsaved-dot').classList.remove('show');
+
+  // Build form from schema with empty values
+  const schema = schemaCache[currentType] || [];
+  const emptyFm = {};
+  for (const field of schema) {
+    if (field.type === 'array') emptyFm[field.key] = [''];
+    else if (field.type === 'number') emptyFm[field.key] = '';
+    else if (field.type === 'boolean') emptyFm[field.key] = false;
+    else if (field.type === 'date') {
+      if (field.key === 'publishDate' || field.key === 'updatedDate') {
+        emptyFm[field.key] = new Date().toISOString().split('T')[0];
+      } else {
+        emptyFm[field.key] = '';
+      }
+    }
+    else emptyFm[field.key] = '';
+  }
+
+  renderFrontmatterForm(emptyFm);
+  document.getElementById('md-editor').value = '';
+  updatePreview();
+  renderFileList();
+}
+
+// ===== RENDER FRONTMATTER FORM =====
+function renderFrontmatterForm(data) {
+  const container = document.getElementById('fm-fields');
+  const schema = schemaCache[currentType] || [];
+
+  // Merge schema keys with data keys (data might have extra keys)
+  const allKeys = new Set([...schema.map(s => s.key), ...Object.keys(data)]);
+  const orderedKeys = [];
+  for (const s of schema) {
+    orderedKeys.push(s.key);
+    allKeys.delete(s.key);
+  }
+  for (const k of allKeys) orderedKeys.push(k);
+
+  let html = '';
+
+  for (const key of orderedKeys) {
+    const val = data[key];
+    const schemaDef = schema.find(s => s.key === key);
+    const type = schemaDef ? schemaDef.type : detectType(val);
+
+    if (type === 'array') {
+      const items = Array.isArray(val) ? val : [];
+      html += `
+        <div class="fm-field fm-field-array" data-key="${key}">
+          <label>${key}</label>
+          <div class="array-items" id="array-${key}">
+            ${items.map((item, i) => `
+              <div class="array-item">
+                <input type="text" value="${escapeAttr(item)}" data-array-key="${key}" data-index="${i}" oninput="markUnsaved(); autoFilename();">
+                <button onclick="removeArrayItem('${key}', ${i})">✕</button>
+              </div>
+            `).join('')}
+          </div>
+          <button class="btn-add-item" onclick="addArrayItem('${key}')">+ 添加</button>
+        </div>
+      `;
+    } else if (type === 'boolean') {
+      html += `
+        <div class="fm-field" data-key="${key}">
+          <label>${key}</label>
+          <select data-fm-key="${key}" onchange="markUnsaved()">
+            <option value="true" ${val === true ? 'selected' : ''}>true</option>
+            <option value="false" ${val !== true ? 'selected' : ''}>false</option>
+          </select>
+        </div>
+      `;
+    } else if (type === 'textarea') {
+      html += `
+        <div class="fm-field" data-key="${key}">
+          <label>${key}</label>
+          <textarea data-fm-key="${key}" rows="3" oninput="markUnsaved()">${escapeHtml(String(val || ''))}</textarea>
+        </div>
+      `;
+    } else if (type === 'date') {
+      html += `
+        <div class="fm-field" data-key="${key}">
+          <label>${key}</label>
+          <input type="date" data-fm-key="${key}" value="${val || ''}" oninput="markUnsaved()">
+        </div>
+      `;
+    } else if (type === 'number') {
+      html += `
+        <div class="fm-field" data-key="${key}">
+          <label>${key}</label>
+          <input type="number" step="any" data-fm-key="${key}" value="${val ?? ''}" oninput="markUnsaved()">
+        </div>
+      `;
+    } else {
+      html += `
+        <div class="fm-field" data-key="${key}">
+          <label>${key}</label>
+          <input type="text" data-fm-key="${key}" value="${escapeAttr(String(val || ''))}" oninput="markUnsaved(); autoFilename();">
+        </div>
+      `;
+    }
+  }
+
+  container.innerHTML = html;
+}
+
+// ===== ARRAY HELPERS =====
+function addArrayItem(key) {
+  const container = document.getElementById(`array-${key}`);
+  const index = container.children.length;
+  const div = document.createElement('div');
+  div.className = 'array-item';
+  div.innerHTML = `
+    <input type="text" value="" data-array-key="${key}" data-index="${index}" oninput="markUnsaved()">
+    <button onclick="this.parentElement.remove(); markUnsaved();">✕</button>
+  `;
+  container.appendChild(div);
+  div.querySelector('input').focus();
+  markUnsaved();
+}
+
+function removeArrayItem(key, index) {
+  const container = document.getElementById(`array-${key}`);
+  if (container.children[index]) {
+    container.children[index].remove();
+    markUnsaved();
+  }
+}
+
+// ===== COLLECT FRONTMATTER =====
+function collectFrontmatter() {
+  const fm = {};
+
+  // Scalar fields
+  document.querySelectorAll('[data-fm-key]').forEach(el => {
+    const key = el.dataset.fmKey;
+    let val = el.value;
+    if (el.type === 'number' && val !== '') val = parseFloat(val);
+    if (el.tagName === 'SELECT') val = val === 'true';
+    fm[key] = val;
+  });
+
+  // Array fields
+  document.querySelectorAll('.fm-field-array').forEach(field => {
+    const key = field.dataset.key;
+    const items = [];
+    field.querySelectorAll(`input[data-array-key="${key}"]`).forEach(input => {
+      if (input.value.trim()) items.push(input.value.trim());
+    });
+    fm[key] = items;
+  });
+
+  return fm;
+}
+
+// ===== SERIALIZE FRONTMATTER =====
+function serializeFrontmatter(fm) {
+  let lines = ['---'];
+
+  for (const [key, val] of Object.entries(fm)) {
+    if (val === '' || val === undefined || val === null) continue;
+    if (Array.isArray(val)) {
+      if (val.length === 0) continue;
+      lines.push(`${key}:`);
+      for (const item of val) {
+        lines.push(`  - "${item.replace(/"/g, '\\"')}"`);
+      }
+    } else if (typeof val === 'string') {
+      // Quote strings that contain special chars
+      if (val.includes(':') || val.includes('#') || val.includes('"') || val.includes("'") || val.startsWith(' ')) {
+        lines.push(`${key}: "${val.replace(/"/g, '\\"')}"`);
+      } else {
+        lines.push(`${key}: "${val}"`);
+      }
+    } else if (typeof val === 'number') {
+      lines.push(`${key}: ${val}`);
+    } else if (typeof val === 'boolean') {
+      lines.push(`${key}: ${val}`);
+    }
+  }
+
+  lines.push('---');
+  return lines.join('\n');
+}
+
+// ===== AUTO FILENAME =====
+function autoFilename() {
+  if (!isNewFile) return;
+  const titleInput = document.querySelector('[data-fm-key="title"]');
+  if (!titleInput) return;
+  const title = titleInput.value;
+  if (!title) return;
+
+  const slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .substring(0, 60);
+
+  document.getElementById('filename-input').value = slug;
+}
+
+// ===== SAVE FILE =====
+async function saveFile() {
+  const filename = document.getElementById('filename-input').value.trim();
+  if (!filename) {
+    showToast('❌ 请输入文件名', 'error');
+    return;
+  }
+
+  const fm = collectFrontmatter();
+  const body = document.getElementById('md-editor').value;
+  const content = serializeFrontmatter(fm) + '\n\n' + body + '\n';
+
+  try {
+    const dirHandle = typeHandles[currentType];
+    const fileHandle = await dirHandle.getFileHandle(`${filename}.md`, { create: true });
+    const writable = await fileHandle.createWritable();
+    await writable.write(content);
+    await writable.close();
+
+    hasUnsaved = false;
+    document.getElementById('unsaved-dot').classList.remove('show');
+
+    // If it's a new file or renamed, update the cache
+    const oldName = isNewFile ? null : currentFileName;
+    currentFileName = filename;
+    isNewFile = false;
+
+    // Reload files for this type
+    await loadTypeFiles(currentType);
+    renderFileList();
+
+    document.getElementById('btn-delete').style.display = 'inline-flex';
+
+    showToast(`✅ 已保存到 src/content/${currentType}/${filename}.md，请重启 npm run dev`, 'success');
+
+  } catch (err) {
+    showToast(`❌ 保存失败: ${err.message}`, 'error');
+  }
+}
+
+// ===== DELETE FILE =====
+async function deleteFile() {
+  if (!currentFileName) return;
+  if (!confirm(`确定要删除 ${currentFileName}.md 吗？此操作不可撤销。`)) return;
+
+  try {
+    const dirHandle = typeHandles[currentType];
+    await dirHandle.removeEntry(`${currentFileName}.md`);
+
+    showToast(`🗑 已删除 src/content/${currentType}/${currentFileName}.md`, 'success');
+
+    await loadTypeFiles(currentType);
+    renderFileList();
+    showEmptyState();
+
+  } catch (err) {
+    showToast(`❌ 删除失败: ${err.message}`, 'error');
+  }
+}
+
+// ===== RELOAD SINGLE TYPE =====
+async function loadTypeFiles(type) {
+  fileCache[type] = [];
+  const dirHandle = typeHandles[type];
+  if (!dirHandle) return;
+
+  for await (const entry of dirHandle.values()) {
+    if (entry.kind === 'file' && entry.name.endsWith('.md')) {
+      const file = await entry.getFile();
+      const text = await file.text();
+      const parsed = parseFrontmatter(text);
+      fileCache[type].push({
+        name: entry.name.replace('.md', ''),
+        frontmatter: parsed.frontmatter,
+        body: parsed.body,
+        raw: text,
+      });
+    }
+  }
+
+  fileCache[type].sort((a, b) => {
+    if (a.frontmatter.rank && b.frontmatter.rank) return a.frontmatter.rank - b.frontmatter.rank;
+    return (a.frontmatter.title || a.name).localeCompare(b.frontmatter.title || b.name);
+  });
+
+  schemaCache[type] = buildSchema(fileCache[type]);
+  document.getElementById(`count-${type}`).textContent = fileCache[type].length;
+}
+
+// ===== MARKDOWN PREVIEW =====
+function updatePreview() {
+  const md = document.getElementById('md-editor').value;
+  document.getElementById('md-preview').innerHTML = renderMarkdown(md);
+}
+
+function onEditorInput() {
+  markUnsaved();
+  updatePreview();
+}
+
+// Simple but functional Markdown renderer
+function renderMarkdown(text) {
+  if (!text) return '<p style="color:var(--text-muted);font-style:italic;">预览区域 — 开始编辑后这里会显示渲染结果</p>';
+
+  let html = text;
+
+  // Code blocks (fenced)
+  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
+    return `<pre><code>${escapeHtml(code.trim())}</code></pre>`;
+  });
+
+  // Inline code
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+  // Headings
+  html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
+  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+
+  // Horizontal rule
+  html = html.replace(/^---$/gm, '<hr>');
+
+  // Bold & italic
+  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+  // Images
+  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
+
+  // Links
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+  // Blockquotes
+  html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
+
+  // Tables
+  html = html.replace(/^(\|.+\|)\n(\|[-: |]+\|)\n((?:\|.+\|\n?)*)/gm, (match, header, separator, body) => {
+    const headers = header.split('|').filter(c => c.trim()).map(c => `<th>${c.trim()}</th>`).join('');
+    const rows = body.trim().split('\n').map(row => {
+      const cells = row.split('|').filter(c => c.trim()).map(c => `<td>${c.trim()}</td>`).join('');
+      return `<tr>${cells}</tr>`;
+    }).join('');
+    return `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+  });
+
+  // Unordered lists
+  html = html.replace(/^(\s*[-*+] .+(?:\n\s*[-*+] .+)*)/gm, (match) => {
+    const items = match.split('\n').map(line => {
+      const content = line.replace(/^\s*[-*+]\s+/, '');
+      return `<li>${content}</li>`;
+    }).join('');
+    return `<ul>${items}</ul>`;
+  });
+
+  // Ordered lists
+  html = html.replace(/^(\s*\d+\. .+(?:\n\s*\d+\. .+)*)/gm, (match) => {
+    const items = match.split('\n').map(line => {
+      const content = line.replace(/^\s*\d+\.\s+/, '');
+      return `<li>${content}</li>`;
+    }).join('');
+    return `<ol>${items}</ol>`;
+  });
+
+  // Paragraphs (lines not already wrapped)
+  html = html.replace(/^(?!<[houptbl]|$)(.+)$/gm, '<p>$1</p>');
+
+  // Clean up empty paragraphs
+  html = html.replace(/<p>\s*<\/p>/g, '');
+
+  return html;
+}
+
+// ===== UNSAVED STATE =====
+function markUnsaved() {
+  hasUnsaved = true;
+  document.getElementById('unsaved-dot').classList.add('show');
+}
+
+// ===== TOAST =====
+function showToast(message, type = 'success') {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.className = `toast ${type} show`;
+  setTimeout(() => toast.classList.remove('show'), 4000);
+}
+
+// ===== HELPERS =====
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function escapeAttr(str) {
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// ===== KEYBOARD SHORTCUTS =====
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+    e.preventDefault();
+    if (document.getElementById('editor-wrap').style.display !== 'none') {
+      saveFile();
+    }
+  }
+});
+
+// Warn before leaving with unsaved changes
+window.addEventListener('beforeunload', (e) => {
+  if (hasUnsaved) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+
+// Tab key in editor
+document.addEventListener('DOMContentLoaded', () => {
+  const editor = document.getElementById('md-editor');
+  editor.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      const start = editor.selectionStart;
+      const end = editor.selectionEnd;
+      editor.value = editor.value.substring(0, start) + '  ' + editor.value.substring(end);
+      editor.selectionStart = editor.selectionEnd = start + 2;
+      onEditorInput();
+    }
+  });
+});
+</script>
+</body>
+</html>

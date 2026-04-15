@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const authorSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sarah",
+  "jobTitle": "Spiritual Wellness Researcher",
+  "url": "https://easternalignment.com/about/",
+  "sameAs": [],
+};
+---
+
+<BaseLayout
+  title="About Sarah — My Story"
+  description="Learn why I started EasternAlignment and how my personal journey with psychic readings led me to help others navigate this space with honest reviews."
+  jsonLd={authorSchema}
+>
+  <div class="about-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'About' }]} />
+
+      <header class="about-hero">
+        <img src="/sarah-avatar.jpg" alt="Sarah — Spiritual Wellness Researcher" class="about-avatar-lg" width="100" height="100" loading="lazy" />
+        <h1>Hi, I'm Sarah</h1>
+        <p class="about-subtitle text-muted">
+          Spiritual wellness researcher and the person behind every review on EasternAlignment.
+        </p>
+      </header>
+
+      <div class="prose">
+        <h2>How It All Started</h2>
+
+        <p>Three years ago, I was going through the darkest period of my life. A toxic relationship had ended, I was questioning every decision I'd ever made, and I felt completely unmoored. Traditional therapy was helping with the clinical side, but I needed something else — something that could help me feel connected to a bigger picture.</p>
+
+        <p>On a sleepless Tuesday night at 2 AM, I found myself typing "online psychic reading" into Google. Half skeptical, half desperate. I signed up for the first platform I found and connected with a psychic who would unknowingly change the trajectory of my life.</p>
+
+        <p>She didn't tell me what I wanted to hear. She told me what I needed to hear. And the startling accuracy of her observations — things she couldn't possibly have known — made me realize there was something genuinely valuable happening here, beyond what my rational mind could easily explain.</p>
+
+        <h2>Why I Started This Site</h2>
+
+        <p>After that first experience, I went on a deep dive. I tried <strong>every major psychic reading platform</strong> I could find. Some were incredible. Some were mediocre. A few were outright disappointing. And I realized that there was a massive gap in the market: honest, first-hand reviews from someone who had actually used these services as a real customer.</p>
+
+        <p>Most "review" sites I found were either:</p>
+        <ul>
+          <li>Thinly veiled advertisements written by people who clearly never had a reading</li>
+          <li>Overly skeptical takedowns dismissing the entire field</li>
+          <li>Generic listicles recycling the same information from each other</li>
+        </ul>
+
+        <p>I wanted to create something different. A resource that treats seekers with respect, shares genuine experiences (including the bad ones), and helps people navigate this space without wasting their money or, worse, being taken advantage of.</p>
+
+        <h2>My Approach</h2>
+
+        <p>Every review on EasternAlignment follows the same process:</p>
+
+        <ol>
+          <li><strong>I sign up personally</strong> — creating a real account just like you would</li>
+          <li><strong>I pay out of my own pocket</strong> — no free readings from platforms</li>
+          <li><strong>I do multiple readings</strong> — across different psychics and specialties</li>
+          <li><strong>I take detailed notes</strong> — on accuracy, communication, value, and overall experience</li>
+          <li><strong>I revisit and update</strong> — platforms change, and so do my reviews</li>
+        </ol>
+
+        <h2>A Note on Honesty</h2>
+
+        <p>Yes, this site contains affiliate links. When you sign up for a platform through my links, I may earn a commission. This is how I fund the site and continue doing this work.</p>
+
+        <p>But here's what I want you to know: <strong>the affiliate relationship never influences my reviews</strong>. I've given mediocre ratings to platforms that pay higher commissions, and I've enthusiastically recommended platforms with lower affiliate payouts. My recommendations are based on one thing only: which platforms provided the best experience for real people seeking genuine guidance.</p>
+
+        <p>If a platform isn't good, I'll tell you. If I had a bad reading, you'll hear about it. My credibility is the only asset I have, and I'm not willing to trade it for a bigger commission check.</p>
+
+        <h2>What I Believe</h2>
+
+        <p>I believe that psychic readings, at their best, are a tool for self-reflection and empowerment — not a crutch or a crystal ball. The best psychics I've encountered help you see your own situation more clearly, not create dependence.</p>
+
+        <p>I believe everyone deserves access to honest information before spending their money. And I believe this industry, like any other, has both genuine talent and opportunists — my job is to help you tell the difference.</p>
+
+        <h2>Get in Touch</h2>
+
+        <p>Have a question about a platform? Want to share your own experience? I'd love to hear from you.</p>
+
+        <p>📧 Email: <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a></p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    text-align: center;
+    margin-bottom: var(--space-12);
+  }
+
+  .about-avatar-lg {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 3px solid var(--color-border-light);
+    margin: 0 auto var(--space-6);
+  }
+
+  .about-hero h1 {
+    margin-bottom: var(--space-3);
+  }
+
+  .about-subtitle {
+    font-size: var(--text-lg);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: var(--leading-relaxed);
+  }
+</style>
