@@ -4,7 +4,7 @@ description: "An honest look at Keen's online psychic service after two years of
 platformName: "Keen"
 rating: 4.0
 verdict: "Keen offers a solid psychic reading experience with competitive pricing and an excellent mobile app. It's particularly strong for phone readings and has one of the best introductory offers in the market."
-affiliateUrl: "#"
+affiliateUrl: "https://www.keen.com"
 freeOffer: "First 3 minutes free + special introductory rates"
 pricing: "Starting from $1.99/min"
 bestFor: "Phone readings & daily guidance"

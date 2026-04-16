@@ -4,7 +4,7 @@ description: "After 3 years of using Kasamba for psychic readings, here's my unf
 platformName: "Kasamba"
 rating: 4.5
 verdict: "Kasamba remains one of the most reliable psychic reading platforms in 2026. Its massive roster of vetted advisors and generous free trial make it an excellent starting point for both beginners and experienced seekers."
-affiliateUrl: "#"
+affiliateUrl: "https://www.kasamba.com"
 freeOffer: "3 free minutes + 70% off your first session"
 pricing: "Starting from $1.99/min"
 bestFor: "Love & relationship readings"

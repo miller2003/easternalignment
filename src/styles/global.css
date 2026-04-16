@@ -188,39 +188,64 @@ p {
    ======================== */
 h1 {
   font-size: var(--text-4xl);
-  font-weight: var(--weight-normal); /* DM Serif Display only has 400 */
+  font-weight: var(--weight-normal);
   letter-spacing: -0.01em;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
 }
 
 h2 {
   font-size: var(--text-3xl);
   font-weight: var(--weight-normal);
-  margin-top: var(--space-16);
-  margin-bottom: var(--space-6);
+  margin-top: 0;
+  margin-bottom: var(--space-3);
 }
 
 h3 {
   font-size: var(--text-2xl);
   font-weight: var(--weight-normal);
-  margin-top: var(--space-12);
-  margin-bottom: var(--space-4);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
 }
 
 h4 {
   font-size: var(--text-xl);
   font-family: var(--font-body);
   font-weight: var(--weight-semibold);
-  margin-top: var(--space-10);
-  margin-bottom: var(--space-3);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
 }
 
 h5, h6 {
   font-size: var(--text-lg);
   font-family: var(--font-body);
   font-weight: var(--weight-semibold);
-  margin-top: var(--space-8);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+/* Prose — inside prose, headings get more breathing room between body paragraphs */
+.prose h2 {
+  margin-top: var(--space-10);
   margin-bottom: var(--space-3);
+}
+
+.prose h3 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-2);
+}
+
+.prose h4 {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+}
+
+/* No top margin when a heading is the FIRST child — avoids double spacing after layout borders */
+.prose > h2:first-child,
+.prose > h3:first-child,
+.prose > h4:first-child,
+.prose > *:first-child > h2:first-child,
+.prose > *:first-child > h3:first-child {
+  margin-top: 0;
 }
 
 /* Prose — Styled content within articles */
@@ -232,7 +257,7 @@ h5, h6 {
 }
 
 .prose p {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .prose a {
@@ -290,12 +315,12 @@ h5, h6 {
   border: none;
   height: 1px;
   background: var(--color-border);
-  margin: var(--space-12) 0;
+  margin: var(--space-8) 0;
 }
 
 .prose img {
   border-radius: var(--radius-lg);
-  margin: var(--space-8) 0;
+  margin: var(--space-6) 0;
 }
 
 .prose code {
@@ -383,13 +408,13 @@ h5, h6 {
 }
 
 .section {
-  padding-top: var(--space-16);
-  padding-bottom: var(--space-16);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
 }
 
 .section--lg {
-  padding-top: var(--space-24);
-  padding-bottom: var(--space-24);
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
 }
 
 .section--alt {
@@ -609,7 +634,7 @@ h5, h6 {
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  margin: var(--space-12) 0;
+  margin: var(--space-8) 0;
   color: var(--color-celestial);
 }
 
@@ -631,7 +656,7 @@ h5, h6 {
   border: none;
   height: 1px;
   background: var(--color-border);
-  margin: var(--space-8) 0;
+  margin: var(--space-6) 0;
 }
 
 /* Accent top border for sections */
@@ -753,13 +778,23 @@ h5, h6 {
   }
 
   .section {
-    padding-top: var(--space-10);
-    padding-bottom: var(--space-10);
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
   }
 
   .section--lg {
-    padding-top: var(--space-16);
-    padding-bottom: var(--space-16);
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  h2 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-2);
+  }
+
+  h3 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-2);
   }
 
   .grid--2,

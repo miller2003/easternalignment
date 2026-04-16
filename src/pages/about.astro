@@ -4,11 +4,14 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
 const authorSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sarah",
-  "jobTitle": "Spiritual Wellness Researcher",
-  "url": "https://easternalignment.com/about/",
-  "sameAs": [],
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Sarah",
+    "jobTitle": "Spiritual Wellness Researcher",
+    "url": "https://easternalignment.com/about/",
+    "sameAs": [],
+  }
 };
 ---
 
@@ -90,7 +93,7 @@ const authorSchema = {
 <style>
   .about-hero {
     text-align: center;
-    margin-bottom: var(--space-12);
+    margin-bottom: var(--space-8);
   }
 
   .about-avatar-lg {

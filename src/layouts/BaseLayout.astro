@@ -36,6 +36,23 @@ const websiteSchema = {
   "url": Astro.site?.href || 'https://easternalignment.com',
   "description": "Honest reviews and guidance for online psychic reading platforms. Independently tested by real users.",
 };
+
+const siteUrl = Astro.site?.href || 'https://easternalignment.com/';
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteTitle,
+  "url": siteUrl,
+  "logo": `${siteUrl}logo.jpg`,
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sarah",
+  "url": `${siteUrl}about/`,
+  "jobTitle": "Reviewer & Researcher"
+};
 ---
 
 <!DOCTYPE html>
@@ -75,6 +92,8 @@ const websiteSchema = {
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
