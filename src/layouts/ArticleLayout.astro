@@ -10,6 +10,19 @@ interface Props {
   publishDate: string;
   updatedDate?: string;
   breadcrumbParent?: { label: string; href: string };
+  // SEO meta fields
+  metaRobots?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  // Article Schema (manual)
+  schemaHeadline?: string;
+  schemaDescription?: string;
+  schemaAuthor?: string;
+  schemaDatePublished?: string;
+  // Custom / FAQPage schema
+  customSchema?: string;
 }
 
 const {
@@ -19,6 +32,16 @@ const {
   publishDate,
   updatedDate,
   breadcrumbParent = { label: 'Guides', href: '/guides/' },
+  metaRobots,
+  canonicalUrl,
+  ogImage,
+  seoTitle,
+  metaDescription,
+  schemaHeadline,
+  schemaDescription,
+  schemaAuthor,
+  schemaDatePublished,
+  customSchema,
 } = Astro.props;
 
 const displayDate = updatedDate || publishDate;
@@ -28,27 +51,41 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
   day: 'numeric',
 });
 
-/* Estimate reading time: ~200 words per minute */
-const articleSchema = {
+// Build Article JSON-LD from manual fields (with fallbacks)
+const articleSchema: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": title,
-  "description": description,
+  "headline": schemaHeadline || title,
+  "description": schemaDescription || description,
   "author": {
     "@type": "Person",
-    "name": "Sarah",
+    "name": schemaAuthor || "Sarah",
   },
-  "datePublished": publishDate,
+  "datePublished": schemaDatePublished || publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
+  ...(ogImage ? { "image": ogImage } : {}),
   "publisher": {
     "@type": "Organization",
     "name": "EasternAlignment",
     "url": "https://easternalignment.com",
   },
 };
+
+const noindex = metaRobots ? metaRobots.includes('noindex') : false;
 ---
 
-<BaseLayout title={title} description={description} ogType="article" jsonLd={articleSchema}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  jsonLd={articleSchema}
+  ogImage={ogImage}
+  canonicalUrl={canonicalUrl}
+  noindex={noindex}
+  seoTitle={seoTitle}
+  metaDescription={metaDescription}
+  customSchema={customSchema}
+>
   <div class="article-page">
     <!-- Breadcrumb -->
     <div class="container container--narrow">

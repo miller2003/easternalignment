@@ -1,5 +1,19 @@
 import { defineCollection, z } from 'astro:content';
 
+// Shared SEO/Schema fields — optional on all collections
+const seoFields = {
+  seoTitle: z.string().optional(),
+  metaDescription: z.string().optional(),
+  metaRobots: z.string().optional(),
+  canonicalUrl: z.string().optional(),
+  ogImage: z.string().optional(),
+  schemaHeadline: z.string().optional(),
+  schemaDescription: z.string().optional(),
+  schemaAuthor: z.string().optional(),
+  schemaDatePublished: z.string().optional(),
+  customSchema: z.string().optional(),
+};
+
 const reviews = defineCollection({
   type: 'content',
   schema: z.object({
@@ -18,6 +32,7 @@ const reviews = defineCollection({
     publishDate: z.string(),
     updatedDate: z.string().optional(),
     rank: z.number().default(1),
+    ...seoFields,
   }),
 });
 
@@ -30,6 +45,7 @@ const comparisons = defineCollection({
     winner: z.string().optional(),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
+    ...seoFields,
   }),
 });
 
@@ -41,6 +57,7 @@ const guides = defineCollection({
     category: z.string().optional(),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
+    ...seoFields,
   }),
 });
 
@@ -51,6 +68,7 @@ const blog = defineCollection({
     description: z.string(),
     publishDate: z.string().optional(),
     updatedDate: z.string().optional(),
+    ...seoFields,
   }),
 });
 

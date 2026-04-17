@@ -12,6 +12,10 @@ interface Props {
   canonicalUrl?: string;
   noindex?: boolean;
   jsonLd?: object;
+  // Manual SEO overrides from frontmatter
+  seoTitle?: string;
+  metaDescription?: string;
+  customSchema?: string;
 }
 
 const {
@@ -22,10 +26,15 @@ const {
   canonicalUrl,
   noindex = false,
   jsonLd,
+  seoTitle,
+  metaDescription,
+  customSchema,
 } = Astro.props;
 
 const siteTitle = 'EasternAlignment';
-const fullTitle = title === siteTitle ? title : `${title} — ${siteTitle}`;
+const baseTitle = seoTitle || title;
+const fullTitle = baseTitle === siteTitle ? baseTitle : `${baseTitle} — ${siteTitle}`;
+const metaDesc = metaDescription || description;
 const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href;
 
@@ -63,7 +72,7 @@ const personSchema = {
 
     <!-- Primary Meta -->
     <title>{fullTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDesc} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 
@@ -77,7 +86,7 @@ const personSchema = {
 
     <!-- Open Graph -->
     <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDesc} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImageUrl} />
@@ -87,7 +96,7 @@ const personSchema = {
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={metaDesc} />
     <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Structured Data -->
@@ -96,6 +105,9 @@ const personSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+    {customSchema && customSchema.trim() && (
+      <script type="application/ld+json" set:html={customSchema} />
     )}
   </head>
   <body>

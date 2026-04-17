@@ -9,10 +9,10 @@ const { pros, cons } = Astro.props;
 
 <div class="pros-cons">
   <div class="pros-cons-col pros-col">
-    <h4 class="pros-cons-title">
+    <p class="pros-cons-title">
       <span class="pros-icon" aria-hidden="true">✓</span>
       What I Liked
-    </h4>
+    </p>
     <ul class="pros-cons-list">
       {pros.map(pro => (
         <li>{pro}</li>
@@ -21,10 +21,10 @@ const { pros, cons } = Astro.props;
   </div>
 
   <div class="pros-cons-col cons-col">
-    <h4 class="pros-cons-title">
+    <p class="pros-cons-title">
       <span class="cons-icon" aria-hidden="true">✕</span>
       Could Be Better
-    </h4>
+    </p>
     <ul class="pros-cons-list">
       {cons.map(con => (
         <li>{con}</li>
