@@ -6,7 +6,6 @@ export default defineConfig({
     trailingSlash: 'always',
     integrations: [sitemap({
         filter: (page) =>
-            !page.includes('/privacy/') &&
-            !page.includes('/terms/'),
+            !page.includes('/privacy/'),
     })],
 });

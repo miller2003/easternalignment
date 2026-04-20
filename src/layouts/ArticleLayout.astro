@@ -23,6 +23,7 @@ interface Props {
   schemaDatePublished?: string;
   // Custom / FAQPage schema
   customSchema?: string;
+  entities?: string[];
 }
 
 const {
@@ -42,6 +43,7 @@ const {
   schemaAuthor,
   schemaDatePublished,
   customSchema,
+  entities,
 } = Astro.props;
 
 const displayDate = updatedDate || publishDate;
@@ -60,6 +62,7 @@ const articleSchema: Record<string, unknown> = {
   "author": {
     "@type": "Person",
     "name": schemaAuthor || "Sarah",
+    "url": "https://easternalignment.com/about/",
   },
   "datePublished": schemaDatePublished || publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
@@ -68,7 +71,13 @@ const articleSchema: Record<string, unknown> = {
     "@type": "Organization",
     "name": "EasternAlignment",
     "url": "https://easternalignment.com",
+    "logo": "https://easternalignment.com/logo.jpg",
   },
+  ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.href
+  }
 };
 
 const noindex = metaRobots ? metaRobots.includes('noindex') : false;

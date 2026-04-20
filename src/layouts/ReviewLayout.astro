@@ -24,6 +24,7 @@ interface Props {
   schemaAuthor?: string;
   schemaDatePublished?: string;
   customSchema?: string;
+  entities?: string[];
 }
 
 const {
@@ -44,6 +45,7 @@ const {
   schemaAuthor,
   schemaDatePublished,
   customSchema,
+  entities,
 } = Astro.props;
 
 const displayDate = updatedDate || publishDate;
@@ -56,7 +58,7 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "Review",
-  "name": title,
+  "headline": title,
   "description": description,
   "author": {
     "@type": "Person",
@@ -73,14 +75,25 @@ const reviewSchema = {
     "worstRating": 1,
   },
   "itemReviewed": {
-    "@type": "Organization",
+    "@type": "Service",
     "name": platformName,
+    "provider": {
+      "@type": "Organization",
+      "name": platformName,
+      "url": affiliateUrl !== '#' ? affiliateUrl : undefined
+    }
   },
   "publisher": {
     "@type": "Organization",
     "name": "EasternAlignment",
     "url": "https://easternalignment.com",
+    "logo": "https://easternalignment.com/logo.jpg"
   },
+  ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.href
+  }
 };
 
 const noindex = metaRobots ? metaRobots.includes('noindex') : false;
