@@ -4,7 +4,7 @@ description: "Updated Keen Psychics Review 2026. Get your first 3 minutes free. 
 platformName: "Keen"
 rating: 4.0
 verdict: "Keen offers a solid psychic reading experience with competitive pricing and an excellent mobile app. It's particularly strong for phone readings and has one of the best introductory offers in the market."
-affiliateUrl: "https://www.keen.com"
+affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326"
 freeOffer: "First 3 minutes free + special introductory rates"
 pricing: "Starting from $1.99/min"
 bestFor: "Phone readings & daily guidance"

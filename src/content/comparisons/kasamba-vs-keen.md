@@ -39,6 +39,7 @@ Both platforms start at $1.99/minute for introductory-level psychics, making the
 | Premium pricing | Up to $30+/min | Up to $20/min |
 | Free trial | 3 min free per psychic | 3 min free per psychic |
 | Intro discount | 70% off first session | Special intro rates |
+| **Visit Site** | [**Visit Kasamba →**](https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326) | [**Visit Keen →**](https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326) |
 
 **Winner: Tie** — both offer competitive pricing with slightly different discount structures.
 

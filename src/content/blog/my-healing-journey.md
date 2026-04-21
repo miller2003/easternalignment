@@ -12,4 +12,4 @@ Here is the story of Sarah...
 
 It changed my perspective.
 
-👉 [Click here to see her profile on Kasamba](#)
+👉 [Click here to see her profile on Kasamba](https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326)
