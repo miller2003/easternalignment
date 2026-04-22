@@ -10,11 +10,46 @@ pricing: "$4.29/min"
 bestFor: "People who want honest, structured tarot readings without sugar-coating"
 publishDate: "2026-04-22"
 updatedDate: "2026-04-22"
-customSchema: "{"
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "headline": "Master Sher on Keen Review 2026: An Honest Assessment From Someone Who's Tested Dozens of Readers",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "author": {
+      "@type": "Organization",
+      "name": "easternalignment"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "itemReviewed": {
+      "@type": "Person",
+      "name": "Master Sher",
+      "jobTitle": "Psychic Reader",
+      "url": "https://www.keen.com/psychic-readings/master-sher/12468067",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Keen",
+        "url": "https://www.keen.com"
+      }
+    },
+    "reviewBody": "Master Sher is a tarot-based intuitive reader on Keen with 19,000+ completed readings and a 4.9-star rating across 3,600+ verified reviews. He leads with structured tarot interpretation layered with clairvoyant intuition. Best suited for relationship dynamics and situational clarity at $4.29/min. Slower chat response pace is the main trade-off in timed sessions.",
+    "about": [
+      {"@type": "Thing", "name": "Tarot Card Reading"},
+      {"@type": "Thing", "name": "Clairvoyant Reading"},
+      {"@type": "Thing", "name": "Love and Relationship Psychic Reading"},
+      {"@type": "Thing", "name": "Keen Psychic Advisor"}
+    ]
+  }
 highlights:
   - "- 19,000+ readings completed on Keen"
   - "- 4.89-star rating across 3,600+ verified reviews"
-  - "- Explicitly states \\"no false hopes\\" — rare among high-volume platform readers"
+  - "- Explicitly states \\\\"no false hopes\\\\" — rare among high-volume platform readers"
   - "- Operates across 4 specialty profiles: Tarot, Love & Relationships, Spiritual, Life Path"
   - "- Consistent daily availability: 1am–9am PST"
 pros:
