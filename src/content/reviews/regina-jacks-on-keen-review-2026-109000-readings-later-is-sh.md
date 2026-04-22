@@ -49,20 +49,20 @@ customSchema: |
 metaDescription: "109,000+ readings, 4.83 stars, 13 years on Keen. But is Regina Jacks right for your question? An honest breakdown of her style, accuracy, and who should actually book her."
 highlights:
   - "109,000+ completed readings since 2012 — one of Keen's highest-volume readers"
-  - "4.83 stars across 18,000+ verified ratings"
-  - "Fourth-generation clairvoyant with 42 years of experience"
-  - "Leads with impressions before you explain — minimal cold reading risk"
-  - "Multiple profiles: Love & Relationships, Tarot, Life Path, Spiritual"
+  - '4.83 stars across 18,000+ verified ratings'
+  - 'Fourth-generation clairvoyant with 42 years of experience'
+  - 'Leads with impressions before you explain — minimal cold reading risk'
+  - 'Multiple profiles: Love & Relationships, Tarot, Life Path, Spiritual'
 pros:
-  - "Exceptional volume and consistency — 13 years on platform is rare"
-  - "Clairvoyant-first approach makes her easy to test for genuine ability"
-  - "Covers wide toolkit: tarot, pendulum, numerology, astrology...."
+  - 'Exceptional volume and consistency — 13 years on platform is rare'
+  - 'Clairvoyant-first approach makes her easy to test for genuine ability'
+  - 'Covers wide toolkit: tarot, pendulum, numerology, astrology....'
   - "One of Keen's more affordable high-volume readers at $3.59/min"
-  - "\\\\\"No Tools\\\\\" option available — her clairvoyance stands independent of props"
+  - '"No Tools" option available — her clairvoyance stands independent of props'
 cons:
-  - "Documented impatience in lower reviews — can feel abrupt if you need a slower pace"
-  - "Performs strongest on love/relationship questions; less documented strength in career or finance"
-  - "Direct style without emotional warm-up may feel harsh in crisis moments"
+  - 'Documented impatience in lower reviews — can feel abrupt if you need a slower pace'
+  - 'Performs strongest on love/relationship questions; less documented strength in career or finance'
+  - 'Direct style without emotional warm-up may feel harsh in crisis moments'
 ---
 
 ## Before You Book Regina Jacks: What 109,000 Readings Actually Tell You

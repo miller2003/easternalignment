@@ -47,20 +47,20 @@ customSchema: |
     ]
   }
 highlights:
-  - "- 19,000+ readings completed on Keen"
-  - "- 4.89-star rating across 3,600+ verified reviews"
-  - "- Explicitly states \\\\"no false hopes\\\\" — rare among high-volume platform readers"
-  - "- Operates across 4 specialty profiles: Tarot, Love & Relationships, Spiritual, Life Path"
-  - "- Consistent daily availability: 1am–9am PST"
+  - '- 19,000+ readings completed on Keen'
+  - '- 4.89-star rating across 3,600+ verified reviews'
+  - '- Explicitly states "no false hopes" — rare among high-volume platform readers'
+  - '- Operates across 4 specialty profiles: Tarot, Love & Relationships, Spiritual, Life Path'
+  - '- Consistent daily availability: 1am–9am PST'
 pros:
-  - "- Unusually direct and honest — tells you what cards say, not what you want to hear"
-  - "- Strong track record on relationship dynamics and situational clarity"
-  - "- Multiple specialty profiles allow you to match the reading to your question type"
-  - "- New user offer makes the first session low-risk to test"
+  - '- Unusually direct and honest — tells you what cards say, not what you want to hear'
+  - '- Strong track record on relationship dynamics and situational clarity'
+  - '- Multiple specialty profiles allow you to match the reading to your question type'
+  - '- New user offer makes the first session low-risk to test'
 cons:
-  - "- Slower typing pace in chat sessions adds cost in a per-minute model"
-  - "- Not ideal for yes/no predictions with specific dates"
-  - "- Early morning availability (PST) may not suit all time zones"
+  - '- Slower typing pace in chat sessions adds cost in a per-minute model'
+  - '- Not ideal for yes/no predictions with specific dates'
+  - '- Early morning availability (PST) may not suit all time zones'
 ---
 
 ## Before You Book Master Sher: What a Star Rating Can't Tell You
