@@ -4,83 +4,17 @@ description: "An in-depth third-party review of Master Sher on Keen — covering
 platformName: "Keen: Master Sher"
 rating: 4.8
 verdict: "Best for seekers who want direct, tarot-grounded clarity on relationships or life decisions — not emotional reassurance. His honesty is his strongest asset; his slower chat pace is the only real trade-off."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326"
+affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fmaster-sher%2F12468067%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$4.29/min"
 bestFor: "People who want honest, structured tarot readings without sugar-coating"
 publishDate: "2026-04-22"
 updatedDate: "2026-04-22"
-customSchema: "{
-  \"@context\": \"https://schema.org\",
-  \"@graph\": [
-    {
-      \"@type\": \"Review\",
-      \"name\": \"Master Sher on Keen Review 2026\",
-      \"reviewBody\": \"Master Sher is a tarot-based intuitive reader on Keen with 19,000+ completed readings and a 4.89-star rating. He is best suited for clients seeking direct, honest clarity on relationship dynamics and life decisions. His chat response pace can be slow, which adds cost in a per-minute billing model.\",
-      \"reviewRating\": {
-        \"@type\": \"Rating\",
-        \"ratingValue\": \"4.89\",
-        \"bestRating\": \"5\",
-        \"worstRating\": \"1\"
-      },
-      \"author\": {
-        \"@type\": \"Organization\",
-        \"name\": \"[你的站点名]\"
-      },
-      \"itemReviewed\": {
-        \"@type\": \"Person\",
-        \"name\": \"Master Sher\",
-        \"url\": \"https://www.keen.com/psychic-readings/master-sher/12468067\",
-        \"worksFor\": {
-          \"@type\": \"Organization\",
-          \"name\": \"Keen\"
-        }
-      },
-      \"datePublished\": \"2026-04-22\"
-    },
-    {
-      \"@type\": \"FAQPage\",
-      \"mainEntity\": [
-        {
-          \"@type\": \"Question\",
-          \"name\": \"Is Master Sher accurate on Keen?\",
-          \"acceptedAnswer\": {
-            \"@type\": \"Answer\",
-            \"text\": \"Master Sher has 19,000+ completed readings with a 4.89-star rating on Keen. Client feedback consistently references specific, unprompted detail and accurate timelines. He performs strongest on relationship dynamics and situational clarity rather than binary yes/no predictions.\"
-          }
-        },
-        {
-          \"@type\": \"Question\",
-          \"name\": \"What tools does Master Sher use in his readings?\",
-          \"acceptedAnswer\": {
-            \"@type\": \"Answer\",
-            \"text\": \"Master Sher primarily uses tarot cards, with additional tools including numerology, chakra cleansing, aura reading, and clairvoyant intuition depending on which profile you book.\"
-          }
-        },
-        {
-          \"@type\": \"Question\",
-          \"name\": \"How much does Master Sher charge on Keen?\",
-          \"acceptedAnswer\": {
-            \"@type\": \"Answer\",
-            \"text\": \"Master Sher charges $4.29 per minute on Keen. New users can access their first 5 minutes for $1. A typical meaningful session runs 15–20 minutes, costing $64–$86 at the standard rate.\"
-          }
-        },
-        {
-          \"@type\": \"Question\",
-          \"name\": \"What is Master Sher best for?\",
-          \"acceptedAnswer\": {
-            \"@type\": \"Answer\",
-            \"text\": \"Master Sher is best for clients who want direct, honest tarot-based clarity on relationships, career decisions, or life direction — particularly those who want truth over reassurance.\"
-          }
-        }
-      ]
-    }
-  ]
-}"
+customSchema: "{"
 highlights:
   - "- 19,000+ readings completed on Keen"
   - "- 4.89-star rating across 3,600+ verified reviews"
-  - "- Explicitly states \"no false hopes\" — rare among high-volume platform readers"
+  - "- Explicitly states \\"no false hopes\\" — rare among high-volume platform readers"
   - "- Operates across 4 specialty profiles: Tarot, Love & Relationships, Spiritual, Life Path"
   - "- Consistent daily availability: 1am–9am PST"
 pros:
