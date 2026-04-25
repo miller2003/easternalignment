@@ -55,6 +55,24 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
   day: 'numeric',
 });
 
+// Detect whether this is a reader-level review (e.g., "Keen: arradaza")
+const isReaderReview = platformName.includes(':');
+const parentPlatform = isReaderReview ? platformName.split(':')[0].trim().toLowerCase() : null;
+const parentPlatformLabel = isReaderReview ? platformName.split(':')[0].trim() : null;
+const readerLabel = isReaderReview ? platformName.split(':').pop()?.trim() : platformName;
+
+// Build breadcrumb items dynamically
+const breadcrumbItems = isReaderReview
+  ? [
+      { label: 'Reviews', href: '/reviews/' },
+      { label: parentPlatformLabel!, href: `/reviews/${parentPlatform}/` },
+      { label: readerLabel! },
+    ]
+  : [
+      { label: 'Reviews', href: '/reviews/' },
+      { label: platformName },
+    ];
+
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "Review",
@@ -114,10 +132,7 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
   <div class="review-page">
     <!-- Breadcrumb -->
     <div class="container container--narrow">
-      <Breadcrumb items={[
-        { label: 'Reviews', href: '/reviews/' },
-        { label: platformName }
-      ]} />
+      <Breadcrumb items={breadcrumbItems} />
     </div>
 
     <!-- Review Hero -->

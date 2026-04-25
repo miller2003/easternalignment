@@ -6,7 +6,14 @@ const { currentPath = Astro.url.pathname } = Astro.props;
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/reviews/', label: 'Reviews' },
+  {
+    href: '/reviews/',
+    label: 'Reviews',
+    children: [
+      { href: '/reviews/keen/', label: 'Keen Psychics' },
+      { href: '/reviews/kasamba/', label: 'Kasamba' },
+    ],
+  },
   { href: '/comparisons/', label: 'Comparisons' },
   { href: '/guides/', label: 'Guides' },
   { href: '/about/', label: 'About' },
@@ -25,13 +32,31 @@ const navLinks = [
     <nav class="header-nav hide-mobile" aria-label="Main navigation">
       <ul class="nav-list">
         {navLinks.map(link => (
-          <li>
+          <li class:list={[{ 'has-dropdown': link.children }]}>
             <a
               href={link.href}
               class:list={['nav-link', { 'nav-link--active': currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
             >
               {link.label}
+              {link.children && <span class="nav-chevron" aria-hidden="true">▾</span>}
             </a>
+            {link.children && (
+              <div class="nav-dropdown">
+                <div class="nav-dropdown-inner">
+                  {link.children.map(child => (
+                    <a
+                      href={child.href}
+                      class:list={['nav-dropdown-link', { 'nav-dropdown-link--active': currentPath.startsWith(child.href) }]}
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                  <a href={link.href} class="nav-dropdown-link nav-dropdown-all">
+                    View All {link.label} →
+                  </a>
+                </div>
+              </div>
+            )}
           </li>
         ))}
       </ul>
@@ -62,6 +87,20 @@ const navLinks = [
           >
             {link.label}
           </a>
+          {link.children && (
+            <ul class="mobile-subnav">
+              {link.children.map(child => (
+                <li>
+                  <a
+                    href={child.href}
+                    class:list={['mobile-subnav-link', { 'mobile-subnav-link--active': currentPath.startsWith(child.href) }]}
+                  >
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
       ))}
     </ul>
@@ -123,8 +162,14 @@ const navLinks = [
     padding: 0;
   }
 
+  .nav-list > li {
+    position: relative;
+  }
+
   .nav-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
     padding: var(--space-2) var(--space-4);
     font-size: var(--text-sm);
     font-weight: var(--weight-medium);
@@ -143,6 +188,81 @@ const navLinks = [
     color: var(--color-primary);
     background: var(--color-bg-alt);
     font-weight: var(--weight-semibold);
+  }
+
+  .nav-chevron {
+    font-size: 0.65em;
+    opacity: 0.6;
+    transition: transform var(--transition-fast);
+  }
+
+  .has-dropdown:hover .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown */
+  .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+    z-index: 200;
+    padding-top: var(--space-2);
+  }
+
+  .has-dropdown:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .nav-dropdown-inner {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-2);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-dropdown-link {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast), color var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .nav-dropdown-link:hover {
+    background: var(--color-bg-alt);
+    color: var(--color-primary);
+  }
+
+  .nav-dropdown-link--active {
+    color: var(--color-primary);
+    font-weight: var(--weight-semibold);
+  }
+
+  .nav-dropdown-all {
+    border-top: 1px solid var(--color-border-light);
+    margin-top: var(--space-1);
+    padding-top: var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-weight: var(--weight-medium);
+  }
+
+  .nav-dropdown-all:hover {
+    color: var(--color-primary);
   }
 
   /* Mobile Toggle */
@@ -222,6 +342,31 @@ const navLinks = [
   .mobile-nav-link--active {
     color: var(--color-primary);
     background: var(--color-bg-alt);
+  }
+
+  /* Mobile Sub-navigation */
+  .mobile-subnav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 var(--space-6);
+  }
+
+  .mobile-subnav-link {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    border-left: 2px solid var(--color-border-light);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .mobile-subnav-link:hover,
+  .mobile-subnav-link--active {
+    color: var(--color-primary);
+    border-left-color: var(--color-primary);
   }
 </style>
 

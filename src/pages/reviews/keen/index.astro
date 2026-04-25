@@ -1,0 +1,186 @@
+---
+/**
+ * Keen Platform Hub Page — /reviews/keen/
+ * 
+ * This is the Sub-hub (Pillar Page) for Keen in the Hub & Spoke model.
+ * It renders the platform-level review content AND lists all individual 
+ * reader reviews below it, creating strong topical authority.
+ */
+import ReviewLayout from '../../../layouts/ReviewLayout.astro';
+import ProsCons from '../../../components/ProsCons.astro';
+import CTABox from '../../../components/CTABox.astro';
+import FAQ from '../../../components/FAQ.astro';
+import ReaderCard from '../../../components/ReaderCard.astro';
+import RelatedContent from '../../../components/RelatedContent.astro';
+
+/* Load the Keen platform review content */
+const keenModule = await import('../../../content/reviews/keen.md');
+const KeenContent = keenModule.default;
+const frontmatter = keenModule.frontmatter;
+
+/* Load all Keen reader reviews */
+const readerModules = import.meta.glob('../../../content/readers/keen/*.md', { eager: true });
+const readers = Object.entries(readerModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+
+/* Load guides for cross-linking */
+const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
+const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
+  ...mod.frontmatter,
+  slug: path.split('/').pop()?.replace('.md', ''),
+}));
+
+/* Load comparisons for cross-linking */
+const comparisonModules = import.meta.glob('../../../content/comparisons/*.md', { eager: true });
+const comparisons = Object.entries(comparisonModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(c => c.platforms?.includes('Keen'));
+
+const faqItems = [
+  {
+    question: `Is ${frontmatter.platformName} legitimate?`,
+    answer: `Yes. ${frontmatter.platformName} is one of the longest-running online psychic reading platforms and has served millions of users. I've personally tested it through multiple paid sessions over an extended period.`
+  },
+  {
+    question: `How much does ${frontmatter.platformName} cost?`,
+    answer: `${frontmatter.platformName} pricing starts from ${frontmatter.pricing || '$1.99/min'} and varies depending on the psychic's experience level. ${frontmatter.freeOffer ? `New users can take advantage of ${frontmatter.freeOffer}.` : ''}`
+  },
+  {
+    question: `Does ${frontmatter.platformName} offer a money-back guarantee?`,
+    answer: `${frontmatter.platformName} does offer a satisfaction guarantee. If you're unhappy with your reading, you can reach out to customer support for credit or resolution. Check their current terms for specific details.`
+  },
+  {
+    question: `How do I choose the best reader on ${frontmatter.platformName}?`,
+    answer: `I've individually reviewed ${readers.length} readers on ${frontmatter.platformName}. Each review covers their reading style, pricing, accuracy track record, and who they're best suited for. Scroll down to see my full reader assessment series.`
+  },
+];
+
+const relatedItems = [
+  ...comparisons.map(c => ({
+    title: c.title,
+    href: `/comparisons/${c.slug}/`,
+    description: c.description,
+    badge: 'Comparison',
+    badgeVariant: 'primary' as const,
+  })),
+  ...guides.map(g => ({
+    title: g.title,
+    href: `/guides/${g.slug}/`,
+    description: g.description,
+    badge: g.category || 'Guide',
+    badgeVariant: 'sage' as const,
+  })),
+];
+---
+
+<ReviewLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  platformName={frontmatter.platformName}
+  rating={frontmatter.rating}
+  verdict={frontmatter.verdict}
+  affiliateUrl={frontmatter.affiliateUrl}
+  freeOffer={frontmatter.freeOffer}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+>
+  <KeenContent />
+
+  {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
+    <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
+  )}
+
+  <CTABox
+    title={`Ready to try ${frontmatter.platformName}?`}
+    description={frontmatter.freeOffer ? `Take advantage of their current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.'}
+    buttonText={`Visit ${frontmatter.platformName} →`}
+    buttonUrl={frontmatter.affiliateUrl || '#'}
+    variant="highlight"
+  />
+
+  <!-- Individual Reader Reviews Section -->
+  {readers.length > 0 && (
+    <section class="reader-reviews-section" id="keen-readers">
+      <div class="section-intro">
+        <span class="section-eyebrow text-xs text-uppercase text-muted">In-Depth Assessments</span>
+        <h2 class="section-heading">Individual Keen Reader Reviews</h2>
+        <p class="section-description text-muted">
+          I've personally assessed {readers.length} individual psychic readers on Keen. Each review below covers their reading style, accuracy track record, pricing, and exactly who they're best suited for — so you can choose with confidence.
+        </p>
+      </div>
+
+      <div class="reader-grid stagger">
+        {readers.map(reader => (
+          <ReaderCard
+            name={reader.platformName}
+            slug={reader.slug}
+            platform="keen"
+            rating={reader.rating}
+            verdict={reader.verdict}
+            pricing={reader.pricing}
+            bestFor={reader.bestFor}
+            affiliateUrl={reader.affiliateUrl}
+            freeOffer={reader.freeOffer}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <FAQ items={faqItems} title={`${frontmatter.platformName} FAQ`} />
+
+  <!-- Cross-linking to comparisons, guides, and other platforms -->
+  <RelatedContent title="Related Reading" items={relatedItems} />
+
+  <!-- Link back to all platform reviews -->
+  <div class="all-reviews-cta">
+    <a href="/reviews/" class="btn btn--ghost">← Back to All Platform Reviews</a>
+  </div>
+</ReviewLayout>
+
+<style>
+  .reader-reviews-section {
+    margin: var(--space-10) 0;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-intro {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-eyebrow {
+    display: block;
+    margin-bottom: var(--space-2);
+    letter-spacing: 0.15em;
+  }
+
+  .section-heading {
+    margin-top: 0;
+    margin-bottom: var(--space-3);
+  }
+
+  .section-description {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+  }
+
+  .reader-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .all-reviews-cta {
+    margin-top: var(--space-8);
+    text-align: center;
+  }
+</style>

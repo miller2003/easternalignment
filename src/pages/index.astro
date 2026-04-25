@@ -8,7 +8,7 @@ const reviewModules = import.meta.glob('../content/reviews/*.md', { eager: true 
 const reviews = Object.entries(reviewModules)
   .map(([path, mod]: [string, any]) => ({
     ...mod.frontmatter,
-    slug: path.split('/').pop()?.replace('.md', ''),
+    slug: mod.frontmatter.platformName?.toLowerCase().replace(/\s+/g, '-') || path.split('/').pop()?.replace('.md', ''),
   }))
   .sort((a, b) => (a.rank || 99) - (b.rank || 99));
 

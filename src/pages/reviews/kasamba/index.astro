@@ -1,71 +1,36 @@
 ---
 /**
- * Platform-level review dynamic route — /reviews/[slug]/
+ * Kasamba Platform Hub Page — /reviews/kasamba/
  * 
- * Now that platform reviews have dedicated hub pages (/reviews/keen/, /reviews/kasamba/),
- * this route handles any remaining review slugs that don't match a platform hub.
- * For platform slugs (keen, kasamba), visitors are redirected to the hub pages.
+ * Sub-hub (Pillar Page) for Kasamba in the Hub & Spoke model.
+ * Currently renders platform review only. Reader reviews can be added later.
  */
-import ReviewLayout from '../../layouts/ReviewLayout.astro';
-import ProsCons from '../../components/ProsCons.astro';
-import CTABox from '../../components/CTABox.astro';
-import FAQ from '../../components/FAQ.astro';
-import RelatedContent from '../../components/RelatedContent.astro';
+import ReviewLayout from '../../../layouts/ReviewLayout.astro';
+import ProsCons from '../../../components/ProsCons.astro';
+import CTABox from '../../../components/CTABox.astro';
+import FAQ from '../../../components/FAQ.astro';
+import RelatedContent from '../../../components/RelatedContent.astro';
 
-/* Platform slugs that now have dedicated hub pages */
-const PLATFORM_HUBS = ['keen', 'kasamba'];
+/* Load the Kasamba platform review content */
+const kasambaModule = await import('../../../content/reviews/kasamba.md');
+const KasambaContent = kasambaModule.default;
+const frontmatter = kasambaModule.frontmatter;
 
-export async function getStaticPaths() {
-  const posts = import.meta.glob('../../content/reviews/*.md');
-  const paths = [];
-  for (const path in posts) {
-    const post = await posts[path]();
-    const slug = path.split('/').pop().replace('.md', '');
-    
-    // Skip slugs that have dedicated hub pages
-    if (['keen', 'kasamba'].includes(slug)) continue;
-    
-    paths.push({
-      params: { slug },
-      props: post,
-    });
-  }
-  return paths;
-}
-
-const { default: Content, frontmatter } = Astro.props;
-const currentSlug = Astro.params.slug;
-
-/* Fetch guides for cross-linking */
-const guideModules = import.meta.glob('../../content/guides/*.md', { eager: true });
+/* Load guides for cross-linking */
+const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
 const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
   ...mod.frontmatter,
   slug: path.split('/').pop()?.replace('.md', ''),
 }));
 
-const relatedItems = [
-  {
-    title: 'Keen Psychics Review 2026',
-    href: '/reviews/keen/',
-    description: 'Full platform review with 10 individual reader assessments.',
-    badge: 'Platform',
-    badgeVariant: 'primary' as const,
-  },
-  {
-    title: 'Kasamba Review 2026',
-    href: '/reviews/kasamba/',
-    description: 'Full platform review — the largest psychic reading platform online.',
-    badge: 'Platform',
-    badgeVariant: 'primary' as const,
-  },
-  ...guides.map(g => ({
-    title: g.title,
-    href: `/guides/${g.slug}/`,
-    description: g.description,
-    badge: g.category || 'Guide',
-    badgeVariant: 'sage' as const,
-  })),
-];
+/* Load comparisons for cross-linking */
+const comparisonModules = import.meta.glob('../../../content/comparisons/*.md', { eager: true });
+const comparisons = Object.entries(comparisonModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(c => c.platforms?.includes('Kasamba'));
 
 const faqItems = [
   {
@@ -81,6 +46,30 @@ const faqItems = [
     answer: `${frontmatter.platformName} does offer a satisfaction guarantee. If you're unhappy with your reading, you can reach out to customer support for credit or resolution. Check their current terms for specific details.`
   },
 ];
+
+const relatedItems = [
+  {
+    title: 'Keen Psychics Review 2026 — Full Platform Assessment',
+    href: '/reviews/keen/',
+    description: 'Our comprehensive review of the Keen platform including 10 individual reader assessments.',
+    badge: 'Platform Review',
+    badgeVariant: 'primary' as const,
+  },
+  ...comparisons.map(c => ({
+    title: c.title,
+    href: `/comparisons/${c.slug}/`,
+    description: c.description,
+    badge: 'Comparison',
+    badgeVariant: 'primary' as const,
+  })),
+  ...guides.map(g => ({
+    title: g.title,
+    href: `/guides/${g.slug}/`,
+    description: g.description,
+    badge: g.category || 'Guide',
+    badgeVariant: 'sage' as const,
+  })),
+];
 ---
 
 <ReviewLayout
@@ -94,7 +83,7 @@ const faqItems = [
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
 >
-  <Content />
+  <KasambaContent />
 
   {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
     <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
@@ -110,8 +99,10 @@ const faqItems = [
 
   <FAQ items={faqItems} title={`${frontmatter.platformName} FAQ`} />
 
+  <!-- Cross-linking to comparisons, guides, and other platforms -->
   <RelatedContent title="Related Reading" items={relatedItems} />
 
+  <!-- Link back to all platform reviews -->
   <div class="all-reviews-cta">
     <a href="/reviews/" class="btn btn--ghost">← Back to All Platform Reviews</a>
   </div>

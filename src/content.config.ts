@@ -49,6 +49,29 @@ const comparisons = defineCollection({
   }),
 });
 
+const readers = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    platform: z.string().default('keen'),
+    platformName: z.string(),
+    rating: z.number().min(0).max(5),
+    verdict: z.string(),
+    affiliateUrl: z.string().default('#'),
+    freeOffer: z.string().optional(),
+    pricing: z.string().optional(),
+    bestFor: z.string().optional(),
+    highlights: z.array(z.string()).default([]),
+    pros: z.array(z.string()).default([]),
+    cons: z.array(z.string()).default([]),
+    publishDate: z.string(),
+    updatedDate: z.string().optional(),
+    entities: z.array(z.string()).optional(),
+    ...seoFields,
+  }),
+});
+
 const guides = defineCollection({
   type: 'content',
   schema: z.object({
@@ -72,4 +95,4 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { reviews, comparisons, guides, blog };
+export const collections = { reviews, comparisons, guides, blog, readers };

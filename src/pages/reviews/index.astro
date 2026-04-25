@@ -3,14 +3,53 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PlatformCard from '../../components/PlatformCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const reviewModules = import.meta.glob('../../content/reviews/*.md', { eager: true });
 const reviews = Object.entries(reviewModules)
   .map(([path, mod]: [string, any]) => ({
     ...mod.frontmatter,
-    slug: path.split('/').pop()?.replace('.md', ''),
+    slug: mod.frontmatter.platformName?.toLowerCase().replace(/\s+/g, '-') || path.split('/').pop()?.replace('.md', ''),
   }))
   .sort((a, b) => (a.rank || 99) - (b.rank || 99));
+
+/* Load readers to show count per platform */
+const readerModules = import.meta.glob('../../content/readers/**/*.md', { eager: true });
+const readersByPlatform: Record<string, number> = {};
+Object.entries(readerModules).forEach(([path, mod]: [string, any]) => {
+  const platform = mod.frontmatter?.platform || 'unknown';
+  readersByPlatform[platform] = (readersByPlatform[platform] || 0) + 1;
+});
+
+/* Load guides and comparisons for cross-linking */
+const guideModules = import.meta.glob('../../content/guides/*.md', { eager: true });
+const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
+  ...mod.frontmatter,
+  slug: path.split('/').pop()?.replace('.md', ''),
+}));
+
+const comparisonModules = import.meta.glob('../../content/comparisons/*.md', { eager: true });
+const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string, any]) => ({
+  ...mod.frontmatter,
+  slug: path.split('/').pop()?.replace('.md', ''),
+}));
+
+const relatedItems = [
+  ...comparisons.map(c => ({
+    title: c.title,
+    href: `/comparisons/${c.slug}/`,
+    description: c.description,
+    badge: 'Comparison',
+    badgeVariant: 'primary' as const,
+  })),
+  ...guides.map(g => ({
+    title: g.title,
+    href: `/guides/${g.slug}/`,
+    description: g.description,
+    badge: g.category || 'Guide',
+    badgeVariant: 'sage' as const,
+  })),
+];
 ---
 
 <BaseLayout
@@ -31,20 +70,32 @@ const reviews = Object.entries(reviewModules)
 
       <div class="review-list stagger">
         {reviews.map(review => (
-          <PlatformCard
-            rank={review.rank}
-            name={review.platformName}
-            slug={review.slug}
-            rating={review.rating}
-            verdict={review.verdict}
-            bestFor={review.bestFor || 'General readings'}
-            highlights={review.highlights || []}
-            affiliateUrl={review.affiliateUrl}
-            freeOffer={review.freeOffer}
-            isTopPick={review.rank === 1}
-          />
+          <div class="platform-card-wrapper">
+            <PlatformCard
+              rank={review.rank}
+              name={review.platformName}
+              slug={review.slug}
+              rating={review.rating}
+              verdict={review.verdict}
+              bestFor={review.bestFor || 'General readings'}
+              highlights={review.highlights || []}
+              affiliateUrl={review.affiliateUrl}
+              freeOffer={review.freeOffer}
+              isTopPick={review.rank === 1}
+            />
+            {readersByPlatform[review.slug] > 0 && (
+              <div class="reader-count-badge">
+                <a href={`/reviews/${review.slug}/#${review.slug}-readers`} class="reader-count-link">
+                  📝 {readersByPlatform[review.slug]} Individual Reader Reviews Available
+                </a>
+              </div>
+            )}
+          </div>
         ))}
       </div>
+
+      <!-- Cross-linking section -->
+      <RelatedContent title="Explore More" items={relatedItems} />
     </div>
   </div>
 </BaseLayout>
@@ -70,5 +121,33 @@ const reviews = Object.entries(reviewModules)
     flex-direction: column;
     gap: var(--space-6);
     max-width: 800px;
+  }
+
+  .platform-card-wrapper {
+    position: relative;
+  }
+
+  .reader-count-badge {
+    margin-top: var(--space-2);
+    text-align: center;
+  }
+
+  .reader-count-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .reader-count-link:hover {
+    background: var(--color-accent-light);
+    color: var(--color-primary-dark);
   }
 </style>
