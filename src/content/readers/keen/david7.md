@@ -28,11 +28,10 @@ customSchema: |
       "worstRating": "1"
     },
     "itemReviewed": {
-      "@type": "Person",
+      "@type": "Service",
       "name": "David7",
-      "jobTitle": "Psychic Reader",
       "url": "https://www.keen.com/love-relationships/david7/10351880",
-      "worksFor": {
+      "provider": {
         "@type": "Organization",
         "name": "Keen",
         "url": "https://www.keen.com"

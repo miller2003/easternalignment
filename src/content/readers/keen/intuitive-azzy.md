@@ -35,11 +35,10 @@ customSchema: |
         "worstRating": "1"
       },
       "itemReviewed": {
-        "@type": "Person",
+        "@type": "Service",
         "name": "Intuitive Azzy",
-        "jobTitle": "Psychic Advisor",
         "url": "https://www.keen.com/psychic-readings/intuitive-azzy/12446458",
-        "worksFor": {
+        "provider": {
           "@type": "Organization",
           "name": "Keen",
           "url": "https://www.keen.com"

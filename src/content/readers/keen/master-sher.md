@@ -28,11 +28,10 @@ customSchema: |
       "worstRating": "1"
     },
     "itemReviewed": {
-      "@type": "Person",
+      "@type": "Service",
       "name": "Master Sher",
-      "jobTitle": "Psychic Reader",
       "url": "https://www.keen.com/psychic-readings/master-sher/12468067",
-      "worksFor": {
+      "provider": {
         "@type": "Organization",
         "name": "Keen",
         "url": "https://www.keen.com"

@@ -28,11 +28,10 @@ customSchema: |
       "worstRating": "1"
     },
     "itemReviewed": {
-      "@type": "Person",
+      "@type": "Service",
       "name": "Regina Jacks",
-      "jobTitle": "Psychic Reader",
       "url": "https://www.keen.com/love-relationships/regina-jacks/11438416",
-      "worksFor": {
+      "provider": {
         "@type": "Organization",
         "name": "Keen",
         "url": "https://www.keen.com"

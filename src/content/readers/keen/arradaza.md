@@ -28,11 +28,10 @@ customSchema: |
       "worstRating": "1"
     },
     "itemReviewed": {
-      "@type": "Person",
+      "@type": "Service",
       "name": "arradaza",
-      "jobTitle": "Psychic Reader",
       "url": "https://www.keen.com/love-relationships/arradaza/1086511",
-      "worksFor": {
+      "provider": {
         "@type": "Organization",
         "name": "Keen",
         "url": "https://www.keen.com"
@@ -49,7 +48,7 @@ customSchema: |
       {"@type": "Thing", "name": "Keen Psychic Advisor"}
     ]
   }
-metaDescription: "Honest review of Arradaza on Keen  -  4.93�? 26K ratings, Tarot + Cartomancy + Numerology + Astrology at $5.99/min. The 98% accuracy claim examined honestly."
+metaDescription: "Honest review of Arradaza on Keen  -  4.93â˜? 26K ratings, Tarot + Cartomancy + Numerology + Astrology at $5.99/min. The 98% accuracy claim examined honestly."
 metaTitle: "Arradaza on Keen Review 2026 | 86K Readings, 5 Tools, Direct Style Assessed"
 canonicalUrl: "https://easternalignment.com/reviews/keen/arradaza/"
 highlights:

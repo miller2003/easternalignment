@@ -35,11 +35,10 @@ customSchema: |
         "worstRating": "1"
       },
       "itemReviewed": {
-        "@type": "Person",
+        "@type": "Service",
         "name": "Ask Fran",
-        "jobTitle": "Psychic Advisor",
         "url": "https://www.keen.com/love-relationships/ask-fran/189058",
-        "worksFor": {
+        "provider": {
           "@type": "Organization",
           "name": "Keen",
           "url": "https://www.keen.com"

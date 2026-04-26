@@ -28,11 +28,10 @@ customSchema: |
       "worstRating": "1"
     },
     "itemReviewed": {
-      "@type": "Person",
+      "@type": "Service",
       "name": "readings by kelly777",
-      "jobTitle": "Psychic Reader",
       "url": "https://www.keen.com/psychic-readings/readings-by-kelly777/6745718",
-      "worksFor": {
+      "provider": {
         "@type": "Organization",
         "name": "Keen",
         "url": "https://www.keen.com"
@@ -48,7 +47,7 @@ customSchema: |
       {"@type": "Thing", "name": "Keen Psychic Advisor"}
     ]
   }
-metaDescription: "Honest review of readings by Kelly777 on Keen  -  4.91�?across 40K ratings, remote viewing, past life specialty. Real pricing at $6.99/min + who should skip her."
+metaDescription: "Honest review of readings by Kelly777 on Keen  -  4.91â?across 40K ratings, remote viewing, past life specialty. Real pricing at $6.99/min + who should skip her."
 metaTitle: "Readings by Kelly777 on Keen Review 2026 | 159K Sessions, Remote Viewing & Past Life"
 canonicalUrl: "https://easternalignment.com/reviews/keen/readings-by-kelly777/"
 highlights:

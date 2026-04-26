@@ -28,11 +28,10 @@ customSchema: |
       "worstRating": "1"
     },
     "itemReviewed": {
-      "@type": "Person",
+      "@type": "Service",
       "name": "C Garrett",
-      "jobTitle": "Psychic Reader",
       "url": "https://www.keen.com/tarot-card-readings/c-garrett/5190528",
-      "worksFor": {
+      "provider": {
         "@type": "Organization",
         "name": "Keen",
         "url": "https://www.keen.com"

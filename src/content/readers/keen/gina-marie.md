@@ -35,11 +35,10 @@ customSchema: |
         "worstRating": "1"
       },
       "itemReviewed": {
-        "@type": "Person",
+        "@type": "Service",
         "name": "Gina Marie",
-        "jobTitle": "Psychic Advisor",
         "url": "https://www.keen.com/love-relationships/gina-marie/5487925",
-        "worksFor": {
+        "provider": {
           "@type": "Organization",
           "name": "Keen",
           "url": "https://www.keen.com"
