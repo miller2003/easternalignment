@@ -1,116 +1,53 @@
 ---
-title: "Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader Who Openly Admits Tarot Can't Predict Your Future  -  And Why That's Her Strongest Credential"
-description: "An independent review of Intuitive Azzy on Keen  -  her guidance-first reading philosophy, what 3,100+ ratings across a decade actually reveal, the real value of $2.22/min, and exactly who gets the most from booking her."
-platformName: "Keen: Intuitive Azzy"
+title: 'Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader Who Openly Admits
+  Tarot Can''t Predict Your Future  -  And Why That''s Her Strongest Credential'
+description: An independent review of Intuitive Azzy on Keen  -  her guidance-first
+  reading philosophy, what 3,100+ ratings across a decade actually reveal, the real
+  value of $2.22/min, and exactly who gets the most from booking her.
+platformName: 'Keen: Intuitive Azzy'
 rating: 4.7
-verdict: "Intuitive Azzy is one of the most honest value propositions currently active on Keen  -  40 years of experience, a 4.9-star rating, and a $2.22/min rate that makes her accessible at any budget. Her guidance-first philosophy means she's not the right choice for clients who need hard yes/no predictions with tight timelines. But for anyone who wants clarity, direction, and genuine energetic support from a reader who won't oversell what the cards can do  -  she's exceptional."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fintuitive-azzy%2F12446458%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
-freeOffer: "$1 for the first 5 minutes (new Keen users only)"
-pricing: "$2.22/min (Spiritual Readings profile)"
-bestFor: "Clients who want guidance-oriented readings with genuine energetic support  -  especially those navigating love, career crossroads, or life path questions without needing hard prediction timelines"
-publishDate: "2026-04-09"
-updatedDate: "2026-04-09"
-customSchema: |
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "headline": "Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader Who Openly Admits Tarot Can't Predict Your Future  -  And Why That's Her Strongest Credential",
-      "datePublished": "2026-04-25",
-      "dateModified": "2026-04-25",
-      "author": {
-        "@type": "Person",
-        "name": "Sarah",
-        "url": "https://easternalignment.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Eastern Alignment",
-        "url": "https://easternalignment.com"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.7",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "itemReviewed": {
-        "@type": "Service",
-        "name": "Intuitive Azzy",
-        "url": "https://www.keen.com/psychic-readings/intuitive-azzy/12446458",
-        "provider": {
-          "@type": "Organization",
-          "name": "Keen",
-          "url": "https://www.keen.com"
-        }
-      },
-      "reviewBody": "Intuitive Azzy is a Reiki Master and Ordained Angelic Healing Practitioner on Keen with 16,500+ completed readings since 2015 and a 4.9-star rating across 3,100+ verified reviews. At $2.22/min she is one of the most affordable experienced advisors on the platform. Her guidance-first philosophy  -  explicitly stating that tarot shows probable outcomes rather than fixed futures  -  makes her best suited for clients seeking direction and energetic clarity rather than hard predictions.",
-      "about": [
-        {"@type": "Thing", "name": "Tarot Card Reading"},
-        {"@type": "Thing", "name": "Reiki Healing"},
-        {"@type": "Thing", "name": "Angel Reading"},
-        {"@type": "Thing", "name": "Keen Psychic Advisor"},
-        {"@type": "Thing", "name": "Numerology Reading"}
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is Intuitive Azzy accurate on Keen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Intuitive Azzy holds a 4.9-star rating across 3,100+ verified reviews on Keen with 16,500+ readings since 2015. Her top endorsed qualities are Helpful, Honest, and Kind  -  followed by Detailed and Accurate. She is best evaluated on guidance quality and energetic clarity rather than hard prediction accuracy, which she explicitly does not promise."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What tools does Intuitive Azzy use?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Intuitive Azzy uses Tarot, Reiki, Numerology, and Chakra/Aura Cleansing. She also offers Angel Readings, Dream Interpretation, and Otherworld Connections. Her Tarot work is explicitly framed around probable outcomes rather than fixed predictions  -  she states directly that cards show the most likely result given the current course, not a guaranteed future."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does Intuitive Azzy charge on Keen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Intuitive Azzy charges $2.22/min across her Keen profiles. New Keen users can access the first 5 minutes for $1. A complete 20-minute session at standard rate costs approximately $44  -  making her one of the most affordable experienced advisors on the platform. Note that her detailed reading style means sessions often run longer than clients initially plan."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Intuitive Azzy best for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Intuitive Azzy performs best on love and relationship questions, career crossroads, and life path guidance  -  particularly for clients who want energetic clarity and direction rather than hard yes/no predictions. Her Pets & Animals specialty is also one of the few explicitly offered on Keen and is highly reviewed by clients in that niche."
-          }
-        }
-      ]
-    }
-  ]
-metaDescription: "4.9 stars, 3,100+ reviews, $2.22/min. But is Intuitive Azzy right for you? Honest breakdown of her guidance style, full toolkit, and who should book her."
+verdict: Intuitive Azzy is one of the most honest value propositions currently active
+  on Keen  -  40 years of experience, a 4.9-star rating, and a $2.22/min rate that
+  makes her accessible at any budget. Her guidance-first philosophy means she's not
+  the right choice for clients who need hard yes/no predictions with tight timelines.
+  But for anyone who wants clarity, direction, and genuine energetic support from
+  a reader who won't oversell what the cards can do  -  she's exceptional.
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fintuitive-azzy%2F12446458%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+freeOffer: $1 for the first 5 minutes (new Keen users only)
+pricing: $2.22/min (Spiritual Readings profile)
+bestFor: Clients who want guidance-oriented readings with genuine energetic support  -  especially
+  those navigating love, career crossroads, or life path questions without needing
+  hard prediction timelines
+publishDate: '2026-04-09'
+updatedDate: '2026-04-09'
+customSchema: ""
+metaDescription: 4.9 stars, 3,100+ reviews, $2.22/min. But is Intuitive Azzy right
+  for you? Honest breakdown of her guidance style, full toolkit, and who should book
+  her.
 highlights:
-  - "16,500+ completed readings since 2015  -  a decade of documented consistency"
-  - "4.9 stars across 3,100+ verified ratings  -  one of Keen's highest-rated advisors"
-  - "Reiki Master and Ordained Angelic Healing Practitioner with 40 years of practice"
-  - "$2.22/min  -  exceptional value for her experience level on the platform"
-  - "Rare Pets & Animals specialty  -  one of very few Keen advisors actively offering this"
+- 16,500+ completed readings since 2015  -  a decade of documented consistency
+- 4.9 stars across 3,100+ verified ratings  -  one of Keen's highest-rated advisors
+- Reiki Master and Ordained Angelic Healing Practitioner with 40 years of practice
+- $2.22/min  -  exceptional value for her experience level on the platform
+- Rare Pets & Animals specialty  -  one of very few Keen advisors actively offering
+  this
 pros:
-  - "Rare combination: 40 years experience at an entry-level price point"
-  - "Honest about what tarot can and cannot do  -  builds real trust before the session starts"
-  - "Wide toolkit covers tarot, reiki, numerology, chakra, and angel readings in one advisor"
-  - "Detailed and thorough  -  endorsed 192 times for depth of reading"
-  - "Strong long-term client base  -  many repeat clients spanning 2 - 3+ years"
+- 'Rare combination: 40 years experience at an entry-level price point'
+- Honest about what tarot can and cannot do  -  builds real trust before the session
+  starts
+- Wide toolkit covers tarot, reiki, numerology, chakra, and angel readings in one
+  advisor
+- Detailed and thorough  -  endorsed 192 times for depth of reading
+- Strong long-term client base  -  many repeat clients spanning 2 - 3+ years
 cons:
-  - "Guidance-oriented style means no hard yes/no predictions  -  wrong choice if you need certainty"
-  - "Detail-heavy sessions tend to run long  -  budget 20 - 25 minutes, not 10 - 15"
-  - "High demand means she isn't always immediately available  -  patience required for scheduling"
-  - "Spiritual and angelic framing may feel too esoteric for skeptic-leaning clients"
+- Guidance-oriented style means no hard yes/no predictions  -  wrong choice if you
+  need certainty
+- Detail-heavy sessions tend to run long  -  budget 20 - 25 minutes, not 10 - 15
+- High demand means she isn't always immediately available  -  patience required for
+  scheduling
+- Spiritual and angelic framing may feel too esoteric for skeptic-leaning clients
 ---
+
 
 ## The Statement That Made Me Take Her More Seriously Than Most Readers on This Platform
 
@@ -214,4 +151,7 @@ Unlike a clairvoyant-first reader where you deliberately withhold context to tes
 
 At $2.22/min with a 4.9-star rating and a decade of consistent performance, Intuitive Azzy is one of the few advisors on Keen where the math is unambiguously in the client's favor before the session even starts. The guidance-first philosophy is a genuine differentiator  -  honest in a way that most platform readers aren't, and more useful for clients who have moved past the stage of wanting to be told everything will work out. She won't tell you your ex is definitely coming back. She will tell you what the energy around that situation actually looks like right now, what the cards suggest about the trajectory, and what you can do with that information. For clients who are ready for that kind of reading, she's one of the best options on the platform at any price.
 
-[Book Intuitive Azzy on Keen  -  First 5 Minutes for $1]([AFFILIATE_URL])
+[Book Intuitive Azzy on Keen  -  First 5 Minutes for $1](https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fintuitive-azzy%2F12446458%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name})
+
+
+

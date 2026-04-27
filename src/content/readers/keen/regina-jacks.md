@@ -1,68 +1,45 @@
 ---
-title: "Regina Jacks on Keen Review 2026: 109,000 Readings Later  -  Is She Still Worth It?"
-description: "An independent review of Regina Jacks on Keen  -  covering her clairvoyant-first reading style, what 18,000 verified ratings actually reveal, pricing breakdown, and exactly who gets the most value from booking her."
-platformName: "Keen: Regina Jacks"
+title: 'Regina Jacks on Keen Review 2026: 109,000 Readings Later  -  Is She Still
+  Worth It?'
+description: An independent review of Regina Jacks on Keen  -  covering her clairvoyant-first
+  reading style, what 18,000 verified ratings actually reveal, pricing breakdown,
+  and exactly who gets the most value from booking her.
+platformName: 'Keen: Regina Jacks'
 rating: 4.8
-verdict: "Best for relationship readings where you want a reader who leads without prompting. Her 13-year track record is unmatched on Keen  -  but her impatient edge means she works best for clients who arrive ready to receive, not process."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fregina-jacks%2F11438416%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
-freeOffer: "$1 for the first 5 minutes (new Keen users only)"
-pricing: "$3.59/min (Love & Relationships profile)"
-bestFor: "People who want direct clairvoyant impressions on love and relationships without giving context first"
-publishDate: "2026-04-22"
-updatedDate: "2026-04-22"
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "headline": "Regina Jacks on Keen Review 2026: 109,000 Readings Later - Is She Still Worth It?",
-    "datePublished": "2026-04-22",
-    "dateModified": "2026-04-22",
-    "author": {
-      "@type": "Organization",
-      "name": "easternalignment"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.8",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Regina Jacks",
-      "url": "https://www.keen.com/love-relationships/regina-jacks/11438416",
-      "provider": {
-        "@type": "Organization",
-        "name": "Keen",
-        "url": "https://www.keen.com"
-      }
-    },
-    "reviewBody": "Regina Jacks is a fourth-generation clairvoyant on Keen with 109,000+ completed readings and a 4.83-star rating across 18,000+ verified reviews. She leads sessions with unprompted impressions before clients provide context. Best suited for love and relationship readings at $3.59/min.",
-    "about": [
-      {"@type": "Thing", "name": "Clairvoyant Reading"},
-      {"@type": "Thing", "name": "Tarot Card Reading"},
-      {"@type": "Thing", "name": "Love and Relationship Psychic Reading"},
-      {"@type": "Thing", "name": "Keen Psychic Advisor"}
-    ]
-  }
-metaDescription: "109,000+ readings, 4.83 stars, 13 years on Keen. But is Regina Jacks right for your question? An honest breakdown of her style, accuracy, and who should actually book her."
+verdict: Best for relationship readings where you want a reader who leads without
+  prompting. Her 13-year track record is unmatched on Keen  -  but her impatient edge
+  means she works best for clients who arrive ready to receive, not process.
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fregina-jacks%2F11438416%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+freeOffer: $1 for the first 5 minutes (new Keen users only)
+pricing: $3.59/min (Love & Relationships profile)
+bestFor: People who want direct clairvoyant impressions on love and relationships
+  without giving context first
+publishDate: '2026-04-22'
+updatedDate: '2026-04-22'
+customSchema: ""
+metaDescription: 109,000+ readings, 4.83 stars, 13 years on Keen. But is Regina Jacks
+  right for your question? An honest breakdown of her style, accuracy, and who should
+  actually book her.
 highlights:
-  - "109,000+ completed readings since 2012  -  one of Keen's highest-volume readers"
-  - '4.83 stars across 18,000+ verified ratings'
-  - 'Fourth-generation clairvoyant with 42 years of experience'
-  - 'Leads with impressions before you explain  -  minimal cold reading risk'
-  - 'Multiple profiles: Love & Relationships, Tarot, Life Path, Spiritual'
+- 109,000+ completed readings since 2012  -  one of Keen's highest-volume readers
+- 4.83 stars across 18,000+ verified ratings
+- Fourth-generation clairvoyant with 42 years of experience
+- Leads with impressions before you explain  -  minimal cold reading risk
+- 'Multiple profiles: Love & Relationships, Tarot, Life Path, Spiritual'
 pros:
-  - 'Exceptional volume and consistency  -  13 years on platform is rare'
-  - 'Clairvoyant-first approach makes her easy to test for genuine ability'
-  - 'Covers wide toolkit: tarot, pendulum, numerology, astrology....'
-  - "One of Keen's more affordable high-volume readers at $3.59/min"
-  - '"No Tools" option available  -  her clairvoyance stands independent of props'
+- Exceptional volume and consistency  -  13 years on platform is rare
+- Clairvoyant-first approach makes her easy to test for genuine ability
+- 'Covers wide toolkit: tarot, pendulum, numerology, astrology....'
+- One of Keen's more affordable high-volume readers at $3.59/min
+- '"No Tools" option available  -  her clairvoyance stands independent of props'
 cons:
-  - 'Documented impatience in lower reviews  -  can feel abrupt if you need a slower pace'
-  - 'Performs strongest on love/relationship questions; less documented strength in career or finance'
-  - 'Direct style without emotional warm-up may feel harsh in crisis moments'
+- Documented impatience in lower reviews  -  can feel abrupt if you need a slower
+  pace
+- Performs strongest on love/relationship questions; less documented strength in career
+  or finance
+- Direct style without emotional warm-up may feel harsh in crisis moments
 ---
+
 
 ## Before You Book Regina Jacks: What 109,000 Readings Actually Tell You
 
@@ -152,3 +129,6 @@ Regina runs multiple Keen profiles across different categories: Love & Relations
 ### What to Prepare  -  and What to Deliberately Leave Out
 
 Have your question ready, but resist the urge to front-load context. With most readers, arriving prepared means giving them background. With Regina, arriving prepared means knowing exactly what you want to know  -  and then letting her start. Give her the question, not the story behind it. If she's operating at the level her 18K reviews suggest, the story will come from her side of the conversation.
+
+
+

@@ -1,75 +1,59 @@
 ---
-title: "Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse Tool Set I've Seen on This Platform  -  An Honest Assessment"
-description: "A third-party review of Arradaza on Keen  -  covering her five-tool reading method, 25-year track record, the '98% accuracy' claim, what real clients say, and who gets the most value at $5.99/min."
-platformName: "Keen: arradaza"
+title: 'Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse
+  Tool Set I''ve Seen on This Platform  -  An Honest Assessment'
+description: A third-party review of Arradaza on Keen  -  covering her five-tool reading
+  method, 25-year track record, the '98% accuracy' claim, what real clients say, and
+  who gets the most value at $5.99/min.
+platformName: 'Keen: arradaza'
 rating: 4.9
-verdict: "A 25-year veteran with the widest tool set of any reader I've assessed on Keen  -  Tarot, Cartomancy, Numerology, Western and Chinese Astrology combined with Clairvoyant and Otherworld Connection skills. Best for clients who want multi-layered readings on love, career, or past life patterns. Her 'Direct' style and 98% accuracy claim deserve an honest look before you book."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Farradaza%2F1086511%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
-freeOffer: "$1 for the first 5 minutes (new Keen users only)"
-pricing: "$5.99/min"
-bestFor: "Multi-layered readings combining intuition and multiple divination tools  -  love, career, past lives, and spirit guide work"
-publishDate: "2026-03-18"
-updatedDate: "2026-03-18"
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "headline": "Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse Tool Set I've Seen on This Platform  -  An Honest Assessment",
-    "datePublished": "2026-04-25",
-    "dateModified": "2026-04-25",
-    "author": {
-      "@type": "Organization",
-      "name": "easternalignment"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "arradaza",
-      "url": "https://www.keen.com/love-relationships/arradaza/1086511",
-      "provider": {
-        "@type": "Organization",
-        "name": "Keen",
-        "url": "https://www.keen.com"
-      }
-    },
-    "reviewBody": "Arradaza is one of Keen's longest-serving advisors with 86,000+ readings and a 4.93-star rating across 26,000 verified reviews since 2000. Her tool set is the most extensive of any reader reviewed here: Tarot, Cartomancy, Numerology, Western Astrology, and Chinese Astrology, layered over Clairvoyant, Clairaudient, Empath, Clairsentient, and Otherworld Connections skills. Charges $5.99/min with phone and chat both available. Communication style is Direct. Best suited for clients seeking multi-dimensional readings on love, career, money, and past life patterns.",
-    "about": [
-      {"@type": "Thing", "name": "Tarot Card Reading"},
-      {"@type": "Thing", "name": "Cartomancy Reading"},
-      {"@type": "Thing", "name": "Numerology Reading"},
-      {"@type": "Thing", "name": "Astrology Reading"},
-      {"@type": "Thing", "name": "Clairvoyant Reading"},
-      {"@type": "Thing", "name": "Past Life Reading"},
-      {"@type": "Thing", "name": "Keen Psychic Advisor"}
-    ]
-  }
-metaDescription: "Honest review of Arradaza on Keen  -  4.93â˜? 26K ratings, Tarot + Cartomancy + Numerology + Astrology at $5.99/min. The 98% accuracy claim examined honestly."
-metaTitle: "Arradaza on Keen Review 2026 | 86K Readings, 5 Tools, Direct Style Assessed"
-canonicalUrl: "https://easternalignment.com/reviews/keen/arradaza/"
+verdict: A 25-year veteran with the widest tool set of any reader I've assessed on
+  Keen  -  Tarot, Cartomancy, Numerology, Western and Chinese Astrology combined with
+  Clairvoyant and Otherworld Connection skills. Best for clients who want multi-layered
+  readings on love, career, or past life patterns. Her 'Direct' style and 98% accuracy
+  claim deserve an honest look before you book.
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Farradaza%2F1086511%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+freeOffer: $1 for the first 5 minutes (new Keen users only)
+pricing: $5.99/min
+bestFor: Multi-layered readings combining intuition and multiple divination tools  -  love,
+  career, past lives, and spirit guide work
+publishDate: '2026-03-18'
+updatedDate: '2026-03-18'
+customSchema: ""
+metaDescription: Honest review of Arradaza on Keen  -  4.93 stars  26K ratings, Tarot
+  + Cartomancy + Numerology + Astrology at $5.99/min. The 98% accuracy claim examined
+  honestly.
+metaTitle: Arradaza on Keen Review 2026 | 86K Readings, 5 Tools, Direct Style Assessed
+canonicalUrl: https://easternalignment.com/reviews/keen/arradaza/
 highlights:
-  - "86,000+ readings on Keen since 2000  -  25 continuous years on the platform"
-  - "4.93-star rating across 26,000 verified reviews"
-  - "Five divination tools: Tarot, Cartomancy, Numerology, Western Astrology, Chinese Astrology"
-  - "Phone AND chat available  -  full flexibility unlike chat-only readers"
-  - "Documented 23-year return client  -  one of the strongest loyalty signals on the platform"
-  - "Otherworld Connections as a listed skill  -  rare beyond standard spirit guide work"
+- 86,000+ readings on Keen since 2000  -  25 continuous years on the platform
+- 4.93-star rating across 26,000 verified reviews
+- 'Five divination tools: Tarot, Cartomancy, Numerology, Western Astrology, Chinese
+  Astrology'
+- Phone AND chat available  -  full flexibility unlike chat-only readers
+- Documented 23-year return client  -  one of the strongest loyalty signals on the
+  platform
+- Otherworld Connections as a listed skill  -  rare beyond standard spirit guide work
 pros:
-  - "Broadest tool set of any reader we've reviewed  -  can approach your question from multiple angles simultaneously"
-  - "25-year track record generates the most verified data of almost anyone on Keen"
-  - "Phone and chat both available  -  book the format that works for how you receive information"
-  - "Mid-premium price ($5.99/min) sits between budget and top-tier, with depth to justify it"
-  - "Cartomancy and Chinese Astrology layers available for clients who want cultural or symbolic depth"
+- Broadest tool set of any reader we've reviewed  -  can approach your question from
+  multiple angles simultaneously
+- 25-year track record generates the most verified data of almost anyone on Keen
+- Phone and chat both available  -  book the format that works for how you receive
+  information
+- Mid-premium price ($5.99/min) sits between budget and top-tier, with depth to justify
+  it
+- Cartomancy and Chinese Astrology layers available for clients who want cultural
+  or symbolic depth
 cons:
-  - "'98% accuracy' bio claim is a red flag worth examining  -  no reader hits that consistently"
-  - "Direct communication style is an asset for some clients and genuinely difficult for others"
-  - "Second Psychic profile ($10.99/min) is effectively inactive with zero ratings  -  avoid it"
-  - "One documented complaint about communication style after critical feedback (2017)  -  worth knowing"
+- '''98% accuracy'' bio claim is a red flag worth examining  -  no reader hits that
+  consistently'
+- Direct communication style is an asset for some clients and genuinely difficult
+  for others
+- Second Psychic profile ($10.99/min) is effectively inactive with zero ratings  -  avoid
+  it
+- One documented complaint about communication style after critical feedback (2017)  -  worth
+  knowing
 ---
+
 
 ## One Client Has Been Calling Her Since 2002
 
@@ -177,3 +161,6 @@ Phone or chat: your call. If you're asking about something emotionally charged, 
 Arrive with your question already framed. One sentence, one focal point. Given how many tools she has available, telling her what dimension you want to explore  -  *"I want to understand the pattern in this relationship, not just what happens next"*  -  will direct her toward the right combination of systems for your actual need rather than defaulting to one tool.
 
 Her 25 years on this platform, with a 23-year return client on record, aren't credentials she's claimed. They're outcomes other people produced by choosing to come back. That's the only metric that actually holds.
+
+
+

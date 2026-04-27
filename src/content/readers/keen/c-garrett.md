@@ -1,71 +1,47 @@
 ---
-title: "C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation Psychic Actually Looks Like  -  An Honest Third-Party Assessment"
-description: "A third-party review of C Garrett on Keen  -  unpacking her 75% energy, 25% tarot hybrid method, dream reading specialty, self-declared timing limits, and exactly who gets real value at $4.89/min."
-platformName: "Keen: C Garrett"
+title: 'C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation
+  Psychic Actually Looks Like  -  An Honest Third-Party Assessment'
+description: A third-party review of C Garrett on Keen  -  unpacking her 75% energy,
+  25% tarot hybrid method, dream reading specialty, self-declared timing limits, and
+  exactly who gets real value at $4.89/min.
+platformName: 'Keen: C Garrett'
 rating: 4.8
-verdict: "Best for people who want intuition-led clarity on relationships or career  -  not a card-by-card walkthrough. Her hybrid method, 25-year track record, and unusually honest self-assessment make her one of the more reliable mid-tier reads on Keen. Not suited for tight timelines or general open-ended sessions."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fc-garrett%2F5190528%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
-freeOffer: "$1 for the first 5 minutes (new Keen users only)"
-pricing: "$4.89/min"
-bestFor: "Relationship and career readings where you want empathic depth over structural card interpretation"
-publishDate: "2026-04-21"
-updatedDate: "2026-04-21"
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "headline": "C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation Psychic Actually Looks Like  -  An Honest Third-Party Assessment",
-    "datePublished": "2026-04-25",
-    "dateModified": "2026-04-25",
-    "author": {
-      "@type": "Organization",
-      "name": "easternalignment"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.8",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "C Garrett",
-      "url": "https://www.keen.com/tarot-card-readings/c-garrett/5190528",
-      "provider": {
-        "@type": "Organization",
-        "name": "Keen",
-        "url": "https://www.keen.com"
-      }
-    },
-    "reviewBody": "C Garrett (Carolyn/Carrie) is a hybrid intuitive-tarot reader on Keen with 54,000+ completed readings and a 4.84-star rating across 10,000 verified reviews, active since 2001. She self-describes as 75% energy-based and 25% card-based  -  making her distinct from both pure tarot readers and tool-free intuitives. Specializes in career and relationship readings with dream interpretation as a lesser-known strength. Charges $4.89/min with a self-declared limitation on timing predictions. Best for focused, specific-question sessions rather than open-ended general readings.",
-    "about": [
-      {"@type": "Thing", "name": "Tarot Card Reading"},
-      {"@type": "Thing", "name": "Clairvoyant Reading"},
-      {"@type": "Thing", "name": "Love and Relationship Psychic Reading"},
-      {"@type": "Thing", "name": "Career Psychic Reading"},
-      {"@type": "Thing", "name": "Dream Interpretation Reading"},
-      {"@type": "Thing", "name": "Keen Psychic Advisor"}
-    ]
-  }
+verdict: Best for people who want intuition-led clarity on relationships or career  -  not
+  a card-by-card walkthrough. Her hybrid method, 25-year track record, and unusually
+  honest self-assessment make her one of the more reliable mid-tier reads on Keen.
+  Not suited for tight timelines or general open-ended sessions.
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fc-garrett%2F5190528%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+freeOffer: $1 for the first 5 minutes (new Keen users only)
+pricing: $4.89/min
+bestFor: Relationship and career readings where you want empathic depth over structural
+  card interpretation
+publishDate: '2026-04-21'
+updatedDate: '2026-04-21'
+customSchema: ""
 highlights:
-  - "54,000+ readings completed on Keen since 2001  -  25 years on the platform"
-  - "4.84-star rating across 10,000 verified reviews"
-  - "75% intuition-led, 25% tarot  -  a genuinely hybrid method, not a standard card reader"
-  - "Dream interpretation listed as a distinct skill  -  rare on the platform"
-  - "Explicitly states she is not a timing expert  -  one of the more honest self-assessments on Keen"
-  - "Covers LGBTQ relationship dynamics as a named specialty"
+- 54,000+ readings completed on Keen since 2001  -  25 years on the platform
+- 4.84-star rating across 10,000 verified reviews
+- 75% intuition-led, 25% tarot  -  a genuinely hybrid method, not a standard card
+  reader
+- Dream interpretation listed as a distinct skill  -  rare on the platform
+- Explicitly states she is not a timing expert  -  one of the more honest self-assessments
+  on Keen
+- Covers LGBTQ relationship dynamics as a named specialty
 pros:
-  - "Hybrid method means you get energetic depth without being locked into card structure"
-  - "Career prediction track record is well-documented in client reviews"
-  - "Dream exploration is a genuine secondary specialty most clients don't know to use"
-  - "Wide availability  -  nearly every day, 5am - 9pm PST"
-  - "Mid-tier price at $4.89/min makes longer sessions financially viable"
+- Hybrid method means you get energetic depth without being locked into card structure
+- Career prediction track record is well-documented in client reviews
+- Dream exploration is a genuine secondary specialty most clients don't know to use
+- Wide availability  -  nearly every day, 5am - 9pm PST
+- Mid-tier price at $4.89/min makes longer sessions financially viable
 cons:
-  - "Self-declared non-expert on timing  -  not the right reader for date-specific questions"
-  - "Requires your name, sign, and specific question upfront  -  general sessions are explicitly not her preference"
-  - "4.84 rating includes a small cluster of 'too blunt' feedback  -  style won't land for everyone"
-  - "Financial Guidance second profile is nearly inactive  -  limited track record there"
+- Self-declared non-expert on timing  -  not the right reader for date-specific questions
+- Requires your name, sign, and specific question upfront  -  general sessions are
+  explicitly not her preference
+- 4.84 rating includes a small cluster of 'too blunt' feedback  -  style won't land
+  for everyone
+- Financial Guidance second profile is nearly inactive  -  limited track record there
 ---
+
 
 ## The Label Says "Tarot Reader." Her Own Bio Contradicts That in the First Paragraph.
 
@@ -205,3 +181,6 @@ Book through her Tarot Card Readings profile  -  that's where her full track rec
 The $1 for 5 minutes new user offer applies here as with any Keen reader. Use those minutes to see whether her energetic read on your situation resonates  -  not to extract a full answer. If the first two minutes feel like she's picking up on something real, continue. If it feels like she's working from what you've told her rather than what she's perceiving, you have your answer before you've spent much.
 
 Her wide availability means you don't need to book days out. Check her schedule and connect when the timing works for you  -  that flexibility alone makes the logistics easier than with higher-demand readers.
+
+
+

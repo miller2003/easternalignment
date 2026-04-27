@@ -1,68 +1,43 @@
 ---
-title: "David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames  -  What 94,000 Readings Actually Tell You"
-description: "An honest third-party review of David7 on Keen  -  covering his tool-free clairvoyant approach, twin flame specialization, dual profile pricing, and exactly who gets real value at $6.99/min."
-platformName: "Keen: David7"
+title: 'David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames  -  What
+  94,000 Readings Actually Tell You'
+description: An honest third-party review of David7 on Keen  -  covering his tool-free
+  clairvoyant approach, twin flame specialization, dual profile pricing, and exactly
+  who gets real value at $6.99/min.
+platformName: 'Keen: David7'
 rating: 4.9
-verdict: "Best for people navigating emotionally complex relationship situations  -  especially twin flame or person-of-interest dynamics  -  who want a male reader's unfiltered perspective. His tool-free intuitive style and 17-year track record are genuine assets; his premium price point demands you come prepared."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fdavid7%2F10351880%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
-freeOffer: "$1 for the first 5 minutes (new Keen users only)"
-pricing: "$6.99/min"
-bestFor: "Twin flame and relationship readings from a direct, tool-free male intuitive with a long track record"
-publishDate: "2026-03-29"
-updatedDate: "2026-03-29"
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "headline": "David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames  -  What 94,000 Readings Actually Tell You",
-    "datePublished": "2026-04-25",
-    "dateModified": "2026-04-25",
-    "author": {
-      "@type": "Organization",
-      "name": "easternalignment"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "David7",
-      "url": "https://www.keen.com/love-relationships/david7/10351880",
-      "provider": {
-        "@type": "Organization",
-        "name": "Keen",
-        "url": "https://www.keen.com"
-      }
-    },
-    "reviewBody": "David7 is a tool-free clairvoyant reader on Keen with 94,000+ completed readings and a 4.92-star rating across 15,000 verified reviews, active since 2009. He specializes in twin flame and person-of-interest dynamics, offering a rare male perspective on relationship readings. His Love & Relationships profile charges $6.99/min; his Psychic Mediums profile charges $7.99/min. Best suited for emotionally complex relationship situations where you want direct, intuition-led guidance rather than card-based interpretation.",
-    "about": [
-      {"@type": "Thing", "name": "Psychic Reading"},
-      {"@type": "Thing", "name": "Twin Flame Reading"},
-      {"@type": "Thing", "name": "Clairvoyant Reading"},
-      {"@type": "Thing", "name": "Love and Relationship Psychic Reading"},
-      {"@type": "Thing", "name": "Keen Psychic Advisor"}
-    ]
-  }
+verdict: Best for people navigating emotionally complex relationship situations  -  especially
+  twin flame or person-of-interest dynamics  -  who want a male reader's unfiltered
+  perspective. His tool-free intuitive style and 17-year track record are genuine
+  assets; his premium price point demands you come prepared.
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fdavid7%2F10351880%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+freeOffer: $1 for the first 5 minutes (new Keen users only)
+pricing: $6.99/min
+bestFor: Twin flame and relationship readings from a direct, tool-free male intuitive
+  with a long track record
+publishDate: '2026-03-29'
+updatedDate: '2026-03-29'
+customSchema: ""
 highlights:
-  - "94,000+ readings completed on Keen since 2009"
-  - "4.92-star rating across 15,000 verified reviews"
-  - "Tool-free reader  -  pure clairvoyant, clairaudient, clairsentient"
-  - "One of the few male readers on Keen with a twin flame specialization"
-  - "Two profiles: Love & Relationships ($6.99/min) and Psychic Mediums ($7.99/min)"
+- 94,000+ readings completed on Keen since 2009
+- 4.92-star rating across 15,000 verified reviews
+- Tool-free reader  -  pure clairvoyant, clairaudient, clairsentient
+- One of the few male readers on Keen with a twin flame specialization
+- 'Two profiles: Love & Relationships ($6.99/min) and Psychic Mediums ($7.99/min)'
 pros:
-  - "Rare male perspective  -  genuinely shifts the dynamic for certain question types"
-  - "No tools means no structural crutch  -  what he gives you is direct intuitive read"
-  - "17-year track record with volume that filters out lucky streaks"
-  - "Delivers specific timelines and actionable framing, not just emotional reflection"
-  - "New user offer makes initial calibration low-risk"
+- Rare male perspective  -  genuinely shifts the dynamic for certain question types
+- No tools means no structural crutch  -  what he gives you is direct intuitive read
+- 17-year track record with volume that filters out lucky streaks
+- Delivers specific timelines and actionable framing, not just emotional reflection
+- New user offer makes initial calibration low-risk
 cons:
-  - "$6.99/min is among the higher tier on Keen  -  a 20-minute session runs $139+"
-  - "Predictions are acknowledged to sometimes take time to manifest  -  not for timeline-urgent questions"
-  - "No tools means less structure for clients who find card-based readings easier to follow"
+- $6.99/min is among the higher tier on Keen  -  a 20-minute session runs $139+
+- Predictions are acknowledged to sometimes take time to manifest  -  not for timeline-urgent
+  questions
+- No tools means less structure for clients who find card-based readings easier to
+  follow
 ---
+
 
 ## Why His Star Rating Is the Least Interesting Thing About Him
 
@@ -203,3 +178,6 @@ David7 is listed as available and can be reached by both phone and chat. His pri
 Write your question before you start. One sentence. Not a paragraph of backstory  -  a single sentence that names what you actually need to know. At $6.99/min, every minute you spend explaining context is money spent not receiving a reading. David7's track record suggests he picks up quickly without needing extensive setup  -  meet him there by arriving focused.
 
 If you're a new Keen user, your first 5 minutes cost $1. Use that window as a genuine calibration, then decide whether to continue into a full session.
+
+
+

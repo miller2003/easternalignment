@@ -93,12 +93,13 @@ const reviewSchema = {
     "worstRating": 1,
   },
   "itemReviewed": {
-    "@type": "Service",
-    "name": platformName,
+    "@type": "Product",
+    "name": readerLabel || platformName,
+    "url": affiliateUrl !== '#' ? affiliateUrl : undefined,
     "provider": {
       "@type": "Organization",
-      "name": platformName,
-      "url": affiliateUrl !== '#' ? affiliateUrl : undefined
+      "name": parentPlatformLabel || platformName.split(':')[0] || "Keen",
+      "url": "https://www.keen.com"
     }
   },
   "publisher": {
@@ -110,7 +111,7 @@ const reviewSchema = {
   ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": Astro.url.href
+    "@id": Astro.url.href.replace('http://', 'https://')
   }
 };
 

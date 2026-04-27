@@ -10,44 +10,8 @@ pricing: "$6.99/min"
 bestFor: "Love, soulmate, and past life readings with a high-volume reader whose track record speaks louder than her bio"
 publishDate: "2026-04-01"
 updatedDate: "2026-04-01"
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "headline": "Readings by Kelly777 on Keen Review 2026: Behind 159,000 Sessions  -  What One of the Platform's Highest-Volume Readers Actually Delivers",
-    "datePublished": "2026-04-25",
-    "dateModified": "2026-04-25",
-    "author": {
-      "@type": "Organization",
-      "name": "easternalignment"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "readings by kelly777",
-      "url": "https://www.keen.com/psychic-readings/readings-by-kelly777/6745718",
-      "provider": {
-        "@type": "Organization",
-        "name": "Keen",
-        "url": "https://www.keen.com"
-      }
-    },
-    "reviewBody": "Readings by Kelly777 is one of the highest-volume readers on Keen with 159,000+ completed sessions and a 4.91-star rating across 40,000 verified reviews, active since 2005. Her method combines clairvoyance, clairaudience, empathic sensing, and remote viewing  -  despite being marketed as a tarot reader, her tools section lists 'No Tools,' reflecting an intuition-led approach. Specializes in love and soulmate readings, past life context, and spirit guide work. Charges $6.99/min across all profiles, with chat and appointment booking only  -  no immediate phone option. Best for clients seeking depth on relationship and soulmate questions, particularly where past life or karmic dimensions are relevant.",
-    "about": [
-      {"@type": "Thing", "name": "Psychic Reading"},
-      {"@type": "Thing", "name": "Love and Relationship Psychic Reading"},
-      {"@type": "Thing", "name": "Past Life Reading"},
-      {"@type": "Thing", "name": "Remote Viewing"},
-      {"@type": "Thing", "name": "Soulmate Reading"},
-      {"@type": "Thing", "name": "Keen Psychic Advisor"}
-    ]
-  }
-metaDescription: "Honest review of readings by Kelly777 on Keen  -  4.91â?across 40K ratings, remote viewing, past life specialty. Real pricing at $6.99/min + who should skip her."
+customSchema: ""
+metaDescription: "Honest review of readings by Kelly777 on Keen  -  4.91 stars across 40K ratings, remote viewing, past life specialty. Real pricing at $6.99/min + who should skip her."
 metaTitle: "Readings by Kelly777 on Keen Review 2026 | 159K Sessions, Remote Viewing & Past Life"
 canonicalUrl: "https://easternalignment.com/reviews/keen/readings-by-kelly777/"
 highlights:
@@ -214,3 +178,7 @@ Go to her main Psychic Readings profile and use the **Arrange** function to sche
 If you're a new Keen user, your first 5 minutes cost $1. Treat it as a calibration window. Give her a focused question with real stakes  -  something you know the truth about internally, so you can assess whether her read lands. If it does, schedule a full session. If it doesn't, you've spent a dollar and learned something useful.
 
 Kelly777's two decades on this platform, at this volume, with this rating, represent the kind of track record that doesn't need a strong bio to justify it. The numbers do the talking she doesn't bother to.
+
+
+
+

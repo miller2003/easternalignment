@@ -35,8 +35,8 @@ const siteTitle = 'EasternAlignment';
 const baseTitle = seoTitle || title;
 const fullTitle = baseTitle === siteTitle ? baseTitle : `${baseTitle} — ${siteTitle}`;
 const metaDesc = metaDescription || description;
-const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
-const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href;
+const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href.replace('http://', 'https://');
+const ogImageUrl = ogImage.startsWith('http') ? ogImage.replace('http://', 'https://') : new URL(ogImage, Astro.site).href.replace('http://', 'https://');
 
 const websiteSchema = {
   "@context": "https://schema.org",

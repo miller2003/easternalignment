@@ -1,66 +1,40 @@
 ---
-title: "Master Sher on Keen Review 2026: An Honest Assessment From Someone Who's Tested Dozens of Readers"
-description: "An in-depth third-party review of Master Sher on Keen  -  covering tarot reading style, real accuracy standards, pricing breakdown, and exactly who gets the most value from booking him."
-platformName: "Keen: Master Sher"
+title: 'Master Sher on Keen Review 2026: An Honest Assessment From Someone Who''s
+  Tested Dozens of Readers'
+description: An in-depth third-party review of Master Sher on Keen  -  covering tarot
+  reading style, real accuracy standards, pricing breakdown, and exactly who gets
+  the most value from booking him.
+platformName: 'Keen: Master Sher'
 rating: 4.8
-verdict: "Best for seekers who want direct, tarot-grounded clarity on relationships or life decisions  -  not emotional reassurance. His honesty is his strongest asset; his slower chat pace is the only real trade-off."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fmaster-sher%2F12468067%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
-freeOffer: "$1 for the first 5 minutes (new Keen users only)"
-pricing: "$4.29/min"
-bestFor: "People who want honest, structured tarot readings without sugar-coating"
-publishDate: "2026-04-22"
-updatedDate: "2026-04-22"
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "headline": "Master Sher on Keen Review 2026: An Honest Assessment From Someone Who's Tested Dozens of Readers",
-    "datePublished": "2026-04-22",
-    "dateModified": "2026-04-22",
-    "author": {
-      "@type": "Organization",
-      "name": "easternalignment"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Master Sher",
-      "url": "https://www.keen.com/psychic-readings/master-sher/12468067",
-      "provider": {
-        "@type": "Organization",
-        "name": "Keen",
-        "url": "https://www.keen.com"
-      }
-    },
-    "reviewBody": "Master Sher is a tarot-based intuitive reader on Keen with 19,000+ completed readings and a 4.9-star rating across 3,600+ verified reviews. He leads with structured tarot interpretation layered with clairvoyant intuition. Best suited for relationship dynamics and situational clarity at $4.29/min. Slower chat response pace is the main trade-off in timed sessions.",
-    "about": [
-      {"@type": "Thing", "name": "Tarot Card Reading"},
-      {"@type": "Thing", "name": "Clairvoyant Reading"},
-      {"@type": "Thing", "name": "Love and Relationship Psychic Reading"},
-      {"@type": "Thing", "name": "Keen Psychic Advisor"}
-    ]
-  }
+verdict: Best for seekers who want direct, tarot-grounded clarity on relationships
+  or life decisions  -  not emotional reassurance. His honesty is his strongest asset;
+  his slower chat pace is the only real trade-off.
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fmaster-sher%2F12468067%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+freeOffer: $1 for the first 5 minutes (new Keen users only)
+pricing: $4.29/min
+bestFor: People who want honest, structured tarot readings without sugar-coating
+publishDate: '2026-04-22'
+updatedDate: '2026-04-22'
+customSchema: ""
 highlights:
-  - '- 19,000+ readings completed on Keen'
-  - '- 4.89-star rating across 3,600+ verified reviews'
-  - '- Explicitly states "no false hopes"  -  rare among high-volume platform readers'
-  - '- Operates across 4 specialty profiles: Tarot, Love & Relationships, Spiritual, Life Path'
-  - '- Consistent daily availability: 1am - 9am PST'
+- '- 19,000+ readings completed on Keen'
+- '- 4.89-star rating across 3,600+ verified reviews'
+- '- Explicitly states "no false hopes"  -  rare among high-volume platform readers'
+- '- Operates across 4 specialty profiles: Tarot, Love & Relationships, Spiritual,
+  Life Path'
+- '- Consistent daily availability: 1am - 9am PST'
 pros:
-  - '- Unusually direct and honest  -  tells you what cards say, not what you want to hear'
-  - '- Strong track record on relationship dynamics and situational clarity'
-  - '- Multiple specialty profiles allow you to match the reading to your question type'
-  - '- New user offer makes the first session low-risk to test'
+- '- Unusually direct and honest  -  tells you what cards say, not what you want to
+  hear'
+- '- Strong track record on relationship dynamics and situational clarity'
+- '- Multiple specialty profiles allow you to match the reading to your question type'
+- '- New user offer makes the first session low-risk to test'
 cons:
-  - '- Slower typing pace in chat sessions adds cost in a per-minute model'
-  - '- Not ideal for yes/no predictions with specific dates'
-  - '- Early morning availability (PST) may not suit all time zones'
+- '- Slower typing pace in chat sessions adds cost in a per-minute model'
+- '- Not ideal for yes/no predictions with specific dates'
+- '- Early morning availability (PST) may not suit all time zones'
 ---
+
 
 ## Before You Book Master Sher: What a Star Rating Can't Tell You
 
@@ -146,3 +120,6 @@ Master Sher runs a consistent weekly schedule  -  primarily **1am - 9am PST, dai
 ### What to Have Ready Before Your Session Starts
 
 Write down your core question in one sentence before you open the chat. Not a paragraph  -  one sentence. The most wasted money in psychic readings comes from clients who spend the first several minutes explaining backstory at $4.29/min. Master Sher's bio explicitly states he *"respects his client's time"*  -  meet him halfway by arriving prepared.
+
+
+
