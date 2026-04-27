@@ -93,14 +93,16 @@ const reviewSchema = {
     "worstRating": 1,
   },
   "itemReviewed": {
-    "@type": "Product",
+    "@type": "Organization",
     "name": readerLabel || platformName,
     "url": affiliateUrl !== '#' ? affiliateUrl : undefined,
-    "provider": {
-      "@type": "Organization",
-      "name": parentPlatformLabel || platformName.split(':')[0] || "Keen",
-      "url": "https://www.keen.com"
-    }
+    ...(isReaderReview ? {
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": parentPlatformLabel || "Keen",
+        "url": "https://www.keen.com"
+      }
+    } : {})
   },
   "publisher": {
     "@type": "Organization",
