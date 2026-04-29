@@ -1,11 +1,11 @@
 ---
 title: "Keen Psychics Review 2026: Phone Readings, Mobile App & Value Guide"
-description: "Updated Keen Psychics Review 2026. Get your first 3 minutes free. We tested their industry-leading mobile app for phone readings and daily guidance accuracy."
+description: "Updated Keen Psychics Review 2026. Get 5 minutes for $1. We tested their industry-leading mobile app for phone readings and daily guidance accuracy."
 platformName: "Keen"
 rating: 4.8
 verdict: "Keen offers a solid psychic reading experience with competitive pricing and an excellent mobile app. It's particularly strong for phone readings and has one of the best introductory offers in the market."
 affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326"
-freeOffer: "First 3 minutes free + special introductory rates"
+freeOffer: "5 minutes for $1"
 pricing: "Starting from $1.99/min"
 bestFor: "Phone readings & daily guidance"
 publishDate: "2026-02-10"
@@ -63,8 +63,8 @@ Keen's pricing is competitive and transparent, which I appreciate as a regular u
 - **Experienced advisors**: $5.00  -  $9.99/min
 - **Premium advisors**: $10.00  -  $20.00/min
 
-### How to Connect for Your First 3 Free Minutes
-The introductory offer gives you your first 3 minutes free with any new psychic. To maximize this:
+### How to Get 5 Minutes for $1
+The introductory offer gives you 5 minutes for just $1. To maximize this:
 1. Browse for advisors with at least 1,000+ reviews.
 2. Check their current "Active" status.
 3. Have your primary question ready before the clock starts.

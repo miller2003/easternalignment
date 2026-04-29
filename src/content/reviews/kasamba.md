@@ -1,11 +1,11 @@
 ---
 title: "Kasamba Review 2026: Verified Honest Experience, Pricing & Free Minutes"
-description: "Updated Kasamba Review 2026. Get 3 free minutes + 70% off. We verified 500+ psychics for love, career, and tarot accuracy. Save on your first session."
+description: "Updated Kasamba Review 2026. Get 3 free minutes + 50% off. We verified 500+ psychics for love, career, and tarot accuracy. Save on your first session."
 platformName: "Kasamba"
 rating: 4.5
 verdict: "Kasamba remains one of the most reliable psychic reading platforms in 2026. Its massive roster of vetted advisors and generous free trial make it an excellent starting point for both beginners and experienced seekers."
 affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326"
-freeOffer: "3 free minutes + 70% off your first session"
+freeOffer: "3 free minutes + 50% off your first session"
 pricing: "Starting from $1.99/min"
 bestFor: "Love & relationship readings"
 highlights:
@@ -37,7 +37,7 @@ entities:
 
 Kasamba is one of the longest-running online psychic reading platforms, operating since 1999. Over the past two decades, it has connected millions of users with psychic advisors specializing in everything from love and relationships to career guidance and life path readings.
 
-What initially drew me to Kasamba was its sheer scale  -  over 500 advisors available at any given time  -  and the fact that they offer one of the most generous introductory offers in the industry: **3 free minutes with every new psychic you try**, plus an additional 70% discount on your first paid session.
+What initially drew me to Kasamba was its sheer scale  -  over 500 advisors available at any given time  -  and the fact that they offer one of the most generous introductory offers in the industry: **3 free minutes with every new psychic you try**, plus an additional 50% discount on your first paid session.
 
 ## Testing Methodology: How I Evaluated Kasamba's 500+ Advisors
 
