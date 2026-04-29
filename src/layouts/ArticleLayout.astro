@@ -53,6 +53,9 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
   day: 'numeric',
 });
 
+const SITE_URL = 'https://easternalignment.com';
+const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
+
 // Build Article JSON-LD from manual fields (with fallbacks)
 const articleSchema: Record<string, unknown> = {
   "@context": "https://schema.org",
@@ -76,7 +79,7 @@ const articleSchema: Record<string, unknown> = {
   ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": Astro.url.href
+    "@id": canonical
   }
 };
 

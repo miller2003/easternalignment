@@ -31,35 +31,38 @@ const {
   customSchema,
 } = Astro.props;
 
-const siteTitle = 'EasternAlignment';
+const SITE_NAME = 'EasternAlignment';
+const SITE_URL  = 'https://easternalignment.com';
+
 const baseTitle = seoTitle || title;
-const fullTitle = baseTitle === siteTitle ? baseTitle : `${baseTitle} — ${siteTitle}`;
+const fullTitle = baseTitle === SITE_NAME ? baseTitle : `${baseTitle} — ${SITE_NAME}`;
 const metaDesc = metaDescription || description;
-const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href.replace('http://', 'https://');
-const ogImageUrl = ogImage.startsWith('http') ? ogImage.replace('http://', 'https://') : new URL(ogImage, Astro.site).href.replace('http://', 'https://');
+
+// Robust Canonical: Always point to the production domain, forcing HTTPS and preserving the path
+const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage.replace('http://', 'https://') : new URL(ogImage, SITE_URL).href;
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": siteTitle,
-  "url": Astro.site?.href || 'https://easternalignment.com',
+  "name": SITE_NAME,
+  "url": SITE_URL,
   "description": "Honest reviews and guidance for online psychic reading platforms. Independently tested by real users.",
 };
 
-const siteUrl = Astro.site?.href || 'https://easternalignment.com/';
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": siteTitle,
-  "url": siteUrl,
-  "logo": `${siteUrl}logo.jpg`,
+  "name": SITE_NAME,
+  "url": SITE_URL,
+  "logo": `${SITE_URL}/logo.jpg`,
 };
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Sarah",
-  "url": `${siteUrl}about/`,
+  "url": `${SITE_URL}/about/`,
   "jobTitle": "Reviewer & Researcher"
 };
 ---

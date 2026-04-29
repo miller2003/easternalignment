@@ -73,6 +73,9 @@ const breadcrumbItems = isReaderReview
       { label: platformName },
     ];
 
+const SITE_URL = 'https://easternalignment.com';
+const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
+
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "Review",
@@ -113,7 +116,7 @@ const reviewSchema = {
   ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": Astro.url.href.replace('http://', 'https://')
+    "@id": canonical
   }
 };
 
