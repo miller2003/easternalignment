@@ -10,7 +10,32 @@ pricing: "$6.99/min"
 bestFor: "Love, soulmate, and past life readings with a high-volume reader whose track record speaks louder than her bio"
 publishDate: "2026-04-01"
 updatedDate: "2026-04-01"
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Readings by Kelly777 on Keen Review 2026: Behind 159,000 Sessions - What One of the Platform's Highest-Volume Readers Actually Delivers",
+    "description": "An honest third-party review of readings by Kelly777 on Keen - covering her remote viewing skill, past life specialty, real method behind the 'master tarot' claim, and what 159K readings at 4.91 stars actually means for your session.",
+    "datePublished": "2026-04-01",
+    "dateModified": "2026-04-01",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: readings by kelly777"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 metaDescription: "Honest review of readings by Kelly777 on Keen  -  4.91 stars across 40K ratings, remote viewing, past life specialty. Real pricing at $6.99/min + who should skip her."
 metaTitle: "Readings by Kelly777 on Keen Review 2026 | 159K Sessions, Remote Viewing & Past Life"
 canonicalUrl: "https://easternalignment.com/reviews/keen/readings-by-kelly777/"

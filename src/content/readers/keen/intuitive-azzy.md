@@ -20,7 +20,32 @@ bestFor: Clients who want guidance-oriented readings with genuine energetic supp
   hard prediction timelines
 publishDate: '2026-04-09'
 updatedDate: '2026-04-09'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader Who Openly Admits Tarot Can't Predict Your Future - And Why That's Her Strongest Credential",
+    "description": "An independent review of Intuitive Azzy on Keen - her guidance-first reading philosophy, what 3,100+ ratings across a decade actually reveal, the real value of $2.22/min, and exactly who gets the most from booking her.",
+    "datePublished": "2026-04-09",
+    "dateModified": "2026-04-09",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: Intuitive Azzy"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 metaDescription: 4.9 stars, 3,100+ reviews, $2.22/min. But is Intuitive Azzy right
   for you? Honest breakdown of her guidance style, full toolkit, and who should book
   her.

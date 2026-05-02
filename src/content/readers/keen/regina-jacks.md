@@ -16,7 +16,32 @@ bestFor: People who want direct clairvoyant impressions on love and relationship
   without giving context first
 publishDate: '2026-04-22'
 updatedDate: '2026-04-22'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Regina Jacks on Keen Review 2026: 109,000 Readings Later - Is She Still Worth It?",
+    "description": "An independent review of Regina Jacks on Keen - covering her clairvoyant-first reading style, what 18,000 verified ratings actually reveal, pricing breakdown, and exactly who gets the most value from booking her.",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: Regina Jacks"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 metaDescription: 109,000+ readings, 4.83 stars, 13 years on Keen. But is Regina Jacks
   right for your question? An honest breakdown of her style, accuracy, and who should
   actually book her.

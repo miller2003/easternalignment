@@ -21,7 +21,32 @@ bestFor: Clients who want warmth, genuine connection, and honest conversational 
   exploration
 publishDate: '2026-04-16'
 updatedDate: '2026-04-16'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ask Fran on Keen Review 2026: 150,000 Sessions and the Most Polarized Reviews on the Platform - What Actually Separates the Fans From the Frustrated",
+    "description": "An independent review of Ask Fran on Keen - why the same reader generates both absolute devotion and sharp frustration, what the documented negative pattern looks like, and the one move that changes everything in the first two minutes.",
+    "datePublished": "2026-04-16",
+    "dateModified": "2026-04-16",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: Ask Fran"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 metaDescription: 150K readings, 25 years on Keen. Ask Fran is Keen's most polarizing
   advisor  -  absolute best or worst session ever. Here's exactly what separates the
   two outcomes.

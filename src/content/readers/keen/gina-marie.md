@@ -18,7 +18,32 @@ bestFor: People who want direct clairvoyant impressions on love and relationship
   without pre-loading context  -  and are ready to hear blunt truth
 publishDate: '2026-04-24'
 updatedDate: '2026-04-24'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel Clairvoyant Justify $6.99/Min?",
+    "description": "An independent review of Gina Marie on Keen - her no-tools clairvoyant approach, what 12,000 ratings across 20 years actually reveal, the real cost of a session, and exactly who gets value from booking her.",
+    "datePublished": "2026-04-24",
+    "dateModified": "2026-04-24",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: Gina Marie"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 metaDescription: 77,000+ readings, 4.87 stars, 20 years on Keen. But is Gina Marie
   worth $6.99/min? Honest breakdown of her no-tools style, real review patterns, and
   who should book her.

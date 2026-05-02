@@ -15,7 +15,32 @@ pricing: $4.29/min
 bestFor: People who want honest, structured tarot readings without sugar-coating
 publishDate: '2026-04-22'
 updatedDate: '2026-04-22'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Master Sher on Keen Review 2026: An Honest Assessment From Someone Who's Tested Dozens of Readers",
+    "description": "An in-depth third-party review of Master Sher on Keen - covering tarot reading style, real accuracy standards, pricing breakdown, and exactly who gets the most value from booking him.",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: Master Sher"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 highlights:
 - '- 19,000+ readings completed on Keen'
 - '- 4.89-star rating across 3,600+ verified reviews'

@@ -17,7 +17,32 @@ bestFor: Relationship and career readings where you want empathic depth over str
   card interpretation
 publishDate: '2026-04-21'
 updatedDate: '2026-04-21'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation Psychic Actually Looks Like - An Honest Third-Party Assessment",
+    "description": "A third-party review of C Garrett on Keen - unpacking her 75% energy, 25% tarot hybrid method, dream reading specialty, self-declared timing limits, and exactly who gets real value at $4.89/min.",
+    "datePublished": "2026-04-21",
+    "dateModified": "2026-04-21",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: C Garrett"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 highlights:
 - 54,000+ readings completed on Keen since 2001  -  25 years on the platform
 - 4.84-star rating across 10,000 verified reviews

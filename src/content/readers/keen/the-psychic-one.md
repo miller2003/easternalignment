@@ -21,7 +21,32 @@ bestFor: Clients who want specific timeline predictions on love and relationship
   to a full reading
 publishDate: '2026-04-25'
 updatedDate: '2026-04-25'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "the psychic one on Keen Review 2026: 183,000 Sessions, 25 Years, and One Very Specific Promise - Do 'the Precise Dates and Details' Actually Land?",
+    "description": "An independent review of the psychic one on Keen - her bold date-and-detail promise, what 40,000 ratings across 25 years actually reveal, where her track record holds and where it doesn't, and exactly who should book her.",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: the psychic one"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 metaDescription: 183K readings, 25 years, 4.5 stars. Do her 'precise dates and details'
   actually land? Honest breakdown of her track record, real review patterns, and who
   should book her.

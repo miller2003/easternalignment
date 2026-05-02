@@ -96,14 +96,15 @@ const reviewSchema = {
     "worstRating": 1,
   },
   "itemReviewed": {
-    "@type": "Organization",
+    "@type": "Product",
     "name": readerLabel || platformName,
     "url": affiliateUrl !== '#' ? affiliateUrl : undefined,
+    "image": ogImage || "https://easternalignment.com/logo.jpg",
+    "description": description,
     ...(isReaderReview ? {
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": parentPlatformLabel || "Keen",
-        "url": "https://www.keen.com"
+      "brand": {
+        "@type": "Brand",
+        "name": parentPlatformLabel || "Keen"
       }
     } : {})
   },

@@ -18,7 +18,32 @@ bestFor: Multi-layered readings combining intuition and multiple divination tool
   career, past lives, and spirit guide work
 publishDate: '2026-03-18'
 updatedDate: '2026-03-18'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse Tool Set I've Seen on This Platform - An Honest Assessment",
+    "description": "A third-party review of Arradaza on Keen - covering her five-tool reading method, 25-year track record, the '98% accuracy' claim, what real clients say, and who gets the most value at $5.99/min.",
+    "datePublished": "2026-03-18",
+    "dateModified": "2026-03-18",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: arradaza"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 metaDescription: Honest review of Arradaza on Keen  -  4.93 stars  26K ratings, Tarot
   + Cartomancy + Numerology + Astrology at $5.99/min. The 98% accuracy claim examined
   honestly.

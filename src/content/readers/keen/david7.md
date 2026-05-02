@@ -17,7 +17,32 @@ bestFor: Twin flame and relationship readings from a direct, tool-free male intu
   with a long track record
 publishDate: '2026-03-29'
 updatedDate: '2026-03-29'
-customSchema: ""
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames - What 94,000 Readings Actually Tell You",
+    "description": "An honest third-party review of David7 on Keen - covering his tool-free clairvoyant approach, twin flame specialization, dual profile pricing, and exactly who gets real value at $6.99/min.",
+    "datePublished": "2026-03-29",
+    "dateModified": "2026-03-29",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Keen: David7"},
+      {"@type": "Thing", "name": "Psychic reading"}
+    ]
+  }
 highlights:
 - 94,000+ readings completed on Keen since 2009
 - 4.92-star rating across 15,000 verified reviews
