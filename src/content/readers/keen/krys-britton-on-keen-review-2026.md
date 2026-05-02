@@ -1,5 +1,5 @@
 ---
-title: "Krys Britton on Keen Review 2026: The Reader Who Uses Ancient Egyptian Oracle Cards to Give \\"Common Sense\\" Answers — And Has the Verified Predictions to Back It Up"
+title: "Krys Britton on Keen Review 2026: The Reader Who Uses Ancient Egyptian Oracle Cards to Give \"Common Sense\" Answers — And Has the Verified Predictions to Back It Up"
 description: "An independent review of Krys Britton on Keen — what Egyptian Oracle Cards actually are, why her Reddit-verified prediction accuracy stands out in a crowded field, and why $2.25/min for a 20-year veteran is the best value in this series."
 platformName: "Keen: Krys Britton"
 rating: 4.7

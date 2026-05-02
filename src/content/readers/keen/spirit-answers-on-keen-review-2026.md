@@ -1,5 +1,5 @@
 ---
-title: "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect Rating, and the Chat-Only Reader Who \\"Didn't Waste a Second\\""
+title: "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect Rating, and the Chat-Only Reader Who \"Didn't Waste a Second\""
 description: "An independent review of Spirit Answers on Keen — why the series' highest price paired with its highest rating and a chat-only format creates the most efficient session value in this series, plus the Finnish language gap no other Keen reader fills."
 platformName: "Keen: Spirit Answers"
 rating: 4.8

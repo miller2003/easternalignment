@@ -1,5 +1,5 @@
 ---
-title: "Intuitive Guidance with LC (Lori) on Keen Review 2026: 4.97 Stars Across 8,687 Sessions — and the \\\"Fairytale Reader\\\" Question That Needs a Direct Answer"
+title: "Intuitive Guidance with LC (Lori) on Keen Review 2026: 4.97 Stars Across 8,687 Sessions — and the \"Fairytale Reader\" Question That Needs a Direct Answer"
 description: "An independent review of Intuitive Guidance with LC on Keen — why 4.97 across 8,687 reviews is the most statistically robust rating in this series, what the fairytale reader concern actually means, and who Lori is specifically built for."
 platformName: "Keen: Intuitive Guidance with LC"
 rating: 4.8
