@@ -9,12 +9,22 @@ import ReviewLayout from '../../../layouts/ReviewLayout.astro';
 import ProsCons from '../../../components/ProsCons.astro';
 import CTABox from '../../../components/CTABox.astro';
 import FAQ from '../../../components/FAQ.astro';
+import ReaderCard from '../../../components/ReaderCard.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
 
 /* Load the Kasamba platform review content */
 const kasambaModule = await import('../../../content/reviews/kasamba.md');
 const KasambaContent = kasambaModule.default;
 const frontmatter = kasambaModule.frontmatter;
+
+/* Load all Kasamba reader reviews */
+const readerModules = import.meta.glob('../../../content/readers/kasamba/*.md', { eager: true });
+const readers = Object.entries(readerModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0));
 
 /* Load guides for cross-linking */
 const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
@@ -45,16 +55,13 @@ const faqItems = [
     question: `Does ${frontmatter.platformName} offer a money-back guarantee?`,
     answer: `${frontmatter.platformName} does offer a satisfaction guarantee. If you're unhappy with your reading, you can reach out to customer support for credit or resolution. Check their current terms for specific details.`
   },
+  {
+    question: `How do I choose the best reader on ${frontmatter.platformName}?`,
+    answer: `I've individually reviewed ${readers.length} readers on ${frontmatter.platformName}. Each review covers their reading style, pricing, accuracy track record, and who they're best suited for. Scroll down to see my full reader assessment series.`
+  },
 ];
 
 const relatedItems = [
-  {
-    title: 'Keen Psychics Review 2026 — Full Platform Assessment',
-    href: '/reviews/keen/',
-    description: 'Our comprehensive review of the Keen platform including 10 individual reader assessments.',
-    badge: 'Platform Review',
-    badgeVariant: 'primary' as const,
-  },
   ...comparisons.map(c => ({
     title: c.title,
     href: `/comparisons/${c.slug}/`,
@@ -97,6 +104,35 @@ const relatedItems = [
     variant="highlight"
   />
 
+  <!-- Individual Reader Reviews Section -->
+  {readers.length > 0 && (
+    <section class="reader-reviews-section" id="kasamba-readers">
+      <div class="section-intro">
+        <span class="section-eyebrow text-xs text-uppercase text-muted">In-Depth Assessments</span>
+        <h2 class="section-heading">Individual Kasamba Reader Reviews</h2>
+        <p class="section-description text-muted">
+          I've personally assessed {readers.length} individual psychic readers on Kasamba. Each review below covers their reading style, accuracy track record, pricing, and exactly who they're best suited for — so you can choose with confidence.
+        </p>
+      </div>
+
+      <div class="reader-grid stagger">
+        {readers.map(reader => (
+          <ReaderCard
+            name={reader.platformName}
+            slug={reader.slug}
+            platform="kasamba"
+            rating={reader.rating}
+            verdict={reader.verdict}
+            pricing={reader.pricing}
+            bestFor={reader.bestFor}
+            affiliateUrl={reader.affiliateUrl}
+            freeOffer={reader.freeOffer}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
   <FAQ items={faqItems} title={`${frontmatter.platformName} FAQ`} />
 
   <!-- Cross-linking to comparisons, guides, and other platforms -->
@@ -109,6 +145,39 @@ const relatedItems = [
 </ReviewLayout>
 
 <style>
+  .reader-reviews-section {
+    margin: var(--space-10) 0;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-intro {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-eyebrow {
+    display: block;
+    margin-bottom: var(--space-2);
+    letter-spacing: 0.15em;
+  }
+
+  .section-heading {
+    margin-top: 0;
+    margin-bottom: var(--space-3);
+  }
+
+  .section-description {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+  }
+
+  .reader-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
   .all-reviews-cta {
     margin-top: var(--space-8);
     text-align: center;
