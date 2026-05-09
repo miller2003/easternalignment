@@ -1,18 +1,13 @@
 ---
 title: 'Psychic Yazmin Kasamba Review (2026): Can "Yaz" Really See What Others Miss?'
 description: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and
-  tarot reader with an unusually personal reading style — here's what she got right,
-  the one criticism worth knowing, and exactly who she's built for.
-canonicalUrl: https://easternalignment.com/reviews/kasamba/psychic-yazmin-kasamba-review/
-platform: kasamba
-platformName: "Kasamba: Psychic Yazmin"
+platformName: 'Kasamba: Psychic Yazmin'
 rating: 4.5
 verdict: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and tarot
-  reader with an unusually personal reading style — here's what she got right, the
-  one criticism worth knowing, and exactly who she's built for.
-publishDate: '2026-05-09'
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fpsychic-yazmin%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+publishDate: '2026-05-08'
 updatedDate: '2026-05-09'
-customSchema: |-
+customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -49,9 +44,24 @@ customSchema: |-
     "datePublished": "2026-05-09",
     "dateModified": "2026-05-09"
   }
+platform: kasamba
+canonicalUrl: https://easternalignment.com/reviews/kasamba/psychic-yazmin-kasamba-review/
+freeOffer: 3 free minutes + 50% off
+pricing: $4.99/min
+bestFor: Deep emotional mirroring and hidden blind spots
+highlights:
+- Known for uncovering what others miss
+- High volume of repeat, loyal clients
+- Specializes in intense empathetic mirroring
+pros:
+- Incredible ability to validate unspoken feelings
+- Creates a deeply safe space for vulnerable questions
+- Affordable pricing for high-level empathy
+cons:
+- Can sometimes focus too much on the client's internal state
+- Predictive timelines can be fluid
+- Not ideal for purely career/financial logic questions
 ---
-
-
 
 
 # Psychic Yazmin Kasamba Review (2026): Can "Yaz" Really See What Others Miss?

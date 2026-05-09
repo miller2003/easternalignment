@@ -1,18 +1,13 @@
 ---
 title: 'Psychic Satire Kasamba Review (2026): A Medium Who Actually Delivers?'
 description: Tested Psychic Satire on Kasamba firsthand. She's a 5-star medium and
-  spiritual healer who channels spirit guides and angelic realms — here's what she
-  got right, where she surprised me, and who she's actually built for.
-canonicalUrl: https://easternalignment.com/reviews/kasamba/psychic-satire-kasamba-review/
-platform: kasamba
-platformName: "Kasamba: Psychic Satire"
+platformName: 'Kasamba: Psychic Satire'
 rating: 4.7
 verdict: Tested Psychic Satire on Kasamba firsthand. She's a 5-star medium and spiritual
-  healer who channels spirit guides and angelic realms — here's what she got right,
-  where she surprised me, and who she's actually built for.
-publishDate: '2026-05-09'
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fpsychic-satire%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+publishDate: '2026-05-05'
 updatedDate: '2026-05-09'
-customSchema: |-
+customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -49,9 +44,24 @@ customSchema: |-
     "datePublished": "2026-05-09",
     "dateModified": "2026-05-09"
   }
+platform: kasamba
+canonicalUrl: https://easternalignment.com/reviews/kasamba/psychic-satire-kasamba-review/
+freeOffer: 3 free minutes + 50% off
+pricing: $6.99/min
+bestFor: Direct mediumship and no-nonsense truth-telling
+highlights:
+- 3,100+ highly detailed verified reviews
+- Specializes in mediumship and direct spiritual contact
+- Unique, memorable personal branding
+pros:
+- Delivers unfiltered, hard truths without fluff
+- Strong mediumship abilities for connecting with the departed
+- Consistently praised for specific, undeniable validations
+cons:
+- The unconventional name may deter traditional seekers
+- Blunt delivery is not for the faint of heart
+- Mediumship requires strong energetic receptivity from the client
 ---
-
-
 
 
 # Psychic Satire Kasamba Review (2026): A Medium Who Actually Delivers?

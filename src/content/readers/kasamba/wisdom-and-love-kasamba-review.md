@@ -1,19 +1,13 @@
 ---
-title: 'Wisdom and Love Kasamba Review (2026): What 100,000+ Readings Actually Buys
-  You'
+title: 'Wisdom and Love Kasamba Review (2026): What 100,000+ Readings Actually Buys'
 description: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004
-  — 100,000+ sessions, 31,500 five-star reviews, and a rare promise of time frames.
-  I tested him firsthand to find out what two decades of practice actually delivers.
-canonicalUrl: https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/
-platform: kasamba
-platformName: "Kasamba: Wisdom and Love"
+platformName: 'Kasamba: Wisdom and Love'
 rating: 4.7
 verdict: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004 —
-  100,000+ sessions, 31,500 five-star reviews, and a rare promise of time frames.
-  I tested him firsthand to find out what two decades of practice actually delivers.
-publishDate: '2026-05-09'
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fwisdom-and-love%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+publishDate: '2026-05-06'
 updatedDate: '2026-05-09'
-customSchema: |-
+customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -50,9 +44,24 @@ customSchema: |-
     "datePublished": "2026-05-09",
     "dateModified": "2026-05-09"
   }
+platform: kasamba
+canonicalUrl: https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/
+freeOffer: 3 free minutes + 50% off
+pricing: $12.99/min
+bestFor: Direct, profound guidance from a highly vetted veteran
+highlights:
+- Astonishing 100,000+ completed readings
+- Andrew (Irish psychic) provides authentic Celtic wisdom
+- One of the most trusted veterans on the platform
+pros:
+- Unflappable consistency built over 100,000 sessions
+- Warm, culturally grounded wisdom approach
+- Extremely fast at tuning into complex situations
+cons:
+- High price point
+- His traditional wisdom approach may not suit modern hyper-analytical users
+- Often has a waitlist due to loyal returning client base
 ---
-
-
 
 
 # Wisdom and Love Kasamba Review (2026): What 100,000+ Readings Actually Buys You

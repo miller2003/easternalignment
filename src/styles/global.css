@@ -260,7 +260,7 @@ h5, h6 {
   margin-bottom: var(--space-5);
 }
 
-.prose a {
+.prose a:not(.btn) {
   color: var(--color-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -268,7 +268,7 @@ h5, h6 {
   transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
 }
 
-.prose a:hover {
+.prose a:not(.btn):hover {
   color: var(--color-primary-dark);
   text-decoration-color: var(--color-primary);
 }

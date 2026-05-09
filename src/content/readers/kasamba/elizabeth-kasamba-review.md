@@ -1,19 +1,16 @@
 ---
-title: 'Elizabeth Kasamba Review (2026): Why She''s the #1 Rated Psychic on the Platform'
-description: 'A sixth-generation psychic, certified Reiki Master, and Kasamba''s #1
-  ranked advisor with 17,000+ reviews. I tested Elizabeth firsthand — here''s what
-  her lineage actually means, what she got right, and who gets the most out of her
-  sessions.'
-canonicalUrl: https://easternalignment.com/reviews/kasamba/elizabeth-kasamba-review/
-platform: kasamba
-platformName: "Kasamba: Elizabeth"
+title: 'Elizabeth Kasamba Review (2026): Why She''''s the #1 Rated Psychic on the
+  Platform'
+description: 'A sixth-generation psychic, certified Reiki Master, and Kasamba''''s
+  #1'
+platformName: 'Kasamba: Elizabeth'
 rating: 4.8
-verdict: 'A sixth-generation psychic, certified Reiki Master, and Kasamba''s #1 ranked
-  advisor with 17,000+ reviews. I tested Elizabeth firsthand — here''s what her lineage
-  actually means, what she got right, and who gets the most out of her sessions.'
-publishDate: '2026-05-09'
+verdict: 'A sixth-generation psychic, certified Reiki Master, and Kasamba''''s #1
+  ranked'
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Felizabeth%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+publishDate: '2026-05-05'
 updatedDate: '2026-05-09'
-customSchema: |-
+customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -50,9 +47,24 @@ customSchema: |-
     "datePublished": "2026-05-09",
     "dateModified": "2026-05-09"
   }
+platform: kasamba
+canonicalUrl: https://easternalignment.com/reviews/kasamba/elizabeth-kasamba-review/
+freeOffer: 3 free minutes + 50% off
+pricing: $8.99/min
+bestFor: Empowerment, healing, and overcoming spiritual blocks
+highlights:
+- 'Ranked #1 out of 3,000+ advisors on Kasamba'
+- Over 150,000 completed readings
+- Specializes in deep emotional and spiritual healing
+pros:
+- Unmatched experience level on the platform
+- Extremely comforting and empowering energy
+- Able to identify deeply rooted spiritual blockages
+cons:
+- Premium pricing bracket
+- Reading style is highly therapeutic, which may not suit analytical seekers
+- Extremely busy schedule
 ---
-
-
 
 
 # Elizabeth Kasamba Review (2026): Why She's the #1 Rated Psychic on the Platform

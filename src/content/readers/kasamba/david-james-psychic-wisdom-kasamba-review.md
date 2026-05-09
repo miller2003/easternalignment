@@ -1,19 +1,13 @@
 ---
-title: 'David James Psychic Wisdom Kasamba Review (2026): Is $7.99/Min Actually Worth
-  It?'
+title: 'David James Psychic Wisdom Kasamba Review (2026): Is $7.99/Min Actually Worth'
 description: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba.
-  I tested David James Psychic Wisdom firsthand — here's what he got right, what the
-  price actually buys you, and who should (and shouldn't) book him.
-canonicalUrl: https://easternalignment.com/reviews/kasamba/david-james-psychic-wisdom-kasamba-review/
-platform: kasamba
-platformName: "Kasamba: David James Psychic Wisdom"
+platformName: 'Kasamba: David James Psychic Wisdom'
 rating: 4.7
 verdict: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba.
-  I tested David James Psychic Wisdom firsthand — here's what he got right, what the
-  price actually buys you, and who should (and shouldn't) book him.
-publishDate: '2026-05-09'
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fdavid-james-psychic-wisdom%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+publishDate: '2026-05-05'
 updatedDate: '2026-05-09'
-customSchema: |-
+customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -50,9 +44,24 @@ customSchema: |-
     "datePublished": "2026-05-09",
     "dateModified": "2026-05-09"
   }
+platform: kasamba
+canonicalUrl: https://easternalignment.com/reviews/kasamba/david-james-psychic-wisdom-kasamba-review/
+freeOffer: 3 free minutes + 50% off
+pricing: $7.99/min
+bestFor: Multi-tool analytical readings (Tarot + Clairvoyance)
+highlights:
+- Premium top-tier advisor at $7.99/min
+- Combines Tarot with high-level clairvoyance
+- Known for highly specific, actionable advice
+pros:
+- Delivers surgical precision instead of vague platitudes
+- Multi-disciplinary approach cross-verifies answers
+- Does not waste time; highly efficient use of paid minutes
+cons:
+- Expensive rate requires strict budget management
+- Analytical style may lack the 'warmth' some seekers want
+- Not ideal for casual, open-ended browsing
 ---
-
-
 
 
 # David James Psychic Wisdom Kasamba Review (2026): Is $7.99/Min Actually Worth It?

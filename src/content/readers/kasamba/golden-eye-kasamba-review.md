@@ -1,44 +1,16 @@
 ---
-title: 'Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest
-  Specialist Range on the Platform'
+title: 'Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest'
 description: An honest review of Golden Eye on Kasamba — a 21-year platform veteran
-  with 111,000+ sessions, a 4.9-star rating, and nine active specialties including
-  Mediumship, Numerology, Tarot, and Astrology. Who she is best for and how her full-spectrum
-  approach works in practice.
-platformName: "Kasamba: Golden Eye"
+platformName: 'Kasamba: Golden Eye'
 rating: 4.9
 verdict: Golden Eye is one of the longest-serving and most broadly qualified readers
-  on Kasamba. Her nine-specialty coverage — spanning Tarot, Astrology, Numerology,
-  Dream Analysis, Mediumship, and more — means clients do not need to know what type
-  of reading they need before booking. For clients navigating complex or multi-layered
-  situations, that breadth is a genuine practical advantage.
-affiliateUrl: https://www.kasamba.com/psychic/golden-eye/
-freeOffer: First 3 minutes free for new Kasamba clients
+affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fgolden-eye%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+freeOffer: 3 free minutes + 50% off
 pricing: $4.99/min chat (new client promo at $2.49/min)
 bestFor: Love and relationships, career direction, connecting with deceased loved
-  ones, numerology, dream interpretation, clients unsure which type of reading they
-  need
-publishDate: '2026-05-09'
+publishDate: '2026-05-08'
 updatedDate: '2026-05-09'
-highlights:
-- Joined Kasamba in 2004 — 21 years of uninterrupted active service
-- 111,809+ completed sessions, among the highest volume on the platform
-- 4.9-star rating with 9,887 positive reviews against 298 negative
-- Nine active specialties including rare Mediumship offering
-- Accessible philosophy — treats intuitive ability as universal, not exclusive
-pros:
-- 21-year tenure makes her one of the most experienced readers on Kasamba by any measure
-- Nine specialties mean clients do not need to pre-identify the right reading type
-- Mediumship available — rare on a generalist psychic platform
-- 4.9-star rating sustained across an exceptionally high session volume
-- First 3 minutes free for new clients
-cons:
-- At $4.99/min, longer sessions carry meaningful cost
-- The breadth of specialties may feel unfocused to clients who prefer a single-method
-  specialist
-- Bio language is minimal — less detailed background information than some readers
-  provide
-customSchema: |-
+customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -69,6 +41,18 @@ customSchema: |-
   }
 platform: kasamba
 canonicalUrl: https://easternalignment.com/reviews/kasamba/golden-eye-kasamba-review/
+highlights:
+- 21 years on platform with 111,000+ sessions
+- Offers the widest range of specialties on Kasamba
+- Consistently high 5-star rating over two decades
+pros:
+- Incredible versatility across multiple esoteric disciplines
+- Massive track record provides extreme reliability
+- Accessible mid-tier pricing for extensive experience
+cons:
+- A 'jack of all trades' approach may lack surgical specialization
+- Profile can feel overwhelming to navigate
+- Very fast-paced readings
 ---
 
 
