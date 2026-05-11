@@ -4,9 +4,10 @@ description: "An independent review of Tarot With Meg on Keen — what Hellenist
 platformName: "Keen: Tarot With Meg"
 rating: 4.7
 verdict: "Tarot With Meg is the reader in this series who has most clearly decided what she is not trying to do. She is not trying to predict. She is trying to help you understand — the pattern underneath the situation, the why beneath the what, the context that makes the outcome make sense. That positioning, combined with a toolkit that includes Hellenistic astrology, four distinct Tarot decks, dream decipherment, and a primary reading deck whose personal history is unlike anything else in this series, produces a session experience that is genuinely different from every other Tarot reader on this platform. For clients who have had readings before and are still confused about why things keep happening the way they do, Meg is the most targeted recommendation I can make."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Ftarot-with-meg%2F12442685%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-meg/"
+avatarUrl: /avatars/keen/tarot-with-meg-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
-pricing: "See profile for current rate"
+pricing: "$4.75/min"
 bestFor: "Clients who have outgrown prediction-focused readings and want deep contextual understanding of why a situation is unfolding — plus LGBTQ+ clients seeking a reader who actively works with inclusive decks"
 publishDate: "2026-04-26"
 updatedDate: "2026-04-26"

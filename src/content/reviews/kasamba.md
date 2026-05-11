@@ -4,7 +4,7 @@ description: "Is Kasamba actually legitimate? We spent two years tracking predic
 platformName: "Kasamba Psychics"
 rating: 4.8
 verdict: "Kasamba operates on a premium chat-based infrastructure that fundamentally outpaces its competitors in one specific area: Love and Relationship dynamics. While their top-tier advisors command steep prices, the platform's '3 free minutes per new reader' structure offers the most risk-free vetting system in the industry—if you know how to exploit it."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326"
+affiliateUrl: "/go/kasamba/"
 freeOffer: "3 free minutes with EVERY new psychic + 50% off"
 pricing: "$1.99/min to $30.00+/min"
 bestFor: "Complex relationship dynamics & chat readings"
@@ -23,7 +23,7 @@ cons:
   - "Lack of native video reading options in an increasingly visual era."
 publishDate: "2026-05-09"
 updatedDate: "2026-05-09"
-rank: 1
+rank: 2
 entities:
   - "Kasamba"
   - "Online Psychic Reading"

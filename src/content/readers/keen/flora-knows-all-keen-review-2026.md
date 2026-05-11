@@ -4,7 +4,8 @@ description: "An honest third-party review of Flora Knows All on Keen — coveri
 platformName: "Keen: Flora Knows All"
 rating: 4.7
 verdict: "Flora is the clearest value play in this review series — $2.52/min with a multi-tool skill set and a client engagement rate that outpaces readers with ten times her volume. The trade-off is track record depth: she's months into building something that may be exceptional, but you're betting earlier in that arc than with the veterans here. For the right client, that bet costs almost nothing to test."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fflora-knows-all%2F12476431%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-flora/"
+avatarUrl: /avatars/keen/flora-knows-all-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$2.52/min"
 bestFor: "Love and relationship readings for clients who want accessible pricing, multi-tool guidance, and compassionate support — especially those open to working with an emerging reader building a strong early track record"

@@ -1,0 +1,304 @@
+---
+// RightSidebar.astro — Table of Contents (H2 only, scroll spy)
+---
+
+<aside class="sidebar-right">
+  <div class="sidebar-right__widget">
+    <div class="sidebar-right__header">
+      <span class="sidebar-right__header-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </span>
+      <span class="sidebar-right__header-title">On This Page</span>
+    </div>
+    <div class="sidebar-right__content">
+      <nav id="toc-nav" aria-label="Article sections">
+        <ul class="sidebar-right__list" id="toc-list"></ul>
+      </nav>
+    </div>
+  </div>
+</aside>
+
+<script>
+  function initTOC() {
+    const tocList = document.getElementById('toc-list');
+    const tocNav  = document.getElementById('toc-nav');
+    if (!tocList || !tocNav) return;
+
+    // Only query H2s specifically inside .prose (the main article body)
+    const prose = document.querySelector('.prose');
+    if (!prose) return;
+
+    // Find all H2s in the article
+    const allHeadings = Array.from(prose.querySelectorAll('h2'));
+    
+    // Identify the FAQ heading index (if any)
+    const faqIndex = allHeadings.findIndex(h => 
+      h.textContent?.toLowerCase().includes('faq') || 
+      h.textContent?.toLowerCase().includes('frequently asked')
+    );
+
+    // Headings to show in the main list (everything before FAQ)
+    const mainHeadings = faqIndex !== -1 ? allHeadings.slice(0, faqIndex) : allHeadings;
+    
+    // The target for "Others You Should Know" (either the FAQ or the element after prose)
+    const othersTarget = faqIndex !== -1 ? allHeadings[faqIndex] : prose.nextElementSibling;
+
+    if (mainHeadings.length === 0 && !othersTarget) {
+      const widget = document.querySelector('.sidebar-right__widget') as HTMLElement | null;
+      if (widget) widget.style.display = 'none';
+      return;
+    }
+
+    // Auto-assign IDs to all relevant headings for scroll spy to work
+    allHeadings.forEach((h, i) => {
+      if (!h.id) {
+        h.id = (h.textContent || '')
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-')
+          .slice(0, 60) || `section-${i}`;
+      }
+    });
+    if (othersTarget && !othersTarget.id) {
+      othersTarget.id = 'others-you-should-know';
+    }
+
+    // Build TOC items
+    tocList.innerHTML = '';
+    mainHeadings.forEach((h, index) => {
+      const li = document.createElement('li');
+      li.className = 'sidebar-right__item';
+      li.style.animationDelay = `${index * 0.05}s`;
+
+      const a = document.createElement('a');
+      a.href = `#${h.id}`;
+      a.className = 'sidebar-right__link';
+      
+      const dot = document.createElement('span');
+      dot.className = 'sidebar-right__dot';
+      
+      const text = document.createElement('span');
+      text.className = 'sidebar-right__text';
+      text.textContent = h.textContent || '';
+
+      a.appendChild(dot);
+      a.appendChild(text);
+
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const el = document.getElementById(h.id);
+        if (el) {
+          const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 72;
+          window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - headerHeight - 20, behavior: 'smooth' });
+        }
+      });
+
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+
+    // Append "Others You Should Know" item
+    const bottomLi = document.createElement('li');
+    bottomLi.className = 'sidebar-right__item';
+    bottomLi.style.animationDelay = `${mainHeadings.length * 0.05}s`;
+
+    const bottomA = document.createElement('a');
+    bottomA.className = 'sidebar-right__link';
+    bottomA.innerHTML = '<span class="sidebar-right__dot"></span><span class="sidebar-right__text">Others You Should Know</span>';
+    
+    if (othersTarget) {
+      bottomA.href = `#${othersTarget.id}`;
+    } else {
+      bottomA.href = "#";
+    }
+
+    bottomA.addEventListener('click', e => {
+      e.preventDefault();
+      const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 72;
+      let targetY = prose.getBoundingClientRect().bottom + window.scrollY - headerHeight - 20;
+      if (othersTarget) {
+        targetY = othersTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+      }
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    });
+
+    bottomLi.appendChild(bottomA);
+    tocList.appendChild(bottomLi);
+
+    // Scroll spy: observe all headings to update active state
+    const observerHeadings = [...mainHeadings];
+    if (othersTarget) observerHeadings.push(othersTarget as HTMLHeadingElement);
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const link = tocList.querySelector(`a[href="#${entry.target.id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          tocList.querySelectorAll('.sidebar-right__link').forEach(l => l.classList.remove('sidebar-right__link--active'));
+          link.classList.add('sidebar-right__link--active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -60% 0px', threshold: 0 });
+
+    observerHeadings.forEach(h => observer.observe(h));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTOC);
+  } else {
+    initTOC();
+  }
+</script>
+
+<style is:global>
+  /* ── Right sidebar shell ── */
+  .sidebar-right {
+    width: 210px;
+    flex-shrink: 0;
+    position: sticky;
+    top: calc(var(--header-height, 72px) + 2rem);
+    z-index: 10;
+  }
+
+  /* Widget card */
+  .sidebar-right__widget {
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e8e2da);
+    border-radius: var(--radius-xl, 16px);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(139, 111, 78, 0.06), 0 2px 8px rgba(139, 111, 78, 0.04);
+    transition: transform var(--transition-base, 0.25s ease), box-shadow var(--transition-base, 0.25s ease);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-right__widget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(139, 111, 78, 0.1), 0 4px 12px rgba(139, 111, 78, 0.05);
+  }
+
+  /* Header */
+  .sidebar-right__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 18px;
+    background: var(--color-bg, #faf8f5);
+    border-bottom: 1px solid var(--color-border-light, #f0ece6);
+    position: relative;
+  }
+
+  .sidebar-right__header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent, #c4956a), var(--color-primary, #8b6f4e));
+  }
+
+  .sidebar-right__header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary, #8b6f4e);
+  }
+
+  .sidebar-right__header-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text, #2d2a26);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Content area now grows naturally */
+  .sidebar-right__content {
+    flex: 1;
+  }
+
+  /* List */
+  .sidebar-right__list {
+    list-style: none;
+    margin: 0;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .sidebar-right__item { 
+    position: relative;
+    animation: fadeInRight 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .sidebar-right__link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 10px;
+    font-size: 13px;
+    color: var(--color-text-muted, #7a746b);
+    line-height: 1.4;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all var(--transition-fast, 0.15s ease);
+    position: relative;
+  }
+
+  /* dot indicator */
+  .sidebar-right__dot {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: var(--color-border, #e0dbd4);
+    transition: all var(--transition-fast, 0.15s ease);
+    border: 1px solid transparent;
+  }
+
+  .sidebar-right__text {
+    flex: 1;
+  }
+
+  .sidebar-right__link:hover {
+    color: var(--color-primary-dark, #6b5438);
+    background: var(--color-bg, #faf8f5);
+    transform: translateX(2px);
+  }
+
+  .sidebar-right__link:hover .sidebar-right__dot { 
+    background: var(--color-accent-light, #e8cdb0); 
+    border-color: var(--color-accent, #c4956a);
+  }
+
+  /* Active state */
+  .sidebar-right__link--active {
+    color: var(--color-primary-dark, #6b5438) !important;
+    font-weight: 600;
+    background: var(--color-warning-bg, #fdf5ec) !important;
+  }
+
+  .sidebar-right__link--active .sidebar-right__dot {
+    background: var(--color-accent, #c4956a) !important;
+    border-color: var(--color-accent, #c4956a) !important;
+    box-shadow: 0 0 0 3px rgba(196, 149, 106, 0.2);
+    transform: scale(1.2);
+  }
+
+  /* Hide below 1100px */
+  @media (max-width: 1100px) {
+    .sidebar-right { display: none !important; }
+  }
+</style>

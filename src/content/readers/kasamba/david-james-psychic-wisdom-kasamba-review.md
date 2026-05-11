@@ -4,7 +4,8 @@ description: 38,000+ reviews, 25 years of experience, and the highest rate on Ka
 platformName: 'Kasamba: David James Psychic Wisdom'
 rating: 4.7
 verdict: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fdavid-james-psychic-wisdom%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-david-james/
+avatarUrl: /avatars/kasamba/david-james-psychic-wisdom-kasamba-review.jpg
 publishDate: '2026-05-05'
 updatedDate: '2026-05-09'
 customSchema: |

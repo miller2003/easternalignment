@@ -128,6 +128,7 @@ const relatedItems = [
             bestFor={reader.bestFor}
             affiliateUrl={reader.affiliateUrl}
             freeOffer={reader.freeOffer}
+            avatarUrl={reader.avatarUrl}
           />
         ))}
       </div>
@@ -174,9 +175,7 @@ const relatedItems = [
   }
 
   .reader-grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-5);
+    /* Global styles live in src/styles/global.css */
   }
 
   .all-reviews-cta {

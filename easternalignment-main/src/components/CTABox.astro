@@ -1,0 +1,93 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  buttonText: string;
+  buttonUrl: string;
+  isAffiliate?: boolean;
+  variant?: 'default' | 'highlight' | 'subtle';
+}
+
+const {
+  title,
+  description,
+  buttonText,
+  buttonUrl,
+  isAffiliate = true,
+  variant = 'default',
+} = Astro.props;
+
+const relAttrs = isAffiliate ? 'nofollow sponsored' : undefined;
+---
+
+<aside class:list={['cta-box', `cta-box--${variant}`]} role="complementary">
+  <div class="cta-box-content">
+    <p class="cta-box-title">{title}</p>
+    {description && <p class="cta-box-desc">{description}</p>}
+  </div>
+  <a
+    href={buttonUrl}
+    class:list={['btn', variant === 'highlight' ? 'btn--primary btn--lg' : 'btn--primary']}
+    rel={relAttrs}
+    target={isAffiliate ? '_blank' : undefined}
+  >
+    {buttonText}
+  </a>
+</aside>
+
+<style>
+  .cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    padding: var(--space-6) var(--space-8);
+    border-radius: var(--radius-lg);
+    margin: var(--space-6) 0;
+  }
+
+  .cta-box--default {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+  }
+
+  .cta-box--highlight {
+    background: linear-gradient(135deg, rgba(196, 149, 106, 0.08) 0%, rgba(139, 111, 78, 0.06) 100%);
+    border: 1px solid var(--color-accent-light);
+  }
+
+  .cta-box--subtle {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .cta-box-content {
+    flex: 1;
+  }
+
+  .cta-box-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: var(--space-1);
+  }
+
+  .cta-box-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .cta-box {
+      flex-direction: column;
+      text-align: center;
+      padding: var(--space-6);
+    }
+
+    .cta-box .btn {
+      width: 100%;
+    }
+  }
+</style>

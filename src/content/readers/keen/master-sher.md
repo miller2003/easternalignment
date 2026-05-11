@@ -9,7 +9,8 @@ rating: 4.8
 verdict: Best for seekers who want direct, tarot-grounded clarity on relationships
   or life decisions  -  not emotional reassurance. His honesty is his strongest asset;
   his slower chat pace is the only real trade-off.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fmaster-sher%2F12468067%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-master-sher/
+avatarUrl: /avatars/keen/master-sher.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $4.29/min
 bestFor: People who want honest, structured tarot readings without sugar-coating

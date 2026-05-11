@@ -12,7 +12,8 @@ verdict: Intuitive Azzy is one of the most honest value propositions currently a
   the right choice for clients who need hard yes/no predictions with tight timelines.
   But for anyone who wants clarity, direction, and genuine energetic support from
   a reader who won't oversell what the cards can do  -  she's exceptional.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fintuitive-azzy%2F12446458%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-azzy/
+avatarUrl: /avatars/keen/intuitive-azzy.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $2.22/min (Spiritual Readings profile)
 bestFor: Clients who want guidance-oriented readings with genuine energetic support  -  especially
@@ -176,7 +177,7 @@ Unlike a clairvoyant-first reader where you deliberately withhold context to tes
 
 At $2.22/min with a 4.9-star rating and a decade of consistent performance, Intuitive Azzy is one of the few advisors on Keen where the math is unambiguously in the client's favor before the session even starts. The guidance-first philosophy is a genuine differentiator  -  honest in a way that most platform readers aren't, and more useful for clients who have moved past the stage of wanting to be told everything will work out. She won't tell you your ex is definitely coming back. She will tell you what the energy around that situation actually looks like right now, what the cards suggest about the trajectory, and what you can do with that information. For clients who are ready for that kind of reading, she's one of the best options on the platform at any price.
 
-[Book Intuitive Azzy on Keen  -  First 5 Minutes for $1](https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fintuitive-azzy%2F12446458%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name})
+<a href="/go/keen-azzy/" rel="nofollow sponsored" target="_blank">Book Intuitive Azzy on Keen  -  First 5 Minutes for $1</a>
 
 
 

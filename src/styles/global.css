@@ -80,7 +80,7 @@
   --space-24: 6rem;
 
   /* Layout */
-  --max-width: 1200px;
+  --max-width: 1400px;
   --max-width-content: 720px;
   --max-width-narrow: 640px;
   --sidebar-width: 280px;
@@ -132,7 +132,8 @@ body {
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100vw;
 }
 
 img, picture, video, canvas, svg {
@@ -434,6 +435,25 @@ h5, h6 {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* ========================
+   Reader Reviews Grids (Global)
+   ======================== */
+.reader-grid,
+.other-readers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .reader-grid,
+  .other-readers-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
 .flex {
   display: flex;
 }
@@ -479,7 +499,9 @@ h5, h6 {
 
 .btn--primary {
   background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  white-space: nowrap;
   box-shadow: 0 2px 8px rgba(196, 149, 106, 0.3);
 }
 
@@ -881,3 +903,60 @@ h5, h6 {
     color: #666;
   }
 }
+
+
+/* ========================
+   13. SIDEBAR LAYOUT
+   ======================== */
+/* When prose is inside a sidebar layout column, let it fill the column */
+.with-sidebars .prose {
+  max-width: 100%;
+}
+
+/* Full-page 3-column layout — used in ArticleLayout, ReviewLayout, ComparisonLayout */
+/* These MUST be global (not scoped) so Astro doesn't add data-attr selectors */
+.page-with-sidebars {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-6) var(--space-12);
+}
+
+.page-with-sidebars .main-col {
+  flex: 1;
+  min-width: 0;
+  max-width: var(--max-width-content);
+}
+
+.page-with-sidebars .prose {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .page-with-sidebars {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+/* ========================
+   14. UTILITIES
+   ======================== */
+.text-primary { color: var(--color-primary); }
+.text-accent { color: var(--color-accent); }
+.text-muted { color: var(--color-text-muted); }
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-uppercase { text-transform: uppercase; }
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }

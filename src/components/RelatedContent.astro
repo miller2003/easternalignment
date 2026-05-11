@@ -17,17 +17,19 @@ interface Props {
   title?: string;
   items: RelatedItem[];
   columns?: 1 | 2;
+  hideBorder?: boolean;
 }
 
 const {
   title = 'Continue Reading',
   items,
   columns = 2,
+  hideBorder = false,
 } = Astro.props;
 ---
 
 {items.length > 0 && (
-  <section class="related-content" aria-label={title}>
+  <section class:list={['related-content', { 'related-content--no-border': hideBorder }]} aria-label={title}>
     <h2 class="related-title">{title}</h2>
     <div class:list={['related-grid', `related-grid--${columns}`]}>
       {items.map(item => (
@@ -51,6 +53,11 @@ const {
     margin-top: var(--space-10);
     padding-top: var(--space-8);
     border-top: 1px solid var(--color-border);
+  }
+
+  .related-content--no-border {
+    border-top: none;
+    padding-top: 0;
   }
 
   .related-title {

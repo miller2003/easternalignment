@@ -13,7 +13,8 @@ verdict: 'The psychic one is Keen''s longest-tenured high-volume advisor with a 
   to generate the platform''s most frustrated reviews. Book her with a clear test
   question, use the $1 intro deliberately, and let her first five minutes tell you
   which version you''re dealing with.'
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fthe-psychic-one%2F231725%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-the-psychic-one/
+avatarUrl: /avatars/keen/the-psychic-one.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $3.92/min (Love & Relationships profile)
 bestFor: Clients who want specific timeline predictions on love and relationship questions  -  and
@@ -170,7 +171,7 @@ One practical note: **book by phone rather than chat if you can.** At $3.92/min,
 
 Twenty-five years. 183,000 sessions. A promise specific enough to be proven wrong every day  -  and still standing. The psychic one is not for every client, and the feedback history is honest enough that I wouldn't recommend booking her without using the intro session as a deliberate test first. But for clients who arrive with a focused question and a real desire for timeline-specific answers, she represents something that very few advisors on any platform can offer: a genuine two-decade track record built specifically around delivering the kind of detail most readers won't commit to. That's not nothing. That's worth one dollar to find out.
 
-[Book the psychic one on Keen  -  First 5 Minutes for $1](https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fthe-psychic-one%2F231725%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name})
+<a href="/go/keen-the-psychic-one/" rel="nofollow sponsored" target="_blank">Book the psychic one on Keen  -  First 5 Minutes for $1</a>
 
 
 

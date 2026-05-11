@@ -1,0 +1,194 @@
+---
+import StarRating from './StarRating.astro';
+
+interface Props {
+  rank: number;
+  name: string;
+  slug: string;
+  rating: number;
+  verdict: string;
+  bestFor: string;
+  highlights: string[];
+  affiliateUrl?: string;
+  freeOffer?: string;
+  isTopPick?: boolean;
+}
+
+const {
+  rank,
+  name,
+  slug,
+  rating,
+  verdict,
+  bestFor,
+  highlights,
+  affiliateUrl = '#',
+  freeOffer,
+  isTopPick = false,
+} = Astro.props;
+---
+
+<article class:list={['platform-card', 'card', 'card--elevated', { 'card--highlight': isTopPick }]}>
+  {isTopPick && <span class="top-pick-badge badge badge--primary">✦ Editor's Choice</span>}
+
+  <div class="platform-card-header">
+    <span class="badge badge--rank">#{rank}</span>
+    <div class="platform-info">
+      <h3 class="platform-name">
+        <a href={`/reviews/${slug}/`}>{name}</a>
+      </h3>
+      <StarRating rating={rating} size="md" />
+    </div>
+  </div>
+
+  <p class="platform-verdict">{verdict}</p>
+
+  <div class="platform-best-for">
+    <span class="best-for-label">Best for:</span>
+    <span class="best-for-value">{bestFor}</span>
+  </div>
+
+  {freeOffer && (
+    <div class="platform-offer">
+      <span class="offer-icon">🎁</span>
+      <span>{freeOffer}</span>
+    </div>
+  )}
+
+  <ul class="platform-highlights">
+    {highlights.map(h => (
+      <li>
+        <span class="highlight-check" aria-hidden="true">✓</span>
+        <span>{h}</span>
+      </li>
+    ))}
+  </ul>
+
+  <div class="platform-actions">
+    <a href={affiliateUrl} class="btn btn--primary" rel="nofollow sponsored" target="_blank">
+      Visit {name} →
+    </a>
+    <a href={`/reviews/${slug}/`} class="btn btn--ghost">
+      Read Full Review
+    </a>
+  </div>
+</article>
+
+<style>
+  .platform-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .top-pick-badge {
+    position: absolute;
+    top: calc(-1 * var(--space-3));
+    right: var(--space-4);
+    font-size: var(--text-xs);
+  }
+
+  .platform-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .platform-info {
+    flex: 1;
+  }
+
+  .platform-name {
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-1) 0;
+  }
+
+  .platform-name a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color var(--transition-fast);
+  }
+
+  .platform-name a:hover {
+    color: var(--color-primary);
+  }
+
+  .platform-verdict {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .platform-best-for {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+  }
+
+  .best-for-label {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .best-for-value {
+    color: var(--color-sage);
+    font-weight: var(--weight-medium);
+  }
+
+  .platform-offer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-warning-bg);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary-dark);
+  }
+
+  .platform-highlights {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .platform-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    line-height: var(--leading-snug);
+  }
+
+  .highlight-check {
+    color: var(--color-sage);
+    font-weight: var(--weight-bold);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .platform-actions {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 480px) {
+    .platform-actions {
+      flex-direction: column;
+    }
+
+    .platform-actions .btn {
+      text-align: center;
+    }
+  }
+</style>

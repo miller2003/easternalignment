@@ -4,7 +4,8 @@ description: "An independent review of Psychic Visions by Atlantis on Keen — t
 platformName: "Keen: Psychic Visions by Atlantis"
 rating: 4.6
 verdict: "Psychic Visions by Atlantis delivers one of the most technically impressive first sessions available on Keen — 20 years of practice, the widest toolkit in this series, and a first-contact accuracy that multiple independent sources describe as genuinely startling. The $9.99/min rate is hard to justify for follow-up sessions on the same question, where the information advantage of that first read diminishes. Use her as a high-quality entry point for a new or complex situation, treat the first session as the primary investment, and have a plan for where to take the guidance afterward."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fpsychic-visions-by-atlantis%2F6748553%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-atlantis/"
+avatarUrl: /avatars/keen/psychic-visions-by-atlantis-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$9.99/min (Psychic Readings profile)"
 bestFor: "Clients entering a new or complex situation who want the most technically equipped first-session read available — love, career, past life, or multi-layered questions that benefit from a cross-system approach"

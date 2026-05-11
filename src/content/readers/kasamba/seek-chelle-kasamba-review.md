@@ -4,7 +4,8 @@ description: An honest review of Seek Chelle on Kasamba — a 20-year intuitive 
 platformName: 'Kasamba: Seek Chelle'
 rating: 5
 verdict: Seek Chelle is one of the most methodologically specific readers on Kasamba.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fseek-chelle%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-chelle/
+avatarUrl: /avatars/kasamba/seek-chelle-kasamba-review.jpg
 freeOffer: 3 free minutes + 50% off
 pricing: $9.98/min (chat and phone)
 bestFor: Love and relationships, spiritual crossroads, career direction, clients who

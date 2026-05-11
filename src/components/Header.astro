@@ -23,9 +23,9 @@ const navLinks = [
 <header class="site-header" id="site-header">
   <div class="header-inner container flex-between">
     <!-- Logo / Brand -->
-    <a href="/" class="header-brand" aria-label="EasternAlignment Home">
-      <img src="/logo.jpg" alt="EasternAlignment Logo" class="brand-icon" width="36" height="36" loading="lazy" />
-      <span class="brand-text">EasternAlignment</span>
+    <a href="/" class="header-brand" aria-label="Eastern Alignment Home">
+      <img src="/logo.jpg" alt="Eastern Alignment Logo" class="brand-icon" width="36" height="36" loading="lazy" />
+      <span class="brand-text">Eastern Alignment</span>
     </a>
 
     <!-- Desktop Navigation -->
@@ -143,6 +143,7 @@ const navLinks = [
     height: 36px;
     object-fit: contain;
     mix-blend-mode: multiply; /* Blends white background natively */
+    flex-shrink: 0;
   }
 
   .brand-text {
@@ -150,6 +151,21 @@ const navLinks = [
     font-size: 1.25rem;
     color: var(--color-text);
     letter-spacing: 0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 400px) {
+    .brand-text {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .brand-text {
+      font-size: 0.95rem;
+    }
   }
 
   /* Desktop Nav */

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import LeftSidebar from '../../components/LeftSidebar.astro';
+
 
 const guideModules = import.meta.glob('../../content/guides/*.md', { eager: true });
 const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
@@ -13,44 +15,83 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
   title="Psychic Reading Guides — Learn Before You Book"
   description="Comprehensive guides to help you navigate the world of psychic readings. From beginner basics to expert tips, I've got you covered."
 >
-  <div class="guides-hub section">
-    <div class="container">
-      <Breadcrumb items={[{ label: 'Guides' }]} />
+  <div class="page-with-sidebars">
+    <!-- LEFT SIDEBAR -->
+    <LeftSidebar />
 
-      <header class="hub-header">
-        <h1>Guides & Resources</h1>
-        <p class="hub-description text-muted">
-          Whether you're new to psychic readings or looking to deepen your practice, my guides cover everything from the basics to advanced topics.
-        </p>
-      </header>
+    <main class="main-col">
+      <div class="guides-hub">
+        <Breadcrumb items={[{ label: 'Guides' }]} />
 
-      <div class="guides-grid grid grid--2 stagger">
-        {guides.map(guide => (
-          <a href={`/guides/${guide.slug}/`} class="guide-card card card--elevated">
-            {guide.category && <span class="badge badge--sage">{guide.category}</span>}
-            <h3 class="guide-card-title">{guide.title}</h3>
-            <p class="guide-card-desc text-muted text-sm">{guide.description}</p>
-            <span class="guide-card-link text-primary text-sm">Read Guide →</span>
-          </a>
-        ))}
+        <header class="hub-header">
+          <h1>Guides & Resources</h1>
+          <p class="hub-description text-muted">
+            Whether you're new to psychic readings or looking to deepen your practice, my guides cover everything from the basics to advanced topics.
+          </p>
+        </header>
+
+        <div class="prose">
+          <h2 id="all-guides">All Psychic Guides</h2>
+          <div class="guides-grid grid grid--2 stagger">
+            {guides.map(guide => (
+              <a href={`/guides/${guide.slug}/`} class="guide-card card card--elevated">
+                {guide.category && <span class="badge badge--sage">{guide.category}</span>}
+                <h3 class="guide-card-title">{guide.title}</h3>
+                <p class="guide-card-desc text-muted text-sm">{guide.description}</p>
+                <span class="guide-card-link text-primary text-sm">Read Guide →</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
+    <!-- RIGHT SIDEBAR (Removed for Hub pages) -->
   </div>
 </BaseLayout>
 
 <style>
+  /* ── 3-Column Sidebar Layout ── */
+  .page-with-sidebars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6) var(--space-12);
+  }
+
+  .main-col {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max-width-content);
+  }
+
   .hub-header {
     margin-bottom: var(--space-6);
-    max-width: var(--max-width-content);
   }
 
   .hub-header h1 {
     margin-bottom: var(--space-4);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
   }
 
   .hub-description {
     font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
+  }
+
+  /* Structural Headings for TOC */
+  .prose h2 {
+    margin: var(--space-10) 0 var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: var(--text-2xl);
+    color: var(--color-primary-dark);
+  }
+
+  .guides-grid {
+    margin-top: var(--space-4);
   }
 
   .guide-card {
@@ -59,6 +100,7 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
     gap: var(--space-3);
     text-decoration: none;
     padding: var(--space-6);
+    height: 100%;
   }
 
   .guide-card-title {
@@ -78,5 +120,12 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
 
   .guide-card-link {
     font-weight: var(--weight-medium);
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 1100px) {
+    .page-with-sidebars {
+      gap: var(--space-6);
+    }
   }
 </style>

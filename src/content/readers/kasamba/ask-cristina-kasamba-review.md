@@ -4,7 +4,8 @@ description: 40 years of practice, 11,000+ five-star reviews, and a rare special
 platformName: 'Kasamba: Ask Cristina'
 rating: 4.7
 verdict: 40 years of practice, 11,000+ five-star reviews, and a rare specialty in
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fask-cristina%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-cristina/
+avatarUrl: /avatars/kasamba/ask-cristina-kasamba-review.jpg
 publishDate: '2026-05-08'
 updatedDate: '2026-05-09'
 customSchema: |

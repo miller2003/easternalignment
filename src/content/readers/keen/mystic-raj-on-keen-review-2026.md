@@ -4,7 +4,8 @@ description: "An independent review of Mystic Raj on Keen — why Kind ranking a
 platformName: "Keen: Mystic Raj"
 rating: 4.6
 verdict: "Mystic Raj is the most distinctly positioned reader in this series — not because of volume or price, but because of what his clients consistently reach for first. When 270 people independently choose 'Kind' as their top descriptor for a psychic advisor, that is a specific product being delivered with consistency. Combined with a toolkit that includes Feng Shui — a tool no other reader in this series offers — and a fourth-generation Asian lineage that makes his Hindi-language capability culturally grounded rather than merely translational, he fills a genuine gap in the Keen advisor landscape. At $2.25/min, the barrier to finding out whether his style works for you is about as low as it gets."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fmystic-raj%2F12475371%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-raj/"
+avatarUrl: /avatars/keen/mystic-raj-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$2.25/min (Love & Relationships profile)"
 bestFor: "Clients who want warmth and emotional safety alongside psychic insight — particularly those who have felt judged or rushed by more clinical readers, or who want a male advisor's perspective on relationship and life path questions"

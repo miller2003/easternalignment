@@ -4,10 +4,11 @@ title: 'Cosmic Fusion Review on Kasamba: What ''''Empathic Vision'''' Actually M
 description: An honest review of Cosmic Fusion on Kasamba — an energy-based psychic
 platformName: 'Kasamba: Cosmic Fusion'
 rating: 5
-verdict: Cosmic Fusion is one of Kasamba's most consistently reviewed readers at the
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fcosmic-fusion%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+verdict: Cosmic Fusion is a top-tier empathic vision psychic on Kasamba with over 61,000 sessions. Her energy-based approach is ideal for those seeking emotional clarity and spiritual healing rather than just predictive timelines.
+affiliateUrl: /go/kasamba-cosmic-fusion/
+avatarUrl: /avatars/kasamba/cosmic-fusion-kasamba-review.jpg
 freeOffer: 3 free minutes + 50% off
-pricing: See profile for current rate (Kasamba readers from $1.99/min)
+pricing: "$3.99/min chat ($39.99/min voice)"
 bestFor: Emotional clarity, relationship confusion, spiritual guidance, healing after
 publishDate: '2026-05-04'
 updatedDate: '2026-05-09'

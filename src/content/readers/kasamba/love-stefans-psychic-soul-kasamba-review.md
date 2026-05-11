@@ -4,7 +4,8 @@ description: An honest review of Love Stefans Psychic Soul on Kasamba — a UK-b
 platformName: 'Kasamba: Love Stefans Psychic Soul'
 rating: 5
 verdict: Love Stefans Psychic Soul is one of the most credentialed readers on Kasamba
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Flove-stefans-psychic-soul%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-stefan/
+avatarUrl: /avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg
 freeOffer: 3 free minutes + 50% off
 pricing: $19.99/min (chat and phone)
 bestFor: Love and relationship clarity, reunion questions, soulmate readings, career

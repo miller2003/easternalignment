@@ -43,18 +43,26 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
   slug: path.split('/').pop()?.replace('.md', ''),
 }));
 
+/* Load readers to show count per platform */
+const readerModules = import.meta.glob('../../content/readers/**/*.md', { eager: true });
+const readersByPlatform: Record<string, number> = {};
+Object.entries(readerModules).forEach(([path, mod]: [string, any]) => {
+  const platform = mod.frontmatter?.platform || 'unknown';
+  readersByPlatform[platform] = (readersByPlatform[platform] || 0) + 1;
+});
+
 const relatedItems = [
   {
     title: 'Keen Psychics Review 2026',
     href: '/reviews/keen/',
-    description: 'Full platform review with 10 individual reader assessments.',
+    description: `Full platform review with ${readersByPlatform['keen'] || 0} individual reader assessments.`,
     badge: 'Platform',
     badgeVariant: 'primary' as const,
   },
   {
     title: 'Kasamba Review 2026',
     href: '/reviews/kasamba/',
-    description: 'Full platform review — the largest psychic reading platform online.',
+    description: `Full platform review with ${readersByPlatform['kasamba'] || 0} individual reader assessments.`,
     badge: 'Platform',
     badgeVariant: 'primary' as const,
   },

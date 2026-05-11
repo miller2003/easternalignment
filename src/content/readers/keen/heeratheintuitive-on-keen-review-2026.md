@@ -4,7 +4,8 @@ description: "An independent review of HeeratheIntuitive on Keen — why the mos
 platformName: "Keen: HeeratheIntuitive"
 rating: 4.6
 verdict: "HeeratheIntuitive is not selling a single impressive session. She is selling a long-term advisory relationship — and at $7.99/min, she is explicitly pricing out the casual tester and pricing in the committed repeat client. Her 94% five-star rate across 13 years is the most concentrated quality signal in this series. If you have a high-stakes ongoing situation — infidelity, a long-stalled relationship, a major career crossroads — and you want a reader who will grow with your situation over time, she is one of the most credible options on Keen. If you want a one-session clairvoyant test, book someone else first."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fheeratheintuitive%2F12458564%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-heera/"
+avatarUrl: /avatars/keen/heeratheintuitive-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$7.99/min (Love & Relationships profile)"
 bestFor: "Clients with high-stakes ongoing situations — infidelity, long-term relationship decisions, major career crossroads — who want a consistent long-term advisor rather than a single-session reading"

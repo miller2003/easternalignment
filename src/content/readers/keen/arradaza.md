@@ -11,7 +11,8 @@ verdict: A 25-year veteran with the widest tool set of any reader I've assessed 
   Clairvoyant and Otherworld Connection skills. Best for clients who want multi-layered
   readings on love, career, or past life patterns. Her 'Direct' style and 98% accuracy
   claim deserve an honest look before you book.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Farradaza%2F1086511%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-arradaza/
+avatarUrl: /avatars/keen/arradaza.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $5.99/min
 bestFor: Multi-layered readings combining intuition and multiple divination tools  -  love,

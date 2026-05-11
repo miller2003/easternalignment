@@ -8,4 +8,8 @@ export default defineConfig({
         filter: (page) =>
             !page.includes('/privacy/'),
     })],
+    redirects: {
+        '/reviews/kasamba-psychics/': '/reviews/kasamba/',
+        '/reviews/keen-psychics/': '/reviews/keen/',
+    },
 });

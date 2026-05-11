@@ -4,12 +4,14 @@ import PlatformCard from '../../components/PlatformCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
+import LeftSidebar from '../../components/LeftSidebar.astro';
+
 
 const reviewModules = import.meta.glob('../../content/reviews/*.md', { eager: true });
 const reviews = Object.entries(reviewModules)
   .map(([path, mod]: [string, any]) => ({
     ...mod.frontmatter,
-    slug: mod.frontmatter.platformName?.toLowerCase().replace(/\s+/g, '-') || path.split('/').pop()?.replace('.md', ''),
+    slug: path.split('/').pop()?.replace('.md', ''),
   }))
   .sort((a, b) => (a.rank || 99) - (b.rank || 99));
 
@@ -56,58 +58,90 @@ const relatedItems = [
   title="Psychic Platform Reviews 2026 — Tested & Ranked"
   description="Independently tested and ranked reviews of the top online psychic reading platforms. Every review is based on real personal experience."
 >
-  <div class="reviews-hub section">
-    <div class="container">
-      <Breadcrumb items={[{ label: 'Reviews' }]} />
+  <div class="page-with-sidebars">
+    <!-- LEFT SIDEBAR -->
+    <LeftSidebar />
 
-      <header class="hub-header">
-        <h1>Psychic Platform Reviews</h1>
-        <p class="hub-description text-muted">
-          Every platform below has been personally tested through multiple paid readings. My reviews reflect real experiences — not sponsored content. I update these reviews regularly to keep them accurate.
-        </p>
-        <AffiliateDisclosure variant="inline" />
-      </header>
+    <main class="main-col">
+      <div class="reviews-hub">
+        <Breadcrumb items={[{ label: 'Reviews' }]} />
 
-      <div class="review-list stagger">
-        {reviews.map(review => (
-          <div class="platform-card-wrapper">
-            <PlatformCard
-              rank={review.rank}
-              name={review.platformName}
-              slug={review.slug}
-              rating={review.rating}
-              verdict={review.verdict}
-              bestFor={review.bestFor || 'General readings'}
-              highlights={review.highlights || []}
-              affiliateUrl={review.affiliateUrl}
-              freeOffer={review.freeOffer}
-              isTopPick={review.rank === 1}
-            />
-            {readersByPlatform[review.slug] > 0 && (
-              <div class="reader-count-badge">
-                <a href={`/reviews/${review.slug}/#${review.slug}-readers`} class="reader-count-link">
-                  📝 {readersByPlatform[review.slug]} Individual Reader Reviews Available
-                </a>
+        <header class="hub-header">
+          <h1>Psychic Platform Reviews</h1>
+          <p class="hub-description text-muted">
+            Every platform below has been personally tested through multiple paid readings. My reviews reflect real experiences — not sponsored content. I update these reviews regularly to keep them accurate.
+          </p>
+          <AffiliateDisclosure variant="inline" />
+        </header>
+
+        <div class="prose">
+          <h2 id="ranked-platforms">Top Rated Psychic Platforms</h2>
+          <div class="review-list stagger">
+            {reviews.map(review => (
+              <div class="platform-card-wrapper">
+                <PlatformCard
+                  rank={review.rank}
+                  name={review.platformName}
+                  slug={review.slug}
+                  rating={review.rating}
+                  verdict={review.verdict}
+                  bestFor={review.bestFor || 'General readings'}
+                  highlights={review.highlights || []}
+                  affiliateUrl={review.affiliateUrl}
+                  freeOffer={review.freeOffer}
+                  isTopPick={review.rank === 1}
+                />
+                {readersByPlatform[review.slug] > 0 && (
+                  <div class="reader-count-badge">
+                    <a href={`/reviews/${review.slug}/#${review.slug}-readers`} class="reader-count-link">
+                      📝 {readersByPlatform[review.slug]} Individual Reader Reviews Available
+                    </a>
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </div>
-        ))}
-      </div>
 
-      <!-- Cross-linking section -->
-      <RelatedContent title="Explore More" items={relatedItems} />
-    </div>
+          <!-- Cross-linking section -->
+          <div class="hub-related-wrapper">
+            <RelatedContent 
+              title="Explore More Resources"
+              items={relatedItems} 
+              hideBorder={true}
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- RIGHT SIDEBAR (Removed for Hub pages) -->
   </div>
 </BaseLayout>
 
 <style>
+  /* ── 3-Column Sidebar Layout ── */
+  .page-with-sidebars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6) var(--space-12);
+  }
+
+  .main-col {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max-width-content);
+  }
+
   .hub-header {
     margin-bottom: var(--space-6);
-    max-width: var(--max-width-content);
   }
 
   .hub-header h1 {
     margin-bottom: var(--space-4);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
   }
 
   .hub-description {
@@ -116,11 +150,19 @@ const relatedItems = [
     margin-bottom: var(--space-4);
   }
 
+  /* Structural Headings for TOC */
+  .prose h2 {
+    margin: var(--space-10) 0 var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: var(--text-2xl);
+    color: var(--color-primary-dark);
+  }
+
   .review-list {
     display: flex;
     flex-direction: column;
-    gap: var(--space-6);
-    max-width: 800px;
+    gap: var(--space-8);
   }
 
   .platform-card-wrapper {
@@ -139,15 +181,30 @@ const relatedItems = [
     padding: var(--space-2) var(--space-4);
     font-size: var(--text-sm);
     font-weight: var(--weight-medium);
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     background: var(--color-bg-alt);
     border-radius: var(--radius-full);
-    text-decoration: none;
-    transition: background var(--transition-fast), color var(--transition-fast);
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
   }
 
   .reader-count-link:hover {
     background: var(--color-accent-light);
-    color: var(--color-primary-dark);
+    color: var(--color-primary-dark) !important;
+    text-decoration: none !important;
+    transform: translateY(-1px);
+    border-color: var(--color-accent);
+  }
+
+  .hub-related-wrapper {
+    margin-top: var(--space-4);
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 1100px) {
+    .page-with-sidebars {
+      gap: var(--space-6);
+    }
   }
 </style>

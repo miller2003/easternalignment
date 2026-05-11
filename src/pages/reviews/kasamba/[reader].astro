@@ -32,11 +32,15 @@ const currentSlug = Astro.params.reader;
 
 /* Fetch all Kasamba readers for cross-linking */
 const allReaderModules = import.meta.glob('../../../content/readers/kasamba/*.md', { eager: true });
-const otherReaders = Object.entries(allReaderModules)
+const allReaders = Object.entries(allReaderModules)
   .map(([path, mod]: [string, any]) => ({
     ...mod.frontmatter,
     slug: path.split('/').pop()?.replace('.md', ''),
-  }))
+  }));
+
+const totalKasambaReaders = allReaders.length;
+
+const otherReaders = allReaders
   .filter(r => r.slug !== currentSlug)
   .sort((a, b) => (b.rating || 0) - (a.rating || 0))
   .slice(0, 4); // Show top 4 related readers
@@ -98,6 +102,7 @@ const relatedItems = [
   verdict={frontmatter.verdict}
   affiliateUrl={frontmatter.affiliateUrl}
   freeOffer={frontmatter.freeOffer}
+  avatarUrl={frontmatter.avatarUrl}
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
   metaRobots={frontmatter.metaRobots}
@@ -144,11 +149,12 @@ const relatedItems = [
             pricing={reader.pricing}
             bestFor={reader.bestFor}
             affiliateUrl={reader.affiliateUrl}
+            avatarUrl={reader.avatarUrl}
           />
         ))}
       </div>
       <div class="other-readers-cta">
-        <a href="/reviews/kasamba/#kasamba-readers" class="btn btn--ghost">View All Kasamba Reader Reviews →</a>
+        <a href="/reviews/kasamba/#kasamba-readers" class="btn btn--ghost">View All {totalKasambaReaders} Kasamba Reader Reviews →</a>
       </div>
     </section>
   )}
@@ -186,9 +192,7 @@ const relatedItems = [
   }
 
   .other-readers-grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
+    /* Global styles live in src/styles/global.css */
   }
 
   .other-readers-cta {

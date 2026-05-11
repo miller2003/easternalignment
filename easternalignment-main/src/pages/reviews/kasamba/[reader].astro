@@ -1,0 +1,198 @@
+---
+/**
+ * Individual Reader Review Page — /reviews/kasamba/[reader]/
+ * 
+ * Spoke pages in the Hub & Spoke model. Each reader review links back
+ * to the platform hub and cross-links to other readers on the same platform.
+ */
+import ReviewLayout from '../../../layouts/ReviewLayout.astro';
+import ProsCons from '../../../components/ProsCons.astro';
+import CTABox from '../../../components/CTABox.astro';
+import FAQ from '../../../components/FAQ.astro';
+import ReaderCard from '../../../components/ReaderCard.astro';
+import RelatedContent from '../../../components/RelatedContent.astro';
+import InfiniteContentFlow from '../../../components/InfiniteContentFlow.astro';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../../../content/readers/kasamba/*.md');
+  const paths = [];
+  for (const path in posts) {
+    const post = await posts[path]();
+    const slug = path.split('/').pop().replace('.md', '');
+    paths.push({
+      params: { reader: slug },
+      props: post,
+    });
+  }
+  return paths;
+}
+
+const { default: Content, frontmatter } = Astro.props;
+const currentSlug = Astro.params.reader;
+
+/* Fetch all Kasamba readers for cross-linking */
+const allReaderModules = import.meta.glob('../../../content/readers/kasamba/*.md', { eager: true });
+const otherReaders = Object.entries(allReaderModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(r => r.slug !== currentSlug)
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+  .slice(0, 4); // Show top 4 related readers
+
+/* Fetch guides for cross-linking */
+const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
+const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
+  ...mod.frontmatter,
+  slug: path.split('/').pop()?.replace('.md', ''),
+  Content: mod.default,
+}));
+
+/* Pick a guide for infinite content flow — choose the most relevant one */
+const flowGuide = guides.find(g => g.slug === 'what-is-psychic-reading') || guides[0];
+
+/* Extract the reader's display name */
+const readerName = frontmatter.platformName?.includes(':')
+  ? frontmatter.platformName.split(':').pop()?.trim()
+  : frontmatter.platformName;
+
+const faqItems = [
+  {
+    question: `Is ${readerName} a legitimate psychic reader?`,
+    answer: `${readerName} is an active reader on Kasamba, one of the longest-running psychic platforms online. My review is based on analysis of their profile, verified client reviews, and documented track record. Check the full review above for details on their rating and client feedback.`
+  },
+  {
+    question: `How much does a reading with ${readerName} cost?`,
+    answer: `${readerName} charges ${frontmatter.pricing || 'rates vary'} per minute. ${frontmatter.freeOffer ? `New Kasamba users can take advantage of ${frontmatter.freeOffer}.` : ''} Session length varies, but I recommend having a budget in mind before you start.`
+  },
+  {
+    question: `How do I book a session with ${readerName}?`,
+    answer: `You can book ${readerName} directly through Kasamba. Look for their profile in the platform directory, check their availability status, and connect via phone, chat, or email depending on what they offer. My review above includes specific booking tips.`
+  },
+];
+
+const relatedItems = [
+  {
+    title: 'Kasamba Psychics Review 2026 — Full Platform Assessment',
+    href: '/reviews/kasamba/',
+    description: 'My comprehensive review of the Kasamba platform — pricing, app, satisfaction guarantee, and overall experience.',
+    badge: 'Platform Review',
+    badgeVariant: 'primary' as const,
+  },
+  ...guides.map(g => ({
+    title: g.title,
+    href: `/guides/${g.slug}/`,
+    description: g.description,
+    badge: g.category || 'Guide',
+    badgeVariant: 'sage' as const,
+  })),
+];
+---
+
+<ReviewLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  platformName={frontmatter.platformName}
+  rating={frontmatter.rating}
+  verdict={frontmatter.verdict}
+  affiliateUrl={frontmatter.affiliateUrl}
+  freeOffer={frontmatter.freeOffer}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+  metaRobots={frontmatter.metaRobots}
+  canonicalUrl={frontmatter.canonicalUrl}
+  ogImage={frontmatter.ogImage}
+  seoTitle={frontmatter.seoTitle || frontmatter.metaTitle}
+  metaDescription={frontmatter.metaDescription}
+  schemaAuthor={frontmatter.schemaAuthor}
+  schemaDatePublished={frontmatter.schemaDatePublished}
+  customSchema={frontmatter.customSchema}
+  entities={frontmatter.entities}
+>
+  <Content />
+
+  {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
+    <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
+  )}
+
+  <CTABox
+    title={`Ready to try ${readerName}?`}
+    description={frontmatter.freeOffer ? `Take advantage of the current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.'}
+    buttonText={`Book ${readerName} on Kasamba →`}
+    buttonUrl={frontmatter.affiliateUrl || '#'}
+    variant="highlight"
+  />
+
+  <FAQ items={faqItems} title={`${readerName} FAQ`} />
+
+  <!-- Cross-link to other Kasamba readers -->
+  {otherReaders.length > 0 && (
+    <section class="other-readers" id="other-kasamba-readers">
+      <h2 class="other-readers-title">Other Kasamba Readers I've Reviewed</h2>
+      <p class="other-readers-desc text-muted text-sm">
+        Explore more individual reader reviews on Kasamba to find the right fit for your reading style and needs.
+      </p>
+      <div class="other-readers-grid">
+        {otherReaders.map(reader => (
+          <ReaderCard
+            name={reader.platformName}
+            slug={reader.slug}
+            platform="kasamba"
+            rating={reader.rating}
+            verdict={reader.verdict}
+            pricing={reader.pricing}
+            bestFor={reader.bestFor}
+            affiliateUrl={reader.affiliateUrl}
+          />
+        ))}
+      </div>
+      <div class="other-readers-cta">
+        <a href="/reviews/kasamba/#kasamba-readers" class="btn btn--ghost">View All Kasamba Reader Reviews →</a>
+      </div>
+    </section>
+  )}
+
+  <!-- Cross-linking to platform review, comparisons, guides -->
+  <RelatedContent title="Continue Your Research" items={relatedItems} />
+
+  <!-- Infinite Content Flow: seamless scroll into a guide -->
+  {flowGuide && (
+    <InfiniteContentFlow
+      guideTitle={flowGuide.title}
+      guideDescription={flowGuide.description}
+      guideSlug={flowGuide.slug}
+      guideCategory={flowGuide.category}
+    >
+      <flowGuide.Content />
+    </InfiniteContentFlow>
+  )}
+</ReviewLayout>
+
+<style>
+  .other-readers {
+    margin: var(--space-10) 0;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .other-readers-title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-2);
+  }
+
+  .other-readers-desc {
+    margin-bottom: var(--space-6);
+  }
+
+  .other-readers-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .other-readers-cta {
+    text-align: center;
+    margin-top: var(--space-6);
+  }
+</style>

@@ -4,7 +4,8 @@ description: "An independent review of Sophia Rose Light on Keen — why $4.44 i
 platformName: "Keen: Sophia Rose Light"
 rating: 4.7
 verdict: "Sophia Rose Light is the most spiritually dense reader in this series — Shamanic Healer, Tantrik Yogini, Natural Oracle, Akashic Records channeler, and Kundalini activator, all in one profile that has built 4.95 stars across 8,125 sessions in four years. Her $4.44 price is an angel number embedded as a brand statement, her Perth timezone makes her available when every North American reader is asleep, and her explicit commitment to truth over fantasy positions her as the right reader for clients who have had enough of comfortable answers. For the right client — one with an active spiritual practice, a serious question, and the capacity to receive transformation rather than just prediction — she is unlike anything else in this series."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fsophia-rose-light%2F12470163%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-sophia/"
+avatarUrl: /avatars/keen/sophia-rose-light-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$4.44/min (Life Path & Advice profile)"
 bestFor: "Clients with an active spiritual practice seeking soul-level guidance — Akashic Records, Kundalini, past lives, karmic patterns — plus North American night-owl and early-morning clients who need a reader when others are unavailable"

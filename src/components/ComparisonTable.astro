@@ -48,7 +48,11 @@ const rows = [
           <td class="feature-label">{row.label}</td>
           {platforms.map((p, i) => (
             <td class:list={[{ 'cell--highlight': i === highlightIndex }]}>
-              {row.format ? row.format(p[row.key as keyof PlatformData] as number) : p[row.key as keyof PlatformData]}
+              {row.format 
+                ? row.format(p[row.key as keyof PlatformData] as number) 
+                : (row.key === 'pricing' 
+                    ? (p.pricing ? p.pricing.split('(')[0].split(' - ')[0].trim() : '') 
+                    : p[row.key as keyof PlatformData])}
             </td>
           ))}
         </tr>

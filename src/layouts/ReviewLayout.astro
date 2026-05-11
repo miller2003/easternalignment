@@ -4,6 +4,8 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import StarRating from '../components/StarRating.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import AuthorBio from '../components/AuthorBio.astro';
+import LeftSidebar from '../components/LeftSidebar.astro';
+import RightSidebar from '../components/RightSidebar.astro';
 
 interface Props {
   title: string;
@@ -13,6 +15,7 @@ interface Props {
   verdict: string;
   affiliateUrl?: string;
   freeOffer?: string;
+  avatarUrl?: string;
   publishDate: string;
   updatedDate?: string;
   // SEO meta fields
@@ -35,6 +38,7 @@ const {
   verdict,
   affiliateUrl = '#',
   freeOffer,
+  avatarUrl,
   publishDate,
   updatedDate,
   metaRobots,
@@ -75,6 +79,7 @@ const breadcrumbItems = isReaderReview
 
 const SITE_URL = 'https://easternalignment.com';
 const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
+const absoluteAvatarUrl = avatarUrl ? new URL(avatarUrl, SITE_URL).href : undefined;
 
 const reviewSchema = {
   "@context": "https://schema.org",
@@ -99,7 +104,7 @@ const reviewSchema = {
     "@type": "Product",
     "name": readerLabel || platformName,
     "url": affiliateUrl !== '#' ? affiliateUrl : undefined,
-    "image": ogImage || "https://easternalignment.com/logo.jpg",
+    "image": absoluteAvatarUrl || ogImage || "https://easternalignment.com/logo.jpg",
     "description": description,
     ...(isReaderReview ? {
       "brand": {
@@ -110,7 +115,7 @@ const reviewSchema = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "EasternAlignment",
+    "name": "Eastern Alignment",
     "url": "https://easternalignment.com",
     "logo": "https://easternalignment.com/logo.jpg"
   },
@@ -122,6 +127,16 @@ const reviewSchema = {
 };
 
 const noindex = metaRobots ? metaRobots.includes('noindex') : false;
+
+// Generate compact CTA based on offer
+let ctaText = isReaderReview && readerLabel ? `Book ${readerLabel} →` : `Visit ${platformName} →`;
+if (freeOffer) {
+  const lowOffer = freeOffer.toLowerCase();
+  if (lowOffer.includes('3 free minutes')) ctaText = 'Get 3 Mins Free';
+  else if (lowOffer.includes('5 minutes for $1')) ctaText = 'Get 5 Mins for $1';
+  else if (lowOffer.includes('3 minutes absolutely free')) ctaText = 'Get 3 Mins Free';
+  else ctaText = 'Start Free Trial';
+}
 ---
 
 <BaseLayout
@@ -136,15 +151,20 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
   metaDescription={metaDescription}
   customSchema={customSchema}
 >
-  <div class="review-page">
-    <!-- Breadcrumb -->
-    <div class="container container--narrow">
-      <Breadcrumb items={breadcrumbItems} />
-    </div>
+  <!-- Full-page 3-column grid: sidebars span the entire page height -->
+  <div class="page-with-sidebars">
+    <!-- LEFT SIDEBAR -->
+    <LeftSidebar />
 
-    <!-- Review Hero -->
-    <header class="review-hero">
-      <div class="container container--narrow">
+    <!-- MAIN COLUMN: breadcrumb + hero + content -->
+    <div class="main-col">
+      <!-- Breadcrumb -->
+      <div class="review-breadcrumb">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+
+      <!-- Review Hero -->
+      <header class="review-hero">
         <div class="review-hero-meta">
           <span class="badge badge--sage">Review</span>
           <span class="review-date">
@@ -152,58 +172,98 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
           </span>
         </div>
 
-        <h1 class="review-title">{title}</h1>
+        <div class="review-hero-header">
+          <h1 class="review-title">{title}</h1>
+        </div>
 
-        <div class="review-hero-rating">
-          <StarRating rating={rating} size="lg" label="Overall" />
+        <div class="review-identity">
+          {isReaderReview && avatarUrl && (
+            <img
+              class="reader-avatar-lg"
+              src={avatarUrl}
+              alt={`${readerLabel} profile photo`}
+              width="72"
+              height="72"
+              loading="eager"
+              decoding="async"
+            />
+          )}
+          <div class="review-identity-text">
+            {isReaderReview && parentPlatform && parentPlatformLabel && readerLabel && (
+              <div class="reader-subline">
+                <a href={`/reviews/${parentPlatform}/`} class="badge badge--outline badge--link">
+                  {parentPlatformLabel}
+                </a>
+                <span class="reader-subline-text">Reader profile: {readerLabel}</span>
+              </div>
+            )}
+            <div class="reader-rating-summary">
+              <StarRating rating={rating} size="md" showValue={false} />
+              <span class="rating-score">{rating}</span>
+              <span class="rating-label">Expert Rating</span>
+            </div>
+          </div>
         </div>
 
         <p class="review-verdict">{verdict}</p>
 
-        {freeOffer && (
-          <div class="review-offer">
-            <span class="offer-icon">🎁</span>
-            <span><strong>Special Offer:</strong> {freeOffer}</span>
-          </div>
-        )}
-
         <div class="review-hero-cta">
           <a href={affiliateUrl} class="btn btn--primary btn--lg" rel="nofollow sponsored" target="_blank">
-            Visit {platformName} →
+            {ctaText}
           </a>
         </div>
+      </header>
 
-        <AffiliateDisclosure variant="inline" />
-      </div>
-    </header>
+      <!-- Review Content -->
+      <article class="review-content">
+        <div class="prose">
+          <slot />
+        </div>
+        <AuthorBio />
+      </article>
+    </div>
 
-    <!-- Review Content -->
-    <article class="review-content container container--narrow">
-      <div class="prose">
-        <slot />
-      </div>
-
-      <AuthorBio />
-    </article>
+    <!-- RIGHT SIDEBAR -->
+    <RightSidebar />
   </div>
 </BaseLayout>
 
 <style>
-  .review-page {
-    padding-top: var(--space-4);
+  /* ── Full-page 3-column layout ── */
+  .page-with-sidebars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6) var(--space-12);
   }
 
+  /* ── Centre column ── */
+  .main-col {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max-width-content);
+    transition: max-width 0.3s ease;
+  }
+
+  .review-breadcrumb {
+    margin-bottom: var(--space-4);
+  }
+
+  /* ── Hero ── */
   .review-hero {
-    padding: var(--space-4) 0 var(--space-6);
+    padding: var(--space-2) 0 var(--space-4);
     border-bottom: 1px solid var(--color-border-light);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-5);
   }
 
   .review-hero-meta {
     display: flex;
     align-items: center;
     gap: var(--space-3);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
   }
 
   .review-date {
@@ -213,6 +273,84 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
 
   .review-title {
     margin-bottom: var(--space-4);
+    line-height: 1.15;
+  }
+
+  .review-identity {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    margin-bottom: var(--space-6);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .review-identity-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .reader-avatar-lg {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-bg-alt);
+    box-shadow: var(--shadow-sm);
+    flex: 0 0 auto;
+  }
+
+  .reader-rating-summary {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: 2px;
+  }
+
+  .rating-score {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    line-height: 1;
+  }
+
+  .rating-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--color-sage-100);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+  }
+
+  .reader-subline {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .badge--link {
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+  }
+
+  .badge--link:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+
+  .reader-subline-text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
   }
 
   .review-hero-rating {
@@ -223,7 +361,7 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
     font-size: var(--text-lg);
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
     max-width: 600px;
   }
 
@@ -231,19 +369,89 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    padding: var(--space-3) var(--space-5);
+    padding: var(--space-2) var(--space-4);
     background: var(--color-warning-bg);
     border-radius: var(--radius-md);
     font-size: var(--text-sm);
     color: var(--color-primary-dark);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
   }
 
   .review-hero-cta {
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
   }
 
+  /* ── Content ── */
   .review-content {
-    padding-bottom: var(--space-4);
+    padding-bottom: var(--space-8);
+  }
+
+  .prose {
+    max-width: 100%;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1300px) {
+    .page-with-sidebars {
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .page-with-sidebars {
+      justify-content: center;
+      padding-top: var(--space-6);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-with-sidebars {
+      flex-direction: column;
+      align-items: center;
+      padding-left: var(--space-4);
+      padding-right: var(--space-4);
+      gap: var(--space-8);
+    }
+
+    .main-col {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .review-hero {
+      padding-top: 0;
+    }
+
+    .review-identity {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-4);
+    }
+
+    .reader-rating-summary {
+      justify-content: center;
+    }
+
+    .reader-subline {
+      justify-content: center;
+    }
+
+    .reader-avatar-lg {
+      width: 72px;
+      height: 72px;
+    }
+
+    .review-title {
+      font-size: var(--text-2xl);
+    }
+
+    .review-verdict {
+      font-size: var(--text-base);
+    }
+
+    .review-hero-cta .btn {
+      width: 100%;
+    }
   }
 </style>

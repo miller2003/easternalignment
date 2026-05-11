@@ -7,7 +7,8 @@ platformName: 'Kasamba: Elizabeth'
 rating: 4.8
 verdict: 'A sixth-generation psychic, certified Reiki Master, and Kasamba''''s #1
   ranked'
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Felizabeth%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-elizabeth/
+avatarUrl: /avatars/kasamba/elizabeth-kasamba-review.jpg
 publishDate: '2026-05-05'
 updatedDate: '2026-05-09'
 customSchema: |

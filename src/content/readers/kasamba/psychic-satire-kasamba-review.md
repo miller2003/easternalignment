@@ -4,7 +4,8 @@ description: Tested Psychic Satire on Kasamba firsthand. She's a 5-star medium a
 platformName: 'Kasamba: Psychic Satire'
 rating: 4.7
 verdict: Tested Psychic Satire on Kasamba firsthand. She's a 5-star medium and spiritual
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fpsychic-satire%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-satire/
+avatarUrl: /avatars/kasamba/psychic-satire-kasamba-review.jpg
 publishDate: '2026-05-05'
 updatedDate: '2026-05-09'
 customSchema: |

@@ -10,7 +10,8 @@ verdict: Best for people navigating emotionally complex relationship situations 
   twin flame or person-of-interest dynamics  -  who want a male reader's unfiltered
   perspective. His tool-free intuitive style and 17-year track record are genuine
   assets; his premium price point demands you come prepared.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fdavid7%2F10351880%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-david7/
+avatarUrl: /avatars/keen/david7.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $6.99/min
 bestFor: Twin flame and relationship readings from a direct, tool-free male intuitive

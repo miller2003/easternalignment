@@ -4,7 +4,8 @@ description: "An honest third-party review of psychicreader19622 on Keen — unp
 platformName: "Keen: psychicreader19622"
 rating: 4.9
 verdict: "Raymond has built one of the strongest client loyalty records on Keen behind the most anonymous-looking profile in this review series. The 98% five-star rating, Top Advisor certification, and 19-year tenure speak louder than a generic username ever could. At $4.99/min he sits in an accessible tier with depth that punches well above it — particularly for love, twin flame, and past life questions where his cartomancy and intuitive style consistently deliver specific, checkable predictions."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fpsychicreader19622%2F6852516%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-raymond/"
+avatarUrl: /avatars/keen/psychicreader19622-raymond-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$4.99/min"
 bestFor: "Love, twin flame, and past life readings from a warm, humorous male reader whose cartomancy-led intuitive style generates some of the highest client return rates in this review series"

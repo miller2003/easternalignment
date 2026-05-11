@@ -4,7 +4,8 @@ description: "An honest third-party review of Psychic SuZen on Keen — covering
 platformName: "Keen: Psychic SuZen"
 rating: 4.8
 verdict: "Best for people who want more than a prediction — who want to understand what's happening, why it's happening, and what they can actually do about it. SuZen's dual background as a psychic and trained life coach and social worker produces a different kind of reading: one that ends with options, not just outcomes. Not the right fit for pure prediction-seekers or those wanting a structured tool-based session."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flife-path-advice%2Fpsychic-suzen%2F12453352%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-suzen/"
+avatarUrl: /avatars/keen/psychic-suzen-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$5.40/min"
 bestFor: "Sensitive, intuitive people seeking clarity on relationships or life direction — especially those who want actionable guidance alongside the reading itself"

@@ -4,7 +4,8 @@ description: "An independent review of Spirit Answers on Keen — why the series
 platformName: "Keen: Spirit Answers"
 rating: 4.8
 verdict: "Spirit Answers is the most expensive reader in this series by a meaningful margin — and the one whose efficiency argument most directly justifies the rate. A perfect rating across 4,697 sessions, a chat-only format that eliminates dead conversational time, and a clairsentient approach that delivers in writing what most readers struggle to articulate in speech. For clients who have lost money to slow readers at lower rates, the arithmetic here is worth working through carefully before dismissing the $12.99 figure. For Finnish-speaking clients specifically, she may be the only serious option on the platform."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fspirit-answers%2F12449381%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-spirit-answers/"
+avatarUrl: /avatars/keen/spirit-answers-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$12.99/min (Love & Relationships profile)"
 bestFor: "Clients who prioritize session efficiency, want a permanent written record of what they were told, or are Finnish-speaking — and who understand that the highest per-minute rate in this series may produce the lowest real cost per useful insight"

@@ -10,7 +10,8 @@ verdict: Best for people who want intuition-led clarity on relationships or care
   a card-by-card walkthrough. Her hybrid method, 25-year track record, and unusually
   honest self-assessment make her one of the more reliable mid-tier reads on Keen.
   Not suited for tight timelines or general open-ended sessions.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fc-garrett%2F5190528%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-garrett/
+avatarUrl: /avatars/keen/c-garrett.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $4.89/min
 bestFor: Relationship and career readings where you want empathic depth over structural

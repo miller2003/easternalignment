@@ -4,11 +4,12 @@ description: An honest review of Psychic Safina on Kasamba — a third-generatio
 platformName: 'Kasamba: Psychic Safina'
 rating: 4.8
 verdict: Psychic Safina is one of the most substantively credentialed readers on Kasamba
-affiliateUrl: 'https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fpsychic-safina%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-safina/
+avatarUrl: /avatars/kasamba/psychic-safina-kasamba-review.jpg
 
-  '
+
 freeOffer: 3 free minutes + 50% off
-pricing: See profile for current rate (Kasamba readers from $1.99/min)
+pricing: "$7.99/min chat & voice"
 bestFor: Love and relationships, career forecasts, dream interpretation, life direction
 publishDate: '2026-05-09'
 updatedDate: '2026-05-09'

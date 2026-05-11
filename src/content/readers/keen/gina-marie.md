@@ -11,7 +11,8 @@ verdict: Gina Marie's 20-year track record on Keen is hard to dismiss  -  but at
   approach is her strongest differentiator and makes her unusually easy to test. Book
   her by voice call for love and relationship questions; manage your session time
   deliberately.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fgina-marie%2F5487925%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-gina-marie/
+avatarUrl: /avatars/keen/gina-marie.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $6.99/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships
@@ -160,7 +161,7 @@ The intro offer is the most strategically useful tool you have with Gina Marie s
 
 Twenty years. 77,000 sessions. A no-tools commitment that has survived the full arc of online psychic platforms from 2005 to today. That's a track record I take seriously  -  and Gina Marie has earned her place among Keen's most credible long-term advisors. The $6.99/min rate is real, and the $105 - $140 full session cost is a genuine financial decision. But for clients with a clear love or relationship question who want a direct, prop-free clairvoyant session delivered by voice, she's one of the best options currently active on the platform.
 
-[Book Gina Marie on Keen  -  First 5 Minutes for $1](https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Fgina-marie%2F5487925%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name})
+<a href="/go/keen-gina-marie/" rel="nofollow sponsored" target="_blank">Book Gina Marie on Keen  -  First 5 Minutes for $1</a>
 
 
 

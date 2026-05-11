@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import LeftSidebar from '../../components/LeftSidebar.astro';
+
 
 const comparisonModules = import.meta.glob('../../content/comparisons/*.md', { eager: true });
 const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string, any]) => ({
@@ -13,50 +15,89 @@ const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string,
   title="Psychic Platform Comparisons — Head-to-Head Reviews"
   description="Detailed side-by-side comparisons of top online psychic reading platforms. Find out which service is right for you."
 >
-  <div class="comparisons-hub section">
-    <div class="container">
-      <Breadcrumb items={[{ label: 'Comparisons' }]} />
+  <div class="page-with-sidebars">
+    <!-- LEFT SIDEBAR -->
+    <LeftSidebar />
 
-      <header class="hub-header">
-        <h1>Platform Comparisons</h1>
-        <p class="hub-description text-muted">
-          Can't decide between two platforms? My head-to-head comparisons break down the strengths and weaknesses of each, so you can make a confident choice.
-        </p>
-      </header>
+    <main class="main-col">
+      <div class="comparisons-hub">
+        <Breadcrumb items={[{ label: 'Comparisons' }]} />
 
-      <div class="comparison-grid grid grid--2 stagger">
-        {comparisons.map(comp => (
-          <a href={`/comparisons/${comp.slug}/`} class="comparison-card card card--elevated">
-            <div class="vs-badge">VS</div>
-            <h3 class="comparison-card-title">{comp.platforms?.join(' vs ')}</h3>
-            <p class="comparison-card-desc text-muted text-sm">{comp.description}</p>
-            {comp.winner && (
-              <div class="comparison-winner-line">
-                <span class="text-xs text-muted">Winner:</span>
-                <span class="text-sm" style="font-weight: 600; color: var(--color-sage);">{comp.winner}</span>
-              </div>
-            )}
-            <span class="comparison-card-link text-primary text-sm">Read Full Comparison →</span>
-          </a>
-        ))}
+        <header class="hub-header">
+          <h1>Platform Comparisons</h1>
+          <p class="hub-description text-muted">
+            Can't decide between two platforms? My head-to-head comparisons break down the strengths and weaknesses of each, so you can make a confident choice.
+          </p>
+        </header>
+
+        <div class="prose">
+          <h2 id="platform-battles">Head-to-Head Battles</h2>
+          <div class="comparison-grid grid grid--2 stagger">
+            {comparisons.map(comp => (
+              <a href={`/comparisons/${comp.slug}/`} class="comparison-card card card--elevated">
+                <div class="vs-badge">VS</div>
+                <h3 class="comparison-card-title">{comp.platforms?.join(' vs ')}</h3>
+                <p class="comparison-card-desc text-muted text-sm">{comp.description}</p>
+                {comp.winner && (
+                  <div class="comparison-winner-line">
+                    <span class="text-xs text-muted">Winner:</span>
+                    <span class="text-sm" style="font-weight: 600; color: var(--color-sage);">{comp.winner}</span>
+                  </div>
+                )}
+                <span class="comparison-card-link text-primary text-sm">Read Full Comparison →</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
+    <!-- RIGHT SIDEBAR (Removed for Hub pages) -->
   </div>
 </BaseLayout>
 
 <style>
+  /* ── 3-Column Sidebar Layout ── */
+  .page-with-sidebars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6) var(--space-12);
+  }
+
+  .main-col {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max-width-content);
+  }
+
   .hub-header {
     margin-bottom: var(--space-6);
-    max-width: var(--max-width-content);
   }
 
   .hub-header h1 {
     margin-bottom: var(--space-4);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
   }
 
   .hub-description {
     font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
+  }
+
+  /* Structural Headings for TOC */
+  .prose h2 {
+    margin: var(--space-10) 0 var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: var(--text-2xl);
+    color: var(--color-primary-dark);
+  }
+
+  .comparison-grid {
+    margin-top: var(--space-4);
   }
 
   .comparison-card {
@@ -66,6 +107,7 @@ const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string,
     text-decoration: none;
     padding: var(--space-6);
     position: relative;
+    height: 100%;
   }
 
   .vs-badge {
@@ -105,5 +147,12 @@ const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string,
 
   .comparison-card-link {
     font-weight: var(--weight-medium);
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 1100px) {
+    .page-with-sidebars {
+      gap: var(--space-6);
+    }
   }
 </style>

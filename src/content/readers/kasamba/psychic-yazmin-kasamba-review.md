@@ -4,7 +4,8 @@ description: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love a
 platformName: 'Kasamba: Psychic Yazmin'
 rating: 4.5
 verdict: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and tarot
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fpsychic-yazmin%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-yazmin/
+avatarUrl: /avatars/kasamba/psychic-yazmin-kasamba-review.jpg
 publishDate: '2026-05-08'
 updatedDate: '2026-05-09'
 customSchema: |

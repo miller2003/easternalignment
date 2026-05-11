@@ -9,7 +9,8 @@ rating: 4.8
 verdict: Best for relationship readings where you want a reader who leads without
   prompting. Her 13-year track record is unmatched on Keen  -  but her impatient edge
   means she works best for clients who arrive ready to receive, not process.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fregina-jacks%2F11438416%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-regina/
+avatarUrl: /avatars/keen/regina-jacks.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $3.59/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships

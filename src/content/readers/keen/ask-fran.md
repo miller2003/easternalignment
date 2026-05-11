@@ -13,7 +13,8 @@ verdict: Ask Fran is one of the most genuinely useful readers on Keen  -  for th
   arrive without a clear structure. The difference between those two outcomes is almost
   entirely within your control, and this review tells you exactly how to make sure
   you land on the right side of it.
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fask-fran%2F189058%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/keen-fran/
+avatarUrl: /avatars/keen/ask-fran.jpg
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $2.99/min (Love & Relationships profile)
 bestFor: Clients who want warmth, genuine connection, and honest conversational guidance
@@ -162,7 +163,7 @@ That single framing accomplishes three things simultaneously. It signals that yo
 
 Ask Fran is not for everyone, and I want to be honest about that rather than softening it into a generic recommendation. If you're primarily looking for psychic impressions  -  specific unprompted details, clairvoyant pickup, date-and-detail accuracy  -  she is not the right choice and booking her will likely result in a frustrated session. But if you want the experience of talking to someone who has helped thousands of people navigate real emotional complexity with honesty, warmth, and 25 years of hard-won perspective  -  and you're willing to show up focused and engaged  -  she is one of the most genuinely useful voices on Keen. The $1 intro session costs you almost nothing to find out which version of that assessment is true for you.
 
-[Book Ask Fran on Keen  -  First 5 Minutes for $1](https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Flove-relationships%2Fask-fran%2F189058%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name})
+<a href="/go/keen-fran/" rel="nofollow sponsored" target="_blank">Book Ask Fran on Keen  -  First 5 Minutes for $1</a>
 
 
 

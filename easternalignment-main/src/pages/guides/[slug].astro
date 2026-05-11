@@ -1,0 +1,141 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../../content/guides/*.md');
+  const paths = [];
+  for (const path in posts) {
+    const post = await posts[path]();
+    const slug = path.split('/').pop().replace('.md', '');
+    paths.push({
+      params: { slug },
+      props: post,
+    });
+  }
+  return paths;
+}
+
+const { default: Content, frontmatter } = Astro.props;
+
+/* Fetch other guides for cross-linking */
+const guideModules = import.meta.glob('../../content/guides/*.md', { eager: true });
+const otherGuides = Object.entries(guideModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(g => g.slug !== Astro.params.slug);
+
+/* Fetch platform reviews for cross-linking */
+const reviewModules = import.meta.glob('../../content/reviews/*.md', { eager: true });
+const reviews = Object.entries(reviewModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: mod.frontmatter.platformName?.toLowerCase().replace(/\s+/g, '-') || path.split('/').pop()?.replace('.md', ''),
+  }))
+  .sort((a, b) => (a.rank || 99) - (b.rank || 99));
+
+/* Fetch comparisons */
+const comparisonModules = import.meta.glob('../../content/comparisons/*.md', { eager: true });
+const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string, any]) => ({
+  ...mod.frontmatter,
+  slug: path.split('/').pop()?.replace('.md', ''),
+}));
+
+const relatedItems = [
+  ...reviews.map(r => ({
+    title: `${r.platformName} Review 2026`,
+    href: `/reviews/${r.slug}/`,
+    description: r.verdict?.length > 120 ? r.verdict.substring(0, 120) + '…' : r.verdict,
+    badge: `#${r.rank} Pick`,
+    badgeVariant: 'primary' as const,
+  })),
+  ...comparisons.map(c => ({
+    title: c.title,
+    href: `/comparisons/${c.slug}/`,
+    description: c.description,
+    badge: 'Comparison',
+    badgeVariant: 'primary' as const,
+  })),
+  ...otherGuides.map(g => ({
+    title: g.title,
+    href: `/guides/${g.slug}/`,
+    description: g.description,
+    badge: g.category || 'Guide',
+    badgeVariant: 'sage' as const,
+  })),
+];
+---
+
+<ArticleLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  category={frontmatter.category}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+  metaRobots={frontmatter.metaRobots}
+  canonicalUrl={frontmatter.canonicalUrl}
+  ogImage={frontmatter.ogImage}
+  seoTitle={frontmatter.seoTitle}
+  metaDescription={frontmatter.metaDescription}
+  schemaHeadline={frontmatter.schemaHeadline}
+  schemaDescription={frontmatter.schemaDescription}
+  schemaAuthor={frontmatter.schemaAuthor}
+  schemaDatePublished={frontmatter.schemaDatePublished}
+  customSchema={frontmatter.customSchema}
+  entities={frontmatter.entities}
+>
+  <Content />
+
+  <!-- CTA Section — guide readers to tested platforms -->
+  <div class="guide-cta-section">
+    <div class="guide-cta-card">
+      <h3 class="guide-cta-title">Ready to Try a Reading?</h3>
+      <p class="guide-cta-desc text-muted text-sm">
+        I've personally tested every major platform. Here are my top picks for 2026 — with free introductory minutes so you can try risk-free.
+      </p>
+      <div class="guide-cta-actions">
+        <a href="/reviews/kasamba/" class="btn btn--primary btn--sm">#1 Kasamba Psychics — 3 Free Minutes</a>
+        <a href="/reviews/keen/" class="btn btn--secondary btn--sm">#2 Keen — First 3 Min Free</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rich cross-linking -->
+  <RelatedContent title="Continue Your Research" items={relatedItems} />
+</ArticleLayout>
+
+<style>
+  .guide-cta-section {
+    margin: var(--space-10) 0;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .guide-cta-card {
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-surface) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    text-align: center;
+  }
+
+  .guide-cta-title {
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-3) 0;
+  }
+
+  .guide-cta-desc {
+    max-width: 480px;
+    margin: 0 auto var(--space-6);
+    line-height: var(--leading-relaxed);
+  }
+
+  .guide-cta-actions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

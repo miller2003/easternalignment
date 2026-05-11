@@ -4,7 +4,8 @@ description: "An independent review of Intuitive Guidance with LC on Keen — wh
 platformName: "Keen: Intuitive Guidance with LC"
 rating: 4.8
 verdict: "Lori is the reader in this series with the most statistically credible near-perfect rating — 4.97 across 8,687 sessions over 16 years produces a quality signal that is harder to dismiss than any other number in this lineup. The fairytale reader concern raised in independent forum discussion is real and worth understanding, but it is answered more directly by the evidence of 7-year repeat clients than by any counter-argument I could construct. She delivers something specific: accurate, compassionate, efficient guidance that genuinely calms the mind. For the right question and the right client, she is one of the most consistently reliable choices on Keen."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Ftarot-card-readings%2Fintuitive-guidance-with-lc%2F10006543%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-lc/"
+avatarUrl: /avatars/keen/intuitive-guidance-with-lc-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$10.88/min (Tarot Card Readings profile)"
 bestFor: "Clients who want warmth and accuracy in the same session without having to choose between them — particularly those in emotionally turbulent situations who need both honest guidance and genuine calm"

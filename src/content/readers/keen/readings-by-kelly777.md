@@ -4,7 +4,8 @@ description: "An honest third-party review of readings by Kelly777 on Keen  -  c
 platformName: "Keen: readings by kelly777"
 rating: 4.9
 verdict: "One of the most battle-tested readers on Keen by sheer volume  -  159,000+ sessions at 4.91 stars is a track record that's hard to dismiss. Best for love and soulmate clarity, past life context, and remote viewing on specific people or situations. The promotional bio language and chat-only format are the only real friction points."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Freadings-by-kelly777%2F6745718%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-kelly/"
+avatarUrl: /avatars/keen/readings-by-kelly777.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "Love, soulmate, and past life readings with a high-volume reader whose track record speaks louder than her bio"

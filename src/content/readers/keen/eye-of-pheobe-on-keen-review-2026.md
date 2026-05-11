@@ -4,7 +4,8 @@ description: "An independent review of Eye of Pheobe on Keen — why 24 years wi
 platformName: "Keen: Eye of Pheobe"
 rating: 4.6
 verdict: "Eye of Pheobe occupies a category none of the other eight readers in this series can enter. If your question involves connecting with someone who has passed — grief, unresolved communication, wanting to know they are okay — she is not one option among many. She is the only option in this entire review series. Her 4.69 rating across 241 sessions, evaluated against the hardest success condition in psychic practice, tells a different story than the same number would for a love or career reader. If you are not looking for mediumship, she is not your reader. If you are, she has been doing this work for 24 years."
-affiliateUrl: "https://bargestech.go2cloud.org/aff_c?offer_id=209&aff_id=2326&url=https%3A%2F%2Fwww.keen.com%2Fpsychic-readings%2Feye-of-pheobe%2F5238546%3Ftid%3D8QOUJYM6%26partnereventid%3D{transaction_id}%26tune_offerid%3D{offer_id}%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}"
+affiliateUrl: "/go/keen-pheobe/"
+avatarUrl: /avatars/keen/eye-of-pheobe-on-keen-review-2026.jpg
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$5.99/min (Psychic Mediums profile)"
 bestFor: "Clients who want to connect with a deceased loved one, process grief through spirit communication, or seek messages from the other side — the specific need that no other reader in this series can serve"

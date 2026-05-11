@@ -4,7 +4,8 @@ description: An honest review of Golden Eye on Kasamba — a 21-year platform ve
 platformName: 'Kasamba: Golden Eye'
 rating: 4.9
 verdict: Golden Eye is one of the longest-serving and most broadly qualified readers
-affiliateUrl: https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fgolden-eye%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}
+affiliateUrl: /go/kasamba-golden-eye/
+avatarUrl: /avatars/kasamba/golden-eye-kasamba-review.jpg
 freeOffer: 3 free minutes + 50% off
 pricing: $4.99/min chat (new client promo at $2.49/min)
 bestFor: Love and relationships, career direction, connecting with deceased loved
