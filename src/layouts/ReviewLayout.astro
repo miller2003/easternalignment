@@ -132,10 +132,10 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
 let ctaText = isReaderReview && readerLabel ? `Book ${readerLabel} →` : `Visit ${platformName} →`;
 if (freeOffer) {
   const lowOffer = freeOffer.toLowerCase();
-  if (lowOffer.includes('3 free minutes')) ctaText = 'Get 3 Mins Free';
-  else if (lowOffer.includes('5 minutes for $1')) ctaText = 'Get 5 Mins for $1';
-  else if (lowOffer.includes('3 minutes absolutely free')) ctaText = 'Get 3 Mins Free';
-  else ctaText = 'Start Free Trial';
+  if (lowOffer.includes('3 free minute') || lowOffer.includes('3 minutes free')) ctaText = 'Get 3 Mins Free';
+  else if (lowOffer.includes('5 minute') || lowOffer.includes('$1')) ctaText = 'Get 5 Mins for $1';
+  else if (lowOffer.includes('free trial') || lowOffer.includes('free minutes')) ctaText = 'Start Free Trial';
+  else ctaText = 'Visit Official Site';
 }
 ---
 

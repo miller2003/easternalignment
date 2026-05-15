@@ -81,7 +81,7 @@ const guides = defineCollection({
     publishDate: z.string(),
     updatedDate: z.string().optional(),
     ...seoFields,
-  }),
+  }).passthrough(),
 });
 
 const blog = defineCollection({
@@ -92,7 +92,7 @@ const blog = defineCollection({
     publishDate: z.string().optional(),
     updatedDate: z.string().optional(),
     ...seoFields,
-  }),
+  }).passthrough(),
 });
 
 export const collections = { reviews, comparisons, guides, blog, readers };

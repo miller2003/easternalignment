@@ -78,6 +78,17 @@
       </a>
     </div>
   </div>
+
+  <div class="sidebar-left__section sidebar-left__section--trending">
+    <h3 class="sidebar-left__section-title">Trending Analysis</h3>
+    <ul class="sidebar-left__nav">
+      <li><a href="/guides/best-love-psychics-keen-ex-recovery/" class="sidebar-left__nav-link">Ex-Recovery Roundup</a></li>
+      <li><a href="/guides/divorce-breakup-psychics-online/" class="sidebar-left__nav-link">Divorce Forensic Audit</a></li>
+      <li><a href="/guides/financial-motives-psychics/" class="sidebar-left__nav-link">Hidden Motive Detection</a></li>
+      <li><a href="/guides/single-parent-psychics/" class="sidebar-left__nav-link">Family Integration Guide</a></li>
+      <li><a href="/guides/evidential-mediums-passed-spouse/" class="sidebar-left__nav-link">Passed Spouse Connections</a></li>
+    </ul>
+  </div>
 </aside>
 
 <style is:global>
@@ -110,6 +121,51 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-bottom: var(--space-8, 2rem);
+  }
+
+  /* Trending Section */
+  .sidebar-left__section--trending {
+    padding-top: var(--space-6, 1.5rem);
+    border-top: 1px solid var(--color-border, #e8e2da);
+  }
+
+  .sidebar-left__section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-muted, #7a746b);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-4, 1rem);
+    padding-left: 4px;
+  }
+
+  .sidebar-left__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar-left__nav-link {
+    display: block;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--color-text, #2d2a26);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .sidebar-left__nav-link:hover {
+    background: var(--color-surface, #ffffff);
+    color: var(--color-primary, #8b6f4e);
+    border-color: var(--color-border-light, #f0ece6);
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(139, 111, 78, 0.05);
   }
 
   /* Deal Card */

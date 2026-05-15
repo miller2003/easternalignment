@@ -1,0 +1,57 @@
+---
+/**
+ * Local Redirect Handler — /go/[...slug]/
+ * 
+ * This page reads the public/_redirects file to handle affiliate redirects 
+ * during local development (since Astro dev server ignores _redirects).
+ * 
+ * On production (Cloudflare), the _redirects file will take precedence.
+ */
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const redirectsPath = path.resolve('public/_redirects');
+  if (!fs.existsSync(redirectsPath)) {
+    console.error(`_redirects file not found at ${redirectsPath}`);
+    return [];
+  }
+
+  const content = fs.readFileSync(redirectsPath, 'utf8');
+  const lines = content.split('\n');
+  const paths = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+
+    const parts = trimmed.split(/\s+/);
+    if (parts.length >= 2 && parts[0].startsWith('/go/')) {
+      const slug = parts[0].replace('/go/', '').replace(/\/$/, '');
+      if (slug) {
+        paths.push({
+          params: { slug },
+          props: { url: parts[1] }
+        });
+      }
+    }
+  }
+
+  return paths;
+}
+
+const { url } = Astro.props;
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content={`0;url=${url}`} />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting you... <a href={url}>click here</a> if it doesn't work.</p>
+    <script define:vars={{ url }}>
+      window.location.href = url;
+    </script>
+  </body>
+</html>
