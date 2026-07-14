@@ -1,0 +1,156 @@
+---
+/**
+ * Individual Reader Review Page — /reviews/purple-garden/[reader]/
+ * 
+ * Spoke pages in the Hub & Spoke model. Each reader review links back
+ * to the Purple Garden platform hub and cross-links to other readers.
+ */
+import ReviewLayout from '../../../layouts/ReviewLayout.astro';
+import ProsCons from '../../../components/ProsCons.astro';
+import CTABox from '../../../components/CTABox.astro';
+import FAQ from '../../../components/FAQ.astro';
+import ReaderCard from '../../../components/ReaderCard.astro';
+import RelatedContent from '../../../components/RelatedContent.astro';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../../../content/readers/purple-garden/*.md');
+  const paths = [];
+  for (const path in posts) {
+    const post = await posts[path]();
+    const slug = path.split('/').pop().replace('.md', '');
+    paths.push({
+      params: { reader: slug },
+      props: post,
+    });
+  }
+  return paths;
+}
+
+const { default: Content, frontmatter } = Astro.props;
+const currentSlug = Astro.params.reader;
+
+/* Fetch all Purple Garden readers for cross-linking */
+const allReaderModules = import.meta.glob('../../../content/readers/purple-garden/*.md', { eager: true });
+const allReaders = Object.entries(allReaderModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }));
+
+/* Pick 3 related readers (not current) */
+const otherReaders = allReaders
+  .filter(r => r.slug !== currentSlug)
+  .slice(0, 3);
+
+/* Extract clean reader name for FAQ generation */
+const readerDisplayName = frontmatter.platformName?.includes(':') 
+  ? frontmatter.platformName.split(':').pop()?.trim() 
+  : frontmatter.title?.split(' ')[0] || 'This reader';
+
+const readerFaqItems = [
+  {
+    question: `Is ${readerDisplayName} accurate on Purple Garden?`,
+    answer: `${readerDisplayName} has been evaluated based on client outcome logs, Journeys community verification, and modality consistency. Read our full analysis above for specific timeline accuracy and communication traits.`
+  },
+  {
+    question: `How much does a reading with ${readerDisplayName} cost?`,
+    answer: `${readerDisplayName}'s rate is currently ${frontmatter.pricing || '$4.99/min'} on Purple Garden. Pricing may vary depending on whether you choose Video, Phone, or Chat.`
+  },
+  {
+    question: `What reading modality is best for ${readerDisplayName}?`,
+    answer: `We recommend watching their pre-recorded video intro profile on the Purple Garden app first, then choosing the reading format (${frontmatter.bestFor || 'Live Video or Chat'}) that best fits your situation.`
+  },
+];
+---
+
+<ReviewLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  platformName={frontmatter.platformName}
+  rating={frontmatter.rating}
+  verdict={frontmatter.verdict}
+  affiliateUrl={frontmatter.affiliateUrl}
+  freeOffer={frontmatter.freeOffer}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+>
+  <!-- Breadcrumb navigation back to hub -->
+  <div class="hub-breadcrumb">
+    <a href="/reviews/purple-garden/" class="hub-link">
+      ← Back to Purple Garden Platform Review & All Readers
+    </a>
+  </div>
+
+  <Content />
+
+  {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
+    <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
+  )}
+
+  <CTABox
+    title={`Ready for a reading with ${readerDisplayName}?`}
+    description={frontmatter.freeOffer ? `Offer available: ${frontmatter.freeOffer}` : `Connect with ${readerDisplayName} on Purple Garden today.`}
+    buttonText={`Book ${readerDisplayName} on Purple Garden →`}
+    buttonUrl={frontmatter.affiliateUrl || '#'}
+    variant="highlight"
+  />
+
+  <FAQ items={readerFaqItems} title={`Frequently Asked Questions About ${readerDisplayName}`} />
+
+  <!-- Related Readers on Same Platform -->
+  {otherReaders.length > 0 && (
+    <section class="related-readers-section">
+      <h3 class="section-heading">Other Top Purple Garden Readers to Consider</h3>
+      <p class="text-muted text-sm mb-6">Compare reading styles and pricing across other vetted advisors on Purple Garden.</p>
+      <div class="reader-grid stagger">
+        {otherReaders.map(reader => (
+          <ReaderCard
+            name={reader.platformName}
+            slug={reader.slug}
+            platform="purple-garden"
+            rating={reader.rating}
+            verdict={reader.verdict}
+            pricing={reader.pricing}
+            bestFor={reader.bestFor}
+            affiliateUrl={reader.affiliateUrl}
+            freeOffer={reader.freeOffer}
+            avatarUrl={reader.avatarUrl}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</ReviewLayout>
+
+<style>
+  .hub-breadcrumb {
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hub-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .hub-link:hover {
+    text-decoration: underline;
+  }
+
+  .related-readers-section {
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-heading {
+    margin-bottom: var(--space-2);
+  }
+
+  .mb-6 {
+    margin-bottom: var(--space-6);
+  }
+</style>

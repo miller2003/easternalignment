@@ -13,7 +13,7 @@ import FAQ from '../../components/FAQ.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
 
 /* Platform slugs that now have dedicated hub pages */
-const PLATFORM_HUBS = ['keen', 'kasamba'];
+const PLATFORM_HUBS = ['keen', 'kasamba', 'purple-garden'];
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../content/reviews/*.md');
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
     const slug = path.split('/').pop().replace('.md', '');
     
     // Skip slugs that have dedicated hub pages
-    if (['keen', 'kasamba'].includes(slug)) continue;
+    if (['keen', 'kasamba', 'purple-garden'].includes(slug)) continue;
     
     paths.push({
       params: { slug },

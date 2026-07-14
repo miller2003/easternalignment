@@ -1,0 +1,247 @@
+---
+/**
+ * Purple Garden Platform Hub Page — /reviews/purple-garden/
+ * 
+ * Sub-hub (Pillar Page) for Purple Garden in the Hub & Spoke model.
+ * Renders the platform-level review content and lists all individual 
+ * Purple Garden reader assessments below it.
+ */
+import ReviewLayout from '../../../layouts/ReviewLayout.astro';
+import ProsCons from '../../../components/ProsCons.astro';
+import CTABox from '../../../components/CTABox.astro';
+import FAQ from '../../../components/FAQ.astro';
+import ReaderCard from '../../../components/ReaderCard.astro';
+import RelatedContent from '../../../components/RelatedContent.astro';
+
+/* Load the Purple Garden platform review content */
+const purpleGardenModule = await import('../../../content/reviews/purple-garden.md');
+const PurpleGardenContent = purpleGardenModule.default;
+const frontmatter = purpleGardenModule.frontmatter;
+
+/* Load all Purple Garden reader reviews */
+const readerModules = import.meta.glob('../../../content/readers/purple-garden/*.md', { eager: true });
+const readers = Object.entries(readerModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+
+/* Load guides for cross-linking */
+const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
+const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
+  ...mod.frontmatter,
+  slug: path.split('/').pop()?.replace('.md', ''),
+}));
+
+/* Load comparisons for cross-linking */
+const comparisonModules = import.meta.glob('../../../content/comparisons/*.md', { eager: true });
+const comparisons = Object.entries(comparisonModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(c => c.platforms?.some((p: string) => p.toLowerCase().includes('purple')));
+
+const faqItems = [
+  {
+    question: `Is ${frontmatter.platformName} legitimate?`,
+    answer: `Yes. ${frontmatter.platformName} is developed by the veteran team behind Purple Ocean and BitWine, serving hundreds of thousands of users worldwide. Our team has independently tested their app, video introductions, and Journeys feature over a 12-month period.`
+  },
+  {
+    question: `How much do readings on ${frontmatter.platformName} cost?`,
+    answer: `${frontmatter.platformName} advisors set their own independent rates ranging from ${frontmatter.pricing || '$0.99/min to $15.00+/min'}, depending on whether you choose Live Video, Phone Voice Call, or Live Chat.`
+  },
+  {
+    question: `What is the 'Journeys' feature on ${frontmatter.platformName}?`,
+    answer: `Journeys is Purple Garden's native community timeline feature where real clients document their reading predictions and return later to confirm whether specific outcomes materialized.`
+  },
+  {
+    question: `How do I choose the best reader on ${frontmatter.platformName}?`,
+    answer: `Always watch the advisor's pre-recorded video intro bio first to evaluate their energetic resonance and vocal demeanor. Additionally, check our individual reader assessments below where we audit top advisors.`
+  },
+];
+
+const relatedItems = [
+  ...comparisons.map(c => ({
+    title: c.title,
+    href: `/comparisons/${c.slug}/`,
+    description: c.description,
+    badge: 'Comparison',
+    badgeVariant: 'primary' as const,
+  })),
+  ...guides.filter(g => g.title.toLowerCase().includes('purple')).map(g => ({
+    title: g.title,
+    href: `/guides/${g.slug}/`,
+    description: g.description,
+    badge: g.category || 'Guide',
+    badgeVariant: 'sage' as const,
+  })),
+];
+---
+
+<ReviewLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  platformName={frontmatter.platformName}
+  rating={frontmatter.rating}
+  verdict={frontmatter.verdict}
+  affiliateUrl={frontmatter.affiliateUrl}
+  freeOffer={frontmatter.freeOffer}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+>
+  <PurpleGardenContent />
+
+  {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
+    <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
+  )}
+
+  <CTABox
+    title={`Ready to experience ${frontmatter.platformName}?`}
+    description={frontmatter.freeOffer ? `Take advantage of their current offer: ${frontmatter.freeOffer}` : 'Watch video profile intros and connect with a verified advisor today.'}
+    buttonText={`Visit ${frontmatter.platformName} →`}
+    buttonUrl={frontmatter.affiliateUrl || '#'}
+    variant="highlight"
+  />
+
+  <!-- Featured Investigation Section -->
+  <section class="featured-roundup-box">
+    <div class="roundup-card card card--elevated">
+      <div class="roundup-badge">Deep-Dive Audit</div>
+      <div class="roundup-content">
+        <h3 class="roundup-title">Is Purple Garden Legit or a Scam? Our 12-Month App & Advisor Investigation</h3>
+        <p class="roundup-desc text-muted">
+          We tracked advisor accuracy, refund policies, video bio authenticity, and Journeys community threads over an entire year. Discover the unfiltered facts before downloading the app.
+        </p>
+        <div class="roundup-actions">
+          <a href="/guides/is-purple-garden-legit/" class="btn btn--primary btn--sm">Read the 12-Month Investigation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Individual Reader Reviews Section -->
+  {readers.length > 0 && (
+    <section class="reader-reviews-section" id="purple-garden-readers">
+      <div class="section-intro">
+        <span class="section-eyebrow text-xs text-uppercase text-muted">In-Depth Assessments</span>
+        <h2 class="section-heading">Individual Purple Garden Reader Reviews</h2>
+        <p class="section-description text-muted">
+          We have independently assessed {readers.length} top-rated psychic advisors on Purple Garden. Each review below dissects their reading modality, accuracy track record, pricing, and specialized focus.
+        </p>
+      </div>
+
+      <div class="reader-grid stagger">
+        {readers.map(reader => (
+          <ReaderCard
+            name={reader.platformName}
+            slug={reader.slug}
+            platform="purple-garden"
+            rating={reader.rating}
+            verdict={reader.verdict}
+            pricing={reader.pricing}
+            bestFor={reader.bestFor}
+            affiliateUrl={reader.affiliateUrl}
+            freeOffer={reader.freeOffer}
+            avatarUrl={reader.avatarUrl}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <FAQ items={faqItems} title={`${frontmatter.platformName} FAQ`} />
+
+  <RelatedContent title="Related Reading" items={relatedItems} />
+
+  <div class="all-reviews-cta">
+    <a href="/reviews/" class="btn btn--ghost">← Back to All Platform Reviews</a>
+  </div>
+</ReviewLayout>
+
+<style>
+  .featured-roundup-box {
+    margin: var(--space-10) 0;
+  }
+
+  .roundup-card {
+    background: linear-gradient(to right, #fff, var(--color-bg-alt));
+    border: 1px solid var(--color-accent);
+    padding: var(--space-8);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .roundup-badge {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .roundup-title {
+    margin-top: 0;
+    margin-bottom: var(--space-3);
+    font-size: var(--text-2xl);
+    color: var(--color-primary-dark);
+    max-width: 85%;
+  }
+
+  .roundup-desc {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+    max-width: 700px;
+  }
+
+  .reader-reviews-section {
+    margin: var(--space-10) 0;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-intro {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-eyebrow {
+    display: block;
+    margin-bottom: var(--space-2);
+    letter-spacing: 0.15em;
+  }
+
+  .section-heading {
+    margin-top: 0;
+    margin-bottom: var(--space-3);
+  }
+
+  .section-description {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+  }
+
+  .all-reviews-cta {
+    margin-top: var(--space-8);
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .roundup-badge {
+      position: static;
+      display: inline-block;
+      margin-bottom: var(--space-3);
+    }
+    .roundup-title {
+      max-width: 100%;
+    }
+  }
+</style>
