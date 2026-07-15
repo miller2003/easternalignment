@@ -5,7 +5,7 @@ platformName: "Purple Garden"
 rating: 4.6
 verdict: "Purple Garden has fundamentally changed how I vet psychic advisors online. By combining mandatory 60-second video introductions with an un-deletable community prediction feed ('Journeys'), it solves the biggest problem in online readings: paying for a cold, incompatible connection. While its lower-tier chat bracket ($0.99/min) requires careful filtering and the desktop website feels like an afterthought compared to the mobile app, Purple Garden's video transparency makes it one of my top recommendations for visual seekers in 2026."
 affiliateUrl: "/go/purple-garden/"
-freeOffer: "$10 free credit on your first purchase"
+freeOffer: "$30 free credit on your first purchase"
 pricing: "$0.99/min to $15.00+/min"
 bestFor: "Mobile-first video readings & community-verified vetting"
 rank: 3
@@ -139,7 +139,7 @@ After 12 months, 24 advisors, and hundreds of Journeys logs, **Purple Garden has
 - **The Journeys Feed** creates real community accountability that prevents fake review inflation.
 - **Tri-Modal Pricing** lets you mix face-to-face video depth with affordable chat check-ins.
 
-If you are navigating a relationship crossroad, a career pivot, or emotional ambiguity, download the Purple Garden app, claim their **$10 introductory credit**, and spend ten minutes watching advisor video bios. It is one of the most empowering, transparent psychic experiences available today.
+If you are navigating a relationship crossroad, a career pivot, or emotional ambiguity, download the Purple Garden app, claim their **$30 introductory credit**, and spend ten minutes watching advisor video bios. It is one of the most empowering, transparent psychic experiences available today.
 
 ---
 

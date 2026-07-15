@@ -6,7 +6,7 @@ platformName: "Purple Garden: Psychic Advisor Serena"
 rating: 4.9
 verdict: "Holding Purple Garden's prestigious 'Staff Picks' badge, Psychic Advisor Serena delivers compassionate, highly structured clairvoyant readings. She combines traditional Lenormand cartomancy with empathic channeling to clarify career transitions and family dynamics with impressive consistency."
 affiliateUrl: "/go/purple-garden/"
-freeOffer: "$10 free credit on your first purchase"
+freeOffer: "$30 free credit on your first purchase"
 pricing: "$4.99/min (Video / Call / Chat)"
 bestFor: "Seekers navigating complex family dynamics, career decisions, and major life crossroads"
 publishDate: "2026-06-20"

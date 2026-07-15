@@ -6,7 +6,7 @@ platformName: "Purple Garden: Twin Flame Specialist Aria"
 rating: 4.7
 verdict: "Twin Flame Specialist Aria brings ethical maturity to one of the most misunderstood categories in online psychic readings. Rather than validating obsessive attachments, she uses soul-contract readings to distinguish between genuine karmic soulmates and unhealthy trauma bonds."
 affiliateUrl: "/go/purple-garden/"
-freeOffer: "$10 free credit on your first purchase"
+freeOffer: "$30 free credit on your first purchase"
 pricing: "$5.99/min (Video / Call)"
 bestFor: "Seekers navigating intense spiritual connections, soulmate questions, and karmic attachment patterns"
 publishDate: "2026-06-22"

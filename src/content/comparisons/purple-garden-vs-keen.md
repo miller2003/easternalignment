@@ -38,7 +38,7 @@ Keen does not offer native video intros. However, Keen boasts the industry's mos
 | **Primary Modality** | Live Video, Phone Call, & Live Chat | Phone Voice Call & Web Chat |
 | **Video Intro Bios** | Yes (Every advisor) | No |
 | **Community Outcome Tracking** | Yes ("Journeys" Feed) | No |
-| **Introductory Offer** | $10 Free Credit on First Purchase | 5 Minutes for $1 |
+| **Introductory Offer** | $30 Free Credit on First Purchase | 5 Minutes for $1 |
 | **Entry Pricing** | $0.99/min – $15+/min | $1.99/min – $20+/min |
 
 ---
@@ -49,7 +49,7 @@ Keen does not offer native video intros. However, Keen boasts the industry's mos
 Keen's **5 minutes for $1** introductory offer is one of the most generous entry points in the industry, allowing you to test an elite $15/min advisor for practically nothing.
 
 ### Purple Garden's Granular Flexibility
-Purple Garden offers a **$10 credit** on first purchase, but where it shines is its low-tier chat and call options starting at **$0.99/min**. Furthermore, because advisors can price video, call, and chat differently, you can optimize your budget across modalities.
+Purple Garden offers a **$30 credit** on first purchase, but where it shines is its low-tier chat and call options starting at **$0.99/min**. Furthermore, because advisors can price video, call, and chat differently, you can optimize your budget across modalities.
 
 ---
 

@@ -6,7 +6,7 @@ platformName: "Purple Garden: Psychic Medium Chloe"
 rating: 4.9
 verdict: "Psychic Medium Chloe represents the gold standard of what Purple Garden's video-first ecosystem was engineered to deliver. Operating from a serene, highly disciplined spiritual workspace, she uses live Rider-Waite tarot spreads combined with clairaudient channeling to deliver direct, sugarcoat-free timeline assessments. If you want visual transparency and verifiable relationship timelines without open-ended ambiguity, Chloe is one of my top recommendations on the platform."
 affiliateUrl: "/go/purple-garden/"
-freeOffer: "$10 free credit on your first purchase"
+freeOffer: "$30 free credit on your first purchase"
 pricing: "$5.99/min (Video / Call / Chat)"
 bestFor: "Seekers needing verifiable relationship timeline predictions and clairaudient validation through live video"
 publishDate: "2026-06-14"

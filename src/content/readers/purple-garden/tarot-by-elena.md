@@ -6,7 +6,7 @@ platformName: "Purple Garden: Tarot by Elena"
 rating: 4.8
 verdict: "For seekers who prefer the written word and want a permanent transcript of their reading, Tarot by Elena is one of Purple Garden's sharpest analytical tarot practitioners. She avoids mystical jargon in favor of clear, rapid-fire text breakdowns that dissect romantic and career dynamics with forensic detail."
 affiliateUrl: "/go/purple-garden/"
-freeOffer: "$10 free credit on your first purchase"
+freeOffer: "$30 free credit on your first purchase"
 pricing: "$3.99/min (Chat / Call)"
 bestFor: "Analytical seekers who want rapid, permanent text-chat transcripts and concrete tarot interpretations"
 publishDate: "2026-06-16"

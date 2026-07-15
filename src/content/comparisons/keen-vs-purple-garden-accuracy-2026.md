@@ -97,7 +97,7 @@ Keen offers **5 minutes for $1** to new accounts.
 - **The Master Strategy:** Do not use this $1 offer on a cheap $2/min advisor. Use it on an elite **$15.00/min** specialist. You are acquiring $75 worth of top-tier clairvoyant time for one dollar. Prepare one surgical, highly specific question. If they cannot deliver validating detail within 300 seconds, hang up.
 
 ### Exploiting Purple Garden's Tri-Modal Tiering
-Purple Garden provides a **$10 introductory credit**, but its true economic strength is modality tiering. Many top advisors charge $8.99/min for Live Video, but only $3.99/min for Live Chat.
+Purple Garden provides a **$30 introductory credit**, but its true economic strength is modality tiering. Many top advisors charge $8.99/min for Live Video, but only $3.99/min for Live Chat.
 - **The Master Strategy:** Watch the advisor's free video bio first. If the energetic resonance feels right, book a brief **Chat session** ($3.99/min) to verify their connection to your situation. Only upgrade to a high-rate Live Video session once they have proven their accuracy.
 
 ---

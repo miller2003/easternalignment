@@ -6,7 +6,7 @@ platformName: "Purple Garden: Empathic Intuitive Marcus"
 rating: 4.8
 verdict: "Empathic Intuitive Marcus brings a grounded, highly perceptive masculine perspective to relationship readings on Purple Garden. Combining claircognizant intuition with pragmatic behavioral psychology, he cuts through romantic wishful thinking to explain what a romantic partner is actually thinking and intending."
 affiliateUrl: "/go/purple-garden/"
-freeOffer: "$10 free credit on your first purchase"
+freeOffer: "$30 free credit on your first purchase"
 pricing: "$4.99/min (Video / Call)"
 bestFor: "Seekers looking for an authentic male perspective on complex romantic behavior and commitment ambiguity"
 publishDate: "2026-06-18"
