@@ -13,16 +13,32 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
       capture_pageview: true
     });
 
-    // Custom tracking for core actions: Affiliate Links
+    // Custom tracking and S2S integration for Affiliate Links
     document.addEventListener('DOMContentLoaded', () => {
       document.body.addEventListener('click', (e) => {
         const target = e.target.closest('a');
         if (target && target.getAttribute('rel')?.includes('sponsored')) {
+          
+          // Retrieve the unique PostHog user ID to act as our Click ID
+          const distinctId = posthog.get_distinct_id();
+          
           posthog.capture('affiliate_link_click', {
             url: target.href,
             text: target.innerText.trim(),
-            location: window.location.pathname
+            location: window.location.pathname,
+            click_id: distinctId
           });
+          
+          // Append the click_id to the outbound URL for Barges (TUNE) tracking
+          if (distinctId) {
+            try {
+              const url = new URL(target.href);
+              url.searchParams.set('aff_sub2', distinctId);
+              target.href = url.toString();
+            } catch (err) {
+              console.error('Failed to append tracking parameter', err);
+            }
+          }
         }
       });
     });
