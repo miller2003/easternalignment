@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Life Path Number Calculator",
+      "url": "https://easternalignment.com/tools/life-path-calculator/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free Life Path number calculator. Enter your birth date to discover your Life Path number — the most important number in your numerology chart — with its meaning explained."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Life Path number?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Life Path number is the core of a numerology chart. It is calculated by reducing your full birth date to a single digit (or a master number, 11, 22, or 33) and describes your strengths, challenges, and the general direction of your life." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my Life Path number?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Enter your birth date and the calculator reduces it to a single digit using standard numerology reduction. If the result is 11, 22, or 33, it is kept as a master number rather than reduced further." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a master number mean in numerology?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Master numbers 11, 22, and 33 carry amplified energy: 11 is the visionary, 22 is the master builder, and 33 is the master teacher. They are rare and carry both greater potential and greater responsibility." }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Life Path Number Calculator: Free & Instant"
+  description="Free Life Path number calculator. Enter your birth date to discover your Life Path number — the most important number in your numerology chart — with its meaning explained."
+  jsonLd={toolSchema}
+>
+  <div class="tool-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Tools' }, { label: 'Life Path Calculator' }]} />
+
+      <header class="tool-header">
+        <span class="badge badge--sage">Free Tool</span>
+        <h1>Life Path Number Calculator</h1>
+        <p class="tool-desc text-muted">
+          Your Life Path number is the most significant number in numerology — it describes the path you are here to walk. Enter your birth date and the calculator reduces it to a single digit (or master number).
+        </p>
+      </header>
+
+      <div class="tool-card card">
+        <form id="calc-form" class="calc-form">
+          <label for="birthdate" class="form-label">Your Birth Date</label>
+          <input type="date" id="birthdate" class="form-input" required />
+          <button type="submit" class="btn btn--primary">Calculate My Life Path</button>
+        </form>
+
+        <div class="calc-result" id="calc-result" style="display:none;"></div>
+      </div>
+
+      <div class="prose tool-prose">
+        <h2>What Is a Life Path Number?</h2>
+        <p>
+          The Life Path number is the core of a numerology reading. It is calculated by reducing your full birth date to a single digit (or one of the master numbers, 11, 22, and 33). It describes your strengths, your challenges, and the general direction of your life — not a fixed destiny, but the path your energy naturally takes.
+        </p>
+
+        <h2>The Meanings</h2>
+        <ul>
+          <li><strong>1 — The Leader:</strong> independence, initiative, originality.</li>
+          <li><strong>2 — The Diplomat:</strong> cooperation, sensitivity, balance.</li>
+          <li><strong>3 — The Creator:</strong> expression, joy, social energy.</li>
+          <li><strong>4 — The Builder:</strong> order, hard work, stability.</li>
+          <li><strong>5 — The Freedom Seeker:</strong> change, adventure, adaptability.</li>
+          <li><strong>6 — The Nurturer:</strong> responsibility, love, community.</li>
+          <li><strong>7 — The Seeker:</strong> analysis, spirituality, depth.</li>
+          <li><strong>8 — The Achiever:</strong> power, ambition, material success.</li>
+          <li><strong>9 — The Humanitarian:</strong> compassion, completion, wisdom.</li>
+          <li><strong>11 — The Visionary:</strong> intuition, inspiration, master teacher.</li>
+          <li><strong>22 — The Master Builder:</strong> manifesting large-scale dreams.</li>
+          <li><strong>33 — The Master Teacher:</strong> unconditional service and healing.</li>
+        </ul>
+
+        <h2>Beyond the Number</h2>
+        <p>
+          Your Life Path number is one layer of a chart that also includes your Expression, Soul Urge, and Personality numbers — and, in the psychic world, the energetic read of what those layers mean for your relationships and decisions. A live reading can layer numerology, tarot, and intuition onto your specific chart. The readers I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> are experienced with this kind of work, and both offer trial minutes.
+        </p>
+        <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+          <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-page {
+    padding-top: var(--space-10);
+  }
+
+  .tool-header {
+    margin: var(--space-6) 0;
+  }
+
+  .tool-header h1 {
+    margin: var(--space-3) 0;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .tool-desc {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+  }
+
+  .tool-card {
+    padding: var(--space-10);
+    margin-bottom: var(--space-10);
+  }
+
+  .calc-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .form-label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .form-input {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-color: var(--color-primary);
+  }
+
+  .calc-result {
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    animation: fadeInUp 0.5s ease;
+  }
+
+  .calc-result .result-number {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .calc-result .result-label {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-3);
+  }
+
+  .calc-result .result-meaning {
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  .calc-result .master-note {
+    display: inline-block;
+    margin-top: var(--space-3);
+  }
+</style>
+
+<script>
+  const MEANINGS: Record<number, { label: string; text: string; master?: boolean }> = {
+    1: { label: 'The Leader', text: 'Independent, original, and driven. You are here to initiate, lead, and carve your own path — even when that means going alone.' },
+    2: { label: 'The Diplomat', text: 'Sensitive, cooperative, and perceptive. You are here to build bridges, balance opposites, and serve through partnership rather than force.' },
+    3: { label: 'The Creator', text: 'Expressive, joyful, and social. You are here to create, communicate, and bring light — your gift is turning experience into art and words.' },
+    4: { label: 'The Builder', text: 'Practical, disciplined, and loyal. You are here to build solid structures — in work, family, and life — and to find meaning in the steady work.' },
+    5: { label: 'The Freedom Seeker', text: 'Adventurous, adaptable, and magnetic. You are here to experience life in motion, to break patterns, and to teach others that change is not a threat.' },
+    6: { label: 'The Nurturer', text: 'Responsible, loving, and community-minded. You are here to care — for family, for people, for causes — and to learn that caring includes yourself.' },
+    7: { label: 'The Seeker', text: 'Analytical, spiritual, and reserved. You are here to seek truth — through study, introspection, and the questions that have no easy answers.' },
+    8: { label: 'The Achiever', text: 'Ambitious, decisive, and powerful. You are here to master the material world, and to learn that true power is wielded with integrity.' },
+    9: { label: 'The Humanitarian', text: 'Compassionate, wise, and world-conscious. You are here to serve the larger whole, to complete cycles, and to release what no longer serves.' },
+    11: { label: 'The Visionary (Master Number)', text: 'Intuitive, inspired, and illuminating. The master vibration of 11 gives you access to deep insight — your path is to trust it and share it.', master: true },
+    22: { label: 'The Master Builder (Master Number)', text: 'A visionary with the discipline to build. 22 carries the power to turn the grandest dreams into reality — but it demands enormous responsibility.', master: true },
+    33: { label: 'The Master Teacher (Master Number)', text: 'The rarest master vibration — unconditional love expressed as service. Your path is healing and teaching at the highest level.', master: true },
+  };
+
+  function reduceLifePath(dateStr: string): { number: number; isMaster: boolean } {
+    const digits = dateStr.replace(/-/g, '').split('').map(Number);
+    const sum = digits.reduce((a, b) => a + b, 0);
+    return reduceRecursive(sum);
+  }
+
+  function reduceRecursive(n: number): { number: number; isMaster: boolean } {
+    if (n === 11 || n === 22 || n === 33) return { number: n, isMaster: true };
+    if (n < 10) return { number: n, isMaster: false };
+    const next = String(n).split('').map(Number).reduce((a, b) => a + b, 0);
+    return reduceRecursive(next);
+  }
+
+  const form = document.getElementById('calc-form') as HTMLFormElement;
+  const input = document.getElementById('birthdate') as HTMLInputElement;
+  const result = document.getElementById('calc-result');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const val = input.value;
+    if (!val) return;
+    const { number, isMaster } = reduceLifePath(val);
+    const m = MEANINGS[number];
+    result!.innerHTML = `
+      <div class="result-number">${number}</div>
+      <div class="result-label">${m.label}</div>
+      <p class="result-meaning">${m.text}</p>
+      ${isMaster ? '<span class="master-note badge badge--primary">Master Number — rare and powerful</span>' : ''}
+    `;
+    result!.style.display = 'block';
+    result!.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>

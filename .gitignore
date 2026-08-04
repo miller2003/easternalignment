@@ -1,5 +1,9 @@
 # build output
 dist/
+dist2/
+out-verify/
+out-verify2/
+out-verify3/
 # generated types
 .astro/
 

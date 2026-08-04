@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found"
+  description="The page you're looking for doesn't exist. Explore our guides, free tools, and platform reviews to find what you need."
+  noindex={true}
+>
+  <div class="notfound section">
+    <div class="container container--narrow" style="text-align: center;">
+      <div class="notfound-symbol" aria-hidden="true">✦</div>
+      <h1 class="notfound-title">404 — This Page Has Moved On</h1>
+      <p class="notfound-desc text-muted">
+        The page you're looking for doesn't exist — but that's not a bad omen. The content you need is probably one click away.
+      </p>
+
+      <div class="notfound-actions">
+        <a href="/" class="btn btn--primary btn--lg">Go to Homepage</a>
+        <a href="/guides/" class="btn btn--secondary btn--lg">Browse Guides</a>
+      </div>
+
+      <div class="notfound-links">
+        <h2>Try One of These Instead</h2>
+        <div class="notfound-grid">
+          <a href="/reviews/keen/" class="nf-card card">#1 Keen Psychics — Full Review</a>
+          <a href="/reviews/kasamba/" class="nf-card card">#2 Kasamba — Full Review</a>
+          <a href="/reviews/purple-garden/" class="nf-card card">Purple Garden — Full Review</a>
+          <a href="/astrology/" class="nf-card card">Zodiac Compatibility Hub</a>
+          <a href="/tools/" class="nf-card card">Free Psychic & Zodiac Tools</a>
+          <a href="/comparisons/" class="nf-card card">Platform Comparisons</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .notfound {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  .notfound-symbol {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: var(--space-4);
+  }
+
+  .notfound-title {
+    margin-bottom: var(--space-4);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  .notfound-desc {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    max-width: 480px;
+    margin: 0 auto var(--space-8);
+  }
+
+  .notfound-actions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-16);
+  }
+
+  .notfound-links h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .notfound-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .nf-card {
+    display: block;
+    padding: var(--space-4) var(--space-5);
+    text-decoration: none;
+    font-weight: var(--weight-medium);
+    transition: border-color var(--transition-fast);
+  }
+
+  .nf-card:hover {
+    border-color: var(--color-primary-light);
+  }
+
+  @media (max-width: 640px) {
+    .notfound-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

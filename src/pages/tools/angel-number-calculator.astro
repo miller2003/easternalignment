@@ -1,0 +1,291 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Angel Number Calculator",
+      "url": "https://easternalignment.com/tools/angel-number-calculator/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free angel number calculator. Enter the number you keep seeing or your birth date to reveal its angel number meaning — 111, 222, 333, 444 and more explained."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does 1111 mean spiritually?",
+          "acceptedAnswer": { "@type": "Answer", "text": "1111 is widely read as a sign of alignment and new beginnings, often appearing right before a deliberate change. It says the door is open, the timing is now, and your focus is your magic." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my angel number?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Enter any number you keep seeing — or your birth date — and the calculator reduces it to a core sequence (111 through 999, plus master sequences like 1111) using standard numerology reduction, then returns the traditional meaning." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I keep seeing the same number?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Recurring numbers are understood in spiritual practice as a tap on the shoulder — a signal to pay attention to a theme in your life. The number's real message lives in your personal context, which is where a psychic reading adds value beyond any calculator." }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Angel Number Calculator: 111, 222, 333"
+  description="Free angel number calculator. Enter any number you keep seeing — or your birth date — to reveal its angel number meaning. 111, 222, 333, 444 and more explained."
+  jsonLd={toolSchema}
+>
+  <div class="tool-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Tools', href: '/tools/' }, { label: 'Angel Number Calculator' }]} />
+
+      <header class="tool-header">
+        <span class="badge badge--sage">Free Tool</span>
+        <h1>Angel Number Calculator</h1>
+        <p class="tool-desc text-muted">
+          Keep seeing 111, 222, or 333 everywhere? Enter the number that keeps following you — or your birth date — and this tool reduces it to its core meaning, then explains what the universe is trying to nudge you toward.
+        </p>
+      </header>
+
+      <div class="tool-card card">
+        <div class="calc-tabs">
+          <button class="tab-btn active" data-tab="number">I Keep Seeing a Number</button>
+          <button class="tab-btn" data-tab="birthday">Use My Birth Date</button>
+        </div>
+
+        <form id="angel-form" class="calc-form">
+          <div class="tab-pane active" id="pane-number">
+            <label for="angel-number" class="form-label">The Number You Keep Seeing</label>
+            <input type="text" id="angel-number" class="form-input" placeholder="e.g. 1111, 222, 333" inputmode="numeric" />
+          </div>
+          <div class="tab-pane" id="pane-birthday">
+            <label for="angel-birthday" class="form-label">Your Birth Date</label>
+            <input type="date" id="angel-birthday" class="form-input" />
+          </div>
+          <button type="submit" class="btn btn--primary">Reveal My Angel Number</button>
+        </form>
+
+        <div class="calc-result" id="angel-result" style="display:none;"></div>
+      </div>
+
+      <div class="prose tool-prose">
+        <h2>What Are Angel Numbers?</h2>
+        <p>
+          Angel numbers are repeated digit sequences — 111, 222, 333, 444 and beyond — that many people notice appearing across clocks, receipts, and license plates during moments of transition. In spiritual practice, they are understood as gentle, non-verbal guidance: a tap on the shoulder pointing at a theme your conscious mind has been circling.
+        </p>
+        <p>
+          The general meanings are widely published, but the number's real message lives in <em>your</em> context — which is exactly where a psychic reading adds value beyond any calculator. My <a href="/guides/angel-numbers-1111-222-333-meaning-guide/">full angel number guide</a> explains the meanings in depth, including how to track your numbers before taking the question to a reader.
+        </p>
+
+        <h2>How This Calculator Works</h2>
+        <p>
+          Enter any number and the tool reduces it to a core sequence (111 through 999, plus master sequences like 1111) using standard numerology reduction, then returns the traditional meaning. If you enter your birth date, it reduces to your personal angel number.
+        </p>
+
+        <h2>When the Number Isn't Enough</h2>
+        <p>
+          A calculator gives you the general meaning. A live reading tells you what the number is pointing at <em>in your life right now</em> — which relationship, which decision, which timing window. The readers I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> are experienced with numerology and angel numbers, and both platforms offer trial minutes.
+        </p>
+        <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+          <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-page { padding-top: var(--space-10); }
+  .tool-header { margin: var(--space-6) 0; }
+  .tool-header h1 { margin: var(--space-3) 0; font-size: clamp(2.2rem, 4vw, 3rem); }
+  .tool-desc { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+  .tool-card { padding: var(--space-10); margin-bottom: var(--space-10); }
+
+  .calc-tabs {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    padding: var(--space-2) var(--space-5);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+  }
+
+  .tab-btn.active {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+  }
+
+  .tab-pane { display: none; width: 100%; }
+  .tab-pane.active { display: block; }
+
+  .calc-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .form-label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  .form-input {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-color: var(--color-primary);
+  }
+
+  .calc-result {
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    animation: fadeInUp 0.5s ease;
+  }
+
+  .calc-result .result-number {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .calc-result .result-label {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-3);
+  }
+
+  .calc-result .result-meaning {
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .tool-card { padding: var(--space-6); }
+  }
+</style>
+
+<script>
+  const MEANINGS: Record<string, { title: string; text: string }> = {
+    '111': { title: '111 — Alignment & New Beginnings', text: 'A sign that your thoughts are aligning with a new direction. What you are focusing on right now is amplifying, so check where your attention is going.' },
+    '1111': { title: '1111 — The Awakening Code', text: 'A powerful alignment marker, often appearing right before a deliberate change. It says: the door is open, the timing is now, and your focus is your magic.' },
+    '222': { title: '222 — Balance & Patience', text: 'The pause number. Timing is not yours to force — trust the process, keep your faith, and let the pieces settle into place.' },
+    '2222': { title: '2222 — Harmony Confirmed', text: 'A reinforcement of 222: the balance you have been working toward is stabilizing. Keep going at the same steady pace.' },
+    '333': { title: '333 — Support & Momentum', text: 'The number of active support. You are not alone in what you are building — help is present, and the path is aligned.' },
+    '3333': { title: '3333 — Creative Momentum', text: 'An amplified call to create. Your creative and communicative energies are at their peak — move the project forward now.' },
+    '444': { title: '444 — Foundation & Stability', text: 'The builder\u2019s number. Keep doing the steady, unglamorous work — it is laying the foundation for something that will last.' },
+    '4444': { title: '4444 — Complete Stability', text: 'A strong signal of grounded protection. You are exactly where you need to be; the structure around you is solid.' },
+    '555': { title: '555 — Change Is Coming', text: 'A chapter is closing. The change may feel like disruption, but it is transition — release the old form and let the new one arrive.' },
+    '5555': { title: '5555 — Major Transformation', text: 'An amplified wave of change. Multiple areas of life are shifting at once. Surrender to the flow rather than resisting it.' },
+    '666': { title: '666 — Rebalance Your Priorities', text: 'A nudge to look at where your energy is going. It is not ominous — it is a reminder to rebalance what has drifted.' },
+    '777': { title: '777 — Alignment & Reward', text: 'A sign that you are on the right path and your efforts are being recognized. Trust the process; good fortune is on its way.' },
+    '888': { title: '888 — Abundance & Flow', text: 'The abundance number. Financial and material energy is flowing — stay open, and keep your actions aligned with your values.' },
+    '8888': { title: '8888 — Major Abundance', text: 'A powerful prosperity signal. Doors are opening in the material realm — receive them with gratitude and integrity.' },
+    '999': { title: '999 — Completion & Release', text: 'A cycle is ending so a higher one can begin. Release what is finished with grace, and make room for what is coming.' },
+    '9999': { title: '9999 — Full Completion', text: 'The closing of a major life chapter. Let go completely — holding on now would block the new beginning.' },
+    '000': { title: '000 — The Infinite Beginning', text: 'A sign of wholeness and infinite potential. You are at a starting point connected to everything that came before.' },
+  };
+
+  function reduceToAngel(raw: string): string {
+    const digits = raw.replace(/[^0-9]/g, '');
+    if (!digits) return '';
+    // Keep a max of 4 digits, reduce if longer
+    let seq = digits.slice(0, 4);
+    // If not a recognized sequence, reduce to a 3-digit core
+    if (!MEANINGS[seq] && seq.length === 4) {
+      const sum = seq.split('').map(Number).reduce((a, b) => a + b, 0);
+      seq = String(sum) + String(sum).repeat(1) + String(sum).repeat(1); // e.g. 6 -> 666
+      seq = seq.slice(0, 3);
+    }
+    if (!MEANINGS[seq] && seq.length === 2) {
+      seq = seq + seq[0]; // 22 -> 222
+    }
+    if (MEANINGS[seq]) return seq;
+    // fallback: repeat first digit 3 times
+    return String(digits[0]).repeat(3);
+  }
+
+  const form = document.getElementById('angel-form') as HTMLFormElement;
+  const numberInput = document.getElementById('angel-number') as HTMLInputElement;
+  const birthdayInput = document.getElementById('angel-birthday') as HTMLInputElement;
+  const result = document.getElementById('angel-result');
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panes: Record<string, HTMLElement> = {
+    number: document.getElementById('pane-number')!,
+    birthday: document.getElementById('pane-birthday')!,
+  };
+
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabs.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tab = (btn as HTMLElement).dataset.tab!;
+      Object.entries(panes).forEach(([k, el]) => el.classList.toggle('active', k === tab));
+    });
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const activeTab = document.querySelector('.tab-btn.active') as HTMLElement;
+    let raw: string;
+    if (activeTab.dataset.tab === 'birthday') {
+      if (!birthdayInput.value) return;
+      const d = birthdayInput.value.replace(/-/g, '').split('').map(Number).reduce((a, b) => a + b, 0);
+      // reduce to single digit, then repeat
+      let sum = d;
+      while (sum > 9) { sum = String(sum).split('').map(Number).reduce((a, b) => a + b, 0); }
+      raw = String(sum).repeat(3);
+    } else {
+      if (!numberInput.value) return;
+      raw = numberInput.value;
+    }
+
+    const seq = reduceToAngel(raw);
+    const m = MEANINGS[seq] || { title: `${seq} — Your Angel Number`, text: 'A recurring number is a personal signal. The exact meaning depends on what is happening in your life when it appears — and a live reader can interpret it in context.' };
+
+    result!.innerHTML = `
+      <div class="result-number">${seq}</div>
+      <div class="result-label">${m.title}</div>
+      <p class="result-meaning">${m.text}</p>
+    `;
+    result!.style.display = 'block';
+    result!.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>

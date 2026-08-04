@@ -63,17 +63,17 @@ The instinct when seeing $12.99/min is to stop there and look elsewhere. That in
 
 ### Why "Typing Was Fast, Straight to the Point" Is the Most Financially Important Review Language in This Series
 
-One client review of Spirit Answers stands out not for its sentiment but for its financial implications: *"She was direct, honest and didn't waste a second, straight to the point with everything she said. Her typing was fast"* [web:112]. Read that through the lens of session economics. At $12.99/min, every sixty seconds of filler, rapport-building, or unfocused circling costs $13. A reader who arrives at substantive insight in eight minutes has cost you $104 at this rate. A reader who takes twenty minutes to deliver the same insight at $4.99/min, like [C Garrett](/reviews/keen/c-garrett/), has cost you $100 — and you got there slower. The efficiency of a session is not a soft quality. It is a direct financial variable. The review language describing Spirit Answers — fast, direct, no wasted time — is telling you something specific about how her sessions function at a price point where that quality is worth more than anywhere else in this series.
+One client review of Spirit Answers stands out not for its sentiment but for its financial implications: *"She was direct, honest and didn't waste a second, straight to the point with everything she said. Her typing was fast"*. Read that through the lens of session economics. At $12.99/min, every sixty seconds of filler, rapport-building, or unfocused circling costs $13. A reader who arrives at substantive insight in eight minutes has cost you $104 at this rate. A reader who takes twenty minutes to deliver the same insight at $4.99/min, like [C Garrett](/reviews/keen/c-garrett/), has cost you $100 — and you got there slower. The efficiency of a session is not a soft quality. It is a direct financial variable. The review language describing Spirit Answers — fast, direct, no wasted time — is telling you something specific about how her sessions function at a price point where that quality is worth more than anywhere else in this series.
 
 ### The Real Cost of a Slow Reader at High Rates vs a Fast Reader at the Highest Rate
 
-Let's make this arithmetic explicit, because it is the core of the value case for Spirit Answers. A reader who charges $5.99/min and needs 30 minutes to deliver the substantive portion of a reading costs $180 at standard rate. Spirit Answers at $12.99/min, documented to be direct and fast, reaching the same quality of insight in 12–15 minutes, costs $156–$195. The gap between those numbers is smaller than the per-minute rates suggest — and the efficiency advantage means the lower end of her session range is genuinely possible in a way that slower readers at lower rates rarely achieve. This is not an argument that $12.99 is cheap. It is an argument that the per-minute figure is the wrong unit of analysis for evaluating her, and that total session cost against total insight delivered is the correct frame [web:116].
+Let's make this arithmetic explicit, because it is the core of the value case for Spirit Answers. A reader who charges $5.99/min and needs 30 minutes to deliver the substantive portion of a reading costs $180 at standard rate. Spirit Answers at $12.99/min, documented to be direct and fast, reaching the same quality of insight in 12–15 minutes, costs $156–$195. The gap between those numbers is smaller than the per-minute rates suggest — and the efficiency advantage means the lower end of her session range is genuinely possible in a way that slower readers at lower rates rarely achieve. This is not an argument that $12.99 is cheap. It is an argument that the per-minute figure is the wrong unit of analysis for evaluating her, and that total session cost against total insight delivered is the correct frame.
 
 ---
 
 ## Clairsentient vs Clairvoyant: The Distinction That Changes Everything About How She Reads
 
-Spirit Answers' primary listed ability is clairsentience — not clairvoyance [web:116]. These are often used interchangeably in casual conversation about psychic ability, but they describe meaningfully different perceptual modes that produce different types of session experience. Understanding the distinction tells you both why her sessions have the quality they do and why chat is a better delivery channel for her work than phone.
+Spirit Answers' primary listed ability is clairsentience — not clairvoyance. These are often used interchangeably in casual conversation about psychic ability, but they describe meaningfully different perceptual modes that produce different types of session experience. Understanding the distinction tells you both why her sessions have the quality they do and why chat is a better delivery channel for her work than phone.
 
 ### What "Feeling" vs "Seeing" Actually Means in Practice
 
@@ -87,7 +87,7 @@ Phone-based readings introduce a specific liability for clairsentient readers: t
 
 ## 5.0 Stars Across 4,697 Reviews: The Most Concentrated Quality Signal in This Series
 
-Every reader in this series has a strong rating. Spirit Answers has the strongest. A 5.0 across 4,697 sessions over 12 years is a number that requires active examination rather than passive acceptance — because at sufficient scale, a perfect score tells you something specific about how a reader operates [web:116].
+Every reader in this series has a strong rating. Spirit Answers has the strongest. A 5.0 across 4,697 sessions over 12 years is a number that requires active examination rather than passive acceptance — because at sufficient scale, a perfect score tells you something specific about how a reader operates.
 
 ### What Separates a 5.0 From a 4.9 at Scale
 
@@ -101,7 +101,7 @@ The review language around Spirit Answers clusters tightly around a specific exp
 
 ## Finnish + English: The Reader Who Serves a Market No One Else in This Series Reaches
 
-Spirit Answers reads in English and Finnish [web:116]. In the context of a ten-reader review series, this is a single line of profile data. In the context of the Finnish-speaking population seeking psychic guidance online, it is closer to a complete answer to a question that almost no other platform advisor is addressing.
+Spirit Answers reads in English and Finnish. In the context of a ten-reader review series, this is a single line of profile data. In the context of the Finnish-speaking population seeking psychic guidance online, it is closer to a complete answer to a question that almost no other platform advisor is addressing.
 
 ### Why Finnish-Speaking Clients Have Almost No Alternative on Keen
 
@@ -156,4 +156,4 @@ During the session, resist the urge to respond to each message before she has fi
 
 Spirit Answers is the reader in this series that requires the most honest engagement with a number that feels instinctively prohibitive. The $12.99/min is real. The 5.0 across 4,697 sessions is real. The efficiency that clients describe — straight to the point, fast, no wasted time — is real. And the chat-only format that enables that efficiency while producing a permanent written record is a genuine advantage that no other reader in this series offers. For the right client, with the right question, and the financial preparation to engage at this rate without anxiety about the clock, Spirit Answers is the most concentrated quality investment available in this entire lineup. The $1 intro session is your entry point — use it to verify that the efficiency and directness land for you before committing to a full session at standard rate.
 
-[Book Spirit Answers on Keen — First 5 Minutes for $1]([AFFILIATE_URL])
+[Book Spirit Answers on Keen — First 5 Minutes for $1](/go/keen-spirit-answers/)

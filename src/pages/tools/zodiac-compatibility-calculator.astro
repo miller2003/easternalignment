@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { SIGNS, compatibilityScore, ELEMENTS } from '../../data/zodiac';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Zodiac Love Compatibility Calculator",
+      "url": "https://easternalignment.com/tools/zodiac-compatibility-calculator/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free zodiac love compatibility calculator. Select two zodiac signs and get an instant compatibility score with romance, communication, and long-term ratings."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which zodiac signs are most compatible?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Signs of the same element (Fire-Fire, Earth-Earth) share natural resonance, and harmonious elements (Fire-Air, Earth-Water) flow together. Opposite signs form the most magnetic — and most demanding — axis of the zodiac." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is zodiac compatibility calculated?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The calculator uses classical astrological rules: element compatibility, modality rhythm, and the polarity axis. Same element scores high, harmonious elements flow, challenging elements create friction that can become growth." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a challenging zodiac match work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Some of the most transformative relationships are built on friction, because each partner forces the other to grow. The score is the starting point, not the conclusion — full birth charts tell a more specific story." }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Zodiac Compatibility Calculator: Love Match Score"
+  description="Free zodiac love compatibility calculator. Select two zodiac signs — or enter two birth dates — and get an instant compatibility score with romance, communication, and long-term ratings."
+  jsonLd={toolSchema}
+>
+  <div class="tool-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Tools', href: '/tools/' }, { label: 'Love Compatibility' }]} />
+
+      <header class="tool-header">
+        <span class="badge badge--sage">Free Tool</span>
+        <h1>Zodiac Love Compatibility Calculator</h1>
+        <p class="tool-desc text-muted">
+          The stars tell a story about every connection. Pick two signs — or enter two birth dates — and this calculator scores your romance, communication, and long-term potential using the same classical element and modality rules behind my full compatibility guides.
+        </p>
+      </header>
+
+      <div class="tool-card card">
+        <form id="compat-form" class="compat-form">
+          <div class="compat-row">
+            <div class="compat-person">
+              <span class="person-label">Person 1</span>
+              <select id="sign-1" class="form-select">
+                {SIGNS.map(s => <option value={s.name}>{s.symbol} {s.name}</option>)}
+              </select>
+            </div>
+            <span class="compat-heart" aria-hidden="true">♥</span>
+            <div class="compat-person">
+              <span class="person-label">Person 2</span>
+              <select id="sign-2" class="form-select">
+                {SIGNS.map(s => <option value={s.name}>{s.symbol} {s.name}</option>)}
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary">Calculate Compatibility</button>
+        </form>
+
+        <div class="compat-result" id="compat-result" style="display:none;"></div>
+      </div>
+
+      <script type="application/json" id="signs-data" set:html={JSON.stringify(SIGNS)} />
+      <script type="application/json" id="elements-data" set:html={JSON.stringify(ELEMENTS)} />
+
+      <div class="prose tool-prose">
+        <h2>How Compatibility Scoring Works</h2>
+        <p>
+          This calculator uses classical astrological rules: signs of the same element share a natural resonance, harmonious elements (Fire-Air, Earth-Water) flow together, challenging elements (Fire-Water, Earth-Air) create friction that can become growth, and opposite signs form the most magnetic — and most demanding — axis in the zodiac. The full methodology is in my <a href="/astrology/">zodiac compatibility hub</a>.
+        </p>
+
+        <h2>What the Score Means</h2>
+        <p>
+          A high score means the two signs have natural chemistry and shared rhythm. A challenging score is not a verdict — some of the most transformative relationships in astrology are built on friction, because each partner forces the other to grow. The score is the starting point, not the conclusion.
+        </p>
+
+        <h2>Sun Signs Are Just the Beginning</h2>
+        <p>
+          Sun sign compatibility tells you the potential between two signs. Your full birth charts — moon, rising, Venus, Mars — tell you the specifics of the connection. A live reading can compare your actual charts, identify the hidden friction points, and read the timing of the relationship. The astrology readers I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> handle this work well, and both platforms offer trial minutes.
+        </p>
+        <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+          <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-page { padding-top: var(--space-10); }
+  .tool-header { margin: var(--space-6) 0; }
+  .tool-header h1 { margin: var(--space-3) 0; font-size: clamp(2.2rem, 4vw, 3rem); }
+  .tool-desc { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+  .tool-card { padding: var(--space-10); margin-bottom: var(--space-10); }
+
+  .compat-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .compat-row {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .compat-person {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .person-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .form-select {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    min-width: 200px;
+  }
+
+  .form-select:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-color: var(--color-primary);
+  }
+
+  .compat-heart {
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    line-height: 1;
+    padding-bottom: var(--space-3);
+  }
+
+  .compat-result {
+    margin-top: var(--space-8);
+    animation: fadeInUp 0.5s ease;
+  }
+
+  .compat-result .result-score {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .compat-result .result-label {
+    display: inline-block;
+    margin-bottom: var(--space-4);
+  }
+
+  .compat-result .result-bars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  .compat-result .bar-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .compat-result .bar-label {
+    width: 110px;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .compat-result .bar-track {
+    flex: 1;
+    height: 8px;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .compat-result .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+    border-radius: var(--radius-full);
+  }
+
+  .compat-result .bar-num {
+    width: 32px;
+    text-align: right;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+  }
+
+  .compat-result .result-meaning {
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  .compat-result .result-meaning a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 640px) {
+    .tool-card { padding: var(--space-6); }
+  }
+</style>
+
+<script>
+  // Sign data is injected via JSON from the Astro frontmatter
+  const SIGNS_JSON = JSON.parse(document.getElementById('signs-data')!.textContent);
+  const ELEMENTS_JSON = JSON.parse(document.getElementById('elements-data')!.textContent);
+
+  const sign1 = document.getElementById('sign-1') as HTMLSelectElement;
+  const sign2 = document.getElementById('sign-2') as HTMLSelectElement;
+  const form = document.getElementById('compat-form') as HTMLFormElement;
+  const result = document.getElementById('compat-result');
+
+  function scorePair(a: any, b: any) {
+    const sameElement = a.element === b.element;
+    const harmonious = ELEMENTS_JSON[a.element].harmonious.includes(b.element);
+    const challenging = ELEMENTS_JSON[a.element].challenging.includes(b.element);
+    const isOpposite = a.opposite === b.name;
+    const sameModality = a.modality === b.modality;
+
+    let base = 5;
+    if (sameElement) base = 8;
+    else if (harmonious) base = 7;
+    else if (challenging) base = 4.5;
+
+    let romance = base + (isOpposite ? 1.2 : 0) + (sameElement ? 0.5 : 0);
+    let communication = base + (a.element === 'Air' || b.element === 'Air' ? 1 : 0) + (sameModality ? 0.5 : 0);
+    let longTerm = base + (a.element === 'Earth' || b.element === 'Earth' ? 0.8 : 0) + (sameModality ? 0.5 : 0) - (isOpposite ? 1.5 : 0);
+
+    const clamp = (n: number) => Math.max(1, Math.min(10, Math.round(n * 10) / 10));
+    romance = clamp(romance);
+    communication = clamp(communication);
+    longTerm = clamp(longTerm);
+    const overall = clamp((romance + communication + longTerm) / 3);
+
+    let label: string;
+    if (overall >= 8.5) label = 'Excellent Match';
+    else if (overall >= 7.5) label = 'Strong Match';
+    else if (overall >= 6.5) label = 'Good Match';
+    else if (overall >= 5.5) label = 'Workable Match';
+    else if (overall >= 4.5) label = 'Challenging Match';
+    else label = 'Difficult Match';
+
+    return { overall, romance, communication, longTerm, label, isOpposite };
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const a = SIGNS_JSON.find((s: any) => s.name === sign1.value);
+    const b = SIGNS_JSON.find((s: any) => s.name === sign2.value);
+    const s = scorePair(a, b);
+
+    const elementNote = a.element === b.element
+      ? 'same element — natural resonance'
+      : ELEMENTS_JSON[a.element].harmonious.includes(b.element)
+        ? 'harmonious element flow'
+        : 'challenging element friction';
+
+    result!.innerHTML = `
+      <div class="result-score">${s.overall}<span style="font-size:1.5rem;color:var(--color-text-light)">/10</span></div>
+      <span class="result-label badge badge--primary">${s.label}</span>
+      <div class="result-bars">
+        <div class="bar-row"><span class="bar-label">Romance</span><div class="bar-track"><div class="bar-fill" style="width:${s.romance * 10}%"></div></div><span class="bar-num">${s.romance}</span></div>
+        <div class="bar-row"><span class="bar-label">Communication</span><div class="bar-track"><div class="bar-fill" style="width:${s.communication * 10}%"></div></div><span class="bar-num">${s.communication}</span></div>
+        <div class="bar-row"><span class="bar-label">Long-Term</span><div class="bar-track"><div class="bar-fill" style="width:${s.longTerm * 10}%"></div></div><span class="bar-num">${s.longTerm}</span></div>
+      </div>
+      <p class="result-meaning">
+        ${a.name} (${a.element}) and ${b.name} (${b.element}) form a ${elementNote} pairing. ${s.isOpposite ? 'As opposite signs, this is the most magnetic — and most demanding — axis of the zodiac. ' : ''}
+        The full dynamic — how they love, argue, and grow together — is in the <a href="/astrology/zodiac/${[a.name.toLowerCase(), b.name.toLowerCase()].sort().join('-and-')}-compatibility/">detailed ${a.name} + ${b.name} compatibility guide</a>.
+      </p>
+    `;
+    result!.style.display = 'block';
+    result!.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>

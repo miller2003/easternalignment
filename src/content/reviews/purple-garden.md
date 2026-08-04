@@ -2,7 +2,7 @@
 title: "Purple Garden Review (2026): My 12-Month Unfiltered Audit of Their App-First Video Psychics & 'Journeys'"
 description: "Is Purple Garden worth downloading? I spent $840 out of my own pocket over 12 months testing their video readings, auditing the 'Journeys' timeline feed, and tracking real accuracy."
 platformName: "Purple Garden"
-rating: 4.6
+rating: 4.7
 verdict: "Purple Garden has fundamentally changed how I vet psychic advisors online. By combining mandatory 60-second video introductions with an un-deletable community prediction feed ('Journeys'), it solves the biggest problem in online readings: paying for a cold, incompatible connection. While its lower-tier chat bracket ($0.99/min) requires careful filtering and the desktop website feels like an afterthought compared to the mobile app, Purple Garden's video transparency makes it one of my top recommendations for visual seekers in 2026."
 affiliateUrl: "/go/purple-garden/"
 freeOffer: "$30 free credit on your first purchase"

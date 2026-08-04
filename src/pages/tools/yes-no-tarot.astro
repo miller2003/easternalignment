@@ -1,0 +1,279 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Yes/No Tarot Card Generator",
+      "url": "https://easternalignment.com/tools/yes-no-tarot/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free yes/no tarot card generator. Shuffle a virtual tarot deck, draw a single card, and get an instant answer with the card meaning explained."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does a yes/no tarot reading work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A one-card yes/no draw uses the card's core orientation to answer a binary question. Upright cards pull toward yes and reversed cards pull toward no, but the card also carries a message about why, which is usually the more useful part of the answer." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the yes/no tarot reading free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool is completely free, instant, and private — no sign-up or email required. Draw as many cards as you like." }
+        },
+        {
+          "@type": "Question",
+          "name": "What cards are in the yes/no tarot deck?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The tool draws from a curated 22-card Major Arcana deck, which covers the big themes of life — love, career, change, identity — making it ideal for questions that actually matter." }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Free Yes/No Tarot: Instant Card Answer"
+  description="Free yes/no tarot card generator. Shuffle a virtual tarot deck, draw a single card, and get an instant answer to your yes or no question — with the card meaning explained."
+  jsonLd={toolSchema}
+>
+  <div class="tool-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Tools' }, { label: 'Yes/No Tarot' }]} />
+
+      <header class="tool-header">
+        <span class="badge badge--sage">Free Tool</span>
+        <h1>Yes/No Tarot Generator</h1>
+        <p class="tool-desc text-muted">
+          Hold a clear question in your mind, then draw a single card. A one-card yes/no reading is the oldest and simplest way to use tarot — it gives you a direct answer and a reason to think about it.
+        </p>
+      </header>
+
+      <div class="tool-card card" id="tarot-app">
+        <div class="tarot-stage" id="tarot-stage">
+          <div class="tarot-deck" id="tarot-deck" aria-hidden="true">
+            <div class="tarot-card-back">
+              <span class="card-back-star">✦</span>
+            </div>
+          </div>
+          <p class="stage-hint text-muted" id="stage-hint">Think of your yes/no question, then click draw.</p>
+        </div>
+
+        <div class="tarot-actions">
+          <button class="btn btn--primary" id="draw-btn">Draw a Card</button>
+          <button class="btn btn--ghost" id="reset-btn" style="display:none;">Draw Again</button>
+        </div>
+
+        <div class="tarot-result" id="tarot-result" style="display:none;"></div>
+      </div>
+
+      <div class="prose tool-prose">
+        <h2>How a Yes/No Tarot Reading Works</h2>
+        <p>
+          A one-card yes/no draw uses the card's core orientation to answer a binary question. In the simplified system used here, upright cards pull toward "yes" and reversed cards pull toward "no" — but the meaning is never mechanical. The card also carries a message about <em>why</em>, which is usually the more useful part of the answer.
+        </p>
+        <p>
+          The tool draws from a curated 22-card Major Arcana deck. The Major Arcana covers the big themes of life — love, career, change, identity — which makes it ideal for questions that actually matter.
+        </p>
+
+        <h2>How to Ask a Good Yes/No Question</h2>
+        <ul>
+          <li>Keep it binary: "Should I take this job?" beats "What should I do about work?"</li>
+          <li>Make it about you: "Is this relationship right for me?" rather than "Is he coming back?"</li>
+          <li>Ask once. Repeating the same question invites the same answer with different packaging.</li>
+        </ul>
+
+        <h2>When a Card Reading Is Not Enough</h2>
+        <p>
+          A single card gives you a direction. A live psychic reading gives you context — timing, obstacles, the other person's energy, and the specific path forward. If your question is high-stakes or deeply personal, the readers I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> can take a question far beyond what a one-card draw can answer, and both platforms offer trial minutes.
+        </p>
+        <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+          <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-page {
+    padding-top: var(--space-10);
+  }
+
+  .tool-header {
+    margin: var(--space-6) 0;
+  }
+
+  .tool-header h1 {
+    margin: var(--space-3) 0;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .tool-desc {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+  }
+
+  .tool-card {
+    padding: var(--space-10);
+    text-align: center;
+    margin-bottom: var(--space-10);
+  }
+
+  .tarot-stage {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+  }
+
+  .tarot-deck {
+    width: 140px;
+    height: 220px;
+    cursor: pointer;
+    perspective: 800px;
+  }
+
+  .tarot-card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    border: 3px solid var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+  }
+
+  .tarot-deck:hover .tarot-card-back {
+    transform: translateY(-6px) rotate(-2deg);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .card-back-star {
+    font-size: 2.5rem;
+    color: var(--color-accent-light);
+  }
+
+  .stage-hint {
+    font-size: var(--text-sm);
+  }
+
+  .tarot-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .tarot-result {
+    margin-top: var(--space-8);
+    animation: fadeInUp 0.5s ease;
+  }
+
+  .tarot-result .result-verdict {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-2);
+  }
+
+  .tarot-result .result-card {
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-4);
+  }
+
+  .tarot-result .result-meaning {
+    text-align: left;
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .tool-card {
+      padding: var(--space-6);
+    }
+    .tarot-deck {
+      width: 110px;
+      height: 175px;
+    }
+  }
+</style>
+
+<script>
+  const CARDS = [
+    { name: 'The Fool', upright: 'A leap of faith. The answer is yes — if you are willing to begin without knowing the ending.', reversed: 'Hesitation is protecting you. The answer is no — not yet, and not without a plan.' },
+    { name: 'The Magician', upright: 'You have everything you need. The answer is yes — you already hold the tools.', reversed: 'Resources are scattered. The answer is no — gather yourself first.' },
+    { name: 'The High Priestess', upright: 'Trust your intuition. The answer is yes — but the confirmation is internal, not external.', reversed: 'You are ignoring what you already know. The answer is no — the truth is already visible.' },
+    { name: 'The Empress', upright: 'Nurture and abundance. The answer is yes — growth is on your side.', reversed: 'Something is being neglected. The answer is no — tend to the foundation first.' },
+    { name: 'The Emperor', upright: 'Structure and authority. The answer is yes — through discipline and order.', reversed: 'Control is the issue. The answer is no — rigidity is blocking the path.' },
+    { name: 'The Hierophant', upright: 'Tradition and guidance. The answer is yes — the established path serves you.', reversed: 'The rules are the problem. The answer is no — you need your own way.' },
+    { name: 'The Lovers', upright: 'Alignment and choice. The answer is yes — the connection is real.', reversed: 'Misalignment. The answer is no — not this, not now.' },
+    { name: 'The Chariot', upright: 'Momentum through will. The answer is yes — drive forward.', reversed: 'You are pulling in two directions. The answer is no — resolve the conflict first.' },
+    { name: 'Strength', upright: 'Quiet power. The answer is yes — through patience and courage.', reversed: 'Inner conflict is draining you. The answer is no — restore yourself first.' },
+    { name: 'The Hermit', upright: 'Solo clarity. The answer is yes — but you will find it alone.', reversed: 'Isolation is now avoidance. The answer is no — you need others.' },
+    { name: 'Wheel of Fortune', upright: 'A turn of fate. The answer is yes — the cycle is moving in your favor.', reversed: 'Resisting the change. The answer is no — this phase must end first.' },
+    { name: 'Justice', upright: 'Fair outcome. The answer is yes — if the balance is on your side.', reversed: 'Imbalance. The answer is no — until the scales are honest.' },
+    { name: 'The Hanged Man', upright: 'A necessary pause. The answer is yes — but only after waiting.', reversed: 'Stalemate. The answer is no — sacrifice is being demanded instead.' },
+    { name: 'Death', upright: 'Transformation. The answer is yes — but something must end first.', reversed: 'Resistance to change. The answer is no — the old form is still clinging.' },
+    { name: 'Temperance', upright: 'Balance and patience. The answer is yes — through moderation.', reversed: 'Imbalance. The answer is no — extremes are blocking you.' },
+    { name: 'The Devil', upright: 'Attachment. The answer is no — you are bound by something.', reversed: 'Freedom approaching. The answer is yes — but only after you cut the tie.' },
+    { name: 'The Tower', upright: 'Sudden truth. The answer is no — the structure is collapsing for a reason.', reversed: 'Avoiding the collapse. The answer is no — the longer you delay, the harder it lands.' },
+    { name: 'The Star', upright: 'Hope and healing. The answer is yes — trust the light.', reversed: 'Faith is shaken. The answer is no — restore hope first.' },
+    { name: 'The Moon', upright: 'Illusion and uncertainty. The answer is unclear — you are not seeing the full picture yet.', reversed: 'The fog is lifting. The answer is yes — clarity is arriving.' },
+    { name: 'The Sun', upright: 'Joy and success. The answer is a clear yes.', reversed: 'A temporary cloud. The answer is yes — but with a delay.' },
+    { name: 'Judgement', upright: 'A call to rise. The answer is yes — you are being asked to respond.', reversed: 'Ignoring the call. The answer is no — you are avoiding the decision.' },
+    { name: 'The World', upright: 'Completion. The answer is yes — the cycle is closing successfully.', reversed: 'Not finished. The answer is no — one more step remains.' },
+  ];
+
+  const deck = document.getElementById('tarot-deck');
+  const drawBtn = document.getElementById('draw-btn');
+  const resetBtn = document.getElementById('reset-btn');
+  const hint = document.getElementById('stage-hint');
+  const result = document.getElementById('tarot-result');
+
+  function draw() {
+    const card = CARDS[Math.floor(Math.random() * CARDS.length)];
+    const reversed = Math.random() < 0.25; // Major cards pull upright ~75% of the time
+    const verdict = reversed ? 'The answer leans NO' : 'The answer leans YES';
+    const verdictClass = reversed ? 'text-accent' : 'text-sage';
+
+    result.innerHTML = `
+      <div class="result-verdict ${verdictClass}">${verdict}</div>
+      <div class="result-card">${card.name}${reversed ? ' (Reversed)' : ''}</div>
+      <p class="result-meaning">${reversed ? card.reversed : card.upright}</p>
+    `;
+    result.style.display = 'block';
+    deck.style.display = 'none';
+    hint.textContent = 'One card, one answer. Reflect on the meaning before you draw again.';
+    drawBtn.style.display = 'none';
+    resetBtn.style.display = 'inline-flex';
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function reset() {
+    result.style.display = 'none';
+    result.innerHTML = '';
+    deck.style.display = '';
+    hint.textContent = 'Think of your yes/no question, then click draw.';
+    drawBtn.style.display = 'inline-flex';
+    resetBtn.style.display = 'none';
+  }
+
+  deck.addEventListener('click', draw);
+  drawBtn.addEventListener('click', draw);
+  resetBtn.addEventListener('click', reset);
+</script>

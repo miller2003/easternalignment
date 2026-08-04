@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { SIGNS, allPairs, pairSlug, compatibilityScore } from '../../data/zodiac';
+
+const pairs = allPairs().map(([a, b]) => {
+  const s = compatibilityScore(a, b);
+  return { a, b, slug: pairSlug(a, b), score: s.score, label: s.label };
+});
+---
+
+<BaseLayout
+  title="Zodiac Signs & Love Compatibility"
+  description="The complete zodiac compatibility guide — personality profiles for all 12 signs and love compatibility ratings for every zodiac pairing. Find out which signs match best."
+>
+  <div class="page-with-sidebars">
+    <main class="main-col">
+      <div class="zodiac-hub">
+        <Breadcrumb items={[{ label: 'Astrology' }, { label: 'Zodiac' }]} />
+
+        <header class="hub-header">
+          <span class="badge badge--sage">Astrology Hub</span>
+          <h1>Zodiac Signs & Compatibility</h1>
+          <p class="hub-description text-muted">
+            Your sun sign is the starting point of any astrological chart — and compatibility between signs follows real, consistent rules based on the elements and modalities. Browse all 12 signs, or jump straight to the pairing that matters to you.
+          </p>
+        </header>
+
+        <section class="zodiac-section">
+          <h2>All 12 Zodiac Signs</h2>
+          <div class="signs-grid">
+            {SIGNS.map(sign => (
+              <a href={`/astrology/zodiac/${sign.name.toLowerCase()}/`} class="sign-card card card--elevated">
+                <span class="sign-card-symbol">{sign.symbol}</span>
+                <span class="sign-card-name">{sign.name}</span>
+                <span class="sign-card-meta text-sm text-muted">{sign.dates}</span>
+                <span class="sign-card-ele badge badge--sage">{sign.element} · {sign.modality}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="zodiac-section">
+          <h2>Compatibility by Element</h2>
+          <p class="text-muted">
+            In classical astrology, signs of the same element share a natural rhythm, and harmonious elements flow together. The compatibility scores below follow these rules.
+          </p>
+          <div class="element-grid">
+            <div class="element-card card">
+              <h3>Fire × Air</h3>
+              <p class="text-sm text-muted">Air feeds fire. These pairings have natural momentum and easy communication.</p>
+            </div>
+            <div class="element-card card">
+              <h3>Earth × Water</h3>
+              <p class="text-sm text-muted">Water nourishes earth. These pairings grow slowly and root deeply.</p>
+            </div>
+            <div class="element-card card">
+              <h3>Same Element</h3>
+              <p class="text-sm text-muted">Shared rhythm and instinct — strong resonance, but shared blind spots too.</p>
+            </div>
+            <div class="element-card card">
+              <h3>Fire × Water</h3>
+              <p class="text-sm text-muted">The classic tension pairing — maximum heat, real friction, transformative potential.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="zodiac-section">
+          <h2>All 66 Zodiac Pairings, Ranked</h2>
+          <p class="text-muted">
+            Every pairing below is scored on a 10-point scale based on element, modality, and polarity rules. The full article for each pairing explains the romance, communication, and long-term dynamics in depth.
+          </p>
+          <div class="pairs-list">
+            {pairs
+              .slice()
+              .sort((x, y) => y.score - x.score)
+              .map(p => (
+                <a href={`/astrology/zodiac/${p.slug}/`} class="pair-row card">
+                  <span class="pair-row-names">{p.a.symbol} {p.a.name} + {p.b.symbol} {p.b.name}</span>
+                  <span class="pair-row-score"><span class="badge badge--primary">{p.score}/10</span> {p.label}</span>
+                </a>
+              ))}
+          </div>
+        </section>
+
+        <div class="cta-box">
+          <h3>Compatibility Is Personal — Get a Chart Reading</h3>
+          <p>
+            Sun sign compatibility tells you the potential between two signs. Your full birth chart — moon, rising, Venus, Mars — tells you the specifics. A live reading with an astrology-focused psychic can compare your charts and answer the questions the stars alone can't.
+          </p>
+          <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+            <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-with-sidebars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6) var(--space-12);
+  }
+
+  .main-col {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max-width-content);
+  }
+
+  .hub-header {
+    margin: var(--space-6) 0 var(--space-8);
+  }
+
+  .hub-header h1 {
+    margin: var(--space-3) 0;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .hub-description {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+  }
+
+  .zodiac-section {
+    margin-bottom: var(--space-10);
+  }
+
+  .zodiac-section h2 {
+    font-size: var(--text-2xl);
+    color: var(--color-primary-dark);
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  .signs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+  }
+
+  .sign-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+    text-align: center;
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .sign-card-symbol {
+    font-size: 2.4rem;
+    line-height: 1;
+    color: var(--color-accent);
+  }
+
+  .sign-card-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+  }
+
+  .element-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .element-card h3 {
+    margin-top: 0;
+    font-size: var(--text-lg);
+  }
+
+  .pairs-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+
+  .pair-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    text-decoration: none;
+    transition: border-color var(--transition-fast);
+  }
+
+  .pair-row:hover {
+    border-color: var(--color-primary-light);
+  }
+
+  .pair-row-names {
+    font-weight: var(--weight-medium);
+  }
+
+  .pair-row-score {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .signs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .element-grid {
+      grid-template-columns: 1fr;
+    }
+    .pair-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-2);
+    }
+  }
+</style>

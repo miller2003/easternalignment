@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "One Card Tarot",
+      "url": "https://easternalignment.com/tools/one-card-tarot/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free one card tarot reading. Draw a single card from the Major Arcana for your daily guidance — a simple ritual to start your day with clarity and intention."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a one card tarot reading?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A one card reading draws a single tarot card and applies its meaning as the theme or guidance for the day. It is the simplest tarot practice and a training ground for intuition." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the daily card tarot free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The daily card draw is completely free, instant, and private — no sign-up or email required. Draw as many times as you like." }
+        },
+        {
+          "@type": "Question",
+          "name": "What deck does the daily card tool use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The tool draws from the 22 cards of the Major Arcana, which cover the big themes of life — love, career, change, identity — making each daily draw meaningful." }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Daily One Card Tarot: Draw Your Card"
+  description="Free one card tarot reading. Draw a single card from the Major Arcana for your daily guidance — a simple ritual to start your day with clarity and intention."
+  jsonLd={toolSchema}
+>
+  <div class="tool-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Tools', href: '/tools/' }, { label: 'Daily Card Tarot' }]} />
+
+      <header class="tool-header">
+        <span class="badge badge--sage">Free Tool</span>
+        <h1>One Card Tarot: Your Daily Card</h1>
+        <p class="tool-desc text-muted">
+          A single card a day is the simplest tarot practice there is — a small ritual of clarity before the world takes your attention. Shuffle the deck, draw your card, and carry its message with you.
+        </p>
+      </header>
+
+      <div class="tool-card card" id="tarot-app">
+        <div class="tarot-stage">
+          <div class="tarot-deck" id="tarot-deck" aria-hidden="true">
+            <div class="tarot-card-back">
+              <span class="card-back-star">✦</span>
+            </div>
+          </div>
+          <p class="stage-hint text-muted" id="stage-hint">Take a breath, focus on today, and draw your card.</p>
+        </div>
+
+        <div class="tarot-actions">
+          <button class="btn btn--primary" id="draw-btn">Draw Today's Card</button>
+          <button class="btn btn--ghost" id="reset-btn" style="display:none;">Draw Again</button>
+        </div>
+
+        <div class="tarot-result" id="tarot-result" style="display:none;"></div>
+      </div>
+
+      <div class="prose tool-prose">
+        <h2>The Daily Card Practice</h2>
+        <p>
+          One card tarot is the gateway practice of the deck: it trains your intuition, builds your familiarity with the cards, and gives each day a theme to reflect on. The card is not a prediction — it is an invitation to pay attention to a specific quality of your day.
+        </p>
+        <p>
+          For the deeper meanings behind every card, my <a href="/guides/tarot-card-meanings-beginners-guide/">beginner's guide to tarot card meanings</a> breaks down the entire 78-card system. And when a daily card keeps pointing at the same theme — the same message showing up again and again — that is a signal worth taking to a live reader.
+        </p>
+
+        <h2>When the Cards Keep Repeating</h2>
+        <p>
+          In my testing, the most meaningful sessions are the ones clients bring after the cards have been repeating themselves: the same arcana appearing in every daily draw, the same theme circling back. That pattern is a message in itself, and a live reading can unpack it in the context of your life. The readers I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> are experienced with tarot, and both platforms offer trial minutes.
+        </p>
+        <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+          <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-page { padding-top: var(--space-10); }
+  .tool-header { margin: var(--space-6) 0; }
+  .tool-header h1 { margin: var(--space-3) 0; font-size: clamp(2.2rem, 4vw, 3rem); }
+  .tool-desc { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+  .tool-card { padding: var(--space-10); text-align: center; margin-bottom: var(--space-10); }
+
+  .tarot-stage {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+  }
+
+  .tarot-deck {
+    width: 140px;
+    height: 220px;
+    cursor: pointer;
+    perspective: 800px;
+  }
+
+  .tarot-card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    border: 3px solid var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+  }
+
+  .tarot-deck:hover .tarot-card-back {
+    transform: translateY(-6px) rotate(-2deg);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .card-back-star { font-size: 2.5rem; color: var(--color-accent-light); }
+  .stage-hint { font-size: var(--text-sm); }
+  .tarot-actions { display: flex; justify-content: center; gap: var(--space-4); margin-top: var(--space-4); flex-wrap: wrap; }
+
+  .tarot-result {
+    margin-top: var(--space-8);
+    animation: fadeInUp 0.5s ease;
+  }
+
+  .tarot-result .result-card {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .tarot-result .result-position {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-4);
+  }
+
+  .tarot-result .result-meaning {
+    text-align: left;
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .tool-card { padding: var(--space-6); }
+    .tarot-deck { width: 110px; height: 175px; }
+  }
+</style>
+
+<script>
+  const CARDS = [
+    { name: 'The Fool', theme: 'New Beginnings', text: 'Today asks for a leap of faith. Something is being offered that has no guarantees — and that is exactly why it is worth considering. Stay curious, stay light, and begin.' },
+    { name: 'The Magician', theme: 'Resourcefulness', text: 'You have everything you need today. The Magician reminds you that the tools for your situation are already in your hands — the work is in using them deliberately.' },
+    { name: 'The High Priestess', theme: 'Intuition', text: 'Today the answer will come from within. The High Priestess asks you to trust what you already know, even when you cannot explain it. Listen more, prove less.' },
+    { name: 'The Empress', theme: 'Nurture & Abundance', text: 'A day for growth and care. Nurture something today — a project, a relationship, yourself. Abundance flows toward whatever you tend.' },
+    { name: 'The Emperor', theme: 'Structure', text: 'Today rewards order. The Emperor asks you to bring structure to a chaotic situation — boundaries, systems, decisions. Lead with steadiness.' },
+    { name: 'The Hierophant', theme: 'Tradition & Guidance', text: 'Today you may benefit from a mentor, a system, or a proven path. There is wisdom in what has worked before — seek it, and take the guidance offered.' },
+    { name: 'The Lovers', theme: 'Alignment & Choice', text: 'A day of choices and connections. The Lovers asks what is truly in alignment with you — and to choose from that place, not from obligation.' },
+    { name: 'The Chariot', theme: 'Momentum', text: 'Today is about willpower. A situation needs you to steer it with focus. The Chariot rewards determination — keep your eyes on the destination.' },
+    { name: 'Strength', theme: 'Quiet Courage', text: 'Today the power is not loud. Strength asks you to be patient, gentle, and brave — to lead with calm rather than force. Your steadiness is your influence.' },
+    { name: 'The Hermit', theme: 'Soul-Searching', text: 'A day for solitude and reflection. The Hermit invites you to turn inward — the answer you need is not in the noise, but in the quiet.' },
+    { name: 'Wheel of Fortune', theme: 'Change in Motion', text: 'Today the wheel turns. A change is in motion that may feel beyond your control — ride it with openness. What is turning now is turning toward something.' },
+    { name: 'Justice', theme: 'Truth & Balance', text: 'A day for fairness and honesty. Justice asks you to weigh things clearly — and to stand by the truth, even when it costs something.' },
+    { name: 'The Hanged Man', theme: 'Surrender', text: 'Today asks for a pause. The Hanged Man suggests that struggling is not working — the shift comes from seeing the situation from a new angle.' },
+    { name: 'Death', theme: 'Transformation', text: 'Today marks an ending — and endings are the doorway. Death asks you to release what is finished so something new can take its place.' },
+    { name: 'Temperance', theme: 'Balance & Patience', text: 'A day for moderation. Temperance asks you to blend opposites, find the middle path, and trust the slow work of integration.' },
+    { name: 'The Devil', theme: 'Attachment', text: 'Today reveals a bond that may be binding you. The Devil asks you to look honestly at what holds you — often it is not the thing itself, but your attachment to it.' },
+    { name: 'The Tower', theme: 'Sudden Truth', text: 'Today may bring a sudden revelation. The Tower uproots what was built on false ground. It feels like collapse, but it is clearing the way for truth.' },
+    { name: 'The Star', theme: 'Hope & Healing', text: 'Today carries hope. The Star reminds you that after the storm, the water is clear again. Trust the healing that is already underway.' },
+    { name: 'The Moon', theme: 'Illusion', text: 'Today things are not as they appear. The Moon asks you to hold judgment — the fog will lift, and clarity will come. Do not decide from fear.' },
+    { name: 'The Sun', theme: 'Joy & Success', text: 'A radiant day. The Sun brings warmth, clarity, and success. Whatever you touch today carries light — enjoy it, and share it.' },
+    { name: 'Judgement', theme: 'A Call to Rise', text: 'Today you are being called to respond — to a new level, a bigger version of yourself. Judgement asks you to answer the call with courage.' },
+    { name: 'The World', theme: 'Completion', text: 'A day of completion. The World marks the end of a cycle done well. Take the moment to celebrate what you have finished — and what it made possible.' },
+  ];
+
+  const deck = document.getElementById('tarot-deck');
+  const drawBtn = document.getElementById('draw-btn');
+  const resetBtn = document.getElementById('reset-btn');
+  const hint = document.getElementById('stage-hint');
+  const result = document.getElementById('tarot-result');
+
+  function draw() {
+    const card = CARDS[Math.floor(Math.random() * CARDS.length)];
+    result!.innerHTML = `
+      <div class="result-card">${card.name}</div>
+      <div class="result-position">Today's Theme: ${card.theme}</div>
+      <p class="result-meaning">${card.text}</p>
+    `;
+    result!.style.display = 'block';
+    deck!.style.display = 'none';
+    hint!.textContent = 'Carry this card\u2019s theme through your day.';
+    drawBtn!.style.display = 'none';
+    resetBtn!.style.display = 'inline-flex';
+    result!.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function reset() {
+    result!.style.display = 'none';
+    result!.innerHTML = '';
+    deck!.style.display = '';
+    hint!.textContent = 'Take a breath, focus on today, and draw your card.';
+    drawBtn!.style.display = 'inline-flex';
+    resetBtn!.style.display = 'none';
+  }
+
+  deck!.addEventListener('click', draw);
+  drawBtn!.addEventListener('click', draw);
+  resetBtn!.addEventListener('click', reset);
+</script>

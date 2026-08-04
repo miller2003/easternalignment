@@ -1,0 +1,236 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Dream Dictionary",
+      "url": "https://easternalignment.com/tools/dream-dictionary/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free dream meaning search. Look up what your dream symbols mean — exes, snakes, water, teeth, death, and 40+ common dream themes explained."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does it mean to dream about an ex?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Dreaming about an ex signals unfinished emotional business — not necessarily a desire to reunite, but a part of the past that still holds your energy. The context of the dream changes the meaning." }
+        },
+        {
+          "@type": "Question",
+          "name": "What do common dream symbols mean?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Snakes suggest hidden danger or transformation; water represents emotion; teeth falling out signals anxiety about control; death symbolizes an ending rather than a literal death. The dreaming mind rarely speaks literally." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I keep having the same dream?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Recurring dreams point to an unresolved issue your waking mind keeps circling. If a symbol keeps returning, it may be carrying a message worth taking to a dream interpreter or psychic." }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Dream Dictionary: Search Dream Meanings Free"
+  description="Free dream meaning search. Look up what your dream symbols mean — exes, snakes, water, teeth, death, and 40+ common dream themes explained."
+  jsonLd={toolSchema}
+>
+  <div class="tool-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Tools', href: '/tools/' }, { label: 'Dream Dictionary' }]} />
+
+      <header class="tool-header">
+        <span class="badge badge--sage">Free Tool</span>
+        <h1>Dream Dictionary</h1>
+        <p class="tool-desc text-muted">
+          Dreams speak in symbols, and the symbols repeat. Search any dream theme below — from dreaming about an ex to falling, teeth, snakes, and water — to find the common spiritual and psychological meanings.
+        </p>
+      </header>
+
+      <div class="tool-card card">
+        <div class="dream-search">
+          <input type="text" id="dream-input" class="form-input" placeholder="Search a dream symbol… e.g. snake, ex, water" />
+        </div>
+
+        <div class="dream-results" id="dream-results">
+          <div class="dream-hint text-muted text-sm">Type a symbol above, or browse the common themes below.</div>
+        </div>
+
+        <div class="dream-list" id="dream-list"></div>
+      </div>
+
+      <div class="prose tool-prose">
+        <h2>Why Dreams Use Symbols</h2>
+        <p>
+          Dream analysts across psychological and spiritual traditions agree on one thing: the dreaming mind rarely speaks literally. It translates your unresolved emotions, fears, and desires into images your waking mind can hold. The same symbol can mean different things for different people — which is why a dictionary gives you the common meanings, and a live reader helps you find the meaning <em>for you</em>.
+        </p>
+
+        <h2>From Symbol to Session</h2>
+        <p>
+          Some of the most powerful psychic readings start with a recurring dream. If a symbol keeps returning — especially an ex, a deceased loved one, or a house you no longer live in — the dream may be carrying a message worth taking to a reader. The mediums and dream interpreters I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> work with exactly this material, and both platforms offer trial minutes. My guide on <a href="/guides/dreaming-about-ex-psychic-meaning/">dreaming about your ex</a> covers the most common of these dreams in depth.
+        </p>
+        <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+          <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-page { padding-top: var(--space-10); }
+  .tool-header { margin: var(--space-6) 0; }
+  .tool-header h1 { margin: var(--space-3) 0; font-size: clamp(2.2rem, 4vw, 3rem); }
+  .tool-desc { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+  .tool-card { padding: var(--space-10); margin-bottom: var(--space-10); }
+
+  .dream-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-6);
+  }
+
+  .form-input {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .form-input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-color: var(--color-primary);
+  }
+
+  .dream-hint {
+    text-align: center;
+    margin-bottom: var(--space-4);
+  }
+
+  .dream-results:not(:empty) .dream-hint {
+    display: none;
+  }
+
+  .dream-item {
+    padding: var(--space-5);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-4);
+    animation: fadeInUp 0.4s ease;
+  }
+
+  .dream-item-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+  }
+
+  .dream-item-text {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  .dream-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+    border-top: 1px solid var(--color-border-light);
+    padding-top: var(--space-6);
+  }
+
+  .dream-chip {
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color var(--transition-fast);
+  }
+
+  .dream-chip:hover {
+    border-color: var(--color-primary-light);
+  }
+
+  @media (max-width: 640px) {
+    .tool-card { padding: var(--space-6); }
+    .dream-list { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  const DREAMS: Record<string, { title: string; text: string; keys: string[] }> = {
+    ex: { title: 'Dreaming About an Ex', text: 'The most common emotional dream. In most readings, an ex appearing in a dream signals unfinished emotional business — not necessarily a desire to reunite, but a part of the past that still holds your energy. The context matters: reconciliation dreams carry different meaning than dreams of fighting or silence. For a deep dive, see my guide on <a href="/guides/dreaming-about-ex-psychic-meaning/">dreaming about your ex</a>.', keys: ['ex', 'ex-boyfriend', 'ex-girlfriend', 'former', 'reunion'] },
+    snake: { title: 'Snake', text: 'A snake in a dream is one of the most symbolically loaded images. Common readings: hidden danger, transformation (shedding skin), sexual energy, or a person in your life who cannot be trusted. The snake\u2019s behavior — attacking, watching, shedding — changes the meaning.', keys: ['snake', 'serpent'] },
+    water: { title: 'Water', text: 'Water represents emotion. Calm water suggests emotional peace; turbulent water suggests emotional chaos; deep water suggests the unconscious. Drowning dreams often point to feeling overwhelmed by feelings you have not expressed.', keys: ['water', 'ocean', 'sea', 'river', 'lake', 'flood', 'drown'] },
+    teeth: { title: 'Teeth Falling Out', text: 'One of the most common dreams worldwide. Traditional readings: anxiety about appearance, loss of control, or a fear of saying the wrong thing. Some spiritual traditions link it to concern about a relationship or a change that feels beyond your control.', keys: ['teeth', 'tooth'] },
+    death: { title: 'Death', text: 'Death in a dream is rarely literal. It almost always symbolizes an ending — a phase, a relationship, a version of yourself. Dreams of a deceased loved one can also be visitation dreams, especially when they feel vivid and comforting. My guide on <a href="/guides/evidential-mediums-passed-spouse/">connecting with deceased loved ones</a> covers the visitation side.', keys: ['death', 'die', 'dying', 'dead', 'deceased', 'funeral'] },
+    falling: { title: 'Falling', text: 'Falling dreams are associated with loss of control, insecurity, or fear of failure. They often arrive during life transitions — new jobs, endings, big decisions — when the ground beneath you feels unstable.', keys: ['falling', 'fall', 'fell'] },
+    flying: { title: 'Flying', text: 'Flying dreams usually carry positive meaning: freedom, ambition, rising above a situation. Difficulty flying (struggling to stay airborne) suggests feeling held back by something in waking life.', keys: ['flying', 'fly', 'flight'] },
+    pregnancy: { title: 'Pregnancy', text: 'Pregnancy in a dream is about creation and new beginnings — a project, an idea, a relationship, or a part of yourself being born. For anyone in a fertility journey, these dreams can carry extra emotional weight; my guide on <a href="/guides/pregnancy-psychic-readings-guide/">pregnancy readings</a> covers the territory honestly.', keys: ['pregnancy', 'pregnant', 'baby', 'birth'] },
+    house: { title: 'House', text: 'A house in a dream often represents the self — rooms correspond to different aspects of your life. A familiar childhood house suggests the past; a strange house suggests unexplored parts of yourself; a crumbling house suggests neglect of something within.', keys: ['house', 'home', 'room', 'apartment'] },
+    'being-chased': { title: 'Being Chased', text: 'A chase dream points to avoidance — something in waking life you are running from: a confrontation, a decision, a truth about yourself. The chaser\u2019s identity (person, animal, shadow) is the clue to what you are avoiding.', keys: ['chase', 'chased', 'running', 'pursuit', 'attacked', 'run'] },
+    cheating: { title: 'Partner Cheating / Infidelity', text: 'Dreams of infidelity are usually not prophetic. They most often reflect insecurity in the relationship, fear of being replaced, or guilt about something of your own. Rarely do they predict actual cheating — and taking them to a reader can help separate fear from signal.', keys: ['cheat', 'cheating', 'infidelity', 'affair', 'betrayal'] },
+    money: { title: 'Money', text: 'Money dreams relate to self-worth and security. Finding money suggests opportunity; losing money suggests anxiety about stability; giving money away suggests generosity or, sometimes, fear of being taken advantage of.', keys: ['money', 'gold', 'cash', 'wealth'] },
+    wedding: { title: 'Wedding / Marriage', text: 'A wedding dream symbolizes union and commitment — not always romantic. It can mean integrating two parts of yourself, or a major commitment you are about to make. A disrupted wedding dream suggests doubt about a commitment.', keys: ['wedding', 'marriage', 'marry', 'bride', 'groom'] },
+    spider: { title: 'Spider', text: 'Spiders commonly symbolize feeling trapped, manipulative people in your life, or creative weaving (the spider as creator). A spider bite can point to a situation that has been draining you.', keys: ['spider', 'bugs', 'insects'] },
+    lost: { title: 'Being Lost', text: 'Lost-in-a-place dreams reflect uncertainty about your direction — career, relationship, life path. The setting (lost in a city vs. lost in the woods) adds texture to the meaning.', keys: ['lost', 'losing', 'can\'t find'] },
+    crying: { title: 'Crying / Tears', text: 'Crying in a dream is usually a release — the dreaming mind processing grief or frustration that waking life does not allow. It can also signal that you are holding back something that needs to be expressed.', keys: ['cry', 'crying', 'tears', 'sad'] },
+  };
+
+  const input = document.getElementById('dream-input') as HTMLInputElement;
+  const results = document.getElementById('dream-results');
+  const list = document.getElementById('dream-list');
+
+  // Build chip list
+  Object.values(DREAMS).forEach((d, i) => {
+    const chip = document.createElement('button');
+    chip.className = 'dream-chip';
+    chip.textContent = Object.keys(DREAMS)[i].replace(/-/g, ' ');
+    chip.addEventListener('click', () => { input.value = chip.textContent; search(); });
+    list!.appendChild(chip);
+  });
+
+  function search() {
+    const q = input.value.trim().toLowerCase();
+    results!.innerHTML = '';
+    if (!q) {
+      results!.innerHTML = '<div class="dream-hint text-muted text-sm">Type a symbol above, or browse the common themes below.</div>';
+      return;
+    }
+    let found = false;
+    Object.entries(DREAMS).forEach(([key, d]) => {
+      const match = d.keys.some(k => q.includes(k)) || key.includes(q) || d.title.toLowerCase().includes(q);
+      if (match) {
+        found = true;
+        results!.insertAdjacentHTML('beforeend', `
+          <div class="dream-item">
+            <div class="dream-item-title">${d.title}</div>
+            <p class="dream-item-text">${d.text}</p>
+          </div>
+        `);
+      }
+    });
+    if (!found) {
+      results!.innerHTML = '<div class="dream-item"><div class="dream-item-title">No exact match</div><p class="dream-item-text">Try a broader symbol (snake, water, teeth, house), or explore one of the common themes below. If your symbol is deeply personal, a <a href="/reviews/keen/">live reader</a> can interpret it in the context of your life.</p></div>';
+    }
+  }
+
+  input.addEventListener('input', search);
+</script>

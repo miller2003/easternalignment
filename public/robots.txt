@@ -12,20 +12,10 @@ User-agent: Amazonbot
 User-agent: CCBot
 Disallow: /
 
-# 2. Block SEO Competitive Research Tools (Anti-Spying)
-User-agent: AhrefsBot
-User-agent: SemrushBot
-User-agent: DotBot
-User-agent: MJ12bot
-User-agent: Rogerbot
-Disallow: /
-
-# 3. Global Directives for All Other Crawlers (Including Googlebot & Bingbot)
+# 2. Global Directives for All Other Crawlers (Including Googlebot & Bingbot)
 User-agent: *
-# 屏蔽敏感与低价值页面
 Disallow: /privacy/
 Disallow: /terms/
-# 预见性屏蔽推广/跳转及参数链接
 Disallow: /go/
 Disallow: /out/
 Disallow: /refer/

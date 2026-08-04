@@ -85,7 +85,7 @@ This isn't just a disclaimer. It's a structural commitment that shapes every rea
 
 ### Why Readers Who Limit Their Own Claims Are Statistically More Reliable Than Those Who Don't
 
-Here's the pattern I've noticed across hundreds of reader evaluations: readers who promise the most tend to deliver the least. The mechanics are straightforward  -  if you promise specific outcomes and they don't land, clients leave negative reviews. Readers who learn to survive long-term on a platform either get very good at predictions, or they get very good at reframing what they offer into something that reliably delivers value. Azzy's 4.9 stars across 3,100+ reviews over a decade [web:22] suggests she has done both. Her honesty about tarot's limits isn't a weakness in her offering. It's the architecture that makes her long-term client relationships possible.
+Here's the pattern I've noticed across hundreds of reader evaluations: readers who promise the most tend to deliver the least. The mechanics are straightforward  -  if you promise specific outcomes and they don't land, clients leave negative reviews. Readers who learn to survive long-term on a platform either get very good at predictions, or they get very good at reframing what they offer into something that reliably delivers value. Azzy's 4.9 stars across 3,100+ reviews over a decade suggests she has done both. Her honesty about tarot's limits isn't a weakness in her offering. It's the architecture that makes her long-term client relationships possible.
 
 ---
 
@@ -99,7 +99,7 @@ These aren't decorative titles. A Reiki Master operates with a specific framewor
 
 ### 16,500 Readings Since 2015: What Her Growth Curve Tells You About Her Staying Power
 
-Azzy joined Keen in 2015 and has accumulated 16,500+ readings over roughly a decade [web:22]. That's a more moderate volume than Keen's highest-volume readers  -  but volume alone isn't the metric that matters here. What matters is the rating trajectory: 4.9 stars across 3,100+ reviews at this volume indicates an exceptionally low dissatisfaction rate. High-volume readers with 50,000+ sessions sometimes maintain strong ratings simply through law of large numbers  -  one bad session in a hundred barely moves the needle. At Azzy's volume, a 4.9 rating means almost every session is landing well. That's a harder standard to maintain.
+Azzy joined Keen in 2015 and has accumulated 16,500+ readings over roughly a decade. That's a more moderate volume than Keen's highest-volume readers  -  but volume alone isn't the metric that matters here. What matters is the rating trajectory: 4.9 stars across 3,100+ reviews at this volume indicates an exceptionally low dissatisfaction rate. High-volume readers with 50,000+ sessions sometimes maintain strong ratings simply through law of large numbers  -  one bad session in a hundred barely moves the needle. At Azzy's volume, a 4.9 rating means almost every session is landing well. That's a harder standard to maintain.
 
 ---
 
@@ -109,7 +109,7 @@ Keen's endorsement system lets clients tag readers with specific qualities after
 
 ### Why Her Top Tags Are "Helpful, Honest, Kind"  -  Not "Accurate"  -  and What That Distinction Means
 
-Her endorsement rankings: **Helpful (214) > Honest (208) > Kind (205) > Detailed (192) > Accurate (190)** [web:22]. Accurate appears fifth. This is not a red flag  -  it's a precise description of what kind of reader she is. Clients who book her and leave satisfied are primarily reporting that they felt helped, heard honestly, and supported with depth. They are not primarily reporting that specific predictions came true. Compare this to a clairvoyant-first reader where "Accurate" would almost certainly rank first or second. Azzy's value proposition is not *I will tell you what happens*. It is *I will help you understand what is happening and what your options are.* The endorsement data confirms that she delivers exactly that, consistently.
+Her endorsement rankings: **Helpful (214) > Honest (208) > Kind (205) > Detailed (192) > Accurate (190)**. Accurate appears fifth. This is not a red flag  -  it's a precise description of what kind of reader she is. Clients who book her and leave satisfied are primarily reporting that they felt helped, heard honestly, and supported with depth. They are not primarily reporting that specific predictions came true. Compare this to a clairvoyant-first reader where "Accurate" would almost certainly rank first or second. Azzy's value proposition is not *I will tell you what happens*. It is *I will help you understand what is happening and what your options are.* The endorsement data confirms that she delivers exactly that, consistently.
 
 ### The Review Language Pattern That Separates Her From Prediction-First Readers
 
@@ -145,7 +145,7 @@ Tarot is Azzy's primary structured framework for situational readings  -  love q
 
 ### The One Specialty on Her Profile That Almost Nobody Talks About (But Should)
 
-Azzy explicitly lists **Pets & Animals** as a specialty  -  one of very few Keen advisors to actively offer this service [web:22]. For clients who have lost a pet, are concerned about an animal's wellbeing, or want to explore a connection with an animal companion, this is a genuine niche that almost no platform advisors cover with any depth. The fact that it appears in her profile alongside her Otherworld Connections and Angel Readings work suggests this isn't a marketing checkbox  -  it's part of a broader practice framework that extends to non-human relationships. If this is relevant to your situation, Azzy may be the most specifically qualified option you'll find on Keen.
+Azzy explicitly lists **Pets & Animals** as a specialty  -  one of very few Keen advisors to actively offer this service. For clients who have lost a pet, are concerned about an animal's wellbeing, or want to explore a connection with an animal companion, this is a genuine niche that almost no platform advisors cover with any depth. The fact that it appears in her profile alongside her Otherworld Connections and Angel Readings work suggests this isn't a marketing checkbox  -  it's part of a broader practice framework that extends to non-human relationships. If this is relevant to your situation, Azzy may be the most specifically qualified option you'll find on Keen.
 
 ---
 

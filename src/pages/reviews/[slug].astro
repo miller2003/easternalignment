@@ -94,6 +94,8 @@ const faqItems = [
 <ReviewLayout
   title={frontmatter.title}
   description={frontmatter.description}
+  seoTitle={frontmatter.seoTitle || `${frontmatter.platformName} Review (2026)`}
+  metaDescription={frontmatter.metaDescription}
   platformName={frontmatter.platformName}
   rating={frontmatter.rating}
   verdict={frontmatter.verdict}

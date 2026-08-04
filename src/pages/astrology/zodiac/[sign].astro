@@ -1,0 +1,286 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { SIGNS, signByName, ELEMENTS, MODALITIES, compatibilityScore, pairSlug } from '../../../data/zodiac';
+
+export function getStaticPaths() {
+  return SIGNS.map(sign => ({
+    params: { sign: sign.name.toLowerCase() },
+    props: { sign },
+  }));
+}
+
+const { sign } = Astro.props;
+
+/* Compatibility preview — the 3 best matches for this sign */
+const allScores = SIGNS
+  .filter(s => s.name !== sign.name)
+  .map(s => ({ sign: s, ...compatibilityScore(sign, s) }))
+  .sort((a, b) => b.score - a.score);
+
+const topMatches = allScores.slice(0, 3);
+
+const elementInfo = ELEMENTS[sign.element];
+const polarity = signByName(sign.opposite);
+
+const pageTitle = `${sign.name} Zodiac Sign: Personality & Love`;
+const pageDesc = `Everything about the ${sign.name} zodiac sign — dates (${sign.dates}), personality, traits, ruling planet ${sign.ruler}, love compatibility, and the signs you match best with.`;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageTitle,
+  "description": pageDesc,
+  "about": [{ "@type": "Thing", "name": `${sign.name} zodiac sign` }],
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDesc} jsonLd={personSchema}>
+  <div class="page-with-sidebars">
+    <main class="main-col">
+      <div class="sign-page">
+        <Breadcrumb items={[{ label: 'Astrology', href: '/astrology/' }, { label: sign.name }]} />
+
+        <header class="sign-hero">
+          <div class="sign-hero-symbol">{sign.symbol}</div>
+          <div class="sign-hero-text">
+            <span class="badge badge--sage">{sign.dates}</span>
+            <h1>{sign.name} Zodiac Sign: Personality, Traits & Love Compatibility</h1>
+            <p class="sign-hero-desc text-muted">{sign.intro}</p>
+          </div>
+        </header>
+
+        <div class="sign-facts card">
+          <div class="sign-facts-grid">
+            <div class="fact-item">
+              <span class="fact-label">Element</span>
+              <span class="fact-value">{sign.element}</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Modality</span>
+              <span class="fact-value">{sign.modality}</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Ruling Planet</span>
+              <span class="fact-value">{sign.ruler}</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Opposite Sign</span>
+              <span class="fact-value"><a href={`/astrology/zodiac/${sign.opposite.toLowerCase()}/`}>{sign.opposite}</a></span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Symbol</span>
+              <span class="fact-value">{sign.symbol}</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Dates</span>
+              <span class="fact-value">{sign.dates}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="prose">
+          <h2>{sign.name} Personality: Core Traits</h2>
+          <p>
+            Every zodiac sign carries a distinct energetic signature, and {sign.name} is defined by {sign.element.toLowerCase()} + {sign.modality.toLowerCase()} energy ruled by {sign.ruler}. The traits below are the ones that consistently show up across {sign.name} profiles — and the ones most likely to surface in a relationship or career context.
+          </p>
+          <ul>
+            {sign.traits.map(t => <li><strong>{t}</strong> — a defining quality that shapes how {sign.name} approaches relationships, work, and conflict.</li>)}
+          </ul>
+
+          <h2>The {sign.element} Element: {elementInfo.label} in {sign.name}</h2>
+          <p>{elementInfo.desc}</p>
+          <p>
+            {sign.name}'s {sign.element.toLowerCase()} nature means {MODALITIES[sign.modality].toLowerCase()}
+          </p>
+          <p>
+            The {sign.element.toLowerCase()} element shapes how {sign.name} loves, argues, and commits: {sign.name} is drawn to relationships that {sign.element === 'Fire' ? 'bring heat, momentum, and a shared sense of adventure' : sign.element === 'Earth' ? 'offer stability, loyalty, and something real to build together' : sign.element === 'Air' ? 'stimulate the mind and keep the conversation alive' : 'provide emotional depth, intuition, and a sense of being truly seen'}.
+          </p>
+
+          <h2>{sign.name} in Love & Relationships</h2>
+          <p>
+            When it comes to love, {sign.name} wants {sign.element === 'Fire' ? 'passion and enthusiasm — a partner who can keep up and share the spark' : sign.element === 'Earth' ? 'security and consistency — a partner who shows up and builds a real life together' : sign.element === 'Air' ? 'mental connection — a partner who can match the conversation and the ideas' : 'emotional depth — a partner who feels as much as they think'}. The best match for a {sign.name} is someone who understands {sign.modality.toLowerCase()} energy: {MODALITIES[sign.modality]}
+          </p>
+
+          <h2>Best & Worst Zodiac Matches for {sign.name}</h2>
+          <p>
+            Based on classical element and modality compatibility rules, these are the strongest matches for {sign.name} — and the pairs that require the most work.
+          </p>
+          <table>
+            <thead>
+              <tr><th>Sign</th><th>Compatibility</th><th>Why</th></tr>
+            </thead>
+            <tbody>
+              {allScores.slice(0, 6).map(s => (
+                <tr>
+                  <td><a href={`/astrology/zodiac/${pairSlug(sign, s.sign)}/`}>{s.sign.name}</a> ↔ {sign.name}</td>
+                  <td>{s.score}/10 — {s.label}</td>
+                  <td>{s.sign.element} + {sign.element} {s.sign.element === sign.element ? '(same element resonance)' : ELEMENTS[sign.element].harmonious.includes(s.sign.element) ? '(harmonious element flow)' : '(challenging element friction)'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <h3>Your Top 3 Matches</h3>
+          <div class="top-matches">
+            {topMatches.map(m => (
+              <a href={`/astrology/zodiac/${pairSlug(sign, m.sign)}/`} class="match-chip card">
+                <span class="match-chip-name">{sign.symbol} {sign.name} + {m.sign.symbol} {m.sign.name}</span>
+                <span class="match-chip-score">{m.score}/10 · {m.label}</span>
+              </a>
+            ))}
+          </div>
+
+          <div class="cta-box">
+            <h3>Want a Personal Compatibility Reading?</h3>
+            <p>
+              A zodiac chart only tells you the potential. A live psychic reading can tell you whether the potential is real — for your specific situation, your specific chart, and your specific person. The readers I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> work with astrology, tarot, and direct intuition, and both platforms offer risk-free trial minutes.
+            </p>
+            <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+              <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+              <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+            </div>
+          </div>
+
+          <h2>All {sign.name} Compatibility Pairs</h2>
+          <div class="pair-links">
+            {allScores.map(s => (
+              <a href={`/astrology/zodiac/${pairSlug(sign, s.sign)}/`} class="pair-link">
+                {sign.symbol} {sign.name} + {s.sign.symbol} {s.sign.name} <span class="pair-score">{s.score}/10</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-with-sidebars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6) var(--space-12);
+  }
+
+  .main-col {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max-width-content);
+  }
+
+  .sign-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-6);
+    margin: var(--space-6) 0;
+  }
+
+  .sign-hero-symbol {
+    font-size: 4.5rem;
+    line-height: 1;
+    color: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .sign-hero-text h1 {
+    margin-top: var(--space-2);
+  }
+
+  .sign-hero-desc {
+    line-height: var(--leading-relaxed);
+  }
+
+  .sign-facts {
+    margin-bottom: var(--space-6);
+  }
+
+  .sign-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .fact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fact-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .fact-value {
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+  }
+
+  .top-matches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .match-chip {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    text-decoration: none;
+    padding: var(--space-4);
+  }
+
+  .match-chip-name {
+    font-weight: var(--weight-semibold);
+  }
+
+  .match-chip-score {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+  }
+
+  .pair-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+
+  .pair-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    transition: border-color var(--transition-fast);
+  }
+
+  .pair-link:hover {
+    border-color: var(--color-primary-light);
+  }
+
+  .pair-score {
+    color: var(--color-primary);
+    font-weight: var(--weight-semibold);
+  }
+
+  @media (max-width: 768px) {
+    .sign-facts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .top-matches, .pair-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

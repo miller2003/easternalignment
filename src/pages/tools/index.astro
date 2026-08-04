@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const toolsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Free Psychic & Zodiac Tools",
+  "description": "Free interactive tools for the spiritual seeker — tarot, numerology, moon phase, angel numbers, compatibility, and dream meanings.",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Yes/No Tarot", "url": "https://easternalignment.com/tools/yes-no-tarot/" },
+    { "@type": "ListItem", "position": 2, "name": "Daily Card Tarot", "url": "https://easternalignment.com/tools/one-card-tarot/" },
+    { "@type": "ListItem", "position": 3, "name": "Angel Number Calculator", "url": "https://easternalignment.com/tools/angel-number-calculator/" },
+    { "@type": "ListItem", "position": 4, "name": "Life Path Calculator", "url": "https://easternalignment.com/tools/life-path-calculator/" },
+    { "@type": "ListItem", "position": 5, "name": "Zodiac Love Compatibility Calculator", "url": "https://easternalignment.com/tools/zodiac-compatibility-calculator/" },
+    { "@type": "ListItem", "position": 6, "name": "Moon Phase Tracker", "url": "https://easternalignment.com/tools/moon-phase/" },
+    { "@type": "ListItem", "position": 7, "name": "Dream Dictionary", "url": "https://easternalignment.com/tools/dream-dictionary/" }
+  ]
+};
+---
+
+<BaseLayout
+  title="Free Psychic Tools: Tarot, Zodiac & Numerology"
+  description="Free interactive tools for the spiritual seeker — yes/no tarot, daily card tarot, angel number calculator, life path calculator, zodiac love compatibility, moon phase tracker, and dream dictionary."
+  jsonLd={toolsSchema}
+>
+  <div class="tools-hub section">
+    <div class="container">
+      <div class="tools-header">
+        <Breadcrumb items={[{ label: 'Tools' }]} />
+        <span class="badge badge--sage">Free Tools</span>
+        <h1>Free Psychic & Zodiac Tools</h1>
+        <p class="tools-desc text-muted">
+          Every tool here is free, instant, and private — no sign-up, no email required. Use them to explore your questions, and when a tool points at something deeper, the readers I've tested are one click away.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        <a href="/tools/yes-no-tarot/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">🃏</span>
+          <h2 class="tool-name">Yes/No Tarot</h2>
+          <p class="tool-desc text-muted text-sm">Draw a single Major Arcana card to answer a yes-or-no question, with the meaning explained.</p>
+          <span class="tool-link text-primary text-sm">Try the Tool →</span>
+        </a>
+
+        <a href="/tools/one-card-tarot/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">🌅</span>
+          <h2 class="tool-name">Daily Card Tarot</h2>
+          <p class="tool-desc text-muted text-sm">Start your day with one card and its theme — the simplest tarot ritual there is.</p>
+          <span class="tool-link text-primary text-sm">Draw Your Card →</span>
+        </a>
+
+        <a href="/tools/angel-number-calculator/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">✨</span>
+          <h2 class="tool-name">Angel Number Calculator</h2>
+          <p class="tool-desc text-muted text-sm">Enter the number you keep seeing — or your birth date — and reveal its angel number meaning.</p>
+          <span class="tool-link text-primary text-sm">Find Your Number →</span>
+        </a>
+
+        <a href="/tools/life-path-calculator/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">🔢</span>
+          <h2 class="tool-name">Life Path Calculator</h2>
+          <p class="tool-desc text-muted text-sm">Discover your Life Path number from your birth date — the core of your numerology chart.</p>
+          <span class="tool-link text-primary text-sm">Calculate Now →</span>
+        </a>
+
+        <a href="/tools/zodiac-compatibility-calculator/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">💞</span>
+          <h2 class="tool-name">Love Compatibility Calculator</h2>
+          <p class="tool-desc text-muted text-sm">Score your romance, communication, and long-term potential with any zodiac pairing.</p>
+          <span class="tool-link text-primary text-sm">Check Compatibility →</span>
+        </a>
+
+        <a href="/tools/moon-phase/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">🌙</span>
+          <h2 class="tool-name">Moon Phase Tracker</h2>
+          <p class="tool-desc text-muted text-sm">See tonight's moon phase, illumination, and count down to the next full and new moon.</p>
+          <span class="tool-link text-primary text-sm">Check the Moon →</span>
+        </a>
+
+        <a href="/tools/dream-dictionary/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">💤</span>
+          <h2 class="tool-name">Dream Dictionary</h2>
+          <p class="tool-desc text-muted text-sm">Look up what your dream symbols mean — exes, snakes, water, teeth, and 40+ common themes.</p>
+          <span class="tool-link text-primary text-sm">Search Dreams →</span>
+        </a>
+
+        <a href="/astrology/" class="tool-card card card--elevated">
+          <span class="tool-icon" aria-hidden="true">♈</span>
+          <h2 class="tool-name">Zodiac Compatibility Hub</h2>
+          <p class="tool-desc text-muted text-sm">Personality profiles for all 12 signs and full compatibility guides for every pairing.</p>
+          <span class="tool-link text-primary text-sm">Explore the Zodiac →</span>
+        </a>
+      </div>
+
+      <div class="cta-box">
+        <h2>When a Tool Isn't Enough</h2>
+        <p>
+          Tools give you direction. A live reading gives you context — timing, obstacles, the other person's energy, and the specific path forward. If your question is high-stakes or deeply personal, the readers I've tested on <a href="/reviews/keen/">Keen</a> and <a href="/reviews/kasamba/">Kasamba</a> can take it far beyond what any tool can answer, and both platforms offer trial minutes.
+        </p>
+        <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+          <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tools-hub {
+    padding-top: var(--space-10);
+  }
+
+  .tools-header {
+    margin: var(--space-6) 0 var(--space-8);
+    text-align: center;
+  }
+
+  .tools-header h1 {
+    margin: var(--space-3) 0;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .tools-desc {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-10);
+  }
+
+  .tool-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-decoration: none;
+    padding: var(--space-6);
+    text-align: center;
+    align-items: center;
+  }
+
+  .tool-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+
+  .tool-name {
+    font-size: var(--text-lg);
+    margin: 0;
+    transition: color var(--transition-fast);
+  }
+
+  .tool-card:hover .tool-name {
+    color: var(--color-primary);
+  }
+
+  .tool-desc {
+    margin: 0;
+    flex: 1;
+    line-height: var(--leading-normal);
+  }
+
+  .tool-link {
+    font-weight: var(--weight-medium);
+  }
+
+  .cta-box {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .tools-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
