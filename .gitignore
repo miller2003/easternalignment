@@ -50,3 +50,25 @@ scratch/_fx_kas_diff.py
 scratch/_fx_kas_diff2.py
 # run-once local Keen avatar fix script (user's machine only)
 scratch/keen_fix.py
+
+# avatar-fix round-2 staging (fx2_*: page dumps, downloads, scripts) — never commit
+scratch/fx2/
+scratch/fx2_k/
+scratch/fx2_k_stage/
+scratch/fx2_stage/
+scratch/fx2_keen_pages/
+scratch/fx2_keen_stage/
+scratch/fx2_keen_urls.json
+scratch/fx2_keen_result.json
+scratch/fx2_keen.py
+scratch/fx2_keen_dl.sh
+scratch/fx2_kas.py
+scratch/fx2_pg.py
+scratch/fx2_pg2.py
+scratch/fx2_pg_result.json
+scratch/fx2_batch*.txt
+scratch/fx2_b4.txt
+scratch/fx2_raj*.html
+scratch/fx2_keen_alice.html
+scratch/fx2_keen_alice.html
+scratch/fx2_missing.txt
