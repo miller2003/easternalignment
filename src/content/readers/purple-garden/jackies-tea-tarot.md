@@ -5,7 +5,7 @@ platformName: "Purple Garden"
 rating: 5
 verdict: "Jackies Tea Tarot is a 5.0-star intuitive tarot reader on Purple Garden whose tenure since 2017 and 9,023 readings make her a long-proven, if lower-volume, pick for card-based insight."
 affiliateUrl: /go/purple-garden-jackies-tea-tarot/
-avatarUrl: /avatars/purple-garden/jackies-tea-tarot.svg
+avatarUrl: /avatars/purple-garden/jackies-tea-tarot.jpg
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $6.99/min"
 bestFor: "Intuitive tarot from a long-tenured, perfect-5.0 reader"
