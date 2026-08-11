@@ -1,6 +1,8 @@
 ---
 title: 'Psychic Yazmin Kasamba Review (2026): Can "Yaz" Really See What Others Miss?'
 description: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and
+seoTitle: "Psychic Yazmin Kasamba Review (2026): Emotional-Mirroring Reader"
+metaDescription: "Psychic Yazmin on Kasamba: an emotional-mirroring intuitive reader. We review her method, pricing, real client patterns, and who should book."
 platformName: 'Kasamba: Psychic Yazmin'
 rating: 4.5
 verdict: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and tarot

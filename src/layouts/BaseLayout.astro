@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TopDisclosureBar from '../components/TopDisclosureBar.astro';
 import PostHog from '../components/PostHog.astro';
+import StickyCTA from '../components/StickyCTA.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -134,5 +135,8 @@ const personSchema = {
     </main>
 
     <Footer />
+
+    <!-- Mobile/tablet persistent CTA (hidden >= 1100px where the sidebar shows) -->
+    <StickyCTA />
   </body>
 </html>

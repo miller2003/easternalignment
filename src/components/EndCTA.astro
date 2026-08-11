@@ -1,0 +1,246 @@
+---
+/**
+ * EndCTA.astro — End-of-article affiliate offer block.
+ *
+ * Placed after the article body on every guide & comparison page (injected by
+ * ArticleLayout / ComparisonLayout), this captures the single highest-intent
+ * moment: the reader who just finished the content. It presents all three
+ * tested platforms, with the Editor's Choice (Keen) emphasised, so the page
+ * converts instead of dumping the reader into the footer.
+ *
+ * All buttons route through /go/ (gated + tracked) and carry
+ * data-cta-source="end" for PostHog segmentation.
+ *
+ * Props let a specific page promote one platform (e.g. a Kasamba-focused
+ * comparison) by reordering/highlighting, but defaults are sensible.
+ */
+interface Props {
+  primarySlug?: 'keen' | 'kasamba' | 'purple-garden';
+  heading?: string;
+  subheading?: string;
+}
+
+const {
+  primarySlug = 'keen',
+  heading = 'Ready to get your reading?',
+  subheading = 'I’ve personally tested each platform with my own money. Pick the one that fits you — every link is an independent recommendation.',
+} = Astro.props;
+
+const offers = [
+  {
+    slug: 'keen',
+    name: 'Keen',
+    tag: 'Editor’s Choice',
+    offer: '5 minutes for $1',
+    blurb: 'Deepest roster & finest phone infrastructure. The safest place to test a top reader for pocket change.',
+    color: '#004d40',
+  },
+  {
+    slug: 'kasamba',
+    name: 'Kasamba',
+    tag: 'Best for Chat & Love',
+    offer: '3 free minutes + 50% off',
+    blurb: 'Permanent chat transcripts & 3 free minutes with every new advisor — safest for testing relationship specialists.',
+    color: '#4a6ee0',
+  },
+  {
+    slug: 'purple-garden',
+    name: 'Purple Garden',
+    tag: 'Best for Video',
+    offer: '$30 credit on first purchase',
+    blurb: 'Mandatory video intros & a public outcomes ledger. The most accessible entry price.',
+    color: '#6b4d8c',
+  },
+];
+
+// Put the primary first and mark it featured
+const ordered = [...offers].sort((a, b) => {
+  if (a.slug === primarySlug) return -1;
+  if (b.slug === primarySlug) return 1;
+  return 0;
+});
+---
+
+<section class="end-cta" id="end-cta-anchor" aria-label="Recommended psychic reading platforms">
+  <div class="end-cta__head">
+    <h2 class="end-cta__title">{heading}</h2>
+    <p class="end-cta__sub">{subheading}</p>
+  </div>
+
+  <div class="end-cta__grid">
+    {ordered.map((o) => (
+      <div class:list={['end-cta__card', { 'end-cta__card--featured': o.slug === primarySlug }]}>
+        {o.slug === primarySlug && <span class="end-cta__badge">&#x2726; {o.tag}</span>}
+        <div class="end-cta__card-top">
+          <span class="end-cta__name" style={`color: ${o.color}`}>{o.name}</span>
+        </div>
+        <p class="end-cta__offer">{o.offer}</p>
+        <p class="end-cta__blurb">{o.blurb}</p>
+        <a
+          href={`/go/${o.slug}/`}
+          class:list={['end-cta__btn', { 'end-cta__btn--featured': o.slug === primarySlug }]}
+          rel="nofollow sponsored"
+          target="_blank"
+          data-cta-source="end"
+        >
+          Visit {o.name} &rarr;
+        </a>
+      </div>
+    ))}
+  </div>
+
+  <p class="end-cta__disclaimer">
+    Eastern Alignment is reader-supported. If you sign up through a link, we may earn a commission — at no extra cost to you. This never influences my ratings.
+  </p>
+</section>
+
+<style>
+  .end-cta {
+    margin: var(--space-10) 0 var(--space-6);
+    padding: var(--space-8);
+    background: linear-gradient(180deg, var(--color-bg, #faf8f5) 0%, var(--color-surface, #ffffff) 100%);
+    border: 1px solid var(--color-accent-light, #e8cdb0);
+    border-radius: var(--radius-xl, 16px);
+  }
+
+  .end-cta__head {
+    text-align: center;
+    margin-bottom: var(--space-6);
+  }
+
+  .end-cta__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--color-primary-dark, #2d2a26);
+    margin: 0 0 var(--space-2);
+  }
+
+  .end-cta__sub {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted, #7a746b);
+    line-height: var(--leading-relaxed);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .end-cta__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .end-cta__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e8e2da);
+    border-radius: var(--radius-lg, 12px);
+    text-align: center;
+  }
+
+  .end-cta__card--featured {
+    border-color: var(--color-accent, #c4956a);
+    box-shadow: 0 8px 24px rgba(196, 149, 106, 0.14);
+  }
+
+  .end-cta__badge {
+    position: absolute;
+    top: calc(-1 * var(--space-3));
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: var(--color-accent, #c4956a);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 9999px;
+  }
+
+  .end-cta__card-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 28px;
+  }
+
+  .end-cta__name {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .end-cta__offer {
+    margin: 0;
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--color-primary-dark, #2d2a26);
+  }
+
+  .end-cta__blurb {
+    margin: 0;
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted, #7a746b);
+    flex: 1;
+  }
+
+  .end-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--space-2);
+    padding: 10px 14px;
+    border-radius: 9999px;
+    background: var(--color-surface, #ffffff);
+    color: var(--color-primary, #8b6f4e);
+    border: 1.5px solid var(--color-primary, #8b6f4e);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .end-cta__btn:hover {
+    background: var(--color-primary, #8b6f4e);
+    color: #ffffff;
+  }
+
+  .end-cta__btn--featured {
+    background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 2px 8px rgba(196, 149, 106, 0.3);
+  }
+
+  .end-cta__btn--featured:hover {
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(196, 149, 106, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .end-cta__disclaimer {
+    margin: var(--space-6) 0 0;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--color-text-light, #a39c92);
+    text-align: center;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 640px) {
+    .end-cta { padding: var(--space-6) var(--space-4); }
+    .end-cta__grid { grid-template-columns: 1fr; }
+    .end-cta__card { text-align: left; align-items: flex-start; }
+    .end-cta__card-top { justify-content: flex-start; }
+    .end-cta__btn { width: 100%; }
+  }
+</style>

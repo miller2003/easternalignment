@@ -1,11 +1,14 @@
 ---
 title: "Empathic Intuitive Marcus on Purple Garden Review 2026: An Unfiltered Audit of His Male Perspective Love Readings"
 description: "My independent review of Empathic Intuitive Marcus on Purple Garden — why his direct male perspective breaks through emotional ambiguity, my personal $4.99/min voice session notes, and his Journeys accuracy."
+seoTitle: "Empathic Intuitive Marcus Purple Garden Review (2026)"
+metaDescription: "Empathic Intuitive Marcus on Purple Garden: an empathy-led relationship reader. We review his method, pricing, real client patterns, and who should book."
 platform: "purple-garden"
 platformName: "Purple Garden: Empathic Intuitive Marcus"
+avatarUrl: /avatars/purple-garden/empathic-intuitive-marcus.jpg
 rating: 4.8
 verdict: "Empathic Intuitive Marcus brings a grounded, highly perceptive masculine perspective to relationship readings on Purple Garden. Combining claircognizant intuition with pragmatic behavioral psychology, he cuts through romantic wishful thinking to explain what a romantic partner is actually thinking and intending."
-affiliateUrl: "/go/purple-garden/"
+affiliateUrl: "/go/purple-garden-marcus/"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "$4.99/min (Video / Call)"
 bestFor: "Seekers looking for an authentic male perspective on complex romantic behavior and commitment ambiguity"

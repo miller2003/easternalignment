@@ -1,6 +1,8 @@
 ---
 title: 'Love Stefans Psychic Soul Review: Kasamba''''s Top 3 Most Experienced Reader'
 description: An honest review of Love Stefans Psychic Soul on Kasamba — a UK-based
+seoTitle: "Love Stefan’s Psychic Soul Kasamba Review (2026)"
+metaDescription: "Love Stefan’s Psychic Soul on Kasamba: a relationship-focused intuitive reader. We review her method, pricing, and who should book."
 platformName: 'Kasamba: Love Stefans Psychic Soul'
 rating: 5
 verdict: Love Stefans Psychic Soul is one of the most credentialed readers on Kasamba

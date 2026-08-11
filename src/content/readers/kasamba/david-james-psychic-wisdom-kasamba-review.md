@@ -1,6 +1,8 @@
 ---
 title: 'David James Psychic Wisdom Kasamba Review (2026): Is $7.99/Min Actually Worth'
 description: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba.
+seoTitle: "David James (Psychic Wisdom) Kasamba Review (2026)"
+metaDescription: "David James Psychic Wisdom on Kasamba: a multi-system analytical reader. We review his method, pricing, real quotes, and who should book."
 platformName: 'Kasamba: David James Psychic Wisdom'
 rating: 4.7
 verdict: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba.

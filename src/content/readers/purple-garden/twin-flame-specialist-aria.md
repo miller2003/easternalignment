@@ -1,11 +1,14 @@
 ---
 title: "Twin Flame Specialist Aria on Purple Garden Review 2026: Separating Authentic Soulmate Insights from Fantasy Validation"
 description: "My independent audit of Twin Flame Specialist Aria on Purple Garden — how she evaluates soul connections, my personal $5.99/min video test, and why she refuses to validate toxic dynamics."
+seoTitle: "Twin Flame Specialist Aria Purple Garden Review (2026)"
+metaDescription: "Twin Flame Specialist Aria on Purple Garden: a twin-flame and soulmate reader. We review her method, pricing, real client patterns, and who should book."
 platform: "purple-garden"
 platformName: "Purple Garden: Twin Flame Specialist Aria"
+avatarUrl: /avatars/purple-garden/twin-flame-specialist-aria.jpg
 rating: 4.7
 verdict: "Twin Flame Specialist Aria brings ethical maturity to one of the most misunderstood categories in online psychic readings. Rather than validating obsessive attachments, she uses soul-contract readings to distinguish between genuine karmic soulmates and unhealthy trauma bonds."
-affiliateUrl: "/go/purple-garden/"
+affiliateUrl: "/go/purple-garden-aria/"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "$5.99/min (Video / Call)"
 bestFor: "Seekers navigating intense spiritual connections, soulmate questions, and karmic attachment patterns"

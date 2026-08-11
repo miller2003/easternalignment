@@ -61,20 +61,38 @@ const readerName = frontmatter.platformName?.includes(':')
   ? frontmatter.platformName.split(':').pop()?.trim()
   : frontmatter.platformName;
 
-const faqItems = [
-  {
-    question: `Is ${readerName} a legitimate psychic reader?`,
-    answer: `${readerName} is an active reader on Keen, one of the longest-running psychic platforms online. My review is based on analysis of their profile, verified client reviews, and documented track record. Check the full review above for details on their rating and client feedback.`
-  },
-  {
-    question: `How much does a reading with ${readerName} cost?`,
-    answer: `${readerName} charges ${frontmatter.pricing || 'rates vary'} per minute. ${frontmatter.freeOffer ? `New Keen users can take advantage of ${frontmatter.freeOffer}.` : ''} Session length varies, but I recommend having a budget in mind before you start.`
-  },
-  {
-    question: `How do I book a session with ${readerName}?`,
-    answer: `You can book ${readerName} directly through Keen. Look for their profile in the platform directory, check their availability status, and connect via phone or chat depending on what they offer. My review above includes specific booking tips.`
-  },
-];
+/* Reader delisted from the platform? Honour it site-wide (CTA + FAQ + hero). */
+const unavailable = frontmatter.unavailable === true;
+
+const faqItems = unavailable
+  ? [
+      {
+        question: `Was ${readerName} a legitimate psychic reader?`,
+        answer: `${readerName} was a reader on Keen and the subject of my review, based on analysis of their profile, verified client reviews, and documented track record. Note: ${readerName} is no longer listed on Keen. You can browse Keen's current live advisors via the button below.`
+      },
+      {
+        question: `How much did a reading with ${readerName} cost?`,
+        answer: `${readerName}'s prior rate was ${frontmatter.pricing || 'rates vary'}. Since they are no longer listed on Keen, that rate no longer applies — browse Keen's live advisors for current pricing and new-client offers.`
+      },
+      {
+        question: `How do I find a similar reader on Keen?`,
+        answer: `${readerName} is no longer on Keen, but the platform still has many warmth-first and accuracy-focused advisors. Use the button below to browse Keen's live roster and current new-client offer to find a similar fit.`
+      },
+    ]
+  : [
+      {
+        question: `Is ${readerName} a legitimate psychic reader?`,
+        answer: `${readerName} is an active reader on Keen, one of the longest-running psychic platforms online. My review is based on analysis of their profile, verified client reviews, and documented track record. Check the full review above for details on their rating and client feedback.`
+      },
+      {
+        question: `How much does a reading with ${readerName} cost?`,
+        answer: `${readerName} charges ${frontmatter.pricing || 'rates vary'} per minute. ${frontmatter.freeOffer ? `New Keen users can take advantage of ${frontmatter.freeOffer}.` : ''} Session length varies, but I recommend having a budget in mind before you start.`
+      },
+      {
+        question: `How do I book a session with ${readerName}?`,
+        answer: `You can book ${readerName} directly through Keen. Look for their profile in the platform directory, check their availability status, and connect via phone or chat depending on what they offer. My review above includes specific booking tips.`
+      },
+    ];
 
 const relatedItems = [
   {
@@ -114,6 +132,7 @@ const relatedItems = [
   schemaDatePublished={frontmatter.schemaDatePublished}
   customSchema={frontmatter.customSchema}
   entities={frontmatter.entities}
+  ctaOverride={frontmatter.ctaOverride}
 >
   <Content />
 
@@ -122,10 +141,12 @@ const relatedItems = [
   )}
 
   <CTABox
-    title={`Ready to try ${readerName}?`}
-    description={frontmatter.freeOffer ? `Take advantage of the current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.'}
-    buttonText={`Book ${readerName} on Keen →`}
-    buttonUrl={frontmatter.affiliateUrl || '#'}
+    title={unavailable ? `Looking for a reader like ${readerName}?` : `Ready to try ${readerName}?`}
+    description={unavailable
+      ? 'Mystic Raj is no longer listed on Keen. Browse Keen’s live advisors and their current new-client offer.'
+      : (frontmatter.freeOffer ? `Take advantage of the current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.')}
+    buttonText={unavailable ? 'See Live Keen Advisors →' : `Book ${readerName} on Keen →`}
+    buttonUrl={unavailable ? '/go/keen/' : (frontmatter.affiliateUrl || '#')}
     variant="highlight"
   />
 

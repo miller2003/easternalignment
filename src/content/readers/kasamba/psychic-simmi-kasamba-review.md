@@ -1,6 +1,8 @@
 ---
 title: 'Psychic Simmi Kasamba Review (2026): Is She Actually Worth Your Money?'
 description: Tested Psychic Simmi on Kasamba firsthand. She's a quiet, detail-oriented
+seoTitle: "Psychic Simmi Kasamba Review (2026): Perfect 5.0 Oracle Reader"
+metaDescription: "Psychic Simmi on Kasamba: a 5.0-star oracle-card reader with 32,000+ readings. We review her method, real quotes, and who should book."
 platformName: 'Kasamba: Psychic Simmi'
 rating: 4.6
 verdict: Tested Psychic Simmi on Kasamba firsthand. She's a quiet, detail-oriented

@@ -68,6 +68,9 @@ const readers = defineCollection({
     publishDate: z.string(),
     updatedDate: z.string().optional(),
     entities: z.array(z.string()).optional(),
+    avatarUrl: z.string().optional(),
+    ctaOverride: z.string().optional(),
+    unavailable: z.boolean().optional(),
     ...seoFields,
   }),
 });

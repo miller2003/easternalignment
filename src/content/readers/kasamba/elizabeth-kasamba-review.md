@@ -2,6 +2,8 @@
 title: 'Elizabeth Kasamba Review (2026): Why She''''s the #1 Rated Psychic on the
   Platform'
 description: 'A sixth-generation psychic, certified Reiki Master, and Kasamba''''s
+seoTitle: "Elizabeth Kasamba Review (2026): Healing & Empowerment Reader"
+metaDescription: "Honest 2026 review of Elizabeth on Kasamba — healing and empowerment focus, pricing, real client patterns, and who should book."
   #1'
 platformName: 'Kasamba: Elizabeth'
 rating: 4.8

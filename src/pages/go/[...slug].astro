@@ -1,57 +1,69 @@
 ---
 /**
- * Local Redirect Handler — /go/[...slug]/
- * 
- * This page reads the public/_redirects file to handle affiliate redirects 
- * during local development (since Astro dev server ignores _redirects).
- * 
- * On production (Cloudflare), the _redirects file will take precedence.
+ * Affiliate Redirect Page — /go/[...slug]/
+ *
+ * Instant, unconditional-looking redirect for REAL human clicks, but a hard
+ * no-op for bots / direct hits / prefetchers — so the affiliate network never
+ * counts fake clicks.
+ *
+ * How a genuine click is detected (any one is enough):
+ *   1. same-origin referrer  -> the visitor came from easternalignment.com
+ *   2. sessionStorage flag    -> set by the click handler (src/components/PostHog.astro)
+ *   3. ?ea_sub=<id> param     -> ONLY our click handler emits this (with a real
+ *                                PostHog distinct_id). Bare bot hits to /go/<slug>/
+ *                                carry none of these, so they never redirect.
+ *
+ * The slug -> URL map is the single source of truth in src/data/affiliateLinks.ts.
+ * TUNE macros (e.g. {transaction_id}) are substituted server-side by TUNE as before.
  */
-import fs from 'fs';
-import path from 'path';
+import { affiliateLinks } from '../../data/affiliateLinks';
 
 export async function getStaticPaths() {
-  const redirectsPath = path.resolve('public/_redirects');
-  if (!fs.existsSync(redirectsPath)) {
-    console.error(`_redirects file not found at ${redirectsPath}`);
-    return [];
-  }
-
-  const content = fs.readFileSync(redirectsPath, 'utf8');
-  const lines = content.split('\n');
-  const paths = [];
-
-  for (const line of lines) {
-    const trimmed = line.trim();
-    if (!trimmed || trimmed.startsWith('#')) continue;
-
-    const parts = trimmed.split(/\s+/);
-    if (parts.length >= 2 && parts[0].startsWith('/go/')) {
-      const slug = parts[0].replace('/go/', '').replace(/\/$/, '');
-      if (slug) {
-        paths.push({
-          params: { slug },
-          props: { url: parts[1] }
-        });
-      }
-    }
-  }
-
-  return paths;
+  return Object.keys(affiliateLinks).map((slug) => ({
+    params: { slug },
+    props: { url: affiliateLinks[slug] },
+  }));
 }
 
 const { url } = Astro.props;
 ---
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content={`0;url=${url}`} />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>Redirecting you... <a href={url}>click here</a> if it doesn't work.</p>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Runs before first paint: real users never see a flash, bots get nothing. -->
     <script define:vars={{ url }}>
-      window.location.href = url;
+      (function () {
+        try {
+          var isReal = false;
+          try {
+            var ref = document.referrer || '';
+            if (ref && new URL(ref).origin === window.location.origin) isReal = true;
+          } catch (e) {}
+          try {
+            if (sessionStorage.getItem('ea_aff_click') !== null) isReal = true;
+          } catch (e) {}
+          var params = new URLSearchParams(window.location.search);
+          var sub = params.get('ea_sub');
+          if (sub) isReal = true; // only our own click handler attaches a real id
+          if (!isReal) return;    // bot / direct hit -> no affiliate navigation
+
+          var dest = url;
+          try {
+            if (sub) {
+              var u = new URL(dest);
+              u.searchParams.set('aff_sub2', sub);
+              dest = u.toString();
+            }
+          } catch (e) {}
+          window.location.replace(dest);
+        } catch (e) {}
+      })();
     </script>
-  </body>
+  </head>
+  <body style="margin:0;background:#faf8f5;"></body>
 </html>

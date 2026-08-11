@@ -1,11 +1,14 @@
 ---
 title: "Psychic Advisor Serena on Purple Garden Review 2026: Video Profile Vetting, Pricing ($4.99/min), & Real Client Outcomes"
 description: "My independent assessment of Psychic Advisor Serena on Purple Garden — evaluating her Staff Picks badge, 4.9-star rating, Lenormand cartomancy technique, and my personal testing notes."
+seoTitle: "Psychic Advisor Serena Purple Garden Review (2026): Lenormand & Staff Picks"
+metaDescription: "Psychic Advisor Serena on Purple Garden: a Staff Picks reader using Lenormand cartomancy, $4.99/min. We review her method, real session test, and who should book."
 platform: "purple-garden"
 platformName: "Purple Garden: Psychic Advisor Serena"
+avatarUrl: /avatars/purple-garden/psychic-advisor-serena.jpg
 rating: 4.9
 verdict: "Holding Purple Garden's prestigious 'Staff Picks' badge, Psychic Advisor Serena delivers compassionate, highly structured clairvoyant readings. She combines traditional Lenormand cartomancy with empathic channeling to clarify career transitions and family dynamics with impressive consistency."
-affiliateUrl: "/go/purple-garden/"
+affiliateUrl: "/go/purple-garden-serena/"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "$4.99/min (Video / Call / Chat)"
 bestFor: "Seekers navigating complex family dynamics, career decisions, and major life crossroads"

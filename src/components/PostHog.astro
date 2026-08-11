@@ -13,32 +13,58 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
       capture_pageview: true
     });
 
-    // Custom tracking and S2S integration for Affiliate Links
+    // ── Affiliate click gating + per-page attribution ──────────────────────
+    // We ONLY treat a click as a real affiliate click when:
+    //   1. it is a trusted, human-initiated event (e.isTrusted === true)
+    //   2. the link points at one of our /go/ affiliate slugs
+    // Bots, prefetches, and scripted clicks never reach the affiliate URL,
+    // so the affiliate network stops counting fake clicks. We then navigate
+    // to /go/<slug>/ which performs the actual (TUNE) redirect for real users.
     document.addEventListener('DOMContentLoaded', () => {
       document.body.addEventListener('click', (e) => {
-        const target = e.target.closest('a');
-        if (target && target.getAttribute('rel')?.includes('sponsored')) {
-          
-          // Retrieve the unique PostHog user ID to act as our Click ID
-          const distinctId = posthog.get_distinct_id();
-          
+        if (!e.isTrusted) return;                 // ignore non-human / synthetic clicks
+        const link = e.target.closest('a');
+        if (!link) return;
+        const href = link.getAttribute('href') || '';
+        const m = href.match(/\/go\/([^/?#]+)/);
+        if (!m) return;                           // not an affiliate link -> let it behave normally
+        const slug = m[1];
+
+        e.preventDefault();                        // take over navigation (bot-proof)
+
+        // Mark this session so the /go/ page knows it's a genuine click.
+        try { sessionStorage.setItem('ea_aff_click', slug); } catch (_) {}
+
+        const distinctId = (window.posthog && typeof posthog.get_distinct_id === 'function')
+          ? posthog.get_distinct_id()
+          : '';
+
+        // CTA placement attribution: where on the page the click originated
+        // (hero | end | sticky | sidebar | inline). Falls back to 'unknown'.
+        const ctaSource = link.getAttribute('data-cta-source')
+          || (link.closest('[data-cta-source]') && link.closest('[data-cta-source]').getAttribute('data-cta-source'))
+          || 'unknown';
+
+        // Per-page attribution: location = the page the click came FROM.
+        if (window.posthog) {
           posthog.capture('affiliate_link_click', {
-            url: target.href,
-            text: target.innerText.trim(),
+            slug: slug,
             location: window.location.pathname,
-            click_id: distinctId
+            ctaSource: ctaSource,
+            target_blank: link.target === '_blank',
+            text: (link.innerText || '').trim().slice(0, 80),
+            click_id: distinctId || null
           });
-          
-          // Append the click_id to the outbound URL for Barges (TUNE) tracking
-          if (distinctId) {
-            try {
-              const url = new URL(target.href);
-              url.searchParams.set('aff_sub2', distinctId);
-              target.href = url.toString();
-            } catch (err) {
-              console.error('Failed to append tracking parameter', err);
-            }
-          }
+        }
+
+        // Route through /go/<slug>/ (which does the real TUNE redirect).
+        // The ?ea_sub=<id> token proves this is a genuine click; the /go/ page
+        // also accepts a same-origin referrer, so we keep it (no `noreferrer`).
+        const dest = '/go/' + slug + '/' + (distinctId ? ('?ea_sub=' + encodeURIComponent(distinctId)) : '');
+        if (link.target === '_blank') {
+          window.open(dest, '_blank', 'noopener');
+        } else {
+          window.location.href = dest;
         }
       });
     });

@@ -1,6 +1,8 @@
 ---
 title: 'Seek Chelle Review on Kasamba: Triple Clair Gifts, 20 Years of Experience,'
 description: An honest review of Seek Chelle on Kasamba — a 20-year intuitive advisor
+seoTitle: "Seek Chelle Kasamba Review (2026)"
+metaDescription: "Honest 2026 review of Seek Chelle on Kasamba — method, pricing, real client patterns, and who should book."
 platformName: 'Kasamba: Seek Chelle'
 rating: 5
 verdict: Seek Chelle is one of the most methodologically specific readers on Kasamba.

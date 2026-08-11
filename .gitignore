@@ -26,3 +26,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# scratch site-config dumps containing live API tokens — never commit
+scratch/_api.json
+scratch/_t_kas.html
+scratch/_t_pg.html

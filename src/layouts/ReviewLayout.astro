@@ -15,6 +15,7 @@ interface Props {
   verdict: string;
   affiliateUrl?: string;
   freeOffer?: string;
+  ctaOverride?: string;
   avatarUrl?: string;
   publishDate: string;
   updatedDate?: string;
@@ -38,6 +39,7 @@ const {
   verdict,
   affiliateUrl = '#',
   freeOffer,
+  ctaOverride,
   avatarUrl,
   publishDate,
   updatedDate,
@@ -139,6 +141,8 @@ if (freeOffer) {
   else if (lowOffer.includes('free trial') || lowOffer.includes('free minutes')) ctaText = 'Start Free Trial →';
   else ctaText = isReaderReview && readerLabel ? `Book ${readerLabel} →` : 'Visit Official Site →';
 }
+// Explicit override (e.g. a reader who left the platform — point to live roster)
+const displayCta = ctaOverride || ctaText;
 ---
 
 <BaseLayout
@@ -210,8 +214,8 @@ if (freeOffer) {
         <p class="review-verdict">{verdict}</p>
 
         <div class="review-hero-cta">
-          <a href={affiliateUrl} class="btn btn--primary btn--lg" rel="nofollow sponsored" target="_blank">
-            {ctaText}
+          <a href={affiliateUrl} class="btn btn--primary btn--lg" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
+            {displayCta}
           </a>
         </div>
       </header>
@@ -296,13 +300,20 @@ if (freeOffer) {
   }
 
   .reader-avatar-lg {
-    width: 72px;
-    height: 72px;
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--color-bg-alt);
-    box-shadow: var(--shadow-sm);
+    border: 3px solid #fff;
+    box-shadow:
+      0 0 0 3px var(--color-accent, #c4956a),
+      0 8px 22px rgba(120, 80, 40, 0.28);
     flex: 0 0 auto;
+    transition: transform var(--transition-base, 0.2s ease);
+  }
+
+  .reader-avatar-lg:hover {
+    transform: scale(1.04);
   }
 
   .reader-rating-summary {

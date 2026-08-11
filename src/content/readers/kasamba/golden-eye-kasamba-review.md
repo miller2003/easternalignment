@@ -1,6 +1,8 @@
 ---
 title: 'Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest'
 description: An honest review of Golden Eye on Kasamba — a 21-year platform veteran
+seoTitle: "Golden Eye Kasamba Review (2026): Intuitive Reader"
+metaDescription: "Golden Eye on Kasamba: an intuitive reader with a focused style. We review her method, pricing, real client patterns, and who should book."
 platformName: 'Kasamba: Golden Eye'
 rating: 4.9
 verdict: Golden Eye is one of the longest-serving and most broadly qualified readers

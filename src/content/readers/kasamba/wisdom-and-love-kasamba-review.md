@@ -1,6 +1,8 @@
 ---
 title: 'Wisdom and Love Kasamba Review (2026): What 100,000+ Readings Actually Buys'
 description: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004
+seoTitle: "Wisdom and Love Kasamba Review (2026)"
+metaDescription: "Wisdom and Love on Kasamba: a relationship and guidance reader. We review the method, pricing, real client patterns, and who should book."
 platformName: 'Kasamba: Wisdom and Love'
 rating: 4.7
 verdict: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004 —

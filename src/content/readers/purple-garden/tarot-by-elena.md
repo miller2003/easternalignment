@@ -1,11 +1,14 @@
 ---
 title: "Tarot by Elena on Purple Garden Review 2026: Why Her Direct-Answer Chat Readings Outperform 90% of Generalists"
 description: "My independent review of Tarot by Elena on Purple Garden — analyzing her rapid chat response speeds, my personal $3.99/min chat log test, and her Journeys outcome history."
+seoTitle: "Tarot by Elena Purple Garden Review (2026)"
+metaDescription: "Tarot by Elena on Purple Garden: a written-transcript tarot reader. We review her method, pricing, real client patterns, and who should book."
 platform: "purple-garden"
 platformName: "Purple Garden: Tarot by Elena"
+avatarUrl: /avatars/purple-garden/tarot-by-elena.jpg
 rating: 4.8
 verdict: "For seekers who prefer the written word and want a permanent transcript of their reading, Tarot by Elena is one of Purple Garden's sharpest analytical tarot practitioners. She avoids mystical jargon in favor of clear, rapid-fire text breakdowns that dissect romantic and career dynamics with forensic detail."
-affiliateUrl: "/go/purple-garden/"
+affiliateUrl: "/go/purple-garden-elena/"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "$3.99/min (Chat / Call)"
 bestFor: "Analytical seekers who want rapid, permanent text-chat transcripts and concrete tarot interpretations"

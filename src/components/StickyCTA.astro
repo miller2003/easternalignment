@@ -1,0 +1,264 @@
+---
+/**
+ * StickyCTA.astro — Mobile/tablet persistent call-to-action bar.
+ *
+ * Why this exists: the left-sidebar deal cards (LeftSidebar.astro) are hidden
+ * below 1100px width, so tablet & mobile readers have NO persistent offer while
+ * reading or after finishing an article. This fixed bottom bar restores that
+ * CTA on small screens — the single biggest conversion fix for content traffic.
+ *
+ * Behaviour:
+ *  - Visible only < 1100px (where the sidebar disappears).
+ *  - Appears after the user scrolls past the hero (~480px).
+ *  - Auto-hides when the end-of-article CTA block (#end-cta-anchor) is in view,
+ *    so we never stack two offers at the bottom.
+ *  - Dismissible (X); choice persisted in sessionStorage so it doesn't nag.
+ *  - Links route through /go/ (gated + tracked); data-cta-source="sticky".
+ */
+---
+
+<div
+  class="sticky-cta"
+  id="sticky-cta"
+  role="region"
+  aria-label="Get a real psychic reading"
+  data-cta-source="sticky"
+  hidden
+>
+  <div class="sticky-cta__inner">
+    <p class="sticky-cta__prompt">
+      <span class="sticky-cta__icon" aria-hidden="true">&#x1F52E;</span>
+      <span class="sticky-cta__text">Ready to talk to a real psychic?</span>
+    </p>
+
+    <div class="sticky-cta__actions">
+      <a
+        href="/go/keen/"
+        class="sticky-cta__btn"
+        rel="nofollow sponsored"
+        target="_blank"
+        data-cta-source="sticky"
+      >
+        Keen &middot; 5 min for $1 &rarr;
+      </a>
+      <a
+        href="/go/kasamba/"
+        class="sticky-cta__btn sticky-cta__btn--ghost"
+        rel="nofollow sponsored"
+        target="_blank"
+        data-cta-source="sticky"
+      >
+        Kasamba &middot; 3 free
+      </a>
+    </div>
+
+    <button
+      type="button"
+      class="sticky-cta__close"
+      id="sticky-cta-close"
+      aria-label="Dismiss offer bar"
+    >
+      &times;
+    </button>
+  </div>
+</div>
+
+<style>
+  .sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    background: var(--color-surface, #ffffff);
+    border-top: 1px solid var(--color-accent, #c4956a);
+    box-shadow: 0 -8px 24px rgba(45, 42, 38, 0.14);
+    transform: translateY(110%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .sticky-cta.is-visible {
+    transform: translateY(0);
+  }
+
+  .sticky-cta__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 10px 14px;
+    position: relative;
+  }
+
+  .sticky-cta__prompt {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text, #2d2a26);
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .sticky-cta__icon {
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .sticky-cta__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sticky-cta__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .sticky-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 9px 12px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(196, 149, 106, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .sticky-cta__btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(196, 149, 106, 0.5);
+    color: #ffffff;
+  }
+
+  .sticky-cta__btn--ghost {
+    background: transparent;
+    color: var(--color-primary, #8b6f4e);
+    border: 1.5px solid var(--color-primary, #8b6f4e);
+    box-shadow: none;
+    font-weight: 600;
+  }
+
+  .sticky-cta__btn--ghost:hover {
+    background: var(--color-primary, #8b6f4e);
+    color: #ffffff;
+    box-shadow: none;
+  }
+
+  .sticky-cta__close {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted, #7a746b);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.15s ease;
+  }
+
+  .sticky-cta__close:hover {
+    background: var(--color-bg-alt, #f3efe9);
+  }
+
+  /* Only show on screens where the left sidebar is hidden */
+  @media (min-width: 1100px) {
+    .sticky-cta { display: none !important; }
+  }
+
+  /* Very narrow screens: drop the ghost button to keep one clear action */
+  @media (max-width: 380px) {
+    .sticky-cta__btn--ghost { display: none; }
+    .sticky-cta__text { display: none; }
+    .sticky-cta__prompt { flex: 0 0 auto; }
+  }
+</style>
+
+<script>
+  (function () {
+    const bar = document.getElementById('sticky-cta');
+    const closeBtn = document.getElementById('sticky-cta-close');
+    if (!bar) return;
+
+    const DISMISS_KEY = 'ea_sticky_cta_dismissed';
+
+    function isDismissed() {
+      try { return sessionStorage.getItem(DISMISS_KEY) === '1'; } catch (e) { return false; }
+    }
+    function markDismissed() {
+      try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch (e) {}
+    }
+
+    let dismissed = isDismissed();
+
+    function show() { bar.classList.add('is-visible'); bar.removeAttribute('hidden'); }
+    function hide() { bar.classList.remove('is-visible'); }
+
+    // Dismiss handler
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        dismissed = true;
+        markDismissed();
+        hide();
+      });
+    }
+
+    // Reveal after scrolling past the hero; hide near the end-of-article CTA
+    let endAnchor = document.getElementById('end-cta-anchor');
+    let ticking = false;
+
+    function evaluate() {
+      ticking = false;
+      if (dismissed) { hide(); return; }
+
+      const scrolled = window.scrollY || window.pageYOffset;
+      const pastHero = scrolled > 480;
+
+      let endVisible = false;
+      if (endAnchor) {
+        const rect = endAnchor.getBoundingClientRect();
+        // Visible if its top is within the viewport (above the bottom edge)
+        endVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      }
+
+      if (pastHero && !endVisible) show();
+      else hide();
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(evaluate);
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+
+    // Lazy grab the end anchor in case it mounts after this script (SPA-free, but safe)
+    if (!endAnchor) {
+      endAnchor = document.getElementById('end-cta-anchor');
+    }
+
+    evaluate();
+  })();
+</script>
