@@ -57,6 +57,14 @@ const faqItems = [
     answer: `${frontmatter.platformName} does offer a satisfaction guarantee. If you're unhappy with your reading, you can reach out to customer support for credit or resolution. Check their current terms for specific details.`
   },
   {
+    question: `Does ${frontmatter.platformName} offer free minutes?`,
+    answer: `No — and this is the most common point of confusion. ${frontmatter.platformName} does not give free minutes; the new-client deal is ${frontmatter.freeOffer || '5 minutes for $1'}, charged as your first purchase. If a site promises "Keen free 3 minutes," it is describing Kasamba's offer, not Keen's.`
+  },
+  {
+    question: `Does ${frontmatter.platformName} have sales or promo deals?`,
+    answer: `${frontmatter.platformName} rarely runs platform-wide sales. The standing deal is the new-client intro offer (${frontmatter.freeOffer || '5 minutes for $1'}), which is applied to your first purchase. Individual advisors set their own per-minute rates, so the real "sale" is choosing a strong reader in the $2-$5/min band — my reviews below flag exactly those.`
+  },
+  {
     question: `How do I choose the best reader on ${frontmatter.platformName}?`,
     answer: `I've individually reviewed ${readers.length} readers on ${frontmatter.platformName}. Each review covers their reading style, pricing, accuracy track record, and who they're best suited for. Scroll down to see my full reader assessment series.`
   },
@@ -100,9 +108,9 @@ const relatedItems = [
   )}
 
   <CTABox
-    title={`Ready to try ${frontmatter.platformName}?`}
-    description={frontmatter.freeOffer ? `Take advantage of their current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.'}
-    buttonText={`Visit ${frontmatter.platformName} →`}
+    title={`Ready to test ${frontmatter.platformName} for $1?`}
+    description="New clients get 5 minutes for $1 — applied to your first purchase. That is enough paid time to vet any reader on this page before committing real money."
+    buttonText="Claim 5 Minutes for $1 →"
     buttonUrl={frontmatter.affiliateUrl || '#'}
     variant="highlight"
   />

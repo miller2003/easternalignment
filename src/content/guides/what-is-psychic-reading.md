@@ -1,5 +1,7 @@
 ---
 title: "What Is a Psychic Reading? Guide to Understanding Intuitive Guidance"
+seoTitle: "What Is a Psychic Reading? How It Actually Works (2026)"
+metaDescription: "What actually happens in a psychic reading, what it can and cannot tell you, the 5 main types explained, and how to avoid wasting money on your first session."
 description: "Beginner's Guide to Psychic Readings. Learn what they are, how they work, and 5 types of readings to try. Updated for 2026 with preparation tips and safety red flags."
 category: "Beginners"
 publishDate: "2026-01-05"

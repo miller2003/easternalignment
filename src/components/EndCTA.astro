@@ -23,7 +23,7 @@ interface Props {
 const {
   primarySlug = 'keen',
   heading = 'Ready to get your reading?',
-  subheading = 'I’ve personally tested each platform with my own money. Pick the one that fits you — every link is an independent recommendation.',
+  subheading = 'I’ve personally tested each platform with my own money. Every intro offer below is applied to your first purchase — pick the one that fits you and claim it at checkout.',
 } = Astro.props;
 
 const offers = [
@@ -33,6 +33,7 @@ const offers = [
     tag: 'Editor’s Choice',
     offer: '5 minutes for $1',
     blurb: 'Deepest roster & finest phone infrastructure. The safest place to test a top reader for pocket change.',
+    cta: 'Get 5 Min for $1',
     color: '#004d40',
   },
   {
@@ -41,6 +42,7 @@ const offers = [
     tag: 'Best for Chat & Love',
     offer: '3 free minutes + 50% off',
     blurb: 'Permanent chat transcripts & 3 free minutes with every new advisor — safest for testing relationship specialists.',
+    cta: 'Claim 3 Free Min + 50% Off',
     color: '#4a6ee0',
   },
   {
@@ -49,6 +51,7 @@ const offers = [
     tag: 'Best for Video',
     offer: '$30 credit on first purchase',
     blurb: 'Mandatory video intros & a public outcomes ledger. The most accessible entry price.',
+    cta: 'Claim $30 Credit',
     color: '#6b4d8c',
   },
 ];
@@ -83,7 +86,7 @@ const ordered = [...offers].sort((a, b) => {
           target="_blank"
           data-cta-source="end"
         >
-          Visit {o.name} &rarr;
+          {o.cta} &rarr;
         </a>
       </div>
     ))}

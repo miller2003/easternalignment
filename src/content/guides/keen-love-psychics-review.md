@@ -1,5 +1,7 @@
 ---
 title: 'Keen Love Psychics Review 2026: Is It Safe for Relationship Advice?'
+seoTitle: "Keen Love Psychics 2026: Tested for Relationship Accuracy"
+metaDescription: "I tested Keen's top love & relationship psychics with real breakup and ex-recovery questions. Accuracy, safety mechanics, and pricing from $1.99/min."
 description: 'A deep institutional analysis of the Keen platform. We break down the safety mechanics, the marketplace algorithm, and whether you should trust Keen psychics with your relationship trauma.'
 category: 'Platform Analysis'
 publishDate: '2026-04-22'

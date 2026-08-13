@@ -1,5 +1,7 @@
 ---
 title: "Kasamba Psychics Review (2026): The Brutally Honest Truth About Their 500+ Psychics"
+seoTitle: "Kasamba Review 2026: The Brutal Truth After 2 Years of Testing"
+metaDescription: "Is Kasamba legit? Two years of tracked predictions, the 3-free-minutes loophole explained, hidden pricing tiers mapped, and 20 top advisors individually reviewed."
 description: "Is Kasamba actually legitimate? We spent two years tracking prediction accuracy, analyzing the 3-minute free trial loophole, and mapping the platform's hidden pricing architecture."
 platformName: "Kasamba Psychics"
 rating: 4.7

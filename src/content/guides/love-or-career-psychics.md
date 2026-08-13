@@ -1,6 +1,6 @@
 ---
 title: 'Love or Career? Top 7 Psychics for Ambitious Singles & Power Couples'
-description: 'High-achievers cannot afford to date people who drain their empire. We found the 7 best psychics for analyzing the intersection of your career trajectory and your romantic life.'
+description: 'Career or relationship first? The 7 best psychics for reading the intersection of your work trajectory and love life — concrete insight, not vague comfort.'
 category: Roundup
 platform: cross-platform
 rating: 4.9

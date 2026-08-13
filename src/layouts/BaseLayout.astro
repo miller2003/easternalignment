@@ -38,11 +38,11 @@ const SITE_URL  = 'https://easternalignment.com';
 
 const baseTitle = seoTitle || title;
 // Smart title length protection: only append the brand suffix when the
-// page title is short enough to stay under ~70 characters total. Long
+// page title is short enough to stay under ~63 characters total. Long
 // keyword-first titles keep their full keyword payload without dilution.
 const fullTitle = baseTitle === SITE_NAME
   ? baseTitle
-  : baseTitle.length > 62
+  : baseTitle.length > 42
     ? baseTitle
     : `${baseTitle} — ${SITE_NAME}`;
 const metaDesc = metaDescription || description;

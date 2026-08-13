@@ -217,6 +217,11 @@ const displayCta = ctaOverride || ctaText;
           <a href={affiliateUrl} class="btn btn--primary btn--lg" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
             {displayCta}
           </a>
+          {freeOffer && (
+            <p class="review-hero-cta-note">
+              New-client deal: <strong>{freeOffer}</strong> — applied to your first purchase. Create an account, claim the offer, connect in minutes.
+            </p>
+          )}
         </div>
       </header>
 
@@ -392,6 +397,22 @@ const displayCta = ctaOverride || ctaText;
 
   .review-hero-cta {
     margin-bottom: var(--space-4);
+  }
+
+  .review-hero-cta-note {
+    margin: var(--space-2) 0 0;
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+    max-width: 480px;
+  }
+
+  @media (max-width: 768px) {
+    .review-hero-cta-note {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   /* ── Content ── */

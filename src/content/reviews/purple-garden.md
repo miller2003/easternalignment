@@ -1,5 +1,6 @@
 ---
 title: "Purple Garden Review (2026): My 12-Month Unfiltered Audit of Their App-First Video Psychics & 'Journeys'"
+seoTitle: "Purple Garden Review 2026: 12 Months, $840 Spent, No Filter"
 description: "Is Purple Garden worth downloading? I spent $840 out of my own pocket over 12 months testing their video readings, auditing the 'Journeys' timeline feed, and tracking real accuracy."
 platformName: "Purple Garden"
 rating: 4.7

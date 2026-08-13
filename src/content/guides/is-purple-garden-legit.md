@@ -1,5 +1,6 @@
 ---
 title: "Is Purple Garden Legit or a Scam? My Independent 12-Month Audit of App Readings, Refunds, & Advisors (2026)"
+seoTitle: "Is Purple Garden Legit? My 12-Month, $840 Audit (2026)"
 description: "Is the Purple Garden app trustworthy? I spent $840 out of pocket over 12 months auditing their advisor accuracy, refund policies, video intro bios, and the 'Journeys' timeline ledger."
 category: "Platform Analysis"
 publishDate: "2026-06-30"
