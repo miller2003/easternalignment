@@ -5,7 +5,7 @@ description: A third-party review of C Garrett on Keen  -  unpacking her 75% ene
   25% tarot hybrid method, dream reading specialty, self-declared timing limits, and
   exactly who gets real value at $4.89/min.
 platformName: 'Keen: C Garrett'
-rating: 4.8
+rating: 4.84
 verdict: Best for people who want intuition-led clarity on relationships or career  -  not
   a card-by-card walkthrough. Her hybrid method, 25-year track record, and unusually
   honest self-assessment make her one of the more reliable mid-tier reads on Keen.
@@ -210,3 +210,5 @@ Her wide availability means you don't need to book days out. Check her schedule 
 
 
 
+
+<a href="/go/keen-garrett/" rel="nofollow sponsored" target="_blank">Book C Garrett on Keen - First 5 Minutes for $1</a>

@@ -1,5 +1,5 @@
 ---
-title: "Chloe Has Your Love Insights on Keen Review 2026: 36,000 Readings at $2.58/Min?"
+title: "Chloe Has Your Love Insights on Keen Review 2026: 36,000 Readings at $2.58/Min"
 description: "An independent review of Chloe Has Your Love Insights on Keen - 7,370 ratings, 35,997 readings since 2015, and a $2.58/min rate. What her 'delivering truth with compassion' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Chloe Has Your Love Insights"
 rating: 4.56
@@ -15,7 +15,7 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Chloe Has Your Love Insights on Keen Review 2026: 36,000 Readings at $2.58/Min?",
+    "headline": "Chloe Has Your Love Insights on Keen Review 2026: 36,000 Readings at $2.58/Min",
     "description": "An independent review of Chloe Has Your Love Insights on Keen - 7,370 ratings, 35,997 readings since 2015, and a $2.58/min rate. What her 'delivering truth with compassion' approach and real client reviews reveal, and exactly who should book her.",
     "datePublished": "2026-08-10",
     "dateModified": "2026-08-10",

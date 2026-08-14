@@ -7,7 +7,7 @@ verdict: "Advisor Suzan is a Keen institution with over 136,000 readings and a 4
 affiliateUrl: /go/keen-advisor-suzan/
 avatarUrl: /avatars/keen/advisor-suzan.avif
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
-pricing: "$5-$10/min"
+pricing: "$9.99/min"
 bestFor: "People who are confused by a partner's mixed signals and want an incredibly fast-connecting, supportive empath to uncover hidden feelings."
 publishDate: '2026-08-13'
 updatedDate: '2026-08-13'
@@ -49,7 +49,7 @@ Not at all. But it is a *niche fit*. If you want a blunt, brutal fortune teller 
 
 ## Pricing and Value: What to Expect
 
-Advisor Suzan is a top-tier, highly vetted professional. While her specific per-minute rate fluctuates based on availability (as is common with Keen's elite advisors), you should expect premium pricing that reflects her 20+ years of seniority.
+Advisor Suzan lists at $9.99/min — the top of Keen's standard rate band and exactly what you'd expect for a 136,000-reading, 4.98-rated veteran with 20+ years on the platform. Her rate can still adjust slightly with demand, so confirm it on her live profile before committing to a longer session.
 
 Because she reads energy quickly and doesn't require a long wind-up of background questions, a standard **10 to 15-minute session** is usually more than enough time to get a clear, detailed reading on a specific relationship dynamic. 
 

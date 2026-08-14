@@ -167,3 +167,5 @@ Before you connect: be specific about what you actually need. Not what you hope 
 Use the $1 for 5 minutes new user offer as designed: not to extract a reading, but to feel whether her energy and approach resonate with you before committing. Her method — direct spirit channeling, immediate impressions — tends to produce something specific quickly. Five minutes will tell you whether what she's receiving is actually landing for your situation.
 
 Victoria Sands has built something unusual in 24 years: a reader with the price point of a specialist and the track record to back it. The question was never whether she's good. It was whether what you need matches what she's exceptionally good at. Answer that honestly before you connect, and the session has a real chance of being worth every dollar.
+
+<a href="/go/keen-victoria/" rel="nofollow sponsored" target="_blank">Book Love Psychic Victoria Sands on Keen - First 5 Minutes for $1</a>

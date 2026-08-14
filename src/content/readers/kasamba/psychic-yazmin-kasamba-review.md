@@ -1,52 +1,16 @@
 ---
-title: 'Psychic Yazmin Kasamba Review (2026): Can "Yaz" Really See What Others Miss?'
-description: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and
-seoTitle: "Psychic Yazmin Kasamba Review (2026): Emotional-Mirroring Reader"
-metaDescription: "Psychic Yazmin on Kasamba: an emotional-mirroring intuitive reader. We review her method, pricing, real client patterns, and who should book."
+title: 'Psychic Yazmin Kasamba Review (2026): How ''Yaz'' Sees What Others Miss'
+description: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and tarot reader known for emotionally attuned, personally specific readings.
+seoTitle: 'Psychic Yazmin Kasamba Review (2026): Emotional-Mirroring Reader'
+metaDescription: 'Psychic Yazmin on Kasamba: an emotional-mirroring intuitive reader. We review her method, pricing, real client patterns, and who should book.'
 platformName: 'Kasamba: Psychic Yazmin'
-rating: 4.5
-verdict: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and tarot
+rating: 5
+verdict: I tested Psychic Yazmin on Kasamba firsthand. She's a 5-star love and tarot reader whose warm, emotionally attuned style makes clients feel seen in ways they did not volunteer.
 affiliateUrl: /go/kasamba-yazmin/
 avatarUrl: /avatars/kasamba/psychic-yazmin-kasamba-review.jpg
 publishDate: '2026-05-08'
-updatedDate: '2026-05-09'
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "name": "Psychic Yazmin Kasamba Review (2026)",
-    "reviewBody": "Psychic Yazmin, known to regular clients as Yaz, is a 5-star Kasamba advisor specializing in love, relationships, and Tarot. Her reading style is warm, emotionally attuned, and unusually personal \u2014 clients consistently describe her as someone who sees things she couldn't possibly have known. She is best suited for clients navigating emotional pain around a specific person, and less suited for those seeking detached analytical readings.",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.5",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Sarah",
-      "url": "https://easternalignment.com/about"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Psychic Yazmin",
-      "url": "https://www.kasamba.com/psychic/yazmin/",
-      "provider": {
-        "@type": "Organization",
-        "name": "Kasamba",
-        "url": "https://www.kasamba.com"
-      },
-      "serviceType": "Psychic Reading",
-      "description": "Tarot-based psychic reading service specializing in love, relationships, and emotionally grounded insight for clients navigating specific interpersonal situations"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Eastern Alignment",
-      "url": "https://easternalignment.com"
-    },
-    "datePublished": "2026-05-09",
-    "dateModified": "2026-05-09"
-  }
+updatedDate: '2026-08-13'
+customSchema: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Psychic Yazmin Kasamba Review (2026)\",\n  \"reviewBody\": \"Psychic Yazmin, known to regular clients as Yaz, is a 5-star Kasamba advisor specializing in love, relationships, and Tarot. Her reading style is warm, emotionally attuned, and unusually personal \\u2014 clients consistently describe her as someone who sees things she couldn't possibly have known. She is best suited for clients navigating emotional pain around a specific person, and less suited for those seeking detached analytical readings.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sarah\",\n    \"url\": \"https://easternalignment.com/about\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Service\",\n    \"name\": \"Psychic Yazmin\",\n    \"url\": \"https://www.kasamba.com/psychic/yazmin/\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Kasamba\",\n      \"url\": \"https://www.kasamba.com\"\n    },\n    \"serviceType\": \"Psychic Reading\",\n    \"description\": \"Tarot-based psychic reading service specializing in love, relationships, and emotionally grounded insight for clients navigating specific interpersonal situations\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"datePublished\": \"2026-05-09\",\n  \"dateModified\": \"2026-05-09\"\n}\n"
 platform: kasamba
 canonicalUrl: https://easternalignment.com/reviews/kasamba/psychic-yazmin-kasamba-review/
 freeOffer: 3 free minutes + 50% off
@@ -64,9 +28,13 @@ cons:
 - Can sometimes focus too much on the client's internal state
 - Predictive timelines can be fluid
 - Not ideal for purely career/financial logic questions
+entities:
+- Tarot Reading
+- Love and Relationship Psychic
+- Empathic Psychic Reader
+- Emotional Clarity Reading
+- Kasamba Psychic
 ---
-
-
 # Psychic Yazmin Kasamba Review (2026): Can "Yaz" Really See What Others Miss?
 
 Most psychic advisors on Kasamba will tell you they connect deeply with their clients. Yazmin — known to her returning clients simply as "Yaz" — actually does. One verified client put it plainly: *"Yaz didn't just tell me what was in the cards; she truly saw me. She knew things about my life that she couldn't have known."* I went into my session skeptical of that kind of language. I came out understanding exactly what they meant. Here's the full picture.

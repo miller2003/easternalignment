@@ -147,4 +147,5 @@ If you have experience with plant medicine, meditation, or yogic practice, it is
 
 Sophia Rose Light is not the right reader for the majority of the questions that bring people to Keen. She is precisely the right reader for a specific minority of those questions: the ones about soul-level patterns, karmic contracts, past life influences, and the kind of deep-seated recurring dynamic that has been impervious to every surface-level prediction and guidance session the client has tried. At $4.44/min, she is delivering access to a shamanic, Tantrik, and Akashic framework at a price that reflects genuine philosophical intentionality rather than market positioning. The angel number is the clearest signal she offers: if it resonates with you before you read a word of her bio, you have already received the first message of the session.
 
-[Book Sophia Rose Light on Keen — First 5 Minutes for $1](/go/keen-sophia/)
+
+<a href="/go/keen-sophia/" rel="nofollow sponsored" target="_blank">Book Sophia Rose Light on Keen - First 5 Minutes for $1</a>

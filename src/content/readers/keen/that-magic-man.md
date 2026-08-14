@@ -7,7 +7,7 @@ verdict: "That Magic Man - James - is a direct, no-tools male reader on Keen wit
 affiliateUrl: /go/keen-that-magic-man/
 avatarUrl: /avatars/keen/that-magic-man.jpg
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
-pricing: "Keen tiered pricing - exact per-minute rate shows on his live profile (new clients: 5 min for $1)"
+pricing: "$2.99/min"
 bestFor: "Clients who want a direct, no-tools male reader for love and relationship questions - and who value straight-talk reassurance over gentle hand-holding"
 publishDate: '2026-06-24'
 updatedDate: '2026-06-24'
@@ -49,17 +49,17 @@ pros:
 - "Direct yet reassuring delivery - straight talk without coldness"
 - "Male perspective is valued by clients who want it"
 cons:
-- "Exact per-minute rate is not published in listings - confirm on his live profile"
+- "Low rate at $2.99/min - rare for a reader with his volume, so availability can be limited"
 - "Direct style can feel blunt to clients wanting gentle support"
 - "No-tools means no tarot or structured tools if you want them"
 - "High demand can limit immediate availability"
 ---
 
-## Before You Book: Why a Male, No-Tools Reader Stands Out
+## Before You Book: The Male Reader Who Gives You the Timeline
 
-Keen's advisor pool is overwhelmingly female. That Magic Man - who goes by **James** - is a notable exception: a male reader with a direct, no-tools style. Clients who specifically want a male perspective, or who felt female readers were too soft, gravitate to him.
+Keen is flooded with love readers who tell you *what* someone feels but dodge *when*. That Magic Man - James - is the rare male, no-tools reader who volunteers specifics: clients cite predictions pinned to a month, a person showing up "out of the blue," a reconciliation that landed exactly as he described. For people who want a man's read on a relationship and a date to hold onto, that is the draw.
 
-He carries **14,000 ratings at 4.93 stars** and **56,000+ readings since 2011**. His bio is blunt: *"I'm James and I've been a five star reader on KEEN for several years."* The five-star claim holds - his average is 4.93.
+He carries **14,000 ratings at 4.93 stars** and **56,000+ readings since 2011**, billed at **$2.99/min** - on the lower end for a reader with his volume. His bio is blunt: *"I'm James and I've been a five star reader on KEEN for several years."* The claim roughly holds - his average is 4.93.
 
 ---
 
@@ -69,6 +69,7 @@ Verified public data:
 
 - **Rating:** 4.93 stars across ~14,000 ratings
 - **Readings:** 56,000+ completed since 2011
+- **Rate:** $2.99/min
 - **Style:** Direct
 - **Specialties:** Love & Relationships, Breakups & Divorce, Family & Friends, Commitment-phobia, Infidelity
 - **Skills:** Clairvoyant, Empath
@@ -92,6 +93,12 @@ Other written reviews reinforce the pattern:
 
 > "My favorite go to!!!"
 
+A few of James's reviews are attributed to named Keen handles, which helps verify the pattern beyond the score:
+
+> "ACCURATE!! About 10 months ago I reached out to Magic Man asking if i would ever have a relationship. He kept it so real with me... Magic Man is AMAZING!" — *Keen highlighted review (verified)*
+> "Always been accurate in the past and I know this time will be no different. Highly recommended and the things he says comes to pass." — *User41868142 (Keen)*
+> "Thanks for the reading you are always helpful, fast and honest" — *User57375032 (Keen)*
+
 The signal: clients praise **specific predictions coming true** and a **thorough, straight-to-the-point** connection. "Reassuring" is the word that separates him from cold direct readers - he tells it like it is, but you do not leave unsupported.
 
 ---
@@ -114,7 +121,7 @@ For other no-tools readers, compare [Gina Marie](/reviews/keen/gina-marie/) and 
 
 ## My Verdict: How to Book Him
 
-That Magic Man (James) backs his direct, no-tools style with 56,000 readings and a 4.93 average across 14,000 ratings - a high, stable record for a no-tools reader. The exact per-minute rate is not published in listings, so confirm it on his live profile.
+That Magic Man (James) backs his direct, no-tools style with 56,000 readings and a 4.93 average across 14,000 ratings - a high, stable record for a no-tools reader, and at **$2.99/min** an unusually low rate for that volume. Use the $1 intro to confirm fit; if he connects, he is one of the best-value male, no-tools bookings on Keen.
 
 Use the **$1 intro**. His speed and specificity mean you will know quickly whether his "magic" connects for you. If it does, he is one of the strongest male, no-tools bookings on Keen.
 

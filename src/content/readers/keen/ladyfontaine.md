@@ -3,11 +3,11 @@ title: "LadyFontaine on Keen Review 2026: A Certified Master Psychic With 4.99 S
 description: "An independent review of LadyFontaine on Keen - a Certified Master Psychic with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. What her track record and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: LadyFontaine"
 rating: 4.99
-verdict: "LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. Her no-tools, energy-reading style and 'Love Doctor' reputation show up clearly in real reviews - clients praise insight, honesty, and accuracy over a decade plus. Book her by voice for love and relationship questions; the exact per-minute rate shows on her live profile, so use the $1 intro to confirm fit first."
+verdict: "LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. Her no-tools, energy-reading style and 'Love Doctor' reputation show up clearly in real reviews - clients praise insight, honesty, and accuracy over a decade plus. Book her by voice for love and relationship questions; at $8.97/min she sits in Keen's upper tier, so use the $1 intro to confirm fit first."
 affiliateUrl: /go/keen-ladyfontaine/
 avatarUrl: /avatars/keen/ladyfontaine.jpg
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
-pricing: "Keen tiered pricing - exact per-minute rate shows on her live profile (new clients: 5 min for $1)"
+pricing: "$8.97/min"
 bestFor: "Clients who want a certified, no-tools master psychic for love and relationship clarity - and who value insight and honesty over gentle softening"
 publishDate: '2026-06-10'
 updatedDate: '2026-06-10'
@@ -50,16 +50,16 @@ pros:
 - "Real reviews show a decade-plus of repeat, loyal clients"
 cons:
 - "Smaller rating sample (5,098) than mega-advisors - less statistical weight"
-- "Exact per-minute rate is not published in listings - confirm on her live profile"
+- "Upper-tier rate at $8.97/min - confirm the live figure, which can shift with promotions"
 - "No-tools style may not suit clients who want tarot or structured tools"
 - "High demand as a top-rated advisor can limit immediate availability"
 ---
 
-## Before You Book: What "Certified Master Psychic" Actually Means Here
+## Before You Book: Why Clients Call Her "The Love Doctor"
 
-LadyFontaine brands herself as a **Certified Master Psychic** and **Certified Relationship Coach**, and is referred to as *"The LOVE Doctor."* The certifications are self-stated on Keen (the platform does not independently verify them), but they signal a professionalized, coaching-oriented approach rather than casual intuition. She also states she comes from *"a family of intuitives"* and has **40+ years** of professional reading.
+LadyFontaine's nickname - *"The LOVE Doctor"* - is not just branding. It points to how she works: a no-tools energy reader who pairs psychic pickup with a **Certified Relationship Coach** framing, so you leave with an action as well as an answer. That coaching layer is what separates her from pure prediction readers, and it is why clients describe staying with her for ten years or more rather than one-off calls.
 
-She carries **5,098 ratings at 4.99 stars** and **16,000+ readings since 2007**. A 4.99 average is rare at any volume - and at 5,000+ ratings it is a genuinely strong signal.
+She carries **5,098 ratings at 4.99 stars** and **16,000+ readings since 2007**, billed at **$8.97/min**. A 4.99 average is rare at any volume - and at 5,000+ ratings it is a genuinely strong signal. Her Certified Master Psychic and relationship-coach credentials are self-stated on Keen (the platform does not independently verify them), but they signal a professionalized approach rather than casual intuition.
 
 ---
 
@@ -69,6 +69,7 @@ Verified public data:
 
 - **Rating:** 4.99 stars across ~5,098 ratings
 - **Readings:** 16,000+ completed since 2007
+- **Rate:** $8.97/min
 - **Style:** Compassionate
 - **Specialties:** Love & Relationships, Career & Work, Money & Prosperity, Breakups & Divorce, Infidelity
 - **Skills:** Clairvoyant, Clairaudient, Empath, Clairsentient
@@ -116,7 +117,7 @@ For other no-tools options, compare [Gina Marie](/reviews/keen/gina-marie/) and 
 
 ## My Verdict: How to Book Her
 
-LadyFontaine's 4.99 average across 5,098 ratings and 16,000 readings since 2007 is one of the strongest records on Keen, and her real reviews back the number with a decade of loyal clients. The exact per-minute rate is not published in listings, so confirm it on her live profile.
+LadyFontaine's 4.99 average across 5,098 ratings and 16,000 readings since 2007 is one of the strongest records on Keen, and her real reviews back the number with a decade of loyal clients. Her live Keen rate is $8.97/min, which places her in the platform's upper tier - use the $1 intro to gauge fit before committing to a full session.
 
 Use the **$1 intro** to experience her no-tools, insightful style. If her honesty and accuracy land for you, she is one of the best no-tools, certified bookings on the platform.
 

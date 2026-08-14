@@ -1,53 +1,25 @@
 ---
-title: 'Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest'
-description: An honest review of Golden Eye on Kasamba — a 21-year platform veteran
-seoTitle: "Golden Eye Kasamba Review (2026): Intuitive Reader"
-metaDescription: "Golden Eye on Kasamba: an intuitive reader with a focused style. We review her method, pricing, real client patterns, and who should book."
+title: 'Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest Specialist Range'
+description: An honest review of Golden Eye on Kasamba — a 21-year platform veteran with nine active specialties and a 4.9-star rating across 111,000+ sessions.
+seoTitle: 'Golden Eye Kasamba Review (2026): Intuitive Reader'
+metaDescription: 'Golden Eye on Kasamba: an intuitive reader with the widest specialty range on the platform. We review her method, pricing, real client patterns, and who should book.'
 platformName: 'Kasamba: Golden Eye'
 rating: 4.9
-verdict: Golden Eye is one of the longest-serving and most broadly qualified readers
+verdict: Golden Eye is one of the longest-serving and most broadly qualified readers on Kasamba — 21 years on the platform, nine active specialties, and a 4.9-star rating across 111,000+ sessions.
 affiliateUrl: /go/kasamba-golden-eye/
 avatarUrl: /avatars/kasamba/golden-eye-kasamba-review.jpg
 freeOffer: 3 free minutes + 50% off
 pricing: $4.99/min chat (new client promo at $2.49/min)
-bestFor: Love and relationships, career direction, connecting with deceased loved
+bestFor: Love and relationships, career direction, connecting with deceased loved ones
 publishDate: '2026-05-08'
-updatedDate: '2026-05-09'
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "name": "Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest Specialist Range on the Platform",
-    "reviewBody": "Golden Eye is a Kasamba reader who joined in 2004 and has completed over 111,000 sessions with a 4.9-star rating. Her nine active specialties — Psychic Reading, Tarot, Astrology, Dream Analysis, Career, Fortune Telling, Mediumship, Numerology, and Love and Relationships — make her one of the most broadly qualified readers on the platform. She is best suited to clients with complex or multi-layered questions, and to those unsure which type of reading their situation calls for.",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.9",
-      "bestRating": "5"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Eastern Alignment"
-    },
-    "itemReviewed": {
-      "@type": "Person",
-      "name": "Golden Eye",
-      "description": "Kasamba psychic reader since 2004 with nine active specialties including Tarot, Astrology, Numerology, Dream Analysis, Mediumship, and Love and Relationships. Over 111,000 completed sessions.",
-      "url": "https://www.kasamba.com/psychic/golden-eye/"
-    },
-    "about": [
-      { "@type": "Thing", "name": "Kasamba Psychic Reading" },
-      { "@type": "Thing", "name": "Tarot Card Reading" },
-      { "@type": "Thing", "name": "Mediumship Reading" },
-      { "@type": "Thing", "name": "Numerology Reading" },
-      { "@type": "Thing", "name": "Love and Relationship Psychic" }
-    ]
-  }
+updatedDate: '2026-08-13'
+customSchema: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest Specialist Range on the Platform\",\n  \"reviewBody\": \"Golden Eye is a Kasamba reader who joined in 2004 and has completed over 111,000 sessions with a 4.9-star rating. Her nine active specialties — Psychic Reading, Tarot, Astrology, Dream Analysis, Career, Fortune Telling, Mediumship, Numerology, and Love and Relationships — make her one of the most broadly qualified readers on the platform. She is best suited to clients with complex or multi-layered questions, and to those unsure which type of reading their situation calls for.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Golden Eye\",\n    \"description\": \"Kasamba psychic reader since 2004 with nine active specialties including Tarot, Astrology, Numerology, Dream Analysis, Mediumship, and Love and Relationships. Over 111,000 completed sessions.\",\n    \"url\": \"https://www.kasamba.com/psychic/golden-eye/\"\n  },\n  \"about\": [\n    { \"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\" },\n    { \"@type\": \"Thing\", \"name\": \"Tarot Card Reading\" },\n    { \"@type\": \"Thing\", \"name\": \"Mediumship Reading\" },\n    { \"@type\": \"Thing\", \"name\": \"Numerology Reading\" },\n    { \"@type\": \"Thing\", \"name\": \"Love and Relationship Psychic\" }\n  ]\n}\n"
 platform: kasamba
 canonicalUrl: https://easternalignment.com/reviews/kasamba/golden-eye-kasamba-review/
 highlights:
 - 21 years on platform with 111,000+ sessions
 - Offers the widest range of specialties on Kasamba
-- Consistently high 5-star rating over two decades
+- Consistently high 4.9-star rating over two decades
 pros:
 - Incredible versatility across multiple esoteric disciplines
 - Massive track record provides extreme reliability
@@ -56,9 +28,13 @@ cons:
 - A 'jack of all trades' approach may lack surgical specialization
 - Profile can feel overwhelming to navigate
 - Very fast-paced readings
+entities:
+- Tarot Card Reading
+- Mediumship Reading
+- Numerology Reading
+- Love and Relationship Psychic
+- Kasamba Psychic
 ---
-
-
 # Golden Eye Review on Kasamba: 21 Years, 111,000+ Sessions, and the Widest Specialist Range on the Platform
 
 Before a client can book a psychic reading, they usually have to make a choice they are not always equipped to make: what kind of reading do they actually need? Tarot for the relational dynamics? Astrology for timing? Numerology for life path? A medium if grief is part of the picture? Most readers force that decision upfront, because most readers specialise in one or two methods.

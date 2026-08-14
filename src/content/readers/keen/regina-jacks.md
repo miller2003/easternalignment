@@ -158,3 +158,5 @@ Have your question ready, but resist the urge to front-load context. With most r
 
 
 
+
+<a href="/go/keen-regina/" rel="nofollow sponsored" target="_blank">Book Regina Jacks on Keen - First 5 Minutes for $1</a>

@@ -1,5 +1,5 @@
 ---
-title: "Readings by Ruth on Keen Review 2026: A 41,000-Reading 3rd-Gen Navigator at $5.99/Min?"
+title: "Readings by Ruth on Keen Review 2026: A 41,000-Reading 3rd-Gen Navigator at $5.99/Min"
 description: "An independent review of Readings by Ruth on Keen - 8,287 ratings, 41,119 readings since 2016, and a $5.99/min rate. What her 31-years 'Intuitive Navigator' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Readings by Ruth"
 rating: 4.91
@@ -15,7 +15,7 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Readings by Ruth on Keen Review 2026: A 41,000-Reading 3rd-Gen Navigator at $5.99/Min?",
+    "headline": "Readings by Ruth on Keen Review 2026: A 41,000-Reading 3rd-Gen Navigator at $5.99/Min",
     "description": "An independent review of Readings by Ruth on Keen - 8,287 ratings, 41,119 readings since 2016, and a $5.99/min rate. What her 31-years 'Intuitive Navigator' approach and real client reviews reveal, and exactly who should book her.",
     "datePublished": "2026-06-29",
     "dateModified": "2026-06-29",
@@ -55,11 +55,11 @@ cons:
 - "No widely indexed individual profile beyond Keen's own listing pages"
 ---
 
-## Before You Book: What 41,000 Readings on Keen Actually Proves
+## Before You Book: Why a Reader Who Says "I Don't Sugarcoat" Keeps a 4.91
 
-A third-generation psychic with 41,119 readings and a 2016 Keen join date is a serious operator. Ten years and 41,000 sessions is not luck - it is a repeat client base that keeps her booked. The lineage detail matters too: being a third-generation psychic means the craft was taught, not stumbled into.
+Most "direct" readers on Keen wear their bluntness like a badge. Readings by Ruth is direct too - her own tagline promises she "doesn't sugarcoat anything" - but her 4.91 across 8,000+ ratings comes from clients who keep calling her "sweet" and "patient." That contradiction is the actual product: you get the unvarnished truth, delivered by someone who waits through your repeated questions.
 
-Readings by Ruth currently carries roughly **8,287 ratings at 4.91 stars** and bills **$5.99/min**. Her tagline - "Intuitive Navigator: 31 Years Unveiling Life's Hidden Truths" - pairs experience with a navigator metaphor: she positions herself as the one who charts your course, not just predicts it.
+She currently carries roughly **8,287 ratings at 4.91 stars** and bills **$5.99/min**. The "Intuitive Navigator: 31 Years Unveiling Life's Hidden Truths" tagline pairs three decades of experience with a navigator metaphor - she positions herself as the one who charts your course, not just predicts it. The third-generation lineage (the craft was taught, not stumbled into) is what backs the confidence.
 
 ### Why Lineage Plus Volume Is a Stronger Signal
 

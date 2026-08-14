@@ -46,7 +46,7 @@ customSchema: |
   }
 highlights:
 - 94,000+ readings completed on Keen since 2009
-- 4.92-star rating across 15,000 verified reviews
+- 4.9-star rating across 15,000 verified reviews
 - Tool-free reader  -  pure clairvoyant, clairaudient, clairsentient
 - One of the few male readers on Keen with a twin flame specialization
 - 'Two profiles: Love & Relationships ($6.99/min) and Psychic Mediums ($7.99/min)'
@@ -67,7 +67,7 @@ cons:
 
 ## Why His Star Rating Is the Least Interesting Thing About Him
 
-A 4.92-star rating across 15,000 reviews tells you David7 doesn't actively disappoint people. It doesn't tell you whether he's the right reader for *your* specific question.
+A 4.9-star rating across 15,000 reviews tells you David7 doesn't actively disappoint people. It doesn't tell you whether he's the right reader for *your* specific question.
 
 The number that's actually worth pausing on: **94,124 readings since 2009**. That's not a lucky streak. That's 17 years of return clients and referrals in a market where most readers plateau or disappear within a few years. Volume at this scale is a more honest signal of sustained value than any star average.
 
@@ -207,3 +207,5 @@ If you're a new Keen user, your first 5 minutes cost $1. Use that window as a ge
 
 
 
+
+<a href="/go/keen-david7/" rel="nofollow sponsored" target="_blank">Book David7 on Keen - First 5 Minutes for $1</a>

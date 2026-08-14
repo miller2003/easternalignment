@@ -55,11 +55,11 @@ cons:
 - "Public listing stats vary (category lists show different totals) - personal page is the source used here"
 ---
 
-## Before You Book: Direct Style With Tarot Structure
+## Before You Book: Tarot Structure Without the Cold Edge
 
-Clairvoyant Nicky Power is tagged **Direct** - but his reviews show a directness wrapped in genuine warmth, not coldness. He is also **tarot-forward**, which sets him apart from pure no-tools readers like [That Magic Man](/reviews/keen/that-magic-man/). If you want direct answers *and* the structure of cards, he is a fit.
+Most tarot readers on Keen lean one of two ways: warm but vague, or accurate but brusque. Clairvoyant Nicky Power is the less common middle - **tarot-forward and Direct**, yet reviewed as "confident, accurate, and kind." If you want the structure of cards *and* a straight answer, but you have been burned by readers who left you feeling dismissed, he is the fit most people miss.
 
-His personal profile shows **5,491 ratings at 4.86 stars** and **19,000+ readings since 2001**. (Note: Keen's category lists show different totals for him - the personal profile is the more authoritative source used here.)
+His personal profile shows **5,491 ratings at 4.86 stars** and **19,000+ readings since 2001**. (Keen's category lists show different totals for him - the personal profile is the more authoritative source used here.)
 
 ---
 

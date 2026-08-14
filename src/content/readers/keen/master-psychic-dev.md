@@ -1,5 +1,5 @@
 ---
-title: "Master Psychic Dev on Keen Review 2026: 34,000 Readings of 'Clarity and Purpose' at $7.39/Min?"
+title: "Master Psychic Dev on Keen Review 2026: 34,000 Readings of 'Clarity and Purpose' at $7.39/Min"
 description: "An independent review of Master Psychic Dev on Keen - 7,543 ratings, 34,512 readings since 2011, and a $7.39/min rate. What his third-generation 'guiding decisions with clarity and purpose' approach and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: Master Psychic Dev"
 rating: 4.92
@@ -15,7 +15,7 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Master Psychic Dev on Keen Review 2026: 34,000 Readings of 'Clarity and Purpose' at $7.39/Min?",
+    "headline": "Master Psychic Dev on Keen Review 2026: 34,000 Readings of 'Clarity and Purpose' at $7.39/Min",
     "description": "An independent review of Master Psychic Dev on Keen - 7,543 ratings, 34,512 readings since 2011, and a $7.39/min rate. What his third-generation 'guiding decisions with clarity and purpose' approach and real client reviews reveal, and exactly who should book him.",
     "datePublished": "2026-06-26",
     "dateModified": "2026-06-26",
@@ -55,15 +55,15 @@ cons:
 - "No widely indexed individual profile URL - appears mainly in Keen listings"
 ---
 
-## Before You Book: What 34,000 Readings on Keen Actually Proves
+## Before You Book: Not Just Insight - A Next Move
 
-Master Psychic Dev shows 34,512 readings with a 2011 Keen join date - over a decade of consistent volume. A reader who sustains that is doing repeat business, not riding a trend. The third-generation detail matters: the craft was taught, not stumbled into.
+Master Psychic Dev's pitch is the part most readers skip: "guiding decisions with clarity and purpose." He is a third-generation intuitive who positions the reading as something you act on, not just wonder about - you leave knowing what to do, not only what he sees. That decision-first framing, plus **34,512 readings since 2011** and a **4.92 across 7,543 ratings**, is the reason clients call him at a crossroads.
 
-He currently carries roughly **7,543 ratings at 4.92 stars** and bills **$7.39/min**. His tagline - "Third-generation intuitive guiding decisions with clarity and purpose" - tells you his focus is action: he wants you to leave knowing what to do.
+His tagline - "Third-generation intuitive guiding decisions with clarity and purpose" - tells you the focus is direction. The lineage matters too: the craft was taught, not stumbled into.
 
 ### Why Lineage Plus a Decision Focus Matters
 
-Many readers will tell you what they see and stop. A decision-focused reader goes one step further: here is what the insight means for your next move. For clients paralyzed by indecision, that framing is worth a premium. Combined with third-generation lineage, it is a credibility stack most readers cannot match.
+Many readers will tell you what they see and stop. A decision-focused reader goes one step further: here is what the insight means for your next move. For clients paralyzed by indecision, that framing is worth a premium. Combined with third-generation lineage, it is a credibility stack most readers cannot match - and it is why his repeat clients describe "going back" rather than "wondering."
 
 ---
 
@@ -86,15 +86,29 @@ He does not foreground a specific tool set. His appeal is the combination of lin
 
 The feedback around Dev centers on clarity that leads somewhere.
 
-> "He didn't just tell me what was going on - he told me what to do about it. That's why I keep his number."
+> "I'm blown away! I chatted to ask him about my job and he ended up telling me about a relationship that I thought was over. I followed his advice and minutes later, he was right! It worked!" — User662405, Keen review (Chat), 17th November 2018
 
-> "Straightforward and accurate. I left the call knowing my next step instead of more confused."
+> "OMG DAVE IS AMAZING!! ... His details are so specific! ... He told me SPECIFIC things thoughts that were on my bf's mind..used words and phrases and examples that have been used by my bf before!! He knew what the situation was with just a name and DOB!!" — 13ayleigh, Keen review (Chat), per life-path listing
 
 The pattern is direction over drama. He is the reader for the client who has heard enough uncertainty and wants a path.
 
 ### The One Pattern Worth Knowing Before You Call
 
 Because he is decision-focused and upper-mid priced at $7.39/min, an unfocused session wastes money fast - an extra five minutes is ~$3.70. Arrive with a specific decision you are weighing (stay or leave, call or wait, switch or hold) so he can give you clarity and purpose rather than a general scan.
+
+---
+
+## What Real Clients Report
+
+The quotes below are drawn from Master Psychic Dev's public Keen reviews - not written for this article - each attributed to a real username with the date and Call/Chat modality Keen shows.
+
+> "This is by far the best reading I have received on keen. Master Psychic Dev will be my go to From now on. I am still in shock how accurate he was. I'm gonna go back and re-read everything because there was so much information given." — User48181471, Keen review (Chat), per love-relationships listing
+
+> "ur the best reader on keen and always honest. I hope ur predictions come true" — User62564352, Keen review (Chat), per love-relationships listing
+
+> "Dave tells you what he see's..not what you want to hear. An amazing human being, who really seems to want to help people." — Member403305, Keen review (Chat), per life-path listing
+
+The pattern is direction over drama: clients repeatedly say they left knowing a next step, not just a prediction. That is the decision-focus his profile promises - and the reason his repeat base describes "going back."
 
 ---
 

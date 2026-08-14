@@ -1,22 +1,22 @@
 ---
-title: "Jackies Tea Tarot Purple Garden Review (2026): Intuitive Tarot Reader With 9,000+ Readings"
-description: "Review of Jackies Tea Tarot on Purple Garden — a 5.0-star intuitive tarot reader, 9,023 readings since 2017, from $6.99/min. Tenure, method, and honest fit."
+title: "Jackies Tea Tarot Purple Garden Review (2026): The Cuban-Trained Tarot Reader Who Won't Sugarcoat You"
+description: "Honest review of Jackies Tea Tarot on Purple Garden — a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, $6.99/min, Cuban Santera lineage, and a pointedly honest style. Who she's for, and why her bluntness is the point."
 platformName: "Purple Garden"
 rating: 5
-verdict: "Jackies Tea Tarot is a 5.0-star intuitive tarot reader on Purple Garden whose tenure since 2017 and 9,023 readings make her a long-proven, if lower-volume, pick for card-based insight."
+verdict: "Jackies Tea Tarot is a 5.0-star intuitive tarot reader on Purple Garden whose ~9,000 readings since 2017 and Cuban Santera lineage give her a decade-deep, no-fluff style. She tells you exactly what she sees rather than what you want to hear — the right pick for clients who'd rather be clear than comforted."
 affiliateUrl: /go/purple-garden-jackies-tea-tarot/
 avatarUrl: /avatars/purple-garden/jackies-tea-tarot.jpg
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $6.99/min"
-bestFor: "Intuitive tarot from a long-tenured, perfect-5.0 reader"
+bestFor: "Intuitive tarot from a long-tenured, straight-talking reader (English or Spanish)"
 publishDate: '2026-08-01'
-updatedDate: '2026-08-01'
+updatedDate: '2026-08-13'
 customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
-    "name": "Jackies Tea Tarot Purple Garden Review (2026): 9,023 Readings, Perfect 5.0",
-    "reviewBody": "Review of Jackies Tea Tarot on Purple Garden — a 5.0-star intuitive tarot reader, 9,023 readings since 2017, from $6.99/min. Tenure, method, and honest fit.",
+    "name": "Jackies Tea Tarot Purple Garden Review (2026): ~9,000 Readings, 5.0 Stars",
+    "reviewBody": "Honest review of Jackies Tea Tarot on Purple Garden — a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, Cuban Santera lineage, and a pointedly honest style. Who she is for, and why her bluntness is the point.",
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": "5",
@@ -30,7 +30,7 @@ customSchema: |
     "itemReviewed": {
       "@type": "Person",
       "name": "Jackies Tea Tarot",
-      "description": "Jackies Tea Tarot on Purple Garden — Intuitive Tarot. 9,023 readings since 2017, rated 5 stars.",
+      "description": "Jackies Tea Tarot on Purple Garden — Intuitive Tarot, Cuban Santera lineage. ~9,000 readings since 2017, rated 5 stars.",
       "url": "https://www.purplegarden.co/"
     },
     "about": [
@@ -44,69 +44,61 @@ customSchema: |
       }
     ],
     "datePublished": "2026-08-01",
-    "dateModified": "2026-08-01"
+    "dateModified": "2026-08-13"
   }
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/jackies-tea-tarot/
-seoTitle: "Jackies Tea Tarot Purple Garden Review (2026): 9,023 Readings, Perfect 5.0"
-metaDescription: "Jackies Tea Tarot on Purple Garden: a 5.0-star intuitive tarot reader with 9,023 readings since 2017. We review her method, tenure, and who should book."
+seoTitle: "Jackies Tea Tarot Purple Garden Review (2026): ~9,000 Readings, 5.0 Stars"
+metaDescription: "Jackies Tea Tarot on Purple Garden: a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, Cuban Santera lineage, $6.99/min. Honest review of her don't-sugarcoat style."
 highlights:
-- "9,023 readings since 2017 (nearly a decade)"
-- "Perfect 5.0-star rating"
-- "Intuitive tarot focus"
+- "~9,000 readings since 2017 at a perfect 5.0"
+- "Cuban Santera lineage — taught by her grandmother"
+- "Tells you what she sees, not what you want to hear"
 pros:
-- "Long platform tenure (since 2017)"
-- "Perfect rating"
-- "Clear intuitive-tarot method"
+- "Decade-deep tarot track record with a real lineage"
+- "Honest, no-sugarcoating reads that hold up"
+- "Reads in English or Spanish; LGBTQIA+ friendly"
 cons:
-- "Lower volume than trending leaders"
-- "From-price ($6.99) is higher mid-tier"
-- "Tarot-focused over other modalities"
+- "Blunt honesty isn't for everyone"
+- "From-price ($6.99) is mid-to-upper tier"
+- "Tarot-focused over pure psychic impression"
 entities:
 - "Purple Garden"
 - "Jackies Tea Tarot"
 - "Intuitive Tarot Reader"
 ---
 
-# Jackies Tea Tarot Purple Garden Review (2026): Intuitive Tarot Reader With 9,000+ Readings
+# Jackies Tea Tarot Purple Garden Review (2026): The Reader Who Hands You the Tea With the Tarot
 
-Jackies Tea Tarot has been on Purple Garden since 2017 — nearly a decade — with 9,023 readings at a perfect 5.0. Her focus is intuitive tarot, and the long tenure plus flawless rating make her a proven, if lower-volume, card reader.
+There's a reason Jackie calls her work "the Tea with the Tarot" — she gives you the truth and the cards in the same breath. On Purple Garden she's a 5.0-star intuitive tarot reader with roughly 9,000 readings since 2017, and the thing that separates her from the softer-voiced crowd isn't her accuracy (though that's there). It's that she flatly will not tell you what you came to hear if the cards say otherwise.
 
----
+## A lineage, not a gimmick
 
-## Who Is Jackies Tea Tarot? Background, Lineage, and 9 Years on Purple Garden
+Jackie's profile traces her craft to her grandmother — a Santera in Havana who read tarot for over forty years and taught Jackie the "pieces of this beautiful gift." That's not decoration. A reader trained inside a family practice tends to read with a steadier hand than someone who picked up a deck last year and a marketing course the year after. Nearly a decade on Purple Garden at a perfect score is the market's verdict on whether that training shows.
 
-Since 2017 she has built 9,023 readings on intuitive tarot. A decade of tenure is a meaningful credential: she has outlasted countless advisors and kept clients returning. The perfect 5.0 at this volume is a stable, real average — smaller than the trending leaders but no less flawless.
+## The "flaw" you'll actually come to trust
 
-## How Jackies Tea Tarot Reads: Intuitive Tarot Since 2017
+Here's the honest warning, and why it's upside-down: Jackie doesn't sugarcoat. She says so plainly — "I always tell you exactly what I see." If you're having one of those nights where you want to be told the person who ghosted you is definitely coming back, she is the wrong call. But the clients who leave her five stars — and there are thousands of them — are the ones who came back precisely because her read landed, sometimes months later, when a prediction came to fruition. A reader who tells you the uncomfortable version of the truth is a reader you can use to make a decision. A reader who tells you the comfortable version is just company.
 
-Her method is intuitive tarot: she reads cards with impression layered in, suiting clients who want the structure of a spread plus a reader’s felt sense. Expect clear card-based insight rather than pure psychic impression.
+## What a session actually feels like
 
-## What Clients Actually Experience: Patterns from 9,023 Readings
+She specializes in love, life, and coaching, with financial and career guidance folded in, and she reads in English or Spanish. Purple Garden gives you video, voice, or chat — and for Jackie, video is the natural fit, because you watch the cards open and you see the read happen in real time. That matters on a platform that makes no blanket promise that any single reading will be "accurate": when you can watch the process, the trust isn't a leap of faith, it's a thing you witnessed. New clients get $30 in credit on a first purchase, which at $6.99/min is a shorter-than-average first taste — so go in with one focused question rather than a life story.
 
-Her reviews reward the accuracy and the warmth of the intuitive-tarot style. The perfect 5.0 at 9,023 readings signals consistency over time. As with all tarot, treat card meanings as interpretive guidance.
+## One practical note
 
-## Jackies Tea Tarot's Pricing, Format, and How to Book
+Her from-price sits in Purple Garden's upper-middle tier, not the budget rack. For a reader with her tenure and a real lineage, that's still fair — you're paying for steadiness, not novelty. And before you connect, open the green/red review split on her profile: her green side is decisively heavy, which is the quiet proof that "honest" and "loved" are not mutually exclusive here.
 
-Jackies Tea Tarot starts at $6.99/min — higher mid-tier — with the $30 credit covering about four minutes. Confirm voice/video rates for your format. Card readings can run as you explore spreads, so set a budget and timer.
+## Is Jackie right for you?
 
-## Is Jackies Tea Tarot Right for You? Honest Verdict
+**Book her if** you want a tarot read that respects your intelligence, you're comfortable in English or Spanish, and you'd rather be clear than coddled.
 
-### Best Fit
+**Skip her if** you need a reader who validates a specific outcome, you want budget-tier pricing, or you're not ready to hear a version of events that doesn't flatter you.
 
-She fits clients who want intuitive tarot with a proven, decade-long track record and a flawless rating. If you like card structure plus a reader’s felt sense, she’s a dependable pick.
-
-### Not the Right Match If...
-
-If you want psychic impression or dated prediction over tarot, a different reader fits. Her volume is lower than trending leaders, and $6.99 is higher mid-tier, not budget.
-
-### Starting with Purple Garden's New Client Offer
-
-New Purple Garden clients get a $30 credit — enough for a short tarot session with Jackies. Use it to ask one question and feel her intuitive-card style.
+**Start with the $30 credit.** Ask one real question, watch how she works, and decide whether a decade-deep, no-sugarcoat tarot reader is your kind of honest.
 
 ---
 
-**9,023 readings. Perfect 5.0. Since 2017.** Jackies Tea Tarot’s value is a decade of intuitive tarot at a flawless rating. For card-based insight with proven tenure, she’s a safe pick.
+**~9,000 readings. Perfect 5.0. Since 2017.** Jackies Tea Tarot's value is a Cuban Santera lineage and a promise not to lie to you. For clients who'd rather be right than soothed, she's a rare find.
 
 **More Purple Garden reviews:** [Satie Readings](/reviews/purple-garden/satie-readings/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 

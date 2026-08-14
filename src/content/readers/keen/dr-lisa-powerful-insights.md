@@ -3,11 +3,11 @@ title: "Dr Lisa Powerful Insights on Keen Review 2026: 4.97 Stars Across 16,000 
 description: "An independent review of Dr Lisa Powerful Insights on Keen - 16,000 ratings, 79,000+ readings since 2010, and a no-tools, fast, compassionate style. What her track record and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Dr Lisa Powerful Insights"
 rating: 4.97
-verdict: "Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Her 'very fast, compassionate, no tools' approach is a genuine differentiator - she leads with quick, accurate pickup rather than props. Book her by voice for love and relationship questions; the exact per-minute rate shows on her live profile, so use the $1 intro to confirm fit before a full session."
+verdict: "Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Her 'very fast, compassionate, no tools' approach is a genuine differentiator - she leads with quick, accurate pickup rather than props. Book her by voice for love and relationship questions; at $14.99/min, start with the $1 intro to confirm fit before a full session."
 affiliateUrl: /go/keen-dr-lisa-powerful-insights/
 avatarUrl: /avatars/keen/dr-lisa-powerful-insights.jpg
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
-pricing: "Keen tiered pricing - exact per-minute rate shows on her live profile (new clients: 5 min for $1)"
+pricing: "$14.99/min (new clients: 5 min for $1)"
 bestFor: "Clients who want a fast, no-tools, compassionate reader for love and relationship questions - and who value quick, accurate pickup over slow build-up"
 publishDate: '2026-06-14'
 updatedDate: '2026-06-14'
@@ -49,7 +49,7 @@ pros:
 - "Speed is a recurring theme - clients report quick, accurate connections"
 - "Strong on love, career, and destiny - covers most client needs"
 cons:
-- "Exact per-minute rate is not published in listings - confirm on her live profile"
+- "At $14.99/min she sits at the premium end of Keen's pricing - budget for focused sessions"
 - "High demand means she is not always immediately available"
 - "No-tools style may not suit clients who want tarot or structured tools"
 - "Fast delivery can feel abrupt to clients wanting a slow, talkative session"
@@ -123,7 +123,7 @@ For other no-tools options, see [Gina Marie](/reviews/keen/gina-marie/) and [Lad
 
 ## My Verdict: How to Book Her
 
-Dr Lisa Powerful Insights backs her "very fast, compassionate, no tools" promise with 79,000 readings and a 4.97 average across 16,000 ratings - about as stable as high-volume records get on Keen. The exact per-minute rate is not published in listings, so confirm it on her live profile before a full session.
+Dr Lisa Powerful Insights backs her "very fast, compassionate, no tools" promise with 79,000 readings and a 4.97 average across 16,000 ratings - about as stable as high-volume records get on Keen. At $14.99/min she sits at the premium end of Keen's roster, so the $1 intro is the efficient way to confirm fit before committing to a full session.
 
 Start with the **$1 intro**. Her speed means you will get a real sample of her pickup within minutes. If it lands, she is one of the strongest no-tools, high-rating bookings on the platform.
 

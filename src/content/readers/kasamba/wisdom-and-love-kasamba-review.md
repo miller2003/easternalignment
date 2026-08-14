@@ -1,56 +1,20 @@
 ---
 title: 'Wisdom and Love Kasamba Review (2026): What 100,000+ Readings Actually Buys'
-description: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004
-seoTitle: "Wisdom and Love Kasamba Review (2026)"
-metaDescription: "Wisdom and Love on Kasamba: a relationship and guidance reader. We review the method, pricing, real client patterns, and who should book."
+description: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004 — 100,000+ sessions, 31,500 reviews at a 4.7-star average, and a prediction-focused, time-frame style.
+seoTitle: Wisdom and Love Kasamba Review (2026)
+metaDescription: 'Wisdom and Love on Kasamba: a relationship and guidance reader with 100,000+ sessions. We review the method, pricing, real client patterns, and who should book.'
 platformName: 'Kasamba: Wisdom and Love'
 rating: 4.7
-verdict: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004 —
+verdict: Andrew behind 'Wisdom and Love' has been reading on Kasamba since 2004 — 100,000+ sessions and 31,500 reviews at a 4.7-star average — and his prediction-focused, time-frame style is built for clients who need to know what happens next.
 affiliateUrl: /go/kasamba-wisdom-and-love/
 avatarUrl: /avatars/kasamba/wisdom-and-love-kasamba-review.jpg
 publishDate: '2026-05-06'
-updatedDate: '2026-05-09'
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "name": "Wisdom and Love Kasamba Review (2026)",
-    "reviewBody": "Wisdom and Love \u2014 real name Andrew \u2014 is an Irish psychic advisor on Kasamba who has been reading since 2004, accumulating over 100,000 sessions and 31,500 five-star reviews. He specializes in love and relationship readings with a direct, prediction-focused approach that includes time frames. At $4.99 per minute, he delivers fast-connecting, no-nonsense sessions built around what your person is thinking and what actions they are likely to take.",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.7",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Sarah",
-      "url": "https://easternalignment.com/about"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Wisdom and Love",
-      "url": "https://www.kasamba.com/psychic/wisdom-and-love/",
-      "provider": {
-        "@type": "Organization",
-        "name": "Kasamba",
-        "url": "https://www.kasamba.com"
-      },
-      "serviceType": "Psychic Reading",
-      "description": "Spirit guide-based psychic reading service specializing in love and relationship prediction, partner behavior forecasting, career guidance, and time-framed outcome readings"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Eastern Alignment",
-      "url": "https://easternalignment.com"
-    },
-    "datePublished": "2026-05-09",
-    "dateModified": "2026-05-09"
-  }
+updatedDate: '2026-08-13'
+customSchema: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Wisdom and Love Kasamba Review (2026)\",\n  \"reviewBody\": \"Wisdom and Love — real name Andrew — is an Irish psychic advisor on Kasamba who has been reading since 2004, accumulating over 100,000 sessions and 31,500 reviews at a 4.7-star average. He specializes in love and relationship readings with a direct, prediction-focused approach that includes time frames. At $4.99 per minute (intro from $9.99), he delivers fast-connecting, no-nonsense sessions built around what your person is thinking and what actions they are likely to take.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.7\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sarah\",\n    \"url\": \"https://easternalignment.com/about\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Service\",\n    \"name\": \"Wisdom and Love\",\n    \"url\": \"https://www.kasamba.com/psychic/wisdom-and-love/\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Kasamba\",\n      \"url\": \"https://www.kasamba.com\"\n    },\n    \"serviceType\": \"Psychic Reading\",\n    \"description\": \"Spirit guide-based psychic reading service specializing in love and relationship prediction, partner behavior forecasting, career guidance, and time-framed outcome readings\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"datePublished\": \"2026-05-09\",\n  \"dateModified\": \"2026-05-09\"\n}\n"
 platform: kasamba
 canonicalUrl: https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/
 freeOffer: 3 free minutes + 50% off
-pricing: $12.99/min
+pricing: $9.99/min (intro $4.99/min)
 bestFor: Direct, profound guidance from a highly vetted veteran
 highlights:
 - Astonishing 100,000+ completed readings
@@ -64,12 +28,16 @@ cons:
 - High price point
 - His traditional wisdom approach may not suit modern hyper-analytical users
 - Often has a waitlist due to loyal returning client base
+entities:
+- Spirit Guide Reading
+- Love and Relationship Prediction
+- Career Psychic Guidance
+- Time-Frame Psychic Reading
+- Kasamba Psychic
 ---
-
-
 # Wisdom and Love Kasamba Review (2026): What 100,000+ Readings Actually Buys You
 
-One hundred thousand readings is a number that stops you in your tracks. On a platform where most top-rated advisors have logged between 10,000 and 40,000 sessions, Andrew — the Irish psychic behind "Wisdom and Love" — sits in a category almost entirely his own. Since 2004, he has conducted over 100,265 readings on Kasamba, accumulated 31,551 five-star reviews, and maintained a position at the top of the platform's rankings for over two decades. The question isn't whether he's experienced. The question is what that experience actually produces in a session — and whether his specific promise of time frames and partner behavior predictions holds up under honest testing.
+One hundred thousand readings is a number that stops you in your tracks. On a platform where most top-rated advisors have logged between 10,000 and 40,000 sessions, Andrew — the Irish psychic behind "Wisdom and Love" — sits in a category almost entirely his own. Since 2004, he has conducted over 100,265 readings on Kasamba, accumulated 31,551 reviews at a 4.7-star average, and maintained a position at the top of the platform's rankings for over two decades. The question isn't whether he's experienced. The question is what that experience actually produces in a session — and whether his specific promise of time frames and partner behavior predictions holds up under honest testing.
 
 ---
 
@@ -77,7 +45,7 @@ One hundred thousand readings is a number that stops you in your tracks. On a pl
 
 ### The Irish Love Expert Who's Been Reading Since 2004: What Two Decades Builds
 
-Andrew is Irish — a detail that shapes his communication style more than it might seem. There's a directness and warmth in how he runs his sessions that reflects a cultural register distinct from the more formally spiritual tone that many American and British advisors default to. He introduces himself plainly, without grandiose claims about his lineage or the cosmic significance of his gifts. What he does instead is let his track record speak: 22 years on a single platform, 100,000+ sessions, a five-star rating that has held across multiple generations of clients. That kind of sustained performance in a competitive marketplace is not something that coasts on charm — it requires consistent, repeatable delivery of something genuinely useful.
+Andrew is Irish — a detail that shapes his communication style more than it might seem. There's a directness and warmth in how he runs his sessions that reflects a cultural register distinct from the more formally spiritual tone that many American and British advisors default to. He introduces himself plainly, without grandiose claims about his lineage or the cosmic significance of his gifts. What he does instead is let his track record speak: 22 years on a single platform, 100,000+ sessions, a 4.7-star rating that has held across multiple generations of clients. That kind of sustained performance in a competitive marketplace is not something that coasts on charm — it requires consistent, repeatable delivery of something genuinely useful.
 
 ### His Toolkit: Spirit Guides, Clairvoyance, and the Promise of Time Frames
 
@@ -91,9 +59,9 @@ Andrew's profile makes a claim that appears across multiple Kasamba advisors but
 
 ## How Accurate Is Wisdom and Love? An Honest Assessment
 
-### What 31,500 Five-Star Reviews Over 22 Years Actually Signals
+### What 31,500 Reviews Over 22 Years Actually Signals
 
-Thirty-one thousand five-star reviews built over 22 years produces a statistical picture that's almost impossible to argue with. At that volume and timeframe, the consistency required to maintain a 5-star average eliminates every explanation except genuine, repeatable accuracy. What I look for in review profiles of this scale is the recency of the language — whether reviews from this month sound as specific and satisfied as reviews from years ago. Andrew's most recent reviews, dated May 2026, use language like "in-depth reading, quick connection, and peaceful clarity" and "always learning something new from Andrew" — the latter implying a returning client relationship spanning multiple sessions. That kind of multi-session loyalty at volume is the strongest possible indicator of consistent quality.
+Thirty-one thousand reviews built over 22 years produces a statistical picture that's almost impossible to argue with. At that volume and timeframe, the consistency required to maintain a 4.7-star average eliminates every explanation except genuine, repeatable accuracy. What I look for in review profiles of this scale is the recency of the language — whether reviews from this month sound as specific and satisfied as reviews from years ago. Andrew's most recent reviews, dated May 2026, use language like "in-depth reading, quick connection, and peaceful clarity" and "always learning something new from Andrew" — the latter implying a returning client relationship spanning multiple sessions. That kind of multi-session loyalty at volume is the strongest possible indicator of consistent quality.
 
 ### What He Got Right in My Reading — Including a Time Frame I Could Verify
 
@@ -113,7 +81,7 @@ Andrew opens sessions with notable speed. He doesn't take several exchanges to w
 
 ### His Communication Style: No Sugar-Coating, No Stalling
 
-Andrew states this himself in his profile: "I don't sugar coat — I tell them the way I see it, Good or Bad." In 22 years of reading, that policy has produced 31,551 five-star reviews, which suggests clients find honesty more valuable than comfort. His messages are direct, clear, and free of the atmospheric spiritual language that other advisors use to pad out their responses. He doesn't frame everything as a teaching moment or an invitation to deeper reflection — he tells you what he sees, what it means, and what's likely to happen. That style produces sessions that feel efficient and definitive, which is what most clients are actually looking for when they book a psychic reading, even if they don't articulate it that way.
+Andrew states this himself in his profile: "I don't sugar coat — I tell them the way I see it, Good or Bad." In 22 years of reading, that policy has produced 31,551 reviews at a 4.7-star average, which suggests clients find honesty more valuable than comfort. His messages are direct, clear, and free of the atmospheric spiritual language that other advisors use to pad out their responses. He doesn't frame everything as a teaching moment or an invitation to deeper reflection — he tells you what he sees, what it means, and what's likely to happen. That style produces sessions that feel efficient and definitive, which is what most clients are actually looking for when they book a psychic reading, even if they don't articulate it that way.
 
 ### Pricing Reality: What You'll Actually Spend at $4.99/Min
 

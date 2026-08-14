@@ -99,6 +99,22 @@ Her reviews split along exactly the line you would expect: clients who love the 
 > 
 > — Kasamba client (Kristiana)
 
+## Why 4.6 and Not 5.0: Reading the Lower Score Honestly
+
+A 4.6 across 69,162 readings is not a red flag — it sits in the second-highest tier on a platform where most marquee advisors land at 4.9–5.0. But it is meaningfully below the perfect scores of peers like Danielle Psychic, and the gap is worth reading honestly rather than waving away. Three real signals explain most of it.
+
+**1. Chat-vs-voice friction shows up in the only detailed negative account we found.** The clearest complaint is a verified ComplaintsBoard review (2018) from a client who booked Sweet Spirit of Love on chat. The reviewer reported slow replies, being told mid-session that she "does not use chat," repeated requests for their date of birth that ate into the clock, and an overall sense that the timer was running while little was resolved. That is a channel-mismatch problem: her energy-and-impression style is built for voice, and when forced through text it can read as evasive and padded. If you book her, voice is the safer channel.
+
+> "Sweet Spirit of Love then proceeds to use my time to tell me on 'chat' how she does not use chat… she proceeds to ask my D.O.B multiple times (a few minutes had gone past)."
+> 
+> — Verified ComplaintsBoard reviewer (2018), chat session
+
+**2. Healer-first tone mismatches literal-prediction seekers.** Her own review split, documented above, runs between clients who call her "very honest and guiding" and those who found "vague answers that don't make sense." That is the eternal tension of a counselor-seer: clients who wanted dates, names, and outcomes feel underserved, while clients who wanted to feel clearer and uplifted are delighted. Platform-wide, Kasamba's Trustpilot reviewers repeat the same theme about the category in general — "many give generic readings" — so some of the drag on her score is the genre, not just the reader.
+
+**3. Volume math works against a perfect score.** At 69,000+ readings since 2006, even a small percentage of mismatched-expectation or off-tone sessions accumulates into thousands of less-than-perfect ratings. A 5.0 is easier to hold at low volume; at her sample size, 4.6 is the more logically defensible number, not a weaker one. It means the people who love her love her a lot, and the people who wanted something else are accurately represented too.
+
+None of this is a reason to avoid her — it is a reason to book her for what she is (a healing, spiritually grounded counselor on voice) and not for what she isn't (a facts-first predictor). The rating is honest, and so is the fit.
+
 ## Sweet Spirit of Love's Pricing, Format, and How to Book
 
 Sweet Spirit of Love charges a flat $5.49/min for both chat and voice — refreshingly predictable, with no chat/voice gap to navigate. At that rate a 15-minute session is about $82, reasonable for a reader with her tenure and counseling background. As always, set a session limit and monitor the timer; her subtle style can extend a session if you let it wander.

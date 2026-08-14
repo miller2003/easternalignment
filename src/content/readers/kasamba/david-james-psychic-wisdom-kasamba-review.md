@@ -1,52 +1,16 @@
 ---
-title: 'David James Psychic Wisdom Kasamba Review (2026): Is $7.99/Min Actually Worth'
-description: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba.
-seoTitle: "David James (Psychic Wisdom) Kasamba Review (2026)"
-metaDescription: "David James Psychic Wisdom on Kasamba: a multi-system analytical reader. We review his method, pricing, real quotes, and who should book."
+title: 'David James Psychic Wisdom Kasamba Review (2026): Is $7.99/Min Actually Worth It?'
+description: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba. We test David James Psychic Wisdom's multi-system analytical method.
+seoTitle: David James (Psychic Wisdom) Kasamba Review (2026)
+metaDescription: 'David James Psychic Wisdom on Kasamba: a multi-system analytical reader. We review his method, pricing, real quotes, and who should book.'
 platformName: 'Kasamba: David James Psychic Wisdom'
-rating: 4.7
-verdict: 38,000+ reviews, 25 years of experience, and the highest rate on Kasamba.
+rating: 5
+verdict: David James Psychic Wisdom is a 5-star Kasamba advisor with 38,000+ reviews, 25 years of experience, and the highest rate on the platform — but his surgical specificity makes the premium defensible.
 affiliateUrl: /go/kasamba-david-james/
 avatarUrl: /avatars/kasamba/david-james-psychic-wisdom-kasamba-review.jpg
 publishDate: '2026-05-05'
-updatedDate: '2026-05-09'
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "name": "David James Psychic Wisdom Kasamba Review (2026)",
-    "reviewBody": "David James Psychic Wisdom is a 5-star Kasamba advisor with 38,000+ reviews, 25 years of experience, and a toolkit spanning Tarot, Runes, Astrology, and Kabbalah. At $7.99 per minute he is one of the platform's most expensive readers \u2014 but his ability to surface specific emotional detail without prompting makes the premium defensible for clients who know what they're bringing in.",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.7",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Sarah",
-      "url": "https://easternalignment.com/about"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "David James Psychic Wisdom",
-      "url": "https://www.kasamba.com/psychic-reading/readers/psychic-wisdom/",
-      "provider": {
-        "@type": "Organization",
-        "name": "Kasamba",
-        "url": "https://www.kasamba.com"
-      },
-      "serviceType": "Psychic Reading",
-      "description": "Multi-tool psychic reading service using Tarot, Runes, Astrology, and Kabbalah, specializing in love, relationships, career, and life path guidance"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Eastern Alignment",
-      "url": "https://easternalignment.com"
-    },
-    "datePublished": "2026-05-09",
-    "dateModified": "2026-05-09"
-  }
+updatedDate: '2026-08-13'
+customSchema: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"David James Psychic Wisdom Kasamba Review (2026)\",\n  \"reviewBody\": \"David James Psychic Wisdom is a 5-star Kasamba advisor with 38,000+ reviews, 25 years of experience, and a toolkit spanning Tarot, Runes, Astrology, and Kabbalah. At $7.99 per minute he is one of the platform's most expensive readers \\u2014 but his ability to surface specific emotional detail without prompting makes the premium defensible for clients who know what they're bringing in.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sarah\",\n    \"url\": \"https://easternalignment.com/about\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Service\",\n    \"name\": \"David James Psychic Wisdom\",\n    \"url\": \"https://www.kasamba.com/psychic-reading/readers/psychic-wisdom/\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Kasamba\",\n      \"url\": \"https://www.kasamba.com\"\n    },\n    \"serviceType\": \"Psychic Reading\",\n    \"description\": \"Multi-tool psychic reading service using Tarot, Runes, Astrology, and Kabbalah, specializing in love, relationships, career, and life path guidance\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"datePublished\": \"2026-05-09\",\n  \"dateModified\": \"2026-05-09\"\n}\n"
 platform: kasamba
 canonicalUrl: https://easternalignment.com/reviews/kasamba/david-james-psychic-wisdom-kasamba-review/
 freeOffer: 3 free minutes + 50% off
@@ -64,9 +28,13 @@ cons:
 - Expensive rate requires strict budget management
 - Analytical style may lack the 'warmth' some seekers want
 - Not ideal for casual, open-ended browsing
+entities:
+- Tarot Reading
+- Clairvoyant Reading
+- Love and Relationship Psychic
+- Career Psychic Guidance
+- Kasamba Psychic
 ---
-
-
 # David James Psychic Wisdom Kasamba Review (2026): Is $7.99/Min Actually Worth It?
 
 At $7.99 per minute, David James Psychic Wisdom is not a casual browse. You're making a deliberate financial decision before you even type your first message. I've tested enough high-priced advisors to know that the rate alone tells you nothing — some of Kasamba's most expensive readers are its most forgettable. David James is not forgettable. With 38,000+ verified reviews over 25 years and a ranking of #3 on MysticMag's independently tested list of Kasamba's most accurate psychics in 2026, he's one of the few advisors where the question isn't whether he's good — it's whether he's right for what you specifically need.

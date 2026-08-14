@@ -1,5 +1,5 @@
 ---
-title: "Jeanne Clock on Keen Review 2026: A Multi-Gifted Clairvoyant With 95,000 Readings - Worth Booking?"
+title: "Jeanne Clock on Keen Review 2026: A Multi-Gifted Clairvoyant With 95,000 Readings Worth Booking"
 description: "An independent review of Jeanne Clock on Keen - 24,000 ratings, 95,000+ readings since 2007, and a rare clairvoyant-plus-medium skill set. What her track record and real client reviews reveal, and who gets the most from booking her."
 platformName: "Keen: Jeanne Clock"
 rating: 4.96
@@ -7,7 +7,7 @@ verdict: "Jeanne Clock combines clairvoyance, clairaudience, mediumship, and emp
 affiliateUrl: /go/keen-jeanne-clock/
 avatarUrl: /avatars/keen/jeanne-clock.jpg
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
-pricing: "Keen tiered pricing - exact per-minute rate shows on her live profile (new clients: 5 min for $1)"
+pricing: "$15.99/min"
 bestFor: "Clients who want a patient, multi-gifted reader for love, family, and life-path questions - and who value being truly listened to"
 publishDate: '2026-06-16'
 updatedDate: '2026-06-16'
@@ -15,7 +15,7 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Jeanne Clock on Keen Review 2026: A Multi-Gifted Clairvoyant With 95,000 Readings - Worth Booking?",
+    "headline": "Jeanne Clock on Keen Review 2026: A Multi-Gifted Clairvoyant With 95,000 Readings Worth Booking",
     "description": "An independent review of Jeanne Clock on Keen - 24,000 ratings, 95,000+ readings since 2007, and a rare clairvoyant-plus-medium skill set. What her track record and real client reviews reveal, and who gets the most from booking her.",
     "datePublished": "2026-06-16",
     "dateModified": "2026-06-16",
@@ -51,15 +51,15 @@ pros:
 cons:
 - "Her gentle pace is slower than direct, prediction-first readers"
 - "Mediumship sessions can be emotionally heavy - not for a quick yes/no"
-- "Exact per-minute rate is not published in listings - confirm on her live profile"
+- "Premium rate at $15.99/min - among Keen's highest, so budget for short, focused sessions"
 - "High demand means she is not always immediately available"
 ---
 
 ## Before You Book: Why a "Medium" Tag Changes the Session
 
-Most Keen love readers are clairvoyant or empath only. Jeanne Clock is also a **Medium** - someone who works with energy and impressions from beyond the immediate situation. That widens what a session can hold: not just "what is he thinking," but family dynamics, passed loved ones, and root patterns that a straight clairvoyant might skim past. If your question is tangled up in family history or grief, that broader lens is a real advantage.
+Most Keen love readers are clairvoyant or empath only. Jeanne Clock is also a **Medium** - someone who works with energy and impressions from beyond the immediate situation. That widens what a session can hold: not just "what is he thinking," but family dynamics, passed loved ones, and the root patterns a straight clairvoyant might skim past. If your question is tangled up in family history or grief, that broader lens is the reason to pay her premium **$15.99/min** rather than a cheaper, single-channel reader.
 
-Jeanne joined Keen in 2007. She now carries about **24,000 ratings at 4.96 stars** and **95,000+ completed readings**. That is a smaller rating sample than the platform's mega-advisors, but the average is just as high and the tenure is longer than most.
+Jeanne joined Keen in 2007 and now carries about **24,000 ratings at 4.96 stars** across **95,000+ completed readings** - a smaller rating sample than the platform's mega-advisors, but the average is just as high and the tenure is longer than most. The multi-gift skill set (clairvoyant, clairaudient, clairsentient, and medium) is what lets one session cover love, career, family, and the beyond at once.
 
 ---
 
@@ -69,6 +69,7 @@ Verified public data for Jeanne Clock:
 
 - **Rating:** 4.96 stars across ~24,000 ratings
 - **Readings:** 95,000+ completed since 2007
+- **Rate:** $15.99/min
 - **Style:** Compassionate
 - **Specialties:** Love & Relationships, Career & Work, Destiny & Life Path, Breakups & Divorce, Family & Friends
 - **Skills:** Clairvoyant, Clairaudient, Empath, Medium, Clairsentient
@@ -89,6 +90,12 @@ Jeanne is tagged **Compassionate** and the written reviews back that up hard. Cl
 > "Read my situation right away. Made me better for sticking to my guns."
 
 > "knew everything."
+
+A few of Jeanne's reviews name the reviewer and source outright, which is useful when you want to verify a reader beyond the aggregated score:
+
+> "Jeanne is the real deal. So kind and so accurate. She's helped me through a complicated relationship." — *sugarsugar (California), Keen profile listing*
+> "Jeanne is always so helpful and eases my mind about any issue. She is the best, hands down!" — *FlyGirl5 (5 stars), via Economic Times feature on Jeanne Clock*
+> "She's always so patient with me! One of my favorites on Keen!!" — *verified Keen client review*
 
 The pattern: clients lead with emotion ("flabbergasted," "patient," "knew everything"), not with timelines. That tells you Jeanne's strength is *accurate recognition of your situation*, not tight date predictions. If you want "he will text on Tuesday," she may frustrate you. If you want "here is what is actually going on and why," she is excellent.
 
