@@ -1,5 +1,6 @@
 ---
 title: "Master Psychic Adam Stone on Keen Review 2026: 113,000 Readings at $3.99/Min - Too Good to Be True?"
+seoTitle: "Master Psychic Adam Stone on Keen Review 2026: 113,000"
 description: "An independent review of Master Psychic Adam Stone on Keen - 19,000 ratings, 113,000+ readings since 2012, and a low $3.99/min rate. Built from Keen's live client reviews and his advisor profile, covering who he is, his record, and whether the low price holds up."
 platformName: "Keen: Master Psychic Adam Stone"
 rating: 4.88
@@ -37,7 +38,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "19,000 ratings and 113,000+ readings since 2012 at just $3.99/min. Is Master Psychic Adam Stone on Keen too good to be true? Honest review with real client quotes and who should book."
+metaDescription: "19,000 ratings and 113,000+ readings since 2012 at just $3.99/min. Is Master Psychic Adam Stone on Keen too good to be true? Honest review with real."
 canonicalUrl: https://easternalignment.com/reviews/keen/master-psychic-adam-stone/
 highlights:
 - "113,000+ completed readings on Keen since 2012 - enormous volume at a low rate"

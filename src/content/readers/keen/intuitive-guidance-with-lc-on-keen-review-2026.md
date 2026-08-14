@@ -1,5 +1,6 @@
 ---
 title: "Intuitive Guidance with LC (Lori) on Keen Review 2026: 4.97 Stars Across 8,687 Sessions — and the \"Fairytale Reader\" Question That Needs a Direct Answer"
+seoTitle: "Intuitive Guidance with LC (Lori) on Keen Review 2026: 4.97"
 description: "An independent review of Intuitive Guidance with LC on Keen — why 4.97 across 8,687 reviews is the most statistically robust rating in this series, what the fairytale reader concern actually means, and who Lori is specifically built for."
 platformName: "Keen: Intuitive Guidance with LC"
 rating: 4.8
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$10.88/min (Tarot Card Readings profile)"
 bestFor: "Clients who want warmth and accuracy in the same session without having to choose between them — particularly those in emotionally turbulent situations who need both honest guidance and genuine calm"
 publishDate: "2026-04-26"
+canonicalUrl: https://easternalignment.com/reviews/keen/intuitive-guidance-with-lc-on-keen-review-2026/
 updatedDate: "2026-04-26"
 metaDescription: "4.97 stars, 8,687 reviews, $10.88/min. Lori (LC) on Keen has the series' most robust rating — and one fairytale reader concern worth understanding. Full review."
 customSchema: |

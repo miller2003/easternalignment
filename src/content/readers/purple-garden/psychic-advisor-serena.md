@@ -1,7 +1,7 @@
 ---
 title: "Psychic Advisor Serena Purple Garden Review 2026: The Internationally Known Medium Who Tells It Like It Is"
 description: "Honest review of Psychic Advisor Serena on Purple Garden — an internationally known psychic medium reading since 2005, tools-free claircognizance and clairvoyance, aura reader, straight-talk style, $4.99/min. Who she's for, and why her bluntness is the trust signal."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Psychic Advisor Serena"
 rating: 4.9
 verdict: "Psychic Advisor Serena is an internationally known psychic medium on Purple Garden whose tools-free claircognizance and clairvoyance, plus aura reading, make her a straight-talking, high-clarity pick for clients who'd rather be told the truth than a fairy tale."
 affiliateUrl: /go/purple-garden-serena/
@@ -49,7 +49,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/psychic-advisor-serena/
 seoTitle: "Psychic Advisor Serena Purple Garden Review 2026: Tools-Free Medium, 4.9 Stars"
-metaDescription: "Psychic Advisor Serena on Purple Garden: an internationally known psychic medium reading since 2005, tools-free, aura reader, $4.99/min. Honest review of her straight-talk style."
+metaDescription: "Psychic Advisor Serena on Purple Garden: an internationally known psychic medium reading since 2005, tools-free, aura reader, $4.99/min. Honest review of."
 highlights:
 - "Internationally known psychic medium, reading since 2005"
 - "Tools-free — claircognizance and clairvoyance"
@@ -68,7 +68,6 @@ entities:
 - "Psychic Medium"
 ---
 
-# Psychic Advisor Serena Purple Garden Review 2026: The Medium Who Won't Sell You a Fairy Tale
 
 Serena is the rare Purple Garden advisor whose reputation precedes the platform. She's an internationally known psychic medium who's been reading since 2005, works without tools (claircognizance and clairvoyance — a "clear knowingness" rather than a deck), and reads auras (her aura work has even been featured in Cosmopolitan). On Purple Garden she holds a 4.9. The thing to understand about her is simple: she tells it like she sees it, and she's proud of that.
 

@@ -1,5 +1,6 @@
 ---
 title: "That Magic Man (James) on Keen Review 2026: A Direct, No-Tools Male Reader With 56,000 Readings"
+seoTitle: "That Magic Man (James) on Keen Review 2026: A Direct,"
 description: "An independent review of That Magic Man (James) on Keen - 14,000 ratings, 56,000+ readings since 2011, and a direct, no-tools style. What his track record and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: That Magic Man"
 rating: 4.93
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$2.99/min"
 bestFor: "Clients who want a direct, no-tools male reader for love and relationship questions - and who value straight-talk reassurance over gentle hand-holding"
 publishDate: '2026-06-24'
+canonicalUrl: https://easternalignment.com/reviews/keen/that-magic-man/
 updatedDate: '2026-06-24'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "14,000 ratings at 4.93 stars and 56,000+ readings since 2011. Is That Magic Man (James) on Keen worth booking? Honest breakdown of his no-tools style, real reviews, and who should call."
+metaDescription: "14,000 ratings at 4.93 stars and 56,000+ readings since 2011. Is That Magic Man (James) on Keen worth booking? Honest breakdown of his no-tools style."
 highlights:
 - "56,000+ completed readings on Keen since 2011 - over 15 years of volume"
 - "14,000 ratings at 4.93 stars - a high average for a no-tools reader"

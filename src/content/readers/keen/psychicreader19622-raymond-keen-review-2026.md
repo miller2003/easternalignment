@@ -1,5 +1,6 @@
 ---
 title: "psychicreader19622 (Raymond) on Keen Review 2026: The Worst-Looking Profile With the Best Numbers — What 19 Years Behind a Generic Username Actually Delivers"
+seoTitle: "psychicreader19622 (Raymond) on Keen Review 2026: The"
 description: "An honest third-party review of psychicreader19622 on Keen — unpacking the 98% five-star rating, Keen's Top Advisor badge, Raymond's cartomancy-with-playing-cards method, humor as a reading quality, and exactly who should book him at $4.99/min."
 platformName: "Keen: psychicreader19622"
 rating: 4.9
@@ -11,7 +12,7 @@ pricing: "$4.99/min"
 bestFor: "Love, twin flame, and past life readings from a warm, humorous male reader whose cartomancy-led intuitive style generates some of the highest client return rates in this review series"
 publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
-metaDescription: "Honest review of psychicreader19622 (Raymond) on Keen — 98% five-star rating, Keen Top Advisor badge, cartomancy with playing cards. What 19 years behind a generic username delivers."
+metaDescription: "Honest review of psychicreader19622 (Raymond) on Keen — 98% five-star rating, Keen Top Advisor badge, cartomancy with playing cards. What 19 years behind."
 metaTitle: "psychicreader19622 (Raymond) on Keen Review 2026 | 98% Five Stars, Top Advisor, $4.99/min"
 canonicalUrl: "https://easternalignment.com/reviews/psychicreader19622-raymond-keen-review"
 highlights:

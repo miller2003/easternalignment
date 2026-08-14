@@ -1,5 +1,6 @@
 ---
 title: "Jeanne Clock on Keen Review 2026: A Multi-Gifted Clairvoyant With 95,000 Readings Worth Booking"
+seoTitle: "Jeanne Clock on Keen Review 2026: A Multi-Gifted"
 description: "An independent review of Jeanne Clock on Keen - 24,000 ratings, 95,000+ readings since 2007, and a rare clairvoyant-plus-medium skill set. What her track record and real client reviews reveal, and who gets the most from booking her."
 platformName: "Keen: Jeanne Clock"
 rating: 4.96
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$15.99/min"
 bestFor: "Clients who want a patient, multi-gifted reader for love, family, and life-path questions - and who value being truly listened to"
 publishDate: '2026-06-16'
+canonicalUrl: https://easternalignment.com/reviews/keen/jeanne-clock/
 updatedDate: '2026-06-16'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "24,000 ratings and 95,000+ readings since 2007 at 4.96 stars. Is Jeanne Clock on Keen worth booking? Honest breakdown of her style, real reviews, and who should call."
+metaDescription: "24,000 ratings and 95,000+ readings since 2007 at 4.96 stars. Is Jeanne Clock on Keen worth booking? Honest breakdown of her style, real reviews, and who."
 highlights:
 - "95,000+ completed readings on Keen since 2007 - nearly two decades of steady volume"
 - "24,000 ratings at 4.96 stars across a broad clairvoyant-plus-medium skill set"

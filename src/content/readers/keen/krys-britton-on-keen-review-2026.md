@@ -1,5 +1,6 @@
 ---
 title: "Krys Britton on Keen Review 2026: The Reader Who Uses Ancient Egyptian Oracle Cards to Give \"Common Sense\" Answers — And Has the Verified Predictions to Back It Up"
+seoTitle: "Krys Britton on Keen Review 2026: The Reader Who Uses"
 description: "An independent review of Krys Britton on Keen — what Egyptian Oracle Cards actually are, why her Reddit-verified prediction accuracy stands out in a crowded field, and why $2.25/min for a 20-year veteran is the best value in this series."
 platformName: "Keen: Krys Britton"
 rating: 4.7
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$2.25/min (Tarot Card Readings profile)"
 bestFor: "Clients who want concrete, actionable answers from a structured oracle-based reading — without the premium pricing of clairvoyant-first advisors"
 publishDate: "2026-05-01"
+canonicalUrl: https://easternalignment.com/reviews/keen/krys-britton-on-keen-review-2026/
 updatedDate: "2026-05-01"
 customSchema: |
   {

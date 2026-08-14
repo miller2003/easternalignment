@@ -1,5 +1,6 @@
 ---
 title: "AllMyAngels on Keen Review 2026: A 50,000-Reading Intuitive at $6.99/Min"
+seoTitle: "AllMyAngels on Keen Review 2026: A 50,000-Reading Intuitive"
 description: "An independent review of AllMyAngels on Keen - 13,000 ratings, 50,044 readings since 2002, and a $6.99/min rate. What her 'connecting minds, hearts, and spirits' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: AllMyAngels"
 rating: 4.88
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a warm, intuitive read on love, relationships, and life-path questions - and who value a long-tenured advisor with a calm, connecting style"
 publishDate: '2026-07-07'
+canonicalUrl: https://easternalignment.com/reviews/keen/allmyangels/
 updatedDate: '2026-07-07'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "13,000 ratings and 50,000+ readings since 2002. But is AllMyAngels on Keen worth $6.99/min? Honest breakdown of her intuitive style, real reviews, and who should book her."
+metaDescription: "13,000 ratings and 50,000+ readings since 2002. But is AllMyAngels on Keen worth $6.99/min? Honest breakdown of her intuitive style, real reviews, and who."
 highlights:
 - "50,044 completed readings on Keen since 2002 - over two decades of consistent volume"
 - "13,000 ratings at 4.88 stars - a large, stable sample"

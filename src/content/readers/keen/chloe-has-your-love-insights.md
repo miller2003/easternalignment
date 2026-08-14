@@ -1,5 +1,6 @@
 ---
 title: "Chloe Has Your Love Insights on Keen Review 2026: 36,000 Readings at $2.58/Min"
+seoTitle: "Chloe Has Your Love Insights on Keen Review 2026: 36,000"
 description: "An independent review of Chloe Has Your Love Insights on Keen - 7,370 ratings, 35,997 readings since 2015, and a $2.58/min rate. What her 'delivering truth with compassion' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Chloe Has Your Love Insights"
 rating: 4.56
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$2.58/min"
 bestFor: "People who want an affordable, direct love-and-relationship read from an experienced tarot reader - and who can handle blunt honesty without needing reassurance"
 publishDate: '2026-08-10'
+canonicalUrl: https://easternalignment.com/reviews/keen/chloe-has-your-love-insights/
 updatedDate: '2026-08-10'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "7,370 ratings and 36,000+ readings since 2015. But is Chloe Has Your Love Insights on Keen worth $2.58/min? Honest breakdown of her direct style, real reviews, and who should book her."
+metaDescription: "7,370 ratings and 36,000+ readings since 2015. But is Chloe Has Your Love Insights on Keen worth $2.58/min? Honest breakdown of her direct style, real."
 highlights:
 - "35,997 completed readings on Keen since 2015 - a large, steady track record"
 - "7,370 ratings at 4.56 stars - solid but below the elite tier"

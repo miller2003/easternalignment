@@ -1,5 +1,6 @@
 ---
 title: "Psychic Visions by Atlantis on Keen Review 2026: $9.99/Min, a Near-Perfect Rating, and the Pattern Every Repeat Client Needs to Know About"
+seoTitle: "Psychic Visions by Atlantis on Keen Review 2026: $9.99/Min,"
 description: "An independent review of Psychic Visions by Atlantis on Keen — the widest toolkit in this series, what a near-5.00 rating across 11,000 reviews actually means, the first-session vs follow-up pattern, and who should book her once versus who should return."
 platformName: "Keen: Psychic Visions by Atlantis"
 rating: 4.6
@@ -10,8 +11,9 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$9.99/min (Psychic Readings profile)"
 bestFor: "Clients entering a new or complex situation who want the most technically equipped first-session read available — love, career, past life, or multi-layered questions that benefit from a cross-system approach"
 publishDate: "2026-04-29"
+canonicalUrl: https://easternalignment.com/reviews/keen/psychic-visions-by-atlantis-on-keen-review-2026/
 updatedDate: "2026-04-29"
-metaDescription: "Near-perfect rating, $9.99/min, widest toolkit on Keen. But Psychic Visions by Atlantis has a specific pattern every repeat client needs to know. Full honest review."
+metaDescription: "Near-perfect rating, $9.99/min, widest toolkit on Keen. But Psychic Visions by Atlantis has a specific pattern every repeat client needs to know. Full."
 customSchema: |
   {
     "@context": "https://schema.org",

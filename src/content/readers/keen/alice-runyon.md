@@ -1,5 +1,6 @@
 ---
 title: "Alice Runyon on Keen Review 2026: 44,000 Readings of 'Clear Visions' at $3.59/Min"
+seoTitle: "Alice Runyon on Keen Review 2026: 44,000 Readings of "
 description: "An independent review of Alice Runyon on Keen - 9,120 ratings, 44,784 readings since 2016, and a $3.59/min rate. What her 'clear visions since childhood' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Alice Runyon"
 rating: 4.95
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$3.59/min"
 bestFor: "People who want a high-rated (4.95), experienced intuitive read on love and life questions - and who want it at one of the lowest rates among high-volume Keen advisors"
 publishDate: '2026-06-18'
+canonicalUrl: https://easternalignment.com/reviews/keen/alice-runyon/
 updatedDate: '2026-06-18'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "9,120 ratings and 44,000+ readings since 2016. But is Alice Runyon on Keen worth $3.59/min? Honest breakdown of her vision-led style, real reviews, and who should book her."
+metaDescription: "9,120 ratings and 44,000+ readings since 2016. But is Alice Runyon on Keen worth $3.59/min? Honest breakdown of her vision-led style, real reviews, and."
 highlights:
 - "44,784 completed readings on Keen since 2016 - a large, recent-volume track record"
 - "9,120 ratings at 4.95 stars - elite average for the volume"

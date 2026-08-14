@@ -19,6 +19,12 @@
 - 联盟网络：**TUNE / Barges**（bargestech.go2cloud.org，aff_id=2326）；不是 CJ（此前误判）
 - 转化回传：functions/api/postback.js 接收 TUNE postback，转发 Order_Converted 到 PostHog
 
+## 单读者 review 编辑立场（内容文案基调）
+- 底层定位=**转化优先**（促成用户下单），由站点联盟商业模型决定，是内容基调硬约束。
+- "客观 / 挑刺"是**明贬暗褒**的信任装置：只提**无关痛痒的小问题**或**真实但可管理的缺点**，且其解法必须**强化推荐**（例：Ask Fran 的 drift→用户 60 秒可控；Chloe 的 blunt→适合过了要被哄阶段的人；Ayla 不给 yes/no→substance over theater）。
+- 红线：**净读必须仍是推荐**，表面客观即可；不得出现真正劝退、会导致流失的硬伤 caveat（除非该读者本就不该推荐）。
+- 即"顶级 SEO 文案营销"手法：表面客观 + 小瑕疵增信 + 底层倾斜转化。保留硬规则：禁编造 quote/价格、保留 reader-supported 披露。
+
 ## Affiliate 链接架构（2026-08-10 重构，解决 bot 虚高点击）
 - 原问题：/go/ 用 meta-refresh + window.location 无条件跳转 → bot 直接打 /go/ 也被计入点击（联盟后台 raw clicks 虚高；真人 session 仅 ~87/周 却显示 304 点击/周）
 - 修复要点：

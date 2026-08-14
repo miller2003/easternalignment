@@ -1,7 +1,7 @@
 ---
 title: "Danielle Psychic Kasamba Review (2026): Brutally Honest Love Reader With 57,000+ Sessions"
 description: "Independent review of Danielle Psychic on Kasamba — a 5.0-star clairaudient and clairvoyant since age 7, 57,935 readings since 2008, from $0.99/min. Strengths, style, and who should book."
-platformName: "Kasamba"
+platformName: "Kasamba: Danielle Psychic"
 rating: 5
 verdict: "Danielle Psychic is a natural-born clairaudient and clairvoyant who delivers \"brutally honest\" love and relationship readings — 57,935 readings since 2008 at a 5.0-star rating, from just $0.99/min."
 affiliateUrl: /go/kasamba-danielle/

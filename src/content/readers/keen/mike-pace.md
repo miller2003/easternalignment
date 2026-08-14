@@ -1,5 +1,6 @@
 ---
 title: "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader Worth $19.99/Min?"
+seoTitle: "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader"
 description: "An independent review of Mike Pace on Keen - 81,000 ratings, 142,000+ readings since 2001, and a $19.99/min rate. What his track record, TV/radio background, and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: Mike Pace"
 rating: 4.95
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$19.99/min"
 bestFor: "People who want a fast, direct, prediction-first reader for love and relationship questions - and who can afford a premium rate"
 publishDate: '2026-06-19'
+canonicalUrl: https://easternalignment.com/reviews/keen/mike-pace/
 updatedDate: '2026-06-19'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "81,000 ratings and 142,000+ readings since 2001. But is Mike Pace on Keen worth $19.99/min? Honest breakdown of his direct style, real reviews, and who should book him."
+metaDescription: "81,000 ratings and 142,000+ readings since 2001. But is Mike Pace on Keen worth $19.99/min? Honest breakdown of his direct style, real reviews, and who."
 highlights:
 - "142,000+ completed readings on Keen since 2001 - a two-decade track record almost no advisor matches"
 - "81,000 ratings at 4.95 stars - among the highest averages at this volume on the platform"

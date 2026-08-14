@@ -1,5 +1,6 @@
 ---
 title: "Mystic Raj on Keen Review 2026: The Only Male Reader in This Series — and the Only One Who Brings Feng Shui Into a Psychic Reading"
+seoTitle: "Mystic Raj on Keen Review 2026: The Only Male Reader in"
 description: "An independent review of Mystic Raj on Keen — why Kind ranking above Accurate in 270 endorsements is his strongest credential, what Feng Shui actually adds to a psychic reading, and who gets the most from the series' only warmth-first male advisor."
 platformName: "Keen: Mystic Raj"
 rating: 4.6
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$2.25/min (Love & Relationships profile)"
 bestFor: "Clients who want warmth and emotional safety alongside psychic insight — particularly those who have felt judged or rushed by more clinical readers, or who want a male advisor's perspective on relationship and life path questions"
 publishDate: "2026-04-30"
+canonicalUrl: https://easternalignment.com/reviews/keen/mystic-raj-on-keen-review-2026/
 updatedDate: "2026-04-30"
 customSchema: |
   {

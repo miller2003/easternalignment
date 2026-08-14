@@ -1,5 +1,6 @@
 ---
 title: "Flora Knows All on Keen Review 2026: The Lowest Price in the Category, a Fast-Rising Track Record, and the Honest Question of Whether New Readers Are Worth the Risk"
+seoTitle: "Flora Knows All on Keen Review 2026: The Lowest Price in"
 description: "An honest third-party review of Flora Knows All on Keen — covering her $2.52/min rate, 6,400 readings built in months, angel reading specialty, real review patterns, and exactly when a newer reader at a budget price makes sense to book."
 platformName: "Keen: Flora Knows All"
 rating: 4.7
@@ -11,7 +12,7 @@ pricing: "$2.52/min"
 bestFor: "Love and relationship readings for clients who want accessible pricing, multi-tool guidance, and compassionate support — especially those open to working with an emerging reader building a strong early track record"
 publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
-metaDescription: "Honest review of Flora Knows All on Keen — $2.52/min, 4.73★, 42% written review rate. When a newer reader at budget pricing is worth the risk — and when it isn't."
+metaDescription: "Honest review of Flora Knows All on Keen — $2.52/min, 4.73★, 42% written review rate. When a newer reader at budget pricing is worth the risk — and when."
 metaTitle: "Flora Knows All on Keen Review 2026 | $2.52/min, Angel Readings, New Reader Assessed"
 canonicalUrl: "https://easternalignment.com/reviews/flora-knows-all-keen-review"
 highlights:

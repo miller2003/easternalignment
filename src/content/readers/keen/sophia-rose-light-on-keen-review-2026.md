@@ -1,5 +1,6 @@
 ---
 title: "Sophia Rose Light on Keen Review 2026: $4.44/Min Is Not a Coincidence — and the Perth, Australia Reader Who's Available When Every Other Advisor Is Asleep"
+seoTitle: "Sophia Rose Light on Keen Review 2026: $4.44/Min Is Not a"
 description: "An independent review of Sophia Rose Light on Keen — why $4.44 is the most intentional price point in this series, what a Shamanic Healer and Tantrik Yogini brings to a psychic session that clairvoyance alone cannot, and why her Perth timezone is a feature for North American clients in crisis."
 platformName: "Keen: Sophia Rose Light"
 rating: 4.7
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$4.44/min (Life Path & Advice profile)"
 bestFor: "Clients with an active spiritual practice seeking soul-level guidance — Akashic Records, Kundalini, past lives, karmic patterns — plus North American night-owl and early-morning clients who need a reader when others are unavailable"
 publishDate: "2026-04-28"
+canonicalUrl: https://easternalignment.com/reviews/keen/sophia-rose-light-on-keen-review-2026/
 updatedDate: "2026-04-28"
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "$4.44 = angel number 444. Sophia Rose Light on Keen: Perth-based, Shamanic + Tantrik + Akashic, 4.95 stars in 4 years. The series' most spiritually dense reader."
+metaDescription: "$4.44 = angel number 444. Sophia Rose Light on Keen: Perth-based, Shamanic + Tantrik + Akashic, 4.95 stars in 4 years. The series' most spiritually dense."
 highlights:
   - "$4.44/min — angel number 444 embedded as a deliberate brand philosophy statement"
   - "Perth, Australia (AWST) — available during North American late night and early morning when most advisors are offline"

@@ -1,5 +1,6 @@
 ---
 title: "Serenity Stone on Keen Review 2026: Can a 4th-Generation Medium Hold 37,000 Ratings?"
+seoTitle: "Serenity Stone on Keen Review 2026: Can a 4th-Generation"
 description: "An independent review of Serenity Stone on Keen - 37,000 ratings, 122,000+ readings since 2001, and a $6.99/min rate. What her medium track record, real client reviews, and the slow-session complaints actually reveal."
 platformName: "Keen: Serenity Stone"
 rating: 4.66
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a long-tenured medium for closure, spirit messages, and relationship clarity - and who are patient with a slower, softer delivery"
 publishDate: '2026-08-01'
+canonicalUrl: https://easternalignment.com/reviews/keen/serenity-stone/
 updatedDate: '2026-08-01'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "37,000 ratings and 122,000+ readings since 2001. But is Serenity Stone on Keen worth $6.99/min? Honest breakdown of her medium style, real reviews, and the slow-session complaints."
+metaDescription: "37,000 ratings and 122,000+ readings since 2001. But is Serenity Stone on Keen worth $6.99/min? Honest breakdown of her medium style, real reviews, and."
 highlights:
 - "122,000+ completed readings on Keen since 2001 - over two decades as a platform medium"
 - "37,000 ratings at 4.66 stars - strong volume, but below Keen's top-tier average"

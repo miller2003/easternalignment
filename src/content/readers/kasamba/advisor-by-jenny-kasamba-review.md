@@ -1,7 +1,7 @@
 ---
 title: "Advisor by Jenny Kasamba Review (2026): MBA-Turned-Psychic Love Reader With 50,000+ Sessions"
 description: "Review of Advisor by Jenny on Kasamba — a natural-born psychic and tarot reader with an MBA, 50,170 readings since 2008, from $1.99/min. Method, real quotes, and fit."
-platformName: "Kasamba"
+platformName: "Kasamba: Advisor by Jenny"
 rating: 4.7
 verdict: "Advisor by Jenny is an unusual combination — an MBA and computer-science graduate who is also a natural-born psychic and tarot reader — with 50,170 readings since 2008 and some of the lowest promo rates on Kasamba."
 affiliateUrl: /go/kasamba-jenny/

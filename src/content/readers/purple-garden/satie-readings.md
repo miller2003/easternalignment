@@ -1,7 +1,7 @@
 ---
 title: "Satie Readings Purple Garden Review (2026): The 40-Year Reader Who Refuses to Be Your Fortune Teller"
 description: "Honest review of Satie Readings on Purple Garden — a 4.9-star love-tarot reader with 40+ years experience, nearly 18,000 readings since 2020, and an accuracy rating in the high 80s, from $4.99/min. Who she is for, and the one catch that is actually a selling point."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Satie Readings"
 rating: 4.9
 verdict: "Satie Readings is a 4.9-star Purple Garden love-tarot reader with 40+ years of experience and nearly 18,000 readings since 2020, read live on camera. Best for clients who want seasoned, boundary-setting truth with no sugarcoating."
 affiliateUrl: /go/purple-garden-satie-readings/
@@ -53,7 +53,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/satie-readings/
 seoTitle: "Satie Readings Purple Garden Review (2026): Nearly 18,000 Readings, 4.9 Stars"
-metaDescription: "Satie Readings on Purple Garden: a 4.9-star love-tarot reader with 40+ years experience, nearly 18,000 readings since 2020. We review her method and who should book."
+metaDescription: "Satie Readings on Purple Garden: a 4.9-star love-tarot reader with 40+ years experience, nearly 18,000 readings since 2020. We review her method and who."
 highlights:
 - "40+ years of psychic experience"
 - "Nearly 18,000 readings since 2020 at a 4.9-star rating"
@@ -72,7 +72,6 @@ entities:
 - "Love Tarot Reader"
 ---
 
-# Satie Readings Purple Garden Review (2026): The 40-Year Reader Who Refuses to Be Your Fortune Teller
 
 Satie Readings has been reading professionally for over 40 years, and on Purple Garden since 2020 she has completed nearly 18,000 readings at a 4.9, with an accuracy rating in the high 80s. She connects with your guides through tarot and reads every session live on camera. The line that defines her, in her own words: "I am NOT a Fortune Teller." For clients who want a mom-vibes reader who still tells the hard truth, she is one of the steadier bets on the platform.
 

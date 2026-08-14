@@ -1,7 +1,7 @@
 ---
 title: "Adam Africa Purple Garden Review (2026): The Certified Coach Who Refuses to Hand You Fast-Food Guidance"
 description: "Honest review of Adam Africa on Purple Garden — a 5.0-star certified life coach and intuitive healer with roughly 9,500 readings since 2019, from $5.99/min. Why his slow, meticulous style is the selling point, and who should book."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Adam Africa"
 rating: 5.0
 verdict: "Adam Africa is a 5.0-star Purple Garden reader who leads with a certified life-coach credential and backs it with clairaudience, clairvoyance, clairsentience, and expert tarot. Roughly 9,500 readings since 2019 and a 94% accuracy / 38% returning-client record make him a grounded, talk-plus-insight alternative to card-only readers — best for people who want the truth structured into a next step, not a soothing script."
 affiliateUrl: /go/purple-garden-adam-africa/
@@ -44,7 +44,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/adam-africa/
 seoTitle: "Adam Africa Purple Garden Review (2026): Certified Coach, ~9,500 Readings"
-metaDescription: "Adam Africa on Purple Garden: a 5.0-star certified life coach and intuitive healer with roughly 9,500 readings since 2019, from $5.99/min. Why his meticulous style is the selling point."
+metaDescription: "Adam Africa on Purple Garden: a 5.0-star certified life coach and intuitive healer with roughly 9,500 readings since 2019, from $5.99/min. Why his."
 highlights:
 - "5.0 stars across roughly 9,500 readings since 2019"
 - "Certified life coach plus clairaudience, clairvoyance, clairsentience, and tarot"
@@ -63,7 +63,6 @@ entities:
 - "Certified Life Coach"
 ---
 
-# Adam Africa Purple Garden Review (2026): The Certified Coach Who Refuses to Hand You Fast-Food Guidance
 
 Adam Africa breaks the single most common pattern on Purple Garden. Scroll the advisor list and you meet a wall of tarot flingers and "I see a strong connection" readers who tell you what you came to hear. Adam leads with something rarer: a certified life-coach credential, backed by clairaudience, clairvoyance, and clairsentience, and a decade-plus of real coaching behind the mysticism. After roughly 9,500 readings since 2019 at a flat 5.0 stars, he has the rating and the tenure to make that blend credible — not as a gimmick, but as a working method.
 

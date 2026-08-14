@@ -1,5 +1,6 @@
 ---
 title: "Heather Ashera on Keen Review 2026: 32,000 Readings of Tarot at $3.33/Min"
+seoTitle: "Heather Ashera on Keen Review 2026: 32,000 Readings of"
 description: "An independent review of Heather Ashera on Keen - 6,612 ratings, 31,763 readings since 2007, and a $3.33/min rate. What her '30+ years tarot & psychic readings' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Heather Ashera"
 rating: 4.77
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$3.33/min"
 bestFor: "People who want an affordable, experienced tarot and psychic read on love and career - and who want fast, clear answers without a premium price"
 publishDate: '2026-07-21'
+canonicalUrl: https://easternalignment.com/reviews/keen/heather-ashera/
 updatedDate: '2026-07-21'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "6,612 ratings and 32,000+ readings since 2007. But is Heather Ashera on Keen worth $3.33/min? Honest breakdown of her tarot style, real reviews, and who should book her."
+metaDescription: "6,612 ratings and 32,000+ readings since 2007. But is Heather Ashera on Keen worth $3.33/min? Honest breakdown of her tarot style, real reviews, and who."
 highlights:
 - "31,763 completed readings on Keen since 2007 - a long, steady track record"
 - "6,612 ratings at 4.77 stars - solid for a budget reader"

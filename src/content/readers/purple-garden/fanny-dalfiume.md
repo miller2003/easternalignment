@@ -1,7 +1,7 @@
 ---
 title: "Fanny Dalfiume Purple Garden Review (2026): Nearly 19,000 Readings of Metaphysics and Tarot at $1.99/min"
 description: "Honest review of Fanny Dalfiume on Purple Garden — a 4.6-star metaphysics and tarot reader with nearly 19,000 readings since 2021, from $1.99/min. Why her honest mid-tier rating is a feature, not a flaw, at this price."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Fanny Dalfiume"
 rating: 4.6
 verdict: "Fanny Dalfiume is a 4.6-star Purple Garden metaphysics and tarot reader whose nearly 19,000 readings since 2021 and $1.99/min start make her the platform's high-volume, budget-tier option. The honest rating is a signal of consistency, not failure — at this price, very good is extraordinary value."
 affiliateUrl: /go/purple-garden-fanny-dalfiume/
@@ -44,7 +44,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/fanny-dalfiume/
 seoTitle: "Fanny Dalfiume Purple Garden Review (2026): Nearly 19,000 Readings, from $1.99/min"
-metaDescription: "Fanny Dalfiume on Purple Garden: a 4.6-star metaphysics and tarot reader with nearly 19,000 readings since 2021, from $1.99/min. We review her method, honest rating, and fit."
+metaDescription: "Fanny Dalfiume on Purple Garden: a 4.6-star metaphysics and tarot reader with nearly 19,000 readings since 2021, from $1.99/min. We review her method."
 highlights:
 - "Nearly 19,000 readings since 2021 at a 4.6-star rating"
 - "From $1.99/min — budget tier"
@@ -63,7 +63,6 @@ entities:
 - "Metaphysics Tarot Reader"
 ---
 
-# Fanny Dalfiume Purple Garden Review (2026): Nearly 19,000 Readings of Metaphysics and Tarot at $1.99/min
 
 Fanny Dalfiume is the reader you book when you want to experiment without risk. Nearly 19,000 readings since 2021 at a 4.6-star rating, starting at $1.99/min — she is Purple Garden's high-volume, budget-tier option for anyone who likes a metaphysical frame wrapped around real tarot work. The rating looks modest next to the platform's army of 5.0s, and that's exactly the point: at this price and this volume, a 4.6 is honesty you can use.
 

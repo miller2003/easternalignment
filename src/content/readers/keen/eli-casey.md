@@ -1,5 +1,6 @@
 ---
 title: "Eli Casey on Keen Review 2026: Can a 200,000-Reading Empath Still Deliver at $8.97/Min?"
+seoTitle: "Eli Casey on Keen Review 2026: Can a 200,000-Reading Empath"
 description: "An independent review of Eli Casey on Keen - 81,000 ratings, 200,000+ readings since 2001, and an $8.97/min rate. What his track record and real client reviews actually reveal, and exactly who should book him."
 platformName: "Keen: Eli Casey"
 rating: 4.96
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.97/min"
 bestFor: "People who want a warm, thorough, reassuring empath for love, breakup, and commitment questions - and who value being talked through a situation step by step"
 publishDate: '2026-06-15'
+canonicalUrl: https://easternalignment.com/reviews/keen/eli-casey/
 updatedDate: '2026-06-15'
 customSchema: |
   {

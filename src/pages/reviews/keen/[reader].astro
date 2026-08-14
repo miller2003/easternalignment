@@ -140,15 +140,17 @@ const relatedItems = [
     <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
   )}
 
-  <CTABox
-    title={unavailable ? `Looking for a reader like ${readerName}?` : `Ready to try ${readerName}?`}
-    description={unavailable
-      ? 'Mystic Raj is no longer listed on Keen. Browse Keen’s live advisors and their current new-client offer.'
-      : (frontmatter.freeOffer ? `Take advantage of the current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.')}
-    buttonText={unavailable ? 'See Live Keen Advisors →' : `Book ${readerName} on Keen →`}
-    buttonUrl={unavailable ? '/go/keen/' : (frontmatter.affiliateUrl || '#')}
-    variant="highlight"
-  />
+  <div id="end-cta-anchor">
+    <CTABox
+      title={unavailable ? `Looking for a reader like ${readerName}?` : `Ready to try ${readerName}?`}
+      description={unavailable
+        ? 'Mystic Raj is no longer listed on Keen. Browse Keen’s live advisors and their current new-client offer.'
+        : (frontmatter.freeOffer ? `Take advantage of the current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.')}
+      buttonText={unavailable ? 'See Live Keen Advisors →' : `Book ${readerName} on Keen →`}
+      buttonUrl={unavailable ? '/go/keen/' : (frontmatter.affiliateUrl || '#')}
+      variant="highlight"
+    />
+  </div>
 
   <FAQ items={faqItems} title={`${readerName} FAQ`} />
 

@@ -1,5 +1,6 @@
 ---
 title: "Readings by Ruth on Keen Review 2026: A 41,000-Reading 3rd-Gen Navigator at $5.99/Min"
+seoTitle: "Readings by Ruth on Keen Review 2026: A 41,000-Reading"
 description: "An independent review of Readings by Ruth on Keen - 8,287 ratings, 41,119 readings since 2016, and a $5.99/min rate. What her 31-years 'Intuitive Navigator' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Readings by Ruth"
 rating: 4.91
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$5.99/min"
 bestFor: "People who want a direct, detailed love and relationship read from an experienced third-generation psychic - and who want honesty delivered with a patient, compassionate side"
 publishDate: '2026-06-29'
+canonicalUrl: https://easternalignment.com/reviews/keen/readings-by-ruth/
 updatedDate: '2026-06-29'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "8,287 ratings and 41,000+ readings since 2016. But is Readings by Ruth on Keen worth $5.99/min? Honest breakdown of her direct style, real reviews, and who should book her."
+metaDescription: "8,287 ratings and 41,000+ readings since 2016. But is Readings by Ruth on Keen worth $5.99/min? Honest breakdown of her direct style, real reviews, and."
 highlights:
 - "41,119 completed readings on Keen since 2016 - a large, recent-volume track record"
 - "8,287 ratings at 4.91 stars - a stable, trustworthy average"

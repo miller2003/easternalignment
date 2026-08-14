@@ -1,5 +1,6 @@
 ---
 title: "HeeratheIntuitive on Keen Review 2026: $7.99/Min, No Cold Readings, and a 94% Five-Star Rate — What Is She Actually Selling?"
+seoTitle: "HeeratheIntuitive on Keen Review 2026: $7.99/Min, No Cold"
 description: "An independent review of HeeratheIntuitive on Keen — why the most expensive reader in this series explicitly refuses cold readings, what two-year repeat clients reveal about her actual value, and exactly who should book her first session."
 platformName: "Keen: HeeratheIntuitive"
 rating: 4.6
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$7.99/min (Love & Relationships profile)"
 bestFor: "Clients with high-stakes ongoing situations — infidelity, long-term relationship decisions, major career crossroads — who want a consistent long-term advisor rather than a single-session reading"
 publishDate: "2026-04-27"
+canonicalUrl: https://easternalignment.com/reviews/keen/heeratheintuitive-on-keen-review-2026/
 updatedDate: "2026-04-27"
 customSchema: |
   {

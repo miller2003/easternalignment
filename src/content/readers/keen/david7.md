@@ -1,5 +1,6 @@
 ---
 title: 'David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames  -  What
+seoTitle: "David7 on Keen Review 2026: The Male Psychic Perspective on"
   94,000 Readings Actually Tell You'
 description: An honest third-party review of David7 on Keen  -  covering his tool-free
   clairvoyant approach, twin flame specialization, dual profile pricing, and exactly
@@ -17,6 +18,7 @@ pricing: $6.99/min
 bestFor: Twin flame and relationship readings from a direct, tool-free male intuitive
   with a long track record
 publishDate: '2026-03-29'
+canonicalUrl: https://easternalignment.com/reviews/keen/david7/
 updatedDate: '2026-03-29'
 customSchema: |
   {

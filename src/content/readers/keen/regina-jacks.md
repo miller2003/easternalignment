@@ -1,5 +1,6 @@
 ---
 title: 'Regina Jacks on Keen Review 2026: 109,000 Readings Later  -  Is She Still
+seoTitle: "Regina Jacks on Keen Review 2026: 109,000 Readings Later  -"
   Worth It?'
 description: An independent review of Regina Jacks on Keen  -  covering her clairvoyant-first
   reading style, what 18,000 verified ratings actually reveal, pricing breakdown,
@@ -16,6 +17,7 @@ pricing: $3.59/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships
   without giving context first
 publishDate: '2026-04-22'
+canonicalUrl: https://easternalignment.com/reviews/keen/regina-jacks/
 updatedDate: '2026-04-22'
 customSchema: |
   {

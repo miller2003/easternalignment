@@ -1,5 +1,6 @@
 ---
 title: 'Ask Fran on Keen Review 2026: 150,000 Sessions and the Most Polarized Reviews
+seoTitle: "Ask Fran on Keen Review 2026: 150,000 Sessions and the Most"
   on the Platform  -  What Actually Separates the Fans From the Frustrated'
 description: An independent review of Ask Fran on Keen  -  why the same reader generates
   both absolute devotion and sharp frustration, what the documented negative pattern
@@ -21,6 +22,7 @@ bestFor: Clients who want warmth, genuine connection, and honest conversational 
   on love or career  -  and who arrive with a focused question rather than an open-ended
   exploration
 publishDate: '2026-04-16'
+canonicalUrl: https://easternalignment.com/reviews/keen/ask-fran/
 updatedDate: '2026-04-16'
 customSchema: |
   {

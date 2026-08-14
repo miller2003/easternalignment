@@ -72,3 +72,8 @@ scratch/fx2_raj*.html
 scratch/fx2_keen_alice.html
 scratch/fx2_keen_alice.html
 scratch/fx2_missing.txt
+
+# scratch temp scrape dumps & binary artifacts (incl. PG/Kasamba pages with
+# embedded FbConversionsApiToken) — never commit; keep only .py/.csv/.md scripts
+scratch/**/*.html
+scratch/**/*.bin

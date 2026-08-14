@@ -1,7 +1,7 @@
 ---
 title: "Tarot Withh Love Purple Garden Review (2026): The Mystic Who Refuses to Answer Yes or No"
 description: "Review of Tarot Withh Love on Purple Garden — a 4.8-star Indian mystic and multi-clair reader with over 15,000 readings since 2019, from $3.99/min. Why her refusal to do yes/no questions is the trust signal, not the limitation."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Tarot Withh Love"
 rating: 4.8
 verdict: "Tarot Withh Love is a 4.8-star Purple Garden clairvoyant, clairsentient, and clairaudient Indian mystic whose over 15,000 readings since 2019 and plain no-sugar-coating stance make her a detailed, budget-friendly pick for clients who want depth instead of a quick verdict."
 affiliateUrl: /go/purple-garden-tarot-withh-love/
@@ -57,7 +57,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/tarot-withh-love/
 seoTitle: "Tarot Withh Love Purple Garden Review (2026): Over 15,000 Readings, 4.8 Stars"
-metaDescription: "Tarot Withh Love on Purple Garden: a 4.8-star Indian mystic and multi-clair reader with over 15,000 readings since 2019, from $3.99/min. Why her no-sugar-coating style and refusal of yes/no questions is a trust signal."
+metaDescription: "Tarot Withh Love on Purple Garden: a 4.8-star Indian mystic and multi-clair reader with over 15,000 readings since 2019, from $3.99/min. Why her."
 highlights:
 - "Over 15,000 readings since 2019 at a 4.8-star rating"
 - "Multi-clair toolkit: clairvoyant, clairsentient, clairaudient, intuitive"
@@ -77,7 +77,6 @@ entities:
 - "Indian Mystic"
 ---
 
-# Tarot Withh Love Purple Garden Review (2026): The Mystic Who Tells You She Won't Do Yes or No
 
 Most readers on Purple Garden will take any question you hand them, because every question is a paid minute. Tarot Withh Love is unusual in that her profile tells you, before you ever book, the questions she will not take — and the warning is the most honest thing on the page. She is a 4.8-star Indian mystic and multi-clair reader with over 15,000 readings since 2019, working from $3.99/min, and her pitch is not "I will tell you what you want to hear." It is "Clear Detailed Insight," and she means the clear part.
 

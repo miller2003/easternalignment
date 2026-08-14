@@ -1,5 +1,6 @@
 ---
 title: "Dr Lisa Powerful Insights on Keen Review 2026: 4.97 Stars Across 16,000 Ratings - Does She Live Up to It?"
+seoTitle: "Dr Lisa Powerful Insights on Keen Review 2026: 4.97 Stars"
 description: "An independent review of Dr Lisa Powerful Insights on Keen - 16,000 ratings, 79,000+ readings since 2010, and a no-tools, fast, compassionate style. What her track record and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Dr Lisa Powerful Insights"
 rating: 4.97
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$14.99/min (new clients: 5 min for $1)"
 bestFor: "Clients who want a fast, no-tools, compassionate reader for love and relationship questions - and who value quick, accurate pickup over slow build-up"
 publishDate: '2026-06-14'
+canonicalUrl: https://easternalignment.com/reviews/keen/dr-lisa-powerful-insights/
 updatedDate: '2026-06-14'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Is Dr Lisa on Keen worth booking? Honest breakdown of her no-tools style, real reviews, and who should call."
+metaDescription: "16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Is Dr Lisa on Keen worth booking? Honest breakdown of her no-tools style, real reviews, and."
 highlights:
 - "79,000+ completed readings on Keen since 2010 - over 15 years of steady volume"
 - "16,000 ratings at 4.97 stars - among the highest averages of any high-volume advisor"

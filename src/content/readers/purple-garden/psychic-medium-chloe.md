@@ -1,7 +1,7 @@
 ---
 title: "Chloe Psychic UK Purple Garden Review (2026): The Honest Reader Who Schedules in Your Time Zone"
 description: "Honest review of Chloe Psychic UK on Purple Garden — a 4.8-star UK-based reader (psychic, clairsentient, energy, tarot) with over 8,900 readings since 2016, from $3.99/min. Known for blunt honesty and a top-accuracy badge. Who she is for, and the one catch that is actually a selling point."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Chloe Psychic UK"
 rating: 4.8
 verdict: "Chloe Psychic UK is a 4.8-star Purple Garden reader based in England who blends psychic, clairsentient, energy, and tarot work with a blunt, no-fairytales honesty. With over 8,900 readings since 2016 and a top-accuracy badge, she is best for clients who want the unvarnished truth rather than comfort."
 affiliateUrl: /go/purple-garden-chloe/
@@ -57,7 +57,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/psychic-medium-chloe/
 seoTitle: "Chloe Psychic UK Purple Garden Review (2026): Over 8,900 Readings, 4.8 Stars"
-metaDescription: "Chloe Psychic UK on Purple Garden: a 4.8-star UK-based reader blending psychic, clairsentient, energy, and tarot work with blunt honesty, over 8,900 readings since 2016. Who should book."
+metaDescription: "Chloe Psychic UK on Purple Garden: a 4.8-star UK-based reader blending psychic, clairsentient, energy, and tarot work with blunt honesty, over 8,900."
 highlights:
 - "Over 8,900 readings since 2016 at a 4.8-star rating"
 - "UK-based, with hours posted in UK time"
@@ -76,7 +76,6 @@ entities:
 - "Honest Reader"
 ---
 
-# Chloe Psychic UK Purple Garden Review (2026): The Honest Reader Who Schedules in Your Time Zone
 
 There is a particular kind of Purple Garden profile that promises clarity and delivers weather. Chloe — listed on the platform as Chloe Psychic UK — is the opposite. She has been reading since 2016, she is based in England, and her whole posture is summed up in one word she puts in her own tags: HONEST. Over 8,900 readings later, at a steady 4.8 stars, that honesty is the product. If you want to be comforted, she is not your first call. If you want to be told the truth, she is one of the cleaner bets on the platform.
 

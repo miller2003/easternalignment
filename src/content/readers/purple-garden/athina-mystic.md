@@ -1,7 +1,7 @@
 ---
 title: "Athina Mystic Purple Garden Review (2026): The Twin-Flame Reader Who Won't Comfort Your Ego"
 description: "Honest review of Athina Mystic on Purple Garden — a 4.9-star twin-flame and soulmate healer with more than 15,000 readings since 2020 and a near-95% happy review split, from $5.99/min. Why her strict boundaries are the selling point."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Athina Mystic"
 rating: 4.9
 verdict: "Athina Mystic is a 4.9-star Purple Garden twin-flame and soulmate healer whose more than 15,000 readings since 2020 and near-95% happy review split reflect a blunt, boundary-driven style. She won't give timelines, won't do mediumship, and won't comfort your ego — which is exactly why serious twin-flame clients trust her."
 affiliateUrl: /go/purple-garden-athina-mystic/
@@ -45,7 +45,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/athina-mystic/
 seoTitle: "Athina Mystic Purple Garden Review (2026): 15,000+ Readings, 4.9 Stars"
-metaDescription: "Athina Mystic on Purple Garden: a 4.9-star twin-flame and soulmate healer with more than 15,000 readings since 2020. We review her blunt style, strict boundaries, and who should book."
+metaDescription: "Athina Mystic on Purple Garden: a 4.9-star twin-flame and soulmate healer with more than 15,000 readings since 2020. We review her blunt style, strict."
 highlights:
 - "More than 15,000 readings since 2020 at a 4.9-star rating"
 - "Near-95% happy review split (roughly 3,400 happy vs 180 frustrated)"
@@ -64,7 +64,6 @@ entities:
 - "Twin Flame Specialist"
 ---
 
-# Athina Mystic Purple Garden Review (2026): The Twin-Flame Reader Who Won't Comfort Your Ego
 
 The twin-flame and soulmate corner of online psychic work is wall-to-wall soft reassurance: "he's coming back," "trust the signs," "the universe is aligning." Athina Mystic is the blunt exception, and that's precisely why she has more than 15,000 readings since 2020 at a 4.9-star rating with a near-95% happy review split. She tells clients up front, in her own words: "I am not here to comfort the ego — I am here to awaken your soul." If you want sweetness, she'll tell you to look elsewhere. If you want truth on a charged connection, she's one of the most focused voices on the platform.
 

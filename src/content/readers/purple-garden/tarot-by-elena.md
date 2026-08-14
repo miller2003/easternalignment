@@ -1,7 +1,7 @@
 ---
 title: "Tarot by Elena Purple Garden Review (2026): Why Written Chat Tarot Beats Video for People Who Audit"
 description: "Review of Tarot by Elena on Purple Garden — a Top Rated, card-by-card chat tarot reader whose permanent transcripts and fast cadence make her the platform's best argument for text over video. Who she's for, and the one limitation that's actually a feature."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Tarot by Elena"
 rating: 4.8
 verdict: "Tarot by Elena is a 4.8-star Purple Garden chat tarot reader whose card-by-card method and fast, text-first cadence produce a permanent transcript you can audit weeks later. Best for analytical clients who want a saved record and concrete interpretations, not a video performance."
 affiliateUrl: /go/purple-garden-elena/
@@ -53,7 +53,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/tarot-by-elena/
 seoTitle: "Tarot by Elena Purple Garden Review (2026): Chat Tarot With a Permanent Transcript"
-metaDescription: "Tarot by Elena on Purple Garden: a Top Rated chat tarot reader whose card-by-card method leaves a permanent transcript. From $3.99/min. Who should book, and the catch that's a feature."
+metaDescription: "Tarot by Elena on Purple Garden: a Top Rated chat tarot reader whose card-by-card method leaves a permanent transcript. From $3.99/min. Who should book."
 highlights:
 - "Top Rated chat tarot reader with over 4,000 completed readings"
 - "Card-by-card method that leaves a permanent, auditable transcript"
@@ -73,7 +73,6 @@ entities:
 - "Online Psychic"
 ---
 
-# Tarot by Elena Purple Garden Review (2026): The Reader Who Makes the Case for Chat Over Video
 
 Most people open Purple Garden and head straight for the video readings, and for a lot of questions that is the right instinct — watching someone pull cards in real time builds trust fast. But video and voice share a flaw nobody mentions until it has already cost them: the session disappears the second it ends. You remember a name, a date, a phrase that landed, and three weeks later, when you most need to check what was actually said, the details have softened into whatever your anxiety wants them to be. Text chat deletes that problem. Every keystroke is saved. Every prediction is a written record you can hold up against what actually happened.
 

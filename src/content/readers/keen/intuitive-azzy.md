@@ -1,5 +1,6 @@
 ---
 title: 'Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader Who Openly Admits
+seoTitle: "Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader"
   Tarot Can''t Predict Your Future  -  And Why That''s Her Strongest Credential'
 description: An independent review of Intuitive Azzy on Keen  -  her guidance-first
   reading philosophy, what 3,100+ ratings across a decade actually reveal, the real
@@ -20,6 +21,7 @@ bestFor: Clients who want guidance-oriented readings with genuine energetic supp
   those navigating love, career crossroads, or life path questions without needing
   hard prediction timelines
 publishDate: '2026-04-09'
+canonicalUrl: https://easternalignment.com/reviews/keen/intuitive-azzy/
 updatedDate: '2026-04-09'
 customSchema: |
   {

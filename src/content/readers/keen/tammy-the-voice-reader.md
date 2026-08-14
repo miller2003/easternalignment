@@ -1,5 +1,6 @@
 ---
 title: "Tammy the Voice Reader on Keen Review 2026: Can a 4.98-Rating Reader Justify $9.99/Min?"
+seoTitle: "Tammy the Voice Reader on Keen Review 2026: Can a"
 description: "An independent review of Tammy the Voice Reader on Keen - 26,000 ratings, 77,000+ readings since 2001, and a $9.99/min rate. What her Top Advisor track record, voice-energy method, and real client reviews reveal."
 platformName: "Keen: Tammy the Voice Reader"
 rating: 4.98
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$9.99/min"
 bestFor: "People who want a Top Advisor with an unusually high rating and a voice-energy reading method for love and relationship clarity"
 publishDate: '2026-06-12'
+canonicalUrl: https://easternalignment.com/reviews/keen/tammy-the-voice-reader/
 updatedDate: '2026-06-12'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "26,000 ratings and 77,000+ readings since 2001. But is Tammy the Voice Reader on Keen worth $9.99/min? Honest breakdown of her 4.98 average, voice-energy method, and real reviews."
+metaDescription: "26,000 ratings and 77,000+ readings since 2001. But is Tammy the Voice Reader on Keen worth $9.99/min? Honest breakdown of her 4.98 average, voice-energy."
 highlights:
 - "77,000+ completed readings on Keen since 2001 - two decades of activity"
 - "26,000 ratings at 4.98 stars - the highest average among the next-20 readers reviewed"

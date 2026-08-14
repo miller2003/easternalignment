@@ -1,5 +1,6 @@
 ---
 title: "Dar66 on Keen Review 2026: 43,000 Readings of 'Spirit's Truth' at $4.20/Min"
+seoTitle: "Dar66 on Keen Review 2026: 43,000 Readings of "
 description: "An independent review of Dar66 on Keen - 11,000 ratings, 43,620 readings since 2009, and a $4.20/min rate. What her 32-years-of-wisdom approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Dar66"
 rating: 4.91
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$4.20/min"
 bestFor: "People who want an experienced, spiritually rooted read on love, life questions, and spirit guidance - and who want it at a moderate price below most tenured readers"
 publishDate: '2026-06-28'
+canonicalUrl: https://easternalignment.com/reviews/keen/dar66/
 updatedDate: '2026-06-28'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "11,000 ratings and 43,000+ readings since 2009. But is Dar66 on Keen worth $4.20/min? Honest breakdown of her spirit-guided style, real reviews, and who should book her."
+metaDescription: "11,000 ratings and 43,000+ readings since 2009. But is Dar66 on Keen worth $4.20/min? Honest breakdown of her spirit-guided style, real reviews, and who."
 highlights:
 - "43,620 completed readings on Keen since 2009 - a long, steady track record"
 - "11,000 ratings at 4.91 stars - high average for the volume"

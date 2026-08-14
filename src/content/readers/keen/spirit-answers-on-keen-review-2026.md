@@ -1,5 +1,6 @@
 ---
 title: "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect Rating, and the Chat-Only Reader Who \"Didn't Waste a Second\""
+seoTitle: "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect"
 description: "An independent review of Spirit Answers on Keen — why the series' highest price paired with its highest rating and a chat-only format creates the most efficient session value in this series, plus the Finnish language gap no other Keen reader fills."
 platformName: "Keen: Spirit Answers"
 rating: 4.8
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$12.99/min (Love & Relationships profile)"
 bestFor: "Clients who prioritize session efficiency, want a permanent written record of what they were told, or are Finnish-speaking — and who understand that the highest per-minute rate in this series may produce the lowest real cost per useful insight"
 publishDate: "2026-04-27"
+canonicalUrl: https://easternalignment.com/reviews/keen/spirit-answers-on-keen-review-2026/
 updatedDate: "2026-04-27"
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "5.0 stars, $12.99/min, chat-only. Spirit Answers is Keen's most expensive reader — and her efficiency argument may make her the best value per insight. Full review."
+metaDescription: "5.0 stars, $12.99/min, chat-only. Spirit Answers is Keen's most expensive reader — and her efficiency argument may make her the best value per insight."
 highlights:
   - "5.0-star perfect rating across 4,697 verified reviews — highest in this series"
   - "21,860 readings since 2014 — 12 years of consistent platform performance"

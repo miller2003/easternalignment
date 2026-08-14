@@ -1,5 +1,6 @@
 ---
 title: 'the psychic one on Keen Review 2026: 183,000 Sessions, 25 Years, and One Very
+seoTitle: "the psychic one on Keen Review 2026: 183,000 Sessions, 25"
   Specific Promise  -  Do "the Precise Dates and Details" Actually Land?'
 description: An independent review of the psychic one on Keen  -  her bold date-and-detail
   promise, what 40,000 ratings across 25 years actually reveal, where her track record
@@ -21,6 +22,7 @@ bestFor: Clients who want specific timeline predictions on love and relationship
   are ready to use the intro session as a genuine accuracy test before committing
   to a full reading
 publishDate: '2026-04-25'
+canonicalUrl: https://easternalignment.com/reviews/keen/the-psychic-one/
 updatedDate: '2026-04-25'
 customSchema: |
   {

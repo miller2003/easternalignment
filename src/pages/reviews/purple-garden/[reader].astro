@@ -71,31 +71,34 @@ const readerFaqItems = [
   verdict={frontmatter.verdict}
   affiliateUrl={frontmatter.affiliateUrl}
   freeOffer={frontmatter.freeOffer}
+  avatarUrl={frontmatter.avatarUrl}
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
 >
-  <!-- Breadcrumb navigation back to hub -->
-  <div class="hub-breadcrumb">
-    <a href="/reviews/purple-garden/" class="hub-link">
-      ← Back to Purple Garden Platform Review & All Readers
-    </a>
-  </div>
-
   <Content />
 
   {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
     <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
   )}
 
-  <CTABox
-    title={`Ready for a reading with ${readerDisplayName}?`}
-    description={frontmatter.freeOffer ? `Offer available: ${frontmatter.freeOffer}` : `Connect with ${readerDisplayName} on Purple Garden today.`}
-    buttonText={`Book ${readerDisplayName} on Purple Garden →`}
-    buttonUrl={frontmatter.affiliateUrl || '#'}
-    variant="highlight"
-  />
+  <div id="end-cta-anchor">
+    <CTABox
+      title={`Ready for a reading with ${readerDisplayName}?`}
+      description={frontmatter.freeOffer ? `Offer available: ${frontmatter.freeOffer}` : `Connect with ${readerDisplayName} on Purple Garden today.`}
+      buttonText={`Book ${readerDisplayName} on Purple Garden →`}
+      buttonUrl={frontmatter.affiliateUrl || '#'}
+      variant="highlight"
+    />
+  </div>
 
   <FAQ items={readerFaqItems} title={`Frequently Asked Questions About ${readerDisplayName}`} />
+
+  <!-- Breadcrumb navigation back to hub — placed at end of article for better reading flow -->
+  <div class="hub-breadcrumb hub-breadcrumb--footer">
+    <a href="/reviews/purple-garden/" class="hub-link">
+      ← Back to Purple Garden Platform Review & All Readers
+    </a>
+  </div>
 
   <!-- Related Readers on Same Platform -->
   {otherReaders.length > 0 && (
@@ -123,10 +126,10 @@ const readerFaqItems = [
 </ReviewLayout>
 
 <style>
-  .hub-breadcrumb {
-    margin-bottom: var(--space-6);
-    padding-bottom: var(--space-4);
-    border-bottom: 1px solid var(--color-border);
+  .hub-breadcrumb--footer {
+    margin-top: var(--space-10);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
   }
 
   .hub-link {

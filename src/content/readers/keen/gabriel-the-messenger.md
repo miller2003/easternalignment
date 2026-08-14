@@ -1,5 +1,6 @@
 ---
 title: "Gabriel the Messenger on Keen Review 2026: A No-Tools Reader Holding 23,000 Ratings at $8.99/Min"
+seoTitle: "Gabriel the Messenger on Keen Review 2026: A No-Tools"
 description: "An independent review of Gabriel the Messenger on Keen - 23,000 ratings, 138,000+ readings since 2008, and a $8.99/min rate. A no-tools love specialist's track record, real client reviews, and what the premium buys."
 platformName: "Keen: Gabriel the Messenger"
 rating: 4.94
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "People who want a no-tools, relationship-focused reader with a massive track record - and who can absorb a premium rate"
 publishDate: '2026-06-23'
+canonicalUrl: https://easternalignment.com/reviews/keen/gabriel-the-messenger/
 updatedDate: '2026-06-23'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "23,000 ratings and 138,000+ readings since 2008. But is Gabriel the Messenger on Keen worth $8.99/min? Honest breakdown of his no-tools style, real reviews, and who should book him."
+metaDescription: "23,000 ratings and 138,000+ readings since 2008. But is Gabriel the Messenger on Keen worth $8.99/min? Honest breakdown of his no-tools style, real."
 highlights:
 - "138,000+ completed readings on Keen since 2008 - an enormous volume"
 - "23,000 ratings at 4.94 stars - elite average at meaningful scale"

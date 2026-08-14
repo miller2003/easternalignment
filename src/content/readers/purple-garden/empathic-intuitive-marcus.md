@@ -1,7 +1,7 @@
 ---
 title: "Empathic Intuitive Marcus Purple Garden Review (2026): The Male Reader Who Translates Male Behavior From the Inside"
 description: "Honest review of Empathic Intuitive Marcus on Purple Garden — a 4.8-star male relationship reader blending clairsentience with behavioral analysis, 2,800+ sessions, from $4.99/min. Why his refusal to validate fantasies is the selling point."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Empathic Intuitive Marcus"
 rating: 4.8
 verdict: "Empathic Intuitive Marcus is a 4.8-star Purple Garden relationship reader whose value is structural: a man reading male behavior from the inside. Blending clairsentience with behavioral analysis across 2,800+ sessions, he translates the psychology behind avoidance and commitment ambiguity — and refuses to validate a fantasy, which is exactly why serious clients stay."
 affiliateUrl: /go/purple-garden-marcus/
@@ -44,7 +44,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/empathic-intuitive-marcus/
 seoTitle: "Empathic Intuitive Marcus Purple Garden Review (2026): The Male Reader"
-metaDescription: "Empathic Intuitive Marcus on Purple Garden: a 4.8-star male relationship reader blending clairsentience with behavioral analysis, 2,800+ sessions, from $4.99/min. Who should book."
+metaDescription: "Empathic Intuitive Marcus on Purple Garden: a 4.8-star male relationship reader blending clairsentience with behavioral analysis, 2,800+ sessions, from."
 highlights:
 - "2,800+ sessions concentrated on romantic psychology and communication"
 - "Male perspective that translates male behavior from the inside"
@@ -64,7 +64,6 @@ entities:
 - "Male Psychic Advisors"
 ---
 
-# Empathic Intuitive Marcus Purple Garden Review (2026): The Male Reader Who Translates Male Behavior From the Inside
 
 There's a structural gap in online psychic work almost nobody names: the vast majority of advisors are women, and the people asking the most agonizing questions — what is he thinking, why is he pulling away, does he feel the same — are overwhelmingly women asking about men. The market has built an entire economy of female readers interpreting male behavior from the outside. A male intuitive who has actually lived that psychology is not a novelty. He's a different category of resource, and on Purple Garden that reader is Empathic Intuitive Marcus.
 

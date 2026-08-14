@@ -1,5 +1,6 @@
 ---
 title: "Lady India on Keen Review 2026: Two Decades of 'Uncovering Truth' — What the Client Record Shows"
+seoTitle: "Lady India on Keen Review 2026: Two Decades of "
 description: "An independent, evidence-based review of Lady India on Keen — a reader since 2001 at $8.99/min. Built from Keen's live client reviews, third-party coverage, and her own advisor profile, covering who she is, what real clients report, and who should book."
 platformName: "Keen: Lady India"
 rating: 4.9
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "Clients who want a long-tenured, direct intuitive guide for love and life questions and value repeat-caller loyalty over a low rate"
 publishDate: '2026-07-02'
+canonicalUrl: https://easternalignment.com/reviews/keen/lady-india/
 updatedDate: '2026-08-13'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "A reader since 2001 at $8.99/min. What do Lady India's real Keen clients actually say? Evidence-based review with attributed client reviews, third-party coverage, and who should book."
+metaDescription: "A reader since 2001 at $8.99/min. What do Lady India's real Keen clients actually say? Evidence-based review with attributed client reviews, third-party."
 highlights:
 - "On Keen since 2001 — over two decades of continuous presence"
 - "Live client reviews show a clear repeat-caller pattern on love and life questions"

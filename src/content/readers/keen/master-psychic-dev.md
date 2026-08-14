@@ -1,5 +1,6 @@
 ---
 title: "Master Psychic Dev on Keen Review 2026: 34,000 Readings of 'Clarity and Purpose' at $7.39/Min"
+seoTitle: "Master Psychic Dev on Keen Review 2026: 34,000 Readings of "
 description: "An independent review of Master Psychic Dev on Keen - 7,543 ratings, 34,512 readings since 2011, and a $7.39/min rate. What his third-generation 'guiding decisions with clarity and purpose' approach and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: Master Psychic Dev"
 rating: 4.92
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$7.39/min"
 bestFor: "People who want an experienced, third-generation intuitive who helps them make decisions with clarity and purpose - and who want a decision-focused read over passive prediction"
 publishDate: '2026-06-26'
+canonicalUrl: https://easternalignment.com/reviews/keen/master-psychic-dev/
 updatedDate: '2026-06-26'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "7,543 ratings and 34,000+ readings since 2011. But is Master Psychic Dev on Keen worth $7.39/min? Honest breakdown of his decision-focused style, real reviews, and who should book him."
+metaDescription: "7,543 ratings and 34,000+ readings since 2011. But is Master Psychic Dev on Keen worth $7.39/min? Honest breakdown of his decision-focused style, real."
 highlights:
 - "34,512 completed readings on Keen since 2011 - over a decade of steady volume"
 - "7,543 ratings at 4.92 stars - a stable, trustworthy average"

@@ -1,5 +1,6 @@
 ---
 title: "Psychic SuZen on Keen Review 2026: When the Psychic Is Also a Life Coach and Social Worker — What That Changes About a Reading"
+seoTitle: "Psychic SuZen on Keen Review 2026: When the Psychic Is Also"
 description: "An honest third-party review of Psychic SuZen on Keen — covering her dual life coach and social worker background, multi-tradition spiritual framework, action-oriented reading style, and exactly who gets the most from her approach at $5.40/min."
 platformName: "Keen: Psychic SuZen"
 rating: 4.8
@@ -11,7 +12,7 @@ pricing: "$5.40/min"
 bestFor: "Sensitive, intuitive people seeking clarity on relationships or life direction — especially those who want actionable guidance alongside the reading itself"
 publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
-metaDescription: "Honest review of Psychic SuZen on Keen — life coach + social worker + empath, 4.84★ across 8K ratings, Women's Issues specialist. What her action-oriented approach really delivers."
+metaDescription: "Honest review of Psychic SuZen on Keen — life coach + social worker + empath, 4.84★ across 8K ratings, Women's Issues specialist. What her action-oriented."
 metaTitle: "Psychic SuZen on Keen Review 2026 | Life Coach Psychic, PBS Featured, $5.40/min"
 canonicalUrl: "https://easternalignment.com/reviews/psychic-suzen-keen-review"
 highlights:
@@ -115,11 +116,11 @@ A reader who has named this as a specialty is signaling that they've thought car
 
 ## 4.84 Stars: The Lowest in This Series — Honest Context
 
-I'll be direct: across the readers reviewed on this site, SuZen's 4.84 rating is the lowest. Master Sher sits at 4.89, David7 at 4.92, Arradaza at 4.93, Kelly777 at 4.91. SuZen's 4.84 deserves an honest look rather than a gloss.
+I'll be direct: across the readers reviewed on this site, SuZen's 4.84 rating is the lowest. Master Sher sits at 4.89, David7 at 4.9, Arradaza at 4.93, Kelly777 at 4.91. SuZen's 4.84 deserves an honest look rather than a gloss.
 
 ### What the Number Actually Reflects
 
-First, context: 4.84 across 8,132 ratings is still an exceptionally strong score by any normal measure. The gap between 4.84 and 4.92 sounds significant but represents a difference of less than one dissatisfied client per ten sessions — in a field where emotional reactions to difficult truths regularly generate lower ratings regardless of reading quality.
+First, context: 4.84 across 8,132 ratings is still an exceptionally strong score by any normal measure. The gap between 4.84 and 4.9 sounds significant but represents a difference of less than one dissatisfied client per ten sessions — in a field where emotional reactions to difficult truths regularly generate lower ratings regardless of reading quality.
 
 Second, her review pattern tells a specific story. The dissatisfied reviews cluster around **unmet prediction expectations** — clients who wanted a definitive yes/no on a specific outcome and found her action-oriented, empowerment-focused approach didn't deliver the certainty they came for. That's not a quality problem. That's a style mismatch.
 

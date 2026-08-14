@@ -1,7 +1,7 @@
 ---
 title: "Ayla Purple Garden Review (2026): Love-Resolution Clairvoyant With Nearly 15,000 Readings"
 description: "Honest review of Ayla (Love Resolution) on Purple Garden — a 4.8-star clairvoyant who blends tarot, numerology, and energy insight across nearly 15,000 readings since 2021, from $2.99/min. Who she's for, and the one catch that's actually a selling point."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Ayla"
 rating: 4.8
 verdict: "Ayla is a 4.8-star Purple Garden love-resolution reader whose nearly 15,000 readings since 2021 and Top Rated badge reflect a multi-tool style — clairvoyance, tarot, numerology, energy insight — built for clients who want to understand a relationship, not just hear a yes or no. Best for people who'd rather pay $2.99/min for substance than theater."
 affiliateUrl: /go/purple-garden-ayla/
@@ -53,7 +53,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/ayla-love-resolution/
 seoTitle: "Ayla Purple Garden Review (2026): Nearly 15,000 Readings, Love Resolution"
-metaDescription: "Ayla (Love Resolution) on Purple Garden: a 4.8-star clairvoyant blending tarot, numerology, and energy insight across nearly 15,000 readings since 2021, from $2.99/min. Who should book."
+metaDescription: "Ayla (Love Resolution) on Purple Garden: a 4.8-star clairvoyant blending tarot, numerology, and energy insight across nearly 15,000 readings since 2021."
 highlights:
 - "Nearly 15,000 readings since 2021 at a steady 4.8"
 - "Multi-tool: clairvoyance + tarot + numerology + energy"
@@ -72,7 +72,6 @@ entities:
 - "Love Resolution Reader"
 ---
 
-# Ayla Purple Garden Review (2026): The Reader People Book When They Want a Verdict, Not a Fortune
 
 Ayla is the kind of advisor you call when you're not shopping for a prophecy — you're shopping for the truth. On Purple Garden she goes by "Ayla Love Resolution," and after nearly 15,000 readings since 2021 at a steady 4.8 stars, she has earned the platform's Top Rated tag without ever promising to fix your love life for you. That tension is the single most useful thing to understand before you book her: the quality that makes her less satisfying to some clients is the exact quality that makes her trustworthy.
 

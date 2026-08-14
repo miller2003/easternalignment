@@ -1,11 +1,11 @@
 ---
 title: "Invincible Insights Kasamba Review (2026): Budget Soulmate Reunion Specialist With 70,000+ Readings"
 description: "Honest review of Invincible Insights on Kasamba — a $1.99/min clairvoyant with 70,081 readings since 2015, specialising in soulmate reunion and love. Real pricing, method, and caveats."
-platformName: "Kasamba"
+platformName: "Kasamba: Invincible Insights"
 rating: 4.7
 verdict: "Invincible Insights is one of Kasamba’s best-value readers: a born clairvoyant and clairaudient at $1.99/min chat who has completed 70,081 readings since 2015, with a clear specialism in reuniting soulmates."
 affiliateUrl: /go/kasamba-invincible-insights/
-avatarUrl: /avatars/kasamba/invincible-insights-kasamba-review.jpg
+avatarUrl: /avatars/kasamba/invincible-insights-kasamba-review.png
 freeOffer: "3 free minutes + 50% off"
 pricing: "$1.99/min chat · $11.99/min voice"
 bestFor: "Budget-conscious clients focused on love, soulmate reconnection, and relationship healing"

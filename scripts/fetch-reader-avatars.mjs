@@ -103,6 +103,7 @@ function getDeep(obj, pathArr) {
 function pickImageFromHtml(html, pageUrl = "") {
   const isKasamba = /kasamba\.com/i.test(pageUrl) || /kassrv\.com/i.test(html);
   const isKeen = /keen\.com/i.test(pageUrl) || /si\.keen\.com/i.test(html);
+  const isPurpleGarden = /purplegarden\.co/i.test(pageUrl) || /purple\.brgsrv\.com/i.test(html);
 
   // 1) Platform-specific strongest signals FIRST (avoid platform og:image logos)
   if (isKasamba) {
@@ -124,20 +125,40 @@ function pickImageFromHtml(html, pageUrl = "") {
     if (profile?.u) return profile.u;
   }
 
+  if (isPurpleGarden) {
+    const pgCdn = [...html.matchAll(/https?:\/\/purple\.brgsrv\.com\/[^\s"'\\]+/gi)].map((m) => m[0]);
+    const decoded = pgCdn
+      .map((u) => {
+        const token = u.replace(/^https?:\/\/purple\.brgsrv\.com\//i, "");
+        try {
+          const json = JSON.parse(Buffer.from(token, "base64").toString("utf8"));
+          return { u, key: String(json?.key || "") };
+        } catch {
+          return null;
+        }
+      })
+      .filter(Boolean);
+
+    const profile = decoded.find((x) => /advisors\/\d+\/profile_image_/i.test(x.key));
+    if (profile?.u) return profile.u;
+  }
+
   if (isKeen) {
     // Keen: prefer the actual profile image from Next.js payload
     const nextData = extractNextDataJson(html);
     const profileFromData = getDeep(nextData, ["props", "pageProps", "listing", "profilePictureUrl"]);
-    if (typeof profileFromData === "string" && profileFromData.includes("si.keen.com/memberphotos")) return profileFromData;
+    if (typeof profileFromData === "string" && 
+       (profileFromData.includes("si.keen.com") || profileFromData.includes("images.keen.com")) && 
+       !/default_v3|default-advisor-img/i.test(profileFromData)) {
+         return profileFromData;
+    }
 
     const keenMember = [
-      ...html.matchAll(/https?:\/\/si\.keen\.com\/memberphotos\/[^\s"'\\]+?\.(?:png|jpe?g|webp|avif)/gi),
+      ...html.matchAll(/https?:\/\/(si|images)\.keen\.com\/member(?:photos|3x2)\/[^\s"'\\]+?\.(?:png|jpe?g|webp|avif)/gi),
     ].map((m) => m[0]);
-    const nonDefault = keenMember.filter((u) => !/default-advisor-img/i.test(u));
+    const nonDefault = keenMember.filter((u) => !/default_v3|default-advisor-img/i.test(u));
     if (nonDefault.length) return nonDefault[0];
-    if (keenMember.length) return keenMember[0];
 
-    // Next.js Image optimizer URLs (common on Keen)
     const nextImg = [...html.matchAll(/\/_next\/image\?url=([^&]+)&/gi)]
       .map((m) => {
         try {
@@ -146,14 +167,21 @@ function pickImageFromHtml(html, pageUrl = "") {
           return null;
         }
       })
-      .filter(Boolean);
+      .filter(Boolean)
+      .filter((u) => !/logo|favicon|icon|badge|promo/i.test(u));
+
     if (nextImg.length) {
       const preferred = nextImg.find((u) => /profile|avatar|advisor|portrait|headshot|photo/i.test(u));
-      return preferred || nextImg[0];
+      if (preferred) return preferred;
     }
   }
 
-  // 2) Social metas as a fallback (often platform logo for these sites)
+  // 2) Skip social metas for known platforms (they use brand logos as og:image)
+  if (isKasamba || isKeen || isPurpleGarden) {
+    return null;
+  }
+
+  // 3) Social metas as a fallback for unknown platforms
   const metas = [
     /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["'][^>]*>/i,
     /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["'][^>]*>/i,
@@ -191,15 +219,28 @@ async function fetchText(url) {
   return { finalUrl: res.url, status: res.status, text };
 }
 
+// We read affiliateLinks to map /go/slug to actual URL
+const linksTs = await fs.readFile(path.join(ROOT, "src", "data", "affiliateLinks.ts"), "utf8");
 function extractTargetUrl(affiliateUrl) {
+  let slug = affiliateUrl;
+  if (affiliateUrl.startsWith('/go/')) {
+    slug = affiliateUrl.replace(/^\/go\//, '').replace(/\/$/, '');
+  }
+  const regex = new RegExp("['\"]" + slug + "['\"]:\\s*['\"]([^'\"]+)['\"]");
+  const match = linksTs.match(regex);
+  let finalUrl = affiliateUrl;
+  if (match) {
+      finalUrl = match[1];
+  }
+  
   try {
-    const u = new URL(affiliateUrl);
+    const u = new URL(finalUrl);
     const target = u.searchParams.get("url");
     if (target) return decodeURIComponent(target);
   } catch {
     // ignore
   }
-  return affiliateUrl;
+  return finalUrl;
 }
 
 async function fetchBinary(url) {
@@ -237,12 +278,14 @@ async function ensureDir(p) {
 }
 
 async function main() {
+  const filter = process.argv[2];
   const files = await listMarkdownFiles(READERS_DIR);
   let ok = 0;
   let skipped = 0;
   let failed = 0;
 
   for (const file of files) {
+    if (filter && !file.includes(filter)) continue;
     const rel = path.relative(ROOT, file).replaceAll("\\", "/");
     const platform = rel.split("/").at(-2); // .../readers/<platform>/<slug>.md
     const slug = safeSlugFromFile(file);
@@ -267,7 +310,12 @@ async function main() {
       if (status >= 400) throw new Error(`affiliate fetch status ${status}`);
 
       const imgUrl = pickImageFromHtml(html, targetUrl);
-      if (!imgUrl) throw new Error("no og:image/twitter:image found");
+      if (!imgUrl) {
+        console.log(`[no-image] ${rel}`);
+        const updated = setFrontmatterLine(md, "avatarUrl", '""');
+        await fs.writeFile(file, updated, "utf8");
+        continue;
+      }
 
       const { buf, contentType } = await fetchBinary(imgUrl);
       const ext = extFromContentType(contentType) || path.extname(new URL(imgUrl).pathname) || ".jpg";

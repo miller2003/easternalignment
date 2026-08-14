@@ -1,7 +1,7 @@
 ---
 title: "Supernormal Soul Kasamba Review (2026): \"Supreme Seer\" Love Specialist With 54,000+ Readings"
 description: "Review of Supernormal Soul on Kasamba — a 5.0-star clairvoyant \"Supreme Seer\" with 54,000+ readings since 2017, love and soulmate focus. Pricing, method, real client record, and honest fit."
-platformName: "Kasamba"
+platformName: "Kasamba: Supernormal Soul"
 rating: 5
 verdict: "Supernormal Soul markets herself as a \"Supreme Seer\" and backs it with a 5.0-star rating across 54,000+ readings since 2017 — a love-and-soulmate specialist whose clients praise her spiritual depth and warmth. The split chat/voice pricing is the one thing to watch."
 affiliateUrl: /go/kasamba-supernormal-soul/

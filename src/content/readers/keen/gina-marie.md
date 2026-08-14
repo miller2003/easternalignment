@@ -1,5 +1,6 @@
 ---
 title: 'Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel Clairvoyant Justify
+seoTitle: "Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel"
   $6.99/Min?'
 description: An independent review of Gina Marie on Keen  -  her no-tools clairvoyant
   approach, what 12,000 ratings across 20 years actually reveal, the real cost of
@@ -18,6 +19,7 @@ pricing: $6.99/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships
   without pre-loading context  -  and are ready to hear blunt truth
 publishDate: '2026-04-24'
+canonicalUrl: https://easternalignment.com/reviews/keen/gina-marie/
 updatedDate: '2026-04-24'
 customSchema: |
   {

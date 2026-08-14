@@ -1,5 +1,6 @@
 ---
 title: 'Master Sher on Keen Review 2026: An Honest Assessment From Someone Who''s
+seoTitle: "Master Sher on Keen Review 2026: An Honest Assessment From"
   Tested Dozens of Readers'
 description: An in-depth third-party review of Master Sher on Keen  -  covering tarot
   reading style, real accuracy standards, pricing breakdown, and exactly who gets
@@ -15,6 +16,7 @@ freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $4.29/min
 bestFor: People who want honest, structured tarot readings without sugar-coating
 publishDate: '2026-04-22'
+canonicalUrl: https://easternalignment.com/reviews/keen/master-sher/
 updatedDate: '2026-04-22'
 customSchema: |
   {

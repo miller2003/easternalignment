@@ -1,5 +1,6 @@
 ---
 title: "LadyFontaine on Keen Review 2026: A Certified Master Psychic With 4.99 Stars - The 'Love Doctor' Reviewed"
+seoTitle: "LadyFontaine on Keen Review 2026: A Certified Master"
 description: "An independent review of LadyFontaine on Keen - a Certified Master Psychic with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. What her track record and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: LadyFontaine"
 rating: 4.99
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.97/min"
 bestFor: "Clients who want a certified, no-tools master psychic for love and relationship clarity - and who value insight and honesty over gentle softening"
 publishDate: '2026-06-10'
+canonicalUrl: https://easternalignment.com/reviews/keen/ladyfontaine/
 updatedDate: '2026-06-10'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "5,098 ratings at 4.99 stars and 16,000+ readings since 2007. Is LadyFontaine on Keen worth booking? Honest breakdown of her no-tools style, real reviews, and who should call."
+metaDescription: "5,098 ratings at 4.99 stars and 16,000+ readings since 2007. Is LadyFontaine on Keen worth booking? Honest breakdown of her no-tools style, real reviews."
 highlights:
 - "16,000+ completed readings on Keen since 2007 - nearly two decades of volume"
 - "5,098 ratings at 4.99 stars - one of the highest averages of any Keen advisor"

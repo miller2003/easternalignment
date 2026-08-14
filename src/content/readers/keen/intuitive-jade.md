@@ -1,5 +1,6 @@
 ---
 title: "Intuitive Jade on Keen Review 2026: 27,000 Readings via 'Name Vibrations' at $8.99/Min"
+seoTitle: "Intuitive Jade on Keen Review 2026: 27,000 Readings via "
 description: "An independent review of Intuitive Jade on Keen - 8,151 ratings, 27,636 readings since 2006, and an $8.99/min rate. What her 'revealing truth through name vibrations' method and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Intuitive Jade"
 rating: 4.98
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "People who want an elite-rated (4.98) intuitive read and are curious about a name-vibration method - and who are willing to pay a premium rate for a top-tier average"
 publishDate: '2026-06-11'
+canonicalUrl: https://easternalignment.com/reviews/keen/intuitive-jade/
 updatedDate: '2026-06-11'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "8,151 ratings and 27,000+ readings since 2006. But is Intuitive Jade on Keen worth $8.99/min? Honest breakdown of her name-vibration method, real reviews, and who should book her."
+metaDescription: "8,151 ratings and 27,000+ readings since 2006. But is Intuitive Jade on Keen worth $8.99/min? Honest breakdown of her name-vibration method, real reviews."
 highlights:
 - "27,636 completed readings on Keen since 2006 - a long, steady track record"
 - "8,151 ratings at 4.98 stars - among the highest averages in her volume tier"

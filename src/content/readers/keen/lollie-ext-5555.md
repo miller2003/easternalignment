@@ -1,5 +1,6 @@
 ---
 title: "Lollie on Keen Review 2026: A 70,000-Reading 'No Fluff' Love Coach at $6.99/Min?"
+seoTitle: "Lollie on Keen Review 2026: A 70,000-Reading "
 description: "An independent review of Lollie on Keen - 20,000 ratings, 70,182 readings since 2001, and a $6.99/min rate. What her direct, playing-card method and real client reviews actually reveal, and exactly who should book her."
 platformName: "Keen: Lollie"
 rating: 4.92
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a blunt, practical love coach who skips reassurance and gets straight to what they see - and who are happy to arrive with tight, ordered questions"
 publishDate: '2026-06-25'
+canonicalUrl: https://easternalignment.com/reviews/keen/lollie-ext-5555/
 updatedDate: '2026-06-25'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "20,000 ratings and 70,000+ readings since 2001. But is Lollie on Keen worth $6.99/min? Honest breakdown of her direct style, real reviews, and who should book her."
+metaDescription: "20,000 ratings and 70,000+ readings since 2001. But is Lollie on Keen worth $6.99/min? Honest breakdown of her direct style, real reviews, and who should."
 highlights:
 - "70,182 completed readings on Keen since 2001 - a two-decade track record few advisors match"
 - "20,000 ratings at 4.92 stars - high volume and a near-5 average"

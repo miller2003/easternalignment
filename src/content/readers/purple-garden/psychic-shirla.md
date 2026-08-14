@@ -1,7 +1,7 @@
 ---
 title: "Psychic Shirla Purple Garden Review (2026): The Relationship Coach Who Hands You the Map"
 description: "Honest review of Psychic Shirla on Purple Garden — a 4.8-star Master Love Specialist and relationship coach whose over 15,000 readings since 2020 blend tarot with coaching, from $4.49/min. Who she is for, and the one catch that is actually a selling point."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Psychic Shirla"
 rating: 4.8
 verdict: "Psychic Shirla is a 4.8-star Purple Garden Master Love Specialist and relationship coach whose over 15,000 readings since 2020 blend tarot with a coach's structure. Best for clients who want love insight plus actionable direction, not just a prediction."
 affiliateUrl: /go/purple-garden-psychic-shirla/
@@ -53,7 +53,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/psychic-shirla/
 seoTitle: "Psychic Shirla Purple Garden Review (2026): Over 15,000 Readings, 4.8 Stars"
-metaDescription: "Psychic Shirla on Purple Garden: a 4.8-star Master Love Specialist and relationship coach with over 15,000 readings since 2020. We review her method and who should book."
+metaDescription: "Psychic Shirla on Purple Garden: a 4.8-star Master Love Specialist and relationship coach with over 15,000 readings since 2020. We review her method and."
 highlights:
 - "Over 15,000 readings since 2020 at a 4.8-star rating"
 - "Master Love Specialist with a relationship-coach framing"
@@ -72,7 +72,6 @@ entities:
 - "Love Specialist"
 ---
 
-# Psychic Shirla Purple Garden Review (2026): The Relationship Coach Who Hands You the Map
 
 Most love readers on Purple Garden will tell you what is happening. Psychic Shirla will tell you what is happening and then hand you the map for what to do about it. She brands herself a Master Love Specialist and works as a relationship coach — and since 2020 she has stacked over 15,000 readings at a steady 4.8 stars, from $4.49/min. If you have ever finished a reading feeling clarity but no direction, she is the correction to that experience.
 

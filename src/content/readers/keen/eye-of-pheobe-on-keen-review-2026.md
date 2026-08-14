@@ -1,5 +1,6 @@
 ---
 title: "Eye of Pheobe on Keen Review 2026: The Only Psychic Medium in This Series — and Why Her Numbers Tell a Completely Different Story Than Any Other Reader's"
+seoTitle: "Eye of Pheobe on Keen Review 2026: The Only Psychic Medium"
 description: "An independent review of Eye of Pheobe on Keen — why 24 years with 2,680 sessions is a professional signal not a weakness, what 4.69 stars actually means for a dedicated medium, and who she is the only right choice for in this entire series."
 platformName: "Keen: Eye of Pheobe"
 rating: 4.6
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$5.99/min (Psychic Mediums profile)"
 bestFor: "Clients who want to connect with a deceased loved one, process grief through spirit communication, or seek messages from the other side — the specific need that no other reader in this series can serve"
 publishDate: "2026-04-28"
+canonicalUrl: https://easternalignment.com/reviews/keen/eye-of-pheobe-on-keen-review-2026/
 updatedDate: "2026-04-28"
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "24 years on Keen, 2,680 sessions, $5.99/min. Eye of Pheobe is the only psychic medium in this series — and her numbers mean something different than any other reader's."
+metaDescription: "24 years on Keen, 2,680 sessions, $5.99/min. Eye of Pheobe is the only psychic medium in this series — and her numbers mean something different than any."
 highlights:
   - "Only dedicated psychic medium in this nine-reader review series"
   - "24 years of Keen platform presence since 2002 — one of the longest tenures in any category"

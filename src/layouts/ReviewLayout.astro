@@ -67,6 +67,16 @@ const parentPlatform = isReaderReview ? platformName.split(':')[0].trim().toLowe
 const parentPlatformLabel = isReaderReview ? platformName.split(':')[0].trim() : null;
 const readerLabel = isReaderReview ? platformName.split(':').pop()?.trim() : platformName;
 
+// Generate initials fallback for reader avatar
+const readerInitials = readerLabel
+  ?.split(/\s+/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((w) => w[0]?.toUpperCase())
+  .join('') || 'R';
+
+const avatarFallbackSvg = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="${readerInitials}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6EE7B7"/><stop offset="55%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/></linearGradient><filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity=".18"/></filter></defs><circle cx="48" cy="48" r="44" fill="url(#g)" filter="url(#s)"/><circle cx="48" cy="48" r="43" fill="none" stroke="rgba(255,255,255,.35)"/><text x="48" y="54" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="34" font-weight="700" fill="rgba(255,255,255,.95)">${readerInitials}</text></svg>`)}`;
+
 // Build breadcrumb items dynamically
 const breadcrumbItems = isReaderReview
   ? [
@@ -183,11 +193,11 @@ const displayCta = ctaOverride || ctaText;
         </div>
 
         <div class="review-identity">
-          {isReaderReview && avatarUrl && (
+          {isReaderReview && (
             <img
               class="reader-avatar-lg"
-              src={avatarUrl}
-              alt={`${readerLabel} profile photo`}
+              src={avatarUrl || avatarFallbackSvg}
+              alt={avatarUrl ? `${readerLabel} profile photo` : `${readerLabel} initials avatar`}
               width="72"
               height="72"
               loading="eager"

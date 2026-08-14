@@ -1,7 +1,7 @@
 ---
 title: "Jackies Tea Tarot Purple Garden Review (2026): The Cuban-Trained Tarot Reader Who Won't Sugarcoat You"
 description: "Honest review of Jackies Tea Tarot on Purple Garden — a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, $6.99/min, Cuban Santera lineage, and a pointedly honest style. Who she's for, and why her bluntness is the point."
-platformName: "Purple Garden"
+platformName: "Purple Garden: Jackies Tea Tarot"
 rating: 5
 verdict: "Jackies Tea Tarot is a 5.0-star intuitive tarot reader on Purple Garden whose ~9,000 readings since 2017 and Cuban Santera lineage give her a decade-deep, no-fluff style. She tells you exactly what she sees rather than what you want to hear — the right pick for clients who'd rather be clear than comforted."
 affiliateUrl: /go/purple-garden-jackies-tea-tarot/
@@ -49,7 +49,7 @@ customSchema: |
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/jackies-tea-tarot/
 seoTitle: "Jackies Tea Tarot Purple Garden Review (2026): ~9,000 Readings, 5.0 Stars"
-metaDescription: "Jackies Tea Tarot on Purple Garden: a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, Cuban Santera lineage, $6.99/min. Honest review of her don't-sugarcoat style."
+metaDescription: "Jackies Tea Tarot on Purple Garden: a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, Cuban Santera lineage, $6.99/min. Honest review of."
 highlights:
 - "~9,000 readings since 2017 at a perfect 5.0"
 - "Cuban Santera lineage — taught by her grandmother"
@@ -68,7 +68,6 @@ entities:
 - "Intuitive Tarot Reader"
 ---
 
-# Jackies Tea Tarot Purple Garden Review (2026): The Reader Who Hands You the Tea With the Tarot
 
 There's a reason Jackie calls her work "the Tea with the Tarot" — she gives you the truth and the cards in the same breath. On Purple Garden she's a 5.0-star intuitive tarot reader with roughly 9,000 readings since 2017, and the thing that separates her from the softer-voiced crowd isn't her accuracy (though that's there). It's that she flatly will not tell you what you came to hear if the cards say otherwise.
 

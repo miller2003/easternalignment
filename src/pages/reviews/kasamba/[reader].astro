@@ -121,13 +121,15 @@ const relatedItems = [
     <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
   )}
 
-  <CTABox
-    title={`Ready to try ${readerName}?`}
-    description={frontmatter.freeOffer ? `Take advantage of the current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.'}
-    buttonText={`Book ${readerName} on Kasamba →`}
-    buttonUrl={frontmatter.affiliateUrl || '#'}
-    variant="highlight"
-  />
+  <div id="end-cta-anchor">
+    <CTABox
+      title={`Ready to try ${readerName}?`}
+      description={frontmatter.freeOffer ? `Take advantage of the current offer: ${frontmatter.freeOffer}` : 'Get started with your first reading today.'}
+      buttonText={`Book ${readerName} on Kasamba →`}
+      buttonUrl={frontmatter.affiliateUrl || '#'}
+      variant="highlight"
+    />
+  </div>
 
   <FAQ items={faqItems} title={`${readerName} FAQ`} />
 

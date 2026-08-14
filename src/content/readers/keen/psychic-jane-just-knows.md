@@ -1,5 +1,6 @@
 ---
 title: "Psychic Jane on Keen Review 2026: Top Advisor With 94,000 Readings - But Is $17.99/Min Justified?"
+seoTitle: "Psychic Jane on Keen Review 2026: Top Advisor With 94,000"
 description: "An independent review of Psychic Jane Just Knows on Keen - a Top Advisor with 21,000 ratings, 94,000+ readings since 2006, and a $17.99/min rate. What her track record and real client reviews reveal, and whether the premium is worth it."
 platformName: "Keen: Psychic Jane Just Knows"
 rating: 4.89
@@ -10,6 +11,7 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$17.99/min (profile also shows $14.99-$18.99/min tiers)"
 bestFor: "Clients with a specific love or career question who want a Top Advisor with a history of tight, timing-based predictions - and who can justify a premium rate"
 publishDate: '2026-07-06'
+canonicalUrl: https://easternalignment.com/reviews/keen/psychic-jane-just-knows/
 updatedDate: '2026-07-06'
 customSchema: |
   {
@@ -37,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "21,000 ratings and 94,000+ readings since 2006 at $17.99/min. Is Psychic Jane on Keen worth the premium? Honest breakdown of her style, real reviews, and who should book."
+metaDescription: "21,000 ratings and 94,000+ readings since 2006 at $17.99/min. Is Psychic Jane on Keen worth the premium? Honest breakdown of her style, real reviews, and."
 highlights:
 - "94,000+ completed readings on Keen since 2006 - nearly two decades as a Top Advisor"
 - "21,000 ratings at 4.89 stars, tagged Top Advisor by Keen"

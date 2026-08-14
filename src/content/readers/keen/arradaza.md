@@ -1,5 +1,6 @@
 ---
 title: 'Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse
+seoTitle: "Arradaza on Keen Review 2026: 25 Years, 86,000 Readings,"
   Tool Set I''ve Seen on This Platform  -  An Honest Assessment'
 description: A third-party review of Arradaza on Keen  -  covering her five-tool reading
   method, 25-year track record, the '98% accuracy' claim, what real clients say, and

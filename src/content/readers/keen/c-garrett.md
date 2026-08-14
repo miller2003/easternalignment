@@ -1,5 +1,6 @@
 ---
 title: 'C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation
+seoTitle: "C Garrett on Keen Review 2026: What 54,000 Readings From a"
   Psychic Actually Looks Like  -  An Honest Third-Party Assessment'
 description: A third-party review of C Garrett on Keen  -  unpacking her 75% energy,
   25% tarot hybrid method, dream reading specialty, self-declared timing limits, and
@@ -17,6 +18,7 @@ pricing: $4.89/min
 bestFor: Relationship and career readings where you want empathic depth over structural
   card interpretation
 publishDate: '2026-04-21'
+canonicalUrl: https://easternalignment.com/reviews/keen/c-garrett/
 updatedDate: '2026-04-21'
 customSchema: |
   {

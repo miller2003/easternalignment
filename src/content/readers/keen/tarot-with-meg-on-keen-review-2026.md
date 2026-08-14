@@ -1,5 +1,6 @@
 ---
 title: "Tarot With Meg on Keen Review 2026: The Reader Whose Most Important Tool Was Gifted by Her Late Fiancé — and Why That Changes How She Reads"
+seoTitle: "Tarot With Meg on Keen Review 2026: The Reader Whose Most"
 description: "An independent review of Tarot With Meg on Keen — what Hellenistic astrology adds that modern Western astrology cannot, why the Rider Waite Smith deck with a 26-year grief history changes how readings feel, and who she is specifically built for."
 platformName: "Keen: Tarot With Meg"
 rating: 4.7
@@ -10,6 +11,7 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$4.75/min"
 bestFor: "Clients who have outgrown prediction-focused readings and want deep contextual understanding of why a situation is unfolding — plus LGBTQ+ clients seeking a reader who actively works with inclusive decks"
 publishDate: "2026-04-26"
+canonicalUrl: https://easternalignment.com/reviews/keen/tarot-with-meg-on-keen-review-2026/
 updatedDate: "2026-04-26"
 metaDescription: "Tarot With Meg on Keen uses Hellenistic astrology, Queer Tarot, and a deck gifted by her late fiancé. The reader who shows you why — not just what. Full review."
 customSchema: |
