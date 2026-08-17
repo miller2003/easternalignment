@@ -11,7 +11,8 @@ bestFor: "Primera sesión en Purple Garden, videollamadas en español, mediumnid
 publishDate: "2026-08-17"
 updatedDate: "2026-08-17"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luna-aestethic/"
-hreflangEn: ""
+hreflangEn: "https://easternalignment.com/"
+avatarUrl: "/avatars/es-readers/luna-aestethic.jpg"
 entities:
   - "Purple Garden"
   - "Luna Aestethic"

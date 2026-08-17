@@ -1,0 +1,256 @@
+---
+// LeftSidebar.astro — Sticky sidebar
+---
+
+<aside class="sidebar-left">
+  <div class="sidebar-left__header">
+    <h3 class="sidebar-left__title">Mejores Ofertas</h3>
+  </div>
+
+  <div class="sidebar-left__cards">
+    <!-- Psiquicos Web Deal -->
+    <div class="deal-card deal-card--featured">
+      <a href="/es/resenas/psiquicos-web/" class="deal-card__logo-link" title="Leer Reseña de Psíquicos Web">
+        <div class="deal-card__logo-wrapper">
+          <img src="https://www.google.com/s2/favicons?domain=psiquicos.net&sz=128" alt="Psíquicos Web icon" class="deal-card__icon" loading="lazy" />
+          <span class="deal-card__logotype" style="color: #4a235a; font-family: Georgia, serif; font-style: normal; font-weight: 700; font-size: 1.3em;">psíquicos web</span>
+        </div>
+      </a>
+      
+      <p class="deal-card__text">
+        Obtén <strong>3 minutos gratis</strong> más un gran descuento en tu primera lectura.
+      </p>
+      
+      <a
+        href="/go/psiquicos/"
+        class="deal-card__btn"
+        rel="nofollow sponsored"
+        target="_blank"
+        data-cta-source="sidebar"
+      >
+        Obtener 3 Min Gratis
+        <svg class="deal-card__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    </div>
+
+    <!-- Purple Garden Deal -->
+    <div class="deal-card">
+      <div class="deal-card__logo-wrapper">
+        <img src="https://www.google.com/s2/favicons?domain=purplegarden.co&sz=128" alt="Purple Garden icon" class="deal-card__icon" loading="lazy" />
+        <span class="deal-card__logotype" style="color: #6b4d8c; font-weight: 500;">purple garden</span>
+      </div>
+      
+      <p class="deal-card__text">
+        Reclama <strong>$30 de crédito</strong> de bienvenida para conectarte con cualquier lector.
+      </p>
+      
+      <a
+        href="/go/purple-garden-es/"
+        class="deal-card__btn"
+        rel="nofollow sponsored"
+        target="_blank"
+        data-cta-source="sidebar"
+      >
+        Reclamar $30 de Crédito
+        <svg class="deal-card__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="sidebar-left__section sidebar-left__section--trending">
+    <h3 class="sidebar-left__section-title">Guías Destacadas</h3>
+    <ul class="sidebar-left__nav">
+      <li><a href="/es/" class="sidebar-left__nav-link">Inicio: Reseñas 2026</a></li>
+      <li><a href="/es/resenas/psiquicos-web/" class="sidebar-left__nav-link">Análisis Psíquicos Web</a></li>
+      <li><a href="/es/resenas/purple-garden-es/" class="sidebar-left__nav-link">Análisis Purple Garden</a></li>
+    </ul>
+  </div>
+</aside>
+
+<style is:global>
+  /* ── Left sidebar shell ── */
+  .sidebar-left {
+    width: 220px;
+    flex-shrink: 0;
+    position: sticky;
+    top: calc(var(--header-height, 72px) + 2rem);
+    z-index: 10;
+  }
+
+  /* Header */
+  .sidebar-left__header {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .sidebar-left__title {
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary-dark, #2d2a26);
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+
+  /* Cards Container */
+  .sidebar-left__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: var(--space-8, 2rem);
+  }
+
+  /* Trending Section */
+  .sidebar-left__section--trending {
+    padding-top: var(--space-6, 1.5rem);
+    border-top: 1px solid var(--color-border, #e8e2da);
+  }
+
+  .sidebar-left__section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-muted, #7a746b);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-4, 1rem);
+    padding-left: 4px;
+  }
+
+  .sidebar-left__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar-left__nav-link {
+    display: block;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--color-text, #2d2a26);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .sidebar-left__nav-link:hover {
+    background: var(--color-surface, #ffffff);
+    color: var(--color-primary, #8b6f4e);
+    border-color: var(--color-border-light, #f0ece6);
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(139, 111, 78, 0.05);
+  }
+
+  /* Deal Card */
+  .deal-card {
+    position: relative;
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e8e2da);
+    border-radius: 12px;
+    padding: 16px 12px 12px;
+    box-shadow: 0 4px 12px rgba(139, 111, 78, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .deal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(139, 111, 78, 0.12), 0 2px 8px rgba(139, 111, 78, 0.04);
+  }
+
+  .deal-card--featured {
+    border-color: var(--color-accent-light, #e8cdb0);
+    background: linear-gradient(180deg, var(--color-bg, #faf8f5) 0%, var(--color-surface, #ffffff) 100%);
+  }
+
+  /* Logo Area */
+  .deal-card__logo-link {
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .deal-card__logo-link:hover {
+    opacity: 0.8;
+  }
+
+  .deal-card__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .deal-card__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .deal-card__logotype {
+    font-size: 18px;
+    line-height: 1;
+    font-family: var(--font-body, system-ui, sans-serif);
+  }
+
+  /* Text Content */
+  .deal-card__text {
+    font-size: 12px;
+    color: var(--color-text, #2d2a26);
+    line-height: 1.4;
+    margin: 0 0 10px 0;
+  }
+
+  .deal-card__text strong {
+    color: var(--color-primary-dark, #2d2a26);
+    font-weight: 700;
+  }
+
+  /* CTA Button */
+  .deal-card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-base, 0.25s ease);
+    box-shadow: 0 2px 8px rgba(196, 149, 106, 0.25);
+  }
+
+  .deal-card__btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(196, 149, 106, 0.4);
+    background: linear-gradient(135deg, var(--color-accent-hover, #b07f55) 0%, var(--color-accent, #c4956a) 100%);
+    color: #ffffff;
+  }
+
+  .deal-card__btn-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .deal-card__btn:hover .deal-card__btn-icon {
+    transform: translateX(2px);
+  }
+
+  /* Hide below 1100px */
+  @media (max-width: 1100px) {
+    .sidebar-left { display: none !important; }
+  }
+</style>

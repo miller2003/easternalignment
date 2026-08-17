@@ -11,7 +11,8 @@ bestFor: "Tarot analítico, verdades difíciles, amor y finanzas, usuarios que v
 publishDate: "2026-08-17"
 updatedDate: "2026-08-17"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luz-tarot/"
-hreflangEn: ""
+hreflangEn: "https://easternalignment.com/"
+avatarUrl: "/avatars/es-readers/luz-tarot.jpg"
 entities:
   - "Purple Garden"
   - "Luz Tarot"

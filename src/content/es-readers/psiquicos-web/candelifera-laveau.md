@@ -12,6 +12,7 @@ publishDate: "2026-08-17"
 updatedDate: "2026-08-17"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/candelifera-laveau/"
 hreflangEn: "https://easternalignment.com/"
+avatarUrl: "/avatars/es-readers/candelifera-laveau.jpg"
 entities:
   - "Psíquicos Web"
   - "Candelifera Laveau"

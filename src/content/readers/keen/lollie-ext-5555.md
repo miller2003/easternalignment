@@ -106,7 +106,7 @@ Because she refuses to lead you with questions, the quality of your reading depe
 
 ## The $6.99/Min Question: Is She Priced Fairly?
 
-At $6.99/min, Lollie sits in Keen's middle band - well below premium names like Mike Pace ($19.99/min) but above budget readers like Susan 100 (under $3/min).
+At $6.99/min, Lollie sits in Keen's middle band - well below premium names like Mike Pace ($9.99/min) but above budget readers like Susan 100 (under $3/min).
 
 - **The $1 intro** gives you 5 minutes. State your top question and see what she picks up.
 - **Her own "FIRSTREAD" promo** gives 3 free minutes if you message her first (not call/chat) - a useful way to sample her without the intro charge.

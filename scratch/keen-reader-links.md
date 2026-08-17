@@ -28,7 +28,7 @@ After you return the deep links, I'll swap each article's `affiliateUrl` and reb
 2. **true-love-advisor** (4.81★, 5,319 ratings, $2.99/min, handle "true love advisor")
    is **different** from Keen's "The True Love Advisor" (4.95★, slug `the-twin-flame-advisor`).
 3. **mikes-love-and-light** (4.63★, 7,145 ratings, $2.99/min) is **different** from
-   Keen's "Mike Pace" (4.95★, 81K ratings, $19.99/min).
+   Keen's "Mike Pace" (4.95★, 81K ratings, $9.99/min).
 4. **serenity-stone** (4.66★) **is** the real `serenity-stone/294696` profile — distinct from
    Keen's "Sweet Serenity" (`/love-relationships/sweet-serenity/12430621`, 4.83★).
 
@@ -46,7 +46,7 @@ After you return the deep links, I'll swap each article's `affiliateUrl` and reb
 | 6 | jeanne-clock | Jeanne Clock | 4.96 | tiered | https://www.keen.com/love-relationships/jeanne-clock/7463353 |
 | 7 | ladyfontaine | LadyFontaine | 4.99 | tiered | https://www.keen.com/ladyfontaine |
 | 8 | lollie-ext-5555 | Lollie | 4.92 | $6.99/min | https://www.keen.com/lollie-ext-5555 |
-| 9 | mike-pace | Mike Pace | 4.95 | $19.99/min | https://www.keen.com/psychic-readings/mike-pace/1107663 |
+| 9 | mike-pace | Mike Pace | 4.95 | $9.99/min | https://www.keen.com/psychic-readings/mike-pace/1107663 |
 | 10 | psychic-jane-just-knows | Psychic Jane Just Knows | 4.89 | $17.99/min | https://www.keen.com/love-relationships/psychic-jane-just-knows/6859792 |
 | 11 | readings-by-ruth | Readings by Ruth | 4.91 | $5.99/min | https://www.keen.com/psychic-readings/readings-by-ruth/12445159 |
 | 12 | serenity-stone | Serenity Stone | 4.66 | $6.99/min | https://www.keen.com/psychic-mediums/serenity-stone/294696 |

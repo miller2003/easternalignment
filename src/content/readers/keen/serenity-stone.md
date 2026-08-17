@@ -107,7 +107,7 @@ Her performance appears to vary with *session format and client energy*. Clients
 
 ## The $6.99/Min Question: Fair for the Volume
 
-At $6.99/min, Serenity Stone is priced fairly for her tenure - well below premium readers like [Mike Pace](/reviews/keen/mike-pace/) at $19.99/min, and in line with many high-volume Keen advisors.
+At $6.99/min, Serenity Stone is priced fairly for her tenure - well below premium readers like [Mike Pace](/reviews/keen/mike-pace/) at $9.99/min, and in line with many high-volume Keen advisors.
 
 - **The $1 intro** gives you 5 minutes - enough to feel her pace and decide if it fits.
 - **A real session** typically runs 15-20 minutes, putting the true cost at **$105-$140**.

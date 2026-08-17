@@ -1,14 +1,14 @@
 ---
-title: "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader Worth $19.99/Min?"
+title: "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader Worth $9.99/Min?"
 seoTitle: "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader"
-description: "An independent review of Mike Pace on Keen - 81,000 ratings, 142,000+ readings since 2001, and a $19.99/min rate. What his track record, TV/radio background, and real client reviews reveal, and exactly who should book him."
+description: "An independent review of Mike Pace on Keen - 81,000 ratings, 142,000+ readings since 2001, and a $9.99/min rate. What his track record, TV/radio background, and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: Mike Pace"
 rating: 4.95
-verdict: "Mike Pace's 4.95 across 81,000 ratings is the kind of number that survives scrutiny. He is a direct, psychology-trained reader who leads with hard impressions rather than comfort, and he sits at the very top of Keen's pricing at $19.99/min. Use the $1 intro to test whether his fast, no-fluff style fits before committing to a full session - at this rate, a few unfocused minutes cost real money."
+verdict: "Mike Pace's 4.95 across 81,000 ratings is the kind of number that survives scrutiny. He is a direct, psychology-trained reader who leads with hard impressions rather than comfort, and he sits at the very top of Keen's pricing at $9.99/min. Use the $1 intro to test whether his fast, no-fluff style fits before committing to a full session - at this rate, a few unfocused minutes cost real money."
 affiliateUrl: /go/keen-mike-pace/
 avatarUrl: /avatars/keen/mike-pace.jpg
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
-pricing: "$19.99/min"
+pricing: "$9.99/min"
 bestFor: "People who want a fast, direct, prediction-first reader for love and relationship questions - and who can afford a premium rate"
 publishDate: '2026-06-19'
 canonicalUrl: https://easternalignment.com/reviews/keen/mike-pace/
@@ -17,8 +17,8 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader Worth $19.99/Min?",
-    "description": "An independent review of Mike Pace on Keen - 81,000 ratings, 142,000+ readings since 2001, and a $19.99/min rate. What his track record, TV/radio background, and real client reviews reveal, and exactly who should book him.",
+    "headline": "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader Worth $9.99/Min?",
+    "description": "An independent review of Mike Pace on Keen - 81,000 ratings, 142,000+ readings since 2001, and a $9.99/min rate. What his track record, TV/radio background, and real client reviews reveal, and exactly who should book him.",
     "datePublished": "2026-06-19",
     "dateModified": "2026-06-19",
     "author": {
@@ -39,7 +39,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "81,000 ratings and 142,000+ readings since 2001. But is Mike Pace on Keen worth $19.99/min? Honest breakdown of his direct style, real reviews, and who."
+metaDescription: "81,000 ratings and 142,000+ readings since 2001. But is Mike Pace on Keen worth $9.99/min? Honest breakdown of his direct style, real reviews, and who."
 highlights:
 - "142,000+ completed readings on Keen since 2001 - a two-decade track record almost no advisor matches"
 - "81,000 ratings at 4.95 stars - among the highest averages at this volume on the platform"
@@ -52,15 +52,15 @@ pros:
 - "Public background (psychology, media) adds a layer of accountability most readers lack"
 - "Strong on love and relationship clarity where clients want a fast verdict"
 cons:
-- "At $19.99/min he is the most expensive reader reviewed on this site - a full session can run $200+"
+- "At $9.99/min he is the most expensive reader reviewed on this site - a full session can run $200+"
 - "Direct delivery without softening can feel harsh in vulnerable moments"
 - "Premium rate leaves no room for a long, exploratory session on a budget"
 - "High demand means availability can be limited at peak hours"
 ---
 
-## Before You Book: What 81,000 Ratings at $19.99/Min Actually Tells You
+## Before You Book: What 81,000 Ratings at $9.99/Min Actually Tells You
 
-When a Keen advisor clears **81,000 ratings**, the average stops being a soft impression and becomes a statistical fact. You do not accumulate that many ratings at 4.95 stars without retaining a very large repeat-client base over two decades. What that number proves is *consistency* - enough people came back often enough to keep both the volume and the score high. What it does not prove is that Mike Pace is the right reader *for you*. At $19.99/min, the cost of finding out the wrong way is higher than with almost any other advisor on the platform, so calibration before you call matters more here than usual.
+When a Keen advisor clears **81,000 ratings**, the average stops being a soft impression and becomes a statistical fact. You do not accumulate that many ratings at 4.95 stars without retaining a very large repeat-client base over two decades. What that number proves is *consistency* - enough people came back often enough to keep both the volume and the score high. What it does not prove is that Mike Pace is the right reader *for you*. At $9.99/min, the cost of finding out the wrong way is higher than with almost any other advisor on the platform, so calibration before you call matters more here than usual.
 
 Mike Pace joined Keen in 2001. He currently carries roughly **81,000 ratings at 4.95 stars** and is tagged by Keen as a Top Advisor. He is also unusual in having a public-facing background: training in psychology and features on TV and radio. That public profile cuts both ways - it adds accountability, but it also means his rate sits at the absolute top of Keen's range.
 
@@ -76,7 +76,7 @@ Here is the verified public data Keen shows for Mike Pace:
 
 - **Rating:** 4.95 stars across ~81,000 ratings
 - **Readings:** 142,000+ completed since 2001
-- **Rate:** $19.99/min - the highest tier on Keen
+- **Rate:** $9.99/min - the highest tier on Keen
 - **Style:** Direct
 - **Tagline:** "Decode love. Get answers. Feel certain!"
 - **Skills/Tools:** Tarot, Reiki, No Tools, Astrology
@@ -100,13 +100,13 @@ Two things stand out. First, the word **"patience"** sits next to "direct" - cli
 
 ### The One Pattern Worth Knowing Before You Call
 
-Because he is direct and fast, sessions can be efficient - but at $19.99/min, efficiency is exactly what protects your budget. Come with a tight question, let him lead, and resist free-associating. You will get the same accuracy in less time, and the difference between a 10-minute and a 20-minute session is nearly $200 at this rate.
+Because he is direct and fast, sessions can be efficient - but at $9.99/min, efficiency is exactly what protects your budget. Come with a tight question, let him lead, and resist free-associating. You will get the same accuracy in less time, and the difference between a 10-minute and a 20-minute session is nearly $200 at this rate.
 
 ---
 
-## The $19.99/Min Question: A Different Category Entirely
+## The $9.99/Min Question: A Different Category Entirely
 
-At $19.99/min, Mike is priced in a tier occupied by only a handful of Keen's most established advisors. Whether that premium is justified depends entirely on what you are buying.
+At $9.99/min, Mike is priced in a tier occupied by only a handful of Keen's most established advisors. Whether that premium is justified depends entirely on what you are buying.
 
 - **The $1 intro** gives you 5 minutes. That is your diagnostic window - state your question loosely and see what he picks up unprompted.
 - **A real session** - enough time for initial impressions plus a follow-up exchange - typically runs 10-15 minutes, putting the true cost at **$100-$300** at standard rate.
@@ -135,8 +135,8 @@ For broader context on high-volume alternatives, see our reviews of [Readings by
 
 ## My Verdict: How to Book Him, What to Prepare
 
-Use the **$1 intro session** as a calibration test. Call in, give him the bare shape of your question, then stop. What he says in those first five minutes without prompting is your signal. If he lands on something specific about your situation, book a full voice session - but cap your time deliberately, because at $19.99/min the clock is unforgiving.
+Use the **$1 intro session** as a calibration test. Call in, give him the bare shape of your question, then stop. What he says in those first five minutes without prompting is your signal. If he lands on something specific about your situation, book a full voice session - but cap your time deliberately, because at $9.99/min the clock is unforgiving.
 
-Mike Pace has earned his Top Advisor tag through two decades and 142,000 readings. The $19.99/min rate is real, and the $100-$300 full session cost is a genuine financial decision. But for clients who want a direct, psychology-informed, prediction-first reader and can absorb the premium, he is among the most consistently rated options active on Keen today.
+Mike Pace has earned his Top Advisor tag through two decades and 142,000 readings. The $9.99/min rate is real, and the $100-$300 full session cost is a genuine financial decision. But for clients who want a direct, psychology-informed, prediction-first reader and can absorb the premium, he is among the most consistently rated options active on Keen today.
 
 <a href="/go/keen-mike-pace/" rel="nofollow sponsored" target="_blank">Book Mike Pace on Keen - First 5 Minutes for $1</a>

@@ -9,6 +9,8 @@ import EsBreadcrumb from '../components/es/EsBreadcrumb.astro';
 import StarRating from '../components/StarRating.astro';
 import EsSpanishCTA from '../components/es/EsSpanishCTA.astro';
 
+import EsLeftSidebar from '../components/es/EsLeftSidebar.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -171,6 +173,9 @@ if (freeOffer) {
   dateModified={updatedDate || publishDate}
 >
   <div class="page-with-sidebars">
+    <!-- LEFT SIDEBAR -->
+    <EsLeftSidebar />
+
     <!-- MAIN COLUMN -->
     <div class="main-col">
       <!-- Breadcrumb -->
@@ -273,6 +278,7 @@ if (freeOffer) {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    gap: 3.5rem;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--space-4) var(--space-6) var(--space-12);

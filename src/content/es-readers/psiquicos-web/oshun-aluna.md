@@ -12,6 +12,7 @@ publishDate: "2026-08-17"
 updatedDate: "2026-08-17"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/oshun-aluna/"
 hreflangEn: "https://easternalignment.com/"
+avatarUrl: "/avatars/es-readers/oshun-aluna.jpg"
 entities:
   - "Psíquicos Web"
   - "Oshun Aluna"
