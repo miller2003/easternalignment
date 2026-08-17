@@ -1,62 +1,44 @@
 ---
+/**
+ * EsHeader — Spanish-only navigation.
+ * Internal links are EXCLUSIVELY within /es/ — no English pages linked.
+ * Visual design mirrors the main site Header (same CSS tokens).
+ */
 interface Props {
   currentPath?: string;
 }
 const { currentPath = Astro.url.pathname } = Astro.props;
 
 const navLinks = [
-  { href: '/', label: 'Home' },
+  { href: '/es/', label: 'Inicio' },
   {
-    href: '/reviews/',
-    label: 'Reviews',
+    href: '/es/resenas/',
+    label: 'Reseñas',
     children: [
-      { href: '/reviews/keen/', label: 'Keen Psychics' },
-      { href: '/reviews/kasamba/', label: 'Kasamba Psychics' },
-      { href: '/reviews/purple-garden/', label: 'Purple Garden' },
+      { href: '/es/resenas/psiquicos-web/', label: 'Psíquicos Web' },
+      { href: '/es/resenas/purple-garden-es/', label: 'Purple Garden' },
     ],
   },
-  { href: '/comparisons/', label: 'Comparisons' },
-  { href: '/astrology/', label: 'Astrology' },
-  {
-    href: '/tools/',
-    label: 'Tools',
-    children: [
-      { href: '/tools/yes-no-tarot/', label: 'Yes/No Tarot' },
-      { href: '/tools/one-card-tarot/', label: 'Daily Card Tarot' },
-      { href: '/tools/angel-number-calculator/', label: 'Angel Number Calculator' },
-      { href: '/tools/life-path-calculator/', label: 'Life Path Calculator' },
-      { href: '/tools/zodiac-compatibility-calculator/', label: 'Love Compatibility' },
-      { href: '/tools/moon-phase/', label: 'Moon Phase Tracker' },
-      { href: '/tools/dream-dictionary/', label: 'Dream Meanings' },
-    ],
-  },
-  { href: '/guides/', label: 'Guides' },
-  { href: '/about/', label: 'About' },
+  { href: '/es/acerca-de/', label: 'Acerca de' },
 ];
-
-// Spanish version switch. Single-reader review pages deep-link to the Spanish
-// readers hub (/es/resenas/); every other page points to the Spanish home (/es/).
-const isReaderPage = /^\/reviews\/[^/]+\/[^/]+\/$/.test(currentPath);
-const esHref = isReaderPage ? '/es/resenas/' : '/es/';
-const esText = isReaderPage ? 'Videntes en español' : 'Español';
 ---
 
 <header class="site-header" id="site-header">
   <div class="header-inner container flex-between">
-    <!-- Logo / Brand -->
-    <a href="/" class="header-brand" aria-label="Eastern Alignment Home">
-      <img src="/logo.jpg" alt="Eastern Alignment Logo" class="brand-icon" width="36" height="36" loading="lazy" />
+    <!-- Logo / Brand — links to Spanish homepage -->
+    <a href="/es/" class="header-brand" aria-label="Eastern Alignment — Inicio">
+      <img src="/logo.jpg" alt="Eastern Alignment" class="brand-icon" width="36" height="36" loading="lazy" />
       <span class="brand-text">Eastern Alignment</span>
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="header-nav hide-mobile" aria-label="Main navigation">
+    <nav class="header-nav hide-mobile" aria-label="Navegación principal">
       <ul class="nav-list">
         {navLinks.map(link => (
           <li class:list={[{ 'has-dropdown': link.children }]}>
             <a
               href={link.href}
-              class:list={['nav-link', { 'nav-link--active': currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+              class:list={['nav-link', { 'nav-link--active': currentPath === link.href || (link.href !== '/es/' && currentPath.startsWith(link.href)) }]}
             >
               {link.label}
               {link.children && <span class="nav-chevron" aria-hidden="true">▾</span>}
@@ -73,7 +55,7 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
                     </a>
                   ))}
                   <a href={link.href} class="nav-dropdown-link nav-dropdown-all">
-                    View All {link.label} →
+                    Ver todas las {link.label} →
                   </a>
                 </div>
               </div>
@@ -83,19 +65,13 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
       </ul>
     </nav>
 
-    <!-- Spanish version switch -->
-    <a href={esHref} class="nav-lang-switch hide-mobile" lang="es">
-      <span class="lang-flag" aria-hidden="true">🌐</span>
-      <span>{esText}</span>
-    </a>
-
     <!-- Mobile Menu Toggle -->
     <button
       class="mobile-toggle hide-desktop"
-      id="mobile-menu-toggle"
-      aria-label="Toggle navigation menu"
+      id="es-mobile-menu-toggle"
+      aria-label="Abrir menú de navegación"
       aria-expanded="false"
-      aria-controls="mobile-menu"
+      aria-controls="es-mobile-menu"
     >
       <span class="toggle-bar"></span>
       <span class="toggle-bar"></span>
@@ -104,13 +80,13 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
   </div>
 
   <!-- Mobile Navigation -->
-  <nav class="mobile-nav hide-desktop" id="mobile-menu" aria-label="Mobile navigation">
+  <nav class="mobile-nav hide-desktop" id="es-mobile-menu" aria-label="Navegación móvil">
     <ul class="mobile-nav-list">
       {navLinks.map(link => (
         <li>
           <a
             href={link.href}
-            class:list={['mobile-nav-link', { 'mobile-nav-link--active': currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+            class:list={['mobile-nav-link', { 'mobile-nav-link--active': currentPath === link.href || (link.href !== '/es/' && currentPath.startsWith(link.href)) }]}
           >
             {link.label}
           </a>
@@ -130,15 +106,11 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
           )}
         </li>
       ))}
-      <li class="mobile-lang-item">
-        <a href={esHref} class="mobile-nav-link mobile-lang-link" lang="es">
-          <span aria-hidden="true">🌐</span> {esText}
-        </a>
-      </li>
     </ul>
   </nav>
 </header>
 
+<!-- Styles are identical to Header.astro — shared CSS tokens ensure visual parity -->
 <style>
   .site-header {
     position: sticky;
@@ -153,11 +125,8 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     align-items: center;
   }
 
-  .header-inner {
-    width: 100%;
-  }
+  .header-inner { width: 100%; }
 
-  /* Brand */
   .header-brand {
     display: flex;
     align-items: center;
@@ -165,16 +134,13 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     text-decoration: none;
     transition: opacity var(--transition-fast);
   }
-
-  .header-brand:hover {
-    opacity: 0.8;
-  }
+  .header-brand:hover { opacity: 0.8; }
 
   .brand-icon {
     width: 36px;
     height: 36px;
     object-fit: contain;
-    mix-blend-mode: multiply; /* Blends white background natively */
+    mix-blend-mode: multiply;
     flex-shrink: 0;
   }
 
@@ -188,19 +154,9 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     text-overflow: ellipsis;
   }
 
-  @media (max-width: 400px) {
-    .brand-text {
-      font-size: 1.05rem;
-    }
-  }
+  @media (max-width: 400px) { .brand-text { font-size: 1.05rem; } }
+  @media (max-width: 350px) { .brand-text { font-size: 0.95rem; } }
 
-  @media (max-width: 350px) {
-    .brand-text {
-      font-size: 0.95rem;
-    }
-  }
-
-  /* Desktop Nav */
   .nav-list {
     display: flex;
     align-items: center;
@@ -209,10 +165,7 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     margin: 0;
     padding: 0;
   }
-
-  .nav-list > li {
-    position: relative;
-  }
+  .nav-list > li { position: relative; }
 
   .nav-link {
     display: flex;
@@ -226,12 +179,7 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     border-radius: var(--radius-md);
     transition: color var(--transition-fast), background var(--transition-fast);
   }
-
-  .nav-link:hover {
-    color: var(--color-primary);
-    background: var(--color-bg-alt);
-  }
-
+  .nav-link:hover { color: var(--color-primary); background: var(--color-bg-alt); }
   .nav-link--active {
     color: var(--color-primary);
     background: var(--color-bg-alt);
@@ -243,12 +191,8 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     opacity: 0.6;
     transition: transform var(--transition-fast);
   }
+  .has-dropdown:hover .nav-chevron { transform: rotate(180deg); }
 
-  .has-dropdown:hover .nav-chevron {
-    transform: rotate(180deg);
-  }
-
-  /* Dropdown */
   .nav-dropdown {
     position: absolute;
     top: 100%;
@@ -260,7 +204,6 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     z-index: 200;
     padding-top: var(--space-2);
   }
-
   .has-dropdown:hover .nav-dropdown {
     opacity: 1;
     visibility: visible;
@@ -289,16 +232,8 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     transition: background var(--transition-fast), color var(--transition-fast);
     white-space: nowrap;
   }
-
-  .nav-dropdown-link:hover {
-    background: var(--color-bg-alt);
-    color: var(--color-primary);
-  }
-
-  .nav-dropdown-link--active {
-    color: var(--color-primary);
-    font-weight: var(--weight-semibold);
-  }
+  .nav-dropdown-link:hover { background: var(--color-bg-alt); color: var(--color-primary); }
+  .nav-dropdown-link--active { color: var(--color-primary); font-weight: var(--weight-semibold); }
 
   .nav-dropdown-all {
     border-top: 1px solid var(--color-border-light);
@@ -308,12 +243,8 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     color: var(--color-text-muted);
     font-weight: var(--weight-medium);
   }
+  .nav-dropdown-all:hover { color: var(--color-primary); }
 
-  .nav-dropdown-all:hover {
-    color: var(--color-primary);
-  }
-
-  /* Mobile Toggle */
   .mobile-toggle {
     display: flex;
     flex-direction: column;
@@ -326,7 +257,6 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     cursor: pointer;
     padding: 4px;
   }
-
   .toggle-bar {
     display: block;
     width: 100%;
@@ -335,20 +265,10 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     border-radius: 1px;
     transition: transform var(--transition-base), opacity var(--transition-base);
   }
+  .mobile-toggle[aria-expanded="true"] .toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .mobile-toggle[aria-expanded="true"] .toggle-bar:nth-child(2) { opacity: 0; }
+  .mobile-toggle[aria-expanded="true"] .toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  .mobile-toggle[aria-expanded="true"] .toggle-bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .mobile-toggle[aria-expanded="true"] .toggle-bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-toggle[aria-expanded="true"] .toggle-bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  /* Mobile Nav */
   .mobile-nav {
     position: absolute;
     top: var(--header-height);
@@ -362,7 +282,6 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     pointer-events: none;
     transition: transform var(--transition-base), opacity var(--transition-base);
   }
-
   .mobile-nav.is-open {
     transform: translateY(0);
     opacity: 1;
@@ -385,20 +304,16 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     border-radius: var(--radius-md);
     transition: color var(--transition-fast), background var(--transition-fast);
   }
-
-  .mobile-nav-link:hover,
-  .mobile-nav-link--active {
+  .mobile-nav-link:hover, .mobile-nav-link--active {
     color: var(--color-primary);
     background: var(--color-bg-alt);
   }
 
-  /* Mobile Sub-navigation */
   .mobile-subnav {
     list-style: none;
     margin: 0;
     padding: 0 0 0 var(--space-6);
   }
-
   .mobile-subnav-link {
     display: block;
     padding: var(--space-2) var(--space-4);
@@ -410,65 +325,21 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     border-left: 2px solid var(--color-border-light);
     transition: color var(--transition-fast), border-color var(--transition-fast);
   }
-
-  .mobile-subnav-link:hover,
-  .mobile-subnav-link--active {
+  .mobile-subnav-link:hover, .mobile-subnav-link--active {
     color: var(--color-primary);
     border-left-color: var(--color-primary);
-  }
-
-  /* Spanish version switch (desktop pill + mobile link) */
-  .nav-lang-switch {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    margin-left: var(--space-3);
-    padding: var(--space-2) var(--space-4);
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    color: var(--color-primary);
-    text-decoration: none;
-    border: 1px solid var(--color-primary);
-    border-radius: 999px;
-    white-space: nowrap;
-    transition: background var(--transition-fast), color var(--transition-fast);
-  }
-
-  .nav-lang-switch:hover {
-    background: var(--color-primary);
-    color: #fff;
-  }
-
-  .lang-flag {
-    font-size: 1em;
-    line-height: 1;
-  }
-
-  .mobile-lang-link {
-    margin-top: var(--space-2);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    border-radius: var(--radius-md);
-    text-align: center;
-  }
-
-  .mobile-lang-link:hover {
-    background: var(--color-primary);
-    color: #fff;
   }
 </style>
 
 <script>
-  const toggle = document.getElementById('mobile-menu-toggle');
-  const menu = document.getElementById('mobile-menu');
+  const toggle = document.getElementById('es-mobile-menu-toggle');
+  const menu = document.getElementById('es-mobile-menu');
 
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
       const isOpen = menu.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(isOpen));
     });
-
-    // Close menu when clicking a link
     menu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.remove('is-open');

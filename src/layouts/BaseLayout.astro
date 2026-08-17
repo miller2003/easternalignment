@@ -18,6 +18,8 @@ interface Props {
   seoTitle?: string;
   metaDescription?: string;
   customSchema?: string;
+  /** URL of the corresponding Spanish page (if one exists) */
+  hreflangEs?: string;
 }
 
 const {
@@ -31,6 +33,7 @@ const {
   seoTitle,
   metaDescription,
   customSchema,
+  hreflangEs,
 } = Astro.props;
 
 const SITE_NAME = 'Eastern Alignment';
@@ -50,6 +53,10 @@ const metaDesc = metaDescription || description;
 // Robust Canonical: Always point to the production domain, forcing HTTPS and preserving the path
 const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
 const ogImageUrl = ogImage.startsWith('http') ? ogImage.replace('http://', 'https://') : new URL(ogImage, SITE_URL).href;
+
+// ── hreflang: Default to English, with x-default
+const hreflangSelf = canonical; // en
+const hreflangXDefault = canonical; // x-default defaults to English version
 
 const websiteSchema = {
   "@context": "https://schema.org",
@@ -89,6 +96,16 @@ const personSchema = {
     <meta name="description" content={metaDesc} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+
+    <!-- hreflang cluster -->
+    <link rel="alternate" hreflang="en" href={hreflangSelf} />
+    <link rel="alternate" hreflang="x-default" href={hreflangXDefault} />
+    {hreflangEs && (
+      <>
+        <link rel="alternate" hreflang="es" href={hreflangEs} />
+        <link rel="alternate" hreflang="es-419" href={hreflangEs} />
+      </>
+    )}
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="any" />

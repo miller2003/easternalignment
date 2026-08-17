@@ -1,0 +1,50 @@
+---
+import EsBaseLayout from '../../layouts/EsBaseLayout.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+---
+
+<EsBaseLayout
+  title="Página no encontrada"
+  description="La página que buscas no existe o ha sido movida."
+  noindex={true}
+  canonicalUrl={`${SITE_URL}/es/404/`}
+>
+  <div class="error-page section">
+    <div class="container container--narrow">
+      <div class="error-content">
+        <div class="error-code" aria-hidden="true">404</div>
+        <h1 class="error-title">Página no encontrada</h1>
+        <p class="error-desc text-muted">
+          La página que buscas no existe o ha sido movida. Puede que el enlace esté desactualizado o hayas escrito la dirección incorrectamente.
+        </p>
+        <div class="error-actions">
+          <a href="/es/" class="btn btn--primary">Ir al inicio →</a>
+          <a href="/es/resenas/" class="btn btn--ghost">Ver todas las reseñas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</EsBaseLayout>
+
+<style>
+  .error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: var(--space-16) 0;
+  }
+  .error-content { text-align: center; }
+  .error-code {
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 15vw, 8rem);
+    color: var(--color-border);
+    line-height: 1;
+    margin-bottom: var(--space-4);
+    user-select: none;
+  }
+  .error-title { font-size: var(--text-3xl); margin-bottom: var(--space-4); }
+  .error-desc { font-size: var(--text-lg); max-width: 480px; margin: 0 auto var(--space-8); line-height: var(--leading-relaxed); }
+  .error-actions { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+</style>

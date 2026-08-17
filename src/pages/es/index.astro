@@ -1,0 +1,314 @@
+---
+import EsBaseLayout from '../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../components/es/EsBreadcrumb.astro';
+import EsSpanishCTA from '../../components/es/EsSpanishCTA.astro';
+import EsFAQ from '../../components/es/EsFAQ.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+const canonicalUrl = `${SITE_URL}/es/`;
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Eastern Alignment en Español — Reseñas de Videntes Online",
+  "description": "Análisis independiente y reseñas verificadas de plataformas de lectura psíquica en línea para hispanohablantes. Evaluamos Psíquicos Web y Purple Garden con datos reales.",
+  "url": canonicalUrl,
+  "inLanguage": "es",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Eastern Alignment",
+    "url": SITE_URL,
+  },
+};
+
+const homeFAQs = [
+  {
+    question: "¿Son confiables los videntes y tarotistas en línea?",
+    answer: "Sí, siempre y cuando utilices plataformas legítimas que filtren a sus asesores y mantengan sistemas de reseñas transparentes. En nuestras reseñas evaluamos historiales verificados, asegurándonos de que los lectores recomendados tengan opiniones documentadas por usuarios reales."
+  },
+  {
+    question: "¿Cuánto cuesta una lectura psíquica en español?",
+    answer: "Las tarifas típicamente van desde $0.99 hasta $15.00 dólares por minuto, dependiendo de la experiencia del lector. Para reducir el riesgo inicial, recomendamos aprovechar ofertas como los $30 de crédito en Purple Garden o los 3 minutos gratis + descuento en Psíquicos Web."
+  },
+  {
+    question: "¿Cómo evitar estafas al consultar a un vidente online?",
+    answer: "Las estafas más comunes involucran promesas de 'quitar maldiciones' por dinero adicional o perfiles falsos con reseñas manipuladas. Para protegerte, elige plataformas con rendición de cuentas pública (como el sistema Journeys de Purple Garden) y nunca pagues por fuera de la plataforma oficial."
+  }
+];
+---
+
+<EsBaseLayout
+  title="Reseñas de Videntes Online en Español"
+  description="Análisis independiente y reseñas verificadas de Psíquicos Web y Purple Garden — las principales plataformas de lectura psíquica para hispanohablantes. Datos reales, sin publicidad encubierta."
+  seoTitle="Mejores Videntes y Tarotistas Online 2026: Reseñas Reales"
+  metaDescription="¿Buscas videntes online de confianza? Analizamos las mejores plataformas en español (Psíquicos Web, Purple Garden). Precios, opiniones reales y ofertas gratis."
+  canonicalUrl={canonicalUrl}
+  jsonLd={homeSchema}
+  hreflangEn={`${SITE_URL}/`}
+>
+  <!-- Hero Section -->
+  <section class="es-hero section">
+    <div class="container container--narrow">
+      <div class="es-hero-content">
+        <div class="es-hero-badge">
+          <span>Análisis Independiente</span>
+        </div>
+        <h1 class="es-hero-title">
+          Reseñas Verificadas de<br />Videntes Online
+        </h1>
+        <p class="es-hero-desc">
+          Eastern Alignment evalúa plataformas de lectura psíquica con datos reales de usuarios verificados. Sin publicidad encubierta, sin recomendaciones pagadas. Analizamos <strong>Psíquicos Web</strong> y <strong>Purple Garden</strong> para que tomes decisiones informadas.
+        </p>
+        <div class="es-hero-ctas">
+          <a href="/es/resenas/psiquicos-web/" class="btn btn--primary btn--lg">
+            Ver Psíquicos Web →
+          </a>
+          <a href="/es/resenas/purple-garden-es/" class="btn btn--ghost btn--lg">
+            Ver Purple Garden →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Cards -->
+  <section class="es-platforms section" aria-labelledby="platforms-heading">
+    <div class="container">
+      <h2 class="section-title" id="platforms-heading">Plataformas Evaluadas</h2>
+      <p class="section-desc text-muted">
+        Analizamos cada plataforma en profundidad: calificaciones verificadas, precios reales, metodología de los lectores y opiniones documentadas de usuarios.
+      </p>
+
+      <div class="es-platform-grid">
+        <!-- Psíquicos Web Card -->
+        <article class="es-platform-card card">
+          <div class="es-platform-card-header">
+            <div class="es-platform-icon" aria-hidden="true">🔮</div>
+            <div>
+              <h3 class="es-platform-name">Psíquicos Web</h3>
+              <p class="es-platform-tagline text-muted">Plataforma establecida de videntes en español</p>
+            </div>
+          </div>
+          <p class="es-platform-desc">
+            Una de las principales plataformas hispanohablantes de lectura psíquica. Evaluamos el historial de lectores individuales, sus calificaciones verificadas y la relación calidad-precio de cada sesión.
+          </p>
+          <div class="es-platform-features">
+            <span class="feature-tag">Lectura de Tarot</span>
+            <span class="feature-tag">Astrología</span>
+            <span class="feature-tag">Numerología</span>
+            <span class="feature-tag">Chat y Teléfono</span>
+          </div>
+          <div class="es-platform-ctas">
+            <a href="/es/resenas/psiquicos-web/" class="btn btn--ghost btn--sm">Leer análisis completo →</a>
+            <EsSpanishCTA platform="psiquicos" variant="explore" size="sm" source="home-card" />
+          </div>
+        </article>
+
+        <!-- Purple Garden Card -->
+        <article class="es-platform-card card">
+          <div class="es-platform-card-header">
+            <div class="es-platform-icon" aria-hidden="true">🌷</div>
+            <div>
+              <h3 class="es-platform-name">Purple Garden</h3>
+              <p class="es-platform-tagline text-muted">Comunidad internacional con lectores en español</p>
+            </div>
+          </div>
+          <p class="es-platform-desc">
+            Plataforma con lectores en español integrados en una comunidad internacional. Evaluamos lectores individuales de habla hispana, sus calificaciones y si la experiencia de usuario justifica el precio.
+          </p>
+          <div class="es-platform-features">
+            <span class="feature-tag">Lectura de Tarot</span>
+            <span class="feature-tag">Lectura de Amor</span>
+            <span class="feature-tag">Video Disponible</span>
+            <span class="feature-tag">Chat y Teléfono</span>
+          </div>
+          <div class="es-platform-ctas">
+            <a href="/es/resenas/purple-garden-es/" class="btn btn--ghost btn--sm">Leer análisis completo →</a>
+            <EsSpanishCTA platform="purple-garden-es" variant="explore" size="sm" source="home-card" />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology / EEAT Trust Section -->
+  <section class="es-methodology section" aria-labelledby="methodology-heading">
+    <div class="container container--narrow">
+      <h2 class="section-title" id="methodology-heading">Cómo Evaluamos</h2>
+      <p class="section-desc text-muted">
+        Eastern Alignment opera como una plataforma de análisis de terceros. Nuestras evaluaciones se basan exclusivamente en datos verificables y no en relaciones comerciales con los lectores individuales.
+      </p>
+      <div class="methodology-grid">
+        <div class="method-item">
+          <div class="method-icon" aria-hidden="true">📊</div>
+          <h3 class="method-title">Datos Verificados</h3>
+          <p class="method-desc text-muted">
+            Analizamos calificaciones públicas verificadas, volumen de sesiones documentadas y consistencia histórica del perfil en la plataforma.
+          </p>
+        </div>
+        <div class="method-item">
+          <div class="method-icon" aria-hidden="true">💬</div>
+          <h3 class="method-title">Opiniones Reales</h3>
+          <p class="method-desc text-muted">
+            Extractamos y analizamos reseñas documentadas de usuarios reales. No fabricamos ni interpolamos testimonios.
+          </p>
+        </div>
+        <div class="method-item">
+          <div class="method-icon" aria-hidden="true">🔍</div>
+          <h3 class="method-title">Sin Conflictos de Interés</h3>
+          <p class="method-desc text-muted">
+            No recibimos pagos de lectores individuales. Las comisiones de afiliado provienen de las plataformas, no de los lectores evaluados. Ver nuestra <a href="/es/divulgacion/">declaración completa</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (EEAT) -->
+  <section class="es-home-faq section">
+    <div class="container container--narrow">
+      <EsFAQ items={homeFAQs} title="Preguntas Frecuentes sobre Videncia Online" />
+    </div>
+  </section>
+</EsBaseLayout>
+
+<style>
+  /* Hero */
+  .es-hero {
+    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+    padding: var(--space-16) 0 var(--space-12);
+    text-align: center;
+  }
+  .es-hero-content { max-width: 680px; margin: 0 auto; }
+  .es-hero-badge {
+    display: inline-block;
+    background: var(--color-warning-bg);
+    color: var(--color-primary-dark);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 14px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-5);
+  }
+  .es-hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-5);
+  }
+  .es-hero-desc {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-8);
+  }
+  .es-hero-ctas {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Platform Grid */
+  .es-platforms { padding: var(--space-12) 0; }
+  .section-title {
+    font-size: var(--text-3xl);
+    text-align: center;
+    margin-bottom: var(--space-3);
+  }
+  .section-desc {
+    text-align: center;
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto var(--space-10);
+    line-height: var(--leading-relaxed);
+  }
+  .es-platform-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  .es-platform-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-7);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+  .es-platform-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .es-platform-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .es-platform-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .es-platform-name {
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-1);
+  }
+  .es-platform-tagline { font-size: var(--text-sm); margin: 0; }
+  .es-platform-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+  .es-platform-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .feature-tag {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    padding: 2px 10px;
+    background: var(--color-sage-100, #f0faf4);
+    color: var(--color-sage-dark, #2d6a4f);
+    border-radius: var(--radius-full);
+  }
+  .es-platform-ctas {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  /* Methodology */
+  .es-methodology {
+    background: var(--color-bg-alt);
+    padding: var(--space-12) 0;
+  }
+  .methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+  .method-item { text-align: center; }
+  .method-icon { font-size: 2.5rem; margin-bottom: var(--space-3); }
+  .method-title { font-size: var(--text-lg); margin-bottom: var(--space-2); }
+  .method-desc {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+  .method-desc a { color: var(--color-primary); text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .es-hero { padding: var(--space-12) 0 var(--space-8); }
+    .es-platform-grid { grid-template-columns: 1fr; }
+    .methodology-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+    .es-hero-ctas { flex-direction: column; align-items: center; }
+  }
+</style>

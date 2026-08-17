@@ -1,0 +1,88 @@
+---
+/**
+ * EsSpanishCTA — Central affiliate link control component for the /es subsite.
+ *
+ * SINGLE SOURCE OF TRUTH for Spanish offer URLs.
+ * Articles NEVER embed raw affiliate links — they call this component instead.
+ * Future offer/parameter changes are made here only.
+ */
+
+interface Props {
+  platform: 'psiquicos' | 'purple-garden-es';
+  /**
+   * CTA text variant:
+   * - "default"   → Ver tarifas y disponibilidad
+   * - "discount"  → Obtener descuento de primera vez
+   * - "book"      → Reservar sesión ahora
+   * - "explore"   → Explorar lectores disponibles
+   * - "custom"    → Use the `label` prop to provide custom text
+   */
+  variant?: 'default' | 'discount' | 'book' | 'explore' | 'custom';
+  label?: string;
+  /** Reader name for personalized CTAs (e.g. "Reservar con [Name]") */
+  readerName?: string;
+  size?: 'sm' | 'md' | 'lg';
+  /** data-cta-source for analytics attribution */
+  source?: string;
+}
+
+const {
+  platform,
+  variant = 'default',
+  label,
+  readerName,
+  size = 'lg',
+  source = 'inline',
+} = Astro.props;
+
+// ────────────────────────────────────────────────────────────────────────────
+// AFFILIATE URLS — change here to update across ALL /es pages simultaneously
+// ────────────────────────────────────────────────────────────────────────────
+const OFFERS = {
+  'psiquicos': 'https://bargestech.go2cloud.org/aff_c?offer_id=42&aff_id=2326',
+  'purple-garden-es': 'https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326',
+} as const;
+
+// ────────────────────────────────────────────────────────────────────────────
+// PLATFORM DISPLAY NAMES (Spanish)
+// ────────────────────────────────────────────────────────────────────────────
+const PLATFORM_NAMES = {
+  'psiquicos': 'Psíquicos Web',
+  'purple-garden-es': 'Purple Garden',
+} as const;
+
+const href = OFFERS[platform];
+const platformName = PLATFORM_NAMES[platform];
+
+// Resolve CTA label — controlled vocabulary, never "Click Here"
+let ctaLabel: string;
+if (variant === 'custom' && label) {
+  ctaLabel = label;
+} else if (variant === 'discount') {
+  ctaLabel = platform === 'psiquicos' 
+    ? `Obtener 3 min gratis y 60% dto en ${platformName} →`
+    : `Obtener $30 de crédito de bienvenida en ${platformName} →`;
+} else if (variant === 'book' && readerName) {
+  ctaLabel = `Ver tarifas y disponibilidad de ${readerName} →`;
+} else if (variant === 'book') {
+  ctaLabel = `Consultar videntes verificados en ${platformName} →`;
+} else if (variant === 'explore') {
+  ctaLabel = `Explorar psíquicos y tarotistas en ${platformName} →`;
+} else {
+  // default
+  ctaLabel = `Ver opiniones y tarifas en ${platformName} →`;
+}
+
+const sizeClass = size === 'sm' ? 'btn--sm' : size === 'lg' ? 'btn--lg' : '';
+---
+
+<a
+  href={href}
+  class={`btn btn--primary es-cta ${sizeClass}`}
+  rel="nofollow sponsored"
+  target="_blank"
+  data-cta-platform={platform}
+  data-cta-source={source}
+>
+  {ctaLabel}
+</a>

@@ -1,0 +1,148 @@
+---
+import EsBaseLayout from '../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../components/es/EsBreadcrumb.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+const canonicalUrl = `${SITE_URL}/es/acerca-de/`;
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Acerca de Eastern Alignment — Plataforma de Análisis Psíquico Independiente",
+  "description": "Conoce la metodología, la identidad y el compromiso de transparencia de Eastern Alignment como plataforma independiente de evaluación de servicios psíquicos en línea.",
+  "url": canonicalUrl,
+  "inLanguage": "es",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Eastern Alignment",
+    "url": SITE_URL,
+    "description": "Plataforma independiente de análisis y reseñas de servicios de lectura psíquica en línea.",
+  }
+};
+---
+
+<EsBaseLayout
+  title="Acerca de Eastern Alignment"
+  description="Eastern Alignment es una plataforma independiente de análisis y reseñas de servicios de lectura psíquica. Conoce nuestra metodología, nuestros estándares de evaluación y nuestro compromiso con la transparencia."
+  seoTitle="Acerca de Eastern Alignment — Plataforma Independiente de Análisis Psíquico"
+  canonicalUrl={canonicalUrl}
+  jsonLd={pageSchema}
+  hreflangEn={`${SITE_URL}/about/`}
+>
+  <div class="about-page section">
+    <div class="container container--narrow">
+      <EsBreadcrumb items={[{ label: 'Acerca de' }]} />
+
+      <header class="about-hero">
+        <img
+          src="/logo.jpg"
+          alt="Eastern Alignment — Plataforma de Análisis Independiente"
+          class="about-logo"
+          width="80"
+          height="80"
+          loading="lazy"
+        />
+        <h1>Acerca de Eastern Alignment</h1>
+        <p class="about-subtitle text-muted">
+          Plataforma independiente de evaluación y análisis de servicios de lectura psíquica en línea.
+        </p>
+      </header>
+
+      <div class="prose">
+        <h2>Quiénes Somos</h2>
+
+        <p>
+          Eastern Alignment es una plataforma de análisis de terceros especializada en la evaluación independiente de servicios de lectura psíquica en línea. No somos videntes ni ofrecemos lecturas directas. Nuestra función es analizar, documentar y comunicar con objetividad el historial, la metodología y la experiencia de usuario de las principales plataformas de servicios psíquicos.
+        </p>
+
+        <p>
+          Esta sección en español cubre dos plataformas con oferta para hispanohablantes: <strong>Psíquicos Web</strong> y <strong>Purple Garden</strong>. Nuestras evaluaciones se centran en los lectores individuales de cada plataforma, porque creemos que la variación en calidad no ocurre entre plataformas, sino entre lectores.
+        </p>
+
+        <h2>Nuestra Metodología de Evaluación</h2>
+
+        <p>
+          No evaluamos la "precisión psíquica" de forma subjetiva — no es posible hacerlo con rigor. Evaluamos métricas verificables:
+        </p>
+
+        <ol>
+          <li><strong>Historial documentado:</strong> Calificación pública verificada, volumen de sesiones completadas, consistencia del rating a lo largo del tiempo.</li>
+          <li><strong>Datos de precio:</strong> Precio por minuto, disponibilidad de ofertas para nuevos usuarios, comparación con el promedio de la plataforma.</li>
+          <li><strong>Análisis de reseñas:</strong> Tendencias en las opiniones documentadas de usuarios reales — no fabricamos ni interpolamos testimonios.</li>
+          <li><strong>Metodología declarada:</strong> Herramientas de lectura listadas (Tarot, Astrología, Numerología, etc.), especialidades y estilos de comunicación documentados.</li>
+          <li><strong>Limitaciones documentadas:</strong> Quejas verificables, patrones de insatisfacción o advertencias relevantes para el consumidor.</li>
+        </ol>
+
+        <h2>Por Qué Usamos el Modelo de Afiliados</h2>
+
+        <p>
+          Eastern Alignment no cobra suscripciones ni vende publicidad directa. La plataforma se financia a través de comisiones de afiliado: cuando un usuario visita una plataforma a través de nuestros enlaces y realiza una compra, podemos recibir una comisión. El precio de la sesión es <strong>exactamente el mismo</strong> para el usuario, use o no nuestros enlaces.
+        </p>
+
+        <div class="highlight-box">
+          <strong>Nuestro compromiso</strong>
+          <p>
+            Las comisiones de afiliado provienen de las plataformas, <em>no de los lectores individuales evaluados</em>. Esto significa que nuestra evaluación de un lector individual no está influenciada por ninguna relación comercial directa con ese lector. Si un lector tiene un historial deficiente, lo documentamos. Si un lector tiene un historial sólido, lo documentamos también.
+          </p>
+        </div>
+
+        <h2>Lo Que No Somos</h2>
+
+        <ul>
+          <li>No somos un sitio de reseñas pagadas por las plataformas evaluadas.</li>
+          <li>No inventamos experiencias personales de lecturas — nuestras evaluaciones son de terceros basadas en datos.</li>
+          <li>No garantizamos resultados de ninguna lectura psíquica. Los servicios evaluados son de entretenimiento e introspección.</li>
+          <li>No somos representantes ni portavoces de ninguna plataforma.</li>
+        </ul>
+
+        <h2>Contacto</h2>
+
+        <p>
+          Para preguntas sobre nuestra metodología, correcciones de datos o reporte de información desactualizada:
+        </p>
+        <p>📧 <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a></p>
+      </div>
+    </div>
+  </div>
+</EsBaseLayout>
+
+<style>
+  .about-hero {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+  .about-logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-lg);
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    margin: 0 auto var(--space-5);
+    border: 1px solid var(--color-border-light);
+    padding: var(--space-2);
+    background: var(--color-surface);
+  }
+  .about-hero h1 { margin-bottom: var(--space-3); }
+  .about-subtitle {
+    font-size: var(--text-lg);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: var(--leading-relaxed);
+  }
+  .highlight-box {
+    background: var(--color-bg-alt);
+    border-left: 4px solid var(--color-sage);
+    padding: var(--space-6) var(--space-8);
+    margin: var(--space-8) 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .highlight-box strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+  }
+  .highlight-box p { margin: 0; font-size: var(--text-base); }
+</style>

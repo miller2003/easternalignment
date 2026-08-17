@@ -1,0 +1,210 @@
+---
+import EsHeader from '../components/es/EsHeader.astro';
+import EsFooter from '../components/es/EsFooter.astro';
+import EsTopDisclosureBar from '../components/es/EsTopDisclosureBar.astro';
+import PostHog from '../components/PostHog.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+  jsonLd?: object;
+  seoTitle?: string;
+  metaDescription?: string;
+  customSchema?: string;
+  /** URL of the corresponding English page (if one exists) */
+  hreflangEn?: string;
+  /** ISO 8601 date the page was last significantly updated — feeds dateModified meta */
+  dateModified?: string;
+  /** Breadcrumb items for BreadcrumbList schema — array of {name, url} */
+  breadcrumbs?: Array<{ name: string; url: string }>;
+}
+
+const {
+  title,
+  description,
+  ogImage = '/og-default.jpg',
+  ogType = 'website',
+  canonicalUrl,
+  noindex = false,
+  jsonLd,
+  seoTitle,
+  metaDescription,
+  customSchema,
+  hreflangEn,
+  dateModified,
+  breadcrumbs,
+} = Astro.props;
+
+const SITE_NAME = 'Eastern Alignment';
+const SITE_URL  = 'https://easternalignment.com';
+
+const baseTitle = seoTitle || title;
+const fullTitle = baseTitle === SITE_NAME
+  ? baseTitle
+  : baseTitle.length > 42
+    ? baseTitle
+    : `${baseTitle} — ${SITE_NAME}`;
+const metaDesc = metaDescription || description;
+
+// Canonical always points to the Spanish page itself — never cross-links to English
+const canonicalPath = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
+const canonical = canonicalPath.startsWith('http') ? canonicalPath : new URL(canonicalPath, SITE_URL).href;
+
+const ogImageUrl = ogImage.startsWith('http')
+  ? ogImage.replace('http://', 'https://')
+  : new URL(ogImage, SITE_URL).href;
+
+// ── hreflang: this Spanish page is always es + es-419 (LATAM) + x-default
+// es-419 is the ISO standard for Latin American Spanish — critical for LATAM targeting
+const hreflangSelf = canonical;
+// x-default: point to the English equivalent when one exists; otherwise to THIS
+// page. A Spanish-only page must never declare x-default → English home, or the
+// hreflang cluster becomes an unrecoverable orphan (Google ignores the whole set).
+const hreflangXDefault = hreflangEn || canonical;
+
+// ── BreadcrumbList Schema (auto-generated when breadcrumbs prop is passed)
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": `${SITE_URL}/es/`,
+    },
+    ...breadcrumbs.map((crumb, i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": crumb.name ?? crumb.label,
+      "item": crumb.url ?? crumb.href,
+    })),
+  ],
+} : null;
+
+// ── Organization Schema (Spanish-localized)
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": SITE_NAME,
+  "url": SITE_URL,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${SITE_URL}/logo.jpg`,
+    "width": 200,
+    "height": 200,
+  },
+  "description": "Plataforma independiente de análisis y reseñas de servicios de lectura psíquica en línea para hispanohablantes.",
+  "sameAs": [],
+};
+
+// ── WebSite Schema with SearchAction (enables Google Sitelinks Searchbox potential)
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": SITE_NAME,
+  "url": SITE_URL,
+  "description": "Reseñas honestas y análisis independientes de plataformas de lectura psíquica en línea.",
+  "inLanguage": "es",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${SITE_URL}/es/resenas/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name='impact-site-verification' value='9b281445-730b-4b8f-ae89-484d7da8e36e'>
+    <PostHog />
+
+    <!-- Primary Meta -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={metaDesc} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <!-- Language signal for crawlers that don't read html[lang] -->
+    <meta http-equiv="content-language" content="es" />
+    {dateModified && <meta name="date" content={dateModified} />}
+
+    <!-- hreflang cluster:
+         es       → all Spanish speakers globally
+         es-419   → Latin American Spanish (LATAM priority targeting)
+         en       → English equivalent page (if exists)
+         x-default → fallback for unlisted locales
+    -->
+    <link rel="alternate" hreflang="es" href={hreflangSelf} />
+    <link rel="alternate" hreflang="es-419" href={hreflangSelf} />
+    <link rel="alternate" hreflang="x-default" href={hreflangXDefault} />
+    {hreflangEn && (
+      <link rel="alternate" hreflang="en" href={hreflangEn} />
+    )}
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts: same as main site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph — LATAM Spanish locale -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={metaDesc} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={metaDesc.slice(0, 100)} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <!-- es_LA = Latin American Spanish (Facebook's recognized locale for LATAM).
+         Note: Google hreflang uses es-419; Facebook/OpenGraph uses es_LA. -->
+    <meta property="og:locale" content="es_LA" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={metaDesc} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+    {breadcrumbSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
+    {customSchema && customSchema.trim() && (
+      <script type="application/ld+json" set:html={customSchema} />
+    )}
+  </head>
+  <body>
+    <EsTopDisclosureBar />
+    <EsHeader />
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <EsFooter />
+  </body>
+</html>

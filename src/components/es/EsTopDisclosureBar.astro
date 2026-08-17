@@ -1,0 +1,34 @@
+---
+/**
+ * EsTopDisclosureBar — Spanish affiliate disclosure bar.
+ * Mirrors TopDisclosureBar.astro visual style.
+ */
+---
+<div class="top-disclosure-bar">
+  <p>
+    Este sitio contiene enlaces de afiliados. Si realizas una compra a través de ellos, podemos recibir una comisión sin costo adicional para ti.
+    <a href="/es/divulgacion/">Más información →</a>
+  </p>
+</div>
+
+<style>
+  .top-disclosure-bar {
+    background: var(--color-warning-bg, #fef9ec);
+    border-bottom: 1px solid var(--color-border-light);
+    padding: 6px var(--space-4);
+    text-align: center;
+  }
+  .top-disclosure-bar p {
+    font-size: var(--text-xs);
+    color: var(--color-primary-dark);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .top-disclosure-bar a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: var(--weight-medium);
+    margin-left: var(--space-1);
+  }
+</style>

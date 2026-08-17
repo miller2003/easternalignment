@@ -1,0 +1,78 @@
+---
+import EsBaseLayout from '../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../components/es/EsBreadcrumb.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+const canonicalUrl = `${SITE_URL}/es/terminos/`;
+---
+
+<EsBaseLayout
+  title="Términos de Uso"
+  description="Términos y condiciones que rigen el uso del sitio web Eastern Alignment en español."
+  canonicalUrl={canonicalUrl}
+  noindex={false}
+  hreflangEn={`${SITE_URL}/terms/`}
+>
+  <div class="section">
+    <div class="container container--narrow">
+      <EsBreadcrumb items={[{ label: 'Términos de Uso' }]} />
+      <h1>Términos de Uso</h1>
+
+      <div class="prose">
+        <p><em>Última actualización: agosto de 2026</em></p>
+
+        <h2>Aceptación de los Términos</h2>
+        <p>
+          Al acceder y usar Eastern Alignment (easternalignment.com), aceptas y te comprometes a cumplir estos Términos de Uso. Si no estás de acuerdo con estos términos, por favor no uses este sitio web.
+        </p>
+
+        <h2>Descargo de Responsabilidad sobre el Contenido</h2>
+        <p>
+          El contenido de Eastern Alignment se proporciona <strong>con fines informativos y de entretenimiento únicamente</strong>. Nuestras reseñas, análisis y artículos representan evaluaciones independientes de terceros basadas en datos verificables y no constituyen asesoramiento profesional de ningún tipo — incluyendo, entre otros, asesoramiento médico, financiero, legal o psicológico.
+        </p>
+
+        <h2>Descargo sobre Servicios Psíquicos</h2>
+        <p>
+          Eastern Alignment es un sitio de análisis e información. No ofrecemos lecturas psíquicas ni servicios espirituales directamente. Cuando haces clic en los enlaces a plataformas psíquicas de terceros, estás abandonando este sitio web e interactuando con servicios independientes. No somos responsables de la calidad, precisión o resultado de ninguna lectura psíquica que obtengas a través de una plataforma de terceros.
+        </p>
+        <p>
+          Las lecturas psíquicas no deben utilizarse como sustituto de asesoramiento profesional de salud mental, terapia, tratamiento médico, asesoramiento legal o planificación financiera.
+        </p>
+
+        <h2>Relaciones de Afiliados</h2>
+        <p>
+          Algunos enlaces en este sitio web son enlaces de afiliado. Esto significa que podemos ganar una comisión si te registras en un servicio a través de nuestros enlaces. Consulta nuestra <a href="/es/divulgacion/">Declaración de Afiliados</a> para más detalles.
+        </p>
+
+        <h2>Propiedad Intelectual</h2>
+        <p>
+          Todo el contenido de Eastern Alignment — incluidos textos, imágenes, gráficos y elementos de diseño — es propiedad de Eastern Alignment y está protegido por las leyes de derechos de autor aplicables. No puedes reproducir, distribuir ni republicar este contenido sin permiso previo por escrito.
+        </p>
+
+        <h2>Conducta del Usuario</h2>
+        <p>Al usar este sitio web, aceptas no:</p>
+        <ul>
+          <li>Usar el sitio con fines ilegales</li>
+          <li>Intentar acceder no autorizado a este sitio web</li>
+          <li>Interferir con el correcto funcionamiento del sitio</li>
+          <li>Extraer o recopilar contenido sin permiso</li>
+        </ul>
+
+        <h2>Limitación de Responsabilidad</h2>
+        <p>
+          Eastern Alignment y sus propietarios no serán responsables de ningún daño directo, indirecto, incidental, consecuente o punitivo que surja del uso del sitio web o de los servicios de terceros vinculados desde el sitio web.
+        </p>
+
+        <h2>Cambios en los Términos</h2>
+        <p>
+          Nos reservamos el derecho a modificar estos Términos de Uso en cualquier momento. Los cambios serán publicados en esta página con una fecha de revisión actualizada. El uso continuado del sitio web después de cualquier modificación constituye la aceptación de los términos actualizados.
+        </p>
+
+        <h2>Contacto</h2>
+        <p>
+          Para preguntas sobre estos Términos de Uso, escríbenos a: <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</EsBaseLayout>

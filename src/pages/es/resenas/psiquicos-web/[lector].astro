@@ -1,0 +1,170 @@
+---
+/**
+ * Individual reader review page for Psíquicos Web
+ * Route: /es/resenas/psiquicos-web/[lector]/
+ * Content: src/content/es-readers/psiquicos-web/*.md
+ */
+import EsReviewLayout from '../../../../layouts/EsReviewLayout.astro';
+import EsProsCons from '../../../../components/es/EsProsCons.astro';
+import EsCTABox from '../../../../components/es/EsCTABox.astro';
+import EsFAQ from '../../../../components/es/EsFAQ.astro';
+import EsReaderCard from '../../../../components/es/EsReaderCard.astro';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../../../../content/es-readers/psiquicos-web/*.md');
+  const paths = [];
+  for (const path in posts) {
+    // Skip template files
+    const filename = path.split('/').pop() || '';
+    if (filename.startsWith('_')) continue;
+
+    const post = await posts[path]();
+    const slug = filename.replace('.md', '');
+    paths.push({
+      params: { lector: slug },
+      props: post,
+    });
+  }
+  return paths;
+}
+
+const { default: Content, frontmatter } = Astro.props;
+const currentSlug = Astro.params.lector;
+
+// Load all other Psíquicos Web readers for cross-linking
+const allReaderModules = import.meta.glob('../../../../content/es-readers/psiquicos-web/*.md', { eager: true });
+const allReaders = Object.entries(allReaderModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(r => !r.slug?.startsWith('_'));
+
+const totalReaders = allReaders.length;
+
+const otherReaders = allReaders
+  .filter(r => r.slug !== currentSlug)
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+  .slice(0, 4);
+
+// Extract reader display name
+const readerName = frontmatter.platformName?.includes(':')
+  ? frontmatter.platformName.split(':').pop()?.trim()
+  : frontmatter.platformName;
+
+// Spanish FAQ — search intent aligned with LATAM patterns
+const faqItems = [
+  {
+    question: `¿Es ${readerName} un/a vidente de confianza en Psíquicos Web?`,
+    answer: `${readerName} es un/a lector/a activo/a en Psíquicos Web con una calificación de ${frontmatter.rating} sobre 5. Esta reseña se basa en el análisis de su historial verificado, calificaciones de usuarios documentadas y datos públicos de la plataforma. Consulta el análisis completo para evaluar si se adapta a tu tipo de consulta.`,
+  },
+  {
+    question: `¿Cuánto cuesta una sesión con ${readerName}?`,
+    answer: `${readerName} cobra ${frontmatter.pricing || 'según tarifa de la plataforma'} por minuto. ${frontmatter.freeOffer ? `Nuevos usuarios en Psíquicos Web pueden acceder a: ${frontmatter.freeOffer}.` : ''} Te recomendamos definir un presupuesto antes de iniciar la sesión.`,
+  },
+  {
+    question: `¿Qué opiniones reales existen sobre ${readerName} en Psíquicos Web?`,
+    answer: `Las opiniones verificadas de usuarios de ${readerName} están documentadas en su perfil de Psíquicos Web. En esta reseña analizamos y resumimos las tendencias más relevantes de esas opiniones: puntos fuertes, limitaciones documentadas y patrones de satisfacción del cliente.`,
+  },
+  {
+    question: `¿Cómo reservo una sesión con ${readerName}?`,
+    answer: `Puedes reservar una sesión con ${readerName} directamente en Psíquicos Web. Verifica su disponibilidad actual en la plataforma y elige la modalidad de comunicación disponible. El botón en esta página te lleva directamente a su perfil.`,
+  },
+];
+---
+
+<EsReviewLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  platformName={frontmatter.platformName}
+  platform="psiquicos"
+  rating={frontmatter.rating}
+  verdict={frontmatter.verdict}
+  freeOffer={frontmatter.freeOffer}
+  avatarUrl={frontmatter.avatarUrl}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+  metaRobots={frontmatter.metaRobots}
+  canonicalUrl={frontmatter.canonicalUrl}
+  ogImage={frontmatter.ogImage}
+  seoTitle={frontmatter.seoTitle}
+  metaDescription={frontmatter.metaDescription}
+  schemaDatePublished={frontmatter.schemaDatePublished}
+  customSchema={frontmatter.customSchema}
+  entities={frontmatter.entities}
+  hreflangEn={frontmatter.hreflangEn}
+>
+  <!-- Main review content from .md file -->
+  <Content />
+
+  <!-- Pros / Cons -->
+  {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
+    <EsProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
+  )}
+
+  <!-- End CTA Box -->
+  <EsCTABox
+    title={`¿Listo/a para reservar con ${readerName}?`}
+    description={frontmatter.freeOffer
+      ? `Oferta disponible para nuevos usuarios: ${frontmatter.freeOffer}`
+      : 'Consulta disponibilidad y tarifas actuales en Psíquicos Web.'}
+    platform="psiquicos"
+    ctaVariant={frontmatter.freeOffer ? 'discount' : 'book'}
+    readerName={readerName}
+    variant="highlight"
+  />
+
+  <!-- FAQ -->
+  <EsFAQ items={faqItems} title={`Preguntas Frecuentes sobre ${readerName}`} />
+
+  <!-- Cross-link to other readers on same platform -->
+  {otherReaders.length > 0 && (
+    <section class="other-readers" id="otros-lectores-psiquicos">
+      <h2 class="other-readers-title">Otros Lectores que He Analizado en Psíquicos Web</h2>
+      <p class="other-readers-desc text-muted text-sm">
+        Explora más reseñas individuales para encontrar el perfil que mejor se adapte a tu consulta.
+      </p>
+      <div class="other-readers-grid">
+        {otherReaders.map(reader => (
+          <EsReaderCard
+            name={reader.platformName}
+            slug={reader.slug}
+            platform="psiquicos"
+            rating={reader.rating}
+            verdict={reader.verdict}
+            pricing={reader.pricing}
+            bestFor={reader.bestFor}
+            avatarUrl={reader.avatarUrl}
+          />
+        ))}
+      </div>
+      <div class="other-readers-cta">
+        <a href="/es/resenas/psiquicos-web/#psiquicos-lectores" class="btn btn--ghost">
+          Ver Todas las Reseñas de Psíquicos Web ({totalReaders}) →
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- Back link -->
+  <div class="back-link-row">
+    <a href="/es/resenas/" class="btn btn--ghost">← Volver a Todas las Reseñas</a>
+  </div>
+</EsReviewLayout>
+
+<style>
+  .other-readers {
+    margin: var(--space-10) 0;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+  .other-readers-title { font-size: var(--text-xl); margin-bottom: var(--space-2); }
+  .other-readers-desc { margin-bottom: var(--space-6); }
+  .other-readers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-5);
+  }
+  .other-readers-cta { text-align: center; margin-top: var(--space-6); }
+  .back-link-row { margin-top: var(--space-8); text-align: center; }
+</style>

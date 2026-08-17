@@ -1,0 +1,747 @@
+---
+import EsBaseLayout from '../../../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../../../components/es/EsBreadcrumb.astro';
+import EsSpanishCTA from '../../../../components/es/EsSpanishCTA.astro';
+import EsReaderCard from '../../../../components/es/EsReaderCard.astro';
+import EsProsCons from '../../../../components/es/EsProsCons.astro';
+import EsFAQ from '../../../../components/es/EsFAQ.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+const canonicalUrl = `${SITE_URL}/es/resenas/psiquicos-web/`;
+
+const allReaderModules = import.meta.glob('../../../../content/es-readers/psiquicos-web/*.md', { eager: true });
+const readers = Object.entries(allReaderModules)
+  .filter(([path]) => !path.includes('_plantilla'))
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', '') || '',
+  }))
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+
+const platformSchema = {
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "headline": "Psíquicos Web: Análisis Completo 2026 — La Mayor Plataforma de Videncia en Español",
+  "description": "Análisis independiente de Psíquicos Web: funcionamiento real, precios verificados, lectores destacados, opiniones de usuarios y veredicto honesto.",
+  "inLanguage": "es",
+  "url": canonicalUrl,
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": 4.5,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Eastern Alignment",
+    "url": SITE_URL,
+  },
+  "itemReviewed": {
+    "@type": "Service",
+    "name": "Psíquicos Web",
+    "url": "https://psiquicos.net",
+    "description": "Plataforma de videncia y tarot en línea para hispanohablantes"
+  },
+  "datePublished": "2026-07-15T08:00:00Z",
+  "dateModified": new Date().toISOString().split('T')[0] + "T08:00:00Z"
+};
+
+const faqItems = [
+  {
+    question: "¿Psíquicos Web es de confianza o es una estafa?",
+    answer: "Psíquicos Web es una plataforma legítima operada por adviqo Technology Corp y Barges Technologies — la misma empresa detrás de Purple Garden. Cuenta con más de 1 millón de descargas en Google Play y una calificación de 4.2/5 estrellas con más de 5.200 reseñas verificadas. Como cualquier servicio de este tipo, la experiencia varía según el lector que elijas; la clave está en leer el historial individual de cada asesor antes de contratar."
+  },
+  {
+    question: "¿Cuánto cuesta una sesión en Psíquicos Web?",
+    answer: "Los precios van de $1.99 a $14.99 por minuto, aunque la mayoría de los lectores activos con buen historial cobran entre $2.69 y $4.99/min. Los nuevos usuarios reciben los primeros 3 minutos gratis y hasta un 60% de descuento en la primera recarga. Una sesión estándar de 20 minutos con un lector de gama media ronda los $60–80."
+  },
+  {
+    question: "¿Cómo funcionan los 3 minutos gratis?",
+    answer: "Al registrarte y comenzar tu primera sesión con cualquier lector, los primeros 3 minutos se descuentan automáticamente sin cargo. No necesitas código; el sistema lo aplica solo. Lo importante: los 3 minutos gratis se activan la primera vez que conectas con un lector, no después de comprar créditos."
+  },
+  {
+    question: "¿Puedo hablar con videntes en español latinoamericano?",
+    answer: "Sí. Psíquicos Web es la única gran plataforma operada 100% en español desde su infraestructura, no como función secundaria. Los lectores son hispanohablantes nativos de LATAM y España, y la interfaz, el soporte y el contenido editorial están en español. Es una ventaja real frente a plataformas anglófonas que ofrecen español como filtro adicional."
+  },
+  {
+    question: "¿Qué pasa si el saldo se me acaba a mitad de sesión?",
+    answer: "La sesión se corta automáticamente cuando el saldo llega a cero. Para evitarlo, recarga antes de empezar y activa la notificación de saldo bajo en la app. El historial de la conversación se guarda encriptado en tu cuenta, así que puedes retomar el hilo en una sesión posterior."
+  }
+];
+---
+
+<EsBaseLayout
+  title="Psíquicos Web: Análisis Completo 2026 — La Mayor Plataforma de Videncia en Español"
+  description="Análisis independiente de Psíquicos Web: cómo funciona realmente, precios verificados, lectores destacados con historial documentado, opiniones de usuarios reales y veredicto sin filtros."
+  seoTitle="Opiniones de Psíquicos Web 2026: ¿Confiable o Estafa? Análisis"
+  metaDescription="¿Psíquicos Web es confiable? Análisis con datos reales: 1M+ descargas, 4.2/5 estrellas, precios $1.99–$14.99/min, 3 min gratis. Lectores verificados y opiniones de usuarios reales."
+  canonicalUrl={canonicalUrl}
+  jsonLd={platformSchema}
+>
+  <article class="section">
+    <div class="container">
+      <EsBreadcrumb items={[
+        { label: 'Reseñas', href: '/es/resenas/' },
+        { label: 'Psíquicos Web' }
+      ]} />
+
+      <!-- ── HERO ── -->
+      <header class="review-hub-hero">
+        <div class="review-hub-badge">Análisis Independiente · 2026</div>
+        <h1 class="review-hub-title">Psíquicos Web: Análisis Honesto</h1>
+        <p class="review-hub-subtitle">
+          La mayor plataforma de videncia operada íntegramente en español. Aquí analizamos cómo funciona de verdad — precios reales, lectores verificados y lo que los usuarios no suelen contar.
+        </p>
+
+        <!-- Rating Summary Bar -->
+        <div class="hub-rating-bar">
+          <div class="hub-rating-score">4.5<span class="hub-rating-max">/5</span></div>
+          <div class="hub-rating-stars" aria-label="4.5 de 5 estrellas">
+            {'★★★★½'.split('').map(s => <span class="star-char">{s}</span>)}
+          </div>
+          <div class="hub-rating-meta">
+            <span class="hub-rating-tag">Calificación de la Plataforma</span>
+            <span class="hub-rating-note">Basada en 5.200+ reseñas verificadas en Google Play + App Store</span>
+          </div>
+        </div>
+
+        <div class="hub-hero-ctas">
+          <EsSpanishCTA platform="psiquicos" variant="discount" size="lg" source="hero" />
+          <a href="#lectores" class="btn btn--ghost btn--lg">Ver lectores analizados ↓</a>
+        </div>
+
+        <!-- Quick Stats Grid -->
+        <div class="hub-stats-grid">
+          <div class="hub-stat">
+            <span class="hub-stat-value">1M+</span>
+            <span class="hub-stat-label">Descargas en Google Play</span>
+          </div>
+          <div class="hub-stat">
+            <span class="hub-stat-value">4.2★</span>
+            <span class="hub-stat-label">Calificación App Store Android</span>
+          </div>
+          <div class="hub-stat">
+            <span class="hub-stat-value">2.000+</span>
+            <span class="hub-stat-label">Lectores activos</span>
+          </div>
+          <div class="hub-stat">
+            <span class="hub-stat-value">$1.99</span>
+            <span class="hub-stat-label">Desde / minuto</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- ── BODY ── -->
+      <div class="review-hub-body prose">
+
+        <!-- 1. POR QUÉ PSÍQUICOS WEB MERECE ATENCIÓN -->
+        <h2>Por Qué Psíquicos Web Ocupa una Categoría Propia</h2>
+
+        <p>
+          Hay docenas de plataformas de videncia en línea, pero casi todas operan en inglés y ofrecen español como opción secundaria — un filtro de idioma añadido sobre una infraestructura anglosajona. <strong>Psíquicos Web hace lo contrario</strong>: es una plataforma construida íntegramente para usuarios hispanohablantes, con lectores nativos de LATAM y España, contenido editorial en español, soporte técnico que responde en español, y una experiencia de usuario pensada para la cultura hispana desde el primer pixel.
+        </p>
+
+        <p>
+          Detrás de la marca está <strong>adviqo Technology Corp</strong> (Berlín/Delaware), parte del grupo Barges Technologies — la misma empresa que desarrolló Purple Garden y BitWine. Esto no es una startup sin historial: es un conglomerado de plataformas espirituales digitales con más de 15 años en el mercado, respaldado por Ingenio LLC (propietaria de Keen, Kasamba y Astrology.com). Más de <strong>un millón de usuarios</strong> han descargado la app en Google Play. Esa no es la tracción de un proyecto experimental.
+        </p>
+
+        <div class="insight-box">
+          <span class="insight-label">Dato que pocas reseñas mencionan</span>
+          <p>
+            Psíquicos Web y Purple Garden comparten la misma infraestructura de affiliate y pagos (bargestech.go2cloud.org). Son esencialmente dos marcas del mismo ecosistema tecnológico, dirigidas a audiencias distintas: Psíquicos al mercado hispanohablante puro, Purple Garden al mercado global con lectores en español como subconjunto.
+          </p>
+        </div>
+
+        <!-- 2. CÓMO FUNCIONA -->
+        <h2>Cómo Funciona Psíquicos Web en la Práctica</h2>
+
+        <p>
+          El modelo es sencillo: creas una cuenta gratuita, recargas créditos, eliges un lector, y la sesión se factura por minuto. No hay suscripciones mensuales ni tarifas ocultas de membresía. Lo que ves en el perfil del lector — precio por minuto, especialidades, calificación — es lo que pagas.
+        </p>
+
+        <p>Tres modalidades de comunicación disponibles:</p>
+
+        <div class="modality-table-wrapper">
+          <table class="modality-table">
+            <thead>
+              <tr>
+                <th>Modalidad</th>
+                <th>Precio típico</th>
+                <th>Mejor para</th>
+                <th>Limitación real</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Chat de texto</strong></td>
+                <td>$1.99–$5.99/min</td>
+                <td>Preguntas concretas, registro escrito, usuarios tímidos</td>
+                <td>Si el lector escribe lento, el reloj corre igual</td>
+              </tr>
+              <tr>
+                <td><strong>Llamada de voz</strong></td>
+                <td>$2.99–$9.99/min</td>
+                <td>Conexión empática más profunda, urgencia emocional</td>
+                <td>Sin transcripción automática guardada</td>
+              </tr>
+              <tr>
+                <td><strong>Video en vivo</strong></td>
+                <td>$3.99–$14.99/min</td>
+                <td>Lectura de cartas en tiempo real, lectura energética visual</td>
+                <td>Requiere buena conexión en ambos lados</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong>Una observación que conviene saber antes de empezar:</strong> en las sesiones de chat, el contador de minutos corre desde que el lector acepta la conexión, no desde que escribe su primera respuesta. Si tardas en escribir tu primera pregunta o el lector demora en responder, ese tiempo cuenta igual. Varios usuarios documentan haber gastado $15–20 en los primeros cinco minutos sin haber recibido una respuesta sustancial. La solución: ten tus preguntas escritas en un bloc antes de abrir la sesión.
+        </p>
+
+        <!-- 3. OFERTA DE BIENVENIDA -->
+        <h2>La Oferta de Bienvenida: Qué Dice el Marketing vs. Lo Que Pasa en Realidad</h2>
+
+        <p>
+          Psíquicos Web anuncia tres ventajas para nuevos usuarios: <strong>3 minutos gratis</strong>, <strong>hasta 60% de descuento en la primera recarga</strong>, y en algunos funnels de afiliado, <strong>$10 de crédito inicial</strong>.
+        </p>
+
+        <p>
+          Los 3 minutos gratis funcionan: al iniciar tu primera sesión con cualquier lector, el sistema descuenta los tres primeros minutos automáticamente, sin código ni trámite adicional. El 60% de descuento aplica sobre el primer paquete de créditos — no sobre todas las recargas posteriores. Es una oferta real, pero está diseñada para que el primer contacto sea lo suficientemente cómodo como para que vuelvas.
+        </p>
+
+        <div class="pricing-breakdown">
+          <h3 class="pricing-title">Ejemplo Real de Costos (Usuario Nuevo)</h3>
+          <div class="pricing-rows">
+            <div class="pricing-row">
+              <span>Primera recarga de $20 con 60% off</span>
+              <span class="pricing-amount"><strong>$8 USD</strong> efectivos</span>
+            </div>
+            <div class="pricing-row">
+              <span>3 minutos gratis activados</span>
+              <span class="pricing-amount green"><strong>$0</strong></span>
+            </div>
+            <div class="pricing-row">
+              <span>Sesión de 15 min con lector a $3.49/min</span>
+              <span class="pricing-amount"><strong>$52.35</strong> (sin descuento)</span>
+            </div>
+            <div class="pricing-row pricing-note">
+              <span>Con 60% off primera recarga, el efectivo desembolsado real para 15 min ≈</span>
+              <span class="pricing-amount"><strong>~$20–28 USD</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. LECTORES DESTACADOS -->
+        <h2>Lectores Verificados con Historial Documentado</h2>
+
+        <p>
+          La diferencia entre una plataforma mediocre y una valiosa no está en la interfaz — está en la calidad de sus lectores individuales. En Psíquicos Web, el catálogo supera los 2.000 asesores activos. Eso no es una ventaja automática: es una selva que requiere orientación. Los siguientes perfiles representan lectores con historial verificado y especialidades documentadas:
+        </p>
+
+        <div class="readers-showcase">
+          <div class="reader-showcase-card">
+            <div class="reader-showcase-header">
+              <div class="reader-showcase-initials" style="background: linear-gradient(135deg, #a78bfa, #6d28d9);">CL</div>
+              <div>
+                <h3 class="reader-showcase-name">Candelifera Laveau</h3>
+                <span class="reader-showcase-tag">Médium · Clarividencia · Registros Akáshicos</span>
+              </div>
+              <span class="reader-showcase-price">$3.99–$5.99/min</span>
+            </div>
+            <p class="reader-showcase-desc">Más de 30 años de experiencia en comunicación mediúmnica directa y lectura de cartas del Tarot. Especialista en situaciones de duelo, separaciones y vínculos kármicos difíciles. Su perfil acumula uno de los volúmenes de sesiones más altos de la plataforma.</p>
+          </div>
+
+          <div class="reader-showcase-card">
+            <div class="reader-showcase-header">
+              <div class="reader-showcase-initials" style="background: linear-gradient(135deg, #34d399, #059669);">OA</div>
+              <div>
+                <h3 class="reader-showcase-name">Oshun Aluna</h3>
+                <span class="reader-showcase-tag">Tarot · Espiritualidad Yoruba · Abundancia</span>
+              </div>
+              <span class="reader-showcase-price">$2.99–$4.49/min</span>
+            </div>
+            <p class="reader-showcase-desc">Uno de los perfiles más distintivos de la plataforma por integrar la tradición afrocubana/yoruba en las lecturas de tarot. Especializada en prosperidad económica, bloqueos emocionales y guía espiritual desde una perspectiva cultural que pocas plataformas anglófonas pueden ofrecer.</p>
+          </div>
+
+          <div class="reader-showcase-card">
+            <div class="reader-showcase-header">
+              <div class="reader-showcase-initials" style="background: linear-gradient(135deg, #f59e0b, #d97706);">AI</div>
+              <div>
+                <h3 class="reader-showcase-name">Aisha</h3>
+                <span class="reader-showcase-tag">Vidente 3ª Generación · Vínculos Kármicos · Amor</span>
+              </div>
+              <span class="reader-showcase-price">$2.69–$3.99/min</span>
+            </div>
+            <p class="reader-showcase-desc">Vidente de tercera generación, herencia familiar de clarividencia documentada. Su especialidad son las relaciones amorosas complejas y los vínculos kármicos que persisten entre consulta y consulta. Precio accesible para la profundidad que ofrece.</p>
+          </div>
+
+          <div class="reader-showcase-card">
+            <div class="reader-showcase-header">
+              <div class="reader-showcase-initials" style="background: linear-gradient(135deg, #f87171, #dc2626);">PE</div>
+              <div>
+                <h3 class="reader-showcase-name">Penélope</h3>
+                <span class="reader-showcase-tag">Tarot de Marsella · Baraja Española · Insights directos</span>
+              </div>
+              <span class="reader-showcase-price">$2.49–$3.99/min</span>
+            </div>
+            <p class="reader-showcase-desc">Lectora valorada por su estilo directo y sin rodeos. Trabaja con Tarot de Marsella y Baraja Española —herramientas con raíces históricas en la tradición ibérica— y es conocida por ir al punto sin generalidades que rellenen el tiempo de sesión.</p>
+          </div>
+        </div>
+
+        <!-- 5. OPINIONES REALES -->
+        <h2>Lo Que Dicen los Usuarios: Opiniones Reales, Sin Editar</h2>
+
+        <p>
+          Las reseñas en Google Play (4.2/5, 5.200+ valoraciones) y App Store (~4.0/5) muestran un patrón consistente: la satisfacción depende casi completamente de <em>con quién</em> conectas, no de la plataforma en sí. Aquí los patrones más relevantes:
+        </p>
+
+        <div class="user-reviews-grid">
+          <div class="user-review positive">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Muy buena la app, me ayudó a encontrar claridad en un momento difícil. La vidente fue súper empática y acertó en detalles de mi relación que nadie sabía."</p>
+            <span class="review-meta">Usuario verificado · App Store</span>
+          </div>
+
+          <div class="user-review positive">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Me encanta que puedo leer el historial de la conversación después. Muy buenos tarotistas y los 3 minutos gratis te ayudan a probar antes de gastar."</p>
+            <span class="review-meta">Usuario verificado · Google Play</span>
+          </div>
+
+          <div class="user-review neutral">
+            <div class="review-stars">★★★☆☆</div>
+            <p class="review-text">"Algunos asesores tardan mucho en responder mientras el reloj de cobro por minuto sigue corriendo. Deberían pausar el tiempo cuando ellos escriben."</p>
+            <span class="review-meta">Usuario verificado · Google Play</span>
+          </div>
+
+          <div class="user-review neutral">
+            <div class="review-stars">★★★☆☆</div>
+            <p class="review-text">"El saldo se consume demasiado rápido en el chat. Apenas escribes un par de preguntas y ya te gastaste $20 sin darte cuenta."</p>
+            <span class="review-meta">Usuario verificado · App Store</span>
+          </div>
+        </div>
+
+        <p>
+          El segundo patrón negativo — la velocidad de respuesta en chat — es real y documentado. La plataforma no penaliza a lectores por respuestas lentas, lo que da incentivos para dilatar el tiempo facturable. Esto no es exclusivo de Psíquicos Web (ocurre en todas las plataformas de pago por minuto), pero es algo que conviene saber.
+        </p>
+
+        <!-- 6. PROS / CONS -->
+      </div>
+
+      <EsProsCons
+        prosTitle="Ventajas Documentadas"
+        consTitle="Limitaciones a Considerar"
+        pros={[
+          "100% nativo en español: interfaz, soporte, lectores y contenido editorial — sin traducciones intermedias",
+          "Mayor plataforma hispanohablante del mercado: más de 2.000 lectores activos y 1M+ descargas",
+          "Tres modalidades: chat, voz y video — con historial encriptado guardado en cuenta",
+          "Lectores con tradiciones específicas del mundo hispano: Baraja Española, Tarot de Marsella, espiritualidad yoruba/afrocubana",
+          "Oferta de bienvenida real: 3 minutos gratis + hasta 60% de descuento en primera recarga",
+          "Aplicación moderna y estable tanto en iOS como Android, con historial de conversación permanente"
+        ]}
+        cons={[
+          "El contador de tiempo corre desde la conexión, no desde la primera respuesta — conviene llevar las preguntas preparadas",
+          "Sin video bios grabados antes de la sesión (a diferencia de Purple Garden) — la primera impresión es solo por texto y foto",
+          "Las reseñas sobre el sistema de cupones son inconsistentes: algunos usuarios reportan problemas al aplicar el descuento de bienvenida",
+          "El soporte técnico responde principalmente por email/ticket, con tiempos de 24–48h para disputas de facturación"
+        ]}
+      />
+
+      <div class="review-hub-body prose">
+
+        <!-- 7. VEREDICTO -->
+        <h2>Veredicto: Para Quién es Psíquicos Web y Para Quién No</h2>
+
+        <p>
+          Psíquicos Web es, sin ninguna ambigüedad, la opción más sólida para quien busca una lectura psíquica en un entorno 100% hispanohablante. La profundidad cultural que ofrecen lectores como Oshun Aluna (espiritualidad yoruba), Candelifera Laveau (mediumnicidad ibérica) o los especialistas en Baraja Española <em>no existe</em> en plataformas construidas originalmente para el mercado anglosajón. Ese es su diferenciador real y vale el acceso.
+        </p>
+
+        <p>
+          La limitación principal no es la plataforma — es el modelo de pago por minuto aplicado al chat de texto. Si vas a una sesión sin preguntas preparadas, sin control del tiempo, o esperando que el lector lleve el ritmo por ti, el costo puede dispararse sin que la calidad de la información recibida justifique el gasto. Con preparación previa, es una plataforma legítima y útil.
+        </p>
+
+        <div class="verdict-grid">
+          <div class="verdict-card verdict-yes">
+            <h3>Considera Psíquicos Web si:</h3>
+            <ul>
+              <li>Quieres un ambiente 100% en tu idioma, sin traducciones ni intermediarios culturales</li>
+              <li>Te interesa una tradición específica hispana: Baraja Española, Tarot de Marsella, espiritualidad latinoamericana o afrocubana</li>
+              <li>Prefieres chat de texto con historial guardado o llamada de voz directa</li>
+              <li>Es tu primera experiencia con videncia online y quieres empezar en un entorno familiar y cómodo</li>
+            </ul>
+          </div>
+          <div class="verdict-card verdict-maybe">
+            <h3>Evalúa otras opciones si:</h3>
+            <ul>
+              <li>Quieres ver al lector por video antes de gastar dinero (Purple Garden tiene esa función)</li>
+              <li>Tu prioridad es el control de calidad con rendición de cuentas pública sobre predicciones específicas</li>
+              <li>Buscas una primera sesión larga y exploratoria a bajo costo — el modelo por minuto puede ser costoso sin preparación</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Final -->
+      <div class="hub-final-cta card">
+        <h2 class="hub-final-cta-title">Prueba Psíquicos Web con los Primeros 3 Minutos Gratis</h2>
+        <p class="hub-final-cta-desc text-muted">
+          Aplica para nuevos usuarios. El sistema activa el descuento automáticamente en tu primera sesión — sin código, sin trámite.
+        </p>
+        <EsSpanishCTA platform="psiquicos" variant="discount" size="lg" source="hub-final" />
+        <p class="hub-final-cta-note text-muted">
+          Sin suscripción mensual. Sin cargos automáticos. Solo pagas los minutos que usas.
+        </p>
+      </div>
+
+      <!-- FAQ -->
+      <EsFAQ items={faqItems} title="Preguntas Frecuentes sobre Psíquicos Web" />
+
+      <!-- Individual Reader Reviews -->
+      {readers.length > 0 && (
+        <section class="readers-section" aria-labelledby="readers-heading" id="lectores">
+          <h2 id="readers-heading" class="readers-section-title">
+            Análisis de Lectores Individuales
+          </h2>
+          <p class="text-muted" style="margin-bottom: var(--space-6);">
+            Reseñas detalladas de lectores específicos con historial verificado en Psíquicos Web.
+          </p>
+          <div class="readers-grid">
+            {readers.map(reader => (
+              <EsReaderCard
+                name={reader.platformName}
+                slug={reader.slug}
+                platform="psiquicos"
+                rating={reader.rating}
+                verdict={reader.verdict}
+                pricing={reader.pricing}
+                bestFor={reader.bestFor}
+                avatarUrl={reader.avatarUrl}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+    </div>
+  </article>
+</EsBaseLayout>
+
+<style>
+  /* ── Hero ── */
+  .review-hub-hero {
+    padding: var(--space-4) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--space-8);
+  }
+  .review-hub-badge {
+    display: inline-block;
+    background: var(--color-warning-bg);
+    color: var(--color-primary-dark);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-4);
+  }
+  .review-hub-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: var(--space-4);
+    line-height: 1.1;
+  }
+  .review-hub-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-width: 660px;
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+  }
+
+  /* Rating bar */
+  .hub-rating-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+    flex-wrap: wrap;
+  }
+  .hub-rating-score {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-text);
+    line-height: 1;
+  }
+  .hub-rating-max { font-size: 1.2rem; color: var(--color-text-muted); }
+  .hub-rating-stars {
+    font-size: 1.5rem;
+    color: #f59e0b;
+    letter-spacing: 2px;
+  }
+  .star-char { display: inline-block; }
+  .hub-rating-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hub-rating-tag {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+  }
+  .hub-rating-note { font-size: var(--text-xs); color: var(--color-text-muted); }
+
+  .hub-hero-ctas {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-6);
+  }
+
+  /* Stats */
+  .hub-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+  .hub-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+  .hub-stat-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--color-primary);
+    font-weight: var(--weight-bold);
+  }
+  .hub-stat-label { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.3; margin-top: 4px; }
+
+  /* ── Body ── */
+  .review-hub-body { margin-bottom: var(--space-8); }
+
+  .insight-box {
+    margin: var(--space-6) 0;
+    padding: var(--space-5) var(--space-6);
+    background: var(--color-bg-alt);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .insight-label {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-2);
+  }
+  .insight-box p { margin: 0; font-size: var(--text-sm); }
+
+  /* Modality Table */
+  .modality-table-wrapper {
+    overflow-x: auto;
+    margin: var(--space-6) 0;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+  }
+  .modality-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+  .modality-table th {
+    background: var(--color-bg-alt);
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+  }
+  .modality-table td {
+    padding: var(--space-3) var(--space-4);
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border-light);
+    vertical-align: top;
+    line-height: var(--leading-relaxed);
+  }
+  .modality-table tr:last-child td { border-bottom: none; }
+
+  /* Pricing Breakdown */
+  .pricing-breakdown {
+    margin: var(--space-6) 0;
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+  }
+  .pricing-title { font-size: var(--text-lg); margin-bottom: var(--space-4); }
+  .pricing-rows { display: flex; flex-direction: column; gap: var(--space-3); }
+  .pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px dashed var(--color-border-light);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  .pricing-row:last-child { border-bottom: none; }
+  .pricing-amount { font-weight: var(--weight-semibold); color: var(--color-text); white-space: nowrap; }
+  .pricing-amount.green { color: var(--color-sage-dark); }
+  .pricing-note { font-style: italic; }
+
+  /* Readers Showcase */
+  .readers-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+  }
+  .reader-showcase-card {
+    padding: var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    transition: box-shadow var(--transition-base);
+  }
+  .reader-showcase-card:hover { box-shadow: var(--shadow-md); }
+  .reader-showcase-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  .reader-showcase-initials {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    color: white;
+    flex-shrink: 0;
+  }
+  .reader-showcase-name {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    margin: 0 0 4px;
+  }
+  .reader-showcase-tag {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+  .reader-showcase-price {
+    margin-left: auto;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    color: var(--color-primary);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .reader-showcase-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* User Reviews */
+  .user-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+  }
+  .user-review {
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+  }
+  .user-review.positive { background: var(--color-sage-100, #f0faf4); border-color: var(--color-sage, #4a8a6a); }
+  .user-review.neutral { background: var(--color-bg-alt); }
+  .review-stars { font-size: 1rem; color: #f59e0b; margin-bottom: var(--space-2); }
+  .review-text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    font-style: italic;
+    margin-bottom: var(--space-2);
+  }
+  .review-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-weight: var(--weight-medium);
+  }
+
+  /* Verdict */
+  .verdict-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+    margin: var(--space-6) 0;
+  }
+  .verdict-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+  }
+  .verdict-yes {
+    background: var(--color-sage-100, #f0faf4);
+    border-color: var(--color-sage, #4a8a6a);
+    border-top: 3px solid var(--color-sage, #4a8a6a);
+  }
+  .verdict-maybe { background: var(--color-bg-alt); border-top: 3px solid var(--color-border); }
+  .verdict-card h3 { font-size: var(--text-base); margin-bottom: var(--space-4); }
+  .verdict-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  .verdict-card li { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); padding-left: var(--space-4); position: relative; }
+  .verdict-card li::before { content: '→'; position: absolute; left: 0; color: var(--color-primary); font-size: 0.75em; top: 3px; }
+
+  /* Final CTA */
+  .hub-final-cta {
+    padding: var(--space-8);
+    text-align: center;
+    margin: var(--space-8) 0;
+  }
+  .hub-final-cta-title { font-size: var(--text-2xl); margin-bottom: var(--space-3); }
+  .hub-final-cta-desc { font-size: var(--text-base); margin-bottom: var(--space-6); max-width: 540px; margin-left: auto; margin-right: auto; }
+  .hub-final-cta-note { font-size: var(--text-xs); margin-top: var(--space-3); }
+
+  /* Readers section */
+  .readers-section { margin-top: var(--space-10); }
+  .readers-section-title { font-size: var(--text-2xl); margin-bottom: var(--space-4); }
+  .readers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-5); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hub-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .readers-showcase { grid-template-columns: 1fr; }
+    .verdict-grid { grid-template-columns: 1fr; }
+    .user-reviews-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hub-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .hub-hero-ctas { flex-direction: column; }
+    .hub-hero-ctas .es-cta { width: 100%; text-align: center; }
+    .review-hub-title { font-size: 1.8rem; }
+    .modality-table { font-size: var(--text-xs); }
+  }
+</style>

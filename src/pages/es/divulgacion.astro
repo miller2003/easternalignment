@@ -1,0 +1,157 @@
+---
+import EsBaseLayout from '../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../components/es/EsBreadcrumb.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+const canonicalUrl = `${SITE_URL}/es/divulgacion/`;
+---
+
+<EsBaseLayout
+  title="Declaración de Afiliados — Cómo Funciona Este Sitio"
+  description="Información completa sobre cómo se financia Eastern Alignment, nuestras relaciones de afiliado con Psíquicos Web y Purple Garden, y nuestro compromiso con evaluaciones independientes."
+  seoTitle="Declaración de Afiliados | Eastern Alignment"
+  canonicalUrl={canonicalUrl}
+  hreflangEn={`${SITE_URL}/disclosure/`}
+>
+  <div class="divulgacion-page section">
+    <div class="container container--narrow">
+      <EsBreadcrumb items={[{ label: 'Declaración de Afiliados' }]} />
+
+      <header class="divulgacion-hero">
+        <span class="divulgacion-badge">Transparencia</span>
+        <h1 class="divulgacion-title">Cómo Funciona Este Sitio</h1>
+        <p class="divulgacion-subtitle text-muted">
+          Creemos que mereces saber exactamente cómo opera Eastern Alignment, cómo se financia y por qué puedes confiar en las evaluaciones publicadas aquí.
+        </p>
+      </header>
+
+      <div class="cycle-grid">
+        <div class="cycle-card card">
+          <div class="cycle-step">01</div>
+          <h3 class="cycle-title">Análisis Independiente</h3>
+          <p class="cycle-desc text-muted">
+            Eastern Alignment evalúa plataformas y lectores individuales utilizando datos públicos verificables: calificaciones de usuarios, volumen de sesiones, precios documentados y análisis de reseñas reales. No aceptamos lecturas gratuitas, patrocinios de plataformas ni tratamiento preferencial de los lectores evaluados.
+          </p>
+        </div>
+
+        <div class="cycle-card card">
+          <div class="cycle-step" style="color: var(--color-primary);">02</div>
+          <h3 class="cycle-title">Evaluaciones Objetivas</h3>
+          <p class="cycle-desc text-muted">
+            Publicamos análisis detallados con datos verificados, incluyendo puntos débiles y limitaciones documentadas. Si un lector tiene un historial problemático, lo documentamos. Nuestro compromiso es con el usuario final, no con las plataformas.
+          </p>
+        </div>
+
+        <div class="cycle-card card">
+          <div class="cycle-step" style="color: var(--color-sage);">03</div>
+          <h3 class="cycle-title">Soporte por Afiliados</h3>
+          <p class="cycle-desc text-muted">
+            Cuando recomendamos una plataforma y un usuario accede a través de nuestros enlaces y realiza una compra, podemos recibir una comisión. <strong>Sin costo adicional para el usuario.</strong> Esto financia el mantenimiento del sitio y la investigación continua.
+          </p>
+        </div>
+      </div>
+
+      <article class="prose">
+        <h2>Relaciones de Afiliado Activas</h2>
+        <p>
+          Eastern Alignment mantiene actualmente relaciones de afiliado con las siguientes plataformas cubiertas en esta sección en español:
+        </p>
+        <ul>
+          <li><strong>Psíquicos Web</strong> — Plataforma de lectura psíquica para hispanohablantes</li>
+          <li><strong>Purple Garden</strong> — Plataforma con lectores en español</li>
+        </ul>
+        <p>
+          Estas relaciones significan que podemos recibir una comisión cuando un usuario accede a una plataforma a través de nuestros enlaces y completa una transacción calificada. El precio de la sesión para el usuario es idéntico, use o no nuestros enlaces.
+        </p>
+
+        <div class="highlight-box">
+          <strong>Promesa de Afiliado</strong>
+          <p>
+            Una comisión de afiliado alta no compra una evaluación positiva. Los lectores y plataformas son evaluados exclusivamente por su historial verificado y la experiencia documentada de sus usuarios. Hemos publicado y publicaremos evaluaciones críticas de lectores en plataformas con las que tenemos relación de afiliado.
+          </p>
+        </div>
+
+        <h2>Lo Que Esto Significa Para Ti</h2>
+        <ul>
+          <li><strong>No pagas más:</strong> El precio por minuto es exactamente el mismo tanto si accedes a través de nuestros enlaces como si vas directamente a la plataforma.</li>
+          <li><strong>Recibes información objetiva:</strong> Documentamos fortalezas y limitaciones de cada lector con la misma rigurosidad.</li>
+          <li><strong>Apoyas el análisis independiente:</strong> Usar nuestros enlaces es la manera de respaldar la continuidad de este trabajo de evaluación.</li>
+        </ul>
+
+        <h2>Preguntas</h2>
+        <p>
+          Si tienes preguntas sobre nuestra política de afiliados o quieres reportar una inexactitud en alguna evaluación, escríbenos a:
+        </p>
+        <p>📧 <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a></p>
+      </article>
+    </div>
+  </div>
+</EsBaseLayout>
+
+<style>
+  .divulgacion-page { padding-top: var(--space-8); padding-bottom: var(--space-16); }
+  .divulgacion-hero { text-align: center; margin-bottom: var(--space-8); padding: var(--space-8) 0; }
+  .divulgacion-badge {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-warning-bg);
+    color: var(--color-primary-dark);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-6);
+  }
+  .divulgacion-title { font-size: var(--text-4xl); margin-bottom: var(--space-4); }
+  .divulgacion-subtitle { font-size: var(--text-lg); max-width: 600px; margin: 0 auto; line-height: var(--leading-relaxed); }
+
+  .cycle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-10);
+  }
+  .cycle-card {
+    padding: var(--space-8);
+    border-top: 4px solid transparent;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+  .cycle-card:nth-child(1) { border-top-color: var(--color-accent-light); }
+  .cycle-card:nth-child(2) { border-top-color: var(--color-primary); }
+  .cycle-card:nth-child(3) { border-top-color: var(--color-sage); }
+  .cycle-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .cycle-step {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    color: var(--color-accent-light);
+    margin-bottom: var(--space-4);
+    line-height: 1;
+  }
+  .cycle-title { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+  .cycle-desc { font-size: var(--text-sm); line-height: var(--leading-relaxed); margin: 0; }
+
+  .highlight-box {
+    background: var(--color-bg-alt);
+    border-left: 4px solid var(--color-sage);
+    padding: var(--space-6) var(--space-8);
+    margin: var(--space-8) 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .highlight-box strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+  }
+  .highlight-box p { margin: 0; font-size: var(--text-base); }
+
+  @media (max-width: 900px) {
+    .cycle-grid { grid-template-columns: 1fr; gap: var(--space-4); max-width: 500px; margin-left: auto; margin-right: auto; }
+  }
+  @media (max-width: 640px) {
+    .divulgacion-title { font-size: var(--text-3xl); }
+    .highlight-box { padding: var(--space-4) var(--space-6); }
+  }
+</style>

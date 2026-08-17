@@ -4,6 +4,8 @@ import PlatformCard from '../components/PlatformCard.astro';
 import ComparisonTable from '../components/ComparisonTable.astro';
 import FAQ from '../components/FAQ.astro';
 
+const SITE_URL = 'https://easternalignment.com';
+
 /* Fetch reviews for the platform cards */
 const reviewModules = import.meta.glob('../content/reviews/*.md', { eager: true });
 const reviews = Object.entries(reviewModules)
@@ -232,6 +234,7 @@ const orgSchema = {
   title="Best Online Psychic Reading Platforms 2026"
   description="Honest, independent reviews of online psychic reading platforms. Personally tested and ranked to help you find clarity and guidance."
   jsonLd={orgSchema}
+  hreflangEs={`${SITE_URL}/es/`}
 >
   <!-- Hero Section -->
   <section class="hero section--lg">

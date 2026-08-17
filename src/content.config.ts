@@ -98,4 +98,32 @@ const blog = defineCollection({
   }).passthrough(),
 });
 
-export const collections = { reviews, comparisons, guides, blog, readers };
+// ─── Spanish /es subsite reader collection ───────────────────────────────────
+// Content lives in src/content/es-readers/{psiquicos-web,purple-garden-es}/*.md
+const esReaders = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    platformName: z.string(),       // e.g. "Psíquicos Web: María Luz"
+    platform: z.enum(['psiquicos', 'purple-garden-es']),
+    rating: z.number().min(0).max(5),
+    verdict: z.string(),
+    freeOffer: z.string().optional(),
+    pricing: z.string().optional(),
+    bestFor: z.string().optional(),
+    highlights: z.array(z.string()).default([]),
+    pros: z.array(z.string()).default([]),
+    cons: z.array(z.string()).default([]),
+    publishDate: z.string(),
+    updatedDate: z.string().optional(),
+    avatarUrl: z.string().optional(),
+    entities: z.array(z.string()).optional(),
+    // Optional: URL of the corresponding English review page (if one exists)
+    // Used to set hreflang="en" in <head>. Leave empty if no English equivalent.
+    hreflangEn: z.string().optional(),
+    ...seoFields,
+  }),
+});
+
+export const collections = { reviews, comparisons, guides, blog, readers, esReaders };

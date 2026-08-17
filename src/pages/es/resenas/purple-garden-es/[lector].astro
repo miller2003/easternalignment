@@ -1,0 +1,159 @@
+---
+/**
+ * Individual reader review page for Purple Garden (Spanish)
+ * Route: /es/resenas/purple-garden-es/[lector]/
+ */
+import EsReviewLayout from '../../../../layouts/EsReviewLayout.astro';
+import EsProsCons from '../../../../components/es/EsProsCons.astro';
+import EsCTABox from '../../../../components/es/EsCTABox.astro';
+import EsFAQ from '../../../../components/es/EsFAQ.astro';
+import EsReaderCard from '../../../../components/es/EsReaderCard.astro';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../../../../content/es-readers/purple-garden-es/*.md');
+  const paths = [];
+  for (const path in posts) {
+    const filename = path.split('/').pop() || '';
+    if (filename.startsWith('_')) continue;
+
+    const post = await posts[path]();
+    const slug = filename.replace('.md', '');
+    paths.push({
+      params: { lector: slug },
+      props: post,
+    });
+  }
+  return paths;
+}
+
+const { default: Content, frontmatter } = Astro.props;
+const currentSlug = Astro.params.lector;
+
+const allReaderModules = import.meta.glob('../../../../content/es-readers/purple-garden-es/*.md', { eager: true });
+const allReaders = Object.entries(allReaderModules)
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', ''),
+  }))
+  .filter(r => !r.slug?.startsWith('_'));
+
+const totalReaders = allReaders.length;
+
+const otherReaders = allReaders
+  .filter(r => r.slug !== currentSlug)
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+  .slice(0, 4);
+
+const readerName = frontmatter.platformName?.includes(':')
+  ? frontmatter.platformName.split(':').pop()?.trim()
+  : frontmatter.platformName;
+
+const faqItems = [
+  {
+    question: `¿${readerName} es una vidente confiable en Purple Garden?`,
+    answer: `${readerName} tiene una calificación de ${frontmatter.rating} sobre 5 en Purple Garden. Esta reseña analiza su historial verificado, la metodología de sus lecturas y las opiniones documentadas de usuarios reales. Consulta el análisis completo antes de reservar.`,
+  },
+  {
+    question: `¿Cuánto cobra ${readerName} por una sesión en Purple Garden?`,
+    answer: `${readerName} cobra ${frontmatter.pricing || 'según tarifa actualizada en la plataforma'} por minuto. ${frontmatter.freeOffer ? `Nuevos usuarios en Purple Garden pueden acceder a: ${frontmatter.freeOffer}.` : ''} Recomendamos definir un presupuesto antes de iniciar la consulta.`,
+  },
+  {
+    question: `¿Qué opiniones reales existen sobre ${readerName}?`,
+    answer: `Las opiniones verificadas de usuarios están documentadas en el perfil de ${readerName} en Purple Garden. En esta reseña analizamos las tendencias de esas opiniones: fortalezas documentadas, limitaciones reportadas y niveles de satisfacción consistentes.`,
+  },
+  {
+    question: `¿Cómo reservo con ${readerName} en Purple Garden?`,
+    answer: `Puedes acceder al perfil de ${readerName} directamente en Purple Garden. El botón en esta página te lleva a su perfil con disponibilidad actualizada. Purple Garden ofrece sesiones por chat, teléfono y video según el lector.`,
+  },
+];
+---
+
+<EsReviewLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  platformName={frontmatter.platformName}
+  platform="purple-garden-es"
+  rating={frontmatter.rating}
+  verdict={frontmatter.verdict}
+  freeOffer={frontmatter.freeOffer}
+  avatarUrl={frontmatter.avatarUrl}
+  publishDate={frontmatter.publishDate}
+  updatedDate={frontmatter.updatedDate}
+  metaRobots={frontmatter.metaRobots}
+  canonicalUrl={frontmatter.canonicalUrl}
+  ogImage={frontmatter.ogImage}
+  seoTitle={frontmatter.seoTitle}
+  metaDescription={frontmatter.metaDescription}
+  schemaDatePublished={frontmatter.schemaDatePublished}
+  customSchema={frontmatter.customSchema}
+  entities={frontmatter.entities}
+  hreflangEn={frontmatter.hreflangEn}
+>
+  <Content />
+
+  {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
+    <EsProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
+  )}
+
+  <EsCTABox
+    title={`¿Listo/a para reservar con ${readerName}?`}
+    description={frontmatter.freeOffer
+      ? `Oferta disponible para nuevos usuarios: ${frontmatter.freeOffer}`
+      : 'Consulta disponibilidad y tarifas actuales en Purple Garden.'}
+    platform="purple-garden-es"
+    ctaVariant={frontmatter.freeOffer ? 'discount' : 'book'}
+    readerName={readerName}
+    variant="highlight"
+  />
+
+  <EsFAQ items={faqItems} title={`Preguntas Frecuentes sobre ${readerName}`} />
+
+  {otherReaders.length > 0 && (
+    <section class="other-readers" id="otros-lectores-pg">
+      <h2 class="other-readers-title">Otros Lectores que He Analizado en Purple Garden</h2>
+      <p class="other-readers-desc text-muted text-sm">
+        Explora más reseñas de lectores hispanohablantes en Purple Garden.
+      </p>
+      <div class="other-readers-grid">
+        {otherReaders.map(reader => (
+          <EsReaderCard
+            name={reader.platformName}
+            slug={reader.slug}
+            platform="purple-garden-es"
+            rating={reader.rating}
+            verdict={reader.verdict}
+            pricing={reader.pricing}
+            bestFor={reader.bestFor}
+            avatarUrl={reader.avatarUrl}
+          />
+        ))}
+      </div>
+      <div class="other-readers-cta">
+        <a href="/es/resenas/purple-garden-es/#pg-lectores" class="btn btn--ghost">
+          Ver Todas las Reseñas de Purple Garden ({totalReaders}) →
+        </a>
+      </div>
+    </section>
+  )}
+
+  <div class="back-link-row">
+    <a href="/es/resenas/" class="btn btn--ghost">← Volver a Todas las Reseñas</a>
+  </div>
+</EsReviewLayout>
+
+<style>
+  .other-readers {
+    margin: var(--space-10) 0;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+  .other-readers-title { font-size: var(--text-xl); margin-bottom: var(--space-2); }
+  .other-readers-desc { margin-bottom: var(--space-6); }
+  .other-readers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-5);
+  }
+  .other-readers-cta { text-align: center; margin-top: var(--space-6); }
+  .back-link-row { margin-top: var(--space-8); text-align: center; }
+</style>

@@ -1,46 +1,45 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
+/**
+ * EsReviewLayout — Spanish reader review layout.
+ * Full visual parity with ReviewLayout.astro.
+ * All UI strings are in Spanish (controlled vocabulary).
+ */
+import EsBaseLayout from './EsBaseLayout.astro';
+import EsBreadcrumb from '../components/es/EsBreadcrumb.astro';
 import StarRating from '../components/StarRating.astro';
-import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
-import AuthorBio from '../components/AuthorBio.astro';
-import LeftSidebar from '../components/LeftSidebar.astro';
-import RightSidebar from '../components/RightSidebar.astro';
+import EsSpanishCTA from '../components/es/EsSpanishCTA.astro';
 
 interface Props {
   title: string;
   description: string;
-  platformName: string;
+  platformName: string;  // e.g. "Psíquicos Web: María Luz"
+  platform: 'psiquicos' | 'purple-garden-es';
   rating: number;
   verdict: string;
-  affiliateUrl?: string;
   freeOffer?: string;
-  ctaOverride?: string;
   avatarUrl?: string;
   publishDate: string;
   updatedDate?: string;
-  // SEO meta fields
+  // SEO
   metaRobots?: string;
   canonicalUrl?: string;
   ogImage?: string;
   seoTitle?: string;
   metaDescription?: string;
-  schemaAuthor?: string;
   schemaDatePublished?: string;
   customSchema?: string;
   entities?: string[];
-  hreflangEs?: string;
+  hreflangEn?: string;
 }
 
 const {
   title,
   description,
   platformName,
+  platform,
   rating,
   verdict,
-  affiliateUrl = '#',
   freeOffer,
-  ctaOverride,
   avatarUrl,
   publishDate,
   updatedDate,
@@ -49,61 +48,66 @@ const {
   ogImage,
   seoTitle,
   metaDescription,
-  schemaAuthor,
   schemaDatePublished,
   customSchema,
   entities,
-  hreflangEs,
+  hreflangEn,
 } = Astro.props;
 
-const displayDate = updatedDate || publishDate;
-const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const SITE_URL = 'https://easternalignment.com';
 
-// Detect whether this is a reader-level review (e.g., "Keen: arradaza")
+// Detect reader-level review (e.g. "Psíquicos Web: María Luz")
 const isReaderReview = platformName.includes(':');
-const parentPlatform = isReaderReview ? platformName.split(':')[0].trim().toLowerCase() : null;
 const parentPlatformLabel = isReaderReview ? platformName.split(':')[0].trim() : null;
 const readerLabel = isReaderReview ? platformName.split(':').pop()?.trim() : platformName;
 
-// Generate initials fallback for reader avatar
+// Platform path segment for breadcrumb links
+const platformPath = platform === 'psiquicos' ? 'psiquicos-web' : 'purple-garden-es';
+
+// Avatar fallback
 const readerInitials = readerLabel
   ?.split(/\s+/)
   .filter(Boolean)
   .slice(0, 2)
   .map((w) => w[0]?.toUpperCase())
-  .join('') || 'R';
+  .join('') || 'L';
 
 const avatarFallbackSvg = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="${readerInitials}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6EE7B7"/><stop offset="55%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/></linearGradient><filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity=".18"/></filter></defs><circle cx="48" cy="48" r="44" fill="url(#g)" filter="url(#s)"/><circle cx="48" cy="48" r="43" fill="none" stroke="rgba(255,255,255,.35)"/><text x="48" y="54" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="34" font-weight="700" fill="rgba(255,255,255,.95)">${readerInitials}</text></svg>`)}`;
 
-// Build breadcrumb items dynamically
+// Breadcrumb
 const breadcrumbItems = isReaderReview
   ? [
-      { label: 'Reviews', href: '/reviews/' },
-      { label: parentPlatformLabel!, href: `/reviews/${parentPlatform}/` },
+      { label: 'Reseñas', href: '/es/resenas/' },
+      { label: parentPlatformLabel!, href: `/es/resenas/${platformPath}/` },
       { label: readerLabel! },
     ]
   : [
-      { label: 'Reviews', href: '/reviews/' },
+      { label: 'Reseñas', href: '/es/resenas/' },
       { label: platformName },
     ];
 
-const SITE_URL = 'https://easternalignment.com';
 const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
 const absoluteAvatarUrl = avatarUrl ? new URL(avatarUrl, SITE_URL).href : undefined;
 
+// Date formatting — Spanish locale
+const displayDate = updatedDate || publishDate;
+const formattedDate = new Date(displayDate).toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Spanish-localized Review Schema
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "Review",
   "headline": title,
   "description": description,
+  "inLanguage": "es",
   "author": {
-    "@type": "Person",
-    "name": schemaAuthor || "Sarah",
-    "url": "https://easternalignment.com/about/",
+    "@type": "Organization",
+    "name": "Eastern Alignment",
+    "url": "https://easternalignment.com",
   },
   "datePublished": schemaDatePublished || publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
@@ -117,21 +121,20 @@ const reviewSchema = {
   "itemReviewed": {
     "@type": "Product",
     "name": readerLabel || platformName,
-    "url": affiliateUrl !== '#' ? affiliateUrl : undefined,
-    "image": absoluteAvatarUrl || ogImage || "https://easternalignment.com/logo.jpg",
+    "image": absoluteAvatarUrl || ogImage || `${SITE_URL}/logo.jpg`,
     "description": description,
     ...(isReaderReview ? {
       "brand": {
         "@type": "Brand",
-        "name": parentPlatformLabel || "Keen"
+        "name": parentPlatformLabel || platformName
       }
     } : {})
   },
   "publisher": {
     "@type": "Organization",
     "name": "Eastern Alignment",
-    "url": "https://easternalignment.com",
-    "logo": "https://easternalignment.com/logo.jpg"
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/logo.jpg`
   },
   ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
   "mainEntityOfPage": {
@@ -142,22 +145,17 @@ const reviewSchema = {
 
 const noindex = metaRobots ? metaRobots.includes('noindex') : false;
 
-// Generate compact CTA based on offer
-let ctaText = isReaderReview && readerLabel ? `Book ${readerLabel} →` : `Visit ${platformName} →`;
+// Spanish CTA variant based on freeOffer
+let ctaVariant: 'default' | 'discount' | 'book' | 'explore' = 'book';
 if (freeOffer) {
   const lowOffer = freeOffer.toLowerCase();
-  if (lowOffer.includes('$30') || lowOffer.includes('30 credit') || lowOffer.includes('30 free')) ctaText = 'Claim $30 Free Credit →';
-  else if (lowOffer.includes('$10') || lowOffer.includes('10 credit') || lowOffer.includes('10 free')) ctaText = 'Claim $10 Free Credit →';
-  else if (lowOffer.includes('3 free minute') || lowOffer.includes('3 minutes free')) ctaText = 'Get 3 Mins Free →';
-  else if (lowOffer.includes('5 minute') || (lowOffer.includes('$1') && !lowOffer.includes('$10') && !lowOffer.includes('$30'))) ctaText = 'Get 5 Mins for $1 →';
-  else if (lowOffer.includes('free trial') || lowOffer.includes('free minutes')) ctaText = 'Start Free Trial →';
-  else ctaText = isReaderReview && readerLabel ? `Book ${readerLabel} →` : 'Visit Official Site →';
+  if (lowOffer.includes('descuento') || lowOffer.includes('primera') || lowOffer.includes('gratis')) {
+    ctaVariant = 'discount';
+  }
 }
-// Explicit override (e.g. a reader who left the platform — point to live roster)
-const displayCta = ctaOverride || ctaText;
 ---
 
-<BaseLayout
+<EsBaseLayout
   title={title}
   description={description}
   ogType="article"
@@ -168,37 +166,24 @@ const displayCta = ctaOverride || ctaText;
   seoTitle={seoTitle}
   metaDescription={metaDescription}
   customSchema={customSchema}
-  hreflangEs={hreflangEs}
+  hreflangEn={hreflangEn}
+  breadcrumbs={breadcrumbItems}
+  dateModified={updatedDate || publishDate}
 >
-  <!-- Full-page 3-column grid: sidebars span the entire page height -->
   <div class="page-with-sidebars">
-    <!-- LEFT SIDEBAR -->
-    <LeftSidebar />
-
-    <!-- MAIN COLUMN: breadcrumb + hero + content -->
+    <!-- MAIN COLUMN -->
     <div class="main-col">
       <!-- Breadcrumb -->
       <div class="review-breadcrumb">
-        <Breadcrumb items={breadcrumbItems} />
+        <EsBreadcrumb items={breadcrumbItems} />
       </div>
-
-      <!-- Spanish readers switch (only on individual reader reviews) -->
-      {isReaderReview && (
-        <a href="/es/resenas/" class="es-reader-switch" lang="es">
-          <span class="es-reader-switch__icon" aria-hidden="true">🌐</span>
-          <span class="es-reader-switch__text">
-            <strong class="es-reader-switch__title">Videntes en español</strong>
-            <span class="es-reader-switch__sub">Explora reseñas de lectores psíquicos en español →</span>
-          </span>
-        </a>
-      )}
 
       <!-- Review Hero -->
       <header class="review-hero">
         <div class="review-hero-meta">
-          <span class="badge badge--sage">Review</span>
+          <span class="badge badge--sage">Reseña</span>
           <span class="review-date">
-            {updatedDate ? 'Updated' : 'Published'} {formattedDate}
+            {updatedDate ? 'Actualizado' : 'Publicado'} el {formattedDate}
           </span>
         </div>
 
@@ -211,7 +196,7 @@ const displayCta = ctaOverride || ctaText;
             <img
               class="reader-avatar-lg"
               src={avatarUrl || avatarFallbackSvg}
-              alt={avatarUrl ? `${readerLabel} profile photo` : `${readerLabel} initials avatar`}
+              alt={avatarUrl ? `${readerLabel} foto de perfil` : `Avatar de ${readerLabel}`}
               width="72"
               height="72"
               loading="eager"
@@ -219,18 +204,18 @@ const displayCta = ctaOverride || ctaText;
             />
           )}
           <div class="review-identity-text">
-            {isReaderReview && parentPlatform && parentPlatformLabel && readerLabel && (
+            {isReaderReview && parentPlatformLabel && readerLabel && (
               <div class="reader-subline">
-                <a href={`/reviews/${parentPlatform}/`} class="badge badge--outline badge--link">
+                <a href={`/es/resenas/${platformPath}/`} class="badge badge--outline badge--link">
                   {parentPlatformLabel}
                 </a>
-                <span class="reader-subline-text">Reader profile: {readerLabel}</span>
+                <span class="reader-subline-text">Perfil de la lectora/el lector: {readerLabel}</span>
               </div>
             )}
             <div class="reader-rating-summary">
               <StarRating rating={rating} size="md" showValue={false} />
               <span class="rating-score">{rating}</span>
-              <span class="rating-label">Expert Rating</span>
+              <span class="rating-label">Calificación de Experto</span>
             </div>
           </div>
         </div>
@@ -238,12 +223,16 @@ const displayCta = ctaOverride || ctaText;
         <p class="review-verdict">{verdict}</p>
 
         <div class="review-hero-cta">
-          <a href={affiliateUrl} class="btn btn--primary btn--lg" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
-            {displayCta}
-          </a>
+          <EsSpanishCTA
+            platform={platform}
+            variant={ctaVariant}
+            readerName={readerLabel}
+            size="lg"
+            source="hero"
+          />
           {freeOffer && (
             <p class="review-hero-cta-note">
-              New-client deal: <strong>{freeOffer}</strong> — applied to your first purchase. Create an account, claim the offer, connect in minutes.
+              Oferta para nuevos usuarios: <strong>{freeOffer}</strong> — aplicada en tu primera compra. Crea una cuenta, activa la oferta y conecta en minutos.
             </p>
           )}
         </div>
@@ -254,83 +243,50 @@ const displayCta = ctaOverride || ctaText;
         <div class="prose">
           <slot />
         </div>
-        <AuthorBio />
+
+        <!-- Author/Platform attribution block -->
+        <div class="author-bio card">
+          <div class="author-bio-inner">
+            <img
+              src="/logo.jpg"
+              alt="Eastern Alignment"
+              class="author-bio-avatar"
+              width="48"
+              height="48"
+              loading="lazy"
+            />
+            <div class="author-bio-text">
+              <span class="author-bio-name">Eastern Alignment</span>
+              <p class="author-bio-desc">
+                Plataforma independiente de análisis y reseñas de servicios de lectura psíquica. Nuestras evaluaciones se basan en datos verificados de usuarios reales, historial documentado de la plataforma y métricas públicas. Sin relaciones de patrocinio con las plataformas evaluadas.
+              </p>
+            </div>
+          </div>
+        </div>
       </article>
     </div>
-
-    <!-- RIGHT SIDEBAR -->
-    <RightSidebar />
   </div>
-</BaseLayout>
+</EsBaseLayout>
 
 <style>
-  /* ── Full-page 3-column layout ── */
   .page-with-sidebars {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 3.5rem;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--space-4) var(--space-6) var(--space-12);
   }
 
-  /* ── Centre column ── */
   .main-col {
     flex: 1;
     min-width: 0;
-    max-width: var(--max-width-content);
-    transition: max-width 0.3s ease;
+    max-width: 760px;
+    width: 100%;
   }
 
-  .review-breadcrumb {
-    margin-bottom: var(--space-4);
-  }
+  .review-breadcrumb { margin-bottom: var(--space-4); }
 
-  /* Spanish readers switch callout (reader reviews only) */
-  .es-reader-switch {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    margin: var(--space-2) 0 var(--space-5);
-    padding: var(--space-3) var(--space-4);
-    background: linear-gradient(135deg, rgba(196, 149, 106, 0.10), rgba(126, 142, 112, 0.10));
-    border: 1px solid var(--color-primary, #7e8e70);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--color-text);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  }
-
-  .es-reader-switch:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(126, 142, 112, 0.22);
-  }
-
-  .es-reader-switch__icon {
-    font-size: 1.5rem;
-    line-height: 1;
-    flex: 0 0 auto;
-  }
-
-  .es-reader-switch__text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .es-reader-switch__title {
-    font-size: var(--text-base);
-    font-weight: var(--weight-bold);
-    color: var(--color-primary-dark, #5f6b54);
-  }
-
-  .es-reader-switch__sub {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-  }
-
-  /* ── Hero ── */
   .review-hero {
     padding: var(--space-2) 0 var(--space-4);
     border-bottom: 1px solid var(--color-border-light);
@@ -383,10 +339,7 @@ const displayCta = ctaOverride || ctaText;
     flex: 0 0 auto;
     transition: transform var(--transition-base, 0.2s ease);
   }
-
-  .reader-avatar-lg:hover {
-    transform: scale(1.04);
-  }
+  .reader-avatar-lg:hover { transform: scale(1.04); }
 
   .reader-rating-summary {
     display: flex;
@@ -425,7 +378,6 @@ const displayCta = ctaOverride || ctaText;
     transition: all var(--transition-fast);
     cursor: pointer;
   }
-
   .badge--link:hover {
     background: var(--color-primary);
     color: white;
@@ -438,10 +390,6 @@ const displayCta = ctaOverride || ctaText;
     color: var(--color-text-muted);
   }
 
-  .review-hero-rating {
-    margin-bottom: var(--space-4);
-  }
-
   .review-verdict {
     font-size: var(--text-lg);
     color: var(--color-text-muted);
@@ -450,21 +398,7 @@ const displayCta = ctaOverride || ctaText;
     max-width: 600px;
   }
 
-  .review-offer {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
-    background: var(--color-warning-bg);
-    border-radius: var(--radius-md);
-    font-size: var(--text-sm);
-    color: var(--color-primary-dark);
-    margin-bottom: var(--space-4);
-  }
-
-  .review-hero-cta {
-    margin-bottom: var(--space-4);
-  }
+  .review-hero-cta { margin-bottom: var(--space-4); }
 
   .review-hero-cta-note {
     margin: var(--space-2) 0 0;
@@ -474,85 +408,65 @@ const displayCta = ctaOverride || ctaText;
     max-width: 480px;
   }
 
-  @media (max-width: 768px) {
-    .review-hero-cta-note {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .review-content { padding-bottom: var(--space-8); }
+  .prose { max-width: 100%; }
+
+  /* Author Bio block */
+  .author-bio {
+    margin-top: var(--space-8);
+    padding: var(--space-5);
+  }
+  .author-bio-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .author-bio-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+    mix-blend-mode: multiply;
+  }
+  .author-bio-name {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-1);
+  }
+  .author-bio-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
   }
 
-  /* ── Content ── */
-  .review-content {
-    padding-bottom: var(--space-8);
-  }
-
-  .prose {
-    max-width: 100%;
-  }
-
-  /* ── Responsive ── */
-  @media (max-width: 1300px) {
-    .page-with-sidebars {
-      gap: 2rem;
-    }
-  }
-
-  @media (max-width: 1100px) {
-    .page-with-sidebars {
-      justify-content: center;
-      padding-top: var(--space-6);
-    }
-  }
-
+  /* Responsive */
   @media (max-width: 768px) {
     .page-with-sidebars {
       flex-direction: column;
       align-items: center;
       padding-left: var(--space-4);
       padding-right: var(--space-4);
-      gap: var(--space-8);
     }
-
-    .main-col {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .review-hero {
-      padding-top: 0;
-    }
-
+    .main-col { width: 100%; max-width: 100%; }
+    .review-hero { padding-top: 0; }
     .review-identity {
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: var(--space-4);
     }
-
-    .reader-rating-summary {
-      justify-content: center;
-    }
-
-    .reader-subline {
-      justify-content: center;
-    }
-
-    .reader-avatar-lg {
-      width: 72px;
-      height: 72px;
-    }
-
-    .review-title {
-      font-size: var(--text-2xl);
-    }
-
-    .review-verdict {
-      font-size: var(--text-base);
-    }
-
-    .review-hero-cta .btn {
-      width: 100%;
-    }
+    .reader-rating-summary { justify-content: center; }
+    .reader-subline { justify-content: center; }
+    .reader-avatar-lg { width: 72px; height: 72px; }
+    .review-title { font-size: var(--text-2xl); }
+    .review-verdict { font-size: var(--text-base); }
+    .review-hero-cta .es-cta { width: 100%; text-align: center; }
+    .review-hero-cta-note { text-align: center; margin-left: auto; margin-right: auto; }
+    .author-bio-inner { flex-direction: column; }
   }
 </style>

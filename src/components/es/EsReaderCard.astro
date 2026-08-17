@@ -1,0 +1,196 @@
+---
+/**
+ * EsReaderCard — Spanish version of ReaderCard.
+ * Used in platform hub pages to display individual reader summaries.
+ */
+import StarRating from '../StarRating.astro';
+import EsSpanishCTA from './EsSpanishCTA.astro';
+
+interface Props {
+  name: string;  // platformName field (e.g. "Psíquicos Web: María Luz")
+  slug: string;
+  platform: 'psiquicos' | 'purple-garden-es';
+  rating: number;
+  verdict: string;
+  pricing?: string;
+  bestFor?: string;
+  affiliateUrl?: string;
+  avatarUrl?: string;
+}
+
+const {
+  name,
+  slug,
+  platform,
+  rating,
+  verdict,
+  pricing,
+  bestFor,
+  affiliateUrl,
+  avatarUrl,
+} = Astro.props;
+
+// Extract reader display name from "Platform: Name" format
+const readerName = name.includes(':') ? name.split(':').pop()?.trim() : name;
+
+// Reader initials for avatar fallback
+const initials = readerName
+  ?.split(/\s+/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((w) => w[0]?.toUpperCase())
+  .join('') || 'L';
+
+const avatarFallbackSvg = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6EE7B7"/><stop offset="55%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/></linearGradient></defs><circle cx="36" cy="36" r="32" fill="url(#g)"/><text x="36" y="41" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="700" fill="rgba(255,255,255,.95)">${initials}</text></svg>`)}`;
+
+// URL for this reader's full review
+const platformPath = platform === 'psiquicos' ? 'psiquicos-web' : 'purple-garden-es';
+const reviewUrl = `/es/resenas/${platformPath}/${slug}/`;
+---
+
+<article class="reader-card card">
+  <div class="reader-card-header">
+    <a href={reviewUrl} class="reader-avatar-link" tabindex="-1" aria-hidden="true">
+      <img
+        class="reader-avatar"
+        src={avatarUrl || avatarFallbackSvg}
+        alt={avatarUrl ? `${readerName} foto de perfil` : `Avatar de ${readerName}`}
+        width="60"
+        height="60"
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
+    <div class="reader-meta">
+      <a href={reviewUrl} class="reader-name">{readerName}</a>
+      <div class="reader-rating-row">
+        <StarRating rating={rating} size="sm" showValue={false} />
+        <span class="reader-score">{rating}</span>
+      </div>
+      {pricing && <span class="reader-price">{pricing}/min</span>}
+    </div>
+  </div>
+
+  <p class="reader-verdict">{verdict}</p>
+
+  {bestFor && (
+    <div class="reader-best-for">
+      <span class="reader-best-for-label">Ideal para:</span>
+      <span class="reader-best-for-text">{bestFor}</span>
+    </div>
+  )}
+
+  <div class="reader-card-footer">
+    <a href={reviewUrl} class="btn btn--ghost btn--sm">Leer reseña completa →</a>
+    <EsSpanishCTA platform={platform} variant="book" readerName={readerName} size="sm" source="reader-card" />
+  </div>
+</article>
+
+<style>
+  .reader-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+  .reader-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .reader-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .reader-avatar-link { flex-shrink: 0; }
+  .reader-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-border-light);
+    transition: transform var(--transition-fast);
+  }
+  .reader-avatar:hover { transform: scale(1.05); }
+
+  .reader-meta {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .reader-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .reader-name:hover { color: var(--color-primary); }
+
+  .reader-rating-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .reader-score {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+  }
+
+  .reader-price {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-weight: var(--weight-medium);
+  }
+
+  .reader-verdict {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .reader-best-for {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-sage-100, #f0faf4);
+    border-radius: var(--radius-sm);
+  }
+  .reader-best-for-label {
+    color: var(--color-sage-dark, #2d6a4f);
+    font-weight: var(--weight-semibold);
+    flex-shrink: 0;
+  }
+  .reader-best-for-text {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .reader-card-footer {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border-light);
+  }
+</style>

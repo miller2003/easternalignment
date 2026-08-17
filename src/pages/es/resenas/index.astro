@@ -1,0 +1,180 @@
+---
+import EsBaseLayout from '../../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../../components/es/EsBreadcrumb.astro';
+import EsSpanishCTA from '../../../components/es/EsSpanishCTA.astro';
+import EsReaderCard from '../../../components/es/EsReaderCard.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+const canonicalUrl = `${SITE_URL}/es/resenas/`;
+
+// Load all Spanish readers from both platforms using eager glob
+const allEsReaderModules = import.meta.glob('../../../content/es-readers/**/*.md', { eager: true });
+const readers = Object.entries(allEsReaderModules)
+  .filter(([path]) => !path.includes('_plantilla'))
+  .map(([path, mod]: [string, any]) => ({
+    ...mod.frontmatter,
+    slug: path.split('/').pop()?.replace('.md', '') || '',
+  }));
+
+const psiqReader = readers.filter(r => r.platform === 'psiquicos');
+const pgReaders = readers.filter(r => r.platform === 'purple-garden-es');
+---
+
+<EsBaseLayout
+  title="Todas las Reseñas de Videntes Online"
+  description="Directorio completo de reseñas individuales de videntes en Psíquicos Web y Purple Garden. Calificaciones verificadas, precios reales y opiniones de usuarios documentadas."
+  seoTitle="Reseñas de Videntes Online — Psíquicos Web y Purple Garden | Eastern Alignment"
+  canonicalUrl={canonicalUrl}
+  hreflangEn={`${SITE_URL}/reviews/`}
+>
+  <div class="section">
+    <div class="container">
+      <EsBreadcrumb items={[{ label: 'Reseñas' }]} />
+
+      <header class="resenas-header">
+        <h1 class="resenas-title">Reseñas de Videntes Online</h1>
+        <p class="resenas-desc text-muted">
+          Evaluaciones independientes de lectores individuales en Psíquicos Web y Purple Garden.
+          Cada reseña se basa en datos verificados, historial documentado y opiniones reales de usuarios.
+        </p>
+      </header>
+
+      <!-- Psíquicos Web Section -->
+      <section class="platform-section" aria-labelledby="psiquicos-heading">
+        <div class="platform-section-header">
+          <div>
+            <h2 class="platform-section-title" id="psiquicos-heading">🔮 Psíquicos Web</h2>
+            <p class="platform-section-desc text-muted">
+              {psiqReader.length} reseñas individuales publicadas
+            </p>
+          </div>
+          <div class="platform-section-actions">
+            <a href="/es/resenas/psiquicos-web/" class="btn btn--ghost btn--sm">Ver análisis de plataforma →</a>
+            <EsSpanishCTA platform="psiquicos" variant="explore" size="sm" source="resenas-index" />
+          </div>
+        </div>
+
+        {psiqReader.length > 0 ? (
+          <div class="readers-grid">
+            {psiqReader
+              .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+              .map(reader => (
+                <EsReaderCard
+                  name={reader.platformName}
+                  slug={reader.slug}
+                  platform="psiquicos"
+                  rating={reader.rating}
+                  verdict={reader.verdict}
+                  pricing={reader.pricing}
+                  bestFor={reader.bestFor}
+                  avatarUrl={reader.avatarUrl}
+                />
+              ))}
+          </div>
+        ) : (
+          <div class="empty-state">
+            <p class="text-muted">Las reseñas individuales de Psíquicos Web estarán disponibles próximamente.</p>
+            <a href="/es/resenas/psiquicos-web/" class="btn btn--ghost btn--sm">Ver análisis de plataforma →</a>
+          </div>
+        )}
+      </section>
+
+      <!-- Purple Garden Section -->
+      <section class="platform-section" aria-labelledby="pg-heading">
+        <div class="platform-section-header">
+          <div>
+            <h2 class="platform-section-title" id="pg-heading">🌷 Purple Garden</h2>
+            <p class="platform-section-desc text-muted">
+              {pgReaders.length} reseñas individuales publicadas
+            </p>
+          </div>
+          <div class="platform-section-actions">
+            <a href="/es/resenas/purple-garden-es/" class="btn btn--ghost btn--sm">Ver análisis de plataforma →</a>
+            <EsSpanishCTA platform="purple-garden-es" variant="explore" size="sm" source="resenas-index" />
+          </div>
+        </div>
+
+        {pgReaders.length > 0 ? (
+          <div class="readers-grid">
+            {pgReaders
+              .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+              .map(reader => (
+                <EsReaderCard
+                  name={reader.platformName}
+                  slug={reader.slug}
+                  platform="purple-garden-es"
+                  rating={reader.rating}
+                  verdict={reader.verdict}
+                  pricing={reader.pricing}
+                  bestFor={reader.bestFor}
+                  avatarUrl={reader.avatarUrl}
+                />
+              ))}
+          </div>
+        ) : (
+          <div class="empty-state">
+            <p class="text-muted">Las reseñas individuales de Purple Garden estarán disponibles próximamente.</p>
+            <a href="/es/resenas/purple-garden-es/" class="btn btn--ghost btn--sm">Ver análisis de plataforma →</a>
+          </div>
+        )}
+      </section>
+    </div>
+  </div>
+</EsBaseLayout>
+
+<style>
+  .resenas-header {
+    margin-bottom: var(--space-10);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .resenas-title { font-size: var(--text-4xl); margin-bottom: var(--space-3); }
+  .resenas-desc { font-size: var(--text-lg); max-width: 600px; line-height: var(--leading-relaxed); }
+
+  .platform-section {
+    margin-bottom: var(--space-12);
+    padding-bottom: var(--space-10);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .platform-section:last-child { border-bottom: none; }
+
+  .platform-section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    flex-wrap: wrap;
+  }
+  .platform-section-title { font-size: var(--text-2xl); margin: 0 0 var(--space-1); }
+  .platform-section-desc { font-size: var(--text-sm); margin: 0; }
+  .platform-section-actions {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .readers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .empty-state {
+    padding: var(--space-8);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 768px) {
+    .platform-section-header { flex-direction: column; }
+    .platform-section-actions { width: 100%; }
+  }
+</style>

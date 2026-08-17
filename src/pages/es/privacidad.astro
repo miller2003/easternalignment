@@ -1,0 +1,84 @@
+---
+import EsBaseLayout from '../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../components/es/EsBreadcrumb.astro';
+
+const SITE_URL = 'https://easternalignment.com';
+const canonicalUrl = `${SITE_URL}/es/privacidad/`;
+---
+
+<EsBaseLayout
+  title="Política de Privacidad"
+  description="Política de privacidad de Eastern Alignment: cómo recopilamos, usamos y protegemos tu información personal al visitar nuestro sitio web."
+  canonicalUrl={canonicalUrl}
+  noindex={true}
+  hreflangEn={`${SITE_URL}/privacy/`}
+>
+  <div class="section">
+    <div class="container container--narrow">
+      <EsBreadcrumb items={[{ label: 'Política de Privacidad' }]} />
+      <h1>Política de Privacidad</h1>
+
+      <div class="prose">
+        <p><em>Última actualización: agosto de 2026</em></p>
+
+        <h2>Información que Recopilamos</h2>
+        <p>
+          EasternAlignment ("nosotros" o "el sitio") está comprometido con la protección de tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos la información cuando visitas easternalignment.com.
+        </p>
+
+        <h3>Información Recopilada Automáticamente</h3>
+        <p>Cuando visitas este sitio web, podemos recopilar automáticamente información como:</p>
+        <ul>
+          <li>Dirección IP (anonimizada cuando sea posible)</li>
+          <li>Tipo y versión del navegador</li>
+          <li>Páginas visitadas y tiempo de permanencia</li>
+          <li>Sitio web de referencia</li>
+          <li>Tipo de dispositivo y sistema operativo</li>
+        </ul>
+
+        <h3>Información que Proporcionas</h3>
+        <p>
+          Si te comunicas con nosotros por correo electrónico, podemos recopilar tu dirección de email y la información que compartas voluntariamente.
+        </p>
+
+        <h2>Cómo Usamos tu Información</h2>
+        <p>Usamos la información recopilada para:</p>
+        <ul>
+          <li>Mejorar el contenido y la experiencia del usuario en el sitio web</li>
+          <li>Analizar el tráfico y los patrones de uso</li>
+          <li>Responder a tus consultas</li>
+        </ul>
+
+        <h2>Servicios de Terceros</h2>
+        <p>
+          Podemos utilizar servicios de análisis de terceros para entender el uso del sitio web. Estos servicios pueden recopilar información sobre tu visita mediante cookies y tecnologías similares.
+        </p>
+
+        <h2>Enlaces de Afiliados</h2>
+        <p>
+          Este sitio web contiene enlaces de afiliados a plataformas de lectura psíquica de terceros. Cuando haces clic en estos enlaces, la plataforma de destino puede utilizar cookies u otras tecnologías de seguimiento para registrar la referencia. No controlamos las prácticas de privacidad de estos terceros. Te recomendamos revisar sus políticas de privacidad antes de crear una cuenta.
+        </p>
+
+        <h2>Cookies</h2>
+        <p>
+          Podemos usar cookies para mejorar tu experiencia en este sitio web. Puedes controlar la configuración de cookies a través de las preferencias de tu navegador.
+        </p>
+
+        <h2>Privacidad de Menores</h2>
+        <p>
+          Este sitio web no está dirigido a menores de 18 años. No recopilamos intencionalmente información personal de menores.
+        </p>
+
+        <h2>Cambios en Esta Política</h2>
+        <p>
+          Podemos actualizar esta Política de Privacidad periódicamente. Cualquier cambio será publicado en esta página con una fecha de revisión actualizada.
+        </p>
+
+        <h2>Contacto</h2>
+        <p>
+          Si tienes preguntas sobre esta Política de Privacidad, escríbenos a: <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</EsBaseLayout>

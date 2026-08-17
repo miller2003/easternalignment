@@ -1,0 +1,100 @@
+---
+interface Props {
+  pros: string[];
+  cons: string[];
+  prosTitle?: string;
+  consTitle?: string;
+}
+const {
+  pros,
+  cons,
+  prosTitle = 'Ventajas',
+  consTitle = 'Desventajas',
+} = Astro.props;
+---
+
+{(pros.length > 0 || cons.length > 0) && (
+  <div class="pros-cons">
+    {pros.length > 0 && (
+      <div class="pros-cons-col pros-col">
+        <h3 class="pros-cons-title pros-title">
+          <span class="pros-icon" aria-hidden="true">✓</span> {prosTitle}
+        </h3>
+        <ul class="pros-cons-list">
+          {pros.map(item => <li>{item}</li>)}
+        </ul>
+      </div>
+    )}
+    {cons.length > 0 && (
+      <div class="pros-cons-col cons-col">
+        <h3 class="pros-cons-title cons-title">
+          <span class="cons-icon" aria-hidden="true">✗</span> {consTitle}
+        </h3>
+        <ul class="pros-cons-list">
+          {cons.map(item => <li>{item}</li>)}
+        </ul>
+      </div>
+    )}
+  </div>
+)}
+
+<style>
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+    padding: var(--space-6);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+  }
+  .pros-cons-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-3);
+  }
+  .pros-title { color: var(--color-sage-dark, #2d6a4f); }
+  .cons-title { color: var(--color-error, #b91c1c); }
+  .pros-icon { color: var(--color-sage-dark, #2d6a4f); font-weight: 700; }
+  .cons-icon { color: var(--color-error, #b91c1c); font-weight: 700; }
+  .pros-cons-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .pros-cons-list li {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-4);
+    position: relative;
+    color: var(--color-text-muted);
+  }
+  .pros-col .pros-cons-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-sage-dark, #2d6a4f);
+    font-weight: 700;
+    font-size: 0.75em;
+    top: 3px;
+  }
+  .cons-col .pros-cons-list li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: var(--color-error, #b91c1c);
+    font-weight: 700;
+    font-size: 0.75em;
+    top: 3px;
+  }
+  @media (max-width: 600px) {
+    .pros-cons { grid-template-columns: 1fr; }
+  }
+</style>
