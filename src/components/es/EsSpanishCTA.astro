@@ -21,6 +21,8 @@ interface Props {
   label?: string;
   /** Reader name for personalized CTAs (e.g. "Reservar con [Name]") */
   readerName?: string;
+  /** Reader slug (filename) for per-reader deep links; falls back to platform offer when absent */
+  readerSlug?: string;
   size?: 'sm' | 'md' | 'lg';
   /** data-cta-source for analytics attribution */
   source?: string;
@@ -31,6 +33,7 @@ const {
   variant = 'default',
   label,
   readerName,
+  readerSlug,
   size = 'lg',
   source = 'inline',
 } = Astro.props;
@@ -51,7 +54,16 @@ const PLATFORM_NAMES = {
   'purple-garden-es': 'Purple Garden',
 } as const;
 
-const href = OFFERS[platform];
+// ────────────────────────────────────────────────────────────────────────────
+// PER-READER DEEP LINKS (TUNE/Barges backend) — overrides platform offer
+// when the readerSlug matches. key = reader slug (md filename).
+// ────────────────────────────────────────────────────────────────────────────
+const READER_URLS: Record<string, string> = {
+  'luz-tarot': 'https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fes%2Fpsychics%2F7046-luz-tarot%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}',
+  'luna-aestethic': 'https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F4921-luna-aestethic%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}',
+} as const;
+
+const href = (readerSlug && READER_URLS[readerSlug]) || OFFERS[platform];
 const platformName = PLATFORM_NAMES[platform];
 
 // Resolve CTA label — controlled vocabulary, never "Click Here"

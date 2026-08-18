@@ -34,11 +34,6 @@ const navLinks = [
   { href: '/about/', label: 'About' },
 ];
 
-// Spanish version switch. Single-reader review pages deep-link to the Spanish
-// readers hub (/es/resenas/); every other page points to the Spanish home (/es/).
-const isReaderPage = /^\/reviews\/[^/]+\/[^/]+\/$/.test(currentPath);
-const esHref = isReaderPage ? '/es/resenas/' : '/es/';
-const esText = isReaderPage ? 'Videntes en español' : 'Español';
 ---
 
 <header class="site-header" id="site-header">
@@ -83,12 +78,6 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
       </ul>
     </nav>
 
-    <!-- Spanish version switch -->
-    <a href={esHref} class="nav-lang-switch hide-mobile" lang="es">
-      <span class="lang-flag" aria-hidden="true">🌐</span>
-      <span>{esText}</span>
-    </a>
-
     <!-- Mobile Menu Toggle -->
     <button
       class="mobile-toggle hide-desktop"
@@ -130,11 +119,6 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
           )}
         </li>
       ))}
-      <li class="mobile-lang-item">
-        <a href={esHref} class="mobile-nav-link mobile-lang-link" lang="es">
-          <span aria-hidden="true">🌐</span> {esText}
-        </a>
-      </li>
     </ul>
   </nav>
 </header>
@@ -417,45 +401,6 @@ const esText = isReaderPage ? 'Videntes en español' : 'Español';
     border-left-color: var(--color-primary);
   }
 
-  /* Spanish version switch (desktop pill + mobile link) */
-  .nav-lang-switch {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    margin-left: var(--space-3);
-    padding: var(--space-2) var(--space-4);
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    color: var(--color-primary);
-    text-decoration: none;
-    border: 1px solid var(--color-primary);
-    border-radius: 999px;
-    white-space: nowrap;
-    transition: background var(--transition-fast), color var(--transition-fast);
-  }
-
-  .nav-lang-switch:hover {
-    background: var(--color-primary);
-    color: #fff;
-  }
-
-  .lang-flag {
-    font-size: 1em;
-    line-height: 1;
-  }
-
-  .mobile-lang-link {
-    margin-top: var(--space-2);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    border-radius: var(--radius-md);
-    text-align: center;
-  }
-
-  .mobile-lang-link:hover {
-    background: var(--color-primary);
-    color: #fff;
-  }
 </style>
 
 <script>

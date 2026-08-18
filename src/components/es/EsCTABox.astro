@@ -12,6 +12,7 @@ interface Props {
   ctaVariant?: 'default' | 'discount' | 'book' | 'explore' | 'custom';
   ctaLabel?: string;
   readerName?: string;
+  readerSlug?: string;
   variant?: 'highlight' | 'plain';
 }
 
@@ -22,6 +23,7 @@ const {
   ctaVariant = 'default',
   ctaLabel,
   readerName,
+  readerSlug,
   variant = 'highlight',
 } = Astro.props;
 ---
@@ -35,6 +37,7 @@ const {
       variant={ctaVariant}
       label={ctaLabel}
       readerName={readerName}
+      readerSlug={readerSlug}
       size="lg"
       source="cta-box"
     />

@@ -32,6 +32,8 @@ interface Props {
   customSchema?: string;
   entities?: string[];
   hreflangEn?: string;
+  /** Reader slug (md filename) for per-reader deep links in the hero CTA */
+  readerSlug?: string;
 }
 
 const {
@@ -54,6 +56,7 @@ const {
   customSchema,
   entities,
   hreflangEn,
+  readerSlug,
 } = Astro.props;
 
 const SITE_URL = 'https://easternalignment.com';
@@ -232,6 +235,7 @@ if (freeOffer) {
             platform={platform}
             variant={ctaVariant}
             readerName={readerLabel}
+            readerSlug={readerSlug}
             size="lg"
             source="hero"
           />

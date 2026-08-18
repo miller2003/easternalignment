@@ -182,17 +182,6 @@ const displayCta = ctaOverride || ctaText;
         <Breadcrumb items={breadcrumbItems} />
       </div>
 
-      <!-- Spanish readers switch (only on individual reader reviews) -->
-      {isReaderReview && (
-        <a href="/es/resenas/" class="es-reader-switch" lang="es">
-          <span class="es-reader-switch__icon" aria-hidden="true">🌐</span>
-          <span class="es-reader-switch__text">
-            <strong class="es-reader-switch__title">Videntes en español</strong>
-            <span class="es-reader-switch__sub">Explora reseñas de lectores psíquicos en español →</span>
-          </span>
-        </a>
-      )}
-
       <!-- Review Hero -->
       <header class="review-hero">
         <div class="review-hero-meta">
@@ -285,49 +274,6 @@ const displayCta = ctaOverride || ctaText;
 
   .review-breadcrumb {
     margin-bottom: var(--space-4);
-  }
-
-  /* Spanish readers switch callout (reader reviews only) */
-  .es-reader-switch {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    margin: var(--space-2) 0 var(--space-5);
-    padding: var(--space-3) var(--space-4);
-    background: linear-gradient(135deg, rgba(196, 149, 106, 0.10), rgba(126, 142, 112, 0.10));
-    border: 1px solid var(--color-primary, #7e8e70);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--color-text);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  }
-
-  .es-reader-switch:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(126, 142, 112, 0.22);
-  }
-
-  .es-reader-switch__icon {
-    font-size: 1.5rem;
-    line-height: 1;
-    flex: 0 0 auto;
-  }
-
-  .es-reader-switch__text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .es-reader-switch__title {
-    font-size: var(--text-base);
-    font-weight: var(--weight-bold);
-    color: var(--color-primary-dark, #5f6b54);
-  }
-
-  .es-reader-switch__sub {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
   }
 
   /* ── Hero ── */

@@ -41,7 +41,7 @@ def extract_img(html, platform):
         m3 = re.search(r'images\.keen\.com/member3x2/(-?\d+-\d+)Size3by2', html)
         if m3:
             cands.append(f"https://images.keen.com/memberphotos/{m3.group(1)}Primary.jpg")
-        return cands
+        return _dedupe(cands)
     cands = []
     for m in re.findall(r'https://' + host + r'/eyJ[^\s"\')]+', html):
         tok = 'eyJ' + m.split('/eyJ', 1)[1]
@@ -54,7 +54,14 @@ def extract_img(html, platform):
             if 'profile_image' in d or re.search(r'users/\d+/[^\"\\]+\.(?:jpe?g|png|webp)', d):
                 cands.append(m)
             break
-    return cands
+    return _dedupe(cands)
+
+def _dedupe(seq):
+    seen = set(); out = []
+    for x in seq:
+        if x not in seen:
+            seen.add(x); out.append(x)
+    return out
 
 def magic_ext(b):
     if b[:8] == b'\x89PNG\r\n\x1a\n': return '.png'
@@ -87,10 +94,8 @@ elif mode == 'decode':
     html = open(sys.argv[2], encoding='utf-8', errors='ignore').read()
     platform = sys.argv[3]
     cands = extract_img(html, platform)
-    if not cands:
-        print('')
-    else:
-        print('\n'.join(cands))
+    # The curl-driven _av_fetch.sh expects a single-line URL; emit only the first candidate.
+    print(cands[0] if cands else '')
 
 elif mode == 'writefm':
     md = sys.argv[2]
