@@ -87,6 +87,15 @@ const articleSchema: Record<string, unknown> = {
 };
 
 const noindex = metaRobots ? metaRobots.includes('noindex') : false;
+
+// ── Focused sticky-CTA: generic guides/articles default to Keen (Editor's Choice)
+//    since they aren't focused on one specific platform. ────────────────────────
+const articleStickyCta = {
+  slug: '/go/keen/',
+  platform: 'keen' as const,
+  label: 'Keen · 5 min for $1 →',
+  prompt: "First purchase offer on Keen (Editor's Choice): 5 minutes for $1",
+};
 ---
 
 <BaseLayout
@@ -100,6 +109,7 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
   seoTitle={seoTitle}
   metaDescription={metaDescription}
   customSchema={customSchema}
+  stickyCta={articleStickyCta}
 >
   <!-- Full-page 3-column grid: sidebars span the entire page height -->
   <div class="page-with-sidebars">

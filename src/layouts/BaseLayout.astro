@@ -20,6 +20,18 @@ interface Props {
   customSchema?: string;
   /** URL of the corresponding Spanish page (if one exists) */
   hreflangEs?: string;
+  /**
+   * Optional focused-CTA config for the bottom sticky bar. When provided, the
+   * StickyCTA collapses to a single primary button pointing at this page's
+   * platform/reader deeplink (e.g. /go/kasamba-master-enigma/). When omitted,
+   * the legacy dual-button (Keen + Kasamba) layout is used.
+   */
+  stickyCta?: {
+    slug: string;
+    label?: string;
+    prompt?: string;
+    platform?: 'keen' | 'kasamba' | 'purple-garden';
+  };
 }
 
 const {
@@ -34,6 +46,7 @@ const {
   metaDescription,
   customSchema,
   hreflangEs,
+  stickyCta,
 } = Astro.props;
 
 const SITE_NAME = 'Eastern Alignment';
@@ -153,7 +166,15 @@ const personSchema = {
 
     <Footer />
 
-    <!-- Mobile/tablet persistent CTA (hidden >= 1100px where the sidebar shows) -->
-    <StickyCTA />
+    <!-- Mobile/tablet persistent CTA (hidden >= 1100px where the sidebar shows).
+         Pages may pass `stickyCta` to switch this into "focused" mode: a single
+         primary button that deep-links to that page's reader-level affiliate URL
+         (e.g. /go/kasamba-master-enigma/) instead of the generic dual-button. -->
+    <StickyCTA
+      slug={stickyCta?.slug}
+      label={stickyCta?.label}
+      prompt={stickyCta?.prompt}
+      platform={stickyCta?.platform}
+    />
   </body>
 </html>

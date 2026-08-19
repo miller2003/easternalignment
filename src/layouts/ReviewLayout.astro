@@ -155,6 +155,44 @@ if (freeOffer) {
 }
 // Explicit override (e.g. a reader who left the platform — point to live roster)
 const displayCta = ctaOverride || ctaText;
+
+// ── Focused sticky-CTA config ────────────────────────────────────────────────
+// On a reader-specific page (e.g. /reviews/kasamba/master-enigma-.../) the
+// sticky bottom bar must promote THAT reader's affiliate deeplink, not a
+// generic platform CTA or the legacy dual-button layout. On platform-level
+// pages it promotes the platform's own /go/<platform>/ offer instead.
+type StickyCtaConfig = {
+  slug: string;
+  label?: string;
+  prompt?: string;
+  platform?: 'keen' | 'kasamba' | 'purple-garden';
+};
+
+function platformFromName(name: string): 'keen' | 'kasamba' | 'purple-garden' | null {
+  const lower = name.toLowerCase();
+  if (lower.includes('kasamba')) return 'kasamba';
+  if (lower.includes('purple'))  return 'purple-garden';
+  if (lower.includes('keen'))    return 'keen';
+  return null;
+}
+
+const platformKey = platformFromName(platformName || '');
+const platformOffers: Record<'keen' | 'kasamba' | 'purple-garden', { label: string; prompt: string }> = {
+  keen:            { label: 'Keen · 5 min for $1 →',           prompt: 'First purchase offer on Keen: 5 minutes for $1' },
+  kasamba:         { label: 'Kasamba · 3 free mins →',         prompt: 'First purchase offer on Kasamba: 3 free minutes + 50% off' },
+  'purple-garden': { label: 'Purple Garden · $30 credit →',    prompt: 'First purchase offer on Purple Garden: $30 credit' },
+};
+
+let stickyCtaConfig: StickyCtaConfig | undefined;
+if (affiliateUrl && affiliateUrl !== '#' && platformKey) {
+  const copy = platformOffers[platformKey];
+  stickyCtaConfig = {
+    slug: affiliateUrl,
+    platform: platformKey,
+    label: copy.label,
+    prompt: copy.prompt,
+  };
+}
 ---
 
 <BaseLayout
@@ -169,6 +207,7 @@ const displayCta = ctaOverride || ctaText;
   metaDescription={metaDescription}
   customSchema={customSchema}
   hreflangEs={hreflangEs}
+  stickyCta={stickyCtaConfig}
 >
   <!-- Full-page 3-column grid: sidebars span the entire page height -->
   <div class="page-with-sidebars">

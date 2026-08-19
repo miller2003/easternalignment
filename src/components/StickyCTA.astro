@@ -14,54 +14,171 @@
  *    so we never stack two offers at the bottom.
  *  - Dismissible (X); choice persisted in sessionStorage so it doesn't nag.
  *  - Links route through /go/ (gated + tracked); data-cta-source="sticky".
+ *
+ * Context-aware mode (preferred):
+ *  - When `slug` is passed, the bar shows a SINGLE focused CTA (the platform
+ *    this page is about, with that page's reader-level deeplink when relevant).
+ *    This is the "顶级cta" rule: instead of offering Keen AND Kasamba on a
+ *    Kasamba-content page, we promote ONE clear primary action that deep-links
+ *    to the exact reader or platform the visitor is researching.
+ *  - When `slug` is omitted, falls back to the legacy dual-button layout
+ *    (Keen + Kasamba). Used on truly platform-agnostic pages like generic
+ *    guides and tool pages where no single offer dominates.
+ *
+ * Recommended per surface:
+ *  - Reader-level review  → slug = reader's affiliateUrl (e.g. /go/kasamba-master-enigma/)
+ *  - Platform hub         → slug = /go/<platform>/  (e.g. /go/kasamba/)
+ *  - Comparison winner    → slug = /go/<winnerSlug>/
+ *  - Generic guide / tool → omit slug (legacy fallback) or set slug=/go/keen/
  */
+interface Props {
+  /** Affiliate deeplink slug including /go/ prefix and trailing slash. */
+  slug?: string | null;
+  /** Short label on the button, e.g. "Kasamba · 3 free mins". */
+  label?: string;
+  /** Optional prompt copy above the button. Defaults to a generic offer line. */
+  prompt?: string;
+  /** Auto-derives a sensible label + prompt when only slug is provided. */
+  platform?: 'keen' | 'kasamba' | 'purple-garden' | null;
+}
+
+const props = Astro.props as Props;
+const explicitSlug = (props.slug ?? '').trim();
+
+/* ── Default copy when slug is not provided (legacy dual-button fallback) ── */
+const defaultPrompt = 'First purchase offer: test a top psychic for $1';
+
+/* ── Per-platform copy tokens used to auto-derive label + prompt from a slug ── */
+const platformCopy: Record<
+  'keen' | 'kasamba' | 'purple-garden',
+  { name: string; offer: string; label: string; emoji: string }
+> = {
+  keen:           { name: 'Keen',           offer: '5 min for $1',         label: 'Keen · 5 min for $1 →',    emoji: '🔮' },
+  kasamba:        { name: 'Kasamba',        offer: '3 free mins + 50% off', label: 'Kasamba · 3 free mins →', emoji: '✨' },
+  'purple-garden':{ name: 'Purple Garden',  offer: '$30 free credit',      label: 'Purple Garden · $30 credit →', emoji: '🌿' },
+};
+
+function detectPlatformFromSlug(slug: string): 'keen' | 'kasamba' | 'purple-garden' | null {
+  const normalized = slug.toLowerCase();
+  if (normalized.includes('kasamba'))      return 'kasamba';
+  if (normalized.includes('purple-garden') || normalized.includes('purplegarden')) return 'purple-garden';
+  if (normalized.includes('keen'))         return 'keen';
+  return null;
+}
+
+/* ── Resolve the focused (single-button) mode if a slug was provided ── */
+let focused: {
+  href: string;
+  label: string;
+  prompt: string;
+  emoji: string;
+  ctaName: string;        // human-readable name for data-cta-source="sticky-{name}"
+} | null = null;
+
+if (explicitSlug) {
+  // Honour an explicit platform prop, otherwise sniff the slug.
+  const platformKey = (props.platform ?? detectPlatformFromSlug(explicitSlug)) as
+    | 'keen' | 'kasamba' | 'purple-garden' | null;
+  const copy = platformKey ? platformCopy[platformKey] : null;
+
+  focused = {
+    href: explicitSlug,
+    label: (props.label && props.label.trim()) || (copy?.label ?? 'Get the deal →'),
+    prompt: (props.prompt && props.prompt.trim()) || (copy
+      ? `First purchase offer on ${copy.name}: ${copy.offer}`
+      : defaultPrompt),
+    emoji: copy?.emoji ?? '🔮',
+    ctaName: copy?.name?.toLowerCase().replace(/\s+/g, '-') ?? 'focused',
+  };
+}
+
+const isFocusedMode = focused !== null;
 ---
 
-<div
-  class="sticky-cta"
-  id="sticky-cta"
-  role="region"
-  aria-label="Get a real psychic reading"
-  data-cta-source="sticky"
-  hidden
->
-  <div class="sticky-cta__inner">
-    <p class="sticky-cta__prompt">
-      <span class="sticky-cta__icon" aria-hidden="true">&#x1F52E;</span>
-      <span class="sticky-cta__text">First purchase offer: test a top psychic for $1</span>
-    </p>
+{isFocusedMode ? (
+  /* ── FOCUSED (single-button) MODE — the 顶级cta design ── */
+  <div
+    class="sticky-cta sticky-cta--focused"
+    id="sticky-cta"
+    role="region"
+    aria-label={`Get a ${focused!.label.split('·')[0].trim()} reading`}
+    data-cta-source={`sticky-${focused!.ctaName}`}
+    hidden
+  >
+    <div class="sticky-cta__inner">
+      <p class="sticky-cta__prompt">
+        <span class="sticky-cta__icon" aria-hidden="true">{focused!.emoji}</span>
+        <span class="sticky-cta__text">{focused!.prompt}</span>
+      </p>
 
-    <div class="sticky-cta__actions">
       <a
-        href="/go/keen/"
-        class="sticky-cta__btn"
+        href={focused!.href}
+        class="sticky-cta__btn sticky-cta__btn--solo"
         rel="nofollow sponsored"
         target="_blank"
-        data-cta-source="sticky"
+        data-cta-source={`sticky-${focused!.ctaName}`}
       >
-        Keen &middot; 5 min for $1 &rarr;
+        {focused!.label}
       </a>
-      <a
-        href="/go/kasamba/"
-        class="sticky-cta__btn sticky-cta__btn--ghost"
-        rel="nofollow sponsored"
-        target="_blank"
-        data-cta-source="sticky"
+
+      <button
+        type="button"
+        class="sticky-cta__close"
+        id="sticky-cta-close"
+        aria-label="Dismiss offer bar"
       >
-        Kasamba &middot; 3 free
-      </a>
+        &times;
+      </button>
     </div>
-
-    <button
-      type="button"
-      class="sticky-cta__close"
-      id="sticky-cta-close"
-      aria-label="Dismiss offer bar"
-    >
-      &times;
-    </button>
   </div>
-</div>
+) : (
+  /* ── LEGACY DUAL-BUTTON MODE (kept for platform-agnostic pages) ── */
+  <div
+    class="sticky-cta"
+    id="sticky-cta"
+    role="region"
+    aria-label="Get a real psychic reading"
+    data-cta-source="sticky"
+    hidden
+  >
+    <div class="sticky-cta__inner">
+      <p class="sticky-cta__prompt">
+        <span class="sticky-cta__icon" aria-hidden="true">&#x1F52E;</span>
+        <span class="sticky-cta__text">First purchase offer: test a top psychic for $1</span>
+      </p>
+
+      <div class="sticky-cta__actions">
+        <a
+          href="/go/keen/"
+          class="sticky-cta__btn"
+          rel="nofollow sponsored"
+          target="_blank"
+          data-cta-source="sticky"
+        >
+          Keen &middot; 5 min for $1 &rarr;
+        </a>
+        <a
+          href="/go/kasamba/"
+          class="sticky-cta__btn sticky-cta__btn--ghost"
+          rel="nofollow sponsored"
+          target="_blank"
+          data-cta-source="sticky"
+        >
+          Kasamba &middot; 3 free
+        </a>
+      </div>
+
+      <button
+        type="button"
+        class="sticky-cta__close"
+        id="sticky-cta-close"
+        aria-label="Dismiss offer bar"
+      >
+        &times;
+      </button>
+    </div>
+  </div>
+)}
 
 <style>
   .sticky-cta {
@@ -145,6 +262,27 @@
     color: #ffffff;
   }
 
+  /* Focused (single-button) mode — wider, bolder, the "top CTA" treatment */
+  .sticky-cta--focused {
+    background: linear-gradient(180deg, #ffffff 0%, #fdf7ee 100%);
+    border-top: 2px solid var(--color-accent, #c4956a);
+    box-shadow: 0 -12px 30px rgba(120, 80, 40, 0.18);
+  }
+
+  .sticky-cta__btn--solo {
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 11px 18px;
+    font-size: 13.5px;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 14px rgba(196, 149, 106, 0.45);
+  }
+
+  .sticky-cta__btn--solo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(196, 149, 106, 0.6);
+  }
+
   .sticky-cta__btn--ghost {
     background: transparent;
     color: var(--color-primary, #8b6f4e);
@@ -185,11 +323,17 @@
     .sticky-cta { display: none !important; }
   }
 
-  /* Very narrow screens: drop the ghost button to keep one clear action */
+  /* Very narrow screens: in focused mode, hide the prompt to keep the button large */
   @media (max-width: 380px) {
-    .sticky-cta__btn--ghost { display: none; }
-    .sticky-cta__text { display: none; }
-    .sticky-cta__prompt { flex: 0 0 auto; }
+    .sticky-cta--focused .sticky-cta__text { display: none; }
+    .sticky-cta--focused .sticky-cta__icon { display: none; }
+  }
+
+  /* Legacy dual-button mode: drop the ghost button to keep one clear action */
+  @media (max-width: 380px) {
+    .sticky-cta:not(.sticky-cta--focused) .sticky-cta__btn--ghost { display: none; }
+    .sticky-cta:not(.sticky-cta--focused) .sticky-cta__text { display: none; }
+    .sticky-cta:not(.sticky-cta--focused) .sticky-cta__prompt { flex: 0 0 auto; }
   }
 </style>
 
@@ -198,6 +342,9 @@
     const bar = document.getElementById('sticky-cta');
     const closeBtn = document.getElementById('sticky-cta-close');
     if (!bar) return;
+
+    // Capture once: closure-captured element after the null check above.
+    const stickyBar = bar;
 
     const DISMISS_KEY = 'ea_sticky_cta_dismissed';
 
@@ -210,8 +357,8 @@
 
     let dismissed = isDismissed();
 
-    function show() { bar.classList.add('is-visible'); bar.removeAttribute('hidden'); }
-    function hide() { bar.classList.remove('is-visible'); }
+    function show() { stickyBar.classList.add('is-visible'); stickyBar.removeAttribute('hidden'); }
+    function hide() { stickyBar.classList.remove('is-visible'); }
 
     // Dismiss handler
     if (closeBtn) {
@@ -236,7 +383,6 @@
       let endVisible = false;
       if (endAnchor) {
         const rect = endAnchor.getBoundingClientRect();
-        // Visible if its top is within the viewport (above the bottom edge)
         endVisible = rect.top < window.innerHeight && rect.bottom > 0;
       }
 
