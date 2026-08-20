@@ -115,12 +115,4 @@ Purple Garden backs your first session with a given advisor with a satisfaction 
 
 **Start with the $30 credit.** At $3.99/min it covers about seven or eight minutes — enough for one specific, well-framed question so you can feel her detailed, no-sugar-coating style before you commit to longer sessions.
 
----
-
-**Over 15,000 readings. 4.8 stars. From $3.99/min. No yes-or-no.** Tarot Withh Love's value is depth you can afford from a reader who won't soften it. For clients done with comforting answers, she is the rare mystic who tells you the rest.
-
-
-
 **More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

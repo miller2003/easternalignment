@@ -115,10 +115,3 @@ Three things worth knowing, none of them dealbreakers.
 **Look elsewhere only if** you need a narrow specialist method, or you specifically want a long-form voice consultation rather than fast, clear chat answers.
 
 Either way, the audition costs nothing. Ask your real question in the first three free minutes and watch what happens. Twenty-three years of clients suggest you'll stay for the twelve paid ones.
-
----
-
-**153,514 readings. Twenty-three years. 4.9 stars. $1.99 a minute.** Best Psychic Readings is the rare case where the cheapest option and the most proven option are the same option.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

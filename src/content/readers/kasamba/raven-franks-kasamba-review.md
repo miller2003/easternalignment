@@ -107,10 +107,3 @@ Is she worth roughly double a mid-tier reader? The honest answer depends on your
 **Book her if** your situation is the complicated one — the case that's survived other readers, the question with real weight — and you want a 23-year perfect-5.0 remote viewer who works from almost nothing and doesn't quit on hard material. At the half-price promo, the audition costs almost nothing.
 
 **Skip her if** your question is simple and price is the deciding factor. She's a specialist in the hard cases, priced like one.
-
----
-
-**67,179 readings. Twenty-three years. A perfect 5.0 and a client list that fired everyone else.** Raven Franks is the reader you graduate to — and right now she's half price.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

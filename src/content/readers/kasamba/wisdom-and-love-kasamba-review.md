@@ -120,10 +120,3 @@ The other honest flag: his status often shows offline. No.2 overall creates a qu
 **Skip him if** it's a low-stakes curiosity check, or if $13.99/min at promo would strain your budget for what amounts to a "will he text" question. There are excellent readers here at a third of his price. Save Andrew for the storm.
 
 The first 3 minutes are free. Bring him the heaviest question you're carrying. User_6870274 walked out of her "worst storm" with "what will be will be" — and that kind of peace is exactly what the premium buys.
-
----
-
-**102,414 readings. No.2 on Kasamba. A perfect 5.0 that 31,000+ people put their names to.** Wisdom and Love is what premium pricing looks like when it's earned — and right now the promo is live, the first 3 minutes cost nothing, and your storm isn't getting any quieter.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -122,10 +122,3 @@ The other caveat is mechanical: he's popular enough that even when his status sh
 **Skip him if** you're shopping for the cheapest possible minutes, or if what you really need is emotional support rather than information. He's a specialist in the truth. Price and pacing both assume that's what you came for.
 
 Either way, the math on finding out is close to zero: 3 free minutes, half-price promo, and a satisfaction guarantee behind it. Ask him the real question — the one you've been circling — and watch what happens in the first three minutes. That answer will tell you everything about the next fifteen.
-
----
-
-**355,674 readings. Nineteen years. A perfect 5.0 that nobody could fake.** Master Enigma is what happens when a reader spends two decades choosing accuracy over applause — and right now he's online, the promo is live, and your question isn't getting any quieter.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -65,10 +65,12 @@
 - 每篇必须以该解读师的**独特点**为主线（独门方法、履历、niche、评论里的具体细节、价格结构），角度不可复用。
 - 文章再翔实一些：更多 bio 细节、更多真实评论引文、更细的 session 体验描写。
 
-## 读者页结尾 CTA nudge（2026-08-20 上线，减少「注册+领券但不首单付费」aff 漏损）
-- 组件 `src/components/ReaderEndCTA.astro`：6 段同义 nudge 变体池（slug 哈希选段→篇篇不重复且稳定），纯 `<p>` 在 `.prose` 内→100% 继承正文排版（像正文不分框）；下方紧跟按平台自动生成的结尾 CTA 链接（Keen「First 5 Minutes for $1」/ Kasamba「First 3 Minutes Free + 50% Off」/ PG「Claim Your $30 Free Credit」）。
-- 接进 `ReviewLayout.astro`：`.prose` 内 `<slot/>` 之后，仅 `isReaderReview` 时渲染（平台 hub 页不显示）。所有英文读者路由都走 ReviewLayout → 自动获得。
-- 文案锚定「about the price of a coffee」+「配合本页新客优惠做第一次真实付费解读」+「没有最好的解读师只有合适的 / 开始大于一切」。
-- 手写结尾 CTA 已从 `src/content/readers/**/*.md` 全部剥离（`scratch/strip_end_cta.py`，按「最后一条 /go/ 锚点=结尾 CTA」剥离，保留「More reviews / 披露」）。`REVIEW_CONTENT_PROMPT.md` Rule 4 已改为「结尾 CTA 由布局自动生成，作者无需手贴」。
-- 西班牙站 `es/`（EsReviewLayout）未接，如需后续扩展。
+## 读者页结尾 CTA 区（nudge 段 + CTABox，2026-08-20 上线 + 同日分桶 + 位置重做，减少「注册+领券但不首单付费」aff 漏损）
+- 完整视觉流（每篇 reader 页）：文章正文 → ProsCons 卡片（What I Liked / Could Be Better，frontmatter pros/cons 自动渲染）→ **nudge 段（纯正文样式，按平台分桶）** → CTABox 大卡片（"Ready to try X?" + 大按钮）→ FAQ → other readers → RelatedContent → InfiniteContentFlow。nudge 段无框无底色，100% 继承 `.prose` 排版；CTABox 是 `variant="highlight"` 渐变背景大卡片承接最终点击。两者一起形成「正文过渡 → 视觉强调」转化漏斗。
+- nudge 段组件 `src/components/ReaderEndCTA.astro`：纯 `<p>` 渲染在 `.prose` 内，**不带链接按钮**（CTABox 提供），由三个 reader 路由（`keen/[reader].astro` / `kasamba/[reader].astro` / `purple-garden/[reader].astro`）在 ProsCons 之后、CTABox 之前显式插入。ReviewLayout 不再注入。
+- 共享工具 `src/lib/platform.ts`：导出 `platformFromName(name): PlatformKey | null` + `PlatformKey = 'keen' | 'kasamba' | 'purple-garden'`。原 ReviewLayout 内联的同名函数已删除。ReaderEndCTA 和 ReviewLayout 都从这里 import。
+- **变体池按平台分桶（3×6=18 段，2026-08-20 重构）**：原设计 6 段统一锚「about the price of a coffee」只对 Keen 成立（$1/5min≈咖啡价）；Kasamba 起步 $0（3分钟免费+50%off）、Purple Garden 是 $30 免费额度（远超咖啡价），原文案对两平台既不诚实又低估优惠。修复为三桶：Keen 桶保留咖啡价锚定 / Kasamba 桶改「前3分钟不花一分钱」零门槛试错 / PG 桶改「$30够一次完整初步解读」。选段=先按 platformKey 选桶→hashSeed 桶内 %6。每平台 6 段同义不同表达，保留原 4 钩子（配合本页优惠做一次初步解读/别空找/没有最好的只有合适的/开始大于一切）。
+- 标记：`data-cta-copy={1-6}`（桶内序号）+ `data-cta-platform={keen|kasamba|purple-garden}`（桶标识），方便 PostHog 按 (platform, copy) 二维比首单率。
+- 手写结尾 CTA 已从 `src/content/readers/**/*.md` 全部剥离（`scratch/strip_end_cta.py`，按「最后一条 /go/ 锚点=结尾 CTA」剥离，保留「More reviews / 披露」）。`REVIEW_CONTENT_PROMPT.md` Rule 4 已改为「CTA card + nudge 段都由 reader 路由自动注入（ReaderEndCTA + CTABox），作者不要在 markdown 末尾手写 `<a href="/go/">` 也不要手写收尾 nudge / 优惠 hook 段」。**进一步（2026-08-20）**：reader-supported 披露行（`*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*`）+ `---` 之后的"粗体优惠 hook 段"（"**N readings. ... the 3 free minutes are waiting when she's back.**"）已用 `scratch/strip_end_hook_and_disclosure.py` 从全部 67 个 reader .md 批量剥离（keen 2 + kasamba 35 + PG 30，4 个文件无粗体段跳过该步）。保留：正文中嵌入 H2/H3 章节的"试读策略 / session 成本分析段"（如 ask-fran 的"New Keen users get 5 minutes for $1, then $2.99/min. A well-structured session typically runs 15-20 minutes..."）和 cross-link 块（`**More X reviews:**`）。注意：粗体 hook 段的 bold 部分只是 `**bold-text**`（前面），后面**接普通文本到行尾**，正则要匹配整段 `\*\*[^\n]*\*\*[^\n]*` 而非仅 `\*\*...\*\*`。**`AffiliateDisclosure` 组件在 ReviewLayout 里只 import 没用过**（孤儿代码），实际渲染在 ComparisonLayout 和 pages/reviews/index；新规则：reader .md 不再手写任何形式的 affiliate 披露，依赖更高层级的页脚 / disclosure 页面。
+- 西班牙站 `es/`（EsReviewLayout）未接 nudge（含分桶版），如需后续扩展（需写 18 段西语变体）。
 - 构建须本机跑（沙箱 build 卡死）。

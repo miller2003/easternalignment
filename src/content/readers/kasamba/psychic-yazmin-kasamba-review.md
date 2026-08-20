@@ -120,10 +120,3 @@ And the practical side of that same trait: her predictions often unfold over mon
 **Skip her if** you want a quick yes/no tonight and a different answer next week if you don't like it. She doesn't sell that. Her 5.0 exists precisely because she refuses to.
 
 The first 3 minutes are free. Bring her the question you keep re-asking everyone else — and notice what it feels like when someone answers it the same way twice.
-
----
-
-**119,836 readings. A perfect 5.0. Clients who stay for five months and thank her while still waiting.** Psychic Yazmin is the rarest thing on Kasamba: a reader whose credibility survives even her own unfinished predictions. If you need a pillar, she's been standing since 1998.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

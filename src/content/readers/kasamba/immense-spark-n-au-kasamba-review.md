@@ -114,10 +114,3 @@ The other honest flag: her 4.8 isn't a perfect 5.0. Across 66,000 readings we'd 
 **Skip her if** you want the cheapest possible minutes, or you need a perfect-5.0 specialist in a single narrow method. She's a premium generalist built for retention, not a bargain built for volume.
 
 The first 3 minutes are free. Ask her the question you keep re-asking. If you find yourself, like Dex, coming back a decade later saying *"as always, she is very good and precise"* — well, that's the entire point of a reader like this.
-
----
-
-**66,152 readings. A 4.8 held for nearly two decades. A client who's been coming back for over ten years.** Immense Spark is what a reader looks like when people stay — and right now the promo is live, the first 3 minutes cost nothing, and the loyalty Dex has took a single first session to start.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -114,10 +114,3 @@ If budget is your primary constraint, book a $1.99–$5.49 reader from our other
 **Book him if** the question keeping you up is heavy — love, purpose, a decision with consequences — and you want Kasamba's highest-ranked reader: a perfect 5.0 across 21 years, delivered by someone formally trained to help you carry the answer. Use the 3 free minutes. Feel the difference a counsellor's pacing makes. Then decide.
 
 **Skip him if** you want the cheapest possible minutes or a quick yes/no novelty. He's neither, and at his rate he shouldn't be.
-
----
-
-**87,202 readings. Twenty-one years. A perfect 5.0 and a psychotherapy diploma.** Truth and Light is what happens when a gifted reader also learns the science of helping people hear the truth. The first three minutes are free — the rest is up to how much the question is worth.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

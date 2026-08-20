@@ -111,10 +111,3 @@ Why so cheap? Her model is clearly relationship, not transaction — priced for 
 **Book her if** your question involves same-sex love, complicated relationship pain, or a situation that needs pastoral care alongside clairvoyant detail — and you want it from a twelve-year veteran at a price where a real session costs less than lunch.
 
 **Skip her if** you want rapid-fire predictions or a guarantee of comfortable news. She offers something better: the truth, from someone who'll still be there next week.
-
----
-
-**69,218 readings. Twelve years. An ordained pastor who reads the love others won't name — for $2.99 a minute.** The first 3 minutes are free, and the door is explicitly open to everyone.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -6,7 +6,7 @@ import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import AuthorBio from '../components/AuthorBio.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar.astro';
-import ReaderEndCTA from '../components/ReaderEndCTA.astro';
+import { platformFromName } from '../lib/platform';
 
 interface Props {
   title: string;
@@ -169,14 +169,6 @@ type StickyCtaConfig = {
   platform?: 'keen' | 'kasamba' | 'purple-garden';
 };
 
-function platformFromName(name: string): 'keen' | 'kasamba' | 'purple-garden' | null {
-  const lower = name.toLowerCase();
-  if (lower.includes('kasamba')) return 'kasamba';
-  if (lower.includes('purple'))  return 'purple-garden';
-  if (lower.includes('keen'))    return 'keen';
-  return null;
-}
-
 const platformKey = platformFromName(platformName || '');
 const platformOffers: Record<'keen' | 'kasamba' | 'purple-garden', { label: string; prompt: string }> = {
   keen:            { label: 'Keen · 5 min for $1 →',           prompt: 'First purchase offer on Keen: 5 minutes for $1' },
@@ -282,13 +274,6 @@ if (affiliateUrl && affiliateUrl !== '#' && platformKey) {
       <article class="review-content">
         <div class="prose">
           <slot />
-          {isReaderReview && (
-            <ReaderEndCTA
-              affiliateUrl={affiliateUrl}
-              readerLabel={readerLabel!}
-              platformKey={platformKey ?? 'keen'}
-            />
-          )}
         </div>
         <AuthorBio />
       </article>

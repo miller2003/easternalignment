@@ -116,10 +116,3 @@ One transparency note: Kasamba rotates promos, and we've watched card prices shi
 **Skip her if** you need a perfect-5.0 reader with zero visible complaints (Safina's 4.9 has Jasmine's review on it), or you want a single-method specialist rather than a blended approach. There are purer specialists on this site who'll suit you better.
 
 The first 3 minutes are free. Bring her the specific question you've been avoiding asking out loud. If you leave the way Kate did — calling it *"one of the best readings I've had"* — you'll understand the 59,564 sessions that came before yours.
-
----
-
-**59,565 readings. A 4.9 with the misses left in. A great-grandmother's ragged Tarot deck.** Psychic Safina is what three generations of inherited clarity looks like when it lands on your specific question — and right now the first 3 minutes cost nothing, and the crossroads you're standing at isn't getting any clearer on its own.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

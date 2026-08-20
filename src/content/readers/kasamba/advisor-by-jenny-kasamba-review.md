@@ -117,12 +117,4 @@ If your questions are mostly career or finance, her love-centred focus is a weak
 
 New Kasamba clients get three free minutes with Advisor by Jenny. At her promo rates, even a paid follow-up is cheap — use the free window to ask one relationship question and see whether her clear, structured style works for you.
 
----
-
-**50,170 readings. MBA + natural psychic. From $1.99/min.** Advisor by Jenny is proof that an analytical mind and intuitive gifts aren’t opposites — and that experience doesn’t have to be expensive. For affordable relationship clarity, she’s a smart pick.
-
-
-
 **More Kasamba reviews:** [Invincible Insights](/reviews/kasamba/invincible-insights-kasamba-review/) · [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

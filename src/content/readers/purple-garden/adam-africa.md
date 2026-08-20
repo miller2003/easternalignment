@@ -104,5 +104,3 @@ One practical note: because Adam's readings run deep, set a budget and a timer b
 ---
 
 **More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

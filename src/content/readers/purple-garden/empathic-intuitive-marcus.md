@@ -105,5 +105,3 @@ If you want the full experience, book live video and watch his manner as he read
 ---
 
 **More Purple Garden reviews:** [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

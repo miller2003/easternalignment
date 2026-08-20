@@ -106,5 +106,3 @@ Set a timer if you tend to linger — the price makes it easy to keep talking �
 ---
 
 **More Purple Garden reviews:** [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Tarot Withh Love](/reviews/purple-garden/tarot-withh-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

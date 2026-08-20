@@ -111,10 +111,3 @@ One practical note: she's US-based and her feed shows steady daily traffic, so o
 **Book her if** your situation is a tangle — an ex, a mess with too many moving parts, a question you want asked at the guide level rather than the card level — and you want a board-certified professional with fifty years of practice, stated ethics, and a perfect 5.0 across 64,270 readings. The first 3 minutes are free; ask the real question and see if a name comes back.
 
 **Skip her if** your question falls in her excluded categories, or if the guide framework doesn't match your beliefs. She's a specialist with a method, and the method is the product.
-
----
-
-**64,270 readings. Fifty years of relay. A perfect 5.0 with 126 complaints in twenty-four years.** Quietsound is the reader for people who want to know not just the answer, but who it came from.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

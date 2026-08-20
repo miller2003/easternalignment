@@ -119,10 +119,3 @@ But none of that touches the accuracy. *"Scary accurate," "predictions have come
 **Skip him if** you need a rigid yes/no format, or you're impatient with a reader who follows the energy rather than a script.
 
 Either way, the first session is effectively free. Come with your question, let yourself ramble, and see what lands. If you leave with goosebumps — or just the quiet relief of being truly heard — you'll understand the 13,745 readings that came before yours.
-
----
-
-**13,746 readings. A perfect 5.0. One client, goosebumps, an unspoken military detail.** Quantum Drew is what an empathic, "scary accurate" reading feels like when the pressure is off — and right now the first session is effectively free.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

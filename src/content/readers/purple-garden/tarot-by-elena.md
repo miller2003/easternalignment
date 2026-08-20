@@ -115,12 +115,4 @@ Purple Garden backs your first session with a given advisor with a satisfaction 
 
 **Start with the $30 credit.** It covers roughly seven or eight minutes with Elena — enough for one focused, fully transcribed question. Ask it plainly, save the chat, and decide from the record whether her card-anchored style is yours.
 
----
-
-**Top Rated. Over 4,000 readings. From $3.99/min. A transcript you can keep.** Elena is not the reader who performs your feelings back to you. For the people who'd rather have a record than a vibe, that is exactly the point.
-
-
-
 **More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

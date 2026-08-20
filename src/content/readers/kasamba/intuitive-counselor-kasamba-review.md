@@ -105,10 +105,3 @@ At our audited **$4.99/min** (confirm the live rate), a focused 15-minute sessio
 **Book her if** your love question comes with an injury — a breakup you're still carrying, trust issues, the soulmate question that won't quiet down — and you want a nineteen-year veteran who treats healing and prediction as the same session, at a price built for ongoing counsel.
 
 **Skip her if** you want exact-date guarantees or a purely transactional yes/no. She sells clarity with confidence, and confidence takes a few more minutes than a verdict.
-
----
-
-**68,717 readings. Nineteen years. A 4.9 with the negative reviews examined and answered.** Intuitive Counselor is the booking for the question that hurts — and the first 3 minutes are free.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

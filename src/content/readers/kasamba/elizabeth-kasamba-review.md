@@ -120,5 +120,3 @@ Elizabeth's reflective pace means the three free minutes will yield one substant
 Return sessions with Elizabeth have a compounding quality — she integrates previous session context in a way that makes each follow-up more targeted than the last. If you found the first session accurate but wanted more depth on the healing or Animal Spirit Guide dimensions, a second session is well worth it; those layers tend to develop more fully once she has established an energetic connection with a client. If the first session didn't resonate, that's useful information: Elizabeth's Reiki-influenced approach isn't universally compatible with every client's energetic makeup, and there's no failure in recognizing that a different advisor serves you better.
 
 ---
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

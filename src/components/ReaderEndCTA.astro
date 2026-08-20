@@ -1,42 +1,94 @@
 ---
 /**
- * ReaderEndCTA.astro — Auto-deployed end-of-article nudge + affiliate link
- * for individual reader-review pages (English site).
+ * ReaderEndCTA.astro — Pre-CTA nudge paragraph for individual reader-review
+ * pages (English site). Rendered as plain body copy that lives just BEFORE
+ * the highlighted <CTABox> so the close reads as a natural narrative arc:
+ *   article body → pros/cons → [this nudge] → big "Ready to try X?" card.
  *
- * Problem it solves: ~60% of affiliate "conversions" were register + claim-offer
- * but NO first paid reading. The leak is choice-paralysis + a free-only mindset.
- * This nudge pushes the reader to actually DO a first (discounted) paid reading
- * for ~the price of a coffee, instead of endlessly searching — and it ships on
- * every reader page with zero manual authoring.
+ * The actual CTA BUTTON lives in CTABox.astro (large highlight card with a
+ * single big "Book <Name> on <Platform> →" button). We do NOT render a second
+ * link here — two competing links above the same target would weaken the close.
  *
- * Variant pool: 6 same-meaning closers, selected deterministically by a hash of
- * the page seed so each reader page shows a DIFFERENT one (avoids repetition
- * across pages a visitor reads) yet stays stable per page (consistent for
- * returning visitors + fair per-variant measurement).
+ * Coffee anchor is universal, platform specifics woven in (2026-08-20 rewrite,
+ * refined for top-tier SEO copy quality):
+ * Every one of the 18 variants preserves the same core psychological anchor:
+ *   "About the price of a coffee + the new-client offer on this page
+ *    = a real introductory reading."
+ * The coffee anchor reframes the visitor's question from "is this worth it?"
+ * into "this costs less than my morning coffee" — which is the conversion
+ * lift we want on every platform. What changes per platform is the CONCRETE
+ * offer phrasing woven in alongside the coffee anchor:
+ *   - Keen          → $1 for the first 5 minutes  (the literal coffee math)
+ *   - Kasamba       → 3 free minutes + 50% off    (entry cost ≈ a latte)
+ *   - Purple Garden → $30 in free credit          (covers a full session)
+ * All three stay truthful to the platform's real new-client offer, but the
+ * coffee frame is universal because it's the psychological reframing that
+ * moves "is this worth it" → "this is less than my morning coffee".
  *
- * Styling: the nudge is a plain <p> rendered inside .prose, so it inherits body
- * typography exactly (font-size / line-height / color / margin) — it reads as
- * part of the article, not a boxed widget.
+ * Selection: (a) pick the bucket by parsing platformName via platformFromName
+ * (the same helper used in ReviewLayout — single source of truth), then (b)
+ * hash the page seed (default = platformName) to pick one of 6 closers in
+ * that bucket. Each reader page shows one stable closer, but consecutive
+ * pages on the same platform rotate through the 6 in-bucket variants so
+ * readers who visit multiple pages never see the same line twice.
+ *
+ * Styling: this is a plain <p> rendered inside .prose, so it inherits body
+ * typography (font-size / line-height / color / margin) — it reads as part
+ * of the article, not a boxed widget.
  */
+import { platformFromName } from '../lib/platform';
+
 interface Props {
-  affiliateUrl: string;
-  readerLabel: string;
-  platformKey: 'keen' | 'kasamba' | 'purple-garden';
+  platformName: string;
   seed?: string;
 }
 
-const { affiliateUrl, readerLabel, platformKey, seed } = Astro.props;
+const { platformName, seed } = Astro.props;
 
-// Six same-meaning closers, each leading from a different angle so a reader who
-// visits several pages never feels they are reading a recycled line.
-const VARIANTS: string[] = [
-  'All it takes is about the price of a coffee, combined with the new-client offer on this page, to get a proper introductory reading — instead of endlessly searching. There’s no such thing as the best reader, only the right one for you. Starting beats searching.',
-  'Stop scrolling through reader after reader. For less than the cost of a coffee — and with the new-client offer right here — you can have a real first reading today. There is no perfect reader waiting to be found; there’s only the one who fits you. Begin, and the rest follows.',
-  'There’s no “best” psychic to keep hunting for — only the one who’s right for you. Spend what you’d pay for a coffee, use the new-client offer on this page, and do your first proper reading instead of second-guessing. Starting is what matters.',
-  'You don’t need to have it all figured out before you begin. About the price of a coffee, plus the new-client offer below, is enough to sit down for a genuine introductory reading rather than keep wondering. No reader is the best for everyone — just the right one for you. So start.',
-  'A first real reading costs about what a coffee does — especially with the new-client offer on this page. Skip the endless comparison; there’s no perfect reader, only your match. Starting beats searching.',
-  'Endlessly searching won’t find you the perfect reader — because there isn’t one, only the right fit. For roughly a coffee’s price and the new-client offer here, you could be having your first proper reading right now instead of reading another review. Starting beats searching.',
-];
+// ── Per-platform variant buckets ────────────────────────────────────────────
+// Each bucket holds 6 same-meaning closers. The CORE anchor is preserved
+// across all three buckets and all 18 variants:
+//   "About the price of a coffee + the new-client offer on this page
+//    = a real introductory reading."
+// The four original hooks are also preserved:
+//   (1) coffee + new-client offer → a real first reading,
+//   (2) stop endlessly searching,
+//   (3) there's no "best" reader — only the right fit,
+//   (4) starting beats searching.
+// What changes per platform is the CONCRETE offer phrasing woven in:
+//   - Keen          → $1 for the first 5 minutes  (the literal coffee math)
+//   - Kasamba       → 3 free minutes + 50% off    (entry cost ≈ a latte)
+//   - Purple Garden → $30 in free credit          (covers a full session)
+// All three stay truthful to the platform's real new-client offer, but
+// the coffee anchor is the psychological frame on every page because it
+// reframes "is this worth it?" into "this costs less than my morning
+// coffee" — which is the conversion lift we want.
+const VARIANTS_BY_PLATFORM: Record<'keen' | 'kasamba' | 'purple-garden', string[]> = {
+  keen: [
+    "The price of a coffee. That's the entire gap between you and a real first reading — the new-client offer on this page brings your first 5 minutes down to a single dollar. Stop comparing; there's no such thing as the best reader, only the right one for you. Starting beats searching.",
+    "You've scrolled through enough readers tonight. For about the price of a coffee — the new-client offer on this page unlocks your first 5 minutes for a single dollar — you can close the tabs and actually sit down with someone who reads for a living. There is no perfect reader waiting to be found; there's only the one who fits you. Begin, and the rest follows.",
+    "There's no \"best\" psychic to keep hunting for — only the one who's right for you. The new-client offer on this page brings the entry cost down to about the price of a coffee: $1 for your first 5 minutes. Spend it, ask your real question, and do your first proper reading instead of second-guessing from the outside. Starting is what matters.",
+    "You don't need to have it all figured out before you begin. About the price of a coffee — $1 for 5 minutes, stacked with the new-client offer below — is enough to sit down for a genuine introductory reading and let the reader do their job. No reader is the best for everyone; just the right one for you. So start.",
+    "A real first reading costs about what a coffee does — $1 for 5 minutes, with the new-client offer on this page. Skip the endless comparison; there's no perfect reader, only your match. Starting beats searching.",
+    "Endlessly searching won't find you the perfect reader — because there isn't one, only the right fit. For roughly a coffee's price — $1 for 5 minutes with the offer here — you could be having your first proper reading right now instead of reading another review. Starting beats searching.",
+  ],
+  kasamba: [
+    "The price of a coffee. That's about all that stands between you and a real first reading — the new-client offer on this page gives you 3 free minutes up front and 50% off after, so a genuine first session costs roughly what you'd spend on a latte. Stop comparing; there's no such thing as the best reader, only the right one for you. Starting beats searching.",
+    "You've scrolled through enough readers tonight. For about the price of a coffee — the new-client offer on this page gives you 3 free minutes up front and 50% off whatever comes after — you can close the tabs and actually sit down with someone who reads for a living. There is no perfect reader waiting to be found; there's only the one who fits you. Begin, and the rest follows.",
+    "There's no \"best\" psychic to keep hunting for — only the one who's right for you. The new-client offer on this page brings the entry cost down to about the price of a coffee: 3 free minutes to feel them out, then 50% off the rest. Use them, ask your real question, and do your first proper reading instead of second-guessing from the outside. Starting is what matters.",
+    "You don't need to have it all figured out before you begin. About the price of a coffee — the new-client offer below gives you 3 free minutes, then 50% off after — is enough to sit down for a genuine introductory reading and let the reader do their job. No reader is the best for everyone; just the right one for you. So start.",
+    "A first reading costs about what a coffee does — 3 minutes free, then 50% off, with the new-client offer on this page. Skip the endless comparison; there's no perfect reader, only your match. Starting beats searching.",
+    "Endlessly searching won't find you the perfect reader — because there isn't one, only the right fit. For roughly a coffee's price and the 3 free minutes + 50% off through the offer here, you could be in a real first reading right now instead of reading another review. Starting beats searching.",
+  ],
+  'purple-garden': [
+    "For about the price of a coffee — and with the $30 new-client credit on this page, even less — you could be sitting down to a proper introductory reading instead of scrolling through one more review. There's no such thing as the best reader, only the right one for you. Starting beats searching.",
+    "You've scrolled through enough readers tonight. For about the price of a coffee — the new-client offer on this page drops $30 in free credit into your account — you can close the tabs and actually sit down with someone who reads for a living. There is no perfect reader waiting to be found; there's only the one who fits you. Begin, and the rest follows.",
+    "There's no \"best\" psychic to keep hunting for — only the one who's right for you. About the price of a coffee — plus the $30 new-client credit on this page — is more than enough to stop second-guessing and do your first proper reading. Starting is what matters.",
+    "You don't need to have it all figured out before you begin. About the price of a coffee — the new-client offer below puts $30 in free credit in your account — is enough to sit down for a genuine introductory reading and let the reader do their job. No reader is the best for everyone; just the right one for you. So start.",
+    "A first real reading costs about what a coffee does — and with the $30 new-client credit on this page, it's already paid for. Skip the endless comparison; there's no perfect reader, only your match. Starting beats searching.",
+    "Endlessly searching won't find you the perfect reader — because there isn't one, only the right fit. For roughly a coffee's price and the $30 new-client credit through the offer here, you could be in a proper first reading right now instead of reading another review. Starting beats searching.",
+  ],
+};
 
 function hashSeed(s: string): number {
   let h = 5381;
@@ -46,27 +98,11 @@ function hashSeed(s: string): number {
   return Math.abs(h);
 }
 
-const seedKey = (seed || readerLabel || affiliateUrl || '').trim();
-const variantIndex = hashSeed(seedKey) % VARIANTS.length;
-const nudgeCopy = VARIANTS[variantIndex];
-
-// Standard per-platform end-link text (matches the site's established promo
-// language). Centralised here so every reader page — existing and future —
-// renders a consistent, conversion-oriented close without manual authoring.
-function endLinkText(name: string, platform: string): string {
-  if (platform === 'keen') return `Book ${name} on Keen - First 5 Minutes for $1`;
-  if (platform === 'kasamba') return `Book ${name} on Kasamba - First 3 Minutes Free + 50% Off`;
-  return `Chat with ${name} on Purple Garden - Claim Your $30 Free Credit`;
-}
-
-const linkText = endLinkText(readerLabel, platformKey);
+const platformKey = platformFromName(platformName);
+const seedKey = (seed || platformName || '').trim();
+const bucket = VARIANTS_BY_PLATFORM[platformKey ?? 'keen'];
+const variantIndex = hashSeed(seedKey) % bucket.length;
+const nudgeCopy = bucket[variantIndex];
 ---
 
-<p class="reader-cta-nudge" data-cta-copy={variantIndex + 1}>{nudgeCopy}</p>
-<a
-  href={affiliateUrl}
-  rel="nofollow sponsored"
-  target="_blank"
-  data-cta-source="reader-end"
-  data-cta-copy={variantIndex + 1}
->{linkText}</a>
+<p class="reader-cta-nudge" data-cta-copy={variantIndex + 1} data-cta-platform={platformKey}>{nudgeCopy}</p>

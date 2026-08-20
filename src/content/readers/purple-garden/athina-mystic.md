@@ -107,5 +107,3 @@ Because her sessions run deep and reflective, set a budget and a timer before yo
 ---
 
 **More Purple Garden reviews:** [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/) · [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -68,10 +68,6 @@ entities:
   - "Nicholas Knight"
   - "Love Specialist"
   - "Life Coach"
----
-
-**Book Nicholas Knight if** you want love guidance that ends with an action plan — not just a prediction but a direction. His dual positioning as psychic and life coach means you're not just finding out what the cards or impressions say; you're being coached on what to do with that information. **Skip him if** you want a primarily impression-led, unprompted psychic read where the advisor volunteers specific details without much setup — his sessions require you to arrive with a clear framing, and some clients find his question-heavy opening style feels like the session is working for information rather than delivering it.
-
 ## The "4th-Generation Natural-Born Psychic" Claim: How to Evaluate It
 
 Nicholas Knight's profile states he is a 4th-generation natural-born psychic with over 20 years of experience, including studies in Peru. This is worth addressing directly rather than glossing over, because claims of lineage and generational ability are common in this space and mean very different things depending on how you evaluate them.
@@ -124,5 +120,3 @@ For the dual method to fully activate, the session needs at least 20 minutes. Th
 ---
 
 **More Purple Garden reviews:** [Namrata](/reviews/purple-garden/namrata/) · [Tarot Instincts](/reviews/purple-garden/tarot-instincts/) · [Psychic Shirla](/reviews/purple-garden/psychic-shirla/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -92,12 +92,4 @@ Two practical notes. First, she's on Purple Garden part-time alongside a full-ti
 
 **Start with the $30 credit.** Set the bell alert, ask one real question, and see whether two decades of straight-talk mediumship is your kind of truth.
 
----
-
-**Reading since 2005. Internationally known. 4.9 stars.** Psychic Advisor Serena's value is two decades of tools-free mediumship and the nerve to tell you the truth. For clients who'd rather be clear than coddled, she's a standout.
-
-
-
 **More Purple Garden reviews:** [Niki Medium](/reviews/purple-garden/niki-medium/) · [Psychic Medium Chloe](/reviews/purple-garden/psychic-medium-chloe/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -133,12 +133,4 @@ Never book her by voice at $39.99 unless price is no object — that rate is har
 
 New Kasamba clients get three free minutes with Supernormal Soul. Use them on chat to ask one love question and feel her tone — if the spiritual, structured style connects, continue on chat to keep the rate reasonable.
 
----
-
-**54,000+ readings. Perfect 5.0. Love-first, spiritually framed.** Supernormal Soul earns her "Supreme Seer" label through consistency, not just branding. For love questions on chat, she is a top-tier, high-volume choice.
-
-
-
 **More Kasamba reviews:** [Truthful Visions](/reviews/kasamba/truthful-visions-kasamba-review/) · [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

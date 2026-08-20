@@ -96,12 +96,4 @@ She works by video, voice, or chat, and for an eye-reader the video option is al
 
 **Start with the $30 credit.** Ask one question, see whether her eye-reading, no-tools style resonates, and let the session — not the marketing — decide.
 
----
-
-**6,229 readings. Perfect 5.0. Since 2025.** nuwatarot's value is a distinctive, no-tools method at a flawless early rating. For clients curious about oculomancy, she's a unique, low-risk-to-test pick.
-
-
-
 **More Purple Garden reviews:** [Niki Medium](/reviews/purple-garden/niki-medium/) · [Psychic Medium Chloe](/reviews/purple-garden/psychic-medium-chloe/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -117,12 +117,4 @@ If you need a voice call, her $11.99 rate removes the value advantage — use ch
 
 New Kasamba clients get three free minutes with Invincible Insights. At $1.99/min, even a short paid follow-up is cheap, so this is a low-risk reader to test first. Use the free window to ask one relationship question and see whether her specific, detailed style resonates.
 
----
-
-**70,081 readings. $1.99/min chat. A clear soulmate focus.** Invincible Insights proves that low cost and high volume are not mutually exclusive on Kasamba — she is the budget reader who has actually earned the volume. For love questions on a budget, she is hard to beat.
-
-
-
 **More Kasamba reviews:** [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [Advisor by Jenny](/reviews/kasamba/advisor-by-jenny-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

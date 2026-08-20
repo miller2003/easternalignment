@@ -117,12 +117,4 @@ If you are raw and need comfort, her directness can land hard — a gentler read
 
 New Kasamba clients get three free minutes with Danielle. Use them to ask one direct relationship question — her honesty shows immediately, and you’ll know within minutes whether her style is what you need.
 
----
-
-**57,935 readings. Perfect 5.0. Honest by design.** Danielle Psychic is proof that clients will reward blunt truth when it is accurate. For relationship clarity you can act on, she is one of the strongest readers Kasamba offers.
-
-
-
 **More Kasamba reviews:** [Invincible Insights](/reviews/kasamba/invincible-insights-kasamba-review/) · [Truthful Visions](/reviews/kasamba/truthful-visions-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

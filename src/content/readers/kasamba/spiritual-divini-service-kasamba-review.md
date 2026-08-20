@@ -110,10 +110,3 @@ What it means for you is simple: **the entire value case is chat.** At the $1.99
 **Book her — in chat — if** you've started to suspect the readers around you are telling you what you want to hear, and you want a third-generation reader with nineteen years of receipts to tell you what's actually happening, with timeframes, for $1.99 a minute.
 
 **Skip her if** you want to be comforted more than informed, or if you're set on a voice call — the pricing says she doesn't want to sell you one, and you shouldn't buy one.
-
----
-
-**95,681 readings. Nineteen years. Three generations. And a 4.7 earned the honest way.** At $1.99/min in chat, the truth has rarely been this cheap — she's online now, and the first 3 minutes are free.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

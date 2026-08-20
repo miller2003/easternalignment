@@ -120,10 +120,3 @@ As always: rates rotate. Our verified audit data shows $7.99/min — confirm the
 **Book him if** you have a specific love or career question and you want it answered directly, with details and a timeline, by someone whose predictions long-term clients have watched come true. Prepare your question, use the 3 free minutes, and let the first paid ten do the work.
 
 **Skip him if** you're looking for soft-focus emotional support or an open-ended exploratory session. He's a specialist in answers.
-
----
-
-**102,522 readings. Eighteen years. A 4.9 that survived 21,000 written reviews.** Love Psychic Indi is what happens when formal training meets a genuine gift — and right now the first three minutes cost nothing.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

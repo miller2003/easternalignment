@@ -10,6 +10,7 @@ import ProsCons from '../../../components/ProsCons.astro';
 import CTABox from '../../../components/CTABox.astro';
 import FAQ from '../../../components/FAQ.astro';
 import ReaderCard from '../../../components/ReaderCard.astro';
+import ReaderEndCTA from '../../../components/ReaderEndCTA.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
 import InfiniteContentFlow from '../../../components/InfiniteContentFlow.astro';
 
@@ -139,6 +140,11 @@ const relatedItems = [
   {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (
     <ProsCons pros={frontmatter.pros || []} cons={frontmatter.cons || []} />
   )}
+
+  {/* Pre-CTA nudge paragraph — anchors the offer in the body, looks like
+      body copy, then hands off to the highlighted CTABox below for the
+      actual button. Author doesn't have to write this. */}
+  <ReaderEndCTA platformName={frontmatter.platformName} />
 
   <div id="end-cta-anchor">
     <CTABox

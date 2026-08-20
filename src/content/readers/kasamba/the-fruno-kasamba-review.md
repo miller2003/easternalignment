@@ -114,10 +114,3 @@ He was OFFLINE when we checked — expected for a 24-year veteran whose regulars
 **Book him if** your question is about career, business, money, or a decision with numbers attached — and you want the only reader on Kasamba who has actually been the CFO, the auditor, and the judge, with 24 years of perfect-5.0 readings on top. Also book him for love and life questions if a measured, proven, no-theater style is what you trust.
 
 **Skip him if** you want mystical theater or a reader who performs the occult. Fruno is the opposite: the most credentialed person in the room who also happens to see things.
-
----
-
-**66,996 readings. Twenty-four years. A perfect 5.0 — and a Library of Congress call number.** The Fruno is what happens when a master of two worlds picks up the cards. The first 3 minutes are free.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

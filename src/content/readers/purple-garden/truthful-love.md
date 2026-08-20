@@ -119,10 +119,3 @@ But be honest about which problem you have. If the last three readers told you w
 **Skip her if** you need the truth softened, or you're looking for a gentle, reassuring session rather than a direct read. There are softer readers on this site who'll suit you better.
 
 Either way, the risk of finding out is close to zero: $30 free credit, $2.99/min after, and a "Voted most accurate" badge behind her. Ask her the question you've been re-reading at 1 a.m. — and if you find yourself, like Vee, wanting to tell everyone about it, you'll understand the 28,198 readings that came before yours.
-
----
-
-**28,199 readings in a year. Three platform badges. One client who left 8 reviews in 4 minutes.** Truthful Love is what "Trending" actually means — a reader people can't stop coming back to — and right now the first session is effectively free.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

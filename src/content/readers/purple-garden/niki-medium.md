@@ -119,10 +119,3 @@ But here's the reframe that matters. Beatlesmania didn't write "she hurt my feel
 **Skip her if** you want flattery, or you'd rather not know the hard part yet. There are softer readers on this site; Niki is for when you're ready for honest.
 
 Either way, the first session is effectively free with the $30 credit. Bring her the question you've been circling — the one you already know the answer to, deep down. If you leave the way Beatlesmania did, grateful for the hard part, you'll understand the 12,993 readings that came before yours.
-
----
-
-**12,994 readings. A perfect 5.0. Four generations, both sides of the family.** Niki Medium is what inherited clarity looks like when it's delivered kindly but without the sugar — and right now the first session is effectively free.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

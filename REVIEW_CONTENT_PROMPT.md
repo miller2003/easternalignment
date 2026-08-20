@@ -52,16 +52,26 @@ FILE LOCATION (write the .md here):
    Do NOT silently guess.
 3. H1 IS REQUIRED. The body MUST open with a single `# <Title>` heading that matches the
    frontmatter `title`. Never start the body at `##` (this was a real past defect).
-4. NO MANUAL END CTA. The end-of-article CTA link AND the conversion-nudge paragraph are
-   AUTO-INJECTED by ReviewLayout via `<ReaderEndCTA />` — DO NOT paste an `<a href="/go/...">`
-   at the end of the markdown. The layout reproduces the correct per-platform link text from the
-   reader name + platform, so every page (existing and future) ships a consistent close with zero
-   manual authoring:
+4. NO MANUAL END CTA. The end-of-article CTA card AND the pre-CTA nudge paragraph are
+   AUTO-INJECTED by the per-platform reader route (`keen/[reader].astro`,
+   `kasamba/[reader].astro`, `purple-garden/[reader].astro`) via
+   `<ReaderEndCTA />` (nudge paragraph, body-style) followed by `<CTABox />`
+   (the highlighted "Ready to try X?" card with the big button) — DO NOT
+   paste an `<a href="/go/...">` at the end of the markdown, DO NOT
+   hand-roll a closing nudge paragraph in the body, and DO NOT close the
+   article with a bold "offer hook" re-pitch paragraph (e.g. `**95,479
+   readings. ... the 3 free minutes are waiting when she's back.**`).
+   The route reproduces the correct per-platform link text from the
+   reader name + platform, so every page (existing and future) ships a
+   consistent close with zero manual authoring. Visual reading order is:
+   article body → pros/cons cards → [nudge paragraph, body-style] →
+   [highlighted "Ready to try X?" card with the button] → FAQ → related
+   readers.
      Keen:    Book <Name> on Keen - First 5 Minutes for $1
      Kasamba: Book <Name> on Kasamba - First 3 Minutes Free + 50% Off
      Purple Garden: Chat with <Name> on Purple Garden - Claim Your $30 Free Credit
    (Optional: add `endCtaText` to frontmatter to override the auto link text for one specific reader.
-    Never add a second/markdown CTA — the layout owns the only one.)
+    Never add a second/markdown CTA — the route owns the only one.)
 5. FRONTMATTER ↔ BODY CONSISTENCY. The `pricing` field, any `customSchema` reviewBody string,
    and every price mentioned in the body MUST agree. If the body computes a session cost
    (rate × minutes), the arithmetic must be correct.
@@ -122,7 +132,8 @@ customSchema: |
 [ ] H1 present and matches title; body does not start at ##
 [ ] rate verified (WebSearch) or explicitly flagged as unverified + defensible
 [ ] pricing field == body price == customSchema reviewBody price (all agree)
-[ ] NO manual end CTA — the end CTA + nudge are auto-injected by ReviewLayout (ReaderEndCTA); do NOT paste an <a href="/go/"> at the end of the markdown
+[ ] NO manual end CTA — the CTA card + nudge are auto-injected by the reader route (ReaderEndCTA + CTABox); do NOT paste an <a href="/go/"> at the end of the markdown, do NOT hand-roll a closing nudge paragraph in the body, and do NOT close the article with a bold "offer hook" re-pitch paragraph (e.g. `**N readings. ... the 3 free minutes are waiting when she's back.**`) — that paragraph is now the route's job
+[ ] no "*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*" disclosure line in the markdown — the site already discloses affiliate relationships at a higher level; per-article in-body disclosure is no longer rendered
 [ ] affiliateUrl slug exists in src/data/affiliateLinks.ts
 [ ] no fabricated client quotes (aggregate-honesty fallback used if needed)
 [ ] pros/cons/verdict specific, not generic

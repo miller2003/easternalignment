@@ -115,10 +115,3 @@ Promos rotate — confirm the rate shown on her profile before your session. The
 **Book her if** your question actually matters — a marriage at a crossroads, a person you can't read, a decision you can't afford to get wrong — and you want the single most validated love reader on Kasamba, at half her usual rate, with the first three minutes free.
 
 **Skip her if** you're price-shopping for the cheapest minutes or want a quick novelty yes/no. She's built for stakes.
-
----
-
-**99,057 readings. Twenty-one years. A perfect 5.0, and clients still coming back to confirm she was right.** At the current promo, the most proven love specialist on Kasamba costs less than she has in years — and she's online now.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

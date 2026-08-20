@@ -100,12 +100,4 @@ New clients get $30 in credit on a first purchase — about six or seven minutes
 
 **Start with the $30 credit.** Six minutes is enough to ask one real relationship question and feel whether the coach's style is the one that moves you. If the homework lands, you have found a reader worth keeping.
 
----
-
-**Over 15,000 readings. A steady 4.8. From $4.49/min.** Psychic Shirla's value is love clarity with a coach's traction, proven at volume. For relationship guidance you can actually act on, she is a strong mid-priced pick.
-
-
-
 **More Purple Garden reviews:** [Truthful love](/reviews/purple-garden/truthful-love/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

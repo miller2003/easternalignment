@@ -118,10 +118,3 @@ And the practical flag: she often shows online, but her directness means the fit
 **Skip her if** you need a perfect-5.0 reader, you want gentle hand-holding, or you're looking for crisp yes/no predictions rather than energy-and-guidance. There are softer readers on this site who'll suit you better.
 
 The free three minutes exist for a reason. Ask her the question you've been circling. If she points at the road the way she points at it for her regulars — honestly, directly, with the energy she reads around you — you'll know inside the first minute whether her style is the one you've been looking for.
-
----
-
-**69,177 readings. A 4.6 earned in public. An origin story that starts with a train that derailed.** Sweet Spirit of Love is the reader for people who'd rather hear the truth than be comforted by a fairytale — and right now the first 3 minutes cost nothing, and the question you've been carrying isn't getting any lighter.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

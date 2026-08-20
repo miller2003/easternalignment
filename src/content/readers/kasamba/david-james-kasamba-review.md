@@ -114,10 +114,3 @@ But be honest with yourself about which problem you have. If the last three read
 **Skip him if** you want warmth first and truth second, or if a promo-dependent price annoys you — check the card on his page and decide with your eyes open.
 
 His own bio ends with an invitation: *"you, the cosmos, and me."* Three free minutes is long enough to find out if that's the conversation you've been avoiding having.
-
----
-
-**111,359 readings. Thirty years. A 4.7 with the misses still showing.** David James is the rare reader whose imperfections are his credentials — blunt, proven, and priced like he doesn't need to oversell you. If you're ready to hear it straight, he's ready to tell you.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

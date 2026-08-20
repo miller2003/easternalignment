@@ -113,10 +113,3 @@ The session design that works here: one question, tightly framed. *"We broke up 
 **Book him if** you're in the aftermath — fresh breakup, ambiguous silence, the "will we get back together" loop — or facing a commitment decision, and you want a specialist with fifteen years of receipts who gives timelines and solutions instead of vague comfort. Three free minutes, half price after that, and one tightly-framed question is all it takes to know.
 
 **Skip him if** you need a long exploratory session, thick public testimonials, or a specialty outside his lane.
-
----
-
-**77,204 readings. Fifteen years. A 4.9 built on people who came back.** Divine Master does one thing — love, breakup, reunion — and the counter says he does it about fourteen times a day, every day, since 2011. Your question is next.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

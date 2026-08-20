@@ -100,12 +100,4 @@ Purple Garden now backs your first session with a given advisor with a satisfact
 
 **Start with the $30 credit.** It's enough for a proper first session with Ayla — ask one real relationship question, watch how she works, and decide from there whether the multi-tool style is yours.
 
----
-
-**Nearly 15,000 readings. A steady 4.8. From $2.99/min.** Ayla isn't the reader who tells you what you came to hear. For the people who've had enough of being soothed, that's precisely the point.
-
-
-
 **More Purple Garden reviews:** [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

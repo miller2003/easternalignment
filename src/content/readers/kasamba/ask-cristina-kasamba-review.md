@@ -120,5 +120,3 @@ Ask Cristina's experience means she orients quickly — you don't need to spend 
 Return sessions with Ask Cristina are particularly valuable for tracking an evolving situation over time — her telepathic approach produces a snapshot of a person's inner state at the moment of the reading, and returning weeks later to check that state against what actually unfolded is one of the most interesting ways to calibrate her accuracy for your specific situation. If the first session produced specific information that later checked out, a return session is well worth it. If the first session felt accurate in tone but vague in specifics, give the method one more session before switching; telepathic reading can take a session or two to find its focus with a new client.
 
 ---
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

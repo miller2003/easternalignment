@@ -96,12 +96,4 @@ Her from-price sits in Purple Garden's upper-middle tier, not the budget rack. F
 
 **Start with the $30 credit.** Ask one real question, watch how she works, and decide whether a decade-deep, no-sugarcoat tarot reader is your kind of honest.
 
----
-
-**~9,000 readings. Perfect 5.0. Since 2017.** Jackies Tea Tarot's value is a Cuban Santera lineage and a promise not to lie to you. For clients who'd rather be right than soothed, she's a rare find.
-
-
-
 **More Purple Garden reviews:** [Satie Readings](/reviews/purple-garden/satie-readings/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

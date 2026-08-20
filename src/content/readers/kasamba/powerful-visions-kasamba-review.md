@@ -111,10 +111,3 @@ Is she worth nine times a $2.99 reader? The honest conditional: **if your decisi
 **Book her if** you've ever been fear-sold, urgency-pressured, or curse-scammed — or you're determined never to be — and you want the reader who built her entire practice against those tricks, with 21 years and a perfect 5.0 proving the model. Bring a real question and a stated budget.
 
 **Skip her if** you're price-first, or you want quick directive answers rather than counsel. She's Kasamba's conscience, priced accordingly.
-
----
-
-**58,479 readings. Twenty-one years. A perfect 5.0 with zero fear-mongering.** Spiritual Anna is the proof that in this industry, the hard sell is optional — and the first 3 minutes are free.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

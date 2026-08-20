@@ -66,10 +66,6 @@ entities:
   - "SYMONNE"
   - "Spiritual Reading"
   - "Dream Interpretation"
----
-
-**Book SYMONNE if** you suspect your real question is hiding underneath the one you planned to ask — if you want a 23-year veteran with four documented gifts to read the fears, dreams, and subconscious patterns running your situation, at the almost absurd price of $3.09/min. **Skip her if** you're fragile tonight and want reassurance; her signature is telling you what she actually sees in your undercurrent, and one client's honest 3-star review shows exactly how that can land.
-
 ## Four Gifts, One Job: Reading the Underneath
 
 Keen's advisor profiles list attributes the way resumes list software — but SYMONNE's stack is worth reading slowly: **clairvoyant** (sees), **clairaudient** (hears), **empath** (feels), **clairsentient** (knows) — plus angel readings and spirit-guide work, with tarot available or, her preference, **no tools at all**: *"I don't read from scripts or rely solely on tools; I connect directly to your energy and the spiritual energy surrounding you."*
@@ -108,5 +104,3 @@ SYMONNE is 23 years of spiritual depth at a budget price — the reader for the 
 ---
 
 **More Keen reviews:** [lorrie c](/reviews/keen/lorrie-c/) · [Ask Fran](/reviews/keen/ask-fran/) · [Browse all Keen advisors](/reviews/keen/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

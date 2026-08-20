@@ -113,12 +113,4 @@ Purple Garden backs your first session with a given advisor with a satisfaction 
 
 **Start with the $30 credit.** It covers about five minutes with Aria at $5.99/min — enough to bring one specific person and one specific question, watch how she reframes the pattern, and decide whether her honest, boundary-setting style is the one you've been missing.
 
----
-
-**Over 3,000 readings. 4.7 stars. From $5.99/min. No reunion for sale.** Aria isn't the reader who tells you what you came to hear. For the people done being strung along by the yes-machine, that's precisely the point.
-
-
-
 **More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Tarot Withh Love](/reviews/purple-garden/tarot-withh-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

@@ -112,10 +112,3 @@ None of these touch the reading itself. They're scheduling and format choices �
 **Skip her if** you need voice-by-default on a tight budget (the $10.99 voice rate will sting), or if you want a single-method specialist with a perfect 5.0. She's the generalist you keep, not the unicorn you screenshot.
 
 Either way, start with the free three minutes on chat. Ask the question that's been circling. If you leave with what TinCat left with — a little patience, a little hope, and a plan to take it one day at a time — you'll understand the other 113,721 sessions.
-
----
-
-**113,722 readings. Twenty-one years. Nine methods, one reader, one 4.9 that earned itself.** Golden Eye is the answer to reader-hopping: the person who can hold your whole life, not just one corner of it. The snail's race is easier with company.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

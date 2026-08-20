@@ -104,12 +104,4 @@ New clients get $30 in credit on a first purchase — about six minutes at her f
 
 **Start with the $30 credit.** Six minutes on camera is enough to ask one real love question and feel whether her 40-year, no-sugarcoat style is the one that helps you. If the clarity lands — and for most of her nearly 18,000 clients it has — you have found a reader worth keeping.
 
----
-
-**Nearly 18,000 readings. A 4.9. Forty years behind her, live on camera.** Satie Readings' value is seasoned, boundary-setting truth you can watch happen. For love-tarot clarity with no fairy tales, she is a deeply experienced, high-rated pick.
-
-
-
 **More Purple Garden reviews:** [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

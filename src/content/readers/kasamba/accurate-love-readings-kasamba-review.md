@@ -111,10 +111,3 @@ Two structural notes work in your favor. First, chat and voice cost the same her
 **Book her if** your question involves another person's heart — what they feel, what they intend, whether to hold on or let go — and you want a reader whose perfect score coexists with the honesty to admit no one bats a thousand. At the half-price promo, the answer to your question has rarely been cheaper.
 
 **Skip her if** you want guaranteed outcomes or soft-focus validation. She sells the truth, and the truth is the product.
-
----
-
-**95,479 readings. Nineteen years. A perfect 5.0 — from the reader honest enough to say no one is perfect.** She's busy right now, which tells you everything; the 3 free minutes are waiting when she's back.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

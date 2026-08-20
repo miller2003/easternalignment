@@ -96,12 +96,4 @@ Her own site frames it plainly — she reads with the tools live, on video, conn
 
 **Start with the $30 credit.** Ask your sharpest love-or-money question, watch her work the ball and the cards, and decide whether a full-toolkit reader is your speed.
 
----
-
-**12,058 readings. Perfect 5.0. Since 2019.** Lejla Kristal's value is a complete esoteric toolkit and the discipline to not fake the answers she won't give. For love-and-money clarity with options, she's a versatile pick.
-
-
-
 **More Purple Garden reviews:** [Jackies Tea Tarot](/reviews/purple-garden/jackies-tea-tarot/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

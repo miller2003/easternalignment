@@ -116,10 +116,3 @@ The other honest flag: her status often shows offline. A 5.0 at $3.99/min is in 
 **Skip her if** you need voice-by-default (her voice rate is a trap), or if you want a reader whose reviews read like dramatic prediction-fulfillment stories rather than steady repeat-customer warmth.
 
 Either way, start with the 3 free minutes on chat. Ask the question that's been sitting with you. At $3.99/min after that, you can afford to actually stay for the answer — which is the whole point of a reading this affordable from a reader this rated.
-
----
-
-**70,360 readings. A perfect 5.0. Chat at $3.99/min — the best value-per-star on Kasamba.** Cosmic Fusion is the reader you book when you want a 5.0 reading without the 5.0 price tag, as long as you have the discipline to use chat and never, ever voice.
-
-
-*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*
