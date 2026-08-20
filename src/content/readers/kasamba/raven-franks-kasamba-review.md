@@ -13,7 +13,7 @@ pricing: "$9.49/min promo (reg. $18.99) chat & voice · 3 free minutes for new c
 bestFor: "Complex, long-running situations — difficult relationships, stalled lives, cases where other readers gave up — where empathic depth and remote-viewing detail justify a premium rate"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/raven-franks-kasamba-review/
 seoTitle: "Raven Franks Kasamba Review 2026: 5.0, $9.49/min"
-metaDescription: "Raven Franks: 67,179 Kasamba readings since 2003, perfect 5.0, top empath & remote viewer."
+metaDescription: "Raven Franks on Kasamba: 67,179 readings since 2003, a perfect 5.0, remote viewer and empath — 'the only reader I deal with.' $9.49/min promo."
 highlights:
   - "67,179 readings since 2003 — a 23-year Kasamba original at a perfect 5.0"
   - "Remote viewer: works from names and birthdates alone, offers physical descriptions when shown"
@@ -112,6 +112,5 @@ Is she worth roughly double a mid-tier reader? The honest answer depends on your
 
 **67,179 readings. Twenty-three years. A perfect 5.0 and a client list that fired everyone else.** Raven Franks is the reader you graduate to — and right now she's half price.
 
-<a href="/go/kasamba-raven-franks/" rel="nofollow sponsored" target="_blank">Book Raven Franks on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

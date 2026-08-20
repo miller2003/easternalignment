@@ -1,10 +1,8 @@
 ---
-title: 'Regina Jacks on Keen Review 2026: 109,000 Readings Later  -  Is She Still
-seoTitle: "Regina Jacks on Keen Review 2026: 109,000 Readings Later  -"
-  Worth It?'
-description: An independent review of Regina Jacks on Keen  -  covering her clairvoyant-first
-  reading style, what 18,000 verified ratings actually reveal, pricing breakdown,
-  and exactly who gets the most value from booking her.
+title: 'Regina Jacks on Keen Review 2026: 109,000 Readings Later - Is She Still Worth It?'
+seoTitle: "Regina Jacks Keen Review 2026: 4.8 Stars, $3.59/min"
+metaDescription: "Regina Jacks on Keen: 109,000 readings and 18,000 verified ratings. Her clairvoyant-first style, pricing breakdown, and exactly who gets the most value."
+description: "An independent review of Regina Jacks on Keen - covering her clairvoyant-first reading style, what 18,000 verified ratings actually reveal, pricing breakdown, and exactly who gets the most value from booking her."
 platformName: 'Keen: Regina Jacks'
 rating: 4.8
 verdict: Best for relationship readings where you want a reader who leads without
@@ -45,9 +43,6 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: 109,000+ readings, 4.83 stars, 13 years on Keen. But is Regina Jacks
-  right for your question? An honest breakdown of her style, accuracy, and who should
-  actually book her.
 highlights:
 - 109,000+ completed readings since 2012  -  one of Keen's highest-volume readers
 - 4.83 stars across 18,000+ verified ratings
@@ -157,8 +152,3 @@ Regina runs multiple Keen profiles across different categories: Love & Relations
 ### What to Prepare  -  and What to Deliberately Leave Out
 
 Have your question ready, but resist the urge to front-load context. With most readers, arriving prepared means giving them background. With Regina, arriving prepared means knowing exactly what you want to know  -  and then letting her start. Give her the question, not the story behind it. If she's operating at the level her 18K reviews suggest, the story will come from her side of the conversation.
-
-
-
-
-<a href="/go/keen-regina/" rel="nofollow sponsored" target="_blank">Book Regina Jacks on Keen - First 5 Minutes for $1</a>

@@ -144,6 +144,3 @@ At $10.88/min, having this opening prepared before the session connects is not o
 ### My Final Verdict: The Most Statistically Credible Rating in the Series — With One Honest Caveat
 
 Lori's 4.97 across 8,687 sessions is the single number in this series that most directly answers the question *"is this reader consistently good?"* At that volume and that rating, the answer is as close to yes as platform data can provide. The fairytale concern is real enough to name and hold — not as a disqualifier, but as a session management consideration. Arrive with a specific question, invite honest delivery, and track whether her predictions are confirmatory or aspirational over time. For a client who does those things and is in genuine need of accurate, compassionate guidance, she is one of the most credible options on Keen right now.
-
-
-<a href="/go/keen-lc/" rel="nofollow sponsored" target="_blank">Book Intuitive Guidance with LC (Lori) on Keen - First 5 Minutes for $1</a>

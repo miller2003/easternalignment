@@ -124,6 +124,5 @@ Either way, the first session is effectively free with the $30 credit. Bring her
 
 **12,994 readings. A perfect 5.0. Four generations, both sides of the family.** Niki Medium is what inherited clarity looks like when it's delivered kindly but without the sugar — and right now the first session is effectively free.
 
-<a href="/go/purple-garden-niki-medium/" rel="nofollow sponsored" target="_blank">Ask Niki About Your Soulmate - $30 Free Credit at Purple Garden</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

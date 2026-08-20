@@ -73,6 +73,7 @@ entities:
 ---
 
 
+
 Satie Readings has been reading professionally for over 40 years, and on Purple Garden since 2020 she has completed nearly 18,000 readings at a 4.9, with an accuracy rating in the high 80s. She connects with your guides through tarot and reads every session live on camera. The line that defines her, in her own words: "I am NOT a Fortune Teller." For clients who want a mom-vibes reader who still tells the hard truth, she is one of the steadier bets on the platform.
 
 ## Forty years in, and she still reads live on camera
@@ -106,6 +107,8 @@ New clients get $30 in credit on a first purchase — about six minutes at her f
 ---
 
 **Nearly 18,000 readings. A 4.9. Forty years behind her, live on camera.** Satie Readings' value is seasoned, boundary-setting truth you can watch happen. For love-tarot clarity with no fairy tales, she is a deeply experienced, high-rated pick.
+
+
 
 **More Purple Garden reviews:** [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 

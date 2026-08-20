@@ -1,10 +1,8 @@
 ---
-title: 'the psychic one on Keen Review 2026: 183,000 Sessions, 25 Years, and One Very
-seoTitle: "the psychic one on Keen Review 2026: 183,000 Sessions, 25"
-  Specific Promise  -  Do "the Precise Dates and Details" Actually Land?'
-description: An independent review of the psychic one on Keen  -  her bold date-and-detail
-  promise, what 40,000 ratings across 25 years actually reveal, where her track record
-  holds and where it doesn't, and exactly who should book her.
+title: 'the psychic one on Keen Review 2026: 183,000 Sessions, 25 Years, and One Very Specific Promise - Do "the Precise Dates and Details" Actually Land?'
+seoTitle: "the psychic one Keen Review 2026: 4.6 Stars, $3.92/min"
+metaDescription: "the psychic one on Keen: 183,000 sessions in 25 years and one bold promise — precise dates and details. Where her record holds, and who should book."
+description: "An independent review of the psychic one on Keen - her bold date-and-detail promise, what 40,000 ratings across 25 years actually reveal, where her track record holds and where it doesn't, and exactly who should book her."
 platformName: 'Keen: the psychic one'
 rating: 4.6
 verdict: 'The psychic one is Keen''s longest-tenured high-volume advisor with a track
@@ -50,9 +48,6 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: 183K readings, 25 years, 4.5 stars. Do her 'precise dates and details'
-  actually land? Honest breakdown of her track record, real review patterns, and who
-  should book her.
 highlights:
 - 183,000+ completed readings since 2001  -  one of Keen's longest-active and highest-volume
   advisors
@@ -172,8 +167,3 @@ One practical note: **book by phone rather than chat if you can.** At $3.92/min,
 ### My Final Verdict: Where She Stands Among Keen's Highest-Volume Advisors
 
 Twenty-five years. 183,000 sessions. A promise specific enough to be proven wrong every day  -  and still standing. The psychic one is not for every client, and the feedback history is honest enough that I wouldn't recommend booking her without using the intro session as a deliberate test first. But for clients who arrive with a focused question and a real desire for timeline-specific answers, she represents something that very few advisors on any platform can offer: a genuine two-decade track record built specifically around delivering the kind of detail most readers won't commit to. That's not nothing. That's worth one dollar to find out.
-
-<a href="/go/keen-the-psychic-one/" rel="nofollow sponsored" target="_blank">Book the psychic one on Keen  -  First 5 Minutes for $1</a>
-
-
-

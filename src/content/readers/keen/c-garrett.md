@@ -1,10 +1,8 @@
 ---
-title: 'C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation
-seoTitle: "C Garrett on Keen Review 2026: What 54,000 Readings From a"
-  Psychic Actually Looks Like  -  An Honest Third-Party Assessment'
-description: A third-party review of C Garrett on Keen  -  unpacking her 75% energy,
-  25% tarot hybrid method, dream reading specialty, self-declared timing limits, and
-  exactly who gets real value at $4.89/min.
+title: 'C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation Psychic Actually Looks Like - An Honest Third-Party Assessment'
+seoTitle: "C Garrett Keen Review 2026: 4.84 Stars, $4.89/min"
+metaDescription: "C Garrett on Keen: 54,000 readings since 2001 and a 4.84. Her 75% energy, 25% tarot hybrid method, dream readings, and honest timing limits at $4.89/min."
+description: "A third-party review of C Garrett on Keen - unpacking her 75% energy, 25% tarot hybrid method, dream reading specialty, self-declared timing limits, and exactly who gets real value at $4.89/min."
 platformName: 'Keen: C Garrett'
 rating: 4.84
 verdict: Best for people who want intuition-led clarity on relationships or career  -  not
@@ -209,8 +207,3 @@ Book through her Tarot Card Readings profile  -  that's where her full track rec
 The $1 for 5 minutes new user offer applies here as with any Keen reader. Use those minutes to see whether her energetic read on your situation resonates  -  not to extract a full answer. If the first two minutes feel like she's picking up on something real, continue. If it feels like she's working from what you've told her rather than what she's perceiving, you have your answer before you've spent much.
 
 Her wide availability means you don't need to book days out. Check her schedule and connect when the timing works for you  -  that flexibility alone makes the logistics easier than with higher-demand readers.
-
-
-
-
-<a href="/go/keen-garrett/" rel="nofollow sponsored" target="_blank">Book C Garrett on Keen - First 5 Minutes for $1</a>

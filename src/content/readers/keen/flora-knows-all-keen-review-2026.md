@@ -34,7 +34,36 @@ cons:
   - "Generic bio language doesn't convey what makes her specifically worth booking"
   - "Chat only — no immediate phone option"
   - "Inconsistency reported in some sessions — not every client gets the same quality"
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Flora Knows All on Keen Review 2026: The Lowest Price in the Category, a Fast-Rising Track Record, and the Honest Question of Whether New Readers Are Worth the Risk",
+    "description": "An honest third-party review of Flora Knows All on Keen — covering her $2.52/min rate, 6,400 readings built in months, angel reading specialty, real review patterns, and exactly when a newer reader at a budget price makes sense to book.",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Keen: Flora Knows All"
+      }
+    ]
+  }
 ---
+
 
 ## What "6,400 Readings Since 2026" Actually Tells You — and What It Doesn't
 
@@ -169,5 +198,3 @@ What to bring: a specific question rather than an open invitation to tell you wh
 The new-user offer ($1 for 5 minutes) applies here as with any Keen reader, but the math is kinder than usual: even at full rate, a 10-minute calibration session is $25.20. You don't need to cram everything into 5 minutes to protect yourself financially. Take the time to actually assess whether she's connecting with your situation before deciding whether to continue.
 
 Flora Knows All is the most accessible reader in this series by a large margin, and her early engagement numbers suggest something real is developing. Whether you're booking a budget-conscious first reading or looking for a compassionate reader who will genuinely sit with you through something difficult — she's worth the relatively small bet at this stage of her trajectory.
-
-<a href="/go/keen-flora/" rel="nofollow sponsored" target="_blank">Book Flora Knows All on Keen - First 5 Minutes for $1</a>

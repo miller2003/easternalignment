@@ -128,5 +128,3 @@ For other no-tools options, see [Gina Marie](/reviews/keen/gina-marie/) and [Lad
 Dr Lisa Powerful Insights backs her "very fast, compassionate, no tools" promise with 79,000 readings and a 4.97 average across 16,000 ratings - about as stable as high-volume records get on Keen. At $14.99/min she sits at the premium end of Keen's roster, so the $1 intro is the efficient way to confirm fit before committing to a full session.
 
 Start with the **$1 intro**. Her speed means you will get a real sample of her pickup within minutes. If it lands, she is one of the strongest no-tools, high-rating bookings on the platform.
-
-<a href="/go/keen-dr-lisa-powerful-insights/" rel="nofollow sponsored" target="_blank">Book Dr Lisa on Keen - First 5 Minutes for $1</a>

@@ -58,7 +58,7 @@ cons:
 ---
 
 
-# Eli Casey on Keen Review 2026: Why 200,000 Readings Make Him a Rare Find
+
 
 When an advisor crosses the 200,000-reading mark on a platform as competitive as Keen, it is no longer just a marketing claim—it is a structural fact. You simply do not survive two decades and a fifth of a million sessions without retaining a massive, fiercely loyal base of repeat clients. 
 
@@ -119,5 +119,3 @@ If you want fast, hard timelines above all else and don't care about emotional c
 Use the **$1 intro session** (for new users) as your gateway. Call in, state the bare shape of your question, and then let him lead. What he says in those first five minutes without your prompting will show you exactly why he has been trusted by so many. 
 
 Eli Casey's 200,000 readings are proof of immense longevity and trust. If you need a compassionate, highly experienced empath to navigate complex relationship dynamics, he remains one of the safest and most rewarding bets on the Keen platform.
-
-<a href="/go/keen-eli-casey/" rel="nofollow sponsored" target="_blank">Book Eli Casey on Keen - First 5 Minutes for $1</a>

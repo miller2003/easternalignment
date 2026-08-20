@@ -6,6 +6,7 @@ import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import AuthorBio from '../components/AuthorBio.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar.astro';
+import ReaderEndCTA from '../components/ReaderEndCTA.astro';
 
 interface Props {
   title: string;
@@ -281,6 +282,13 @@ if (affiliateUrl && affiliateUrl !== '#' && platformKey) {
       <article class="review-content">
         <div class="prose">
           <slot />
+          {isReaderReview && (
+            <ReaderEndCTA
+              affiliateUrl={affiliateUrl}
+              readerLabel={readerLabel!}
+              platformKey={platformKey ?? 'keen'}
+            />
+          )}
         </div>
         <AuthorBio />
       </article>

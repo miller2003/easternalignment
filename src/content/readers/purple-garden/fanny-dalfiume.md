@@ -64,6 +64,7 @@ entities:
 ---
 
 
+
 Fanny Dalfiume is the reader you book when you want to experiment without risk. Nearly 19,000 readings since 2021 at a 4.6-star rating, starting at $1.99/min — she is Purple Garden's high-volume, budget-tier option for anyone who likes a metaphysical frame wrapped around real tarot work. The rating looks modest next to the platform's army of 5.0s, and that's exactly the point: at this price and this volume, a 4.6 is honesty you can use.
 
 ## Metaphysics meets tarot
@@ -99,6 +100,8 @@ Set a timer if you tend to linger — the price makes it easy to keep talking �
 **Skip her if** you need a perfect-5.0 elite reader, or a purely literal, prediction-first session where the mystical layer would frustrate you. A pure-tarot or direct-psychic reader will be a cleaner fit.
 
 **Start with the $30 credit.** Fifteen minutes is enough to ask one real question and discover whether Fanny's blend of metaphysics and tarot resonates — at a price that makes the answer risk-free.
+
+
 
 ---
 

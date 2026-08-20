@@ -64,6 +64,7 @@ entities:
 ---
 
 
+
 Adam Africa breaks the single most common pattern on Purple Garden. Scroll the advisor list and you meet a wall of tarot flingers and "I see a strong connection" readers who tell you what you came to hear. Adam leads with something rarer: a certified life-coach credential, backed by clairaudience, clairvoyance, and clairsentience, and a decade-plus of real coaching behind the mysticism. After roughly 9,500 readings since 2019 at a flat 5.0 stars, he has the rating and the tenure to make that blend credible — not as a gimmick, but as a working method.
 
 ## A coach before he's a psychic — and that's the point
@@ -97,6 +98,8 @@ One practical note: because Adam's readings run deep, set a budget and a timer b
 **Skip him if** you want a fast yes/no, a guaranteed timeline, or a reader who will validate a fantasy. He will not. For pure card work without the coaching layer, a tarot specialist will be a cleaner, cheaper fit.
 
 **Start with the $30 credit.** It's enough to experience Adam's style once — ask one real question, watch how a certified coach-intuitive actually works, and decide whether the meticulous approach is worth the $5.99/min from there.
+
+
 
 ---
 

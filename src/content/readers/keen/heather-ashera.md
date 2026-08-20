@@ -146,5 +146,3 @@ For more high-volume options, see our reviews of [Eli Casey](/reviews/keen/eli-c
 Use the **$1 intro session** as a calibration test. Call or chat in with one love or career question, then listen. What she picks up unprompted is your signal - and a $3.33 rate means the test costs almost nothing. If you want an affordable, experienced tarot reader who gets to the point, Heather Ashera is a sensible budget choice with a 32,000-reading paper trail.
 
 Heather Ashera has built 32,000 readings at $3.33/min by being experienced and efficient. The 4.77 average tells you to keep expectations realistic - go in for a cheap, clear tarot check-in.
-
-<a href="/go/keen-heather-ashera/" rel="nofollow sponsored" target="_blank">Book Heather Ashera on Keen - First 5 Minutes for $1</a>

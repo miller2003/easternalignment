@@ -120,7 +120,6 @@ The $30 new-client credit covers approximately **six and a half minutes** — en
 
 For the dual method to fully activate, the session needs at least 20 minutes. The psychic reading portion takes the first part of the session to orient; the coaching direction — the part that makes the session actionable rather than just informative — develops in the second half. A five-minute tryout gives you the reader's voice and energy, not the full dual-method experience.
 
-<a href="/go/purple-garden-nicholas-knight/" rel="nofollow sponsored" target="_blank">**Start your reading with Nicholas Knight — claim your $30 Purple Garden credit now →**</a>
 
 ---
 

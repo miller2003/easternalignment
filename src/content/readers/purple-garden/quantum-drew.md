@@ -124,6 +124,5 @@ Either way, the first session is effectively free. Come with your question, let 
 
 **13,746 readings. A perfect 5.0. One client, goosebumps, an unspoken military detail.** Quantum Drew is what an empathic, "scary accurate" reading feels like when the pressure is off — and right now the first session is effectively free.
 
-<a href="/go/purple-garden-quantum-drew/" rel="nofollow sponsored" target="_blank">Talk to Quantum Drew - $30 Free Credit at Purple Garden</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

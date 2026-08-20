@@ -102,7 +102,6 @@ The practical session design, given all of the above: come with **one person and
 
 lorrie c is the empath the skeptics ended up verifying: 60,595 readings, a 4.98 that leads Keen's volume tier, and a public record of predictions landing on contact, behavior, and reasoning. For the "what is my person feeling" question, she's the first booking on Keen — and the first five minutes cost a dollar.
 
-<a href="/go/keen-lorrie-c/" rel="nofollow sponsored" target="_blank">Book lorrie c on Keen - First 5 Minutes for $1</a>
 
 ---
 

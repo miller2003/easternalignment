@@ -116,6 +116,5 @@ Is she worth nine times a $2.99 reader? The honest conditional: **if your decisi
 
 **58,479 readings. Twenty-one years. A perfect 5.0 with zero fear-mongering.** Spiritual Anna is the proof that in this industry, the hard sell is optional — and the first 3 minutes are free.
 
-<a href="/go/kasamba-spiritual-anna/" rel="nofollow sponsored" target="_blank">Book Spiritual Anna on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

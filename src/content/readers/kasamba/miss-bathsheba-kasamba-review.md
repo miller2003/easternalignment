@@ -116,6 +116,5 @@ Her speed changes the equation further. A reader whose signature is *instant* si
 
 **71,618 readings. Twenty years. 23,229 reviews, 144 complaints.** Miss Bathsheba is what a master of one instrument looks like — and the first 3 minutes are free.
 
-<a href="/go/kasamba-miss-bathsheba/" rel="nofollow sponsored" target="_blank">Book Miss Bathsheba on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

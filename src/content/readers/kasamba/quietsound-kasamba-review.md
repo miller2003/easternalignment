@@ -116,6 +116,5 @@ One practical note: she's US-based and her feed shows steady daily traffic, so o
 
 **64,270 readings. Fifty years of relay. A perfect 5.0 with 126 complaints in twenty-four years.** Quietsound is the reader for people who want to know not just the answer, but who it came from.
 
-<a href="/go/kasamba-quietsound/" rel="nofollow sponsored" target="_blank">Book Quietsound on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

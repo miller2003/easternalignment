@@ -1,6 +1,6 @@
 ---
 title: "Advisor Suzan on Keen Review 2026: The Truth About Her 136,000 Readings"
-seoTitle: "Advisor Suzan on Keen Review 2026: The Truth About Her"
+seoTitle: "Advisor Suzan on Keen Review 2026: 4.98, 136,000 Readings, $9.99/min"
 description: "With over 136,000 readings and a 4.98 rating on Keen, Advisor Suzan is a legend. But is she right for you? We break down her empathic style and who she helps best."
 platformName: "Keen: Advisor Suzan"
 rating: 4.98
@@ -11,11 +11,46 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$9.99/min"
 bestFor: "People who are confused by a partner's mixed signals and want an incredibly fast-connecting, supportive empath to uncover hidden feelings."
 publishDate: '2026-08-13'
+metaDescription: "Advisor Suzan on Keen: 4.98 stars across 136,000+ readings since 2005. $9.99/min clairvoyant empath for love — style, pricing, and honest fit reviewed."
+pros:
+  - "136,000+ readings at 4.98 since 2005 — two decades of sustained top-tier performance"
+  - "Clairvoyant empath who connects fast: clients report accuracy with almost no upfront context"
+  - "Deep love & relationships specialization with an empowerment-focused delivery"
+cons:
+  - "Optimistic highest-outcome framing — critics call it fairy-tale reading; not for doom-seekers"
+  - "$9.99/min sits at the top of Keen's standard band — the $1 trial matters"
+  - "Supportive energy over blunt fatalism; look elsewhere for cold, hard verdicts"
 canonicalUrl: https://easternalignment.com/reviews/keen/advisor-suzan/
 updatedDate: '2026-08-13'
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Advisor Suzan on Keen Review 2026: The Truth About Her 136,000 Readings",
+    "description": "With over 136,000 readings and a 4.98 rating on Keen, Advisor Suzan is a legend. But is she right for you? We break down her empathic style and who she helps best.",
+    "datePublished": "2026-08-13",
+    "dateModified": "2026-08-13",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Keen: Advisor Suzan"
+      }
+    ]
+  }
 ---
-
-# Advisor Suzan on Keen Review 2026: The Truth About Her 136,000 Readings
 
 When a psychic advisor crosses the 100,000-reading mark, they are no longer just participating in the industry—they are defining it. Advisor Suzan has been a fixture on the Keen platform since 2005. Today, she sits at an astonishing **136,000+ readings** while maintaining a staggering **4.98-star average** across over 42,000 written reviews. 
 
@@ -76,5 +111,3 @@ When you book her, you are paying for *speed of connection*. Cheaper advisors of
 Advisor Suzan is a Keen institution for a reason. Her ability to consistently tap into the complex emotional undercurrents of romantic relationships has kept her at the top of the platform for nearly 20 years. 
 
 If you are a new user on Keen, you can utilize the **first 5 minutes for $1** introductory offer. This is the perfect window to test her empathic connection. Call in, provide just the first name of your person of interest, and let her tune in. Once she accurately describes their current energy, you will know exactly why she has 136,000 readings under her belt.
-
-<a href="/go/keen-advisor-suzan/" rel="nofollow sponsored" target="_blank">Book Advisor Suzan on Keen - First 5 Minutes for $1</a>

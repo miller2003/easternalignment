@@ -112,6 +112,5 @@ The first session is effectively free. Bring her the exact question — *is he l
 
 **20,578 readings. Eight years. A 4.8 with the misses left in.** Advisor Vanessa is what a straight-shooter looks like when the specialty is the hardest questions — and right now the first session is effectively free.
 
-<a href="/go/purple-garden-advisor-vanessa/" rel="nofollow sponsored" target="_blank">Ask Vanessa the Hard Question - $30 Free Credit at Purple Garden</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

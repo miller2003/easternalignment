@@ -77,6 +77,7 @@ entities:
 ---
 
 
+
 There is a particular kind of Purple Garden profile that promises clarity and delivers weather. Chloe — listed on the platform as Chloe Psychic UK — is the opposite. She has been reading since 2016, she is based in England, and her whole posture is summed up in one word she puts in her own tags: HONEST. Over 8,900 readings later, at a steady 4.8 stars, that honesty is the product. If you want to be comforted, she is not your first call. If you want to be told the truth, she is one of the cleaner bets on the platform.
 
 ## Honesty as a method (and why it scares some people off)
@@ -106,6 +107,8 @@ New clients get $30 in credit on a first purchase — enough for roughly seven o
 ---
 
 **Over 8,900 readings. A steady 4.8. UK-based, honest, and uninterested in fairy tales.** Chloe Psychic UK's value is a reader who will tell you the hard thing when the hard thing is what is true. For clients done with being soothed, that is the whole point.
+
+
 
 **More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Psychic Shirla](/reviews/purple-garden/psychic-shirla/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 

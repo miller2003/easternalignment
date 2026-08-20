@@ -1,0 +1,72 @@
+---
+/**
+ * ReaderEndCTA.astro — Auto-deployed end-of-article nudge + affiliate link
+ * for individual reader-review pages (English site).
+ *
+ * Problem it solves: ~60% of affiliate "conversions" were register + claim-offer
+ * but NO first paid reading. The leak is choice-paralysis + a free-only mindset.
+ * This nudge pushes the reader to actually DO a first (discounted) paid reading
+ * for ~the price of a coffee, instead of endlessly searching — and it ships on
+ * every reader page with zero manual authoring.
+ *
+ * Variant pool: 6 same-meaning closers, selected deterministically by a hash of
+ * the page seed so each reader page shows a DIFFERENT one (avoids repetition
+ * across pages a visitor reads) yet stays stable per page (consistent for
+ * returning visitors + fair per-variant measurement).
+ *
+ * Styling: the nudge is a plain <p> rendered inside .prose, so it inherits body
+ * typography exactly (font-size / line-height / color / margin) — it reads as
+ * part of the article, not a boxed widget.
+ */
+interface Props {
+  affiliateUrl: string;
+  readerLabel: string;
+  platformKey: 'keen' | 'kasamba' | 'purple-garden';
+  seed?: string;
+}
+
+const { affiliateUrl, readerLabel, platformKey, seed } = Astro.props;
+
+// Six same-meaning closers, each leading from a different angle so a reader who
+// visits several pages never feels they are reading a recycled line.
+const VARIANTS: string[] = [
+  'All it takes is about the price of a coffee, combined with the new-client offer on this page, to get a proper introductory reading — instead of endlessly searching. There’s no such thing as the best reader, only the right one for you. Starting beats searching.',
+  'Stop scrolling through reader after reader. For less than the cost of a coffee — and with the new-client offer right here — you can have a real first reading today. There is no perfect reader waiting to be found; there’s only the one who fits you. Begin, and the rest follows.',
+  'There’s no “best” psychic to keep hunting for — only the one who’s right for you. Spend what you’d pay for a coffee, use the new-client offer on this page, and do your first proper reading instead of second-guessing. Starting is what matters.',
+  'You don’t need to have it all figured out before you begin. About the price of a coffee, plus the new-client offer below, is enough to sit down for a genuine introductory reading rather than keep wondering. No reader is the best for everyone — just the right one for you. So start.',
+  'A first real reading costs about what a coffee does — especially with the new-client offer on this page. Skip the endless comparison; there’s no perfect reader, only your match. Starting beats searching.',
+  'Endlessly searching won’t find you the perfect reader — because there isn’t one, only the right fit. For roughly a coffee’s price and the new-client offer here, you could be having your first proper reading right now instead of reading another review. Starting beats searching.',
+];
+
+function hashSeed(s: string): number {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) + h + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+const seedKey = (seed || readerLabel || affiliateUrl || '').trim();
+const variantIndex = hashSeed(seedKey) % VARIANTS.length;
+const nudgeCopy = VARIANTS[variantIndex];
+
+// Standard per-platform end-link text (matches the site's established promo
+// language). Centralised here so every reader page — existing and future —
+// renders a consistent, conversion-oriented close without manual authoring.
+function endLinkText(name: string, platform: string): string {
+  if (platform === 'keen') return `Book ${name} on Keen - First 5 Minutes for $1`;
+  if (platform === 'kasamba') return `Book ${name} on Kasamba - First 3 Minutes Free + 50% Off`;
+  return `Chat with ${name} on Purple Garden - Claim Your $30 Free Credit`;
+}
+
+const linkText = endLinkText(readerLabel, platformKey);
+---
+
+<p class="reader-cta-nudge" data-cta-copy={variantIndex + 1}>{nudgeCopy}</p>
+<a
+  href={affiliateUrl}
+  rel="nofollow sponsored"
+  target="_blank"
+  data-cta-source="reader-end"
+  data-cta-copy={variantIndex + 1}
+>{linkText}</a>

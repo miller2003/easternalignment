@@ -116,6 +116,5 @@ Why so cheap? Her model is clearly relationship, not transaction — priced for 
 
 **69,218 readings. Twelve years. An ordained pastor who reads the love others won't name — for $2.99 a minute.** The first 3 minutes are free, and the door is explicitly open to everyone.
 
-<a href="/go/kasamba-divine-soul/" rel="nofollow sponsored" target="_blank">Book Divine Soul on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

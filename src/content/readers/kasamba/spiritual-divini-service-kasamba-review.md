@@ -13,7 +13,7 @@ pricing: "Chat $1.99/min promo (reg. $3.99) · Voice $19.99/min promo (reg. $39.
 bestFor: "Clients who suspect other readers have been telling them what they want to hear — and want a direct, frank answer on love or life at entry-level chat pricing"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/spiritual-divini-service-kasamba-review/
 seoTitle: "Spiritual Divini Service Kasamba Review 2026: 4.7, $1.99/min"
-metaDescription: "Spiritual Divini Service: 95,681 Kasamba readings since 2007, 4.7 stars, 3rd-generation psychic."
+metaDescription: "Spiritual Divini Service on Kasamba: 95,681 readings since 2007, 4.7 stars, chat at $1.99/min promo (reg. $3.99) — with a voice rate 10x higher."
 highlights:
   - "95,681 readings since 2007 — nearly two decades at top volume"
   - "Third-generation psychic: her mother and grandmother read before her"
@@ -115,6 +115,5 @@ What it means for you is simple: **the entire value case is chat.** At the $1.99
 
 **95,681 readings. Nineteen years. Three generations. And a 4.7 earned the honest way.** At $1.99/min in chat, the truth has rarely been this cheap — she's online now, and the first 3 minutes are free.
 
-<a href="/go/kasamba-spiritual-divini-service/" rel="nofollow sponsored" target="_blank">Book Spiritual Divini Service on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

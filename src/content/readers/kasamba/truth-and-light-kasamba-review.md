@@ -119,6 +119,5 @@ If budget is your primary constraint, book a $1.99–$5.49 reader from our other
 
 **87,202 readings. Twenty-one years. A perfect 5.0 and a psychotherapy diploma.** Truth and Light is what happens when a gifted reader also learns the science of helping people hear the truth. The first three minutes are free — the rest is up to how much the question is worth.
 
-<a href="/go/kasamba-truth-and-light/" rel="nofollow sponsored" target="_blank">Book Truth and Light on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

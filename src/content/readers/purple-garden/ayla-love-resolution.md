@@ -73,6 +73,7 @@ entities:
 ---
 
 
+
 Ayla is the kind of advisor you call when you're not shopping for a prophecy — you're shopping for the truth. On Purple Garden she goes by "Ayla Love Resolution," and after nearly 15,000 readings since 2021 at a steady 4.8 stars, she has earned the platform's Top Rated tag without ever promising to fix your love life for you. That tension is the single most useful thing to understand before you book her: the quality that makes her less satisfying to some clients is the exact quality that makes her trustworthy.
 
 ## She doesn't pick one lane — she triangulates
@@ -102,6 +103,8 @@ Purple Garden now backs your first session with a given advisor with a satisfact
 ---
 
 **Nearly 15,000 readings. A steady 4.8. From $2.99/min.** Ayla isn't the reader who tells you what you came to hear. For the people who've had enough of being soothed, that's precisely the point.
+
+
 
 **More Purple Garden reviews:** [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 

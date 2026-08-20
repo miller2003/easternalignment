@@ -13,7 +13,7 @@ pricing: "$4.99/min (verify on live profile) · 3 free minutes + 50% off for new
 bestFor: "Soulmate questions and relationship pain where you need healing-oriented guidance, not just prediction — especially after breakups, betrayal, or emotional exhaustion"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/intuitive-counselor-kasamba-review/
 seoTitle: "Intuitive Counselor Kasamba Review 2026: 4.9, $4.99/min"
-metaDescription: "Intuitive Counselor: 68,717 Kasamba readings since 2007, 4.9 stars. Soulmate tarot + 'wounded soul' healing."
+metaDescription: "Intuitive Counselor on Kasamba: 68,717 readings since 2007, 4.9 stars, $4.99/min. A soulmate-tarot and emotional-healing specialist."
 highlights:
   - "68,717 readings since 2007 — nineteen years at 4.9"
   - "Distinctive focus: 'see into the wounded soul' — healing for stress, distress & trauma"
@@ -110,6 +110,5 @@ At our audited **$4.99/min** (confirm the live rate), a focused 15-minute sessio
 
 **68,717 readings. Nineteen years. A 4.9 with the negative reviews examined and answered.** Intuitive Counselor is the booking for the question that hurts — and the first 3 minutes are free.
 
-<a href="/go/kasamba-intuitive-counselor/" rel="nofollow sponsored" target="_blank">Book Intuitive Counselor on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

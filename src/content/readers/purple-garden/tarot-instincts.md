@@ -125,7 +125,6 @@ A 15-minute session at standard rate is covered entirely by the new-client credi
 
 For the tarot-and-numerology combination to have room to work, 20–25 minutes is the practical minimum. But even at 20 minutes, the out-of-pocket cost after the credit is under $10. The risk calculus here is among the most favorable on the platform.
 
-<a href="/go/purple-garden-tarot-instincts/" rel="nofollow sponsored" target="_blank">**Claim your $30 credit — your first 15 minutes with Tarot Instincts are free →**</a>
 
 ---
 

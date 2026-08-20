@@ -136,5 +136,3 @@ Purple Garden offers video, voice, and chat. **Video is the right format for thi
 **More Purple Garden reviews:** [Nick](/reviews/purple-garden/nick/) · [PlutonianDust](/reviews/purple-garden/plutoniandust/) · [Truthful Love](/reviews/purple-garden/truthful-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*
-
-<a href="/go/purple-garden-mystic-mark/" rel="nofollow sponsored" target="_blank">Chat with Mystic Mark on Purple Garden</a>

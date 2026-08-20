@@ -104,7 +104,6 @@ Her ratings across Keen's category pages run **4.54 to 4.69** (~82–89% five-st
 
 SYMONNE is 23 years of spiritual depth at a budget price — the reader for the question behind the question. Come ready to hear about your fears, your dreams, and your real motives, and she'll hand you back clarity with next steps attached. The first five minutes cost a dollar.
 
-<a href="/go/keen-symonne/" rel="nofollow sponsored" target="_blank">Book SYMONNE on Keen - First 5 Minutes for $1</a>
 
 ---
 

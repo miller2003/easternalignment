@@ -73,6 +73,7 @@ entities:
 ---
 
 
+
 Most "distinctive method" claims on a psychic platform are marketing gloss. nuwatarot's is unusual enough to be worth a real look: she's an oculomancer — she reads the eyes — and a no-tools psychic medium. On Purple Garden she's built 6,229 readings since 2025 at a perfect 5.0. That's a short track record and a flawless score, which is exactly the combination worth thinking about twice before you book.
 
 ## What "reads the eyes" actually means
@@ -98,6 +99,8 @@ She works by video, voice, or chat, and for an eye-reader the video option is al
 ---
 
 **6,229 readings. Perfect 5.0. Since 2025.** nuwatarot's value is a distinctive, no-tools method at a flawless early rating. For clients curious about oculomancy, she's a unique, low-risk-to-test pick.
+
+
 
 **More Purple Garden reviews:** [Niki Medium](/reviews/purple-garden/niki-medium/) · [Psychic Medium Chloe](/reviews/purple-garden/psychic-medium-chloe/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 

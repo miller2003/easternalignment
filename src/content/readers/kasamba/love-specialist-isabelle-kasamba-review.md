@@ -13,7 +13,7 @@ pricing: "$14.99/min promo (reg. $29.99) chat & voice · 3 free minutes for new 
 bestFor: "High-stakes love situations — will-they-come-back questions, marriage and divorce crossroads, complicated third-party dynamics — where long-arc accuracy justifies a premium rate"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/love-specialist-isabelle-kasamba-review/
 seoTitle: "Love Specialist Isabelle Kasamba Review 2026: 5.0 Stars"
-metaDescription: "Isabelle has 99,057 Kasamba readings since 2005 and a perfect 5.0. Clients verify her predictions years later."
+metaDescription: "Love Specialist Isabelle on Kasamba: 99,057 readings since 2005, a perfect 5.0, and clients returning years later to confirm predictions. $14.99/min promo."
 highlights:
   - "99,057 readings since 2005 — 21 years of top-volume practice at a perfect 5.0"
   - "Long-arc accuracy: clients return years later confirming predictions (divorce, breakups, reconciliations)"
@@ -120,6 +120,5 @@ Promos rotate — confirm the rate shown on her profile before your session. The
 
 **99,057 readings. Twenty-one years. A perfect 5.0, and clients still coming back to confirm she was right.** At the current promo, the most proven love specialist on Kasamba costs less than she has in years — and she's online now.
 
-<a href="/go/kasamba-love-specialist-isabelle/" rel="nofollow sponsored" target="_blank">Book Love Specialist Isabelle on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

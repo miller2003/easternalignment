@@ -144,5 +144,3 @@ For more high-volume options, see our reviews of [The Psychic One](/reviews/keen
 Use the **$1 intro session** as a calibration test. Call or chat in with the shape of your question, then listen. What he surfaces unprompted in those first five minutes is your signal. If you want an elite-rated, two-decade reader who guides rather than lectures, ChosenOne77 is a strong upper-mid choice.
 
 ChosenOne77 has held a 4.94 across 5,800+ ratings since 2006 by being accurate, calm, and consistent. At $6.53/min, that tenure-to-price ratio is hard to argue with.
-
-<a href="/go/keen-chosenone77/" rel="nofollow sponsored" target="_blank">Book ChosenOne77 on Keen - First 5 Minutes for $1</a>

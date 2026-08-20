@@ -8,7 +8,7 @@ affiliateUrl: /go/kasamba-elizabeth/
 avatarUrl: /avatars/kasamba/elizabeth-kasamba-review.jpg
 publishDate: '2026-05-05'
 updatedDate: '2026-08-13'
-customSchema: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Elizabeth Kasamba Review (2026)\",\n  \"reviewBody\": \"Elizabeth is among Kasamba's most experienced advisors — a sixth-generation psychic and certified Reiki Master with 47,000+ readings since 2003 and a 4.8-star average. She works across Tarot, Reiki, and Animal Spirit Guides to deliver readings that combine intuitive precision with genuine healing energy. At $4.99 per minute (intro $2.49), she represents one of the strongest value propositions among top-tier Kasamba advisors.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.8\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sarah\",\n    \"url\": \"https://easternalignment.com/about\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Service\",\n    \"name\": \"Elizabeth\",\n    \"url\": \"https://www.kasamba.com/psychic-reading/readers/elizabeth/\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Kasamba\",\n      \"url\": \"https://www.kasamba.com\"\n    },\n    \"serviceType\": \"Psychic Reading\",\n    \"description\": \"Multi-modality psychic reading and energy healing service combining Reiki, Tarot, and Animal Spirit Guide work, specializing in personal empowerment, love, and life path clarity\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"datePublished\": \"2026-05-09\",\n  \"dateModified\": \"2026-05-09\"\n}\n"
+customSchema: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Elizabeth Kasamba Review (2026)\",\n  \"reviewBody\": \"Elizabeth is among Kasamba's most experienced advisors — a sixth-generation psychic and certified Reiki Master with 47,000+ readings since 2003 and a 4.8-star average. She works across Tarot, Reiki, and Animal Spirit Guides to deliver readings that combine intuitive precision with genuine healing energy. At $4.99 per minute (intro $2.49), she represents one of the strongest value propositions among top-tier Kasamba advisors. Standard rate $4.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.8\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sarah\",\n    \"url\": \"https://easternalignment.com/about\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Service\",\n    \"name\": \"Elizabeth\",\n    \"url\": \"https://www.kasamba.com/psychic-reading/readers/elizabeth/\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Kasamba\",\n      \"url\": \"https://www.kasamba.com\"\n    },\n    \"serviceType\": \"Psychic Reading\",\n    \"description\": \"Multi-modality psychic reading and energy healing service combining Reiki, Tarot, and Animal Spirit Guide work, specializing in personal empowerment, love, and life path clarity\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"datePublished\": \"2026-05-09\",\n  \"dateModified\": \"2026-05-09\"\n}"
 platform: kasamba
 canonicalUrl: https://easternalignment.com/reviews/kasamba/elizabeth-kasamba-review/
 freeOffer: 3 free minutes + 50% off
@@ -27,7 +27,7 @@ cons:
 - Reading style is highly therapeutic, which may not suit analytical seekers
 - Extremely busy schedule
 seoTitle: 'Elizabeth Kasamba Review (2026): Healing & Empowerment Reader'
-metaDescription: Honest 2026 review of Elizabeth on Kasamba — healing and empowerment focus, pricing, real client patterns, and who should book.
+metaDescription: "Elizabeth on Kasamba: a sixth-generation psychic and Reiki Master with 47,000+ readings since 2003, rated 4.8. $4.99/min (intro $2.49) — honest fit."
 entities:
 - Reiki Healing Psychic
 - Tarot Reading
@@ -35,7 +35,7 @@ entities:
 - Spiritual Guidance Reading
 - Kasamba Psychic
 ---
-# Elizabeth Kasamba Review (2026): Why She's the #1 Rated Psychic on the Platform
+
 
 Being ranked #1 on a platform with over 3,000 advisors means different things depending on how the ranking is measured. In Elizabeth's case, it's not a algorithmic artifact or a marketing push — it's the result of nearly 30 years of practice, 47,000+ readings at a 4.8-star rating, and a reading approach that one client described as helping people "tap into their own personal power and unlock doors in their minds and hearts." That's a different kind of promise from most psychic advisors. I tested her to find out whether the reality matches it.
 
@@ -118,3 +118,7 @@ Elizabeth's reflective pace means the three free minutes will yield one substant
 ### When to Return — and When to Explore a Different Advisor
 
 Return sessions with Elizabeth have a compounding quality — she integrates previous session context in a way that makes each follow-up more targeted than the last. If you found the first session accurate but wanted more depth on the healing or Animal Spirit Guide dimensions, a second session is well worth it; those layers tend to develop more fully once she has established an energetic connection with a client. If the first session didn't resonate, that's useful information: Elizabeth's Reiki-influenced approach isn't universally compatible with every client's energetic makeup, and there's no failure in recognizing that a different advisor serves you better.
+
+---
+
+*Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

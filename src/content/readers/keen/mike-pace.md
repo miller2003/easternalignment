@@ -138,5 +138,3 @@ For broader context on high-volume alternatives, see our reviews of [Readings by
 Use the **$1 intro session** as a calibration test. Call in, give him the bare shape of your question, then stop. What he says in those first five minutes without prompting is your signal. If he lands on something specific about your situation, book a full voice session - but cap your time deliberately, because at $9.99/min the clock is unforgiving.
 
 Mike Pace has earned his Top Advisor tag through two decades and 142,000 readings. The $9.99/min rate is real, and the $100-$300 full session cost is a genuine financial decision. But for clients who want a direct, psychology-informed, prediction-first reader and can absorb the premium, he is among the most consistently rated options active on Keen today.
-
-<a href="/go/keen-mike-pace/" rel="nofollow sponsored" target="_blank">Book Mike Pace on Keen - First 5 Minutes for $1</a>

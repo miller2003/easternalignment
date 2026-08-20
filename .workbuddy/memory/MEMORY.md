@@ -64,3 +64,11 @@
 - 减少「年数/评论数代表什么」的套路化论证段落——数据点到为止，信任建立一次即可。
 - 每篇必须以该解读师的**独特点**为主线（独门方法、履历、niche、评论里的具体细节、价格结构），角度不可复用。
 - 文章再翔实一些：更多 bio 细节、更多真实评论引文、更细的 session 体验描写。
+
+## 读者页结尾 CTA nudge（2026-08-20 上线，减少「注册+领券但不首单付费」aff 漏损）
+- 组件 `src/components/ReaderEndCTA.astro`：6 段同义 nudge 变体池（slug 哈希选段→篇篇不重复且稳定），纯 `<p>` 在 `.prose` 内→100% 继承正文排版（像正文不分框）；下方紧跟按平台自动生成的结尾 CTA 链接（Keen「First 5 Minutes for $1」/ Kasamba「First 3 Minutes Free + 50% Off」/ PG「Claim Your $30 Free Credit」）。
+- 接进 `ReviewLayout.astro`：`.prose` 内 `<slot/>` 之后，仅 `isReaderReview` 时渲染（平台 hub 页不显示）。所有英文读者路由都走 ReviewLayout → 自动获得。
+- 文案锚定「about the price of a coffee」+「配合本页新客优惠做第一次真实付费解读」+「没有最好的解读师只有合适的 / 开始大于一切」。
+- 手写结尾 CTA 已从 `src/content/readers/**/*.md` 全部剥离（`scratch/strip_end_cta.py`，按「最后一条 /go/ 锚点=结尾 CTA」剥离，保留「More reviews / 披露」）。`REVIEW_CONTENT_PROMPT.md` Rule 4 已改为「结尾 CTA 由布局自动生成，作者无需手贴」。
+- 西班牙站 `es/`（EsReviewLayout）未接，如需后续扩展。
+- 构建须本机跑（沙箱 build 卡死）。

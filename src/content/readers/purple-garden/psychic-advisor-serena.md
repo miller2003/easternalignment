@@ -69,6 +69,7 @@ entities:
 ---
 
 
+
 Serena is the rare Purple Garden advisor whose reputation precedes the platform. She's an internationally known psychic medium who's been reading since 2005, works without tools (claircognizance and clairvoyance — a "clear knowingness" rather than a deck), and reads auras (her aura work has even been featured in Cosmopolitan). On Purple Garden she holds a 4.9. The thing to understand about her is simple: she tells it like she sees it, and she's proud of that.
 
 ## Two decades, no deck
@@ -94,6 +95,8 @@ Two practical notes. First, she's on Purple Garden part-time alongside a full-ti
 ---
 
 **Reading since 2005. Internationally known. 4.9 stars.** Psychic Advisor Serena's value is two decades of tools-free mediumship and the nerve to tell you the truth. For clients who'd rather be clear than coddled, she's a standout.
+
+
 
 **More Purple Garden reviews:** [Niki Medium](/reviews/purple-garden/niki-medium/) · [Psychic Medium Chloe](/reviews/purple-garden/psychic-medium-chloe/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 

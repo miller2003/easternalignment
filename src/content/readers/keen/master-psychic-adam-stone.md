@@ -157,5 +157,3 @@ His "no general readings" stance means preparation pays:
 Master Psychic Adam Stone's record - 113,000 readings since 2012 at 4.88 stars across 19,000 ratings, at $3.99/min - is a standout value on Keen, and the live client record backs it: direct, honest, accurate, with predictions that for many came true. The trade-off is a direct style some find abrupt and arranged-session waits during peak hours.
 
 Use the **$1 intro** to test his chat or call style. If his "honest, insightful guidance" lands for you, he is one of the best-value high-volume advisors on the platform.
-
-<a href="/go/keen-master-psychic-adam-stone/" rel="nofollow sponsored" target="_blank">Book Master Psychic Adam Stone on Keen - First 5 Minutes for $1</a>

@@ -125,6 +125,5 @@ As always: rates rotate. Our verified audit data shows $7.99/min — confirm the
 
 **102,522 readings. Eighteen years. A 4.9 that survived 21,000 written reviews.** Love Psychic Indi is what happens when formal training meets a genuine gift — and right now the first three minutes cost nothing.
 
-<a href="/go/kasamba-love-psychic-indi/" rel="nofollow sponsored" target="_blank">Book Love Psychic Indi on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

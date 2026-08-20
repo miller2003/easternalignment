@@ -150,5 +150,3 @@ Purple Garden supports video, voice, and chat. For a tarot reader, **video gives
 **More Purple Garden reviews:** [Mystic Mark](/reviews/purple-garden/mystic-mark/) · [PlutonianDust](/reviews/purple-garden/plutoniandust/) · [Jackies Tea Tarot](/reviews/purple-garden/jackies-tea-tarot/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*
-
-<a href="/go/purple-garden-nick/" rel="nofollow sponsored" target="_blank">Chat with Nick on Purple Garden</a>

@@ -73,6 +73,7 @@ entities:
 ---
 
 
+
 Most love readers on Purple Garden will tell you what is happening. Psychic Shirla will tell you what is happening and then hand you the map for what to do about it. She brands herself a Master Love Specialist and works as a relationship coach — and since 2020 she has stacked over 15,000 readings at a steady 4.8 stars, from $4.49/min. If you have ever finished a reading feeling clarity but no direction, she is the correction to that experience.
 
 ## She hands you the map, not just the weather
@@ -102,6 +103,8 @@ New clients get $30 in credit on a first purchase — about six or seven minutes
 ---
 
 **Over 15,000 readings. A steady 4.8. From $4.49/min.** Psychic Shirla's value is love clarity with a coach's traction, proven at volume. For relationship guidance you can actually act on, she is a strong mid-priced pick.
+
+
 
 **More Purple Garden reviews:** [Truthful love](/reviews/purple-garden/truthful-love/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 

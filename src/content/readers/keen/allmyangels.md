@@ -144,5 +144,3 @@ For more high-volume options, see our reviews of [The Psychic One](/reviews/keen
 Use the **$1 intro session** as a calibration test. Call or chat in, give her the shape of your question, then stop and listen. What she picks up unprompted in those first five minutes is your signal. If you want a steady, warm intuitive who connects the dots across your life rather than delivering one-line verdicts, she is a safe, well-rated mid-tier choice.
 
 AllMyAngels has held a 4.88 across 13,000 ratings for over twenty years by being consistent and kind. At $6.99/min, that dependability is the product you are paying for.
-
-<a href="/go/keen-allmyangels/" rel="nofollow sponsored" target="_blank">Book AllMyAngels on Keen - First 5 Minutes for $1</a>

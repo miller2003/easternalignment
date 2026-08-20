@@ -131,5 +131,3 @@ For broader context, see our reviews of [Readings by Kelly777](/reviews/keen/rea
 Use the **$1 intro session** as a calibration test. Call in, give him the bare shape of your question, then stop. What he says in those first five minutes without prompting is your signal. If he lands on something specific, the 138,000-reading track record is being earned live - book a full voice session.
 
 Gabriel the Messenger has held a 4.94 across 23,000 ratings and 138,000+ readings on Keen. The $8.99/min rate is real, but for clients who want a no-tools, relationship-focused reader with a proven prediction history, he is among the most consistently rated options active on the platform.
-
-<a href="/go/keen-gabriel-the-messenger/" rel="nofollow sponsored" target="_blank">Book Gabriel the Messenger on Keen - First 5 Minutes for $1</a>

@@ -118,6 +118,5 @@ One logistics note that matters: she keeps human hours. Her schedule runs Monday
 
 **74,229 readings. Twenty-two years. A 4.9 built without a single invented timeline.** Ambers Light is proof that in this industry, honesty isn't the hard sell — it's the longest one. Her first 3 minutes are free when she's online.
 
-<a href="/go/kasamba-ambers-light/" rel="nofollow sponsored" target="_blank">Book Ambers Light on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

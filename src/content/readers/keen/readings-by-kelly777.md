@@ -205,9 +205,3 @@ Go to her main Psychic Readings profile and use the **Arrange** function to sche
 If you're a new Keen user, your first 5 minutes cost $1. Treat it as a calibration window. Give her a focused question with real stakes  -  something you know the truth about internally, so you can assess whether her read lands. If it does, schedule a full session. If it doesn't, you've spent a dollar and learned something useful.
 
 Kelly777's two decades on this platform, at this volume, with this rating, represent the kind of track record that doesn't need a strong bio to justify it. The numbers do the talking she doesn't bother to.
-
-
-
-
-
-<a href="/go/keen-kelly/" rel="nofollow sponsored" target="_blank">Book Readings by Kelly777 on Keen - First 5 Minutes for $1</a>

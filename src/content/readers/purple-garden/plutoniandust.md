@@ -154,5 +154,3 @@ For the astrology dimension to be at its richest, come prepared with your **birt
 **More Purple Garden reviews:** [Nick](/reviews/purple-garden/nick/) · [Mystic Mark](/reviews/purple-garden/mystic-mark/) · [Athina Mystic](/reviews/purple-garden/athina-mystic/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*
-
-<a href="/go/purple-garden-plutoniandust/" rel="nofollow sponsored" target="_blank">Chat with PlutonianDust on Purple Garden</a>

@@ -57,7 +57,7 @@ cons:
 - "Long tenure can mean high demand and variable availability"
 ---
 
-# Lady India on Keen Review 2026: Two Decades of 'Uncovering Truth' — What the Client Record Shows
+
 
 Most Keen advisors have been on the platform for a handful of years. Lady India has been here since 2001 — she started reading clients on Keen before the first iPhone shipped. Two decades is the one metric on a psychic marketplace that can't be manufactured: anyone can buy a polished profile, but almost no one keeps a base of repeat callers for twenty years without delivering something real. Her own tagline says it plainly — "Uncovering Truth Since 2001" — and the live client record suggests she means it.
 
@@ -126,5 +126,3 @@ For other long-tenured options, compare [Eli Casey](/reviews/keen/eli-casey/) (s
 Lady India's published record — on Keen since 2001, $8.99/min, with live client reviews that show a genuine repeat-caller pattern and independent coverage confirming her time-frame and love/life focus — is a credible signal of a trusted long-term Keen advisor. The earlier gap (no individually attributed client voices) is now filled with sourced reviews, including an honest negative one.
 
 The one caveat is price: at $8.99/min, the value depends on wanting her specific direct style. Start with the **$1 intro** to experience her "Uncovering Truth" approach directly. If her directness lands — as it did for the client who called back twice in one summer — a full call or chat session is a reasonable mid-premium booking.
-
-<a href="/go/keen-lady-india/" rel="nofollow sponsored" target="_blank">Book Lady India on Keen - First 5 Minutes for $1</a>

@@ -1,7 +1,6 @@
 ---
-title: 'Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse
-seoTitle: "Arradaza on Keen Review 2026: 25 Years, 86,000 Readings,"
-  Tool Set I''ve Seen on This Platform  -  An Honest Assessment'
+title: 'Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse Tool Set I''ve Seen on This Platform - An Honest Assessment'
+seoTitle: "arradaza Keen Review 2026: 4.93 Stars, $5.99/min"
 description: A third-party review of Arradaza on Keen  -  covering her five-tool reading
   method, 25-year track record, the '98% accuracy' claim, what real clients say, and
   who gets the most value at $5.99/min.
@@ -46,9 +45,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: Honest review of Arradaza on Keen  -  4.93 stars  26K ratings, Tarot
-  + Cartomancy + Numerology + Astrology at $5.99/min. The 98% accuracy claim examined
-  honestly.
+metaDescription: "Arradaza on Keen: a 4.93 across 26K ratings and a five-tool method refined over 25 years. $5.99/min — the '98% accuracy' claim and honest fit."
 metaTitle: Arradaza on Keen Review 2026 | 86K Readings, 5 Tools, Direct Style Assessed
 canonicalUrl: https://easternalignment.com/reviews/keen/arradaza/
 highlights:
@@ -188,8 +185,3 @@ Phone or chat: your call. If you're asking about something emotionally charged, 
 Arrive with your question already framed. One sentence, one focal point. Given how many tools she has available, telling her what dimension you want to explore  -  *"I want to understand the pattern in this relationship, not just what happens next"*  -  will direct her toward the right combination of systems for your actual need rather than defaulting to one tool.
 
 Her 25 years on this platform, with a 23-year return client on record, aren't credentials she's claimed. They're outcomes other people produced by choosing to come back. That's the only metric that actually holds.
-
-
-
-
-<a href="/go/keen-arradaza/" rel="nofollow sponsored" target="_blank">Book Arradaza on Keen - First 5 Minutes for $1</a>

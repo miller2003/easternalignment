@@ -122,6 +122,5 @@ The first session is effectively free. Bring her the one question you've been ca
 
 **25,083 readings. Five generations. A license, and the boundaries to match.** Psychic Jeanne is what a serious, honest reader looks like when the specialty is your hardest season — and right now the first session is effectively free.
 
-<a href="/go/purple-garden-psychic-jeanne/" rel="nofollow sponsored" target="_blank">Ask Jeanne Your One Question - $30 Free Credit at Purple Garden</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

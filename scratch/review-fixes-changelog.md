@@ -1,0 +1,103 @@
+# Review fixes changelog (2026-08-20),,Files modified: 58,- **kasamba/advisor-by-jenny-kasamba-review.md**: pros/cons made specific
+- **src/content/readers/kasamba/advisor-by-jenny-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/advisor-by-jenny-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/danielle-psychic-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/danielle-psychic-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/danielle-psychic-kasamba-review.md**: metaDescription 185->128ch
+- **src/content/readers/keen/advisor-suzan.md**: added Article customSchema (layout emits Review)
+- **src/content/readers/keen/advisor-suzan.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/keen/advisor-suzan.md**: metaDescription 0->126ch
+- **kasamba/supernormal-soul-kasamba-review.md**: pros/cons made specific
+- **src/content/readers/kasamba/supernormal-soul-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/supernormal-soul-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/supernormal-soul-kasamba-review.md**: metaDescription 192->152ch
+- **src/content/readers/kasamba/supernormal-soul-kasamba-review.md**: schema reviewBody +rate ($5.99/min)
+- **src/content/readers/kasamba/psychic-satire-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/psychic-satire-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/psychic-satire-kasamba-review.md**: metaDescription 109->110ch
+- **kasamba/invincible-insights-kasamba-review.md**: pros/cons made specific
+- **src/content/readers/kasamba/invincible-insights-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/invincible-insights-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/invincible-insights-kasamba-review.md**: metaDescription 179->121ch
+- **src/content/readers/kasamba/seek-chelle-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/seek-chelle-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/seek-chelle-kasamba-review.md**: metaDescription 106->150ch
+- **src/content/readers/kasamba/seek-chelle-kasamba-review.md**: schema reviewBody +rate ($9.98/min) [inline]
+- **src/content/readers/kasamba/ask-cristina-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/ask-cristina-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/ask-cristina-kasamba-review.md**: schema reviewBody +rate ($2.10/min) [inline]
+- **src/content/readers/kasamba/elizabeth-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/elizabeth-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/elizabeth-kasamba-review.md**: schema reviewBody +rate ($4.99/min) [inline]
+- **src/content/readers/kasamba/psychic-simmi-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/psychic-simmi-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/psychic-simmi-kasamba-review.md**: schema reviewBody +rate ($3.99/min) [inline]
+- **src/content/readers/kasamba/truthful-visions-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/truthful-visions-kasamba-review.md**: inserted body CTA (kasamba)
+- **src/content/readers/kasamba/truthful-visions-kasamba-review.md**: metaDescription 173->149ch
+- **src/content/readers/purple-garden/jackies-tea-tarot.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/jackies-tea-tarot.md**: schema reviewBody +rate ($6.99/min)
+- **src/content/readers/purple-garden/adam-africa.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/athina-mystic.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/ayla-love-resolution.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/empathic-intuitive-marcus.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/fanny-dalfiume.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/lejla-kristal.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/nuwatarot.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/psychic-advisor-serena.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/psychic-medium-chloe.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/psychic-shirla.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/satie-readings.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/tarot-by-elena.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/tarot-withh-love.md**: inserted body CTA (purple-garden)
+- **src/content/readers/purple-garden/twin-flame-specialist-aria.md**: inserted body CTA (purple-garden)
+- **src/content/readers/keen/love-psychic-victoria-sands-keen-review-2026.md**: added Article customSchema (layout emits Review)
+- **src/content/readers/keen/david7.md**: seoTitle set: David7 Keen Review 2026: 4.9 Stars, $6.99/min
+- **src/content/readers/keen/david7.md**: added metaDescription (142ch): An honest third-party review of David7 on Keen - covering hi...
+- **src/content/readers/keen/eli-casey.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/keen/flora-knows-all-keen-review-2026.md**: added Article customSchema (layout emits Review)
+- **src/content/readers/keen/psychic-suzen-on-keen-review-2026.md**: added Article customSchema (layout emits Review)
+- **src/content/readers/keen/psychicreader19622-raymond-keen-review-2026.md**: added Article customSchema (layout emits Review)
+- **src/content/readers/kasamba/master-enigma-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/master-enigma-kasamba-review.md**: metaDescription 181->130ch
+- **src/content/readers/kasamba/master-enigma-kasamba-review.md**: schema reviewBody +rate ($5.99/min)
+- **src/content/readers/kasamba/psychic-safina-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/psychic-safina-kasamba-review.md**: metaDescription 203->125ch
+- **src/content/readers/kasamba/psychic-safina-kasamba-review.md**: schema reviewBody +rate ($7.99/min)
+- **src/content/readers/kasamba/sweet-spirit-of-love-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/sweet-spirit-of-love-kasamba-review.md**: metaDescription 208->145ch
+- **src/content/readers/kasamba/sweet-spirit-of-love-kasamba-review.md**: schema reviewBody +rate ($5.49/min)
+- **src/content/readers/keen/arradaza.md**: seoTitle set: arradaza Keen Review 2026: 4.93 Stars, $5.99/min
+- **src/content/readers/keen/c-garrett.md**: seoTitle set: C Garrett Keen Review 2026: 4.84 Stars, $4.89/min
+- **src/content/readers/keen/c-garrett.md**: added metaDescription (148ch): A third-party review of C Garrett on Keen - unpacking her 75...
+- **src/content/readers/keen/gina-marie.md**: seoTitle set: Gina Marie Keen Review 2026: 4.7 Stars, $6.99/min
+- **src/content/readers/keen/gina-marie.md**: metaDescription 169->120ch
+- **src/content/readers/keen/lady-india.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/keen/master-sher.md**: seoTitle set: Master Sher Keen Review 2026: 4.8 Stars, $4.29/min
+- **src/content/readers/keen/master-sher.md**: added metaDescription (129ch): An in-depth third-party review of Master Sher on Keen - cove...
+- **src/content/readers/keen/regina-jacks.md**: seoTitle set: Regina Jacks Keen Review 2026: 4.8 Stars, $3.59/min
+- **src/content/readers/keen/regina-jacks.md**: metaDescription 171->148ch
+- **src/content/readers/keen/the-psychic-one.md**: seoTitle set: the psychic one Keen Review 2026: 4.6 Stars, $3.92/min
+- **src/content/readers/keen/the-psychic-one.md**: metaDescription 170->141ch
+- **src/content/readers/kasamba/cosmic-fusion-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/cosmic-fusion-kasamba-review.md**: metaDescription 209->151ch
+- **src/content/readers/kasamba/david-james-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/david-james-kasamba-review.md**: metaDescription 203->123ch
+- **src/content/readers/kasamba/golden-eye-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/golden-eye-kasamba-review.md**: metaDescription 192->116ch
+- **src/content/readers/kasamba/immense-spark-n-au-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/immense-spark-n-au-kasamba-review.md**: metaDescription 204->134ch
+- **src/content/readers/kasamba/love-stefans-psychic-soul-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/love-stefans-psychic-soul-kasamba-review.md**: metaDescription 188->139ch
+- **src/content/readers/kasamba/psychic-yazmin-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/kasamba/psychic-yazmin-kasamba-review.md**: metaDescription 182->116ch
+- **src/content/readers/kasamba/wisdom-and-love-kasamba-review.md**: removed duplicate in-body H1 (+bolded lede name)
+- **src/content/readers/keen/ask-fran.md**: seoTitle set: Ask Fran Keen Review 2026: 4.6 Stars, $2.99/min
+- **src/content/readers/keen/intuitive-azzy.md**: seoTitle set: Intuitive Azzy Keen Review 2026: 4.7 Stars, $2.22/min
+- **src/content/readers/kasamba/best-psychic-readings-kasamba-review.md**: metaDescription 94->151ch
+- **src/content/readers/kasamba/divine-master-kasamba-review.md**: metaDescription 117->125ch
+- **src/content/readers/kasamba/intuitive-counselor-kasamba-review.md**: metaDescription 108->132ch
+- **src/content/readers/kasamba/love-specialist-isabelle-kasamba-review.md**: metaDescription 110->127ch
+- **src/content/readers/kasamba/raven-franks-kasamba-review.md**: metaDescription 90->137ch
+- **src/content/readers/kasamba/spiritual-divini-service-kasamba-review.md**: metaDescription 96->144ch
+- **src/content/readers/purple-garden/emmanuelle-berger.md**: metaDescription 109->150ch

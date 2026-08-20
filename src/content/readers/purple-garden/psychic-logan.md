@@ -104,7 +104,6 @@ Expect demand: founding advisor, perfect score, frequent BUSY status. Off-peak s
 
 Psychic Logan has been answering Purple Garden's hardest question — *what am I doing with my life* — since the platform was young. 64,955 readings, eleven years, a perfect 5.0, and an independent endorsement to close the case: for life path, destiny, and love, this is a founding advisor at a mid-tier price.
 
-<a href="/go/purple-garden-psychic-logan/" rel="nofollow sponsored" target="_blank">Chat with Psychic Logan on Purple Garden - Claim Your $30 Credit</a>
 
 ---
 

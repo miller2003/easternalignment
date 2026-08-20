@@ -119,6 +119,5 @@ He was OFFLINE when we checked — expected for a 24-year veteran whose regulars
 
 **66,996 readings. Twenty-four years. A perfect 5.0 — and a Library of Congress call number.** The Fruno is what happens when a master of two worlds picks up the cards. The first 3 minutes are free.
 
-<a href="/go/kasamba-the-fruno/" rel="nofollow sponsored" target="_blank">Book The Fruno on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

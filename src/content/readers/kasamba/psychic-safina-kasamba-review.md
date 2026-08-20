@@ -12,7 +12,7 @@ pricing: "Chat & Voice $7.99/min · 3 free minutes"
 bestFor: "People at a crossroads — a career transition, a relationship fork — who want a multi-method reader (Tarot + Astrology + intuition) with a lineage behind her"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/psychic-safina-kasamba-review/
 seoTitle: "Psychic Safina Kasamba Review 2026: 59,565 Readings, 4.9 Stars, $7.99/min"
-metaDescription: "Psychic Safina: third-generation psychic, 59,565 Kasamba readings, a 4.9, $7.99/min flat. Her great-grandmother's ragged Tarot deck, the career-transition 'guiding light' review, and who should book her."
+metaDescription: "Psychic Safina on Kasamba: 59,565 readings since 2007, a 4.9, and a third-generation psychic whose great-grandmother read a ragged Tarot deck. $7.99/min."
 highlights:
   - "59,565 readings since 2007 — a 4.9 sustained over nearly two decades"
   - "Third-generation psychic; great-grandmother read a ragged Tarot deck to staggering accuracy"
@@ -38,7 +38,7 @@ customSchema: |
     "@context": "https://schema.org",
     "@type": "Review",
     "name": "Psychic Safina Kasamba Review (2026): 59,565 Readings, 4.9 Stars",
-    "reviewBody": "Psychic Safina is a third-generation psychic with 59,565 Kasamba readings since 2007 and a 4.9, blending Tarot, Astrology, and intuition. Her great-grandmother's ragged Tarot deck, the career-transition review, and who should book.",
+    "reviewBody": "Psychic Safina is a third-generation psychic with 59,565 Kasamba readings since 2007 and a 4.9, blending Tarot, Astrology, and intuition. Her great-grandmother's ragged Tarot deck, the career-transition review, and who should book. Standard rate $7.99/min.",
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": "4.9",
@@ -65,7 +65,7 @@ customSchema: |
   }
 ---
 
-# Psychic Safina Kasamba Review (2026): A Ragged Tarot Deck, a Third-Generation Gift, and a Reader People Call a 'Guiding Light'
+
 
 Every psychic profile has an origin story. Safina's is the one we kept thinking about.
 
@@ -121,6 +121,5 @@ The first 3 minutes are free. Bring her the specific question you've been avoidi
 
 **59,565 readings. A 4.9 with the misses left in. A great-grandmother's ragged Tarot deck.** Psychic Safina is what three generations of inherited clarity looks like when it lands on your specific question — and right now the first 3 minutes cost nothing, and the crossroads you're standing at isn't getting any clearer on its own.
 
-<a href="/go/kasamba-safina/" rel="nofollow sponsored" target="_blank">Ask Safina Your Question - 3 Free Minutes at Kasamba</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

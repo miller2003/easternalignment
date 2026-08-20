@@ -1,6 +1,6 @@
 ---
 title: "Advisor by Jenny Kasamba Review (2026): MBA-Turned-Psychic Love Reader With 50,000+ Sessions"
-description: "Review of Advisor by Jenny on Kasamba — a natural-born psychic and tarot reader with an MBA, 50,170 readings since 2008, from $1.99/min. Method, real quotes, and fit."
+description: "Review of Advisor by Jenny on Kasamba — a natural-born psychic and tarot reader with an MBA, 50,170 readings since 2008. Chat $3.99/min, voice $5.99/min (promo from $1.99). Method, real quotes, and fit."
 platformName: "Kasamba: Advisor by Jenny"
 rating: 4.7
 verdict: "Advisor by Jenny is an unusual combination — an MBA and computer-science graduate who is also a natural-born psychic and tarot reader — with 50,170 readings since 2008 and some of the lowest promo rates on Kasamba."
@@ -15,8 +15,8 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Review",
-    "name": "Advisor by Jenny Kasamba Review (2026): 50,170 Readings, from $1.99/min",
-    "reviewBody": "Review of Advisor by Jenny on Kasamba — a natural-born psychic and tarot reader with an MBA, 50,170 readings since 2008, from $1.99/min. Method, real quotes, and fit.",
+    "name": "Advisor by Jenny Kasamba Review (2026): 50,170 Readings, $3.99/min Chat",
+    "reviewBody": "Review of Advisor by Jenny on Kasamba — a natural-born psychic and tarot reader with an MBA, 50,170 readings since 2008. Chat $3.99/min, voice $5.99/min (promo from $1.99). Method, real quotes, and fit.",
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": "4.7",
@@ -56,20 +56,20 @@ customSchema: |
   }
 platform: kasamba
 canonicalUrl: https://easternalignment.com/reviews/kasamba/advisor-by-jenny-kasamba-review/
-seoTitle: "Advisor by Jenny Kasamba Review (2026): 50,170 Readings, from $1.99/min"
-metaDescription: "Advisor by Jenny on Kasamba: a natural-born psychic and tarot reader with an MBA, 50,170 readings since 2008. We review her affordable love-readings style, real quotes, and honest fit."
+seoTitle: "Advisor by Jenny Kasamba Review (2026): 50,170 Readings, $3.99/min Chat"
+metaDescription: "Advisor by Jenny on Kasamba: an MBA-turned-psychic with 50,170 readings since 2008. Chat $3.99/min, promo from $1.99 — method, real quotes, and honest fit."
 highlights:
 - "MBA + computer-science degrees alongside natural psychic gifts"
 - "50,170 readings since 2008 as a trusted Kasamba advisor"
 - "Promo chat rates from $1.99/min"
 pros:
-- "Rare analytical + intuitive blend"
-- "Very affordable promo pricing"
-- "10+ years on the platform"
+- "MBA + computer-science background brings structured, actionable advice to love readings"
+- "50,170 readings since 2008 at promo rates from $1.99/min — rare experience-per-dollar value"
+- "18 years on Kasamba with visibly loyal repeat clients"
 cons:
-- "4.7 rating below the 5.0 leaders"
-- "Promo rates are time-limited"
-- "Primarily love/relationship focused"
+- "4.7 rating sits below the perfect-5.0 tier if you sort strictly by score"
+- "Promo rates ($1.99–$2.99) are time-limited; standard $3.99 chat / $5.99 voice applies after"
+- "Love-centred focus; weaker fit for career or finance questions"
 entities:
 - "Kasamba"
 - "Advisor by Jenny"
@@ -77,9 +77,9 @@ entities:
 - "Tarot Reader"
 ---
 
-# Advisor by Jenny Kasamba Review (2026): MBA-Turned-Psychic Love Reader With 50,000+ Sessions
 
-Advisor by Jenny is one of the more interesting profiles on Kasamba: she holds a master’s in business administration and a bachelor’s in computer science, yet describes herself as a natural-born psychic and tarot reader. That analytical-plus-intuitive combination shows in her readings, and 50,170 of them since 2008 suggest clients value the mix. At promo rates from $1.99/min, she is also one of the cheaper experienced readers.
+
+**Advisor by Jenny** is one of the more interesting profiles on Kasamba: she holds a master’s in business administration and a bachelor’s in computer science, yet describes herself as a natural-born psychic and tarot reader. That analytical-plus-intuitive combination shows in her readings, and 50,170 of them since 2008 suggest clients value the mix. At promo rates from $1.99/min, she is also one of the cheaper experienced readers.
 
 ---
 
@@ -120,6 +120,8 @@ New Kasamba clients get three free minutes with Advisor by Jenny. At her promo r
 ---
 
 **50,170 readings. MBA + natural psychic. From $1.99/min.** Advisor by Jenny is proof that an analytical mind and intuitive gifts aren’t opposites — and that experience doesn’t have to be expensive. For affordable relationship clarity, she’s a smart pick.
+
+
 
 **More Kasamba reviews:** [Invincible Insights](/reviews/kasamba/invincible-insights-kasamba-review/) · [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
 

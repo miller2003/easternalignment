@@ -136,5 +136,3 @@ For more high-volume options, see our reviews of [Eli Casey](/reviews/keen/eli-c
 Use the **$1 intro session** as a calibration test. Call or chat in with one direct question, then listen. What she picks up unprompted is your signal - and a $2.58 rate means the test costs almost nothing. If you want an affordable, sharp love read and can take the truth straight, Chloe is a reasonable budget bet with a 25-year paper trail.
 
 Chloe has built 36,000 readings at $2.58/min by being direct and detailed. The 4.56 average tells you the fit is reader-dependent - go in with tight questions and realistic expectations.
-
-<a href="/go/keen-chloe-has-your-love-insights/" rel="nofollow sponsored" target="_blank">Book Chloe on Keen - First 5 Minutes for $1</a>

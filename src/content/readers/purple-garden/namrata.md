@@ -108,7 +108,6 @@ Arrive with the full context of what's actually going on, not just the surface q
 - Willingness to let the session develop at a considered pace
 - A clear statement of what outcome or clarity you actually need, not just a description of the situation
 
-<a href="/go/purple-garden-namrata/" rel="nofollow sponsored" target="_blank">**Start your session with Namrata — $30 free credit for new Purple Garden clients →**</a>
 
 ---
 

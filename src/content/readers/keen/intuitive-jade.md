@@ -146,5 +146,3 @@ For more high-volume options, see our reviews of [The Psychic One](/reviews/keen
 Use the **$1 intro session** as a calibration test. Call or chat in with just a name and a one-line question, then listen. What she surfaces unprompted in those first five minutes is your signal. If you want an elite-rated reader who works from energy rather than interrogation - and you can pay for it - Intuitive Jade is one of the most consistently rated readers on Keen.
 
 Intuitive Jade has held a 4.98 across 8,000+ ratings for two decades by being accurate and distinctive. At $8.99/min, that average is the product you are paying for.
-
-<a href="/go/keen-intuitive-jade/" rel="nofollow sponsored" target="_blank">Book Intuitive Jade on Keen - First 5 Minutes for $1</a>

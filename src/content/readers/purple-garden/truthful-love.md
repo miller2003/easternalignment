@@ -124,6 +124,5 @@ Either way, the risk of finding out is close to zero: $30 free credit, $2.99/min
 
 **28,199 readings in a year. Three platform badges. One client who left 8 reviews in 4 minutes.** Truthful Love is what "Trending" actually means — a reader people can't stop coming back to — and right now the first session is effectively free.
 
-<a href="/go/purple-garden-truthful-love/" rel="nofollow sponsored" target="_blank">Ask Truthful Love Your Question - $30 Free Credit at Purple Garden</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

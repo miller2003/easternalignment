@@ -146,5 +146,3 @@ For more high-volume options, see our reviews of [The Psychic One](/reviews/keen
 Use the **$1 intro session** as a calibration test. Call or chat in, give her the shape of your question, then listen. What she picks up unprompted in those first five minutes is your signal. If you want an elite-rated reader at a bargain rate, Alice Runyon is one of the best value reads on Keen today.
 
 Alice Runyon has held a 4.95 across 9,000+ ratings for a decade by being accurate, calm, and fairly priced. At $3.59/min, that rating-to-price ratio is hard to beat.
-
-<a href="/go/keen-alice-runyon/" rel="nofollow sponsored" target="_blank">Book Alice Runyon on Keen - First 5 Minutes for $1</a>

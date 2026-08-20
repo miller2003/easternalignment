@@ -1,10 +1,8 @@
 ---
-title: 'Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel Clairvoyant Justify
-seoTitle: "Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel"
-  $6.99/Min?'
-description: An independent review of Gina Marie on Keen  -  her no-tools clairvoyant
-  approach, what 12,000 ratings across 20 years actually reveal, the real cost of
-  a session, and exactly who gets value from booking her.
+title: 'Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel Clairvoyant Justify $6.99/Min?'
+seoTitle: "Gina Marie Keen Review 2026: 4.87 Stars, $6.99/min"
+metaDescription: "Gina Marie on Keen: 12,000 ratings across 20 years for a no-tools pure-channel clairvoyant. $6.99/min — what the record reveals and who gets value."
+description: "An independent review of Gina Marie on Keen - her no-tools clairvoyant approach, what 12,000 ratings across 20 years actually reveal, the real cost of a session, and exactly who gets value from booking her."
 platformName: 'Keen: Gina Marie'
 rating: 4.7
 verdict: Gina Marie's 20-year track record on Keen is hard to dismiss  -  but at $6.99/min,
@@ -47,9 +45,6 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: 77,000+ readings, 4.87 stars, 20 years on Keen. But is Gina Marie
-  worth $6.99/min? Honest breakdown of her no-tools style, real review patterns, and
-  who should book her.
 highlights:
 - 77,000+ completed readings since 2005  -  two decades of documented consistency
   on Keen
@@ -162,8 +157,3 @@ The intro offer is the most strategically useful tool you have with Gina Marie s
 ### Final Assessment: Where She Stands Among Keen's High-Volume Advisors
 
 Twenty years. 77,000 sessions. A no-tools commitment that has survived the full arc of online psychic platforms from 2005 to today. That's a track record I take seriously  -  and Gina Marie has earned her place among Keen's most credible long-term advisors. The $6.99/min rate is real, and the $105 - $140 full session cost is a genuine financial decision. But for clients with a clear love or relationship question who want a direct, prop-free clairvoyant session delivered by voice, she's one of the best options currently active on the platform.
-
-<a href="/go/keen-gina-marie/" rel="nofollow sponsored" target="_blank">Book Gina Marie on Keen  -  First 5 Minutes for $1</a>
-
-
-

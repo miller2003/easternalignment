@@ -138,5 +138,3 @@ For context on high-volume alternatives, see our reviews of [Readings by Kelly77
 Use Lollie's **"FIRSTREAD" message offer** (3 free minutes) or the **$1 intro** as a calibration test. Message her your name, the other person's name, and your single most pressing question - then stop. What she says without prompting is your signal. If you want a reader who respects your clock and tells you the truth you need rather than the truth you want, she is one of the most consistent direct voices active on Keen.
 
 Lollie has earned her 4.92 across 20,000 ratings by doing one thing relentlessly: giving raw, practical reads without the fluff. At $6.99/min, that is a fair price for the clients who want exactly that.
-
-<a href="/go/keen-lollie-ext-5555/" rel="nofollow sponsored" target="_blank">Book Lollie on Keen - First 5 Minutes for $1</a>

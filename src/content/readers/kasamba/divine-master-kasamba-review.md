@@ -13,7 +13,7 @@ pricing: "$7.99/min (verify on live profile) · 3 free minutes + 50% off for new
 bestFor: "Post-breakup and will-we-reunite questions, marriage and commitment crossroads, and career-growth decisions where you want timelines and solutions rather than open exploration"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/divine-master-kasamba-review/
 seoTitle: "Divine Master Kasamba Review 2026: 4.9, $7.99/min"
-metaDescription: "Divine Master: 77,204 Kasamba readings since 2011, 4.9 stars, 35 years' experience. The breakup & reunite specialist."
+metaDescription: "Divine Master on Kasamba: 77,204 readings since 2011, 4.9 stars, 35 years of experience. Love, breakup, and reunite guidance with timelines at $7.99/min."
 highlights:
   - "77,204 readings since 2011 with 16,000+ written reviews at 4.9"
   - "Sharpest niche on the platform: 'Accurate Love, Breakup, Reunite Guidance'"
@@ -118,6 +118,5 @@ The session design that works here: one question, tightly framed. *"We broke up 
 
 **77,204 readings. Fifteen years. A 4.9 built on people who came back.** Divine Master does one thing — love, breakup, reunion — and the counter says he does it about fourteen times a day, every day, since 2011. Your question is next.
 
-<a href="/go/kasamba-divine-master/" rel="nofollow sponsored" target="_blank">Book Divine Master on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

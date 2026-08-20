@@ -52,11 +52,16 @@ FILE LOCATION (write the .md here):
    Do NOT silently guess.
 3. H1 IS REQUIRED. The body MUST open with a single `# <Title>` heading that matches the
    frontmatter `title`. Never start the body at `##` (this was a real past defect).
-4. UNIFIED HTML CTA ONLY. End the article with EXACTLY ONE HTML anchor button, no markdown link:
-   Keen:    <a href="/go/<slug>/" rel="nofollow sponsored" target="_blank">Book <Name> on Keen - First 5 Minutes for $1</a>
-   Kasamba: <a href="/go/<slug>/" rel="nofollow sponsored" target="_blank">Book <Name> on Kasamba - First 3 Minutes Free + 50% Off</a>
-   Purple Garden: <a href="/go/<slug>/" rel="nofollow sponsored" target="_blank">Chat with <Name> on Purple Garden</a>
-   (Use the network's real new-client promo text. Never add a second/markdown CTA.)
+4. NO MANUAL END CTA. The end-of-article CTA link AND the conversion-nudge paragraph are
+   AUTO-INJECTED by ReviewLayout via `<ReaderEndCTA />` — DO NOT paste an `<a href="/go/...">`
+   at the end of the markdown. The layout reproduces the correct per-platform link text from the
+   reader name + platform, so every page (existing and future) ships a consistent close with zero
+   manual authoring:
+     Keen:    Book <Name> on Keen - First 5 Minutes for $1
+     Kasamba: Book <Name> on Kasamba - First 3 Minutes Free + 50% Off
+     Purple Garden: Chat with <Name> on Purple Garden - Claim Your $30 Free Credit
+   (Optional: add `endCtaText` to frontmatter to override the auto link text for one specific reader.
+    Never add a second/markdown CTA — the layout owns the only one.)
 5. FRONTMATTER ↔ BODY CONSISTENCY. The `pricing` field, any `customSchema` reviewBody string,
    and every price mentioned in the body MUST agree. If the body computes a session cost
    (rate × minutes), the arithmetic must be correct.
@@ -117,7 +122,7 @@ customSchema: |
 [ ] H1 present and matches title; body does not start at ##
 [ ] rate verified (WebSearch) or explicitly flagged as unverified + defensible
 [ ] pricing field == body price == customSchema reviewBody price (all agree)
-[ ] exactly ONE HTML CTA at end, correct network promo text, no markdown CTA duplicate
+[ ] NO manual end CTA — the end CTA + nudge are auto-injected by ReviewLayout (ReaderEndCTA); do NOT paste an <a href="/go/"> at the end of the markdown
 [ ] affiliateUrl slug exists in src/data/affiliateLinks.ts
 [ ] no fabricated client quotes (aggregate-honesty fallback used if needed)
 [ ] pros/cons/verdict specific, not generic
@@ -133,7 +138,7 @@ customSchema: |
 |------|-----------|--------------------------|
 | Keen | $1.99–$9.99/min | 5 min for $1 → `Book <Name> on Keen - First 5 Minutes for $1` |
 | Kasamba | $1.99–$30+/min | 3 免费分钟 + 首单 5 折 → `Book <Name> on Kasamba - First 3 Minutes Free + 50% Off` |
-| Purple Garden | 查 live profile | `Chat with <Name> on Purple Garden` |
+| Purple Garden | 查 live profile | `Chat with <Name> on Purple Garden - Claim Your $30 Free Credit` |
 
 > 注：上表是**校验区间**，不是让你在区间里随便填。真实费率必须 WebSearch 核实；
 > 核实不到时填区间顶端并显式标注「待本机确认」。

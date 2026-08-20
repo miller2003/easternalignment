@@ -1,7 +1,6 @@
 ---
-title: 'Ask Fran on Keen Review 2026: 150,000 Sessions and the Most Polarized Reviews
-seoTitle: "Ask Fran on Keen Review 2026: 150,000 Sessions and the Most"
-  on the Platform  -  What Actually Separates the Fans From the Frustrated'
+title: 'Ask Fran on Keen Review 2026: 150,000 Sessions and the Most Polarized Reviews on the Platform - What Actually Separates the Fans From the Frustrated'
+seoTitle: "Ask Fran Keen Review 2026: 4.6 Stars, $2.99/min"
 description: An independent review of Ask Fran on Keen  -  why the same reader generates
   both absolute devotion and sharp frustration, what the documented negative pattern
   looks like, and the one move that changes everything in the first two minutes.
@@ -50,9 +49,7 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: 150K readings, 25 years on Keen. Ask Fran is Keen's most polarizing
-  advisor  -  absolute best or worst session ever. Here's exactly what separates the
-  two outcomes.
+metaDescription: "Ask Fran on Keen: 150K readings over 25 years and a polarizing 4.6. Why the same reader earns devotion and frustration — and the one move that changes it."
 highlights:
 - 150,000+ completed readings since 2001  -  25 years of continuous platform presence
 - Personality-led conversational style  -  warmth and connection that credential-based
@@ -164,8 +161,3 @@ That single framing accomplishes three things simultaneously. It signals that yo
 ### My Final Verdict: A Genuinely Useful Reader  -  For a Very Specific Kind of Client
 
 Ask Fran is not for everyone, and I want to be honest about that rather than softening it into a generic recommendation. If you're primarily looking for psychic impressions  -  specific unprompted details, clairvoyant pickup, date-and-detail accuracy  -  she is not the right choice and booking her will likely result in a frustrated session. But if you want the experience of talking to someone who has helped thousands of people navigate real emotional complexity with honesty, warmth, and 25 years of hard-won perspective  -  and you're willing to show up focused and engaged  -  she is one of the most genuinely useful voices on Keen. The $1 intro session costs you almost nothing to find out which version of that assessment is true for you.
-
-<a href="/go/keen-fran/" rel="nofollow sponsored" target="_blank">Book Ask Fran on Keen  -  First 5 Minutes for $1</a>
-
-
-

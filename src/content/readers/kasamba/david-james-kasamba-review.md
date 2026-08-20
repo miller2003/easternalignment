@@ -12,7 +12,7 @@ pricing: "Chat & Voice $6.99/min · new-client promos fluctuate (we've seen $3.4
 bestFor: "People done with being told what they want to hear — who want a 30-year reader to say it straight, in plain language, at a fair price"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/david-james-kasamba-review/
 seoTitle: "David James Kasamba Review 2026: 111,359 Readings, Blunt & $6.99/min"
-metaDescription: "David James has 111,359 Kasamba readings and a 4.7 he earned in public — bad reviews and all. His blunt Glasgow style at $6.99/min: who should book, who shouldn't, and what a session actually feels like."
+metaDescription: "David James on Kasamba: 111,359 readings since 2004, a 4.7 earned the hard way. Scottish no-sugarcoating style at $6.99/min — we read the bad reviews too."
 highlights:
   - "111,359 readings since 2004 — and he claims 200,000+ across his 30-year career"
   - "Glasgow-born, self-declared blunt: 'No sugarcoating, or wasting time'"
@@ -64,8 +64,6 @@ customSchema: |
     "dateModified": "2026-08-14"
   }
 ---
-
-# David James Kasamba Review (2026): 111,359 Readings, One Visible Miss, and Why That's the Best Sign
 
 Most psychic profiles open with a promise. David James opens with a warning:
 
@@ -121,6 +119,5 @@ His own bio ends with an invitation: *"you, the cosmos, and me."* Three free min
 
 **111,359 readings. Thirty years. A 4.7 with the misses still showing.** David James is the rare reader whose imperfections are his credentials — blunt, proven, and priced like he doesn't need to oversell you. If you're ready to hear it straight, he's ready to tell you.
 
-<a href="/go/kasamba-david-james/" rel="nofollow sponsored" target="_blank">Get a Straight Answer from David James - 3 Free Minutes at Kasamba</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

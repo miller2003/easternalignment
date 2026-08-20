@@ -12,7 +12,7 @@ pricing: "$5.40/min"
 bestFor: "Sensitive, intuitive people seeking clarity on relationships or life direction — especially those who want actionable guidance alongside the reading itself"
 publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
-metaDescription: "Honest review of Psychic SuZen on Keen — life coach + social worker + empath, 4.84★ across 8K ratings, Women's Issues specialist. What her action-oriented."
+metaDescription: "Psychic SuZen on Keen: life coach, social worker, and empath — 4.84★ across 8K ratings. Her action-oriented style, Women's Issues focus, and honest fit."
 metaTitle: "Psychic SuZen on Keen Review 2026 | Life Coach Psychic, PBS Featured, $5.40/min"
 canonicalUrl: "https://easternalignment.com/reviews/psychic-suzen-keen-review"
 highlights:
@@ -34,7 +34,36 @@ cons:
   - "40K readings in 7 years is solid but not the volume depth of a 20-year veteran"
   - "Action-oriented approach may feel too directive for clients who want pure prediction without engagement"
   - "Aura cleansing listed as a tool despite 'no tools' bio — minor inconsistency worth knowing"
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Psychic SuZen on Keen Review 2026: When the Psychic Is Also a Life Coach and Social Worker — What That Changes About a Reading",
+    "description": "An honest third-party review of Psychic SuZen on Keen — covering her dual life coach and social worker background, multi-tradition spiritual framework, action-oriented reading style, and exactly who gets the most from her approach at $5.40/min.",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Keen: Psychic SuZen"
+      }
+    ]
+  }
 ---
+
 
 ## She's Not Just Reading Your Future — She's Trained to Help You Change It
 
@@ -171,5 +200,3 @@ Before the session: have the first name of any person you're asking about, and o
 If you're a new Keen user, your first 5 minutes are $1. Use that window to put her in contact with your real question — not a test question, not something minor. Her approach works best when there's something genuine at stake, and five minutes with real material will tell you more than five minutes of deliberate skepticism.
 
 SuZen's position in the Keen ecosystem is unusual: she's one of the few readers whose professional background outside psychic work directly informs how a session unfolds. For clients who've had readings that gave them insight but left them unsure what to do next — that gap is exactly what she's built to close.
-
-<a href="/go/keen-suzen/" rel="nofollow sponsored" target="_blank">Book Psychic SuZen on Keen - First 5 Minutes for $1</a>

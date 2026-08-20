@@ -108,7 +108,6 @@ At our audited **$5.99/min** (confirm live — rates rotate), Willow sits mid-ti
 
 Psychic Willow is the veteran's veteran: 48 years, an Egyptian deck, a no-dates honesty policy, and a review feed where clients come back to *confirm*, not to hope. For love questions on Purple Garden — whoever you love — she's the booking.
 
-<a href="/go/purple-garden-psychic-willow/" rel="nofollow sponsored" target="_blank">Chat with psychic Willow on Purple Garden - Claim Your $30 Credit</a>
 
 ---
 

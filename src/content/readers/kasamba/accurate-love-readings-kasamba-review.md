@@ -116,6 +116,5 @@ Two structural notes work in your favor. First, chat and voice cost the same her
 
 **95,479 readings. Nineteen years. A perfect 5.0 — from the reader honest enough to say no one is perfect.** She's busy right now, which tells you everything; the 3 free minutes are waiting when she's back.
 
-<a href="/go/kasamba-accurate-love-readings/" rel="nofollow sponsored" target="_blank">Book Accurate Love Readings on Kasamba - First 3 Minutes Free + 50% Off</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

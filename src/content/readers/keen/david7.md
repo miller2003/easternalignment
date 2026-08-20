@@ -1,10 +1,8 @@
 ---
-title: 'David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames  -  What
-seoTitle: "David7 on Keen Review 2026: The Male Psychic Perspective on"
-  94,000 Readings Actually Tell You'
-description: An honest third-party review of David7 on Keen  -  covering his tool-free
-  clairvoyant approach, twin flame specialization, dual profile pricing, and exactly
-  who gets real value at $6.99/min.
+title: 'David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames - What 94,000 Readings Actually Tell You'
+seoTitle: "David7 Keen Review 2026: 4.9 Stars, $6.99/min"
+metaDescription: "David7 on Keen: 94,000 readings and a no-tools clairvoyant take on twin flames. $6.99/min — the male psychic perspective, real reviews, and who gets value."
+description: "An honest third-party review of David7 on Keen - covering his tool-free clairvoyant approach, twin flame specialization, dual profile pricing, and exactly who gets real value at $6.99/min."
 platformName: 'Keen: David7'
 rating: 4.9
 verdict: Best for people navigating emotionally complex relationship situations  -  especially
@@ -206,8 +204,3 @@ David7 is listed as available and can be reached by both phone and chat. His pri
 Write your question before you start. One sentence. Not a paragraph of backstory  -  a single sentence that names what you actually need to know. At $6.99/min, every minute you spend explaining context is money spent not receiving a reading. David7's track record suggests he picks up quickly without needing extensive setup  -  meet him there by arriving focused.
 
 If you're a new Keen user, your first 5 minutes cost $1. Use that window as a genuine calibration, then decide whether to continue into a full session.
-
-
-
-
-<a href="/go/keen-david7/" rel="nofollow sponsored" target="_blank">Book David7 on Keen - First 5 Minutes for $1</a>

@@ -78,6 +78,7 @@ entities:
 ---
 
 
+
 Most readers on Purple Garden will take any question you hand them, because every question is a paid minute. Tarot Withh Love is unusual in that her profile tells you, before you ever book, the questions she will not take — and the warning is the most honest thing on the page. She is a 4.8-star Indian mystic and multi-clair reader with over 15,000 readings since 2019, working from $3.99/min, and her pitch is not "I will tell you what you want to hear." It is "Clear Detailed Insight," and she means the clear part.
 
 ## A toolkit with more than one channel
@@ -117,6 +118,8 @@ Purple Garden backs your first session with a given advisor with a satisfaction 
 ---
 
 **Over 15,000 readings. 4.8 stars. From $3.99/min. No yes-or-no.** Tarot Withh Love's value is depth you can afford from a reader who won't soften it. For clients done with comforting answers, she is the rare mystic who tells you the rest.
+
+
 
 **More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/)
 

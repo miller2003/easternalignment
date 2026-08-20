@@ -14,7 +14,7 @@ freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
 updatedDate: '2026-08-18'
 platform: purple-garden
-metaDescription: "Emmanuelle Berger on Purple Garden: 76,154 readings since 2015, perfect 5.0, soul-mate specialist, $6.49/min."
+metaDescription: "Emmanuelle Berger on Purple Garden: the highest-volume soul-mate specialist — 76,154 readings since 2015 at 5.0. Chat $6.49/min, $30 free credit."
 highlights:
   - "76,154 readings since 2015 — the highest-volume advisor we've reviewed on Purple Garden"
   - "Perfect 5.0 across ~29,000 written reviews, with only ~1.6% negative"
@@ -108,7 +108,6 @@ One expectation to set: she's in demand. Her status frequently shows BUSY. Eleve
 
 Emmanuelle Berger is what eleven years of kept promises looks like: 76,154 readings, a perfect 5.0, and a client base that calls her *mother* while admitting she tells them hard truths. For soulmate and love questions on Purple Garden, this is the first booking to make.
 
-<a href="/go/purple-garden-emmanuelle-berger/" rel="nofollow sponsored" target="_blank">Chat with Emmanuelle Berger on Purple Garden - Claim Your $30 Credit</a>
 
 ---
 

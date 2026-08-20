@@ -12,7 +12,7 @@ pricing: "Chat & Voice $5.49/min · 3 free minutes"
 bestFor: "People drawn to Eastern mysticism and direct spiritual guidance — and who'd rather have a 4.6 with visible honesty than a suspicious 5.0"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/sweet-spirit-of-love-kasamba-review/
 seoTitle: "Sweet Spirit of Love Kasamba Review 2026: 69,177 Readings, 4.6 Stars, $5.49/min"
-metaDescription: "Sweet Spirit of Love has 69,177 Kasamba readings and a 4.6 she earned in public — bad reviews included. Her 12-year-old train-wreck origin story, the real reviews, the $5.49/min math, and who should book her."
+metaDescription: "Sweet Spirit of Love on Kasamba: 69,177 readings since 2006 and a 4.6 earned in public — bad reviews included. Chat & voice $5.49/min, 3 free minutes."
 highlights:
   - "69,177 readings since 2006 — a 4.6 sustained over nearly two decades"
   - "Origin story: a 12-year-old premonition about a train that derailed that same day"
@@ -38,7 +38,7 @@ customSchema: |
     "@context": "https://schema.org",
     "@type": "Review",
     "name": "Sweet Spirit of Love Kasamba Review (2026): 69,177 Readings, 4.6 Stars",
-    "reviewBody": "Sweet Spirit of Love (Devi) is an Eastern-mysticism reader with 69,177 Kasamba readings since 2006 and a 4.6 earned in public. Her 12-year-old train origin story, real reviews, and who should book.",
+    "reviewBody": "Sweet Spirit of Love (Devi) is an Eastern-mysticism reader with 69,177 Kasamba readings since 2006 and a 4.6 earned in public. Her 12-year-old train origin story, real reviews, and who should book. Standard rate $5.49/min.",
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": "4.6",
@@ -65,7 +65,7 @@ customSchema: |
   }
 ---
 
-# Sweet Spirit of Love Kasamba Review (2026): The Origin Story Starts With a Train That Derailed
+
 
 Most psychic bios open with credentials. Devi's opens with a story that, if true, is the kind of thing you don't forget.
 
@@ -123,6 +123,5 @@ The free three minutes exist for a reason. Ask her the question you've been circ
 
 **69,177 readings. A 4.6 earned in public. An origin story that starts with a train that derailed.** Sweet Spirit of Love is the reader for people who'd rather hear the truth than be comforted by a fairytale — and right now the first 3 minutes cost nothing, and the question you've been carrying isn't getting any lighter.
 
-<a href="/go/kasamba-sweet-spirit-of-love/" rel="nofollow sponsored" target="_blank">Ask Devi Your Question - 3 Free Minutes at Kasamba</a>
 
 *Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.*

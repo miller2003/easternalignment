@@ -112,7 +112,6 @@ At our audited **$5.99/min** (confirm live), a disciplined 10-minute session —
 
 Sagest is what happens when a trained life coach with a medium's gift decides the session runs on her terms — and 62,205 clients decided the terms were worth it. Bring two real questions and your honest answers; she'll bring the 5.0.
 
-<a href="/go/purple-garden-sagest/" rel="nofollow sponsored" target="_blank">Chat with Sagest on Purple Garden - Claim Your $30 Credit</a>
 
 ---
 

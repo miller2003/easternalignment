@@ -12,7 +12,7 @@ pricing: "$4.99/min"
 bestFor: "Love, twin flame, and past life readings from a warm, humorous male reader whose cartomancy-led intuitive style generates some of the highest client return rates in this review series"
 publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
-metaDescription: "Honest review of psychicreader19622 (Raymond) on Keen — 98% five-star rating, Keen Top Advisor badge, cartomancy with playing cards. What 19 years behind."
+metaDescription: "psychicreader19622 (Raymond) on Keen: 98% five-star rating, Top Advisor badge, cartomancy with playing cards. What 19 years of readings say — honest fit."
 metaTitle: "psychicreader19622 (Raymond) on Keen Review 2026 | 98% Five Stars, Top Advisor, $4.99/min"
 canonicalUrl: "https://easternalignment.com/reviews/psychicreader19622-raymond-keen-review"
 highlights:
@@ -36,7 +36,36 @@ cons:
   - "Generic username makes him harder to search for and recommend by name"
   - "Skill section lists only Dream Exploration — profile underrepresents his actual range"
   - "Past life readings via cartomancy is an unusual combination with no direct comparison point"
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "psychicreader19622 (Raymond) on Keen Review 2026: The Worst-Looking Profile With the Best Numbers — What 19 Years Behind a Generic Username Actually Delivers",
+    "description": "An honest third-party review of psychicreader19622 on Keen — unpacking the 98% five-star rating, Keen's Top Advisor badge, Raymond's cartomancy-with-playing-cards method, humor as a reading quality, and exactly who should book him at $4.99/min.",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25",
+    "author": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "url": "https://easternalignment.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EasternAlignment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://easternalignment.com/logo.jpg"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Keen: psychicreader19622"
+      }
+    ]
+  }
 ---
+
 
 ## A Username Like "psychicreader19622" Should Not Have a 98% Five-Star Rating. Let's Explain Why It Does.
 
@@ -189,5 +218,3 @@ Chat is also available for clients who prefer text. Given the humor and warmth d
 Before you connect: his first name is Raymond. Use it. The clients who get the most from him seem to treat it as a real relationship rather than a service transaction, and he apparently responds to that. Have one focused question, give him the first name of anyone involved, and let the session go where it goes — his read on your situation has 19 years of pattern recognition behind it, and the evidence suggests he doesn't need a lot of setup time to get there.
 
 The generic username is not the reader. Raymond is.
-
-<a href="/go/keen-raymond/" rel="nofollow sponsored" target="_blank">Book psychicreader19622 (Raymond) on Keen - First 5 Minutes for $1</a>
