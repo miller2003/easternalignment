@@ -14,10 +14,12 @@ export default defineConfig({
             // the sitemap only lists pages we actually want ranked.
             !page.includes('/astrology/') &&
             !page.includes('/tools/') &&
-            // Spanish legal pages (noindexed)
+            // Spanish legal pages (noindexed) — keep OUT of the sitemap.
+            // NOTE: /es/divulgacion/ is intentionally indexable (it carries
+            // `index,follow` and the English /disclosure/ page points at it via
+            // hreflang), so it MUST stay in the sitemap to keep the cluster valid.
             !page.includes('/es/privacidad/') &&
             !page.includes('/es/terminos/') &&
-            !page.includes('/es/divulgacion/') &&
             // Template files should never generate pages, but be safe
             !page.includes('_plantilla'),
         serialize(item) {
@@ -46,7 +48,9 @@ export default defineConfig({
                 [`${SITE}/es/privacidad/`]: `${SITE}/privacy/`,
                 [`${SITE}/es/terminos/`]: `${SITE}/terms/`,
                 [`${SITE}/es/resenas/`]: `${SITE}/reviews/`,
-                [`${SITE}/es/resenas/psiquicos-web/`]: `${SITE}/reviews/psiquicos-web/`,
+                // NOTE: /es/resenas/psiquicos-web/ has NO English equivalent page
+                // (reviews/psiquicos-web/ 404s), so it stays an es-only, self-referential
+                // cluster — do NOT map it to a non-existent en URL.
                 [`${SITE}/es/resenas/purple-garden-es/`]: `${SITE}/reviews/purple-garden/`,
             };
             const enToEs = Object.fromEntries(
