@@ -67,6 +67,10 @@ entities:
   - "Namrata"
   - "Relationship Reading"
   - "Finance Advisor"
+---
+
+**Book Namrata if** you want a broad-scope advisor — relationships, career, and money in one session — from someone with ten years of real platform experience, at a price ($2.49/min) that most readers with half her tenure charge for less. **Skip her if** you want ultra-specialized depth in a single domain, or a reader who turns over sessions at high volume. Her pace is deliberate and her coverage is wide — which is either exactly what you need or not what you came for.
+
 ## Ten Years at $2.49/Min: The Pricing Paradox That Deserves Examination
 
 Namrata has been on Purple Garden since approximately 2016. A decade of continuous presence is a rare credential on any platform — the attrition rate among advisors in years three through seven is substantial, and the readers who remain are, almost by definition, the ones whose sessions consistently delivered enough value to keep clients returning.

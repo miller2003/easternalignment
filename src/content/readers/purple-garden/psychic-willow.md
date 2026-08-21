@@ -66,6 +66,10 @@ entities:
   - "psychic willow"
   - "Egyptian Tarot"
   - "Love Psychic"
+---
+
+**Book psychic Willow if** you want the deepest bench of experience money can hire on Purple Garden — 48 years of love readings, an Egyptian tarot practice, and a client base that returns specifically to tell her the prediction came true. **Skip her if** you need a date stamp; her refusal to give timeframes is absolute, printed on her own profile, and non-negotiable.
+
 ## Forty-Eight Years: What That Number Actually Contains
 
 Every advisor bio claims experience. Willow's claim — *"over 48 years of experience in providing quality and clear psychic readings"* — deserves a moment of arithmetic. Forty-eight years of love readings means she started before most of her clients' parents met. The almost-relationship you're describing to her tonight, she has heard in its 1970s version, its 90s version, its 2010s version, and last Tuesday's. That's what "pattern recognition" means when it's not a metaphor: your situation feels uniquely confusing to you and instantly familiar to her.

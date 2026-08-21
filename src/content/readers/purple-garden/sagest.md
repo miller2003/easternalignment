@@ -66,6 +66,10 @@ entities:
   - "Sagest"
   - "Spiritual Medium"
   - "Dream Analysis"
+---
+
+**Book Sagest if** you're willing to do something almost no other advisor asks: prepare. First names only, exactly two questions, one clarification — and in exchange you get a Top Accuracy badged medium with 62,205 readings at a perfect 5.0 who treats every minute like it costs money, because it does. **Skip her if** you want a wandering, exploratory session; she will literally give you a "general reading" for it, and she says so on her own profile.
+
 ## The Requirements List: Gimmick, or the Secret to the 5.0?
 
 Her tagline isn't a promise — it's an instruction: **"PLS READ REQUIREMENTS."** The full protocol, published on her profile:

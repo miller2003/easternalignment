@@ -37,8 +37,7 @@ DISCLOSURE_LINE = "*Eastern Alignment is reader-supported. If you book through o
 # Match the disclosure line, preceded by one or more blank lines, at end
 # of file. Replace with nothing (so we don't leave a dangling blank).
 DISCLOSURE_RE = re.compile(
-    r"\n+\*" + re.escape("Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.") + r"\*\s*$",
-    re.MULTILINE,
+    r"\n+\*" + re.escape("Eastern Alignment is reader-supported. If you book through our links, we may earn a commission at no extra cost to you.") + r"\*\s*\Z",
 )
 
 # Match:  ---\n\n**bold paragraph (single line, ends with **)**\n*
@@ -56,8 +55,7 @@ DISCLOSURE_RE = re.compile(
 # by optional plain text on the same line) rather than insisting the
 # whole line is wrapped in **.
 BOLD_AFTER_DASHES_RE = re.compile(
-    r"\n---\n\n\*\*[^\n]*\*\*[^\n]*\n*\s*$",
-    re.MULTILINE,
+    r"\n---\n\n\*\*[^\n]*\*\*[^\n]*\s*\Z",
 )
 
 # Guard: do NOT strip a paragraph that starts with **More (cross-link).

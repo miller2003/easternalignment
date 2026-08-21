@@ -68,6 +68,10 @@ entities:
   - "Tarot Instincts"
   - "Tarot Reading"
   - "Numerology"
+---
+
+**Book Tarot Instincts if** you are budget-conscious, willing to provide names upfront for relationship questions, and want a tarot-plus-numerology read on a focused situation. At $1.99/min, your $30 credit covers a **full 15-minute session at zero cost**. **Skip her if** you want free-flowing, open-ended guidance with no format rules, or if your question touches legal, health, pregnancy, or mediumship territory — those are explicitly outside what she reads. The 4.2 rating is honest about the fact that her method is not a match for every client. If you fit the rules, it is; if you don't, you'll be the negative review.
+
 ## What a 4.2 Across 12,135 Sessions Actually Tells You — and What It Doesn't
 
 The instinct when seeing a 4.2 on a reading platform is to treat it as a warning. That instinct is wrong here, and understanding why is the most important thing I can tell you about this profile.

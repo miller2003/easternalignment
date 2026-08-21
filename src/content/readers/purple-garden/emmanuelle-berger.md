@@ -66,6 +66,10 @@ entities:
   - "Emmanuelle Berger"
   - "Soul-Mate Specialist"
   - "Love Reading"
+---
+
+**Book Emmanuelle Berger if** you want the single most proven reader on Purple Garden — 76,154 readings since 2015 at a perfect 5.0 — for a soulmate or love question where you need honesty delivered with warmth rather than either one alone. **Skip her if** you want pure prediction theater or a reader who'll simply confirm your hopes; her bio explicitly refuses to, and 29,000 reviews confirm she means it.
+
 ## The Highest-Volume Reader on Purple Garden, By the Numbers
 
 Start with the arithmetic, because Emmanuelle Berger's numbers are the strongest on the platform we've reviewed to date: **76,154 readings since 2015**, roughly **29,000 written reviews**, a **perfect 5.0**, and — the detail most review sites skip — only about **1.6% negative feedback** (471 critical reviews against 28,984 positive). Every advisor collects some one-star reviews; what matters is the ratio, and hers is elite.

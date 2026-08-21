@@ -66,6 +66,10 @@ entities:
   - "lorrie c"
   - "Empath Psychic"
   - "Relationship Reading"
+---
+
+**Book lorrie c if** your question is about a *person* — what they're feeling, whether they'll reach out, how they'll act when they see you — and you want Keen's highest-rated high-volume empath (4.98 across 60,595 readings) reading them for you. **Skip her if** you need hard calendar dates or a pure career prognosis; her documented strength is reading people and relationships, and the honest third-party record says exactly that.
+
 ## The Verification You Didn't Expect: a Skeptics' Forum Did It for Us
 
 Full disclosure up front: Keen's own pages were unreachable from our review environment this week, so for this review we did something better than quote her own profile — we went to **thepsychicreviews.com**, the independent forum where Keen's most demanding clients go to compare notes, and where readers live or die by follow-up reports. It is not a friendly crowd. Glowing platform ratings get openly distrusted there.
