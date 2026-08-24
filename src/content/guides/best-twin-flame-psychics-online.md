@@ -119,7 +119,7 @@ If your connection defies logic and feels like a gravitational pull you cannot e
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
-        <span class="reader-summary__value">Clients in deep separation phases who need remote viewing to access their runner’s hidden intentions.</span>
+        <span class="reader-summary__value">Clients in deep separation phases who need remote viewing to access their runner→’s hidden intentions.</span>
       </div>
     </div>
   </div>
@@ -215,7 +215,7 @@ David7 maps the dynamics of twin flame and high-intensity relationships with cli
 
 ### #4 Seek Chelle (Kasamba) — Best for Uncovering Unspoken Core Wounds
 
-In a twin flame dynamic, the "runner" often doesn't even consciously understand why they are running. Seek Chelle’s methodology is designed to unearth the psychological realities and core wounds that trigger the flight response.
+In a twin flame dynamic, the "runner" often doesn't even consciously understand why they are running. Seek Chelle→’s methodology is designed to unearth the psychological realities and core wounds that trigger the flight response.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
@@ -346,7 +346,7 @@ When you use your introductory minutes, provide only their first name and date o
 The defining rule of the twin flame dynamic is the mirror effect: the more you chase, the faster they run. Stop asking, *"What are they doing right now?"* and start asking, *"What core wound is this separation triggering in me that I need to heal?"* Elite readers will respect you more for asking this and will provide far deeper insights.
 
 ### 3. Record the Session or Use Chat
-Twin flame readings are dense with spiritual and psychological information. You will suffer from confirmation bias if you rely only on memory. Use Kasamba’s Chat feature to automatically generate a transcript, or take meticulous notes during a Keen phone call. Insights regarding past lives and soul contracts often require days to fully digest.
+Twin flame readings are dense with spiritual and psychological information. You will suffer from confirmation bias if you rely only on memory. Use Kasamba→’s Chat feature to automatically generate a transcript, or take meticulous notes during a Keen phone call. Insights regarding past lives and soul contracts often require days to fully digest.
 
 ---
 
@@ -358,4 +358,4 @@ If your twin has completely disappeared and you need to access their energetic s
 
 If you are dealing with a male runner and need strict timelines, **[David7](/reviews/keen/david7/)** is your best option. And if the journey has left you emotionally exhausted and you need profound empathic healing, look to **[Seek Chelle](/reviews/kasamba/seek-chelle-kasamba-review/)** or **[Cosmic Fusion](/reviews/kasamba/cosmic-fusion-kasamba-review/)**.
 
-Ultimately, both Kasamba and Keen offer low-risk introductory minutes. Use them strategically. Test the reader’s connection to your energy, demand honesty over comfort, and use their insights to pull your power back and end the chase.
+Ultimately, both Kasamba and Keen offer low-risk introductory minutes. Use them strategically. Test the reader→’s connection to your energy, demand honesty over comfort, and use their insights to pull your power back and end the chase.

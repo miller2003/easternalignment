@@ -93,9 +93,9 @@ The trade-off is roster depth and call polish. It has fewer advisors than Keen, 
 
 | Hotline | Call Quality | Entry Offer | Price Range | Best For |
 | :--- | :--- | :--- | :--- | :--- |
-| Keen | Excellent | 5 min for $1 | $1.99–$20+/min | Deep roster, honest reviews, elite testing |
-| Kasamba | Very Good | 3 min free + 50% off | $1.99–$30+/min | Phone + permanent transcripts |
-| Purple Garden | Good | $30 credit | $0.99–$15+/min | Seeing your advisor before calling |
+| Keen | Excellent | 5 min for $1 | $1.99→–$20+/min | Deep roster, honest reviews, elite testing |
+| Kasamba | Very Good | 3 min free + 50% off | $1.99→–$30+/min | Phone + permanent transcripts |
+| Purple Garden | Good | $30 credit | $0.99→–$15+/min | Seeing your advisor before calling |
 
 ## How to Call Smart, No Matter Which Hotline You Choose
 

@@ -52,15 +52,15 @@ These are different solutions to different problems.
 Purple Garden applies a $30 credit to your account on your first purchase. You still need to make a deposit — but the credit funds a meaningful portion of a first session.
 
 How far the credit goes:
-- **Chat ($0.99–$4/min):** Covers 8–30 minutes depending on advisor tier
-- **Video ($5–$12/min):** Covers 3–6 minutes at mid-tier rates
-- **Voice ($3–$8/min):** Covers 4–10 minutes at mid-tier rates
+- **Chat ($0.99→–$4/min):** Covers 8→–30 minutes depending on advisor tier
+- **Video ($5→–$12/min):** Covers 3→–6 minutes at mid-tier rates
+- **Voice ($3→–$8/min):** Covers 4→–10 minutes at mid-tier rates
 
 **What the credit solves:** The financial barrier to experiencing a real session. It does not solve the reader-selection problem — you are still making one booking with one reader — but it reduces the cost of a first substantive experience to a minimum.
 
 ### Keen: 5 Minutes for $1 (One Time Only)
 
-Keen's introductory offer gives you 5 minutes with any one reader for $1. This is the most efficient access point to a premium reader ($15–$20/min) at near-zero cost.
+Keen's introductory offer gives you 5 minutes with any one reader for $1. This is the most efficient access point to a premium reader ($15→–$20/min) at near-zero cost.
 
 **What the trial solves:** The elite-access problem and the platform-legitimacy question. It does not solve the reader-selection problem — you choose one reader and use the trial with them. If the trial reader doesn't connect, you have used your trial.
 
@@ -108,7 +108,7 @@ For love and relationship readings — which almost always involve specific pred
 
 ### Keen: Deep, Permanent Review Ledger
 
-Keen's review system is the most comprehensive in the industry by volume. Reviews are permanent — they cannot be deleted, edited, or hidden. Practitioners with 40,000–100,000+ sessions carry review histories that function as longitudinal accuracy evidence, because no reader sustains that volume at high ratings without delivering genuine value across years.
+Keen's review system is the most comprehensive in the industry by volume. Reviews are permanent — they cannot be deleted, edited, or hidden. Practitioners with 40,000→–100,000+ sessions carry review histories that function as longitudinal accuracy evidence, because no reader sustains that volume at high ratings without delivering genuine value across years.
 
 **The methodological advantage:** Pattern-mining Keen's negative reviews tells you specifically what type of failure clients experienced — cold-reading generics, false timeline promises, emotionally manipulative upselling — versus uncomfortable accurate truths. The type of negative review is often more informative than the star count.
 
@@ -120,13 +120,13 @@ Keen's review system is the most comprehensive in the industry by volume. Review
 
 | | Purple Garden | Keen |
 |---|---|---|
-| Chat/text rates | $0.99–$6.99/min | $1.99–$8.99/min |
-| Video rates | $4.99–$15.00/min | Limited video availability |
-| Phone rates | $2.99–$12.00/min | $1.99–$20.00+/min |
+| Chat/text rates | $0.99→–$6.99/min | $1.99→–$8.99/min |
+| Video rates | $4.99→–$15.00/min | Limited video availability |
+| Phone rates | $2.99→–$12.00/min | $1.99→–$20.00+/min |
 | First-session offer | $30 credit on first purchase | 5 min for $1 (once) |
 | Free vetting | Journeys research (pre-booking) | Review mining (pre-booking) |
 
-**Key pricing observation:** Purple Garden's chat rates are meaningfully lower than Keen's, which makes Purple Garden more credit-efficient for chat-based sessions. Keen's phone rates run from accessible to premium, and its elite practitioners ($15–$20/min) are comparable in cost to Purple Garden's premium video advisors.
+**Key pricing observation:** Purple Garden's chat rates are meaningfully lower than Keen's, which makes Purple Garden more credit-efficient for chat-based sessions. Keen's phone rates run from accessible to premium, and its elite practitioners ($15→–$20/min) are comparable in cost to Purple Garden's premium video advisors.
 
 ---
 
@@ -148,8 +148,8 @@ For most love and relationship questions, the Purple Garden roster is more than 
 
 ### Choose Purple Garden if:
 1. **Visual vetting is important to you.** You want to watch the advisor before booking — assess their demeanor, their methodology description, their communication style — before spending anything.
-2. **The Journeys ledger matters.** You want verifiable prediction accuracy evidence rather than satisfaction-based reviews, and you are willing to do 5–8 minutes of research to use it correctly.
-3. **Chat rates are your primary budget constraint.** Purple Garden's chat rates ($0.99–$4/min) are the most affordable in the premium psychic platform space.
+2. **The Journeys ledger matters.** You want verifiable prediction accuracy evidence rather than satisfaction-based reviews, and you are willing to do 5→–8 minutes of research to use it correctly.
+3. **Chat rates are your primary budget constraint.** Purple Garden's chat rates ($0.99→–$4/min) are the most affordable in the premium psychic platform space.
 4. **You are a mobile-first user.** Purple Garden's app experience is the best in the category.
 5. **Video readings appeal to you.** You want to watch a live tarot session rather than hear a phone-based assessment.
 

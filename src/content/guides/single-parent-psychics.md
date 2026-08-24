@@ -13,7 +13,7 @@ pros:
 cons:
 - "The psychic may confirm that your children's rejection of your partner is justified"
 - "Hearing that a man views your kids as a 'burden' is deeply painful"
-verdict: 'Seek Chelle (Kasamba) expertly taps into the unexpressed fears of your children, while David7 (Keen) provides brutal honesty on a man’s capacity to be a stepfather.'
+verdict: 'Seek Chelle (Kasamba) expertly taps into the unexpressed fears of your children, while David7 (Keen) provides brutal honesty on a man→’s capacity to be a stepfather.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $4.75/min to $9.98/min

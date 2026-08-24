@@ -281,7 +281,7 @@ If you are actively swiping and just want a fast intuition check on a guy before
   </div>
 </div>
 
-Golden Eye’s 21 years of experience allows her to operate with extreme speed. Provide his name and birth date (if you have it), and she will immediately drop into his energy. She is perfect for the highly anxious online dater who needs immediate verification of a man's safety and authenticity before committing to a physical date.
+Golden Eye→’s 21 years of experience allows her to operate with extreme speed. Provide his name and birth date (if you have it), and she will immediately drop into his energy. She is perfect for the highly anxious online dater who needs immediate verification of a man's safety and authenticity before committing to a physical date.
 
 [Get Fast Verification with Golden Eye (3 Free Mins) →](/go/kasamba-golden-eye)
 

@@ -61,7 +61,7 @@ I have tested all three in depth — the full reviews are [here](/reviews/keen/)
 | **Roster Size** | Thousands | 500+ | Mid-size, curated |
 | **Accountability** | Un-deletable review ledger | Public reviews + transcripts | Video intros + Journeys ledger |
 | **Entry Offer** | 5 min for $1 | 3 free min/reader + 50% off | $30 credit |
-| **Price Range** | $1.99–$20+/min | $1.99–$30+/min | $0.99–$15+/min |
+| **Price Range** | $1.99→–$20+/min | $1.99→–$30+/min | $0.99→–$15+/min |
 | **Best Strength** | Depth & voice | Transcripts & testing | Video transparency |
 
 ## Round 1: Roster Depth and Specialization
@@ -84,11 +84,11 @@ Purple Garden's Journeys ledger is the most innovative: clients publicly documen
 
 ## Round 3: Pricing and Trial Offers
 
-Keen's 5 minutes for $1 is the best single dollar in psychic services, because it lets you test an elite $15–$20/min reader for pocket change. Its ongoing rates span $1.99 to $20+/min.
+Keen's 5 minutes for $1 is the best single dollar in psychic services, because it lets you test an elite $15→–$20/min reader for pocket change. Its ongoing rates span $1.99 to $20+/min.
 
 Kasamba's 3 free minutes with every new advisor is the most powerful testing structure, because it is not a one-time trial — you can risk-free test dozens of readers. The 50% first-session discount sweetens the first paid call. Rates run to $30+/min at the top, the steepest ceiling of the three.
 
-Purple Garden is the cheapest at entry — chat tiers under $1/min — and its $30 first-purchase credit is the most generous new-user offer. Its $0.99–$15+/min range is the most accessible across the board.
+Purple Garden is the cheapest at entry — chat tiers under $1/min — and its $30 first-purchase credit is the most generous new-user offer. Its $0.99→–$15+/min range is the most accessible across the board.
 
 The pricing reality, beyond the offers, is that a substantive reading runs $50 to $300 on any of the three depending on reader tier and session length. My [pricing guide](/guides/how-much-does-a-psychic-reading-cost/) breaks down the real numbers.
 

@@ -70,7 +70,7 @@ On Purple Garden, every serious advisor uploads a pre-recorded video introductio
 This single feature prevents more wasted money than any star rating ever could.
 
 ### Keen's Killer Feature: The Un-Deletable Public Ledger
-Where Keen outperforms every competitor—including Purple Garden—is its public review ledger. Unlike smaller agencies that scrub negative feedback, Keen’s review archive is un-deletable. You can sort an advisor’s feedback by recent dates and inspect every 1-star or 2-star review they have ever received since 2005.
+Where Keen outperforms every competitor—including Purple Garden—is its public review ledger. Unlike smaller agencies that scrub negative feedback, Keen→’s review archive is un-deletable. You can sort an advisor→’s feedback by recent dates and inspect every 1-star or 2-star review they have ever received since 2005.
 
 ---
 
@@ -79,12 +79,12 @@ Where Keen outperforms every competitor—including Purple Garden—is its publi
 If you scrape the major spiritual and psychic subreddits (`r/PsychicServices`, `r/tarot`, and general platform review threads), two very clear patterns of consumer feedback emerge:
 
 ### What Reddit Says About Keen
-- **The Praise:** Reddit users consistently cite Keen’s veteran elite—advisors with 50,000+ completed readings—as some of the most accurate timeline readers online. When a top Keen advisor hits, they hit with chilling specificity.
+- **The Praise:** Reddit users consistently cite Keen→’s veteran elite—advisors with 50,000+ completed readings—as some of the most accurate timeline readers online. When a top Keen advisor hits, they hit with chilling specificity.
 - **The Warning:** Because Keen is a massive, unregulated marketplace, impatient users who pick random $1.99/min readers frequently complain about "time-stalling" (advisors speaking slowly to pad per-minute billings) or unsolicited upselling (*"You have a dark blockage; pay $50 for a cleansing"*).
 
 ### What Reddit Says About Purple Garden
 - **The Praise:** Community members praise the **Journeys** feature. Because Journeys allows clients to return weeks later and document whether a predicted date or event actually materialized, it exposes "hopium" sellers. Seekers also love the app's clean UI and tri-modal flexibility (switching seamlessly between Video, Phone, and Chat).
-- **The Warning:** Users warn against relying on Purple Garden's lowest-priced ($0.99–$1.99/min) chat category, noting high advisor turnover and generic copy-paste horoscopes among entry-level accounts.
+- **The Warning:** Users warn against relying on Purple Garden's lowest-priced ($0.99→–$1.99/min) chat category, noting high advisor turnover and generic copy-paste horoscopes among entry-level accounts.
 
 ---
 

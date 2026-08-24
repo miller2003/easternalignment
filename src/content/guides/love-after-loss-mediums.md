@@ -154,7 +154,7 @@ If you want to date, but you feel completely emotionally numb and energetically 
   </div>
 </div>
 
-As Kasamba’s top-ranked advisor, Elizabeth provides an incredibly safe, maternal sanctuary. She combines her readings with active Reiki healing. She understands that the trauma of watching a spouse die leaves massive energetic scars. During your session, Elizabeth will not just talk to you; she will actively send Reiki energy to dissolve the dense grief surrounding your heart, preparing your energetic body to receive healthy, vibrant love once again.
+As Kasamba→’s top-ranked advisor, Elizabeth provides an incredibly safe, maternal sanctuary. She combines her readings with active Reiki healing. She understands that the trauma of watching a spouse die leaves massive energetic scars. During your session, Elizabeth will not just talk to you; she will actively send Reiki energy to dissolve the dense grief surrounding your heart, preparing your energetic body to receive healthy, vibrant love once again.
 
 [Clear Your Grief Aura with Elizabeth (3 Free Mins) →](/go/kasamba-elizabeth)
 

@@ -377,6 +377,6 @@ Purple Garden does not offer a zero-cost testing mechanism comparable to Kasamba
 For the complete Purple Garden platform review, see [our full Purple Garden audit](/reviews/purple-garden/). For the Journeys-based accuracy ranking, see [the most accurate psychics on Purple Garden](/guides/most-accurate-psychics-purple-garden/). For the $30 credit guide, see [how to use Purple Garden's first-purchase credit](/guides/purple-garden-30-credit-guide/). For post-breakup and reconciliation readings specifically, the [Purple Garden ex-recovery picks](/guides/best-purple-garden-psychics-ex-recovery/) shortlists the best advisors for that specific scenario.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/purple-garden" class="btn btn--primary">Research Love Psychics With $30 Credit â†?/a>
+  <a href="/go/purple-garden" class="btn btn--primary">Research Love Psychics With $30 Credit â†’/a>
 </div>
 

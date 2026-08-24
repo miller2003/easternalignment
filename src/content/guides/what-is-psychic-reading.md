@@ -53,7 +53,7 @@ Beyond that, walk away from advisors who predict specific dates with absolute ce
 
 ## What a Reading Costs in 2026
 
-Pricing across online platforms ranges from about $1 per minute for entry-level chat advisors to $30+ per minute for celebrity-tier readers. The realistic budget tiers: $1–5/min for solid entry and mid-tier chat, $5–15/min for professional readers with track records, and $15–30+/min for elite specialists. Most major platforms offer free introductory minutes or a heavily discounted first session — typically enough to test whether a specific advisor connects with you before you commit real money.
+Pricing across online platforms ranges from about $1 per minute for entry-level chat advisors to $30+ per minute for celebrity-tier readers. The realistic budget tiers: $1→–5/min for solid entry and mid-tier chat, $5→–15/min for professional readers with track records, and $15→–30+/min for elite specialists. Most major platforms offer free introductory minutes or a heavily discounted first session — typically enough to test whether a specific advisor connects with you before you commit real money.
 
 The number that matters is not the per-minute rate but the value delivered per minute. A $3.99/min reader who delivers a complete, specific reading in eight minutes is cheaper than a $1.99/min reader who burns twenty minutes on filler. Judge sessions by density, not by rate card.
 

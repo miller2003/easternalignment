@@ -252,7 +252,7 @@ If the breakup was sudden and you are left paralyzed by a lack of closure, you n
   </div>
 </div>
 
-Seek Chelle bypasses the physical silence and taps directly into the energetic state of your ex. She doesn’t just tell you if they are coming back; she translates their unhealed trauma. Her background in mentoring provides you with actionable steps on how to regain your own power after being discarded.
+Seek Chelle bypasses the physical silence and taps directly into the energetic state of your ex. She doesn→’t just tell you if they are coming back; she translates their unhealed trauma. Her background in mentoring provides you with actionable steps on how to regain your own power after being discarded.
 
 [Uncover Their Hidden Motives with Seek Chelle (3 Free Mins) →](/go/kasamba-chelle)
 

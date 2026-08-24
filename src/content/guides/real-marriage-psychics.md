@@ -1,5 +1,5 @@
 ---
-title: 'Real Marriage Psychics on Keen & Kasamba: 3 Readers Who Won’t Sugarcoat the Truth'
+title: 'Real Marriage Psychics on Keen & Kasamba: 3 Readers Who Won→’t Sugarcoat the Truth'
 description: 'If your marriage is failing, you do not need toxic positivity. We found the 3 most brutally honest psychics on Keen and Kasamba who refuse to sugarcoat a dead relationship.'
 category: Roundup
 platform: cross-platform
@@ -28,7 +28,7 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Real Marriage Psychics on Keen & Kasamba: 3 Readers Who Won’t Sugarcoat the Truth",
+    "name": "Real Marriage Psychics on Keen & Kasamba: 3 Readers Who Won→’t Sugarcoat the Truth",
     "description": "If your marriage is failing, you do not need toxic positivity. We found the 3 most brutally honest psychics on Keen and Kasamba who refuse to sugarcoat a dead relationship.",
     "itemListElement": [
       {

@@ -13,7 +13,7 @@ pros:
 cons:
 - "Budget readers often have higher variance (some off days) compared to $20/min veterans"
 - "Many operate via Chat only, lacking the immediacy of a voice call"
-verdict: 'Elizabeth (Kasamba) offers unbelievable value as the platform’s #1 ranked reader at just $2.40/min, while Flora Knows All (Keen) is the fastest-rising budget star.'
+verdict: 'Elizabeth (Kasamba) offers unbelievable value as the platform→’s #1 ranked reader at just $2.40/min, while Flora Knows All (Keen) is the fastest-rising budget star.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $2.10/min to $4.29/min
@@ -172,7 +172,7 @@ At $2.22/minute, Azzy operates one of the most cost-effective profiles on the en
 ### #3 Elizabeth (Kasamba) — $2.40/min
 **Best For: The Absolute Best Value on the Internet (#1 Ranked)**
 
-This is the anomaly of the psychic industry. Elizabeth is Kasamba’s **#1 Ranked Advisor globally**, with over 17,000 five-star reviews. By all market logic, she could charge $15/minute. She chooses to charge $2.40.
+This is the anomaly of the psychic industry. Elizabeth is Kasamba→’s **#1 Ranked Advisor globally**, with over 17,000 five-star reviews. By all market logic, she could charge $15/minute. She chooses to charge $2.40.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth" class="reader-summary__avatar" />

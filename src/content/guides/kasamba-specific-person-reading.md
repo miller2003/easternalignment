@@ -195,6 +195,6 @@ A reader can still attempt to access the energetic state of a person who has blo
 For the full Kasamba platform guide including the free-minutes vetting protocol, read [our complete Kasamba review](/reviews/kasamba/). For the 3-free-minutes strategy guide, see [the Kasamba free minutes complete guide](/guides/kasamba-3-free-minutes-guide/). For ex-recovery and reconciliation readings specifically, [the Kasamba ex-recovery shortlist](/guides/best-kasamba-psychics-ex-recovery/) covers the best readers for that adjacent question type. For the overall love psychics ranking by use case, see [the best love psychics on Kasamba](/guides/best-love-psychics-kasamba-ranked/).
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes for a Specific-Person Read â†?/a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes for a Specific-Person Read â†’/a>
 </div>
 

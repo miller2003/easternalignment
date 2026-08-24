@@ -172,7 +172,7 @@ Yazmin doesn't operate like a traditional Tarot reader who methodically narrates
   </div>
 </div>
 
-Yazmin’s profile centers on love and relationships as a genuine area of focused depth. Where some advisors treat love readings as a series of outcome predictions, Yazmin goes straight to the underlying dynamic—what’s being left unsaid, what fear is driving someone's behavior. She requires very little backstory; give her a name, let her pull the cards, and watch her dissect the emotional truth.
+Yazmin→’s profile centers on love and relationships as a genuine area of focused depth. Where some advisors treat love readings as a series of outcome predictions, Yazmin goes straight to the underlying dynamic—what→’s being left unsaid, what fear is driving someone's behavior. She requires very little backstory; give her a name, let her pull the cards, and watch her dissect the emotional truth.
 
 [Read Hidden Emotions with Yazmin (3 Free Minutes) →](/go/kasamba-yazmin)
 
@@ -378,7 +378,7 @@ Golden Eye is known for her extreme speed. She can start a session with a Tarot 
 If you are paying by the minute, you cannot afford to waste time. Follow these two rules to maximize your ROI:
 
 **1. Don't Pay Them to Shuffle (Use Chat)**
-If you are using Keen (which is phone-dominant), be aware that some traditional Tarot readers take 30-60 seconds to shuffle and lay out the cards. At $5/minute, you are paying $5 to listen to silence. To avoid this, use Kasamba’s **Chat** feature, or tell your Keen reader the question the moment they pick up the phone so they can shuffle while you talk.
+If you are using Keen (which is phone-dominant), be aware that some traditional Tarot readers take 30-60 seconds to shuffle and lay out the cards. At $5/minute, you are paying $5 to listen to silence. To avoid this, use Kasamba→’s **Chat** feature, or tell your Keen reader the question the moment they pick up the phone so they can shuffle while you talk.
 
 **2. Ask "Open" Tarot Questions, Not "Binary" Ones**
 Tarot is a narrative tool, not a coin flip. 

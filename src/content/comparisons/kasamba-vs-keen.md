@@ -63,7 +63,7 @@ The correct use of this offer is the silence test: enter the chat, give your nam
 
 Keen gives you 5 minutes with one reader for $1. Once. Total. This is not repeatable across multiple readers.
 
-That constraint changes everything about how to use it. The Keen trial does not solve the reader-selection problem — it solves the platform-legitimacy question and the elite-reader-access problem. For $1, you can test a $15–$20/min reader for 5 minutes. No other platform gives you access to its premium tier at that price.
+That constraint changes everything about how to use it. The Keen trial does not solve the reader-selection problem — it solves the platform-legitimacy question and the elite-reader-access problem. For $1, you can test a $15→–$20/min reader for 5 minutes. No other platform gives you access to its premium tier at that price.
 
 But you have to choose correctly, because you only get one shot. The research burden shifts to you: you need to do enough preparation before the trial to identify the specific reader you want to test, use the 5 minutes surgically (one focused question, no context-sharing), and evaluate the session quality as an accuracy indicator before committing to a paid session.
 
@@ -123,9 +123,9 @@ Both platforms start at $1.99/min at the entry tier, making the starting rates c
 
 | | Kasamba | Keen |
 |---|---|---|
-| Entry tier | $1.99–$4.99/min | $1.99–$4.99/min |
-| Professional tier | $5.00–$14.99/min | $5.00–$12.99/min |
-| Elite tier | $15.00–$30.00+/min | $15.00–$20.00/min |
+| Entry tier | $1.99→–$4.99/min | $1.99→–$4.99/min |
+| Professional tier | $5.00→–$14.99/min | $5.00→–$12.99/min |
+| Elite tier | $15.00→–$30.00+/min | $15.00→–$20.00/min |
 | Trial offer | 3 min free/reader (unlimited) | 5 min for $1 (once) |
 | First-session discount | 50% off first paid session | N/A (trial is the offer) |
 
@@ -155,7 +155,7 @@ For seekers whose primary question is romantic or relational, this concentration
 
 ### Keen: The Un-Deletable Review Ledger
 
-Keen's review system is the most comprehensive accountability tool in the psychic industry by volume. Reviews cannot be deleted, edited, or hidden. Every star, every written comment, and every reader reply is permanently public — and with many practitioners carrying 40,000–100,000+ sessions of review history, pattern analysis actually works.
+Keen's review system is the most comprehensive accountability tool in the psychic industry by volume. Reviews cannot be deleted, edited, or hidden. Every star, every written comment, and every reader reply is permanently public — and with many practitioners carrying 40,000→–100,000+ sessions of review history, pattern analysis actually works.
 
 What the Keen review ledger tells you:
 - Long-term accuracy patterns (not just recent ratings)
@@ -191,7 +191,7 @@ Stop asking "which is better" and start asking "which is right for my specific s
 
 ### The Optimal Strategy for Most Seekers
 
-Use both. Start with Kasamba's free minutes to identify what type of reader connects with your situation. Test 3–5 chat-based readers at zero cost. Identify 1–2 who deliver unprompted, specific information. Book a full session with the best one using the 50% first-session discount.
+Use both. Start with Kasamba's free minutes to identify what type of reader connects with your situation. Test 3→–5 chat-based readers at zero cost. Identify 1→–2 who deliver unprompted, specific information. Book a full session with the best one using the 50% first-session discount.
 
 Then use Keen's $1 trial to access a specific phone-based practitioner — David7 for timeline assessments, Master Sher for deep karmic readings, Arradaza for Vedic astrology timelines — who complements what the Kasamba reader told you. The two readings, from two different modalities, will often produce a more complete picture than either alone.
 

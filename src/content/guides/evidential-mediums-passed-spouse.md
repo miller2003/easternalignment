@@ -83,7 +83,7 @@ If your spouse died three days ago, a true medium might tell you, *"I cannot rea
 ## The Top 3 Evidential Mediums Online (2026)
 
 ### #1 Seek Chelle (Kasamba) — Best for "Medical" Clairsentient Proof
-If you want absolute physical proof that the medium has connected to your specific spouse, Chelle’s empathic abilities are unparalleled.
+If you want absolute physical proof that the medium has connected to your specific spouse, Chelle→’s empathic abilities are unparalleled.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
