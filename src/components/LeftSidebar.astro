@@ -1,5 +1,63 @@
 ---
-// LeftSidebar.astro — Sticky sidebar
+// LeftSidebar.astro — Sticky sidebar with context-aware deal cards.
+//
+// The three platform deal cards are now rendered data-driven and ordered by
+// the CURRENT page's platform context: on a Kasamba page the Kasamba card
+// comes first and carries the "featured" treatment, instead of always
+// pushing Keen. This mirrors the page's intent instead of fighting it.
+import { PLATFORM_OFFERS, type PlatformKey } from '../lib/offers';
+
+interface Props {
+  /** Platform this page is about; its card is promoted to the top slot. */
+  platform?: PlatformKey;
+}
+
+const { platform } = Astro.props;
+
+interface DealCardData {
+  key: PlatformKey;
+  reviewPath: string;
+  logotypeStyle: string;
+  logotype: string;
+  faviconDomain: string;
+  text: string;      // offer sentence (may contain <strong>)
+  btn: string;
+}
+
+const CARDS: DealCardData[] = [
+  {
+    key: 'keen',
+    reviewPath: '/reviews/keen/',
+    logotypeStyle: 'color: #004d40; font-family: Georgia, serif; font-style: italic; font-size: 1.4em;',
+    logotype: 'keen',
+    faviconDomain: 'keen.com',
+    text: 'Enjoy a <strong>5-minute</strong> introductory reading for only $1.',
+    btn: 'Claim $1 Offer',
+  },
+  {
+    key: 'kasamba',
+    reviewPath: '/reviews/kasamba/',
+    logotypeStyle: 'color: #4a6ee0; font-weight: 700; letter-spacing: -0.02em; font-size: 1.3em;',
+    logotype: 'kasamba',
+    faviconDomain: 'kasamba.com',
+    text: 'Claim your first <strong>3 minutes</strong> absolutely free, plus receive half off your initial session.',
+    btn: 'Claim 3 Free Min',
+  },
+  {
+    key: 'purple-garden',
+    reviewPath: '/reviews/purple-garden/',
+    logotypeStyle: 'color: #6b4d8c; font-weight: 500;',
+    logotype: 'purple garden',
+    faviconDomain: 'purplegarden.co',
+    text: 'Grab a complimentary <strong>$30 credit</strong> to connect with any advisor of your choice.',
+    btn: 'Claim $30 Credit',
+  },
+];
+
+// Current platform first (featured), the rest follow in default order.
+const ordered = platform
+  ? [...CARDS].sort((a, b) => (a.key === platform ? -1 : b.key === platform ? 1 : 0))
+  : CARDS;
 ---
 
 <aside class="sidebar-left">
@@ -8,78 +66,34 @@
   </div>
 
   <div class="sidebar-left__cards">
-    <!-- Keen Deal -->
-    <div class="deal-card deal-card--featured">
-      <a href="/reviews/keen/" class="deal-card__logo-link" title="Read Keen Review">
-        <div class="deal-card__logo-wrapper">
-          <img src="https://www.google.com/s2/favicons?domain=keen.com&sz=128" alt="Keen icon" class="deal-card__icon" loading="lazy" />
-          <span class="deal-card__logotype" style="color: #004d40; font-family: Georgia, serif; font-style: italic; font-size: 1.4em;">keen</span>
-        </div>
-      </a>
-      
-      <p class="deal-card__text">
-        Enjoy a <strong>5-minute</strong> introductory reading for only $1.
-      </p>
-      
-      <a
-        href="/go/keen/"
-        class="deal-card__btn"
-        rel="nofollow sponsored"
-        target="_blank"
-        data-cta-source="sidebar"
-      >
-        Claim $1 Offer
-        <svg class="deal-card__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-    </div>
+    {ordered.map((card, i) => {
+      const offer = PLATFORM_OFFERS[card.key];
+      const featured = platform ? card.key === platform : i === 0;
+      return (
+        <div class:list={['deal-card', { 'deal-card--featured': featured }]}>
+          {featured && platform && <span class="deal-card__tag">On this page</span>}
+          <a href={card.reviewPath} class="deal-card__logo-link" title={`Read ${offer.name} Review`}>
+            <div class="deal-card__logo-wrapper">
+              <img src={`https://www.google.com/s2/favicons?domain=${card.faviconDomain}&sz=128`} alt={`${offer.name} icon`} class="deal-card__icon" loading="lazy" />
+              <span class="deal-card__logotype" style={card.logotypeStyle}>{card.logotype}</span>
+            </div>
+          </a>
 
-    <!-- Kasamba Deal -->
-    <div class="deal-card">
-      <a href="/reviews/kasamba/" class="deal-card__logo-link" title="Read Kasamba Review">
-        <div class="deal-card__logo-wrapper">
-          <img src="https://www.google.com/s2/favicons?domain=kasamba.com&sz=128" alt="Kasamba icon" class="deal-card__icon" loading="lazy" />
-          <span class="deal-card__logotype" style="color: #4a6ee0; font-weight: 700; letter-spacing: -0.02em; font-size: 1.3em;">kasamba</span>
-        </div>
-      </a>
-      
-      <p class="deal-card__text">
-        Claim your first <strong>3 minutes</strong> absolutely free, plus receive half off your initial session.
-      </p>
-      
-      <a
-        href="/go/kasamba/"
-        class="deal-card__btn"
-        rel="nofollow sponsored"
-        target="_blank"
-        data-cta-source="sidebar"
-      >
-        Claim 3 Free Min
-        <svg class="deal-card__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-    </div>
+          <p class="deal-card__text" set:html={card.text} />
 
-    <!-- Purple Garden Deal -->
-    <div class="deal-card">
-      <div class="deal-card__logo-wrapper">
-        <img src="https://www.google.com/s2/favicons?domain=purplegarden.co&sz=128" alt="Purple Garden icon" class="deal-card__icon" loading="lazy" />
-        <span class="deal-card__logotype" style="color: #6b4d8c; font-weight: 500;">purple garden</span>
-      </div>
-      
-      <p class="deal-card__text">
-        Grab a complimentary <strong>$30 credit</strong> to connect with any advisor of your choice.
-      </p>
-      
-      <a
-        href="/go/purplegarden/"
-        class="deal-card__btn"
-        rel="nofollow sponsored"
-        target="_blank"
-        data-cta-source="sidebar"
-      >
-        Claim $30 Credit
-        <svg class="deal-card__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-    </div>
+          <a
+            href={`/go/${offer.goSlug}/`}
+            class="deal-card__btn"
+            rel="nofollow sponsored"
+            target="_blank"
+            data-cta-source="sidebar"
+          >
+            {card.btn}
+            <svg class="deal-card__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      );
+    })}
   </div>
 
   <div class="sidebar-left__section sidebar-left__section--trending">
@@ -194,6 +208,23 @@
   .deal-card--featured {
     border-color: var(--color-accent-light, #e8cdb0);
     background: linear-gradient(180deg, var(--color-bg, #faf8f5) 0%, var(--color-surface, #ffffff) 100%);
+  }
+
+  /* "On this page" tag for the context-featured card */
+  .deal-card__tag {
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: var(--color-accent, #c4956a);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 9999px;
   }
 
   /* Logo Area */

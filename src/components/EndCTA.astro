@@ -5,8 +5,9 @@
  * Placed after the article body on every guide & comparison page (injected by
  * ArticleLayout / ComparisonLayout), this captures the single highest-intent
  * moment: the reader who just finished the content. It presents all three
- * tested platforms, with the Editor's Choice (Keen) emphasised, so the page
- * converts instead of dumping the reader into the footer.
+ * tested platforms. Kasamba is the default Editor's Choice (site-wide No.1
+ * since the 2026-08-25 priority reset), Purple Garden is No.2, Keen is No.3 —
+ * so the page converts instead of dumping the reader into the footer.
  *
  * All buttons route through /go/ (gated + tracked) and carry
  * data-cta-source="end" for PostHog segmentation.
@@ -14,6 +15,9 @@
  * Props let a specific page promote one platform (e.g. a Kasamba-focused
  * comparison) by reordering/highlighting, but defaults are sensible.
  */
+import { platformLogo, proofTooltip } from '../lib/offers';
+import CtaTip from './CtaTip.astro';
+
 interface Props {
   primarySlug?: 'keen' | 'kasamba' | 'purple-garden';
   heading?: string;
@@ -21,25 +25,20 @@ interface Props {
 }
 
 const {
-  primarySlug = 'keen',
+  primarySlug = 'kasamba',
   heading = 'Ready to get your reading?',
   subheading = 'I’ve personally tested each platform with my own money. Every intro offer below is applied to your first purchase — pick the one that fits you and claim it at checkout.',
 } = Astro.props;
 
+// Site-wide default recommendation order (2026-08-25 reset):
+// Kasamba → Purple Garden → Keen. primarySlug (the default Editor's Choice
+// above) is rendered first and gets the featured badge + highlight treatment;
+// the other two follow in this order, so all three always appear.
 const offers = [
-  {
-    slug: 'keen',
-    name: 'Keen',
-    tag: 'Editor’s Choice',
-    offer: '5 minutes for $1',
-    blurb: 'Deepest roster & finest phone infrastructure. The safest place to test a top reader for pocket change.',
-    cta: 'Get 5 Min for $1',
-    color: '#004d40',
-  },
   {
     slug: 'kasamba',
     name: 'Kasamba',
-    tag: 'Best for Chat & Love',
+    tag: 'Editor’s Choice',
     offer: '3 free minutes + 50% off',
     blurb: 'Permanent chat transcripts & 3 free minutes with every new advisor — safest for testing relationship specialists.',
     cta: 'Claim 3 Free Min + 50% Off',
@@ -53,6 +52,15 @@ const offers = [
     blurb: 'Mandatory video intros & a public outcomes ledger. The most accessible entry price.',
     cta: 'Claim $30 Credit',
     color: '#6b4d8c',
+  },
+  {
+    slug: 'keen',
+    name: 'Keen',
+    tag: 'Best for Phone',
+    offer: '5 minutes for $1',
+    blurb: 'Deepest roster & finest phone infrastructure. The safest place to test a top reader for pocket change.',
+    cta: 'Get 5 Min for $1',
+    color: '#004d40',
   },
 ];
 
@@ -75,19 +83,30 @@ const ordered = [...offers].sort((a, b) => {
       <div class:list={['end-cta__card', { 'end-cta__card--featured': o.slug === primarySlug }]}>
         {o.slug === primarySlug && <span class="end-cta__badge">&#x2726; {o.tag}</span>}
         <div class="end-cta__card-top">
+          <img
+            src={platformLogo(o.slug as 'keen' | 'kasamba' | 'purple-garden', 64)}
+            alt=""
+            class="end-cta__logo"
+            width="24"
+            height="24"
+            loading="lazy"
+            aria-hidden="true"
+          />
           <span class="end-cta__name" style={`color: ${o.color}`}>{o.name}</span>
         </div>
         <p class="end-cta__offer">{o.offer}</p>
         <p class="end-cta__blurb">{o.blurb}</p>
-        <a
-          href={`/go/${o.slug}/`}
-          class:list={['end-cta__btn', { 'end-cta__btn--featured': o.slug === primarySlug }]}
-          rel="nofollow sponsored"
-          target="_blank"
-          data-cta-source="end"
-        >
-          {o.cta} &rarr;
-        </a>
+        <CtaTip text={proofTooltip(o.slug as 'keen' | 'kasamba' | 'purple-garden')} block>
+          <a
+            href={`/go/${o.slug}/`}
+            class:list={['end-cta__btn', { 'end-cta__btn--featured': o.slug === primarySlug }]}
+            rel="nofollow sponsored"
+            target="_blank"
+            data-cta-source="end"
+          >
+            {o.cta} &rarr;
+          </a>
+        </CtaTip>
       </div>
     ))}
   </div>
@@ -169,7 +188,17 @@ const ordered = [...offers].sort((a, b) => {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 8px;
     min-height: 28px;
+  }
+
+  .end-cta__logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 2px;
+    box-shadow: 0 1px 4px rgba(45, 42, 38, 0.12);
   }
 
   .end-cta__name {
@@ -243,19 +272,15 @@ const ordered = [...offers].sort((a, b) => {
     .end-cta { padding: var(--space-6) 0; }
     .end-cta__head { padding: 0 var(--space-4); }
     .end-cta__disclaimer { padding: 0 var(--space-4); }
+    /* Stack all three platform cards in a single clean column on mobile
+       (no horizontal scroll-snap) so every recommendation is visible at a
+       glance and the primary action is always full-width + thumb-friendly. */
     .end-cta__grid {
-      grid-template-columns: repeat(3, 85vw);
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
       padding: 0 var(--space-4);
-      gap: var(--space-3);
-      -webkit-overflow-scrolling: touch;
-      margin: 0 calc(-1 * var(--space-4));
-      padding-bottom: var(--space-2);
     }
-    .end-cta__grid::-webkit-scrollbar { display: none; }
-    .end-cta__grid { -ms-overflow-style: none; scrollbar-width: none; }
-    .end-cta__card { scroll-snap-align: center; text-align: left; align-items: flex-start; }
+    .end-cta__card { text-align: left; align-items: flex-start; }
     .end-cta__card-top { justify-content: flex-start; }
     .end-cta__btn { width: 100%; }
   }

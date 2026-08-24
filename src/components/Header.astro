@@ -10,27 +10,13 @@ const navLinks = [
     href: '/reviews/',
     label: 'Reviews',
     children: [
-      { href: '/reviews/keen/', label: 'Keen Psychics' },
       { href: '/reviews/kasamba/', label: 'Kasamba Psychics' },
       { href: '/reviews/purple-garden/', label: 'Purple Garden' },
+      { href: '/reviews/keen/', label: 'Keen Psychics' },
     ],
   },
   { href: '/comparisons/', label: 'Comparisons' },
-  { href: '/astrology/', label: 'Astrology' },
-  {
-    href: '/tools/',
-    label: 'Tools',
-    children: [
-      { href: '/tools/yes-no-tarot/', label: 'Yes/No Tarot' },
-      { href: '/tools/one-card-tarot/', label: 'Daily Card Tarot' },
-      { href: '/tools/angel-number-calculator/', label: 'Angel Number Calculator' },
-      { href: '/tools/life-path-calculator/', label: 'Life Path Calculator' },
-      { href: '/tools/zodiac-compatibility-calculator/', label: 'Love Compatibility' },
-      { href: '/tools/moon-phase/', label: 'Moon Phase Tracker' },
-      { href: '/tools/dream-dictionary/', label: 'Dream Meanings' },
-    ],
-  },
-  { href: '/guides/', label: 'Guides' },
+  { href: '/tools/', label: 'Tool' },
   { href: '/about/', label: 'About' },
 ];
 
@@ -126,7 +112,16 @@ const navLinks = [
 <style>
   .site-header {
     position: sticky;
-    top: 0;
+    /*
+       `top: var(--top-offer-h, 0px)` lets the site header park directly
+       under the (sticky) TopOfferBar when the offer is on screen, and
+       reclaim the top slot the moment the user closes the offer. The
+       fallback 0px ensures correct behaviour even if TopOfferBar's
+       inline script hasn't run yet (e.g. during first paint before
+       sessionStorage is consulted) — the header never floats into
+       uncovered space.
+    */
+    top: var(--top-offer-h, 0px);
     z-index: 100;
     background: rgba(250, 248, 245, 0.92);
     backdrop-filter: blur(12px);

@@ -1,0 +1,93 @@
+---
+/**
+ * CtaTip.astro — Hover proof-tooltip wrapper for CTA buttons.
+ *
+ * Reverse-engineered from mysticmag's `zp-disappearing-tooltip`: when the
+ * visitor hovers (or keyboard-focuses) the Visit button, a small pill pops
+ * up above it carrying social proof — the exact decision moment. mysticmag
+ * fills it with "19,897 people visited this site in the last week"; we fill
+ * it with OUR real, verifiable proof (e.g. "49 Keen advisors individually
+ * reviewed on this site") — same psychological mechanism, honest data.
+ *
+ * CSS-only (no JS), mobile-safe (hover simply never fires on touch).
+ *
+ * Usage:
+ *   <CtaTip text={proofTooltip('keen')}>
+ *     <a class="btn ..." ...>...</a>
+ *   </CtaTip>
+ *
+ * Set `block` when the wrapped button is full-width.
+ */
+interface Props {
+  text: string;
+  block?: boolean;
+}
+
+const { text, block = false } = Astro.props;
+---
+
+<span class:list={['cta-tip', { 'cta-tip--block': block }]} data-tip={text}>
+  <slot />
+</span>
+
+<style>
+  .cta-tip {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .cta-tip--block {
+    display: flex;
+    width: 100%;
+  }
+
+  .cta-tip::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%) translateY(4px);
+    width: max-content;
+    max-width: 260px;
+    padding: 8px 14px;
+    background: var(--color-surface, #ffffff);
+    color: var(--color-text, #2d2a26);
+    border: 1px solid var(--color-accent-light, #e8cdb0);
+    border-radius: 9999px;
+    box-shadow: 0 10px 28px rgba(45, 42, 38, 0.18);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    z-index: 80;
+  }
+
+  /* Little arrow under the pill */
+  .cta-tip::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 4px);
+    transform: translateX(-50%) translateY(4px);
+    border: 6px solid transparent;
+    border-top-color: var(--color-accent-light, #e8cdb0);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    z-index: 81;
+  }
+
+  .cta-tip:hover::after,
+  .cta-tip:focus-within::after,
+  .cta-tip:hover::before,
+  .cta-tip:focus-within::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>

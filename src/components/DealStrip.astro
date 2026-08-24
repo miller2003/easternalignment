@@ -1,0 +1,118 @@
+---
+/**
+ * DealStrip.astro — mysticmag-style offer banner strip.
+ *
+ * A compact, high-contrast horizontal banner that puts the new-client offer
+ * directly under a hero CTA or inside the article flow. Mirrors the pattern
+ * mysticmag uses under every review module ("Get $30 FREE to spend..."),
+ * adapted to our palette and our /go/ gating.
+ *
+ * Usage:
+ *   <DealStrip platform="keen" source="hero" />
+ *   <DealStrip platform="kasamba" source="inline" href="/go/kasamba-master-enigma/" />
+ *
+ * `href` defaults to the platform-level /go/ link; pass a reader-level
+ * deeplink on reader pages so the banner promotes THAT advisor.
+ */
+import { PLATFORM_OFFERS, goPath, type PlatformKey } from '../lib/offers';
+
+interface Props {
+  platform: PlatformKey;
+  /** PostHog placement attribution: hero | inline | end | sidebar ... */
+  source: string;
+  /** Optional reader-level /go/ deeplink (overrides the platform link). */
+  href?: string;
+  /** Optional lead-in verb, defaults to a lightning-bolt tag. */
+  compact?: boolean;
+}
+
+const { platform, source, href, compact = false } = Astro.props;
+const offer = PLATFORM_OFFERS[platform];
+const link = href || goPath(platform);
+---
+
+<div
+  class:list={['deal-strip', { 'deal-strip--compact': compact }]}
+  data-cta-source={source}
+>
+  <span class="deal-strip__icon" aria-hidden="true">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4.09 12.35a.6.6 0 00.46.98H11l-1.8 8.02c-.13.6.63.95 1.03.48L20.91 10.6a.6.6 0 00-.46-.98H13l1.8-7.14c.14-.57-.6-.93-1.03-.48L13 2z"/></svg>
+  </span>
+  <p class="deal-strip__text">{offer.dealLine}</p>
+  <a
+    href={link}
+    class="deal-strip__link"
+    rel="nofollow sponsored"
+    target="_blank"
+    data-cta-source={source}
+  >
+    {offer.ctaLabel}
+  </a>
+</div>
+
+<style>
+  .deal-strip {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 10px 16px;
+    margin: var(--space-4) 0;
+    background: linear-gradient(90deg, var(--color-warning-bg, #fdf5ec) 0%, var(--color-bg-alt, #f3efe9) 100%);
+    border: 1px dashed var(--color-accent, #c4956a);
+    border-radius: var(--radius-md, 10px);
+  }
+
+  .deal-strip__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--color-accent, #c4956a);
+    color: #fff;
+  }
+
+  .deal-strip__text {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    font-size: var(--text-sm, 0.875rem);
+    font-weight: 600;
+    color: var(--color-primary-dark, #6b5438);
+    line-height: var(--leading-normal, 1.5);
+  }
+
+  .deal-strip__link {
+    flex-shrink: 0;
+    font-size: var(--text-sm, 0.875rem);
+    font-weight: 700;
+    color: var(--color-accent-hover, #b07f55);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+  }
+
+  .deal-strip__link:hover {
+    color: var(--color-primary-dark, #6b5438);
+  }
+
+  @media (max-width: 640px) {
+    .deal-strip {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      padding: 12px;
+    }
+    .deal-strip__text {
+      flex: 1 1 calc(100% - 40px);
+    }
+    .deal-strip__link {
+      width: 100%;
+      text-align: center;
+      padding-top: 4px;
+    }
+  }
+</style>

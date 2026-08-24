@@ -1,0 +1,451 @@
+---
+/**
+ * ScorePanel.astro — Platform hub summary card.
+ *
+ * Editorial / magazine-cover layout (2026-08-25 redesign):
+ *  - Brand identity (logo + name + tagline) on the left, rating block on the
+ *    right — one unified header instead of two stacked columns.
+ *  - Big serif offer headline as the card's hero.
+ *  - Supporting facts in a quiet inset panel (no small-caps shouty labels).
+ *  - Single full-width CTA with a micro risk-reversal line.
+ *  - Drops the old dashed-border deal footer; the offer is the hero now.
+ *
+ * All numbers come from props (platform frontmatter) or offers.ts — no
+ * invented stats. "Advisors reviewed" is the real count of reader reviews
+ * published on this site.
+ */
+import { PLATFORM_OFFERS, goPath, platformLogo, proofTooltip, type PlatformKey } from '../lib/offers';
+import StarRating from './StarRating.astro';
+import CtaTip from './CtaTip.astro';
+
+interface Props {
+  platform: PlatformKey;
+  rating: number;
+  /** e.g. "$1.99/min to $20.00+/min" (platform frontmatter). */
+  pricing?: string;
+  /** e.g. "Immediate phone connections & transparent vetting". */
+  bestFor?: string;
+  /** Real count of individual advisor reviews on this site. */
+  advisorsReviewed?: number;
+  /** Verdict word shown next to the score, e.g. "Excellent". */
+  verdictWord?: string;
+  /** Badge above the brand row, e.g. "Editor's Choice". */
+  badge?: string;
+}
+
+const {
+  platform,
+  rating,
+  pricing,
+  bestFor,
+  advisorsReviewed,
+  verdictWord = rating >= 4.7 ? 'Outstanding' : rating >= 4.5 ? 'Excellent' : rating >= 4 ? 'Great' : 'Good',
+  badge,
+} = Astro.props;
+
+const offer = PLATFORM_OFFERS[platform];
+const link = goPath(platform);
+
+/* Build the fact list. We always show 3 rows: pricing, advisors, and a
+   "no subscription" risk-reversal — the user said cards feel corporate if
+   they have only utilitarian labels, so we mix info with a value cue. */
+const facts: { label: string; value: string }[] = [];
+if (pricing) facts.push({ label: 'Pricing', value: pricing });
+if (advisorsReviewed) {
+  facts.push({ label: 'Advisors', value: `${advisorsReviewed} independently reviewed` });
+}
+facts.push({ label: 'Commitment', value: 'Pay per minute · No subscription' });
+---
+
+<section class="score-panel" data-cta-source="score-panel" aria-label={`${offer.name} review summary`}>
+  <!-- Quiet gold accent along the top edge -->
+  <div class="score-panel__accent" aria-hidden="true"></div>
+
+  <!-- Header: brand identity (left) + rating (right) -->
+  <header class="score-panel__head">
+    <div class="score-panel__brand">
+      <img
+        src={platformLogo(platform, 128)}
+        alt={`${offer.name} logo`}
+        class="score-panel__logo"
+        width="56"
+        height="56"
+        loading="lazy"
+      />
+      <div class="score-panel__title">
+        <div class="score-panel__name" style={`color: ${offer.color}`}>{offer.name}</div>
+        {bestFor && <div class="score-panel__tagline">For {bestFor.toLowerCase()}</div>}
+      </div>
+    </div>
+
+    <div class="score-panel__rating">
+      <div class="score-panel__score">
+        <span class="score-panel__score-num">{rating.toFixed((rating * 10) % 1 === 0 ? 1 : 2)}</span>
+        <span class="score-panel__score-out">/ 5</span>
+      </div>
+      <StarRating rating={rating} size="sm" showValue={false} />
+      <div class="score-panel__verdict">{verdictWord}</div>
+    </div>
+  </header>
+
+  <!-- Trust pills row (under the header) -->
+  <div class="score-panel__pills">
+    {badge && <span class="score-panel__pill score-panel__pill--choice">★ {badge}</span>}
+    <span class="score-panel__pill score-panel__pill--trusted">✓ Independently tested</span>
+  </div>
+
+  <div class="score-panel__divider" aria-hidden="true"></div>
+
+  <!-- Hero offer + supporting facts -->
+  <div class="score-panel__body">
+    <div class="score-panel__offer">
+      <div class="score-panel__offer-eyebrow">New client welcome offer</div>
+      <div class="score-panel__offer-headline">{offer.offer}</div>
+      <div class="score-panel__offer-sub">Applied to your first reading · No commitment required</div>
+    </div>
+
+    <dl class="score-panel__facts">
+      {facts.map((f) => (
+        <div class="score-panel__fact">
+          <dt class="score-panel__fact-label">{f.label}</dt>
+          <dd class="score-panel__fact-value">{f.value}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+
+  <!-- CTA + micro -->
+  <CtaTip text={proofTooltip(platform)} block>
+    <a
+      href={link}
+      class="score-panel__cta"
+      rel="nofollow sponsored"
+      target="_blank"
+      data-cta-source="score-panel"
+    >
+      {offer.ctaLabel}
+    </a>
+  </CtaTip>
+  <p class="score-panel__micro">{offer.microLine}</p>
+</section>
+
+<style>
+  .score-panel {
+    position: relative;
+    margin: var(--space-6, 1.5rem) 0 var(--space-8, 2rem);
+    padding: var(--space-7, 1.75rem) var(--space-8, 2rem) var(--space-6, 1.5rem);
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e8e2da);
+    border-radius: 20px;
+    box-shadow: 0 24px 56px rgba(139, 111, 78, 0.10), 0 2px 6px rgba(139, 111, 78, 0.04);
+    overflow: hidden;
+  }
+
+  .score-panel__accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent, #c4956a) 0%, rgba(196, 149, 106, 0.15) 100%);
+  }
+
+  /* ── Header: brand + rating ── */
+  .score-panel__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5, 1.25rem);
+  }
+
+  .score-panel__brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  .score-panel__logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 5px;
+    box-shadow: 0 4px 14px rgba(45, 42, 38, 0.12);
+    flex-shrink: 0;
+  }
+
+  .score-panel__title { min-width: 0; }
+
+  .score-panel__name {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .score-panel__tagline {
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--color-text-muted, #7a746b);
+    font-style: italic;
+  }
+
+  .score-panel__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .score-panel__score {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+  }
+
+  .score-panel__score-num {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-text, #2d2a26);
+    letter-spacing: -0.02em;
+  }
+
+  .score-panel__score-out {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted, #7a746b);
+  }
+
+  .score-panel__verdict {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-sage, #6b8f5e);
+    margin-top: 2px;
+  }
+
+  /* ── Pills row ── */
+  .score-panel__pills {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: var(--space-4, 1rem);
+  }
+
+  .score-panel__pill {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .score-panel__pill--choice {
+    color: var(--color-accent-hover, #b07f55);
+  }
+
+  .score-panel__pill--trusted {
+    color: var(--color-sage, #6b8f5e);
+    border-left: 1px solid var(--color-border, #e8e2da);
+    padding-left: 14px;
+  }
+
+  /* ── Divider ── */
+  .score-panel__divider {
+    height: 1px;
+    background: var(--color-border-light, #f0ece6);
+    margin: var(--space-5, 1.25rem) 0;
+  }
+
+  /* ── Body: offer hero + facts ── */
+  .score-panel__body {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: var(--space-6, 1.5rem);
+    align-items: stretch;
+  }
+
+  .score-panel__offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: var(--space-4, 1rem);
+  }
+
+  .score-panel__offer-eyebrow {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent-hover, #b07f55);
+  }
+
+  .score-panel__offer-headline {
+    margin-top: 6px;
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-text, #2d2a26);
+    letter-spacing: -0.01em;
+  }
+
+  .score-panel__offer-sub {
+    margin-top: 6px;
+    font-size: 13.5px;
+    color: var(--color-text-muted, #7a746b);
+    line-height: 1.45;
+  }
+
+  .score-panel__facts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 16px 18px;
+    background: linear-gradient(180deg, var(--color-bg-alt, #faf6f1) 0%, #f7f1ea 100%);
+    border: 1px solid var(--color-border-light, #f0ece6);
+    border-radius: 12px;
+  }
+
+  .score-panel__fact {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 4px 0;
+    font-size: 13px;
+    border-bottom: 1px dashed rgba(139, 111, 78, 0.12);
+  }
+
+  .score-panel__fact:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .score-panel__fact-label {
+    flex-shrink: 0;
+    min-width: 88px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted, #7a746b);
+  }
+
+  .score-panel__fact-value {
+    margin: 0;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--color-text, #2d2a26);
+    line-height: 1.4;
+  }
+
+  /* ── CTA ── */
+  .score-panel__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--space-6, 1.5rem);
+    min-height: 56px;
+    padding: 0 24px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(196, 149, 106, 0.40), 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .score-panel__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(196, 149, 106, 0.55), 0 1px 0 rgba(255, 255, 255, 0.30) inset;
+    color: #ffffff;
+  }
+
+  .score-panel__micro {
+    margin: 12px 0 0;
+    font-size: 12.5px;
+    color: var(--color-text-muted, #7a746b);
+    text-align: center;
+  }
+
+  /* ── Prose-leak resets: this panel renders inside .prose on hub pages,
+     whose link/heading rules would otherwise restyle our CTA. ── */
+  :global(.prose) .score-panel a {
+    text-decoration: none;
+  }
+
+  :global(.prose) .score-panel__cta,
+  :global(.prose) .score-panel__cta:visited {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  :global(.prose) .score-panel__cta:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  :global(.prose) .score-panel p {
+    margin-bottom: 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 720px) {
+    .score-panel {
+      padding: var(--space-5, 1.25rem);
+    }
+    .score-panel__head {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-3, 0.75rem);
+    }
+    .score-panel__rating {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+    .score-panel__body {
+      grid-template-columns: 1fr;
+      gap: var(--space-4, 1rem);
+    }
+    .score-panel__offer {
+      padding-right: 0;
+    }
+    .score-panel__offer-headline {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .score-panel__name { font-size: 24px; }
+    .score-panel__score-num { font-size: 30px; }
+    .score-panel__offer-headline { font-size: 25px; }
+    .score-panel__pills {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .score-panel__pill--trusted {
+      border-left: none;
+      padding-left: 0;
+    }
+    .score-panel__fact {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+    .score-panel__fact-label {
+      min-width: 0;
+    }
+  }
+</style>

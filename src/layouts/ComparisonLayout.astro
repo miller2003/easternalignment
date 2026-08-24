@@ -6,6 +6,8 @@ import AuthorBio from '../components/AuthorBio.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar.astro';
 import EndCTA from '../components/EndCTA.astro';
+import InlineCta from '../components/InlineCta.astro';
+import { PLATFORM_OFFERS } from '../lib/offers';
 
 interface Props {
   title: string;
@@ -36,11 +38,12 @@ const {
 const displayDate = updatedDate || publishDate;
 
 // Map the comparison "winner" string to a platform slug so the end CTA
-// promotes the page's actual pick (falls back to Keen as Editor's Choice).
+// promotes the page's actual pick. Falls back to Kasamba (the site-wide
+// default No.1 since the 2026-08-25 priority reset) when no winner is set.
 const winnerSlug: 'keen' | 'kasamba' | 'purple-garden' =
   winner?.toLowerCase().includes('kasamba') ? 'kasamba'
   : winner?.toLowerCase().includes('purple') ? 'purple-garden'
-  : 'keen';
+  : 'kasamba';
 const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
@@ -49,15 +52,23 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
 
 // ── Focused sticky-CTA: the comparison winner drives the bottom bar ──────────
 const comparisonStickCopy: Record<'keen' | 'kasamba' | 'purple-garden', { label: string; prompt: string }> = {
-  keen:            { label: 'Keen · 5 min for $1 →',         prompt: 'First purchase offer on Keen (the comparison winner): 5 minutes for $1' },
-  kasamba:         { label: 'Kasamba · 3 free mins →',       prompt: 'First purchase offer on Kasamba (the comparison winner): 3 free minutes + 50% off' },
-  'purple-garden': { label: 'Purple Garden · $30 credit →',  prompt: 'First purchase offer on Purple Garden (the comparison winner): $30 credit' },
+  keen:            { label: 'Try Keen · 5 min for $1 →',         prompt: '5 min for $1' },
+  kasamba:         { label: 'Try Kasamba · 3 free + 50% off →',  prompt: '3 free + 50% off' },
+  'purple-garden': { label: 'Try Purple Garden · $30 credit →',  prompt: '$30 free credit' },
 };
 const stickyCta = {
   slug: `/go/${winnerSlug}/`,
   platform: winnerSlug,
   label: comparisonStickCopy[winnerSlug].label,
   prompt: comparisonStickCopy[winnerSlug].prompt,
+};
+
+// Winner's offer data drives the hero button + right-rail deal card.
+const winnerOffer = PLATFORM_OFFERS[winnerSlug];
+const sidebarDeal = {
+  platform: winnerSlug,
+  label: 'Comparison winner',
+  heading: `${winnerOffer.name} · ${winnerOffer.offer}`,
 };
 
 const articleSchema = {
@@ -83,12 +94,13 @@ const articleSchema = {
   metaDescription={metaDescription}
   canonicalUrl={canonicalUrl}
   customSchema={customSchema}
+  topOfferPlatform={winnerSlug}
   stickyCta={stickyCta}
 >
   <!-- Full-page 3-column grid: sidebars span the entire page height -->
   <div class="page-with-sidebars">
     <!-- LEFT SIDEBAR -->
-    <LeftSidebar />
+    <LeftSidebar platform={winnerSlug} />
 
     <!-- MAIN COLUMN: breadcrumb + hero + content -->
     <div class="main-col">
@@ -118,9 +130,12 @@ const articleSchema = {
           </div>
         )}
 
-        <a href={`/go/${winnerSlug}/`} class="comparison-hero-cta btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
-          Visit My Pick &rarr;
-        </a>
+        <div class="comparison-hero-cta-wrap">
+          <a href={`/go/${winnerOffer.goSlug}/`} class="comparison-hero-cta btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
+            {winnerOffer.ctaLabel}
+          </a>
+          <p class="comparison-hero-cta-note">{winnerOffer.microLine}</p>
+        </div>
 
         <AffiliateDisclosure variant="inline" />
       </header>
@@ -131,10 +146,16 @@ const articleSchema = {
           <slot />
         </div>
 
+        {/* Mid-article CTA promoting the comparison winner */}
+        <InlineCta
+          platform={winnerSlug}
+          hook={`Still torn? Here's the shortcut — my pick is ${winnerOffer.name}, and new clients get ${winnerOffer.offer}.`}
+        />
+
         <!-- End-of-article offer block: promotes the page's winning pick -->
         <EndCTA
           primarySlug={winnerSlug}
-          heading={`My pick: ${winner || 'Keen'}`}
+          heading={`My pick: ${winner || 'Kasamba'}`}
           subheading="I’ve personally tested each platform with my own money. Start with my recommendation, or compare the others — every link is an independent pick."
         />
 
@@ -143,7 +164,7 @@ const articleSchema = {
     </div>
 
     <!-- RIGHT SIDEBAR -->
-    <RightSidebar />
+    <RightSidebar deal={sidebarDeal} />
   </div>
 </BaseLayout>
 
@@ -209,7 +230,16 @@ const articleSchema = {
   .comparison-hero-cta {
     display: inline-flex;
     align-items: center;
+  }
+
+  .comparison-hero-cta-wrap {
     margin-bottom: var(--space-6);
+  }
+
+  .comparison-hero-cta-note {
+    margin: var(--space-2) 0 0;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
   }
 
   .winner-label {

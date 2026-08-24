@@ -12,6 +12,7 @@ import CTABox from '../../../components/CTABox.astro';
 import FAQ from '../../../components/FAQ.astro';
 import ReaderCard from '../../../components/ReaderCard.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
+import ScorePanel from '../../../components/ScorePanel.astro';
 
 /* Load the Purple Garden platform review content */
 const purpleGardenModule = await import('../../../content/reviews/purple-garden.md');
@@ -104,6 +105,15 @@ const relatedItems = [
   updatedDate={frontmatter.updatedDate}
   hreflangEs="https://easternalignment.com/es/resenas/purple-garden-es/"
 >
+  <ScorePanel
+    platform="purple-garden"
+    rating={frontmatter.rating}
+    pricing={frontmatter.pricing}
+    bestFor={frontmatter.bestFor}
+    advisorsReviewed={readers.length}
+    badge="Best for Video"
+  />
+
   <PurpleGardenContent />
 
   {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (

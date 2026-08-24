@@ -1,0 +1,170 @@
+---
+/**
+ * InlineCta.astro — Mid-article CTA with automatic in-content injection.
+ *
+ * The conversion gap this closes: our articles are long (2,000+ words), and
+ * previously the ONLY affiliate buttons were the hero CTA (top) and the end
+ * box (bottom). Readers who bail mid-article — the majority — never saw a
+ * second offer. mysticmag places a CTA roughly every screenful; this
+ * component gives us one clean mid-article touchpoint without editing 100+
+ * markdown files.
+ *
+ * How it works:
+ *  - Renders a hidden <template> containing the CTA card.
+ *  - A tiny script finds the 2nd <h2> inside .prose and inserts the card
+ *    right BEFORE it (i.e. after the first major section). If the article
+ *    has fewer than 2 h2s, nothing is injected.
+ *  - Injection is skipped when the user already dismissed the sticky bar
+ *    (they've said "not now" once this session — respect it).
+ *
+ * Copy: one hook line + the platform offer + button + risk-reversal micro
+ * line. All wording comes from src/lib/offers.ts (single source of truth).
+ *
+ * Props:
+ *   platform  — which platform offer to promote
+ *   href      — optional reader-level /go/ deeplink (defaults to platform)
+ *   hook      — optional custom hook sentence
+ *   position  — which h2 index to insert before (default 2)
+ */
+import { PLATFORM_OFFERS, goPath, proofTooltip, type PlatformKey } from '../lib/offers';
+import CtaTip from './CtaTip.astro';
+
+interface Props {
+  platform: PlatformKey;
+  href?: string;
+  hook?: string;
+  position?: number;
+}
+
+const { platform, href, hook, position = 2 } = Astro.props;
+const offer = PLATFORM_OFFERS[platform];
+const link = href || goPath(platform);
+const hookText =
+  hook ||
+  `Still weighing it up? The fastest way to know if a reading clicks is to try one — ${offer.offer} for new clients.`;
+---
+
+<template data-inline-cta-template data-position={position}>
+  <div class="inline-cta" data-cta-source="inline">
+    <p class="inline-cta__hook">{hookText}</p>
+    <div class="inline-cta__row">
+      <CtaTip text={proofTooltip(platform)}>
+        <a
+          href={link}
+          class="inline-cta__btn"
+          rel="nofollow sponsored"
+          target="_blank"
+          data-cta-source="inline"
+        >
+          {offer.ctaLabel}
+        </a>
+      </CtaTip>
+    </div>
+    <p class="inline-cta__micro">{offer.microLine}</p>
+  </div>
+</template>
+
+<script>
+  (function () {
+    function mount() {
+      var tpl = document.querySelector('template[data-inline-cta-template]');
+      if (!tpl) return;
+      // Respect a user who already dismissed the sticky offer bar on THIS
+      // page view (they just said "not now" via the bottom X — don't shove
+      // another CTA card into the article). The flag is per-JS-context, so
+      // a full page refresh resets it naturally and InlineCta will re-appear.
+      try {
+        if (window.__eaStickyDismissed) return;
+      } catch (e) {}
+
+      var prose = document.querySelector('.prose');
+      if (!prose) return;
+
+      var pos = parseInt(tpl.getAttribute('data-position') || '2', 10);
+      var headings = prose.querySelectorAll('h2');
+      if (headings.length < pos) return;
+
+      var target = headings[pos - 1];
+      var first = tpl instanceof HTMLTemplateElement ? tpl.content.firstElementChild : null;
+      if (!target.parentNode || !first) return;
+      target.parentNode.insertBefore(first.cloneNode(true), target);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', mount);
+    } else {
+      mount();
+    }
+  })();
+</script>
+
+<style>
+  .inline-cta {
+    margin: var(--space-8, 2rem) 0;
+    padding: var(--space-6, 1.5rem);
+    background: linear-gradient(135deg, rgba(196, 149, 106, 0.10) 0%, rgba(139, 111, 78, 0.06) 100%);
+    border: 1px solid var(--color-accent-light, #e8cdb0);
+    border-radius: var(--radius-lg, 12px);
+    text-align: center;
+  }
+
+  .inline-cta__hook {
+    margin: 0 0 var(--space-4, 1rem);
+    font-size: var(--text-base, 1rem);
+    font-weight: 600;
+    color: var(--color-text, #2d2a26);
+    line-height: var(--leading-normal, 1.5);
+  }
+
+  .inline-cta__row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .inline-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 28px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(196, 149, 106, 0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .inline-cta__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(196, 149, 106, 0.55);
+    color: #ffffff;
+  }
+
+  .inline-cta__micro {
+    margin: var(--space-3, 0.75rem) 0 0;
+    font-size: 12px;
+    color: var(--color-text-muted, #7a746b);
+  }
+
+  @media (max-width: 640px) {
+    .inline-cta__btn {
+      width: 100%;
+    }
+  }
+
+  /* Prose-leak reset: this card is injected INTO .prose, whose link rules
+     would otherwise recolour and underline the button. */
+  :global(.prose) .inline-cta a {
+    text-decoration: none;
+  }
+
+  :global(.prose) .inline-cta__btn,
+  :global(.prose) .inline-cta__btn:visited,
+  :global(.prose) .inline-cta__btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+</style>

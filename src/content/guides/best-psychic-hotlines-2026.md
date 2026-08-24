@@ -2,6 +2,7 @@
 title: "Best Psychic Hotlines of 2026: Tested and Ranked"
 description: "We tested the major psychic hotlines and ranked them for 2026. Compare Keen, Kasamba, and Purple Garden on phone reading quality, pricing, trial offers, and accountability before you call."
 category: "Roundup"
+platform: keen
 publishDate: "2026-06-12"
 updatedDate: "2026-06-12"
 seoTitle: "Best Psychic Hotlines of 2026: Tested and Ranked"

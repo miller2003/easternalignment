@@ -12,6 +12,7 @@ import CTABox from '../../../components/CTABox.astro';
 import FAQ from '../../../components/FAQ.astro';
 import ReaderCard from '../../../components/ReaderCard.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
+import ScorePanel from '../../../components/ScorePanel.astro';
 
 /* Load the Keen platform review content */
 const keenModule = await import('../../../content/reviews/keen.md');
@@ -108,6 +109,15 @@ const relatedItems = [
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
 >
+  <ScorePanel
+    platform="keen"
+    rating={frontmatter.rating}
+    pricing={frontmatter.pricing}
+    bestFor={frontmatter.bestFor}
+    advisorsReviewed={readers.length}
+    badge="Best for Phone"
+  />
+
   <KeenContent />
 
   {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (

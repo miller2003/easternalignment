@@ -5,6 +5,8 @@ import AuthorBio from '../components/AuthorBio.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar.astro';
 import EndCTA from '../components/EndCTA.astro';
+import InlineCta from '../components/InlineCta.astro';
+import { PLATFORM_OFFERS } from '../lib/offers';
 
 interface Props {
   title: string;
@@ -27,8 +29,9 @@ interface Props {
   // Custom / FAQPage schema
   customSchema?: string;
   entities?: string[];
-  // Contextual CTA overrides
-  platform?: 'keen' | 'kasamba' | 'purple-garden';
+  // Contextual CTA overrides. Raw frontmatter values may be outside the
+  // union (e.g. "cross-platform") — they are normalised to a PlatformKey below.
+  platform?: string;
   affiliateUrl?: string;
 }
 
@@ -94,13 +97,25 @@ const noindex = metaRobots ? metaRobots.includes('noindex') : false;
 // ── Contextual Offer Resolution ──────────────────────────────────────────────
 // Determine which platform this article primarily targets to route the hero CTA
 // and sticky CTA directly to the affiliate link instead of the /reviews/ hub.
-const pagePlatform = Astro.props.platform || 'keen';
+// Frontmatter may carry values outside the union (e.g. "cross-platform") —
+// normalise anything unrecognised to 'kasamba' (the site-wide default No.1
+// recommendation since the 2026-08-25 priority reset). Explicit 'keen' or
+// 'purple-garden' frontmatter is always honoured.
+const rawPlatform = Astro.props.platform as string | undefined;
+const pagePlatform: 'keen' | 'kasamba' | 'purple-garden' =
+  rawPlatform === 'keen' || rawPlatform === 'purple-garden' ? rawPlatform : 'kasamba';
 const defaultGoLink = Astro.props.affiliateUrl || `/go/${pagePlatform}/`;
 
 const articleStickyCta = {
   slug: defaultGoLink,
   platform: pagePlatform as 'keen' | 'kasamba' | 'purple-garden',
 };
+
+// Desktop right-rail sticky deal card follows the guide's target platform.
+const guideOffer = PLATFORM_OFFERS[pagePlatform as keyof typeof PLATFORM_OFFERS];
+const sidebarDeal = guideOffer
+  ? { platform: pagePlatform as 'keen' | 'kasamba' | 'purple-garden', href: defaultGoLink }
+  : undefined;
 ---
 
 
@@ -115,12 +130,13 @@ const articleStickyCta = {
   seoTitle={seoTitle}
   metaDescription={metaDescription}
   customSchema={customSchema}
+  topOfferPlatform={pagePlatform}
   stickyCta={articleStickyCta}
 >
   <!-- Full-page 3-column grid: sidebars span the entire page height -->
   <div class="page-with-sidebars">
     <!-- LEFT SIDEBAR -->
-    <LeftSidebar />
+    <LeftSidebar platform={pagePlatform} />
 
     <!-- MAIN COLUMN: breadcrumb + hero + content -->
     <div class="main-col">
@@ -150,11 +166,14 @@ const articleStickyCta = {
           <span class="author-name-sm">Sarah</span>
         </div>
 
-        <a href={defaultGoLink} class="article-hero-cta btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
-          {pagePlatform === 'kasamba' ? 'Get 3 Free Minutes on Kasamba →' :
-           pagePlatform === 'purple-garden' ? 'Claim $30 Credit on Purple Garden →' :
-           'Get 5 Minutes for $1 on Keen →'}
-        </a>
+        <div class="article-hero-cta-wrap">
+          <a href={defaultGoLink} class="article-hero-cta btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
+            {pagePlatform === 'kasamba' ? 'Get 3 Free Minutes on Kasamba →' :
+             pagePlatform === 'purple-garden' ? 'Claim $30 Credit on Purple Garden →' :
+             'Get 5 Minutes for $1 on Keen →'}
+          </a>
+          {guideOffer && <p class="article-hero-cta-note">{guideOffer.microLine}</p>}
+        </div>
       </header>
 
       <!-- Article Content -->
@@ -163,15 +182,24 @@ const articleStickyCta = {
           <slot />
         </div>
 
-        <!-- End-of-article offer block: captures the highest-intent moment -->
-        <EndCTA subheading="I’ve personally tested each platform with my own money. Pick the one that fits your question — every link is an independent recommendation." />
+        {/* Mid-article CTA: auto-injected before the 2nd H2 inside .prose */}
+        <InlineCta platform={pagePlatform} href={defaultGoLink} />
+
+        <!-- End-of-article offer block: captures the highest-intent moment.
+             primarySlug follows the page's platform context (defaulting to
+             Kasamba, the site-wide No.1) so the featured card matches the
+             article's theme while still showing all three platforms. -->
+        <EndCTA
+          primarySlug={pagePlatform}
+          subheading="I’ve personally tested each platform with my own money. Pick the one that fits your question — every link is an independent recommendation."
+        />
 
         <AuthorBio />
       </article>
     </div>
 
     <!-- RIGHT SIDEBAR -->
-    <RightSidebar />
+    <RightSidebar deal={sidebarDeal} />
   </div>
 </BaseLayout>
 
@@ -239,7 +267,16 @@ const articleStickyCta = {
   .article-hero-cta {
     display: inline-flex;
     align-items: center;
+  }
+
+  .article-hero-cta-wrap {
     margin-top: var(--space-5);
+  }
+
+  .article-hero-cta-note {
+    margin: var(--space-2) 0 0;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
   }
 
   .author-avatar-sm {

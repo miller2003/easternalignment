@@ -11,6 +11,7 @@ import CTABox from '../../../components/CTABox.astro';
 import FAQ from '../../../components/FAQ.astro';
 import ReaderCard from '../../../components/ReaderCard.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
+import ScorePanel from '../../../components/ScorePanel.astro';
 
 /* Load the Kasamba platform review content */
 const kasambaModule = await import('../../../content/reviews/kasamba.md');
@@ -102,6 +103,15 @@ const relatedItems = [
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
 >
+  <ScorePanel
+    platform="kasamba"
+    rating={frontmatter.rating}
+    pricing={frontmatter.pricing}
+    bestFor={frontmatter.bestFor}
+    advisorsReviewed={readers.length}
+    badge="Editor's Choice"
+  />
+
   <KasambaContent />
 
   {(frontmatter.pros?.length > 0 || frontmatter.cons?.length > 0) && (

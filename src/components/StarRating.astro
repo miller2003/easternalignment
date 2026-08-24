@@ -17,6 +17,10 @@ const fullStars = Math.floor(rating);
 const hasHalf = rating % 1 >= 0.5;
 const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
 const ratingLabel = `${rating} out of 5 stars${label ? ` for ${label}` : ''}`;
+/* Show 2 decimals only when the rating actually has 2 (so 4.88 stays "4.88",
+   not "4.9"); whole/1-decimal ratings stay at their natural precision. */
+const decimals = (rating * 10) % 1 === 0 ? 1 : 2;
+const displayValue = rating.toFixed(decimals);
 ---
 
 <div class:list={['star-rating', `star-rating--${size}`]} role="img" aria-label={ratingLabel}>
@@ -26,7 +30,7 @@ const ratingLabel = `${rating} out of 5 stars${label ? ` for ${label}` : ''}`;
     {hasHalf && (<span class="star star--half" aria-hidden="true"><span class="star-bg">★</span><span class="star-fg">★</span></span>)}
     {Array(emptyStars).fill(0).map(() => (<span class="star star--empty" aria-hidden="true">★</span>))}
   </span>
-  {showValue && <span class="star-value">{rating.toFixed(1)}</span>}
+  {showValue && <span class="star-value">{displayValue}</span>}
 </div>
 
 <style>

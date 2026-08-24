@@ -1,5 +1,24 @@
 ---
 // RightSidebar.astro — Table of Contents (H2 only, scroll spy)
+// + optional sticky deal card (SidebarDealCard) when the layout passes a
+//   platform context. The deal card turns an otherwise zero-conversion
+//   column into a persistent desktop CTA that follows the reader.
+import SidebarDealCard from './SidebarDealCard.astro';
+import type { PlatformKey } from '../lib/offers';
+
+interface DealContext {
+  platform: PlatformKey;
+  rating?: number;
+  label?: string;
+  href?: string;
+  heading?: string;
+}
+
+interface Props {
+  deal?: DealContext;
+}
+
+const { deal } = Astro.props;
 ---
 
 <aside class="sidebar-right">
@@ -20,6 +39,16 @@
       </nav>
     </div>
   </div>
+
+  {deal && (
+    <SidebarDealCard
+      platform={deal.platform}
+      rating={deal.rating}
+      label={deal.label}
+      href={deal.href}
+      heading={deal.heading}
+    />
+  )}
 </aside>
 
 <script>
