@@ -141,7 +141,7 @@ Most psychic readings fail at the most critical juncture: the moment you disagre
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-chelle/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/seek-chelle-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/seek-chelle-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -191,7 +191,7 @@ Love Stefans is the platform's closest equivalent to an oracle who will tell you
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-stefan/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -237,7 +237,7 @@ The expensive readers on Kasamba charge high rates partly because of demand mana
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-golden-eye/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/golden-eye-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/golden-eye-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -283,7 +283,7 @@ Elizabeth is the anomaly on this list: she is one of Kasamba's most highly-rated
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-elizabeth/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/elizabeth-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/elizabeth-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -327,7 +327,7 @@ Ask Cristina occupies the rarest position in the honest reader category: she del
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-cristina/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/ask-cristina-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/ask-cristina-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 

@@ -296,6 +296,6 @@ Kasamba shows availability status on each advisor's profile. If your target read
 For a full breakdown of which specific readers to test first for love and relationship questions, see [the best love psychics on Kasamba](/guides/best-love-psychics-kasamba-ranked/). For readers with documented honesty track records, see the [brutally honest Kasamba readers guide](/guides/brutally-honest-psychics-kasamba/). For ex-recovery situations specifically, the [Kasamba ex-recovery picks](/guides/best-kasamba-psychics-ex-recovery/) shortlists the 5 readers with the strongest track records for reconciliation questions. The [full Kasamba platform review](/reviews/kasamba/) covers the platform's economics, pricing tiers, and transcript system in depth.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes + 50% Off on Kasamba →/a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes + 50% Off on Kasamba →</a>
 </div>
 

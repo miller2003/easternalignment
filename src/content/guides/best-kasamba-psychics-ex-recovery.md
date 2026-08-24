@@ -129,7 +129,7 @@ When the most important question is *why* the ex withdrew —the true psychologi
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-chelle/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/seek-chelle-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/seek-chelle-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -177,7 +177,7 @@ Love Stefans answers a specific question that most readers avoid: *"Is this reun
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-stefan/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -221,7 +221,7 @@ Golden Eye operates at the intersection of speed and specificity: she delivers r
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-golden-eye/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/golden-eye-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/golden-eye-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -263,7 +263,7 @@ Breakups do not just end relationships; they shatter your ability to think clear
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-cosmic-fusion/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/cosmic-fusion-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/cosmic-fusion-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
@@ -307,7 +307,7 @@ The most torturous aspect of no-contact is not the silence itself; it is not kno
   </div>
   <div class="reader-summary__actions">
     <a href="/go/kasamba-cristina/" class="btn-aff-mini" rel="nofollow sponsored" target="_blank">Get 3 Mins Free</a>
-    <a href="/reviews/kasamba/ask-cristina-kasamba-review/" class="btn-review-mini">Full Review →/a>
+    <a href="/reviews/kasamba/ask-cristina-kasamba-review/" class="btn-review-mini">Full Review →</a>
   </div>
 </div>
 
