@@ -78,7 +78,14 @@ const relatedItems = [
     badge: 'Comparison',
     badgeVariant: 'primary' as const,
   })),
-  ...guides.map(g => ({
+  ...guides.filter(g => [
+    'keen-love-psychics-review',
+    'best-love-psychics-keen-ex-recovery',
+    'brutally-honest-psychics-keen',
+    'most-accurate-psychics-keen',
+    'keen-twin-flame-reading',
+    'keen-ldr-timelines-close-the-gap',
+  ].includes(g.slug)).map(g => ({
     title: g.title,
     href: `/guides/${g.slug}/`,
     description: g.description,

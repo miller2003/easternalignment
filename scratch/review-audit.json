@@ -1,17 +1,19 @@
 {
-  "avg": 99.32456140350877,
+  "avg": 87.35087719298245,
   "buckets": {
     "fail": 0,
     "weak": 0,
-    "ok": 0,
+    "ok": 114,
     "good": 0,
-    "top": 114
+    "top": 0
   },
   "results": [
     {
       "fp": "src\\content\\readers\\keen\\allmyangels.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -51,12 +53,14 @@
           "No widely indexed individual profile URL - she appears mainly in Keen listings"
         ]
       },
-      "bodyLen": 5861
+      "bodyLen": 5645
     },
     {
       "fp": "src\\content\\readers\\keen\\chloe-has-your-love-insights.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -96,12 +100,14 @@
           "Early-morning PST schedule limits some time zones"
         ]
       },
-      "bodyLen": 4898
+      "bodyLen": 4679
     },
     {
       "fp": "src\\content\\readers\\keen\\clairvoyant-nicky-power.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -141,12 +147,14 @@
           "Public listing stats vary (category lists show different totals) - personal page is the source used here"
         ]
       },
-      "bodyLen": 3341
+      "bodyLen": 3125
     },
     {
       "fp": "src\\content\\readers\\keen\\dar66.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -186,12 +194,14 @@
           "At 4.91 she is excellent but just under the elite 4.95+ tier"
         ]
       },
-      "bodyLen": 5562
+      "bodyLen": 5356
     },
     {
       "fp": "src\\content\\readers\\keen\\david7.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -232,12 +242,14 @@
           "No tools means less structure for clients who find card-based readings easier to follow"
         ]
       },
-      "bodyLen": 12395
+      "bodyLen": 12131
     },
     {
       "fp": "src\\content\\readers\\keen\\dr-lisa-powerful-insights.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -277,12 +289,14 @@
           "Fast delivery can feel abrupt to clients wanting a slow, talkative session"
         ]
       },
-      "bodyLen": 4067
+      "bodyLen": 3857
     },
     {
       "fp": "src\\content\\readers\\keen\\eli-casey.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -322,12 +336,14 @@
           "Empath-led sessions can run long, which adds up at this rate"
         ]
       },
-      "bodyLen": 5319
+      "bodyLen": 5135
     },
     {
       "fp": "src\\content\\readers\\keen\\gabriel-the-messenger.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -368,12 +384,14 @@
           "High demand can mean limited availability"
         ]
       },
-      "bodyLen": 5047
+      "bodyLen": 4825
     },
     {
       "fp": "src\\content\\readers\\keen\\heather-ashera.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -413,12 +431,14 @@
           "No widely indexed individual profile URL - appears mainly in Keen listings"
         ]
       },
-      "bodyLen": 5790
+      "bodyLen": 5566
     },
     {
       "fp": "src\\content\\readers\\keen\\intuitive-guidance-with-lc-on-keen-review-2026.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -460,12 +480,14 @@
           "Heart-centered style means she is not the right choice for clients who want pure efficiency without emotional scaffolding"
         ]
       },
-      "bodyLen": 14900
+      "bodyLen": 14672
     },
     {
       "fp": "src\\content\\readers\\keen\\intuitive-jade.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -505,12 +527,14 @@
           "No widely indexed individual profile URL - appears mainly in Keen listings"
         ]
       },
-      "bodyLen": 5716
+      "bodyLen": 5492
     },
     {
       "fp": "src\\content\\readers\\keen\\jeanne-clock.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -550,12 +574,14 @@
           "High demand means she is not always immediately available"
         ]
       },
-      "bodyLen": 5061
+      "bodyLen": 4858
     },
     {
       "fp": "src\\content\\readers\\keen\\krys-britton-on-keen-review-2026.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -597,12 +623,14 @@
           "Empathic style without strong clairvoyant cold-reading — not ideal if you want to test unprompted pickup"
         ]
       },
-      "bodyLen": 12940
+      "bodyLen": 12730
     },
     {
       "fp": "src\\content\\readers\\keen\\ladyfontaine.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -642,12 +670,14 @@
           "High demand as a top-rated advisor can limit immediate availability"
         ]
       },
-      "bodyLen": 3973
+      "bodyLen": 3777
     },
     {
       "fp": "src\\content\\readers\\keen\\love-psychic-victoria-sands-keen-review-2026.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -693,12 +723,14 @@
         ],
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Love Psychic Victoria Sands on Keen Review 2026: $19.99 Per Minute, 24 Years, 127,000 Readings — Is She Worth It? An Honest Assessment\",\n  \"description\": \"An honest third-party review of Love Psychic Victoria Sands on Keen — confronting the $19.99/min rate directly, examining her 9/11 origin story, Inspirational communication style, medium and remote viewing specialties, and exactly who should and shouldn't book her.\",\n  \"datePublished\": \"2026-04-25\",\n  \"dateModified\": \"2026-04-25\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://easternalignment.com/logo.jpg\"\n    }\n  },\n  \"about\": [\n    {\n      \"@type\": \"Thing\",\n      \"name\": \"Keen: Love Psychic Victoria Sands\"\n    }\n  ]\n}\n"
       },
-      "bodyLen": 16134
+      "bodyLen": 15862
     },
     {
       "fp": "src\\content\\readers\\keen\\mystic-raj-on-keen-review-2026.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -740,12 +772,14 @@
           "Less independent third-party review data available than for higher-volume readers in this series"
         ]
       },
-      "bodyLen": 14417
+      "bodyLen": 14210
     },
     {
       "fp": "src\\content\\readers\\keen\\psychic-jane-just-knows.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -785,12 +819,14 @@
           "Best suited to specific questions, not open-ended exploration"
         ]
       },
-      "bodyLen": 3796
+      "bodyLen": 3591
     },
     {
       "fp": "src\\content\\readers\\keen\\readings-by-ruth.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -830,12 +866,14 @@
           "No widely indexed individual profile beyond Keen's own listing pages"
         ]
       },
-      "bodyLen": 5368
+      "bodyLen": 5150
     },
     {
       "fp": "src\\content\\readers\\keen\\serenity-stone.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -876,59 +914,14 @@
           "Chat may be slower than voice given her softer pace"
         ]
       },
-      "bodyLen": 5951
-    },
-    {
-      "fp": "src\\content\\readers\\keen\\spirit-answers-on-keen-review-2026.md",
-      "score": 97,
-      "issues": [],
-      "warns": [
-        "QUOTE_NO_INLINE_SOURCE"
-      ],
-      "fm": {
-        "title": "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect Rating, and the Chat-Only Reader Who \"Didn't Waste a Second\"",
-        "seoTitle": "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect",
-        "description": "An independent review of Spirit Answers on Keen — why the series' highest price paired with its highest rating and a chat-only format creates the most efficient session value in this series, plus the Finnish language gap no other Keen reader fills.",
-        "platformName": "Keen: Spirit Answers",
-        "rating": 4.8,
-        "verdict": "Spirit Answers is the most expensive reader in this series by a meaningful margin — and the one whose efficiency argument most directly justifies the rate. A perfect rating across 4,697 sessions, a chat-only format that eliminates dead conversational time, and a clairsentient approach that delivers in writing what most readers struggle to articulate in speech. For clients who have lost money to slow readers at lower rates, the arithmetic here is worth working through carefully before dismissing the $12.99 figure. For Finnish-speaking clients specifically, she may be the only serious option on the platform.",
-        "affiliateUrl": "/go/keen-spirit-answers/",
-        "avatarUrl": "/avatars/keen/spirit-answers-on-keen-review-2026.jpg",
-        "freeOffer": "$1 for the first 5 minutes (new Keen users only)",
-        "pricing": "$12.99/min (Love & Relationships profile)",
-        "bestFor": "Clients who prioritize session efficiency, want a permanent written record of what they were told, or are Finnish-speaking — and who understand that the highest per-minute rate in this series may produce the lowest real cost per useful insight",
-        "publishDate": "2026-04-27",
-        "canonicalUrl": "https://easternalignment.com/reviews/keen/spirit-answers-on-keen-review-2026/",
-        "updatedDate": "2026-04-27",
-        "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect Rating, and the Chat-Only Reader Who \\\"Didn't Waste a Second\\\"\",\n  \"description\": \"An independent review of Spirit Answers on Keen — why the series' highest price paired with its highest rating and a chat-only format creates the most efficient session value in this series, plus the Finnish language gap no other Keen reader fills.\",\n  \"datePublished\": \"2026-04-27\",\n  \"dateModified\": \"2026-04-27\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://easternalignment.com/logo.jpg\"\n    }\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Keen: Spirit Answers\"},\n    {\"@type\": \"Thing\", \"name\": \"Psychic reading\"}\n  ]\n}\n",
-        "metaDescription": "5.0 stars, $12.99/min, chat-only. Spirit Answers is Keen's most expensive reader — and her efficiency argument may make her the best value per insight.",
-        "highlights": [
-          "5.0-star perfect rating across 4,697 verified reviews — highest in this series",
-          "21,860 readings since 2014 — 12 years of consistent platform performance",
-          "Chat-only format: permanent written record, zero conversational filler",
-          "$12.99/min — highest rate in this series, offset by documented session efficiency",
-          "English and Finnish: one of the only Finnish-language psychic advisors on Keen"
-        ],
-        "pros": [
-          "Perfect 5.0 rating across 4,697 reviews is the strongest quality signal in this series",
-          "Chat format produces a permanent written record you can return to and reflect on",
-          "Efficiency: clients consistently report zero time wasted — straight to the point from first message",
-          "Clairsentient approach delivers nuanced felt-sense accuracy that visual clairvoyants often miss",
-          "Finnish language capability fills a near-total gap in Keen's advisor lineup"
-        ],
-        "cons": [
-          "$12.99/min is the highest rate in this series — full sessions reach $150–$230 at standard rate",
-          "Chat-only format excludes clients who prefer or need voice-based sessions",
-          "Speed and directness may feel abrupt to clients who want emotional processing time during the session — in those cases, [Tarot With Meg](/reviews/keen/tarot-with-meg-on-keen-review-2026/) might be a better fit.",
-          "No tool-based framework — clairsentient readings are impression-driven, not structured by cards or astrology"
-        ]
-      },
-      "bodyLen": 16092
+      "bodyLen": 5737
     },
     {
       "fp": "src\\content\\readers\\keen\\tammy-the-voice-reader.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -969,12 +962,14 @@
           "High demand can mean limited availability"
         ]
       },
-      "bodyLen": 4770
+      "bodyLen": 4547
     },
     {
       "fp": "src\\content\\readers\\keen\\that-magic-man.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "QUOTE_NO_INLINE_SOURCE"
       ],
@@ -1014,12 +1009,14 @@
           "High demand can limit immediate availability"
         ]
       },
-      "bodyLen": 4276
+      "bodyLen": 4072
     },
     {
       "fp": "src\\content\\readers\\kasamba\\ask-cristina-kasamba-review.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "PRICE_NOT_IN_BODY $2.10"
       ],
@@ -1064,12 +1061,14 @@
           "Kasamba Psychic"
         ]
       },
-      "bodyLen": 12751
+      "bodyLen": 12486
     },
     {
       "fp": "src\\content\\readers\\kasamba\\elizabeth-kasamba-review.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "PRICE_NOT_IN_BODY $4.99"
       ],
@@ -1114,12 +1113,14 @@
           "Kasamba Psychic"
         ]
       },
-      "bodyLen": 12607
+      "bodyLen": 12344
     },
     {
       "fp": "src\\content\\readers\\kasamba\\psychic-simmi-kasamba-review.md",
-      "score": 97,
-      "issues": [],
+      "score": 85,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "PRICE_NOT_IN_BODY $3.99"
       ],
@@ -1164,12 +1165,14 @@
           "Kasamba Psychic"
         ]
       },
-      "bodyLen": 9618
+      "bodyLen": 9355
     },
     {
       "fp": "src\\content\\readers\\keen\\arradaza.md",
-      "score": 98,
-      "issues": [],
+      "score": 86,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [
         "AI_TELL"
       ],
@@ -1213,12 +1216,14 @@
           "One documented complaint about communication style after critical feedback (2017)  -  worth knowing"
         ]
       },
-      "bodyLen": 10461
+      "bodyLen": 10226
     },
     {
       "fp": "src\\content\\readers\\keen\\advisor-suzan.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Advisor Suzan on Keen Review 2026: The Truth About Her 136,000 Readings",
@@ -1248,12 +1253,14 @@
         "updatedDate": "2026-08-13",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Advisor Suzan on Keen Review 2026: The Truth About Her 136,000 Readings\",\n  \"description\": \"With over 136,000 readings and a 4.98 rating on Keen, Advisor Suzan is a legend. But is she right for you? We break down her empathic style and who she helps best.\",\n  \"datePublished\": \"2026-08-13\",\n  \"dateModified\": \"2026-08-13\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://easternalignment.com/logo.jpg\"\n    }\n  },\n  \"about\": [\n    {\n      \"@type\": \"Thing\",\n      \"name\": \"Keen: Advisor Suzan\"\n    }\n  ]\n}\n"
       },
-      "bodyLen": 5141
+      "bodyLen": 5009
     },
     {
       "fp": "src\\content\\readers\\keen\\alice-runyon.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Alice Runyon on Keen Review 2026: 44,000 Readings of 'Clear Visions' at $3.59/Min",
@@ -1291,12 +1298,14 @@
           "No widely indexed individual profile URL - appears mainly in Keen listings"
         ]
       },
-      "bodyLen": 6185
+      "bodyLen": 5965
     },
     {
       "fp": "src\\content\\readers\\keen\\ask-fran.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Ask Fran on Keen Review 2026: 150,000 Sessions and the Most Polarized Reviews on the Platform - What Actually Separates the Fans From the Frustrated",
@@ -1336,12 +1345,14 @@
           "Session quality variance is higher than most long-tenured advisors at this volume"
         ]
       },
-      "bodyLen": 13325
+      "bodyLen": 13118
     },
     {
       "fp": "src\\content\\readers\\keen\\c-garrett.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation Psychic Actually Looks Like - An Honest Third-Party Assessment",
@@ -1382,12 +1393,14 @@
           "Financial Guidance second profile is nearly inactive  -  limited track record there"
         ]
       },
-      "bodyLen": 13532
+      "bodyLen": 13265
     },
     {
       "fp": "src\\content\\readers\\keen\\chosenone77.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "ChosenOne77 on Keen Review 2026: 28,000 Readings of Intuitive Wisdom at $6.53/Min",
@@ -1425,12 +1438,14 @@
           "No widely indexed individual profile URL - appears mainly in Keen listings"
         ]
       },
-      "bodyLen": 5163
+      "bodyLen": 4947
     },
     {
       "fp": "src\\content\\readers\\keen\\eye-of-pheobe-on-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Eye of Pheobe on Keen Review 2026: The Only Psychic Medium in This Series — and Why Her Numbers Tell a Completely Different Story Than Any Other Reader's",
@@ -1470,12 +1485,14 @@
           "Mediumship sessions cannot be guaranteed to connect with a specific individual — this is the nature of the work, not a limitation unique to this reader"
         ]
       },
-      "bodyLen": 15481
+      "bodyLen": 15270
     },
     {
       "fp": "src\\content\\readers\\keen\\flora-knows-all-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Flora Knows All on Keen Review 2026: The Lowest Price in the Category, a Fast-Rising Track Record, and the Honest Question of Whether New Readers Are Worth the Risk",
@@ -1518,12 +1535,14 @@
         ],
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Flora Knows All on Keen Review 2026: The Lowest Price in the Category, a Fast-Rising Track Record, and the Honest Question of Whether New Readers Are Worth the Risk\",\n  \"description\": \"An honest third-party review of Flora Knows All on Keen — covering her $2.52/min rate, 6,400 readings built in months, angel reading specialty, real review patterns, and exactly when a newer reader at a budget price makes sense to book.\",\n  \"datePublished\": \"2026-04-25\",\n  \"dateModified\": \"2026-04-25\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://easternalignment.com/logo.jpg\"\n    }\n  },\n  \"about\": [\n    {\n      \"@type\": \"Thing\",\n      \"name\": \"Keen: Flora Knows All\"\n    }\n  ]\n}\n"
       },
-      "bodyLen": 15021
+      "bodyLen": 14762
     },
     {
       "fp": "src\\content\\readers\\keen\\gina-marie.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel Clairvoyant Justify $6.99/Min?",
@@ -1563,12 +1582,14 @@
           "Blunt delivery without emotional preamble can land hard in vulnerable moments"
         ]
       },
-      "bodyLen": 11860
+      "bodyLen": 11643
     },
     {
       "fp": "src\\content\\readers\\keen\\heeratheintuitive-on-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "HeeratheIntuitive on Keen Review 2026: $7.99/Min, No Cold Readings, and a 94% Five-Star Rate — What Is She Actually Selling?",
@@ -1608,12 +1629,14 @@
           "Premium pricing is only justified across multiple sessions — single-session value is harder to assess at this rate"
         ]
       },
-      "bodyLen": 13825
+      "bodyLen": 13614
     },
     {
       "fp": "src\\content\\readers\\keen\\intuitive-azzy.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader Who Openly Admits Tarot Can't Predict Your Future - And Why That's Her Strongest Credential",
@@ -1653,12 +1676,14 @@
           "Spiritual and angelic framing may feel too esoteric for skeptic-leaning clients"
         ]
       },
-      "bodyLen": 14614
+      "bodyLen": 14386
     },
     {
       "fp": "src\\content\\readers\\keen\\lady-india.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Lady India on Keen Review 2026: Two Decades of 'Uncovering Truth' — What the Client Record Shows",
@@ -1696,12 +1721,14 @@
           "Long tenure can mean high demand and variable availability"
         ]
       },
-      "bodyLen": 6369
+      "bodyLen": 6175
     },
     {
       "fp": "src\\content\\readers\\keen\\lollie-ext-5555.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Lollie on Keen Review 2026: A 70,000-Reading 'No Fluff' Love Coach at $6.99/Min?",
@@ -1739,12 +1766,14 @@
           "Morning availability (4-9 AM CST) is when her connection is clearest, which is awkward for some time zones"
         ]
       },
-      "bodyLen": 5898
+      "bodyLen": 5689
     },
     {
       "fp": "src\\content\\readers\\keen\\lorrie-c.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "lorrie c on Keen Review 2026: 60,595 Readings at 4.98 — the Empath the Internet's Toughest Psychic Forum Grudgingly Verified",
@@ -1789,12 +1818,14 @@
           "Relationship Reading"
         ]
       },
-      "bodyLen": 5825
+      "bodyLen": 5618
     },
     {
       "fp": "src\\content\\readers\\keen\\master-psychic-adam-stone.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Master Psychic Adam Stone on Keen Review 2026: 113,000 Readings at $3.99/Min - Too Good to Be True?",
@@ -1831,12 +1862,14 @@
           "Low rate can mean high demand and slower response times"
         ]
       },
-      "bodyLen": 6449
+      "bodyLen": 6191
     },
     {
       "fp": "src\\content\\readers\\keen\\master-psychic-dev.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Master Psychic Dev on Keen Review 2026: 34,000 Readings of 'Clarity and Purpose' at $7.39/Min",
@@ -1874,12 +1907,14 @@
           "No widely indexed individual profile URL - appears mainly in Keen listings"
         ]
       },
-      "bodyLen": 5976
+      "bodyLen": 5744
     },
     {
       "fp": "src\\content\\readers\\keen\\master-sher.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Master Sher on Keen Review 2026: An Honest Assessment From Someone Who's Tested Dozens of Readers",
@@ -1917,12 +1952,14 @@
           "- Early morning availability (PST) may not suit all time zones"
         ]
       },
-      "bodyLen": 8271
+      "bodyLen": 8052
     },
     {
       "fp": "src\\content\\readers\\keen\\mike-pace.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader Worth $9.99/Min?",
@@ -1961,12 +1998,14 @@
           "High demand means availability can be limited at peak hours"
         ]
       },
-      "bodyLen": 6600
+      "bodyLen": 6395
     },
     {
       "fp": "src\\content\\readers\\keen\\psychic-suzen-on-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic SuZen on Keen Review 2026: When the Psychic Is Also a Life Coach and Social Worker — What That Changes About a Reading",
@@ -2009,12 +2048,14 @@
         ],
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Psychic SuZen on Keen Review 2026: When the Psychic Is Also a Life Coach and Social Worker — What That Changes About a Reading\",\n  \"description\": \"An honest third-party review of Psychic SuZen on Keen — covering her dual life coach and social worker background, multi-tradition spiritual framework, action-oriented reading style, and exactly who gets the most from her approach at $5.40/min.\",\n  \"datePublished\": \"2026-04-25\",\n  \"dateModified\": \"2026-04-25\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://easternalignment.com/logo.jpg\"\n    }\n  },\n  \"about\": [\n    {\n      \"@type\": \"Thing\",\n      \"name\": \"Keen: Psychic SuZen\"\n    }\n  ]\n}\n"
       },
-      "bodyLen": 13532
+      "bodyLen": 13272
     },
     {
       "fp": "src\\content\\readers\\keen\\psychic-visions-by-atlantis-on-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Visions by Atlantis on Keen Review 2026: $9.99/Min, a Near-Perfect Rating, and the Pattern Every Repeat Client Needs to Know About",
@@ -2054,12 +2095,14 @@
           "Premium pricing makes multiple repeat sessions financially prohibitive for most clients"
         ]
       },
-      "bodyLen": 14284
+      "bodyLen": 14055
     },
     {
       "fp": "src\\content\\readers\\keen\\psychicreader19622-raymond-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "psychicreader19622 (Raymond) on Keen Review 2026: The Worst-Looking Profile With the Best Numbers — What 19 Years Behind a Generic Username Actually Delivers",
@@ -2104,12 +2147,14 @@
         ],
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"psychicreader19622 (Raymond) on Keen Review 2026: The Worst-Looking Profile With the Best Numbers — What 19 Years Behind a Generic Username Actually Delivers\",\n  \"description\": \"An honest third-party review of psychicreader19622 on Keen — unpacking the 98% five-star rating, Keen's Top Advisor badge, Raymond's cartomancy-with-playing-cards method, humor as a reading quality, and exactly who should book him at $4.99/min.\",\n  \"datePublished\": \"2026-04-25\",\n  \"dateModified\": \"2026-04-25\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://easternalignment.com/logo.jpg\"\n    }\n  },\n  \"about\": [\n    {\n      \"@type\": \"Thing\",\n      \"name\": \"Keen: psychicreader19622\"\n    }\n  ]\n}\n"
       },
-      "bodyLen": 16867
+      "bodyLen": 16574
     },
     {
       "fp": "src\\content\\readers\\keen\\readings-by-kelly777.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Readings by Kelly777 on Keen Review 2026: Behind 159,000 Sessions  -  What One of the Platform's Highest-Volume Readers Actually Delivers",
@@ -2150,12 +2195,14 @@
           "Spiritual and Astrology secondary profiles are largely inactive  -  limited track record outside main listing"
         ]
       },
-      "bodyLen": 13762
+      "bodyLen": 13478
     },
     {
       "fp": "src\\content\\readers\\keen\\regina-jacks.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Regina Jacks on Keen Review 2026: 109,000 Readings Later - Is She Still Worth It?",
@@ -2194,12 +2241,14 @@
           "Direct style without emotional warm-up may feel harsh in crisis moments"
         ]
       },
-      "bodyLen": 9685
+      "bodyLen": 9466
     },
     {
       "fp": "src\\content\\readers\\keen\\sophia-rose-light-on-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Sophia Rose Light on Keen Review 2026: $4.44/Min Is Not a Coincidence — and the Perth, Australia Reader Who's Available When Every Other Advisor Is Asleep",
@@ -2239,12 +2288,61 @@
           "\"Sessions activate Kundalini\" is a significant claim that requires the client to be prepared for a potentially intense experience"
         ]
       },
-      "bodyLen": 15536
+      "bodyLen": 15316
+    },
+    {
+      "fp": "src\\content\\readers\\keen\\spirit-answers-on-keen-review-2026.md",
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
+      "warns": [],
+      "fm": {
+        "title": "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect Rating, and the Chat-Only Reader Who \"Didn't Waste a Second\"",
+        "seoTitle": "Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect",
+        "description": "An independent review of Spirit Answers on Keen — why the series' highest price paired with its highest rating and a chat-only format creates the most efficient session value in this series, plus the Finnish language gap no other Keen reader fills.",
+        "platformName": "Keen: Spirit Answers",
+        "rating": 4.8,
+        "verdict": "Spirit Answers is the most expensive reader in this series by a meaningful margin — and the one whose efficiency argument most directly justifies the rate. A perfect rating across 4,697 sessions, a chat-only format that eliminates dead conversational time, and a clairsentient approach that delivers in writing what most readers struggle to articulate in speech. For clients who have lost money to slow readers at lower rates, the arithmetic here is worth working through carefully before dismissing the $12.99 figure. For Finnish-speaking clients specifically, she may be the only serious option on the platform.",
+        "affiliateUrl": "/go/keen-spirit-answers/",
+        "avatarUrl": "/avatars/keen/spirit-answers-on-keen-review-2026.jpg",
+        "freeOffer": "$1 for the first 5 minutes (new Keen users only)",
+        "pricing": "$12.99/min (Love & Relationships profile)",
+        "bestFor": "Clients who prioritize session efficiency, want a permanent written record of what they were told, or are Finnish-speaking — and who understand that the highest per-minute rate in this series may produce the lowest real cost per useful insight",
+        "publishDate": "2026-04-27",
+        "canonicalUrl": "https://easternalignment.com/reviews/keen/spirit-answers-on-keen-review-2026/",
+        "updatedDate": "2026-04-27",
+        "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Spirit Answers on Keen Review 2026: $12.99/Min, a Perfect Rating, and the Chat-Only Reader Who \\\"Didn't Waste a Second\\\"\",\n  \"description\": \"An independent review of Spirit Answers on Keen — why the series' highest price paired with its highest rating and a chat-only format creates the most efficient session value in this series, plus the Finnish language gap no other Keen reader fills.\",\n  \"datePublished\": \"2026-04-27\",\n  \"dateModified\": \"2026-04-27\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"EasternAlignment\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://easternalignment.com/logo.jpg\"\n    }\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Keen: Spirit Answers\"},\n    {\"@type\": \"Thing\", \"name\": \"Psychic reading\"}\n  ]\n}\n",
+        "metaDescription": "5.0 stars, $12.99/min, chat-only. Spirit Answers is Keen's most expensive reader — and her efficiency argument may make her the best value per insight.",
+        "highlights": [
+          "5.0-star perfect rating across 4,697 verified reviews — highest in this series",
+          "21,860 readings since 2014 — 12 years of consistent platform performance",
+          "Chat-only format: permanent written record, zero conversational filler",
+          "$12.99/min — highest rate in this series, offset by documented session efficiency",
+          "English and Finnish: one of the only Finnish-language psychic advisors on Keen"
+        ],
+        "pros": [
+          "Perfect 5.0 rating across 4,697 reviews is the strongest quality signal in this series",
+          "Chat format produces a permanent written record you can return to and reflect on",
+          "Efficiency: clients consistently report zero time wasted — straight to the point from first message",
+          "Clairsentient approach delivers nuanced felt-sense accuracy that visual clairvoyants often miss",
+          "Finnish language capability fills a near-total gap in Keen's advisor lineup"
+        ],
+        "cons": [
+          "$12.99/min is the highest rate in this series — full sessions reach $150–$230 at standard rate",
+          "Chat-only format excludes clients who prefer or need voice-based sessions",
+          "Speed and directness may feel abrupt to clients who want emotional processing time during the session — in those cases, [Tarot With Meg](/reviews/keen/tarot-with-meg-on-keen-review-2026/) might be a better fit.",
+          "No tool-based framework — clairsentient readings are impression-driven, not structured by cards or astrology"
+        ]
+      },
+      "bodyLen": 15858
     },
     {
       "fp": "src\\content\\readers\\keen\\symonne.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "SYMONNE on Keen Review 2026: 59,082 Readings at $3.09/min — the Reader Who Reads What's Underneath Your Question",
@@ -2289,12 +2387,14 @@
           "Dream Interpretation"
         ]
       },
-      "bodyLen": 5970
+      "bodyLen": 5767
     },
     {
       "fp": "src\\content\\readers\\keen\\tarot-with-meg-on-keen-review-2026.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Tarot With Meg on Keen Review 2026: The Reader Whose Most Important Tool Was Gifted by Her Late Fiancé — and Why That Changes How She Reads",
@@ -2334,12 +2434,14 @@
           "Multiple deck and system breadth means first sessions may need a brief orientation to her approach"
         ]
       },
-      "bodyLen": 13831
+      "bodyLen": 13641
     },
     {
       "fp": "src\\content\\readers\\keen\\the-psychic-one.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "the psychic one on Keen Review 2026: 183,000 Sessions, 25 Years, and One Very Specific Promise - Do \"the Precise Dates and Details\" Actually Land?",
@@ -2379,12 +2481,14 @@
           "Session quality appears variable  -  183,000 readings means documented variance, not just isolated complaints"
         ]
       },
-      "bodyLen": 13425
+      "bodyLen": 13196
     },
     {
       "fp": "src\\content\\readers\\kasamba\\accurate-love-readings-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Accurate Love Readings Kasamba Review (2026): 95,479 Readings, a Perfect 5.0 — From the Reader Who Admits No Psychic Is 100% Accurate",
@@ -2429,12 +2533,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Accurate Love Readings Kasamba Review (2026): 95,479 Readings, Perfect 5.0\",\n  \"reviewBody\": \"Accurate Love Readings has 95,479 Kasamba readings since 2007 at a perfect 5.0, with a specialty in reading a partner's emotions, thoughts, and intentions. Unusually honest bio admits no psychic is 100% accurate and the future is changeable. Currently $5.49/min promo (reg. $10.99).\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Accurate Love Readings\",\n    \"description\": \"Accurate Love Readings on Kasamba — Astrology, Psychic Readings, Tarot, Love Psychics, Psychic Mediums. 95,479 readings since 2007, rated 5.0 stars, $5.49/min promo.\",\n    \"url\": \"https://www.kasamba.com/psychic/accurate-love-readings/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6426
+      "bodyLen": 5968
     },
     {
       "fp": "src\\content\\readers\\kasamba\\advisor-by-jenny-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Advisor by Jenny Kasamba Review (2026): MBA-Turned-Psychic Love Reader With 50,000+ Sessions",
@@ -2476,12 +2582,14 @@
           "Tarot Reader"
         ]
       },
-      "bodyLen": 4115
+      "bodyLen": 3579
     },
     {
       "fp": "src\\content\\readers\\kasamba\\ambers-light-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Ambers Light Kasamba Review (2026): 74,229 Readings Since 2004 — the Closure Specialist Who Refuses to Fake Timelines",
@@ -2526,12 +2634,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Ambers Light Kasamba Review (2026): 74,229 Readings Since 2004, 4.9 Stars\",\n  \"reviewBody\": \"Ambers Light is one of Kasamba's longest-serving advisors — 74,229 readings since 2004 at 4.9 stars. An empath, clairvoyant, and Reiki healer specializing in grief and closure questions, with stated policies of never lying to appease and never inventing timelines. Chat $6.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Ambers Light\",\n    \"description\": \"Ambers Light on Kasamba — Psychic Readings, Tarot, Love Psychics, Career Forecasts. 74,229 readings since 2004, rated 4.9 stars, $6.99/min chat. Spiritual and Religion.\",\n    \"url\": \"https://www.kasamba.com/psychic/ambers-light/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Grief and Closure Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Reiki Healing\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 5968
+      "bodyLen": 5507
     },
     {
       "fp": "src\\content\\readers\\kasamba\\best-psychic-readings-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Best Psychic Readings Kasamba Review (2026): 153,514 Readings, 4.9 Stars — and the Cheapest Rate on This List",
@@ -2576,12 +2686,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Best Psychic Readings Kasamba Review (2026): 153,514 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Best Psychic Readings is Kasamba's highest-volume advisor — 153,514 readings since 2003 with a 4.9 rating across 40,000+ written reviews — at an entry-level $1.99/min. Clients praise fast, accurate, clear readings and patient follow-up. The strongest value pick for first-time clients.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Best Psychic Readings\",\n    \"description\": \"Best Psychic Readings on Kasamba — Psychic Readings, Tarot, Love Psychics, Career Forecasts, Astrology. 153,514 readings since 2003, rated 4.9 stars, $1.99/min.\",\n    \"url\": \"https://www.kasamba.com/psychic/best-psychic-readings/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6257
+      "bodyLen": 5830
     },
     {
       "fp": "src\\content\\readers\\kasamba\\cosmic-fusion-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Cosmic Fusion Kasamba Review (2026): The 5.0 Reader With a $3.99 Chat — and a $39.99 Voice Trap",
@@ -2624,12 +2736,14 @@
         "updatedDate": "2026-07-22",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Cosmic Fusion Kasamba Review (2026): 70,360 Readings, 5.0 Stars, $3.99 Chat\",\n  \"reviewBody\": \"Cosmic Fusion is a 5.0-star Kasamba reader with 70,360 readings since 2011 and a chat rate of just $3.99/min — but voice at $39.99/min. The 10x price gap, real reviews, and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Cosmic Fusion\",\n    \"description\": \"Cosmic Fusion on Kasamba — Psychic Readings, Tarot, Love Psychics, Fortune Telling, Career Forecasts. 70,360 readings since 2011, rated 5.0 stars. Clairvoyant Intuitive, Empathy-Psychic, Tarot, Reiki.\",\n    \"url\": \"https://www.kasamba.com/psychic/cosmic-fusion/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5597
+      "bodyLen": 5053
     },
     {
       "fp": "src\\content\\readers\\kasamba\\danielle-psychic-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Danielle Psychic Kasamba Review (2026): Brutally Honest Love Reader With 57,000+ Sessions",
@@ -2671,12 +2785,14 @@
           "Clairaudient"
         ]
       },
-      "bodyLen": 4118
+      "bodyLen": 3606
     },
     {
       "fp": "src\\content\\readers\\kasamba\\david-james-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "David James Kasamba Review (2026): The Blunt Glasgow Reader Who Won't Sell You a Fairytale",
@@ -2719,12 +2835,14 @@
         "updatedDate": "2026-08-08",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"David James Kasamba Review (2026): 111,359 Readings, 4.7 Stars\",\n  \"reviewBody\": \"David James is a 30-year Glasgow veteran with 111,359 Kasamba readings and a self-declared 'no sugarcoating' style. His 4.7 is earned in public, bad reviews included. Listed at $6.99/min with 3 free minutes. Who should book, who shouldn't.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.7\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"David James\",\n    \"description\": \"David James on Kasamba — Psychic Readings, Tarot, Love Psychics, Career Forecasts, Astrology. 111,359 readings since 2004, rated 4.7 stars. Glasgow-born, 30 years of experience, blunt and direct style.\",\n    \"url\": \"https://www.kasamba.com/psychic/david-james-psychic-wisdom/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5826
+      "bodyLen": 5326
     },
     {
       "fp": "src\\content\\readers\\kasamba\\divine-master-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Divine Master Kasamba Review (2026): 77,204 Readings, 4.9 Stars — the Breakup & Reunion Specialist",
@@ -2769,12 +2887,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Divine Master Kasamba Review (2026): 77,204 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Divine Master is Kasamba's breakup and reunite specialist — 77,204 readings since 2011 at 4.9 stars, with 16,000+ written reviews and 35 years of claimed practice. Multi-method (tarot, Vedic astrology, numerology, palmistry), timeline-oriented, and solution-focused at $7.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Divine Master\",\n    \"description\": \"Divine Master on Kasamba — Psychic Readings, Tarot, Love Psychics, Astrology, Career Forecasts. 77,204 readings since 2011, rated 4.9 stars. Accurate Love, Breakup, Reunite Guidance.\",\n    \"url\": \"https://www.kasamba.com/psychic/divine-master/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Reunion Reading\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6670
+      "bodyLen": 6204
     },
     {
       "fp": "src\\content\\readers\\kasamba\\divine-soul-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Divine Soul Kasamba Review (2026): 69,218 Readings, 4.7 Stars — the LGBTQ+-Inclusive Clairvoyant Clients Call 'Sister'",
@@ -2819,12 +2939,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Divine Soul Kasamba Review (2026): 69,218 Readings, 4.7 Stars\",\n  \"reviewBody\": \"Divine Soul is a third-generation clairvoyant and ordained spiritual pastor with 69,218 Kasamba readings since 2014 at 4.7 stars. One of the few top advisors explicitly reading same-sex relationships, combining clairvoyant detail with pastoral warmth at $2.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.7\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Divine Soul\",\n    \"description\": \"Divine Soul on Kasamba — Psychic Readings, Tarot, Love Psychics, Fortune Telling, Career Forecasts. 69,218 readings since 2014, rated 4.7 stars. Clairvoyant light worker.\",\n    \"url\": \"https://www.kasamba.com/psychic/divine-soul/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"LGBTQ Relationship Reading\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6110
+      "bodyLen": 5693
     },
     {
       "fp": "src\\content\\readers\\kasamba\\golden-eye-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Golden Eye Kasamba Review (2026): One Reader for Every Question You're Carrying",
@@ -2867,12 +2989,14 @@
         "updatedDate": "2026-08-03",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Golden Eye Kasamba Review (2026): 113,722 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Golden Eye is a 4.9-star Kasamba veteran with 113,722 readings since 2004 covering tarot, astrology, mediumship, numerology and love advice. Chat $4.99/min, voice $10.99/min, 3 free minutes. Who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Golden Eye\",\n    \"description\": \"Golden Eye on Kasamba — Psychic Readings, Tarot, Astrology, Dream Analysis, Career, Fortune Telling, Mediumship, Numerology, Love & Relationship advice. 113,722 readings since 2004, rated 4.9 stars.\",\n    \"url\": \"https://www.kasamba.com/psychic/golden-eye/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5506
+      "bodyLen": 4978
     },
     {
       "fp": "src\\content\\readers\\kasamba\\immense-spark-n-au-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Immense Spark Kasamba Review (2026): The Reader One Client Has Come Back To for Over a Decade",
@@ -2915,12 +3039,14 @@
         "updatedDate": "2026-07-03",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Immense Spark Kasamba Review (2026): 66,152 Readings, 4.8 Stars\",\n  \"reviewBody\": \"Immense Spark is a 4.8-star Kasamba reader with 66,152 readings since 2007 and inherited psychic gifts, whose standout credential is a client returning for over a decade. $10.99/min promo with 3 free minutes. Real stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.8\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Immense Spark\",\n    \"description\": \"Immense Spark on Kasamba — Psychic Readings, Dream Analysis, Love Psychics, Psychic Mediums, Astrology. 66,152 readings since 2007, rated 4.8 stars. Inherited psychic abilities, 15 years helping celebrities and individuals.\",\n    \"url\": \"https://www.kasamba.com/psychic/immense-spark-n-aura/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Psychic Medium\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5486
+      "bodyLen": 4896
     },
     {
       "fp": "src\\content\\readers\\kasamba\\intuitive-counselor-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Intuitive Counselor Kasamba Review (2026): 68,717 Readings, 4.9 Stars — the 'Wounded Soul' Specialist (We Checked the 1-Stars Too)",
@@ -2965,12 +3091,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Intuitive Counselor Kasamba Review (2026): 68,717 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Intuitive Counselor has 68,717 Kasamba readings since 2007 at 4.9 stars, specializing in soulmate-essence tarot and healing work for the 'wounded soul' — stress, distress, and trauma. 230 negative reviews against 19,637 positive (1.2%). $4.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Intuitive Counselor\",\n    \"description\": \"Intuitive Counselor on Kasamba — Psychic Readings, Tarot, Love Psychics, Fortune Telling, Astrology. 68,717 readings since 2007, rated 4.9 stars.\",\n    \"url\": \"https://www.kasamba.com/psychic/intuitive-counselor/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Soulmate Tarot Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Emotional Healing\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 5738
+      "bodyLen": 5296
     },
     {
       "fp": "src\\content\\readers\\kasamba\\invincible-insights-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Invincible Insights Kasamba Review (2026): Budget Soulmate Reunion Specialist With 70,000+ Readings",
@@ -3012,12 +3140,14 @@
           "Soulmate Reunion"
         ]
       },
-      "bodyLen": 4431
+      "bodyLen": 3862
     },
     {
       "fp": "src\\content\\readers\\kasamba\\love-psychic-indi-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Love Psychic Indi Kasamba Review (2026): 102,522 Readings, a Gold Medal Astrologer Who Doesn't Sugarcoat",
@@ -3062,12 +3192,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Love Psychic Indi Kasamba Review (2026): 102,522 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Love Psychic Indi has 102,522 Kasamba readings since 2008 at a 4.9 rating, pairing psychic work with credentialed Vedic astrology (Gold Medal, Horary), an MBA, and NLP training. Long-term clients report timeline-specific predictions that came to pass, delivered in a direct, no-sugarcoat style at $7.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Love Psychic Indi\",\n    \"description\": \"Love Psychic Indi on Kasamba — Psychic Readings, Astrology, Tarot, Love Psychics, Psychic Mediums. 102,522 readings since 2008, rated 4.9 stars, $7.99/min. Gold Medal Vedic astrologer.\",\n    \"url\": \"https://www.kasamba.com/psychic/love-psychic-indi/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Vedic Astrology\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6784
+      "bodyLen": 6340
     },
     {
       "fp": "src\\content\\readers\\kasamba\\love-specialist-isabelle-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Love Specialist Isabelle Kasamba Review (2026): 99,057 Readings, a Perfect 5.0, and Predictions Clients Verified Years Later",
@@ -3112,12 +3244,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Love Specialist Isabelle Kasamba Review (2026): 99,057 Readings, Perfect 5.0\",\n  \"reviewBody\": \"Love Specialist Isabelle holds a perfect 5.0 across 99,057 Kasamba readings since 2005. Her signature is long-arc accuracy — clients return years later confirming predictions about divorces, breakups, and reconciliations. Currently $14.99/min promo (reg. $29.99). Premium-priced and worth it for high-stakes love questions.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Love Specialist Isabelle\",\n    \"description\": \"Love Specialist Isabelle on Kasamba — Psychic Readings, Love Psychics, Fortune Telling, Career Forecasts, Psychic Mediums. 99,057 readings since 2005, rated 5.0 stars, $14.99/min promo (reg. $29.99).\",\n    \"url\": \"https://www.kasamba.com/psychic/love-specialist-isabelle/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Fortune Telling\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6920
+      "bodyLen": 6437
     },
     {
       "fp": "src\\content\\readers\\kasamba\\love-stefans-psychic-soul-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Love Stefan Kasamba Review (2026): 138,003 Readings, Third-Generation Psychic, and the POI Question He Answers Best",
@@ -3160,12 +3294,14 @@
         "updatedDate": "2026-07-24",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Love Stefan Kasamba Review (2026): 138,003 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Love Stefan is a third-generation psychic with 138,003 Kasamba readings since 2007 and a 'Top 3 most experienced' tag, specializing in love and relationship questions. $5.49/min promo with 3 free minutes. Real client stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Love Stefan\",\n    \"description\": \"Love Stefan on Kasamba — Dream Analysis, Psychic Readings, Love Psychics, Career Forecasts, Astrology. 138,003 readings since 2007, rated 4.9 stars. Third-generation psychic, ranked among Kasamba's Top 3 most experienced readers.\",\n    \"url\": \"https://www.kasamba.com/psychic/love-stefans-psychic-soul/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Relationship Advice\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 6436
+      "bodyLen": 5921
     },
     {
       "fp": "src\\content\\readers\\kasamba\\master-enigma-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Master Enigma Kasamba Review (2026): I Read 355,674 Sessions' Worth of Receipts So You Don't Have To",
@@ -3208,12 +3344,14 @@
         "updatedDate": "2026-08-02",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Master Enigma Kasamba Review (2026): 355,674 Readings, 5.0 Stars\",\n  \"reviewBody\": \"Master Enigma is Kasamba's 'Most Experienced Advisor' — 355,674 readings since 2007, a perfect 5.0, and a style clients describe as fast, sharp, and respectful of your time. Real client stories, the promo math, and who should book. Standard rate $5.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Master Enigma\",\n    \"description\": \"Master Enigma on Kasamba — Psychic Readings, Dream Analysis, Love Psychics, Fortune Telling, Career Forecasts. 355,674 readings since 2007, rated 5.0 stars. Kasamba 'Most Experienced Advisor'.\",\n    \"url\": \"https://www.kasamba.com/psychic/master-enigma/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Career Forecast\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 6420
+      "bodyLen": 5866
     },
     {
       "fp": "src\\content\\readers\\kasamba\\miss-bathsheba-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Miss Bathsheba Kasamba Review (2026): 71,618 Readings, 4.9 Stars — and a 0.6% Negative Rate That's Almost Impossible",
@@ -3258,12 +3396,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Miss Bathsheba Kasamba Review (2026): 71,618 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Miss Bathsheba is a second-generation clairvoyant tarot specialist with 71,618 Kasamba readings since 2006 at 4.9 stars — and a 0.6% negative rate across 23,229 written reviews. Clients describe instant situation pickup and technically excellent tarot interpretation at $4.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Miss Bathsheba\",\n    \"description\": \"Miss Bathsheba on Kasamba — Psychic Readings, Tarot, Dream Analysis, Love Psychics, Career Forecasts. 71,618 readings since 2006, rated 4.9 stars. Professional Psychic and Spiritual Guide.\",\n    \"url\": \"https://www.kasamba.com/psychic/miss-bathsheba/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 5797
+      "bodyLen": 5398
     },
     {
       "fp": "src\\content\\readers\\kasamba\\powerful-visions-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Spiritual Anna Kasamba Review (2026): The $26.99/min Reader Whose Profile Tells You to Shop Around First",
@@ -3308,12 +3448,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Spiritual Anna Kasamba Review (2026): 58,479 Readings, Perfect 5.0\",\n  \"reviewBody\": \"Spiritual Anna is Kasamba's ethics-first premium reader — 58,479 readings since 2005 at a perfect 5.0, $26.99/min. Her bio rejects fear-mongering and pressure sales, urging clients to choose psychics slowly. A year-long client confirms her timelines have worked out.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Spiritual Anna\",\n    \"description\": \"Spiritual Anna on Kasamba — Astrology, Career Forecasts, Psychic Readings, Love Psychics, Tarot. 58,479 readings since 2005, rated 5.0 stars, $26.99/min.\",\n    \"url\": \"https://www.kasamba.com/psychic/powerful-visions/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Spiritual Counseling\"},\n    {\"@type\": \"Thing\", \"name\": \"Life Path Reading\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6758
+      "bodyLen": 6331
     },
     {
       "fp": "src\\content\\readers\\kasamba\\psychic-safina-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Safina Kasamba Review (2026): Third-Generation Psychic, a Ragged Tarot Deck, and a Career-Transition 'Guiding Light'",
@@ -3356,12 +3498,14 @@
         "updatedDate": "2026-08-11",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Psychic Safina Kasamba Review (2026): 59,565 Readings, 4.9 Stars\",\n  \"reviewBody\": \"Psychic Safina is a third-generation psychic with 59,565 Kasamba readings since 2007 and a 4.9, blending Tarot, Astrology, and intuition. Her great-grandmother's ragged Tarot deck, the career-transition review, and who should book. Standard rate $7.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.9\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Psychic Safina\",\n    \"description\": \"Psychic Safina on Kasamba — Psychic Readings, Astrology, Tarot, Love Psychics, Fortune Telling. 59,565 readings since 2007, rated 4.9 stars. Third-generation psychic, blends Tarot, Astrology, and intuition.\",\n    \"url\": \"https://www.kasamba.com/psychic/psychic-safina/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Astrology Reading\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5838
+      "bodyLen": 5240
     },
     {
       "fp": "src\\content\\readers\\kasamba\\psychic-satire-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Satire Kasamba Review (2026): A Medium Who Actually Delivers",
@@ -3404,12 +3548,14 @@
           "Kasamba Psychic"
         ]
       },
-      "bodyLen": 9494
+      "bodyLen": 9229
     },
     {
       "fp": "src\\content\\readers\\kasamba\\psychic-yazmin-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Yazmin Kasamba Review (2026): The 5.0 Reader Whose Clients Stay for Months — We Followed One",
@@ -3452,12 +3598,14 @@
         "updatedDate": "2026-08-06",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Psychic Yazmin Kasamba Review (2026): 119,836 Readings, 5.0 Stars\",\n  \"reviewBody\": \"Psychic Yazmin holds a perfect 5.0 across 119,836 Kasamba readings since 2005. Her clients return for months through crises because she holds her predictions steady. $4.99/min flat with 3 free minutes. Who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Psychic Yazmin\",\n    \"description\": \"Psychic Yazmin on Kasamba — Psychic Readings, Fortune Telling, Love Psychics, Career Forecasts, Psychic Mediums. 119,836 readings since 2005, rated 5.0 stars. Professional psychic since 1998.\",\n    \"url\": \"https://www.kasamba.com/psychic/psychic-yazmin/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Psychic Medium\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5817
+      "bodyLen": 5266
     },
     {
       "fp": "src\\content\\readers\\kasamba\\quietsound-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Quietsound Kasamba Review (2026): The 'Relay' Reader Who Gives You Your Guides' Actual Names",
@@ -3502,12 +3650,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Quietsound Kasamba Review (2026): 64,270 Readings, Perfect 5.0\",\n  \"reviewBody\": \"Quietsound is a board-certified tarot professional and psychic medium with 64,270 Kasamba readings since 2002 at a perfect 5.0 and a 0.5% negative rate. Her unique 'relay' method — her guides consult the client's guides, and she names them — plus stated ethical limits make her the most distinctive mediumship option on the platform at $6.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Quietsound\",\n    \"description\": \"Quietsound on Kasamba — Psychic Readings, Tarot, Love Psychics, Psychic Mediums, Career Forecasts. 64,270 readings since 2002, rated 5.0 stars. Intuitive Psychic Reader.\",\n    \"url\": \"https://www.kasamba.com/psychic/quietsound/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Psychic Medium\"},\n    {\"@type\": \"Thing\", \"name\": \"Spirit Guide Reading\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 7262
+      "bodyLen": 6840
     },
     {
       "fp": "src\\content\\readers\\kasamba\\raven-franks-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Raven Franks Kasamba Review (2026): 67,179 Readings Since 2003, a Perfect 5.0 — the Empath Other Readers' Clients Defect To",
@@ -3552,12 +3702,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Raven Franks Kasamba Review (2026): 67,179 Readings Since 2003, Perfect 5.0\",\n  \"reviewBody\": \"Raven Franks is a 23-year Kasamba original — 67,179 readings since 2003 at a perfect 5.0. A remote viewer and top empath working from names and birthdates, credited by clients with persisting where other readers give up. $9.49/min promo (reg. $18.99).\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Raven Franks\",\n    \"description\": \"Raven Franks on Kasamba — Psychic Readings, Dream Analysis, Love Psychics, Fortune Telling, Tarot. 67,179 readings since 2003, rated 5.0 stars. Top Empath Clairvoyant.\",\n    \"url\": \"https://www.kasamba.com/psychic/raven-franks/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Empath Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Remote Viewing\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6004
+      "bodyLen": 5593
     },
     {
       "fp": "src\\content\\readers\\kasamba\\seek-chelle-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Seek Chelle Review on Kasamba: Triple Clair Gifts, 20 Years of Experience, and the Reader Who Hears What You Leave Unsaid",
@@ -3600,12 +3752,14 @@
           "Kasamba Psychic"
         ]
       },
-      "bodyLen": 19159
+      "bodyLen": 18443
     },
     {
       "fp": "src\\content\\readers\\kasamba\\spiritual-divini-service-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Spiritual Divini Service Kasamba Review (2026): 95,681 Readings, 3rd-Generation Psychic — and a 4.7 That Tells the Truth",
@@ -3650,12 +3804,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Spiritual Divini Service Kasamba Review (2026): 95,681 Readings, 4.7 Stars\",\n  \"reviewBody\": \"Spiritual Divini Service is a third-generation psychic with 95,681 Kasamba readings since 2007 at 4.7 stars. Clients consistently describe frank, no-sugarcoat readings with timeframes — her 4.7 reflects the honesty tax, not quality. Chat promo is $1.99/min (reg. $3.99); voice runs 10x higher, so book chat.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.7\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Spiritual Divini Service\",\n    \"description\": \"Spiritual Divini Service on Kasamba — Psychic Readings, Astrology, Love Psychics, Fortune Telling, Career Forecasts. 95,681 readings since 2007, rated 4.7 stars, chat $1.99/min promo.\",\n    \"url\": \"https://www.kasamba.com/psychic/spiritual-divini-service/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Fortune Telling\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 5878
+      "bodyLen": 5420
     },
     {
       "fp": "src\\content\\readers\\kasamba\\supernormal-soul-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Supernormal Soul Kasamba Review (2026): \"Supreme Seer\" Love Specialist With 54,000+ Readings",
@@ -3697,12 +3853,14 @@
           "Love and Soulmate Psychic"
         ]
       },
-      "bodyLen": 6147
+      "bodyLen": 5634
     },
     {
       "fp": "src\\content\\readers\\kasamba\\sweet-spirit-of-love-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Sweet Spirit of Love Kasamba Review (2026): The 12-Year-Old Who Stopped a Stranger From a Train Wreck",
@@ -3745,12 +3903,14 @@
         "updatedDate": "2026-07-04",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Sweet Spirit of Love Kasamba Review (2026): 69,177 Readings, 4.6 Stars\",\n  \"reviewBody\": \"Sweet Spirit of Love (Devi) is an Eastern-mysticism reader with 69,177 Kasamba readings since 2006 and a 4.6 earned in public. Her 12-year-old train origin story, real reviews, and who should book. Standard rate $5.49/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.6\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sweet Spirit of Love\",\n    \"description\": \"Sweet Spirit of Love (Devi) on Kasamba — Psychic Readings, Tarot, Dream Analysis, Love Psychics, Career Forecasts. 69,177 readings since 2006, rated 4.6 stars. Eastern mysticism, Hinduism, born into a family of gifted Pundits.\",\n    \"url\": \"https://www.kasamba.com/psychic/sweet-spirit-of-love/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Tarot Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Eastern Mysticism\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5997
+      "bodyLen": 5396
     },
     {
       "fp": "src\\content\\readers\\kasamba\\the-fruno-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "The Fruno Kasamba Review (2026): 66,996 Readings Since 2002, a Perfect 5.0 — the CFO Who Became a New Orleans Mystic",
@@ -3795,12 +3955,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"The Fruno Kasamba Review (2026): 66,996 Readings Since 2002, Perfect 5.0\",\n  \"reviewBody\": \"The Fruno is a New Orleans mystic with 66,996 Kasamba readings since 2002 at a perfect 5.0 — and a former Price Waterhouse tax specialist, corporate CFO, published co-author, and Louisiana administrative law judge. At $6.99/min he is the standout pick for career, business, and financial questions.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"The Fruno\",\n    \"description\": \"The Fruno on Kasamba — Psychic Readings, Dream Analysis, Tarot, Love Psychics, Career Forecasts. 66,996 readings since 2002, rated 5.0 stars, $6.99/min. Fruno New Orleans Psychic.\",\n    \"url\": \"https://www.kasamba.com/psychic/fruno/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Career Forecast\"},\n    {\"@type\": \"Thing\", \"name\": \"Business Psychic Reading\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6060
+      "bodyLen": 5639
     },
     {
       "fp": "src\\content\\readers\\kasamba\\truth-and-light-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Truth and Light Kasamba Review (2026): 87,202 Readings, a Perfect 5.0 — and a Psychotherapy Diploma Behind the Crystal Ball",
@@ -3845,12 +4007,14 @@
         "updatedDate": "2026-08-18",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Truth and Light Kasamba Review (2026): 87,202 Readings, Perfect 5.0\",\n  \"reviewBody\": \"Truth and Light is tagged Highest Ranked Advisor on Kasamba — 87,202 readings since 2005 at a perfect 5.0. His credential stack includes an engineering degree, MBA, certified Vedic astrology, and psychotherapy and relationship counselling diplomas. Clients call him a life saviour. Premium at $23.99/min; the dual psychic-plus-counsellor skill set is the case for the price.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Truth and Light\",\n    \"description\": \"Truth and Light on Kasamba — Psychic Readings, Astrology, Love Psychics, Career Forecasts, Dream Analysis. 87,202 readings since 2005, rated 5.0 stars. Highest Ranked Advisor tagline.\",\n    \"url\": \"https://www.kasamba.com/psychic/truth-and-light/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Dream Analysis\"}\n  ],\n  \"datePublished\": \"2026-08-18\",\n  \"dateModified\": \"2026-08-18\"\n}\n"
       },
-      "bodyLen": 6551
+      "bodyLen": 6039
     },
     {
       "fp": "src\\content\\readers\\kasamba\\truthful-visions-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Truthful Visions Kasamba Review (2026): Perfect-5.0 Love & Career Reader With 55,000+ Sessions",
@@ -3891,12 +4055,14 @@
           "Love and Career Psychic"
         ]
       },
-      "bodyLen": 4964
+      "bodyLen": 4450
     },
     {
       "fp": "src\\content\\readers\\kasamba\\wisdom-and-love-kasamba-review.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Wisdom and Love Kasamba Review (2026): Kasamba's No.2 Psychic Is the Most Expensive — Here's Why 102,414 People Paid Anyway",
@@ -3939,12 +4105,14 @@
         "updatedDate": "2026-08-07",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Wisdom and Love Kasamba Review (2026): No.2 Psychic, 102,414 Readings\",\n  \"reviewBody\": \"Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic with 102,414 readings since 2004, a perfect 5.0, and 31,000+ five-star reviews. Most expensive reader reviewed here at $13.99/min promo. Real client stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Wisdom and Love\",\n    \"description\": \"Wisdom and Love (Andrew) on Kasamba — Psychic Readings, Love Psychics, Fortune Telling, Career Forecasts, Tarot. 102,414 readings since 2004, rated 5.0 stars. Kasamba 'No.2 Rank Overall Psychic'.\",\n    \"url\": \"https://www.kasamba.com/psychic/wisdom-and-love/\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Kasamba Psychic Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Career Forecast\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 6419
+      "bodyLen": 5862
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\adam-africa.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Adam Africa Purple Garden Review (2026): The Certified Coach Who Refuses to Hand You Fast-Food Guidance",
@@ -3985,12 +4153,14 @@
           "Certified Life Coach"
         ]
       },
-      "bodyLen": 5600
+      "bodyLen": 5334
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\advisor-vanessa.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Advisor Vanessa Purple Garden Review (2026): The Reader Who Told One Client 'The Opposite of What I Wanted to Hear'",
@@ -4033,12 +4203,14 @@
         "updatedDate": "2026-07-28",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Advisor Vanessa Purple Garden Review (2026): 20,578 Readings, 4.8 Stars\",\n  \"reviewBody\": \"Advisor Vanessa is a 4.8-star Purple Garden reader with 20,578 readings since 2016, specializing in love, infidelity, and hard truths. Chat $2.99/min. Real client stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.8\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Advisor Vanessa\",\n    \"description\": \"Advisor Vanessa on Purple Garden — Love, Relationships, Infidelity, Career, Tarot, Astrology, Dream Interpretation. 20,578 readings since 2016, rated 4.8 stars.\",\n    \"url\": \"https://www.purplegarden.co/psychics/1645-advisor-vanessa\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Purple Garden Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Infidelity Reading\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5243
+      "bodyLen": 4732
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\athina-mystic.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Athina Mystic Purple Garden Review (2026): The Twin-Flame Reader Who Won't Comfort Your Ego",
@@ -4079,12 +4251,14 @@
           "Twin Flame Specialist"
         ]
       },
-      "bodyLen": 5994
+      "bodyLen": 5724
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\ayla-love-resolution.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Ayla Purple Garden Review (2026): Love-Resolution Clairvoyant With Nearly 15,000 Readings",
@@ -4125,12 +4299,14 @@
           "Love Resolution Reader"
         ]
       },
-      "bodyLen": 4440
+      "bodyLen": 3978
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\emmanuelle-berger.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Emmanuelle Berger Purple Garden Review 2026: 76,154 Readings, a Perfect 5.0 — the Soul-Mate Specialist Clients Call 'Mother'",
@@ -4175,12 +4351,14 @@
           "Love Reading"
         ]
       },
-      "bodyLen": 5848
+      "bodyLen": 5607
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\empathic-intuitive-marcus.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Empathic Intuitive Marcus Purple Garden Review (2026): The Male Reader Who Translates Male Behavior From the Inside",
@@ -4222,12 +4400,14 @@
           "Male Psychic Advisors"
         ]
       },
-      "bodyLen": 6101
+      "bodyLen": 5826
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\fanny-dalfiume.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Fanny Dalfiume Purple Garden Review (2026): Nearly 19,000 Readings of Metaphysics and Tarot at $1.99/min",
@@ -4268,12 +4448,14 @@
           "Metaphysics Tarot Reader"
         ]
       },
-      "bodyLen": 5452
+      "bodyLen": 5180
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\jackies-tea-tarot.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Jackies Tea Tarot Purple Garden Review (2026): The Cuban-Trained Tarot Reader Who Won't Sugarcoat You",
@@ -4314,12 +4496,14 @@
           "Intuitive Tarot Reader"
         ]
       },
-      "bodyLen": 3944
+      "bodyLen": 3453
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\lejla-kristal.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Lejla Kristal Purple Garden Review (2026): The Crystal-Ball Reader With a Toolbox Most Advisors Don't Have",
@@ -4360,12 +4544,14 @@
           "Crystal Ball Reader"
         ]
       },
-      "bodyLen": 3461
+      "bodyLen": 2954
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\mystic-mark.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Mystic Mark on Purple Garden Review (2026): The Scrying Differentiator That Separates Him From Every Other Tarot Reader",
@@ -4411,12 +4597,14 @@
           "Scrying"
         ]
       },
-      "bodyLen": 8093
+      "bodyLen": 7907
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\namrata.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Namrata Purple Garden Review 2026: Is a 10-Year Veteran at $2.49/Min Really That Good?",
@@ -4462,12 +4650,14 @@
           "Finance Advisor"
         ]
       },
-      "bodyLen": 6583
+      "bodyLen": 6334
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\nicholas-knight.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Nicholas Knight Purple Garden Review 2026: 4th-Generation Psychic or Just Another Love Coach?",
@@ -4514,12 +4704,14 @@
           "Life Coach"
         ]
       },
-      "bodyLen": 7077
+      "bodyLen": 6829
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\nick.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Nick on Purple Garden Review (2026): What 14,642 Readings at a Perfect 5.0 Actually Proves",
@@ -4564,12 +4756,14 @@
           "Tarot Reader"
         ]
       },
-      "bodyLen": 8538
+      "bodyLen": 8382
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\niki-medium.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Niki Medium Purple Garden Review (2026): A Fourth-Generation Psychic Who Tells You the Hard Part",
@@ -4612,12 +4806,14 @@
         "updatedDate": "2026-07-17",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Niki Medium Purple Garden Review (2026): 12,994 Readings, 5.0 Stars\",\n  \"reviewBody\": \"Niki Medium is a fourth-generation psychic with 12,994 Purple Garden readings since 2018 and a perfect 5.0, specializing in soulmate readings and honest, practical answers. Chat $5.49/min. Real client stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Niki Medium\",\n    \"description\": \"Niki Medium on Purple Garden — Psychic, Medium, Soulmate Readings. 12,994 readings since 2018, rated 5.0 stars. Fourth-generation psychic and medium.\",\n    \"url\": \"https://www.purplegarden.co/psychics/4512-niki-medium\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Purple Garden Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Soulmate Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Psychic Medium\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5856
+      "bodyLen": 5335
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\nuwatarot.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "nuwatarot Purple Garden Review (2026): The Eye-Reader Who Works Without a Deck",
@@ -4658,12 +4854,14 @@
           "Oculomancer"
         ]
       },
-      "bodyLen": 3272
+      "bodyLen": 2794
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\plutoniandust.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "PlutonianDust on Purple Garden Review (2026): Seven Years, Two Methods, and a Name That Tells You Exactly What Kind of Reading to Expect",
@@ -4709,12 +4907,14 @@
           "Tarot Reader"
         ]
       },
-      "bodyLen": 8238
+      "bodyLen": 8066
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\psychic-advisor-serena.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Advisor Serena Purple Garden Review 2026: The Internationally Known Medium Who Tells It Like It Is",
@@ -4755,12 +4955,14 @@
           "Psychic Medium"
         ]
       },
-      "bodyLen": 3604
+      "bodyLen": 3086
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\psychic-jeanne.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Jeanne Purple Garden Review (2026): A Fifth-Generation, Licensed Reader for Your Hardest Season",
@@ -4803,12 +5005,14 @@
         "updatedDate": "2026-07-13",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Psychic Jeanne Purple Garden Review (2026): 25,083 Readings, 4.8 Stars\",\n  \"reviewBody\": \"Psychic Jeanne is a fifth-generation, licensed psychic with 25,083 Purple Garden readings since 2016 and a 4.8, specializing in love with clear boundaries and no sugarcoating. Chat $5.99/min. Real client stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.8\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Psychic Jeanne\",\n    \"description\": \"Psychic Jeanne on Purple Garden — Love and Relationships, Psychic, Career, Family, Finances. 25,083 readings since 2016, rated 4.8 stars. Fifth-generation psychic, licensed reader in Davenport, Iowa.\",\n    \"url\": \"https://www.purplegarden.co/psychics/1130-psychicjeanne\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Purple Garden Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Relationship Advice\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5473
+      "bodyLen": 4947
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\psychic-logan.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Logan Purple Garden Review 2026: 64,955 Readings, a Perfect 5.0 — Advisor #36, One of the Platform's Originals",
@@ -4853,12 +5057,14 @@
           "Destiny Psychic"
         ]
       },
-      "bodyLen": 5305
+      "bodyLen": 5068
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\psychic-medium-chloe.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Chloe Psychic UK Purple Garden Review (2026): The Honest Reader Who Schedules in Your Time Zone",
@@ -4899,12 +5105,14 @@
           "Honest Reader"
         ]
       },
-      "bodyLen": 4903
+      "bodyLen": 4365
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\psychic-shirla.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Shirla Purple Garden Review (2026): The Relationship Coach Who Hands You the Map",
@@ -4945,12 +5153,14 @@
           "Love Specialist"
         ]
       },
-      "bodyLen": 4539
+      "bodyLen": 4031
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\psychic-willow.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Psychic Willow Purple Garden Review 2026: 48 Years of Egyptian Tarot — and Clients Who Come Back to Confirm Her Predictions",
@@ -4995,12 +5205,14 @@
           "Love Psychic"
         ]
       },
-      "bodyLen": 6434
+      "bodyLen": 6199
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\quantum-drew.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Quantum Drew Purple Garden Review (2026): The Reader Who Knew a Client Was in the Military Before He Said a Word",
@@ -5043,12 +5255,14 @@
         "updatedDate": "2026-07-09",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Quantum Drew Purple Garden Review (2026): 13,746 Readings, 5.0 Stars\",\n  \"reviewBody\": \"Quantum Drew is a 5.0-star intuitive empath with 13,746 Purple Garden readings since 2017, known for reading emotional energy first and landing details clients never told him. Chat $3.99/min. Real client stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"5.0\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Quantum Drew\",\n    \"description\": \"Quantum Drew on Purple Garden — Intuitive Empath, Channeler, Psychic Medium, Healer. 13,746 readings since 2017, rated 5.0 stars.\",\n    \"url\": \"https://www.purplegarden.co/psychics/2876-quantumdrew\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Purple Garden Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Psychic Medium\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Reading\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5727
+      "bodyLen": 5207
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\sagest.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Sagest Purple Garden Review 2026: 62,205 Readings at a Perfect 5.0 — the Reader With a Requirements List",
@@ -5093,12 +5307,14 @@
           "Dream Analysis"
         ]
       },
-      "bodyLen": 6271
+      "bodyLen": 6056
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\satie-readings.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Satie Readings Purple Garden Review (2026): The 40-Year Reader Who Refuses to Be Your Fortune Teller",
@@ -5139,12 +5355,14 @@
           "Love Tarot Reader"
         ]
       },
-      "bodyLen": 5327
+      "bodyLen": 4796
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\tarot-by-elena.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Tarot by Elena Purple Garden Review (2026): Why Written Chat Tarot Beats Video for People Who Audit",
@@ -5186,12 +5404,14 @@
           "Online Psychic"
         ]
       },
-      "bodyLen": 7094
+      "bodyLen": 6592
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\tarot-instincts.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Tarot Instincts Purple Garden Review 2026: 12,135 Readings at $1.99/Min — What a 4.2 Rating Really Tells You",
@@ -5238,12 +5458,14 @@
           "Numerology"
         ]
       },
-      "bodyLen": 7555
+      "bodyLen": 7318
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\tarot-withh-love.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Tarot Withh Love Purple Garden Review (2026): The Mystic Who Refuses to Answer Yes or No",
@@ -5285,12 +5507,14 @@
           "Indian Mystic"
         ]
       },
-      "bodyLen": 6217
+      "bodyLen": 5687
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\truthful-love.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Truthful Love Purple Garden Review (2026): The Reader One Client Reviewed 8 Times in 4 Minutes",
@@ -5333,12 +5557,14 @@
         "updatedDate": "2026-07-15",
         "customSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Truthful Love Purple Garden Review (2026): 28,199 Readings, 4.8 Stars\",\n  \"reviewBody\": \"Truthful Love is Purple Garden's #1 trending advisor with 28,199 readings since 2024 at a 4.8, and one client who left 8 reviews in 4 minutes. Chat from $2.99/min with no sugar coating. Real client stories and who should book.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.8\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Person\",\n    \"name\": \"Truthful Love\",\n    \"description\": \"Truthful Love on Purple Garden — Psychic, Tarot Card Reading, Love, Breakup, Divorce, Cheating. 28,199 readings since 2024, rated 4.8 stars. Purple Garden #1 trending advisor.\",\n    \"url\": \"https://www.purplegarden.co/psychics/24002-truthful-love\"\n  },\n  \"about\": [\n    {\"@type\": \"Thing\", \"name\": \"Purple Garden Psychic\"},\n    {\"@type\": \"Thing\", \"name\": \"Love Reading\"},\n    {\"@type\": \"Thing\", \"name\": \"Breakup Advice\"}\n  ],\n  \"datePublished\": \"2026-08-14\",\n  \"dateModified\": \"2026-08-14\"\n}\n"
       },
-      "bodyLen": 5888
+      "bodyLen": 5350
     },
     {
       "fp": "src\\content\\readers\\purple-garden\\twin-flame-specialist-aria.md",
-      "score": 100,
-      "issues": [],
+      "score": 88,
+      "issues": [
+        "CTA_HTML_COUNT=0 (expected 1)"
+      ],
       "warns": [],
       "fm": {
         "title": "Twin Flame Specialist Aria Purple Garden Review (2026): The Reader Who Won't Sell You a Reunion",
@@ -5380,7 +5606,7 @@
           "Soulmate Psychics"
         ]
       },
-      "bodyLen": 6513
+      "bodyLen": 6006
     }
   ]
 }

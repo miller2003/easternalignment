@@ -69,7 +69,17 @@ const relatedItems = [
     badge: 'Comparison',
     badgeVariant: 'primary' as const,
   })),
-  ...guides.map(g => ({
+  ...guides.filter(g => [
+    'kasamba-love-readings-review',
+    'best-love-psychics-kasamba-ranked',
+    'brutally-honest-psychics-kasamba',
+    'best-kasamba-psychics-ex-recovery',
+    'kasamba-3-free-minutes-guide',
+    'most-accurate-psychics-kasamba',
+    'kasamba-twin-flame-reading',
+    'kasamba-specific-person-reading',
+    'kasamba-no-contact-love-reading',
+  ].includes(g.slug)).map(g => ({
     title: g.title,
     href: `/guides/${g.slug}/`,
     description: g.description,

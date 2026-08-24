@@ -34,15 +34,37 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
   slug: path.split('/').pop()?.replace('.md', ''),
 }));
 
+// Comparisons are decision pages. Keep their next-step links focused on the
+// two platforms and the immediate relationship-use-case pages, rather than
+// exposing a sitewide directory below the verdict.
+const comparisonClusters: Record<string, { guides: string[]; reviews: string[] }> = {
+  'purple-garden-vs-kasamba': {
+    guides: ['purple-garden-love-readings-review', 'best-love-psychics-purple-garden', 'kasamba-love-readings-review', 'best-love-psychics-kasamba-ranked'],
+    reviews: ['purple-garden', 'kasamba'],
+  },
+  'purple-garden-vs-keen': {
+    guides: ['purple-garden-love-readings-review', 'best-love-psychics-purple-garden', 'keen-love-psychics-review', 'best-love-psychics-keen-ex-recovery'],
+    reviews: ['purple-garden', 'keen'],
+  },
+  'kasamba-vs-keen-love-readings': {
+    guides: ['kasamba-love-readings-review', 'best-love-psychics-kasamba-ranked', 'keen-love-psychics-review', 'best-love-psychics-keen-ex-recovery'],
+    reviews: ['kasamba', 'keen'],
+  },
+};
+
+const cluster = comparisonClusters[Astro.params.slug || ''];
+const selectedReviews = cluster ? reviews.filter(r => cluster.reviews.includes(r.slug)) : reviews;
+const selectedGuides = cluster ? guides.filter(g => cluster.guides.includes(g.slug)) : guides;
+
 const relatedItems = [
-  ...reviews.map(r => ({
+  ...selectedReviews.map(r => ({
     title: `${r.platformName} Review 2026`,
     href: `/reviews/${r.slug}/`,
     description: r.verdict?.length > 120 ? r.verdict.substring(0, 120) + '…' : r.verdict,
     badge: `#${r.rank} Pick`,
     badgeVariant: 'primary' as const,
   })),
-  ...guides.map(g => ({
+  ...selectedGuides.map(g => ({
     title: g.title,
     href: `/guides/${g.slug}/`,
     description: g.description,
@@ -59,6 +81,10 @@ const relatedItems = [
   winner={frontmatter.winner}
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
+  seoTitle={frontmatter.seoTitle}
+  metaDescription={frontmatter.metaDescription}
+  canonicalUrl={frontmatter.canonicalUrl}
+  customSchema={frontmatter.customSchema}
 >
   <Content />
 

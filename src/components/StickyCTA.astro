@@ -244,12 +244,14 @@ const isFocusedMode = focused !== null;
   .sticky-cta__btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     white-space: nowrap;
-    padding: 9px 12px;
+    padding: 0 16px;
+    min-height: 44px;
     border-radius: 9999px;
     background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
     color: #ffffff;
-    font-size: 12.5px;
+    font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 2px 8px rgba(196, 149, 106, 0.35);
@@ -272,8 +274,9 @@ const isFocusedMode = focused !== null;
   .sticky-cta__btn--solo {
     flex-shrink: 0;
     margin-left: auto;
-    padding: 11px 18px;
-    font-size: 13.5px;
+    padding: 0 24px;
+    min-height: 48px;
+    font-size: 15px;
     letter-spacing: 0.01em;
     box-shadow: 0 4px 14px rgba(196, 149, 106, 0.45);
   }
@@ -378,7 +381,7 @@ const isFocusedMode = focused !== null;
       if (dismissed) { hide(); return; }
 
       const scrolled = window.scrollY || window.pageYOffset;
-      const pastHero = scrolled > 480;
+      const pastHero = scrolled > 150;
 
       let endVisible = false;
       if (endAnchor) {

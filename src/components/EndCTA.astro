@@ -240,9 +240,22 @@ const ordered = [...offers].sort((a, b) => {
   }
 
   @media (max-width: 640px) {
-    .end-cta { padding: var(--space-6) var(--space-4); }
-    .end-cta__grid { grid-template-columns: 1fr; }
-    .end-cta__card { text-align: left; align-items: flex-start; }
+    .end-cta { padding: var(--space-6) 0; }
+    .end-cta__head { padding: 0 var(--space-4); }
+    .end-cta__disclaimer { padding: 0 var(--space-4); }
+    .end-cta__grid {
+      grid-template-columns: repeat(3, 85vw);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 var(--space-4);
+      gap: var(--space-3);
+      -webkit-overflow-scrolling: touch;
+      margin: 0 calc(-1 * var(--space-4));
+      padding-bottom: var(--space-2);
+    }
+    .end-cta__grid::-webkit-scrollbar { display: none; }
+    .end-cta__grid { -ms-overflow-style: none; scrollbar-width: none; }
+    .end-cta__card { scroll-snap-align: center; text-align: left; align-items: flex-start; }
     .end-cta__card-top { justify-content: flex-start; }
     .end-cta__btn { width: 100%; }
   }

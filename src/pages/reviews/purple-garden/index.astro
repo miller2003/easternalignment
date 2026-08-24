@@ -70,7 +70,17 @@ const relatedItems = [
     badge: 'Comparison',
     badgeVariant: 'primary' as const,
   })),
-  ...guides.filter(g => g.title.toLowerCase().includes('purple')).map(g => ({
+  ...guides.filter(g => [
+    'is-purple-garden-legit',
+    'purple-garden-love-readings-review',
+    'best-love-psychics-purple-garden',
+    'brutally-honest-psychics-purple-garden',
+    'best-purple-garden-psychics-ex-recovery',
+    'purple-garden-30-credit-guide',
+    'most-accurate-psychics-purple-garden',
+    'purple-garden-twin-flame-readings',
+    'purple-garden-journeys-guide',
+  ].includes(g.slug)).map(g => ({
     title: g.title,
     href: `/guides/${g.slug}/`,
     description: g.description,
@@ -111,14 +121,14 @@ const relatedItems = [
   <!-- Featured Investigation Section -->
   <section class="featured-roundup-box">
     <div class="roundup-card card card--elevated">
-      <div class="roundup-badge">Deep-Dive Audit</div>
+      <div class="roundup-badge">Love Readings Guide</div>
       <div class="roundup-content">
-        <h3 class="roundup-title">Is Purple Garden Legit or a Scam? Our 12-Month App & Advisor Investigation</h3>
+        <h3 class="roundup-title">Best Love Psychics on Purple Garden: 5 Readers for Honest Relationship Clarity</h3>
         <p class="roundup-desc text-muted">
-          We tracked advisor accuracy, refund policies, video bio authenticity, and Journeys community threads over an entire year. Discover the unfiltered facts before downloading the app.
+          Looking for help with a breakup, mixed signals, or a relationship decision? Start with a reader whose delivery style, format, and price fit the question — not a generic promise.
         </p>
         <div class="roundup-actions">
-          <a href="/guides/is-purple-garden-legit/" class="btn btn--primary btn--sm">Read the 12-Month Investigation →</a>
+          <a href="/guides/best-love-psychics-purple-garden/" class="btn btn--primary btn--sm">See the Love Psychics Shortlist →</a>
         </div>
       </div>
     </div>

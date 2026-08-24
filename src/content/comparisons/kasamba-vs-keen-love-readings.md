@@ -93,6 +93,8 @@ Stop looking for the "best" platform and start matching the platform to your spe
 **The Ultimate Strategy:** 
 Use **Kasamba** to diagnose *why* the relationship broke. Use **Keen** to predict *when* it will be repaired.
 
+For a deeper dive into Kasamba's relationship reading ecosystem, see [our full Kasamba review](/reviews/kasamba/), the [best love psychics on Kasamba](/guides/best-love-psychics-kasamba-ranked/), the [Kasamba ex-recovery picks](/guides/best-kasamba-psychics-ex-recovery/) for reconciliation situations specifically, and the [brutally honest Kasamba readers](/guides/brutally-honest-psychics-kasamba/) for the accountability tier. If Keen is your platform of choice for comparable content, [best love psychics on Keen for ex-recovery](/guides/best-love-psychics-keen-ex-recovery/) and [brutally honest Keen readers](/guides/brutally-honest-psychics-keen/) cover the equivalent ground.
+
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
   <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
   <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>

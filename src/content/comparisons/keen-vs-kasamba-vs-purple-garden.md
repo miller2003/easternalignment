@@ -112,7 +112,7 @@ Start with Keen's $1 trial and Kasamba's free minutes, because the trial offers 
 
 Then commit based on modality: phone and depth → Keen. Chat, transcripts, and risk-free testing → Kasamba. Video, mobile, and visual vetting → Purple Garden.
 
-The three platforms are not competitors for the same customer; they are three different tools for three different ways of seeking. My [guides](/guides/) — especially [how to choose a psychic](/guides/how-to-choose-a-psychic-reader/) and [questions to ask](/guides/questions-to-ask-a-psychic/) — apply on all of them, because the platform is the container, and the reading is the reader.
+The three platforms are not competitors for the same customer; they are three different tools for three different ways of seeking. My [guides](/guides/) — especially [how to choose a psychic](/guides/how-to-choose-a-psychic-reader/) and [questions to ask](/guides/questions-to-ask-a-psychic/) — apply on all of them. For ex-recovery questions specifically, see [Kasamba ex-recovery picks](/guides/best-kasamba-psychics-ex-recovery/) and [Purple Garden ex-recovery picks](/guides/best-purple-garden-psychics-ex-recovery/). For readers who will not soften the picture, [honest Kasamba readers](/guides/brutally-honest-psychics-kasamba/) and [honest Purple Garden readers](/guides/brutally-honest-psychics-purple-garden/) are the accountability shortlists. On Keen, the [brutally honest Keen readers](/guides/brutally-honest-psychics-keen/) guide covers the same ground for the phone-first format.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
   <a href="/go/keen/" class="btn btn--primary">Try Keen: 5 Minutes for $1 →</a>

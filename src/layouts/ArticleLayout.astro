@@ -27,6 +27,9 @@ interface Props {
   // Custom / FAQPage schema
   customSchema?: string;
   entities?: string[];
+  // Contextual CTA overrides
+  platform?: 'keen' | 'kasamba' | 'purple-garden';
+  affiliateUrl?: string;
 }
 
 const {
@@ -88,15 +91,18 @@ const articleSchema: Record<string, unknown> = {
 
 const noindex = metaRobots ? metaRobots.includes('noindex') : false;
 
-// ── Focused sticky-CTA: generic guides/articles default to Keen (Editor's Choice)
-//    since they aren't focused on one specific platform. ────────────────────────
+// ── Contextual Offer Resolution ──────────────────────────────────────────────
+// Determine which platform this article primarily targets to route the hero CTA
+// and sticky CTA directly to the affiliate link instead of the /reviews/ hub.
+const pagePlatform = Astro.props.platform || 'keen';
+const defaultGoLink = Astro.props.affiliateUrl || `/go/${pagePlatform}/`;
+
 const articleStickyCta = {
-  slug: '/go/keen/',
-  platform: 'keen' as const,
-  label: 'Keen · 5 min for $1 →',
-  prompt: "First purchase offer on Keen (Editor's Choice): 5 minutes for $1",
+  slug: defaultGoLink,
+  platform: pagePlatform as 'keen' | 'kasamba' | 'purple-garden',
 };
 ---
+
 
 <BaseLayout
   title={title}
@@ -144,8 +150,10 @@ const articleStickyCta = {
           <span class="author-name-sm">Sarah</span>
         </div>
 
-        <a href="/reviews/" class="article-hero-cta btn btn--primary" data-cta-source="hero">
-          See My Tested Platform Picks &rarr;
+        <a href={defaultGoLink} class="article-hero-cta btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
+          {pagePlatform === 'kasamba' ? 'Get 3 Free Minutes on Kasamba →' :
+           pagePlatform === 'purple-garden' ? 'Claim $30 Credit on Purple Garden →' :
+           'Get 5 Minutes for $1 on Keen →'}
         </a>
       </header>
 

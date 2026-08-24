@@ -14,6 +14,10 @@ interface Props {
   winner?: string;
   publishDate: string;
   updatedDate?: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  canonicalUrl?: string;
+  customSchema?: string;
 }
 
 const {
@@ -23,6 +27,10 @@ const {
   winner,
   publishDate,
   updatedDate,
+  seoTitle,
+  metaDescription,
+  canonicalUrl,
+  customSchema,
 } = Astro.props;
 
 const displayDate = updatedDate || publishDate;
@@ -66,7 +74,17 @@ const articleSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description} ogType="article" jsonLd={articleSchema} stickyCta={stickyCta}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  jsonLd={articleSchema}
+  seoTitle={seoTitle}
+  metaDescription={metaDescription}
+  canonicalUrl={canonicalUrl}
+  customSchema={customSchema}
+  stickyCta={stickyCta}
+>
   <!-- Full-page 3-column grid: sidebars span the entire page height -->
   <div class="page-with-sidebars">
     <!-- LEFT SIDEBAR -->
