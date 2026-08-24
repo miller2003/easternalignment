@@ -1,7 +1,7 @@
 ---
 title: "Kasamba 3 Free Minutes (2026): The Complete Strategy Guide to Every Psychic Trial"
 seoTitle: "Kasamba 3 Free Minutes Guide (2026): How It Works, What to Ask, Real Value"
-metaDescription: "Kasamba gives you 3 free minutes with EVERY new psychic â€?not just the first. Here's exactly how the offer works, the protocol to use in each session, and how to turn free minutes into the best consumer tool in the psychic industry."
+metaDescription: "Kasamba gives you 3 free minutes with EVERY new psychic â€”not just the first. Here's exactly how the offer works, the protocol to use in each session, and how to turn free minutes into the best consumer tool in the psychic industry."
 description: "The definitive guide to Kasamba's 3-free-minutes offer: the economic mechanics, the exact vetting protocol to use in each session, which reader tier to test first, and the common mistakes that burn the offer before you get any value."
 category: 'Platform Guide'
 publishDate: '2026-08-14'
@@ -17,7 +17,7 @@ customSchema: |
         "name": "How do Kasamba's 3 free minutes work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kasamba gives you 3 free chat minutes with every new psychic advisor you try â€?not just the first one you try overall. This applies to every advisor on the platform who is new to you, making it the most aggressive risk-reversal structure in the psychic industry. You do need to add a payment method to activate your account, but the three minutes with each new advisor cost nothing if you disconnect before they expire."
+          "text": "Kasamba gives you 3 free chat minutes with every new psychic advisor you try â€”not just the first one you try overall. This applies to every advisor on the platform who is new to you, making it the most aggressive risk-reversal structure in the psychic industry. You do need to add a payment method to activate your account, but the three minutes with each new advisor cost nothing if you disconnect before they expire."
         }
       },
       {
@@ -33,7 +33,7 @@ customSchema: |
         "name": "What should I ask in my 3 free minutes on Kasamba?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Use the free minutes as a vetting test, not a reading. Provide both first names and one specific question, then say nothing else. A genuine psychic will deliver specific, unprompted information within 90 seconds. If they ask more than two clarifying questions, disconnect before the free time expires â€?you owe nothing."
+          "text": "Use the free minutes as a vetting test, not a reading. Provide both first names and one specific question, then say nothing else. A genuine psychic will deliver specific, unprompted information within 90 seconds. If they ask more than two clarifying questions, disconnect before the free time expires â€”you owe nothing."
         }
       },
       {
@@ -41,7 +41,7 @@ customSchema: |
         "name": "How many psychics can I test with 3 free minutes on Kasamba?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Technically unlimited â€?the 3-free-minutes offer applies to every advisor on Kasamba who is new to you. In practice, most clients vet between 3 and 10 readers using the free protocol before selecting one for a paid session. There is no stated limit on how many new advisors you can test."
+          "text": "Technically unlimited â€”the 3-free-minutes offer applies to every advisor on Kasamba who is new to you. In practice, most clients vet between 3 and 10 readers using the free protocol before selecting one for a paid session. There is no stated limit on how many new advisors you can test."
         }
       },
       {
@@ -56,13 +56,13 @@ customSchema: |
   }
 ---
 
-Most psychic platforms offer a trial. Keen gives you 5 minutes for a dollar â€?once, with one reader, your choice. California Psychics gives you a deeply discounted first session. Purple Garden credits your account with $30 on a first purchase.
+Most psychic platforms offer a trial. Keen gives you 5 minutes for a dollar â€”once, with one reader, your choice. California Psychics gives you a deeply discounted first session. Purple Garden credits your account with $30 on a first purchase.
 
 Kasamba does something structurally different, and that difference matters more than any other single feature on the platform.
 
-Kasamba gives you **3 free chat minutes with every new advisor you try** â€?not just the first reader on your account, and not a one-time offer that evaporates once used. Every advisor on the platform who is new to you comes with a 3-minute free window. You can use this on three readers. Or thirty. Or the entire roster.
+Kasamba gives you **3 free chat minutes with every new advisor you try** â€”not just the first reader on your account, and not a one-time offer that evaporates once used. Every advisor on the platform who is new to you comes with a 3-minute free window. You can use this on three readers. Or thirty. Or the entire roster.
 
-This is not a marketing gimmick. It is a structural feature that fundamentally reverses the power dynamic of a psychic marketplace â€?and most people use it wrong, which means they get a fraction of its actual value. This guide explains the mechanics, the economics, and the exact protocol to make it the most powerful consumer tool in the industry.
+This is not a marketing gimmick. It is a structural feature that fundamentally reverses the power dynamic of a psychic marketplace â€”and most people use it wrong, which means they get a fraction of its actual value. This guide explains the mechanics, the economics, and the exact protocol to make it the most powerful consumer tool in the industry.
 
 ---
 
@@ -76,9 +76,9 @@ Every platform's trial offer is an attempt to solve this problem. But the design
 
 ### The "One-Shot" Trial Problem
 
-Most trial offers give you a single reduced-cost or free session â€?once. Keen's 5 minutes for $1 is the classic example. You get one reader, one shot, and if that reader does not connect with your situation, you have burned your trial. The trial helped you test *whether the platform is worth using*, but it told you almost nothing about *which reader is right for you*.
+Most trial offers give you a single reduced-cost or free session â€”once. Keen's 5 minutes for $1 is the classic example. You get one reader, one shot, and if that reader does not connect with your situation, you have burned your trial. The trial helped you test *whether the platform is worth using*, but it told you almost nothing about *which reader is right for you*.
 
-The premise of a one-shot trial is that the vetting question is "is this platform legitimate?" The real question â€?the one that determines whether you waste money or get value â€?is "is this specific reader able to connect with my specific situation?"
+The premise of a one-shot trial is that the vetting question is "is this platform legitimate?" The real question â€”the one that determines whether you waste money or get value â€”is "is this specific reader able to connect with my specific situation?"
 
 A platform with 500 readers can have 100 genuinely skilled practitioners and 400 generalists. Your one-shot trial can land you with any of them. If you get a generalist, you have concluded the platform is not worth using, when the actual problem was reader selection.
 
@@ -86,7 +86,7 @@ A platform with 500 readers can have 100 genuinely skilled practitioners and 400
 
 Kasamba's 3-free-minutes-per-new-reader offer solves a different problem: it gives you the ability to run a controlled experiment across as many readers as you want, at zero cost per test.
 
-The economic implication is dramatic. Instead of spending money to determine which readers can connect with your situation, you spend zero dollars doing that work. Money only enters the equation once you have already verified â€?through lived experience in the session â€?that a specific reader can deliver unprompted, specific information about your situation.
+The economic implication is dramatic. Instead of spending money to determine which readers can connect with your situation, you spend zero dollars doing that work. Money only enters the equation once you have already verified â€”through lived experience in the session â€”that a specific reader can deliver unprompted, specific information about your situation.
 
 This is not a consumer protection mechanism. It is a vetting laboratory. The correct mental model is: the 3 free minutes are not a reduced-price reading. They are an audition. You are the casting director, and every advisor on the platform is auditioning for the role of your reader.
 
@@ -95,7 +95,7 @@ This is not a consumer protection mechanism. It is a vetting laboratory. The cor
 | Trial Structure | What It Tests | How Many Readers |
 |---|---|---|
 | Keen: 5 min for $1 | Is this platform worth using? | 1 |
-| Purple Garden: $30 credit | What can I cover with this amount? | 1â€? |
+| Purple Garden: $30 credit | What can I cover with this amount? | 1â€” |
 | Kasamba: 3 free min/reader | Which specific reader connects? | Unlimited |
 
 The difference in what is being tested is the key. Kasamba's offer assumes the platform is legitimate (it is) and focuses the entire trial value on solving the actual problem: finding the right reader for your situation.
@@ -108,7 +108,7 @@ The first question skeptics ask is: how can Kasamba afford to give away unlimite
 
 ### Why the Math Works for Kasamba
 
-Kasamba's business model is a percentage-based commission on every paid session. When a reader charges $9.98/min (like Seek Chelle), Kasamba takes a platform fee; the rest goes to the advisor. This means Kasamba's revenue is entirely derived from paid sessions â€?not from the free minutes.
+Kasamba's business model is a percentage-based commission on every paid session. When a reader charges $9.98/min (like Seek Chelle), Kasamba takes a platform fee; the rest goes to the advisor. This means Kasamba's revenue is entirely derived from paid sessions â€”not from the free minutes.
 
 The free minutes are a customer acquisition cost. Every aborted free session that does not convert to a paid session costs Kasamba nothing in direct revenue (the advisors are also not paid for free minutes). What the free structure does is dramatically reduce the barrier to trying the platform, which increases the total number of users who eventually book a paid session.
 
@@ -122,7 +122,7 @@ This is what most guides will not tell you: the 3-free-minutes structure creates
 
 The trap is called "free minute inflation." Here is how it works:
 
-You enter a session. The free minutes start. You feel the social pressure to use the time well, so you introduce yourself, explain your situation briefly, and ask a general question. The free minutes expire. You are now on the clock at $9.98/min, but you have not actually tested whether the reader connected to your situation â€?you have only confirmed that the reader politely received your introduction.
+You enter a session. The free minutes start. You feel the social pressure to use the time well, so you introduce yourself, explain your situation briefly, and ask a general question. The free minutes expire. You are now on the clock at $9.98/min, but you have not actually tested whether the reader connected to your situation â€”you have only confirmed that the reader politely received your introduction.
 
 Three weeks and $400 later, you realize you have paid for extended sessions with readers who never demonstrated connection in the free window. You just assumed connection because they responded intelligently to the context you provided.
 
@@ -150,11 +150,11 @@ After your opening message, you say nothing. Close your hands. Do not type. Do n
 
 What you are watching for in the remaining 2.5 minutes:
 
-**Response A (Fail):** The reader asks you clarifying questions. *"When did this relationship start? Who ended it? Has he been in contact?"* They are fishing for information to build a response from. This is not psychic ability â€?it is interview technique. The moment you see this pattern, close the session before the free time expires. You pay nothing.
+**Response A (Fail):** The reader asks you clarifying questions. *"When did this relationship start? Who ended it? Has he been in contact?"* They are fishing for information to build a response from. This is not psychic ability â€”it is interview technique. The moment you see this pattern, close the session before the free time expires. You pay nothing.
 
 **Response B (Pass):** The reader delivers specific, unprompted information about the person of interest that you recognize as accurate and that you did not provide. *"I am getting a strong sense of avoidance that stems from a fear of repeating something painful he experienced before this relationship. The energy between you has not closed, but he is actively suppressing the impulse to reach out."* This is what connection looks like. Stay and pay.
 
-The critical detail: the pass condition is not "the reader says something that sounds psychic." The pass condition is that the reader delivers specific information that you recognize as accurate about *this specific person* â€?their personality, their behavior, their likely motivations â€?without being told those details.
+The critical detail: the pass condition is not "the reader says something that sounds psychic." The pass condition is that the reader delivers specific information that you recognize as accurate about *this specific person* â€”their personality, their behavior, their likely motivations â€”without being told those details.
 
 ### Step 3: The Decision Point
 
@@ -162,71 +162,71 @@ At approximately the 2:30 mark, you have a clear decision: stay or go.
 
 If the reader has failed the silence test: close the chat. You are not charged. Go to the next advisor on your list.
 
-If the reader has passed: this is when you authorize paid time. Before you do, set a cap. Decide in advance how many minutes you are willing to pay for. Set a timer on your phone. When it goes off, close the session â€?do not extend because the reading is emotionally compelling. The emotional pull to extend is the most expensive force in the psychic industry.
+If the reader has passed: this is when you authorize paid time. Before you do, set a cap. Decide in advance how many minutes you are willing to pay for. Set a timer on your phone. When it goes off, close the session â€”do not extend because the reading is emotionally compelling. The emotional pull to extend is the most expensive force in the psychic industry.
 
 ### The Vetting Session Structure (Full Version)
 
-For a reader who passes the silence test, a 10-to-15-minute paid session is the appropriate next step â€?not an open-ended emotional debrief. Structure the paid portion around 2-3 specific questions you prepared in advance. A 12-minute session at a professional-tier rate ($5â€?10/min) runs $60â€?120 and should produce a complete enough picture to guide your next decision.
+For a reader who passes the silence test, a 10-to-15-minute paid session is the appropriate next step â€”not an open-ended emotional debrief. Structure the paid portion around 2-3 specific questions you prepared in advance. A 12-minute session at a professional-tier rate ($5â€”10/min) runs $60â€”120 and should produce a complete enough picture to guide your next decision.
 
 ---
 
-## 4. Which Tier of Kasamba Reader to Test First â€?And Why
+## 4. Which Tier of Kasamba Reader to Test First â€”And Why
 
 Kasamba's pricing runs from $1.99/min to $30+/min, and the rate is not always correlated with what you should book for a specific purpose. Understanding the tiers changes how you allocate your free minutes.
 
-### The Proving Ground Tier ($1.99â€?4.99/min)
+### The Proving Ground Tier ($1.99â€”4.99/min)
 
-This bracket holds newer advisors building their session count, occasional hidden gems who have chosen to keep rates accessible, and â€?with honest admission â€?some readers who are still finding their methodology.
+This bracket holds newer advisors building their session count, occasional hidden gems who have chosen to keep rates accessible, and â€”with honest admission â€”some readers who are still finding their methodology.
 
 **When to test here first:** If you have a narrow, specific question and a tight budget. Ask Cristina ($2.10/min) and Elizabeth ($2.40/min) sit in this range and consistently outperform their pricing. Elizabeth has maintained her accessible rate deliberately; her Reiki and Tarot combination is among the most efficient on the platform for the price.
 
 **The risk:** Higher variance. You may connect immediately with a practitioner who is gifted and modest about pricing. You may also encounter readers who are skilled at sounding specific without delivering verifiable detail. Apply the silence test rigorously at this tier.
 
-### The Professional Class Tier ($5.00â€?14.99/min)
+### The Professional Class Tier ($5.00â€”14.99/min)
 
-This is where I recommend starting for most seekers. Readers in this bracket have typically built their rate on the back of sustained 5-star ratings across high volume â€?they have earned the pricing through demonstrated consistency. Golden Eye ($4.99/min) and Cosmic Fusion ($3.99/min for chat) operate at the accessible edge of this range with verified track records in the thousands of sessions.
+This is where I recommend starting for most seekers. Readers in this bracket have typically built their rate on the back of sustained 5-star ratings across high volume â€”they have earned the pricing through demonstrated consistency. Golden Eye ($4.99/min) and Cosmic Fusion ($3.99/min for chat) operate at the accessible edge of this range with verified track records in the thousands of sessions.
 
 **When to test here:** For relationship-specific questions where the stakes justify the per-minute rate, but you want a reader who has proven their methodology without the elite-tier markup. The professional class is the optimal zone for most seekers' first substantive paid session.
 
-**The vetting signal:** At this tier, pay attention to whether the reader's unsolicited information in the first 90 seconds is characteristically specific to *your person of interest* or generically applicable to most relationship situations. A genuinely skilled reader at $5â€?15/min will describe something that sounds undeniably like the specific person you are asking about.
+**The vetting signal:** At this tier, pay attention to whether the reader's unsolicited information in the first 90 seconds is characteristically specific to *your person of interest* or generically applicable to most relationship situations. A genuinely skilled reader at $5â€”15/min will describe something that sounds undeniably like the specific person you are asking about.
 
-### The Elite Tier ($15.00â€?30.00+/min)
+### The Elite Tier ($15.00â€”30.00+/min)
 
 Love Stefans ($19.99/min) and Seek Chelle ($9.98/min, edge of professional) represent the platform's veterans with decades of verified performance. At these rates, a single minute of paid session time costs more than a full mid-tier reading somewhere else.
 
-**When to test here:** Only when you have a surgical, hyper-specific question that requires the platform's most verified practitioner. "Is this connection energetically over, and what specific condition would need to change for the trajectory to shift?" is a good elite-tier question. "Is he coming back?" is not â€?because the answer to that question does not require the level of depth an elite reader provides, and at $20/min you are paying for precision that a $6/min reader can often deliver equally well.
+**When to test here:** Only when you have a surgical, hyper-specific question that requires the platform's most verified practitioner. "Is this connection energetically over, and what specific condition would need to change for the trajectory to shift?" is a good elite-tier question. "Is he coming back?" is not â€”because the answer to that question does not require the level of depth an elite reader provides, and at $20/min you are paying for precision that a $6/min reader can often deliver equally well.
 
-**The elite-tier protocol:** Use your free minutes to verify connection â€?the silence test applies at every price point. But at the elite tier, your paid session cap should be stricter than at lower rates. A 5-minute surgical session with Love Stefans answering one precise question about reunion trajectory costs $100 and is often more clarifying than a meandering 20-minute session at $5/min.
+**The elite-tier protocol:** Use your free minutes to verify connection â€”the silence test applies at every price point. But at the elite tier, your paid session cap should be stricter than at lower rates. A 5-minute surgical session with Love Stefans answering one precise question about reunion trajectory costs $100 and is often more clarifying than a meandering 20-minute session at $5/min.
 
 ---
 
-## 5. Common Mistakes That Waste Your Free Minutes â€?And How to Avoid Them
+## 5. Common Mistakes That Waste Your Free Minutes â€”And How to Avoid Them
 
 These are the patterns I have watched clients repeat at enormous financial and emotional cost. Each one is avoidable with a simple behavioral adjustment.
 
 ### Mistake 1: Treating the Free Minutes as Part of the Reading
 
-The free minutes are not the beginning of a reading. They are an audition. The moment you start treating them as part of the reading â€?providing context, building rapport, explaining your situation â€?you have converted your vetting window into billable warm-up time.
+The free minutes are not the beginning of a reading. They are an audition. The moment you start treating them as part of the reading â€”providing context, building rapport, explaining your situation â€”you have converted your vetting window into billable warm-up time.
 
 **The fix:** Your only job in the free window is to observe what the reader generates without being told anything. Every word you type is a clue you have given them. Give them nothing.
 
 ### Mistake 2: Testing Only One Reader
 
-The offer is unlimited. The cost of testing an additional reader is zero. Yet most clients test one or two readers and then commit to one of them â€?even if neither demonstrated strong connection in the free window.
+The offer is unlimited. The cost of testing an additional reader is zero. Yet most clients test one or two readers and then commit to one of them â€”even if neither demonstrated strong connection in the free window.
 
-**The fix:** Build a list of 5â€? advisors whose profiles show methodological specificity in the area you are asking about. Test all of them over the course of a week. You will likely find 1â€? who demonstrate immediate connection. Spend your money with those readers, not with the others.
+**The fix:** Build a list of 5â€” advisors whose profiles show methodological specificity in the area you are asking about. Test all of them over the course of a week. You will likely find 1â€” who demonstrate immediate connection. Spend your money with those readers, not with the others.
 
 ### Mistake 3: Staying After a Failed Silence Test
 
 This is the most expensive mistake on the list. A reader asks several questions during your free window. You feel awkward ending the session abruptly. You provide the information they asked for. They reflect it back to you as insight. The session extends for 15 paid minutes at $9/min.
 
-**The fix:** Closing a chat session in Kasamba is instantaneous and requires no explanation. You do not owe the reader a reason. If the silence test fails â€?if more than two clarifying questions appear in your free window â€?close the tab and go to the next reader. Staying is a $135/hour decision being made in the name of social awkwardness.
+**The fix:** Closing a chat session in Kasamba is instantaneous and requires no explanation. You do not owe the reader a reason. If the silence test fails â€”if more than two clarifying questions appear in your free window â€”close the tab and go to the next reader. Staying is a $135/hour decision being made in the name of social awkwardness.
 
 ### Mistake 4: Booking in Emotional Crisis Without Preparation
 
 The worst time to use Kasamba's free minutes effectively is when you are in acute emotional distress. Every behavioral economist knows that urgency degrades decision quality. When you are sobbing at 11 PM because your ex just changed their relationship status, your capacity to run the silence test correctly and close a chat that feels "close enough" is dramatically compromised.
 
-**The fix:** Prepare your shortlist and your opening message before you are in crisis. When the crisis hits, you execute the prepared protocol rather than improvising through emotion. If you have never used Kasamba before, do your first free-minutes session at a calm baseline moment â€?not in the middle of the most emotionally turbulent week of your year.
+**The fix:** Prepare your shortlist and your opening message before you are in crisis. When the crisis hits, you execute the prepared protocol rather than improvising through emotion. If you have never used Kasamba before, do your first free-minutes session at a calm baseline moment â€”not in the middle of the most emotionally turbulent week of your year.
 
 ### Mistake 5: Confusing Session Length With Session Quality
 
@@ -244,9 +244,9 @@ Since Kasamba is not the only legitimate platform in this space, it is worth bei
 
 **Keen (5 minutes for $1, once):** Solves the platform-legitimacy question. The value is concentrated in one test. Best for seekers who have done enough research to identify one specific reader and want to test them at minimal cost before committing. Keen's phone-based architecture also serves questions that benefit from voice connection.
 
-**Purple Garden ($30 credit on first purchase):** Solves the format-legitimacy question. The credit funds a real session with real advisors. Best for seekers who want to use Purple Garden's video-first vetting and the Journeys accountability ledger before committing to a specific reader. The credit goes further at chat rates ($0.99â€?4/min) and less far at video rates ($5â€?15/min).
+**Purple Garden ($30 credit on first purchase):** Solves the format-legitimacy question. The credit funds a real session with real advisors. Best for seekers who want to use Purple Garden's video-first vetting and the Journeys accountability ledger before committing to a specific reader. The credit goes further at chat rates ($0.99â€”4/min) and less far at video rates ($5â€”15/min).
 
-The key distinction is what each offer is solving for. Kasamba's offer is uniquely powerful for the reader-selection problem â€?the question of *which advisor* on a large platform is right for *your specific situation*. If that is your primary challenge, the 3-free-minutes structure is the most valuable trial offer in the industry.
+The key distinction is what each offer is solving for. Kasamba's offer is uniquely powerful for the reader-selection problem â€”the question of *which advisor* on a large platform is right for *your specific situation*. If that is your primary challenge, the 3-free-minutes structure is the most valuable trial offer in the industry.
 
 ---
 
@@ -258,23 +258,23 @@ You need to create an account and add a payment method. You are not charged for 
 
 ### What happens if I stay past 3 minutes?
 
-The session transitions to a paid session at the advisor's listed rate, charged per minute to the payment method on file. This transition happens automatically â€?there is no explicit notification in the chat that the free window has ended, so tracking time yourself is essential.
+The session transitions to a paid session at the advisor's listed rate, charged per minute to the payment method on file. This transition happens automatically â€”there is no explicit notification in the chat that the free window has ended, so tracking time yourself is essential.
 
 ### Can I use the free minutes for phone sessions instead of chat?
 
-Kasamba's 3-free-minutes offer applies to chat sessions. Phone readings operate on a different pricing structure. The chat format is also where the vetting protocol described above works most effectively â€?without auditory cues, the reader must demonstrate connection through the content of their typed response alone.
+Kasamba's 3-free-minutes offer applies to chat sessions. Phone readings operate on a different pricing structure. The chat format is also where the vetting protocol described above works most effectively â€”without auditory cues, the reader must demonstrate connection through the content of their typed response alone.
 
 ### Is there a limit to how many advisors I can test?
 
-There is no stated limit on the number of new advisors you can test using the 3-free-minutes protocol. The practical constraint is time: vetting one advisor takes approximately 3â€? minutes. Testing 10 advisors takes 30â€?0 minutes, and realistic testing sessions spread across several days work better than a marathon in a single sitting.
+There is no stated limit on the number of new advisors you can test using the 3-free-minutes protocol. The practical constraint is time: vetting one advisor takes approximately 3â€” minutes. Testing 10 advisors takes 30â€”0 minutes, and realistic testing sessions spread across several days work better than a marathon in a single sitting.
 
 ### Can the same advisor give me 3 free minutes again if I haven't chatted with them in a long time?
 
-The 3 free minutes apply to advisors who are new to your account â€?meaning you have not had a session with them before. If you have previously had a session (paid or free) with a specific reader, the free window does not reset.
+The 3 free minutes apply to advisors who are new to your account â€”meaning you have not had a session with them before. If you have previously had a session (paid or free) with a specific reader, the free window does not reset.
 
 ### Does Kasamba also offer 50% off the first paid session?
 
-Kasamba typically combines the 3-free-minutes offer with a 50% discount on your first paid reading. The exact terms of current promotions are on Kasamba's platform â€?check before booking, as promotional structures can change.
+Kasamba typically combines the 3-free-minutes offer with a 50% discount on your first paid reading. The exact terms of current promotions are on Kasamba's platform â€”check before booking, as promotional structures can change.
 
 ### What if the reader I want to test is busy or unavailable?
 
