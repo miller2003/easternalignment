@@ -87,16 +87,9 @@ const guides = defineCollection({
   }).passthrough(),
 });
 
-const blog = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    publishDate: z.string().optional(),
-    updatedDate: z.string().optional(),
-    ...seoFields,
-  }).passthrough(),
-});
+// NOTE: the `blog` collection + src/pages/blogs/[slug].astro route were removed
+// on 2026-08-26 (P0 technical hygiene): zero content, zero internal links, the
+// dead route only polluted crawl budget (GSC: 14 impressions, 0 clicks).
 
 // ─── Spanish /es subsite reader collection ───────────────────────────────────
 // Content lives in src/content/es-readers/{psiquicos-web,purple-garden-es}/*.md
@@ -126,4 +119,4 @@ const esReaders = defineCollection({
   }),
 });
 
-export const collections = { reviews, comparisons, guides, blog, readers, esReaders };
+export const collections = { reviews, comparisons, guides, readers, esReaders };

@@ -8,6 +8,7 @@ import RightSidebar from '../components/RightSidebar.astro';
 import EndCTA from '../components/EndCTA.astro';
 import InlineCta from '../components/InlineCta.astro';
 import { PLATFORM_OFFERS } from '../lib/offers';
+import { platformFromName } from '../lib/platform';
 
 interface Props {
   title: string;
@@ -72,7 +73,6 @@ const sidebarDeal = {
 };
 
 const articleSchema = {
-  "@context": "https://schema.org",
   "@type": "Article",
   "headline": title,
   "description": description,
@@ -83,13 +83,59 @@ const articleSchema = {
   "datePublished": publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
 };
+
+// ── AggregateRating for versus-pages ────────────────────────────────────────
+// Platform editorial ratings — single source: content/reviews/*.md frontmatter
+// (the same ratings rendered in the ScorePanels on this page). reviewCount is
+// the real number of published reader reviews per platform (offers.ts).
+const SITE_URL = 'https://easternalignment.com';
+const platformReviewModules = import.meta.glob('../content/reviews/*.md', { eager: true });
+const ratingByKey: Record<string, number> = {};
+for (const mod of Object.values(platformReviewModules) as any[]) {
+  const fm = mod.frontmatter;
+  const key = platformFromName(fm?.platformName || '');
+  if (key && typeof fm?.rating === 'number') ratingByKey[key] = fm.rating;
+}
+
+const comparisonItemList = {
+  "@type": "ItemList",
+  "name": title,
+  "numberOfItems": platforms.length,
+  "itemListElement": platforms.map((p, i) => {
+    const key = platformFromName(p);
+    const rating = key ? ratingByKey[key] : undefined;
+    return {
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Product",
+        "name": p,
+        ...(key ? { "url": `${SITE_URL}/reviews/${key}/` } : {}),
+        ...(rating !== undefined ? {
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": rating,
+            "bestRating": 5,
+            "worstRating": 1,
+            "reviewCount": key ? PLATFORM_OFFERS[key].reviewedCount : 1,
+          },
+        } : {}),
+      },
+    };
+  }),
+};
+
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [articleSchema, comparisonItemList],
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   ogType="article"
-  jsonLd={articleSchema}
+  jsonLd={schemaGraph}
   seoTitle={seoTitle}
   metaDescription={metaDescription}
   canonicalUrl={canonicalUrl}

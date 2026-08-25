@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eastern Alignment SEO 增长作战方案 · 2026-08-25</title>
+<style>
+  :root{
+    --ink:#1a1626; --ink2:#4a4458; --ink3:#8a8396;
+    --bg:#f7f6fa; --card:#ffffff; --line:#e6e2ee;
+    --violet:#6d28d9; --violet-soft:#ede9fe; --amber:#b45309; --amber-soft:#fef3c7;
+    --red:#b91c1c; --red-soft:#fee2e2; --green:#047857; --green-soft:#d1fae5;
+    --blue:#1d4ed8; --blue-soft:#dbeafe;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:15px}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 28px 80px}
+  header.hero{background:linear-gradient(135deg,#1e1b2e 0%,#3b2a6d 60%,#6d28d9 100%);color:#fff;border-radius:16px;padding:44px 40px;margin-bottom:28px}
+  header.hero .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#c4b5fd;margin-bottom:10px}
+  header.hero h1{font-size:30px;line-height:1.3;font-weight:800;margin-bottom:12px}
+  header.hero p{color:#ddd6fe;font-size:14.5px;max-width:820px}
+  header.hero .meta{margin-top:18px;font-size:12.5px;color:#a78bfa}
+  h2{font-size:21px;font-weight:800;margin:44px 0 6px;padding-top:10px;border-top:3px solid var(--violet);display:block}
+  h2 .no{color:var(--violet);margin-right:8px}
+  h3{font-size:16.5px;font-weight:700;margin:26px 0 8px}
+  p.lede{color:var(--ink2);margin:8px 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:14px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:820px){.grid2,.grid4{grid-template-columns:1fr}}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .kpi .v{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums}
+  .kpi .l{font-size:12px;color:var(--ink3);margin-top:2px}
+  .kpi .d{font-size:12px;margin-top:6px;font-weight:600}
+  .up{color:var(--green)} .down{color:var(--red)} .warn{color:var(--amber)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+  th{background:#f1eef8;text-align:left;padding:9px 12px;font-weight:700;color:var(--ink2);white-space:nowrap}
+  td{padding:8px 12px;border-top:1px solid var(--line);vertical-align:top}
+  tr:hover td{background:#faf9fd}
+  .num{font-variant-numeric:tabular-nums;text-align:right}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;white-space:nowrap}
+  .tag.p0{background:var(--red-soft);color:var(--red)}
+  .tag.p1{background:var(--amber-soft);color:var(--amber)}
+  .tag.p2{background:var(--blue-soft);color:var(--blue)}
+  .tag.p3{background:var(--violet-soft);color:var(--violet)}
+  .tag.new{background:var(--green-soft);color:var(--green)}
+  .callout{border-left:4px solid var(--violet);background:var(--violet-soft);border-radius:0 10px 10px 0;padding:14px 18px;margin:14px 0;font-size:14px}
+  .callout.red{border-color:var(--red);background:var(--red-soft)}
+  .callout.amber{border-color:var(--amber);background:var(--amber-soft)}
+  .callout.green{border-color:var(--green);background:var(--green-soft)}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:5px 0;font-size:13px}
+  .bar-row .bl{width:190px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar-track{flex:1;background:#efeaf7;border-radius:6px;height:20px;position:relative}
+  .bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#8b5cf6,#6d28d9)}
+  .bar-val{width:86px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+  .formula{background:#1e1b2e;color:#e9e4ff;border-radius:12px;padding:20px 24px;font-family:ui-monospace,Consolas,monospace;font-size:13.5px;line-height:1.8;margin:14px 0;white-space:pre-wrap}
+  .formula .hl{color:#fbbf24}
+  ul.tight{margin:8px 0 8px 20px} ul.tight li{margin:5px 0}
+  ol.plan{list-style:none;counter-reset:step;margin:12px 0}
+  ol.plan li{counter-increment:step;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 56px;position:relative;margin:10px 0}
+  ol.plan li::before{content:counter(step);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--violet);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+  ol.plan li h4{font-size:15px;margin-bottom:4px}
+  ol.plan li .why{font-size:13px;color:var(--ink2)}
+  ol.plan li .impact{font-size:12.5px;color:var(--green);font-weight:700;margin-top:4px}
+  .foot{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink3);font-size:12px}
+  code{background:#f1eef8;border-radius:5px;padding:1px 6px;font-size:12.5px;font-family:ui-monospace,Consolas,monospace}
+  .small{font-size:12.5px;color:var(--ink3)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">EASTERN ALIGNMENT · SEO GROWTH WAR PLAN</div>
+  <h1>月转化 100 作战方案：从「排名断层 + CTR 失血」到系统战</h1>
+  <p>基于最新 GSC 数据（2026-04-15 → 2026-08-22，含最近 28 天环比）、全站 205 篇内容资产与 mysticmag.com 对标拆解。本方案回答一个问题：<strong>接下来每一步具体做什么、为什么、做到什么数。</strong></p>
+  <div class="meta">报告日期 2026-08-25 ｜ 数据窗口 130 天 ｜ 当前基线：~115 点击/28 天 · 4 付费转化/月 · $125 CPA</div>
+</header>
+
+<!-- ============ 1. 执行摘要 ============ -->
+<h2><span class="no">01</span>执行摘要：三个判断</h2>
+
+<div class="card">
+<p class="lede"><strong>判断一：Google 正在「测试放量」你的站——这是未来 6 个月最大的机会窗口，也是最后的窗口。</strong>最近 28 天展示 +59%、点击 +42%，但平均排名从 23.5 滑到 26.0。这个组合是教科书级的「Google 扩大查询测试面」信号：搜索引擎在更多关键词上试你的页面，但给的是低顺位测试位。<strong>测试期的页面质量反馈（CTR、停留、转化）决定测试结束后你是被提拔还是被放弃。</strong>未来 90 天的动作密度直接决定曲线斜率。</p>
+<p class="lede"><strong>判断二：你缺的不是流量，是「接住流量的能力」。</strong>Keen 品牌词一个池子就有 4,630 次展示，只换回 16 次点击（CTR 0.35%）。<code>keen psychic love &amp; relationships</code> 排名 9.6、1,535 次展示、3 次点击。仅修复现有展示位的 CTR 到行业基准，<strong>不增加任何一次展示，月点击即可翻 2.3–2.7 倍</strong>。这是全站 ROI 最高的动作，没有之一。</p>
+<p class="lede" style="margin-bottom:0"><strong>判断三：mysticmag.com 不是不可追赶的巨头，是一套可以被工程化复制的体系。</strong>它 6 年积累的 ≈ 420 个 URL、6 名实名作者、42 个平台覆盖，本质是「EEAT 实体化 × 转化模板 × 更新频率」三层工程。你的单读者深评模式（mystic-raj 页 CTR 21.2%、排名 4.6）已证明<strong>单元内容质量你更强</strong>——差距在规模、权威信号和模板密度，全部是「可执行项」而非「天赋项」。</p>
+</div>
+
+<div class="grid4">
+  <div class="kpi"><div class="v">18,255</div><div class="l">130 天总展示</div><div class="d up">最近 28 天 +59%</div></div>
+  <div class="kpi"><div class="v">297</div><div class="l">130 天总点击</div><div class="d up">最近 28 天 +42%</div></div>
+  <div class="kpi"><div class="v">1.49%</div><div class="l">最近 28 天 CTR</div><div class="d down">↓ 环比降 0.18pt（被低顺位测试稀释）</div></div>
+  <div class="kpi"><div class="v">26.0</div><div class="l">最近 28 天平均排名</div><div class="d warn">↑ 环比滑 2.5 位（测试面扩大）</div></div>
+</div>
+
+<!-- ============ 2. 数据诊断 ============ -->
+<h2><span class="no">02</span>GSC 深度诊断：钱漏在哪</h2>
+
+<h3>2.1 月度趋势——出沙盒后的五次台阶</h3>
+<div class="card">
+  <div class="bar-row"><div class="bl">2026-04（出沙盒）</div><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><div class="bar-val">6 点击</div></div>
+  <div class="bar-row"><div class="bl">2026-05</div><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><div class="bar-val">48</div></div>
+  <div class="bar-row"><div class="bl">2026-06</div><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div><div class="bar-val">59</div></div>
+  <div class="bar-row"><div class="bl">2026-07</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">96</div></div>
+  <div class="bar-row"><div class="bl">2026-08（截至 22 日）</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div><div class="bar-val">88</div></div>
+  <p class="small" style="margin-top:10px">8 月按日折算约 120+ 点击/足月，环比 +25%。注意：8 月 CTR 降至 1.41%（7 月 1.62%）——展示增长快于点击，印证「测试面扩大、顺位被摊薄」。</p>
+</div>
+
+<h3>2.2 意图结构——Keen 一个池子占了全站 1/4 展示，却只产出 5% 的点击</h3>
+<table>
+  <tr><th>意图池</th><th class="num">展示</th><th class="num">点击</th><th class="num">CTR</th><th class="num">加权排名</th><th>判读</th></tr>
+  <tr><td><strong>Keen 品牌词</strong>（135 词）</td><td class="num">4,630</td><td class="num">16</td><td class="num" style="color:var(--red)">0.35%</td><td class="num">18.2</td><td><span class="tag p0">最大失血点</span> 排名已不低，纯 CTR 问题</td></tr>
+  <tr><td>泛 psychic 词（166 词）</td><td class="num">1,737</td><td class="num">8</td><td class="num">0.46%</td><td class="num">49.1</td><td>大词红海，不作主攻</td></tr>
+  <tr><td><strong>Kasamba 品牌词</strong>（60 词）</td><td class="num">1,366</td><td class="num">2</td><td class="num" style="color:var(--red)">0.15%</td><td class="num">42.0</td><td><span class="tag p1">第二失血点</span> 排名断层 + CTR 双杀</td></tr>
+  <tr><td>免费/便宜词（83 词）</td><td class="num">444</td><td class="num">1</td><td class="num">0.23%</td><td class="num">67.4</td><td>用优惠页接，不做内容主攻</td></tr>
+  <tr><td>爱情/关系词（61 词）</td><td class="num">359</td><td class="num">0</td><td class="num">0%</td><td class="num">45.8</td><td>场景 guides 的主战场，待排名</td></tr>
+  <tr><td><strong>Purple Garden 品牌词</strong></td><td class="num">344</td><td class="num">0</td><td class="num" style="color:var(--red)">0%</td><td class="num">32.0</td><td><span class="tag p1">零产出</span> 佣金最高的平台零点击</td></tr>
+</table>
+
+<h3>2.3 单页漏点榜——前 10 个漏点每月约漏掉 40–70 次点击</h3>
+<table>
+  <tr><th>页面 / 查询</th><th class="num">展示</th><th class="num">排名</th><th class="num">CTR</th><th>病灶</th></tr>
+  <tr><td>/guides/keen-love-psychics-review/ ← "keen psychic love &amp; relationships"</td><td class="num">~1,500</td><td class="num">9.6–10.4</td><td class="num" style="color:var(--red)">0.2%</td><td>首页第 10 名 + 无星级 + title 未命中查询语言，<strong>全站第一漏点</strong></td></tr>
+  <tr><td>"keen free 3 minutes" → 落地页错配</td><td class="num">570</td><td class="num">8.7</td><td class="num" style="color:var(--red)">0.18%</td><td>用户搜「3 分钟免费」，title 写「$1 5 分钟」，话术错位</td></tr>
+  <tr><td>/reviews/keen/ hub</td><td class="num">4,116</td><td class="num">19.4</td><td class="num">0.78%</td><td>第二页顶部，排名+CTR 都要修</td></tr>
+  <tr><td>/guides/is-purple-garden-legit/</td><td class="num">292</td><td class="num">21.4</td><td class="num" style="color:var(--red)">0%</td><td>legit 词=掏钱前最后一搜，0 点击不可接受</td></tr>
+  <tr><td>/reviews/keen/the-psychic-one/ ← "keen psychic one"</td><td class="num">256</td><td class="num">8.6–17.6</td><td class="num" style="color:var(--red)">0%</td><td>读者名高意向查询零点击，title 问题</td></tr>
+  <tr><td>/comparisons/kasamba-vs-keen-love-readings/</td><td class="num">131</td><td class="num">11.7</td><td class="num" style="color:var(--red)">0%</td><td>对比词首页边缘零点击，缺 verdict 信号</td></tr>
+  <tr><td>"yazmin kasamba" / "psychic yazmin"</td><td class="num">145</td><td class="num">~8.8</td><td class="num">0.7%</td><td>读者页有排名没点击，title 未读者名前置</td></tr>
+  <tr><td>"keen psychic platform sale" 系列</td><td class="num">~130</td><td class="num">6.9–10.3</td><td class="num" style="color:var(--red)">0%</td><td>「sale」= 促销意图，需优惠页承接</td></tr>
+</table>
+
+<h3>2.4 三个此前未发现的新问题 <span class="tag new">NEW · 08-25 数据</span></h3>
+
+<div class="callout green">
+<strong>① www 子域信号分裂——已于 08-25 实测验证：301 重定向已存在且配置正确。</strong>对 8 个代表性 www URL（首页/hub/指南/读者页/带查询串/sitemap）实测全部返回 <code>301 → https://easternalignment.com/&lt;原路径&gt;</code>，路径与 UTM 查询串完整保留；全站 canonical 单一指向 apex（5 个布局文件 SITE_URL 均为裸域），源码零 www 硬编码。GSC 中的 13 个 www URL / 244 次展示属于 <strong>301 生效前的残留索引</strong>，Google 合并需 4–8 周，无需技术动作，只需按月监控归零。<strong>剩余事项：</strong>在 Cloudflare Dashboard → Rules → Redirect Rules 中确认该规则并记录，防止误删。
+</div>
+<div class="callout amber">
+<strong>② 美国市场 CTR 只有英加市场的 1/3。</strong>美国：13,103 展示、CTR 1.33%；英国：1,060 展示、CTR 4.34%；加拿大：538 展示、CTR 4.65%。排名相近（24 vs 28 vs 19）但点击率差 3 倍——美国 SERP 更拥挤（AI Overview + 广告 + 带星级的大站聚合页），<strong>没有结构化数据增强的页面在美国 SERP 上等于隐形</strong>。这进一步把 AggregateRating schema 的优先级钉死在第一位。
+</div>
+<div class="callout amber">
+<strong>③ 品牌词展示仅 84 次——你还没有「品牌」。</strong>130 天里搜 "easternalignment" 相关词的总展示 84 次。所有转化都靠非品牌词冷启动，这意味着 CTR 和转化率天然吃亏（无品牌 = SERP 上无名小卒）。品牌建设不是情怀工程：品牌词 CTR 通常是 30–60%，是最便宜的转化流量。Matthew/Ingenio 关系线是当前<strong>唯一现实的品牌加速器</strong>（详见 §5）。
+</div>
+
+<h3>2.5 设备断层：桌面端是隐形的</h3>
+<div class="card">
+  <div class="bar-row"><div class="bl">移动（7,613 展示）</div><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div><div class="bar-val">CTR 2.76% · 排 15.9</div></div>
+  <div class="bar-row"><div class="bl">桌面（10,501 展示）</div><div class="bar-track"><div class="bar-fill" style="width:22%;background:linear-gradient(90deg,#f87171,#b91c1c)"></div></div><div class="bar-val">CTR 0.79% · 排 31.1</div></div>
+  <p class="small" style="margin-top:10px">桌面占 57% 的展示却只产出 28% 的点击。桌面 SERP 是「对比研究型」查询的主战场（多标签比价、看评测），大站密度更高。这不是技术问题——Astro 静态站速度无虞——而是权威信号不足在桌面端被放大。解法同一条主线：schema + title 差异化 + 权威积累。</p>
+</div>
+
+<!-- ============ 3. 转化数学 ============ -->
+<h2><span class="no">03</span>月 100 转化的数学：不靠奇迹，靠三个乘数</h2>
+
+<div class="formula">现状：  ~123 点击/月 × <span class="hl">3.3% 点击→付费转化</span> ≈ 4 单/月 ≈ $500/月
+目标：  100 单/月 × $125 CPA = <span class="hl">$12,500/月</span>
+缺口：  转化 ×25
+
+拆解（三个独立可验证的乘数）：
+M1 · CTR 修复      1.49% → 3.5%      → 点击 <span class="hl">×2.3</span>   （不动排名，只修 SERP 展示面）
+M2 · 展示面扩张    8.3K → 40–55K/月  → 点击 <span class="hl">×5–6.5</span> （striking-distance 进前 5 + 内容面 ×3）
+M3 · 转化率优化    3.3% → 4.2–4.5%   → 转化 <span class="hl">×1.3</span>   （Kasamba 主推 $125 + hub 转化模板 + 优惠页）
+
+合计：4 单 × 2.3 × 5.5 × 1.3 ≈ <span class="hl">66–90 单/月（中位情形，第 9–12 月）</span>
+       上限情形（M2 到 ×7 + M1 到 ×2.7）→ <span class="hl">110–125 单/月</span></div>
+
+<div class="callout">
+<strong>诚实校准：</strong>月 100 单是这个数学模型的上限而非保底。中位情形落在 60–90 单/月（$7,500–11,000）。三个乘数里 M1 完全在你掌控内（本周就能做），M2 取决于内容产能与排名响应（3–6 个月），M3 已经在发生（Kasamba $125 追溯生效 + 平台重排）。<strong>先用 30 天把 M1 拿到手——它不需要 Google 配合，是纯执行。</strong>
+</div>
+
+<h3>北极星指标校准表（每 28 天对一次 GSC）</h3>
+<table>
+  <tr><th>里程碑</th><th class="num">展示/28天</th><th class="num">点击/28天</th><th class="num">CTR</th><th class="num">付费转化/月</th><th class="num">月收入</th></tr>
+  <tr><td>当前（08-22）</td><td class="num">7,717</td><td class="num">115</td><td class="num">1.49%</td><td class="num">4</td><td class="num">$500</td></tr>
+  <tr><td>+4 周（09 月底）</td><td class="num">11,000</td><td class="num">280</td><td class="num">2.5%</td><td class="num">10–12</td><td class="num">$1,375</td></tr>
+  <tr><td>+8 周（10 月底）</td><td class="num">18,000</td><td class="num">500</td><td class="num">2.8%</td><td class="num">20–24</td><td class="num">$2,750</td></tr>
+  <tr><td>+3 月（11 月底）</td><td class="num">28,000</td><td class="num">850</td><td class="num">3.0%</td><td class="num">34–40</td><td class="num">$4,600</td></tr>
+  <tr><td>+6 月（2027-02）</td><td class="num">45,000</td><td class="num">1,500</td><td class="num">3.3%</td><td class="num">60–70</td><td class="num">$8,100</td></tr>
+  <tr><td>+9–12 月</td><td class="num">65,000+</td><td class="num">2,300+</td><td class="num">3.5%</td><td class="num"><strong>90–110</strong></td><td class="num"><strong>$12,500</strong></td></tr>
+</table>
+<p class="small">决策规则：<strong>展示量是领先指标，CTR 是执行质量指标，排名是权重滞后指标，转化是结果指标。</strong>每两周只看前两个做执行决策；排名和转化按月看，不做周级反应。</p>
+
+<!-- ============ 4. mysticmag 对标 ============ -->
+<h2><span class="no">04</span>mysticmag.com 对标：差距矩阵与你的超车弯道</h2>
+
+<table>
+  <tr><th>维度</th><th>mysticmag.com</th><th>easternalignment.com</th><th>差距性质</th></tr>
+  <tr><td>域名年龄</td><td>6 年</td><td>8 个月</td><td>不可追，只能对冲（品牌+外链）</td></tr>
+  <tr><td>内容规模</td><td>~420 URL（354 文章 + 42 平台 + 日运）</td><td>~250 URL（205 内容页）</td><td><span class="tag p2">可追</span> 内容产能问题</td></tr>
+  <tr><td>作者实体</td><td>6 名实名作者（持证心理学家 / Marie Claire 占星师 / 执业灵媒）+ 公开评分方法论</td><td>无署名体系</td><td><span class="tag p0">可追且必须追</span> YMYL 赛道 EEAT 权重逐年提高</td></tr>
+  <tr><td>转化模板</td><td>榜单页 12 层组件（Quiz/对比表×2/社交证明/评分面板）</td><td>读者页转化链路更精细（ProsCons→nudge→CTABox），但 hub/guides 偏文章化</td><td><span class="tag p1">组件组装问题</span> 不需开发新能力</td></tr>
+  <tr><td>平台覆盖</td><td>42 个 vendor</td><td>3 个平台 × 114 读者（颗粒度深 10 倍）</td><td><span class="tag p3">差异化定位</span> 深度是你的定位，不正面拼广度</td></tr>
+  <tr><td>更新频率</td><td>每日运势 + 周级 Updated On 刷新</td><td>静态站，无机制</td><td><span class="tag p2">可工程化</span> 构建时生成周运/月相页</td></tr>
+  <tr><td>互动工具</td><td>1 个 Quiz</td><td><strong>5 个真工具</strong>（塔罗/月相/天使数字/配对/灵数）</td><td><span class="tag new">你领先</span> 外链磁铁 + 停留时长</td></tr>
+  <tr><td>单读者颗粒度</td><td>无（只评平台）</td><td><strong>114 篇单读者深评</strong>，mystic-raj CTR 21.2%</td><td><span class="tag new">你领先</span> 读者名查询=掏钱前最后一搜</td></tr>
+  <tr><td>西语站</td><td>无</td><td>es/ 基础设施已就位</td><td><span class="tag new">你领先</span> 美国西语裔灵性消费蓝海</td></tr>
+  <tr><td>估计流量</td><td>~4,000 访客/日（第三方估计）</td><td>~120 点击/月（GSC 实测）</td><td>~40 倍——其中域名年龄+外链占大头</td></tr>
+</table>
+
+<div class="callout green">
+<strong>核心判断：</strong>它的护城河是「体系」不是「天赋」。它的每一个组件（评分面板、methodology 页、作者页、年份化标题、优惠栏目）都是可以被拆解、复制、然后在颗粒度上超越的工程件。你的赢面公式 = <strong>它的转化模板 × 你的单读者深度 × 它没有的真工具</strong>。
+</div>
+
+<!-- ============ 5. 行动序列 ============ -->
+<h2><span class="no">05</span>行动序列：P0 本周 → P3 十二个月</h2>
+
+<h3>P0 · 第 1–2 周：止血（全部不需要 Google 配合，纯执行）<span class="tag p0">P0</span></h3>
+<ol class="plan">
+  <li>
+    <h4>www → apex 301 合并 <span class="tag new">已完成 · 08-25 实测</span></h4>
+    <div class="why">实测确认 301 已存在且正确（路径+查询串保留，8 URL 全通过），canonical 单一指向 apex，源码零 www 硬编码。GSC 残留索引 4–8 周自然归零。剩余动作仅剩：Cloudflare Dashboard 定位该规则、截图存档防误删。</div>
+    <div class="impact">状态：✓ 无需再投入，转为月度监控项</div>
+  </li>
+  <li>
+    <h4>全站 AggregateRating schema 上线（review / hub / comparison 页）</h4>
+    <div class="why">frontmatter 已有 rating 字段，只需渲染成 JSON-LD。美国 SERP 上有星级 vs 无星级的点击率差 1.5–2 倍——§2.4 已证明你在美国市场被这个差距定向打击。</div>
+    <div class="impact">预期：所有已上首页/二页顶的页面 CTR ×1.5–2（2–4 周生效）</div>
+  </li>
+  <li>
+    <h4>Top-10 漏点页 title/meta 重写（清单见下表）</h4>
+    <div class="why">§2.3 的漏点榜逐页重写。原则：读者名前置、优惠话术与用户查询语言对齐（而非与平台官方话术对齐）、年份注入、数字前置。</div>
+    <div class="impact">预期：仅前 6 个漏点每月回收 40–70 点击 ≈ 2 单/月（$250）</div>
+  </li>
+  <li>
+    <h4>技术卫生：删 blogs/ 死路由 · PG 读者页接入 InfiniteContentFlow · es 空 hub noindex · 首页 title 品牌强化</h4>
+    <div class="why">死路由污染抓取预算；PG 30 个读者页只有 9 个有展示，内链断层是主因之一；空 hub 拉低整站质量信号；首页 title 直接承载品牌词（当前品牌词排名 36）。</div>
+    <div class="impact">预期：抓取效率 + PG 读者页展示面打开（4–6 周）</div>
+  </li>
+</ol>
+
+<div class="card">
+<h3 style="margin-top:0">P0-3 附：Top-10 漏点页 title 重写清单（可直接执行）</h3>
+<table>
+  <tr><th>页面</th><th>目标查询</th><th>新 title 建议</th></tr>
+  <tr><td>/guides/keen-love-psychics-review/</td><td>keen psychic love &amp; relationships</td><td>7 Best Keen Psychics for Love &amp; Relationships (2026): Tested &amp; Ranked</td></tr>
+  <tr><td>/reviews/keen/ hub</td><td>keen psychics / keen reviews</td><td>Keen Psychics Review 2026: 46 Advisors Tested — 5 Minutes for $1</td></tr>
+  <tr><td>Keen 优惠页（新建）</td><td>keen free 3 minutes / keen free minutes</td><td>Keen Free Minutes 2026: How the 5-for-$1 Offer Works (&amp; Free Reading Options)</td></tr>
+  <tr><td>/reviews/kasamba/ hub</td><td>kasamba / kasamba reviews</td><td>Kasamba Review 2026: 3 Free Minutes + 50% Off — 35 Readers Tested</td></tr>
+  <tr><td>/reviews/purple-garden/ hub</td><td>purple garden review</td><td>Purple Garden Review 2026: $30 Free Credit — Tested &amp; Verified</td></tr>
+  <tr><td>/guides/is-purple-garden-legit/</td><td>is purple garden legit</td><td>Is Purple Garden Legit? (2026) Screening, Refunds &amp; the $30 Credit Tested</td></tr>
+  <tr><td>/reviews/keen/the-psychic-one/</td><td>keen psychic one</td><td>The Psychic One on Keen: 2026 Review — Accuracy, Price &amp; Real Feedback</td></tr>
+  <tr><td>/comparisons/kasamba-vs-keen-love-readings/</td><td>kasamba vs keen</td><td>Kasamba vs Keen for Love Readings (2026): Price, Accuracy &amp; Verdict</td></tr>
+  <tr><td>/guides/love-or-career-psychics/</td><td>career and relationship psychic</td><td>Love or Career First? Which Psychic Specialty to Book (2026 Guide)</td></tr>
+  <tr><td>/（首页）</td><td>easternalignment 品牌词</td><td>Eastern Alignment: Tested Psychic Reviews &amp; Reader Rankings (2026)</td></tr>
+</table>
+</div>
+
+<h3>P1 · 第 3–4 周：钱页转化工程 <span class="tag p1">P1</span></h3>
+<ol class="plan">
+  <li>
+    <h4>三个平台 hub 转化模板化（对标 mysticmag 单品牌页，超越其颗粒度）</h4>
+    <div class="why">页首评分速览面板（价格区间/优惠/联系方式/评分）+ 平台对比表 + Top 读者卡（Best for X）+ 优惠横幅 + FAQ。Kasamba hub 当前排名 36.6、PG hub 34.4——内容深度不足是主因，按 3,000 词当量重写。CTA 顺序执行全站主推：Kasamba #1 → PG #2 → Keen #3。</div>
+    <div class="impact">预期：hub 词进前 20（Kasamba/PG 从第四页起步，6–10 周）</div>
+  </li>
+  <li>
+    <h4>三平台优惠页矩阵（Keen 新建 / PG 新建 / Kasamba 扩写）</h4>
+    <div class="why">"keen free 3 minutes"（570 展示）、"keen psychic platform sale"（~130 展示）等促销意图词当前无专门落地页。mysticmag 用独立 coupon 栏目承接这类词——优惠词是全漏斗转化意图最强的词类。</div>
+    <div class="impact">预期：承接已有 ~1,000 展示/季度的促销意图流量</div>
+  </li>
+  <li>
+    <h4>6 篇 comparisons 转化改造 + GSC 驱动扩 6 篇</h4>
+    <div class="why">对比页 455 展示只换 2 点击。全部加对比表 + 评分 + 明确 verdict + 双 CTA + schema。新选题直接用 GSC 已出现的查询："how does keen compare to psychic source" 等。</div>
+    <div class="impact">预期：对比词 5+ 进前 10（8–12 周）</div>
+  </li>
+  <li>
+    <h4>EEAT 实体化：署名体系 + 评测方法论页</h4>
+    <div class="why">不需要真人灵媒——需要一个可信编辑人格。你有 46 位 Keen 顾问实测的叙事基础，比 mysticmag 的 methodology 更硬。About 页强化 + 每篇署名 + 方法论独立成页 + 全站页脚链接。</div>
+    <div class="impact">预期：YMYL 权重信号（长线，3 个月+ 起效）</div>
+  </li>
+</ol>
+
+<h3>P2 · 第 2–3 月：关键词面扩张 <span class="tag p2">P2</span></h3>
+<ol class="plan">
+  <li>
+    <h4>Mediumship 集群启动（等 Matthew 定向 vs 直接执行 Maayan 排序）</h4>
+    <div class="why">Maayan 明确说 top mediumship LP 转化最好；GSC 里 "deceased pet / passed away fiancé" 类对话式查询你已排 3–11 位。按 PG Top Psychics → Love → Mediumship 的 LP 顺序建集群，每个 LP 配场景 guide + 读者卡。</div>
+    <div class="impact">预期：打开 PG 零点击墙（344 展示 → 点击破零，再放大）</div>
+  </li>
+  <li>
+    <h4>Tools 内容化逐个解除 noindex（每 2 周 1 个，观察排名响应）</h4>
+    <div class="why">"one card tarot" / "yes no tarot" 是月搜数千级的词，工具页停留时长天然优秀，且是 mysticmag 完全没有的资产。每个工具页 +600–1,000 词指南 + FAQ + 场景内链。</div>
+    <div class="impact">预期：3 个月内 tools 词进前 30，外链磁铁就位</div>
+  </li>
+  <li>
+    <h4>场景 guides 按赢家公式 +15–20 篇</h4>
+    <div class="why">赢家公式已验证（brutally-honest 4.05% CTR、ex-recovery 2.17%）：场景具体 + 情绪强度高 + 直接挂读者推荐。候选：cheating suspicions、soulmate timeline、career-change 决策、twin-flame separation。</div>
+    <div class="impact">预期：每篇成熟期 200–500 展示/月，合计 +5K 展示/月</div>
+  </li>
+  <li>
+    <h4>Kasamba/PG 读者页按 GSC 需求排序扩编</h4>
+    <div class="why">GSC 已告诉你哪些读者名有搜索需求：yazmin（145 展示）、david james（32）、master enigma 等。优先补齐/优化有展示信号的读者页，title 全部读者名前置。</div>
+    <div class="impact">预期：读者名查询 CTR 向 mystic-raj 的 21% 看齐</div>
+  </li>
+  <li>
+    <h4>周运/月相程序化页面（构建时生成）</h4>
+    <div class="why">用 Astro 构建管线生成 "Moon Phase Today" / 每周运势页，拿新鲜度信号——mysticmag 用每日运势做到的活跃站点信号，你用 1/10 成本拿 70%。</div>
+    <div class="impact">预期：抓取频率提升 + 新词面（4–8 周）</div>
+  </li>
+</ol>
+
+<h3>P3 · 第 3–12 月：权威与品牌（真正的护城河）<span class="tag p3">P3</span></h3>
+<ol class="plan">
+  <li>
+    <h4>Matthew / Ingenio 关系线 → co-marketing（当前唯一现实的品牌加速器）</h4>
+    <div class="why">Ingenio 的 Organic Growth Manager 主动找上门（你的 fake-psychic 指南被 Claude 引为权威来源），Organic Growth Brief 已备好。后续可谈：Ingenio 旗下内容资产的专家引语互引、独家优惠物料、数据合作。<strong>这条线任何 SEO 技术动作都替代不了。</strong></div>
+    <div class="impact">预期：权威外链 + 品牌提及 + 独家转化物料</div>
+  </li>
+  <li>
+    <h4>原创数据报告做外链磁铁</h4>
+    <div class="why">"We analyzed 114 psychic profiles across 3 platforms"——你有别人没有的第一手评测数据。做成年度报告投灵性/生活方式媒体 + HARO 专家引语。</div>
+    <div class="impact">预期：DR 提升，解决桌面端权威断层</div>
+  </li>
+  <li>
+    <h4>Reddit / Quora 品牌渗透</h4>
+    <div class="why">GSC 已出现 "keen reviews reddit" 类查询——用户在 Reddit 语境里做购买决策。以真实评测者人格参与 r/psychics 等社区（遵守各版规），不刷链接，建品牌认知。</div>
+    <div class="impact">预期：品牌词展示 84 → 500+/月（6–12 月）</div>
+  </li>
+  <li>
+    <h4>TUNE 网络内新平台扩编 5–8 个（深度优先于广度的第二阶段）</h4>
+    <div class="why">三平台词全部打穿后（hub 进首页 + 读者面铺满），按 TUNE 可结算清单扩 Psychic Source / PathForward / AskNow 等。逐个确认可结算再投入内容。</div>
+    <div class="impact">预期：关键词面 ×1.5–2，对冲单平台政策风险</div>
+  </li>
+  <li>
+    <h4>es 站启动（美国西语裔灵性消费蓝海）</h4>
+    <div class="why">基础设施已就位，mysticmag 没有西语站。先用 10–15 篇高意图译文验证（reviews + 场景 guides），跑通后再扩。</div>
+    <div class="impact">预期：6–12 月内第二增长曲线</div>
+  </li>
+</ol>
+
+<!-- ============ 6. 决策点 ============ -->
+<h2><span class="no">06</span>三个需要你拍板的决策点</h2>
+
+<div class="card">
+<h3 style="margin-top:0">决策 1：Kasamba vs Purple Garden 的内容投入排序</h3>
+<p>数据派：Kasamba 展示池是 PG 的 4 倍（1,366 vs 344），但排名 42，修复成本高。商业派：Maayan 明确 PG 的 LP 转化最好，且 PG 佣金提升谈判进行中。<strong>建议：P1 阶段两个 hub 并重（都要重写），P2 扩编阶段跟随展示供给——Kasamba 优先扩（它是全站 #1 主推且词面大），PG 按 Maayan 的 LP 顺序建 Mediumship 集群。若 Matthew 回复给出不同权重，以他的内部数据为准。</strong></p>
+</div>
+<div class="card">
+<h3 style="margin-top:0">决策 2：astrology/zodiac 组合页的去留</h3>
+<p>26 个 URL、149 次展示、0 点击、排名 60–98，目前 noindex 但仍耗抓取。66 个配对页被 astrostyle 等老牌站锁死，正面强攻性价比极低。<strong>建议：66 个配对页彻底放弃（保留 noindex，内链权重让给场景页），12 个星座单页未来作为周运集群的落地容器再启用。</strong></p>
+</div>
+<div class="card">
+<h3 style="margin-top:0">决策 3：信息型大词（what is psychic reading 等）的投入</h3>
+<p>1,588 展示排名 54，对手是 Healthline 级域名，且这类查询正被 Google AI Overview 直接吞掉（零点击搜索）。<strong>建议：不做正面强攻，文章保留作主题枢纽，内链全部导向场景页；资源全部投向品牌+场景+对比词——那里才有转化。</strong></p>
+</div>
+
+<div class="foot">
+  本方案基于 2026-08-22 前的 GSC 导出（130 天窗口）与 2026-08-25 的 mysticmag.com 公开信息复核。数据时效约 3 个月，建议每月按 §03 校准表复核乘数假设，每季度重跑完整诊断。与 SEO_STRATEGY_REPORT_2026-08-24.md 的关系：本方案在其基础上更新了 28 天环比、www 泄漏、设备/国家分层三项新发现，并将执行项压缩为可排期的 P0–P3 序列。
+</div>
+
+</div>
+</body>
+</html>

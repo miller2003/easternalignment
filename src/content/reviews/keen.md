@@ -1,7 +1,7 @@
 ---
 title: "Keen Psychics Review (2026): The Unfiltered Truth About the Open Marketplace"
-seoTitle: "Keen Psychics Review 2026: I Tested 46 Advisors With My Own Money"
-metaDescription: "I tested 46 Keen psychics with my own money — love & relationship accuracy, real per-minute pricing, and how the 5-minutes-for-$1 intro offer actually works."
+seoTitle: "Keen Psychics Review 2026: 49 Advisors Tested — 5 Minutes for $1"
+metaDescription: "49 Keen psychics tested with real money — love & relationship accuracy, real per-minute pricing, and how the 5-minutes-for-$1 intro offer actually works in 2026."
 description: "Is Keen worth your money? We dissect Keen's unfiltered review system, their unparalleled phone reading infrastructure, and how to navigate their massive roster of independent psychics."
 platformName: "Keen"
 rating: 4.8

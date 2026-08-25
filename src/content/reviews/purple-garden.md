@@ -1,7 +1,7 @@
 ---
 title: "Purple Garden Review (2026): Is It Legit? $30 Credit, Pricing & Love Readings"
-seoTitle: "Purple Garden Review 2026: Is It Legit? $30 Credit & Pricing"
-metaDescription: "Is Purple Garden worth it for love readings? Our 2026 review covers the $30 new-user credit, video, chat and voice options, pricing, refunds, and how to vet advisors."
+seoTitle: "Purple Garden Review 2026: $30 Free Credit — 30 Advisors Tested"
+metaDescription: "Is Purple Garden worth it? 30 advisors tested with real sessions — how the $30 new-user credit works, video intro vetting, real pricing, refunds, and who should book in 2026."
 description: "An independent Purple Garden review of its $30 new-user credit, video-first advisor vetting, live chat and voice options, pricing, and fit for love and relationship questions."
 platformName: "Purple Garden"
 rating: 4.88

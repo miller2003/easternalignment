@@ -18,6 +18,14 @@ interface Props {
   platformName: string;
   rating: number;
   verdict: string;
+  /**
+   * Number of individual assessments behind the editorial rating, rendered as
+   * aggregateRating.reviewCount in the JSON-LD. Platform hubs pass their
+   * reader-review count (49/35/30 — the real number of published reader
+   * reviews). Individual reader pages omit it and default to 1 (a single
+   * expert review — factually accurate, never fabricated).
+   */
+  reviewCount?: number;
   affiliateUrl?: string;
   freeOffer?: string;
   ctaOverride?: string;
@@ -43,6 +51,7 @@ const {
   platformName,
   rating,
   verdict,
+  reviewCount,
   affiliateUrl = '#',
   freeOffer,
   ctaOverride,
@@ -122,9 +131,19 @@ const reviewSchema = {
   "itemReviewed": {
     "@type": "Product",
     "name": readerLabel || platformName,
-    "url": affiliateUrl !== '#' ? affiliateUrl : undefined,
+    "url": affiliateUrl !== '#' ? new URL(affiliateUrl, SITE_URL).href : undefined,
     "image": absoluteAvatarUrl || ogImage || "https://easternalignment.com/logo.jpg",
     "description": description,
+    // aggregateRating is what Google reads for SERP star snippets. reviewCount
+    // is the real number of published assessments (hubs: reader-review count;
+    // reader pages: 1 single expert review) — never a fabricated volume.
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": rating,
+      "bestRating": 5,
+      "worstRating": 1,
+      "reviewCount": reviewCount ?? 1,
+    },
     ...(isReaderReview ? {
       "brand": {
         "@type": "Brand",

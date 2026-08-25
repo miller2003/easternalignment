@@ -195,6 +195,8 @@ The good news: genuine practitioners exist. They are not the majority, but they 
 
 **Use established platforms with review systems.** [Purple Garden](/go/purple-garden), [Kasamba](/go/kasamba), and [Keen](/go/keen) all have review systems that allow you to evaluate a reader's track record before connecting. Pay attention to reviews that describe specific accurate perceptions, not just reviews that say "loved my reading."
 
+Purple Garden is a good example of what a trust-first platform looks like in practice: readers introduce themselves on video before you spend anything, written reviews sit directly on each profile so you can look for the specificity patterns described above, and new users receive $30 in free credit -- enough to test a reader against every red flag on this list without financial risk.
+
 **Use free or introductory minutes to vet.** Do not commit significant money to any reader until you have tested their ability during a low-cost or free session. Kasamba's 3-free-minutes-per-reader model is specifically designed for this purpose.
 
 **Trust specificity over style.** A genuine reader may not have the most polished delivery or the most comforting bedside manner. What they will have is specific information you did not provide. Prioritize accuracy over aesthetics.

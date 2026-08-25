@@ -1,5 +1,7 @@
 ---
 title: 'Love or Career? Top 7 Psychics for Ambitious Singles & Power Couples'
+seoTitle: 'Love or Career First? Which Psychic to Book for Both (2026)'
+metaDescription: 'Want insight on both career and relationships? The 7 psychics who read the love–career intersection with concrete, actionable timelines — who to book, what they cost, and who they suit.'
 description: 'Career or relationship first? The 7 best psychics for reading the intersection of your work trajectory and love life — concrete insight, not vague comfort.'
 category: Roundup
 platform: cross-platform

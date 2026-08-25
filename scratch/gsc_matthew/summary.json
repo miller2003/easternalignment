@@ -1,0 +1,992 @@
+{
+ "total": {
+  "clicks": 297,
+  "impressions": 18255,
+  "ctr": 1.63,
+  "range": "Apr 15, 2026 - Aug 22, 2026"
+ },
+ "last28": {
+  "clicks": 115,
+  "impressions": 7717,
+  "wpos": 26.0,
+  "ctr": 1.49
+ },
+ "prev28": {
+  "clicks": 81,
+  "impressions": 4853,
+  "wpos": 23.5,
+  "ctr": 1.67
+ },
+ "wow": {
+  "clicks_growth": 42.0,
+  "impr_growth": 59.0
+ },
+ "monthly": [
+  {
+   "month": "2026-04",
+   "clicks": 6,
+   "impressions": 507,
+   "ctr": 1.18
+  },
+  {
+   "month": "2026-05",
+   "clicks": 48,
+   "impressions": 2964,
+   "ctr": 1.62
+  },
+  {
+   "month": "2026-06",
+   "clicks": 59,
+   "impressions": 2615,
+   "ctr": 2.26
+  },
+  {
+   "month": "2026-07",
+   "clicks": 96,
+   "impressions": 5932,
+   "ctr": 1.62
+  },
+  {
+   "month": "2026-08",
+   "clicks": 88,
+   "impressions": 6237,
+   "ctr": 1.41
+  }
+ ],
+ "intent": [
+  {
+   "intent": "Keen brand",
+   "clicks": 16,
+   "impressions": 4630,
+   "n": 135,
+   "wpos": 18.2,
+   "ctr": 0.35
+  },
+  {
+   "intent": "Generic psychic",
+   "clicks": 8,
+   "impressions": 1737,
+   "n": 166,
+   "wpos": 49.1,
+   "ctr": 0.46
+  },
+  {
+   "intent": "Kasamba brand",
+   "clicks": 2,
+   "impressions": 1366,
+   "n": 60,
+   "wpos": 42.0,
+   "ctr": 0.15
+  },
+  {
+   "intent": "Free / cheap seeking",
+   "clicks": 1,
+   "impressions": 444,
+   "n": 83,
+   "wpos": 67.4,
+   "ctr": 0.23
+  },
+  {
+   "intent": "Love & relationships",
+   "clicks": 0,
+   "impressions": 359,
+   "n": 61,
+   "wpos": 45.8,
+   "ctr": 0.0
+  },
+  {
+   "intent": "Purple Garden brand",
+   "clicks": 0,
+   "impressions": 344,
+   "n": 16,
+   "wpos": 32.0,
+   "ctr": 0.0
+  },
+  {
+   "intent": "Informational",
+   "clicks": 0,
+   "impressions": 335,
+   "n": 65,
+   "wpos": 60.9,
+   "ctr": 0.0
+  },
+  {
+   "intent": "Topical niches",
+   "clicks": 0,
+   "impressions": 210,
+   "n": 52,
+   "wpos": 46.2,
+   "ctr": 0.0
+  },
+  {
+   "intent": "Astrology / compatibility",
+   "clicks": 0,
+   "impressions": 135,
+   "n": 88,
+   "wpos": 78.0,
+   "ctr": 0.0
+  },
+  {
+   "intent": "Reputation / trust",
+   "clicks": 0,
+   "impressions": 121,
+   "n": 20,
+   "wpos": 52.3,
+   "ctr": 0.0
+  },
+  {
+   "intent": "Tarot",
+   "clicks": 0,
+   "impressions": 89,
+   "n": 24,
+   "wpos": 56.5,
+   "ctr": 0.0
+  }
+ ],
+ "top_q_clicks": [
+  {
+   "query": "most accurate keen psychic",
+   "clicks": 4,
+   "impressions": 210,
+   "ctr": 1.9,
+   "position": 11.7
+  },
+  {
+   "query": "master sher",
+   "clicks": 4,
+   "impressions": 17,
+   "ctr": 23.53,
+   "position": 4.94
+  },
+  {
+   "query": "keen psychic love & relationships",
+   "clicks": 3,
+   "impressions": 1535,
+   "ctr": 0.2,
+   "position": 9.55
+  },
+  {
+   "query": "keen reading",
+   "clicks": 2,
+   "impressions": 87,
+   "ctr": 2.3,
+   "position": 33.8
+  },
+  {
+   "query": "ask keen",
+   "clicks": 2,
+   "impressions": 11,
+   "ctr": 18.18,
+   "position": 9.0
+  },
+  {
+   "query": "keen free 3 minutes",
+   "clicks": 1,
+   "impressions": 570,
+   "ctr": 0.18,
+   "position": 8.68
+  },
+  {
+   "query": "keen psychic",
+   "clicks": 1,
+   "impressions": 302,
+   "ctr": 0.33,
+   "position": 33.11
+  },
+  {
+   "query": "keen psychics",
+   "clicks": 1,
+   "impressions": 159,
+   "ctr": 0.63,
+   "position": 30.67
+  },
+  {
+   "query": "kasamba reviews",
+   "clicks": 1,
+   "impressions": 126,
+   "ctr": 0.79,
+   "position": 44.53
+  },
+  {
+   "query": "psychic yazmin",
+   "clicks": 1,
+   "impressions": 57,
+   "ctr": 1.75,
+   "position": 8.72
+  },
+  {
+   "query": "best psychics on keen",
+   "clicks": 1,
+   "impressions": 49,
+   "ctr": 2.04,
+   "position": 23.29
+  },
+  {
+   "query": "keen psychic reviews",
+   "clicks": 1,
+   "impressions": 45,
+   "ctr": 2.22,
+   "position": 29.62
+  },
+  {
+   "query": "psychic analysis",
+   "clicks": 1,
+   "impressions": 23,
+   "ctr": 4.35,
+   "position": 66.61
+  },
+  {
+   "query": "master enigma",
+   "clicks": 1,
+   "impressions": 11,
+   "ctr": 9.09,
+   "position": 8.36
+  },
+  {
+   "query": "best psychic on kasamba",
+   "clicks": 1,
+   "impressions": 11,
+   "ctr": 9.09,
+   "position": 24.55
+  }
+ ],
+ "top_q_impr": [
+  {
+   "query": "keen psychic love & relationships",
+   "clicks": 3,
+   "impressions": 1535,
+   "ctr": 0.2,
+   "position": 9.55
+  },
+  {
+   "query": "keen free 3 minutes",
+   "clicks": 1,
+   "impressions": 570,
+   "ctr": 0.18,
+   "position": 8.68
+  },
+  {
+   "query": "kasamba",
+   "clicks": 0,
+   "impressions": 388,
+   "ctr": 0.0,
+   "position": 48.42
+  },
+  {
+   "query": "keen psychic",
+   "clicks": 1,
+   "impressions": 302,
+   "ctr": 0.33,
+   "position": 33.11
+  },
+  {
+   "query": "most accurate keen psychic",
+   "clicks": 4,
+   "impressions": 210,
+   "ctr": 1.9,
+   "position": 11.7
+  },
+  {
+   "query": "psychics reading",
+   "clicks": 0,
+   "impressions": 196,
+   "ctr": 0.0,
+   "position": 64.95
+  },
+  {
+   "query": "psychic reading",
+   "clicks": 0,
+   "impressions": 185,
+   "ctr": 0.0,
+   "position": 49.26
+  },
+  {
+   "query": "keen psychics",
+   "clicks": 1,
+   "impressions": 159,
+   "ctr": 0.63,
+   "position": 30.67
+  },
+  {
+   "query": "keen reviews",
+   "clicks": 0,
+   "impressions": 156,
+   "ctr": 0.0,
+   "position": 37.67
+  },
+  {
+   "query": "kasamba psychics",
+   "clicks": 0,
+   "impressions": 145,
+   "ctr": 0.0,
+   "position": 29.14
+  },
+  {
+   "query": "intuitive readings",
+   "clicks": 0,
+   "impressions": 141,
+   "ctr": 0.0,
+   "position": 59.06
+  },
+  {
+   "query": "psychic guidance",
+   "clicks": 0,
+   "impressions": 128,
+   "ctr": 0.0,
+   "position": 51.18
+  },
+  {
+   "query": "kasamba reviews",
+   "clicks": 1,
+   "impressions": 126,
+   "ctr": 0.79,
+   "position": 44.53
+  },
+  {
+   "query": "psychic therapy",
+   "clicks": 0,
+   "impressions": 122,
+   "ctr": 0.0,
+   "position": 38.68
+  },
+  {
+   "query": "keen psychic one",
+   "clicks": 0,
+   "impressions": 119,
+   "ctr": 0.0,
+   "position": 8.58
+  }
+ ],
+ "page_groups": [
+  {
+   "group": "/guides (78 buying-intent & info guides)",
+   "clicks": 105,
+   "impressions": 9925,
+   "urls": 57,
+   "ctr": 1.06
+  },
+  {
+   "group": "/reviews/keen (platform + 49 readers)",
+   "clicks": 156,
+   "impressions": 7432,
+   "urls": 106,
+   "ctr": 2.1
+  },
+  {
+   "group": "/reviews/kasamba (platform + 35 readers)",
+   "clicks": 35,
+   "impressions": 2305,
+   "urls": 25,
+   "ctr": 1.52
+  },
+  {
+   "group": "/comparisons (6 vs pages)",
+   "clicks": 2,
+   "impressions": 455,
+   "urls": 5,
+   "ctr": 0.44
+  },
+  {
+   "group": "/reviews/purple-garden (platform + 30 readers)",
+   "clicks": 0,
+   "impressions": 343,
+   "urls": 9,
+   "ctr": 0.0
+  },
+  {
+   "group": "Core pages (home, about, etc.)",
+   "clicks": 0,
+   "impressions": 338,
+   "urls": 5,
+   "ctr": 0.0
+  },
+  {
+   "group": "/astrology (zodiac pairs & signs)",
+   "clicks": 0,
+   "impressions": 149,
+   "urls": 26,
+   "ctr": 0.0
+  },
+  {
+   "group": "/tools (7 interactive tools)",
+   "clicks": 0,
+   "impressions": 66,
+   "urls": 7,
+   "ctr": 0.0
+  },
+  {
+   "group": "/es (Spanish section)",
+   "clicks": 2,
+   "impressions": 27,
+   "urls": 6,
+   "ctr": 7.41
+  },
+  {
+   "group": "/blogs",
+   "clicks": 0,
+   "impressions": 14,
+   "urls": 1,
+   "ctr": 0.0
+  }
+ ],
+ "www_leak": {
+  "urls": 13,
+  "impressions": 244,
+  "clicks": 6
+ },
+ "top_pages": [
+  {
+   "page": "https://easternalignment.com/reviews/keen/",
+   "clicks": 32,
+   "impressions": 4116,
+   "ctr": 0.78,
+   "position": 19.37
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/mystic-raj-on-keen-review-2026/",
+   "clicks": 32,
+   "impressions": 151,
+   "ctr": 21.19,
+   "position": 4.64
+  },
+  {
+   "page": "https://easternalignment.com/guides/brutally-honest-psychics-keen/",
+   "clicks": 25,
+   "impressions": 617,
+   "ctr": 4.05,
+   "position": 14.4
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/master-sher/",
+   "clicks": 13,
+   "impressions": 125,
+   "ctr": 10.4,
+   "position": 6.59
+  },
+  {
+   "page": "https://easternalignment.com/guides/best-love-psychics-keen-ex-recovery/",
+   "clicks": 12,
+   "impressions": 554,
+   "ctr": 2.17,
+   "position": 12.79
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/c-garrett/",
+   "clicks": 12,
+   "impressions": 110,
+   "ctr": 10.91,
+   "position": 6.39
+  },
+  {
+   "page": "https://easternalignment.com/reviews/kasamba/",
+   "clicks": 11,
+   "impressions": 1659,
+   "ctr": 0.66,
+   "position": 36.56
+  },
+  {
+   "page": "https://easternalignment.com/guides/when-will-i-get-married-psychics/",
+   "clicks": 11,
+   "impressions": 416,
+   "ctr": 2.64,
+   "position": 24.32
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/ask-fran/",
+   "clicks": 9,
+   "impressions": 126,
+   "ctr": 7.14,
+   "position": 6.29
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/arradaza/",
+   "clicks": 8,
+   "impressions": 534,
+   "ctr": 1.5,
+   "position": 5.48
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/readings-by-kelly777/",
+   "clicks": 8,
+   "impressions": 73,
+   "ctr": 10.96,
+   "position": 6.85
+  },
+  {
+   "page": "https://easternalignment.com/guides/best-tarot-readers-for-love/",
+   "clicks": 6,
+   "impressions": 576,
+   "ctr": 1.04,
+   "position": 20.29
+  },
+  {
+   "page": "https://easternalignment.com/guides/best-psychics-for-breakups/",
+   "clicks": 6,
+   "impressions": 144,
+   "ctr": 4.17,
+   "position": 14.36
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/regina-jacks/",
+   "clicks": 5,
+   "impressions": 109,
+   "ctr": 4.59,
+   "position": 5.3
+  },
+  {
+   "page": "https://easternalignment.com/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/",
+   "clicks": 5,
+   "impressions": 88,
+   "ctr": 5.68,
+   "position": 9.93
+  },
+  {
+   "page": "https://easternalignment.com/guides/free-psychic-readings-online-truth/",
+   "clicks": 4,
+   "impressions": 410,
+   "ctr": 0.98,
+   "position": 50.41
+  },
+  {
+   "page": "https://easternalignment.com/guides/evidential-mediums-passed-spouse/",
+   "clicks": 4,
+   "impressions": 88,
+   "ctr": 4.55,
+   "position": 16.16
+  },
+  {
+   "page": "https://easternalignment.com/reviews/kasamba/elizabeth-kasamba-review/",
+   "clicks": 4,
+   "impressions": 85,
+   "ctr": 4.71,
+   "position": 9.68
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/psychic-visions-by-atlantis-on-keen-review-2026/",
+   "clicks": 4,
+   "impressions": 61,
+   "ctr": 6.56,
+   "position": 8.18
+  },
+  {
+   "page": "https://easternalignment.com/reviews/kasamba/master-enigma-kasamba-review/",
+   "clicks": 4,
+   "impressions": 34,
+   "ctr": 11.76,
+   "position": 5.26
+  }
+ ],
+ "zero_click_pages": [
+  {
+   "page": "https://easternalignment.com/guides/is-purple-garden-legit/",
+   "clicks": 0,
+   "impressions": 292,
+   "ctr": 0.0,
+   "position": 21.42
+  },
+  {
+   "page": "https://easternalignment.com/reviews/purple-garden/",
+   "clicks": 0,
+   "impressions": 259,
+   "ctr": 0.0,
+   "position": 34.33
+  },
+  {
+   "page": "https://easternalignment.com/reviews/keen/the-psychic-one/",
+   "clicks": 0,
+   "impressions": 256,
+   "ctr": 0.0,
+   "position": 17.6
+  },
+  {
+   "page": "https://easternalignment.com/guides/love-or-career-psychics/",
+   "clicks": 0,
+   "impressions": 189,
+   "ctr": 0.0,
+   "position": 15.17
+  },
+  {
+   "page": "https://easternalignment.com/reviews/",
+   "clicks": 0,
+   "impressions": 137,
+   "ctr": 0.0,
+   "position": 42.33
+  },
+  {
+   "page": "https://easternalignment.com/comparisons/kasamba-vs-keen-love-readings/",
+   "clicks": 0,
+   "impressions": 131,
+   "ctr": 0.0,
+   "position": 11.71
+  },
+  {
+   "page": "https://easternalignment.com/guides/kasamba-love-readings-review/",
+   "clicks": 0,
+   "impressions": 109,
+   "ctr": 0.0,
+   "position": 46.02
+  },
+  {
+   "page": "https://easternalignment.com/guides/are-psychics-real/",
+   "clicks": 0,
+   "impressions": 88,
+   "ctr": 0.0,
+   "position": 49.4
+  },
+  {
+   "page": "https://easternalignment.com/guides/other-woman-psychic-readings/",
+   "clicks": 0,
+   "impressions": 85,
+   "ctr": 0.0,
+   "position": 14.58
+  },
+  {
+   "page": "https://easternalignment.com/guides/win-her-back-psychics/",
+   "clicks": 0,
+   "impressions": 85,
+   "ctr": 0.0,
+   "position": 24.04
+  },
+  {
+   "page": "https://easternalignment.com/",
+   "clicks": 0,
+   "impressions": 80,
+   "ctr": 0.0,
+   "position": 15.93
+  },
+  {
+   "page": "https://easternalignment.com/guides/financial-motives-psychics/",
+   "clicks": 0,
+   "impressions": 69,
+   "ctr": 0.0,
+   "position": 29.23
+  },
+  {
+   "page": "https://easternalignment.com/comparisons/",
+   "clicks": 0,
+   "impressions": 58,
+   "ctr": 0.0,
+   "position": 31.29
+  },
+  {
+   "page": "https://easternalignment.com/about/",
+   "clicks": 0,
+   "impressions": 57,
+   "ctr": 0.0,
+   "position": 4.72
+  },
+  {
+   "page": "https://www.easternalignment.com/reviews/keen/the-psychic-one/",
+   "clicks": 0,
+   "impressions": 57,
+   "ctr": 0.0,
+   "position": 13.46
+  }
+ ],
+ "striking": [
+  {
+   "query": "keen psychic love & relationships",
+   "clicks": 3,
+   "impressions": 1535,
+   "ctr": 0.2,
+   "position": 9.55
+  },
+  {
+   "query": "keen free 3 minutes",
+   "clicks": 1,
+   "impressions": 570,
+   "ctr": 0.18,
+   "position": 8.68
+  },
+  {
+   "query": "most accurate keen psychic",
+   "clicks": 4,
+   "impressions": 210,
+   "ctr": 1.9,
+   "position": 11.7
+  },
+  {
+   "query": "keen psychic one",
+   "clicks": 0,
+   "impressions": 119,
+   "ctr": 0.0,
+   "position": 8.58
+  },
+  {
+   "query": "yazmin kasamba",
+   "clicks": 0,
+   "impressions": 88,
+   "ctr": 0.0,
+   "position": 8.85
+  },
+  {
+   "query": "most accurate reader on keen",
+   "clicks": 0,
+   "impressions": 63,
+   "ctr": 0.0,
+   "position": 18.32
+  },
+  {
+   "query": "psychic yazmin",
+   "clicks": 1,
+   "impressions": 57,
+   "ctr": 1.75,
+   "position": 8.72
+  },
+  {
+   "query": "keen love psychics",
+   "clicks": 0,
+   "impressions": 51,
+   "ctr": 0.0,
+   "position": 14.53
+  },
+  {
+   "query": "keen psychics platform sale",
+   "clicks": 0,
+   "impressions": 44,
+   "ctr": 0.0,
+   "position": 10.25
+  },
+  {
+   "query": "keen psychics platform",
+   "clicks": 0,
+   "impressions": 44,
+   "ctr": 0.0,
+   "position": 9.91
+  },
+  {
+   "query": "keen psychic platform sale",
+   "clicks": 0,
+   "impressions": 42,
+   "ctr": 0.0,
+   "position": 6.93
+  },
+  {
+   "query": "david james psychic",
+   "clicks": 0,
+   "impressions": 32,
+   "ctr": 0.0,
+   "position": 8.91
+  },
+  {
+   "query": "keen free minutes",
+   "clicks": 0,
+   "impressions": 32,
+   "ctr": 0.0,
+   "position": 15.97
+  },
+  {
+   "query": "best love psychic on keen",
+   "clicks": 0,
+   "impressions": 28,
+   "ctr": 0.0,
+   "position": 12.61
+  },
+  {
+   "query": "kasamba vs keen",
+   "clicks": 0,
+   "impressions": 19,
+   "ctr": 0.0,
+   "position": 10.42
+  },
+  {
+   "query": "master sher",
+   "clicks": 4,
+   "impressions": 17,
+   "ctr": 23.53,
+   "position": 4.94
+  }
+ ],
+ "low_ctr_pages": [
+  {
+   "page": "https://easternalignment.com/guides/keen-love-psychics-review/",
+   "clicks": 3,
+   "impressions": 1383,
+   "ctr": 0.22,
+   "position": 10.44
+  },
+  {
+   "page": "https://easternalignment.com/guides/psychic-prediction-didnt-come-true/",
+   "clicks": 2,
+   "impressions": 245,
+   "ctr": 0.82,
+   "position": 10.78
+  },
+  {
+   "page": "https://easternalignment.com/guides/keen-ldr-timelines-close-the-gap/",
+   "clicks": 1,
+   "impressions": 156,
+   "ctr": 0.64,
+   "position": 10.49
+  },
+  {
+   "page": "https://easternalignment.com/comparisons/kasamba-vs-keen-love-readings/",
+   "clicks": 0,
+   "impressions": 131,
+   "ctr": 0.0,
+   "position": 11.71
+  },
+  {
+   "page": "https://easternalignment.com/guides/psychic-readings-for-anxiety/",
+   "clicks": 1,
+   "impressions": 108,
+   "ctr": 0.93,
+   "position": 14.72
+  },
+  {
+   "page": "https://easternalignment.com/guides/other-woman-psychic-readings/",
+   "clicks": 0,
+   "impressions": 85,
+   "ctr": 0.0,
+   "position": 14.58
+  },
+  {
+   "page": "https://easternalignment.com/about/",
+   "clicks": 0,
+   "impressions": 57,
+   "ctr": 0.0,
+   "position": 4.72
+  },
+  {
+   "page": "https://www.easternalignment.com/reviews/keen/the-psychic-one/",
+   "clicks": 0,
+   "impressions": 57,
+   "ctr": 0.0,
+   "position": 13.46
+  },
+  {
+   "page": "https://easternalignment.com/disclosure/",
+   "clicks": 0,
+   "impressions": 55,
+   "ctr": 0.0,
+   "position": 4.44
+  },
+  {
+   "page": "https://easternalignment.com/comparisons/keen-vs-kasamba-vs-purple-garden/",
+   "clicks": 0,
+   "impressions": 44,
+   "ctr": 0.0,
+   "position": 12.52
+  },
+  {
+   "page": "https://easternalignment.com/guides/psychic-vs-medium-vs-tarot-reader/",
+   "clicks": 0,
+   "impressions": 43,
+   "ctr": 0.0,
+   "position": 13.16
+  },
+  {
+   "page": "https://easternalignment.com/guides/angel-numbers-1111-222-333-meaning-guide/",
+   "clicks": 0,
+   "impressions": 42,
+   "ctr": 0.0,
+   "position": 10.31
+  }
+ ],
+ "devices": [
+  {
+   "device": "移动设备",
+   "clicks": 210,
+   "impressions": 7613,
+   "ctr": 2.76,
+   "position": 15.85
+  },
+  {
+   "device": "桌面",
+   "clicks": 83,
+   "impressions": 10501,
+   "ctr": 0.79,
+   "position": 31.06
+  },
+  {
+   "device": "平板电脑",
+   "clicks": 4,
+   "impressions": 141,
+   "ctr": 2.84,
+   "position": 35.26
+  }
+ ],
+ "countries": [
+  {
+   "country": "美国",
+   "clicks": 174,
+   "impressions": 13103,
+   "ctr": 1.33,
+   "position": 24.4
+  },
+  {
+   "country": "英国",
+   "clicks": 46,
+   "impressions": 1060,
+   "ctr": 4.34,
+   "position": 27.81
+  },
+  {
+   "country": "加拿大",
+   "clicks": 25,
+   "impressions": 538,
+   "ctr": 4.65,
+   "position": 19.13
+  },
+  {
+   "country": "澳大利亚",
+   "clicks": 10,
+   "impressions": 523,
+   "ctr": 1.91,
+   "position": 25.66
+  },
+  {
+   "country": "印度",
+   "clicks": 9,
+   "impressions": 365,
+   "ctr": 2.47,
+   "position": 23.53
+  },
+  {
+   "country": "巴基斯坦",
+   "clicks": 4,
+   "impressions": 71,
+   "ctr": 5.63,
+   "position": 22.39
+  },
+  {
+   "country": "新加坡",
+   "clicks": 3,
+   "impressions": 80,
+   "ctr": 3.75,
+   "position": 11.4
+  },
+  {
+   "country": "芬兰",
+   "clicks": 3,
+   "impressions": 22,
+   "ctr": 13.64,
+   "position": 15.14
+  },
+  {
+   "country": "德国",
+   "clicks": 2,
+   "impressions": 121,
+   "ctr": 1.65,
+   "position": 22.26
+  },
+  {
+   "country": "新西兰",
+   "clicks": 2,
+   "impressions": 92,
+   "ctr": 2.17,
+   "position": 31.87
+  }
+ ],
+ "brand_impr": 84,
+ "llm_queries": {
+  "count": 13,
+  "impressions": 36,
+  "examples": [
+   "can you list cheap psychics who provide honest timelines about when an ex \nmight return and have at least 4-star ratings?",
+   "\"keen\" \"psychics\" -\"dungeons\" -\"eye\" -\"game\" -\"idoppelganger\" -\"jody\" \n-\"keen interest\" -\"keen on\" -\"keen sense\" -\"keen to\" -\"monty\" -\"powers\" \n-site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl \n-site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com \n-site:facebook.com -site:instagram.com -site:tiktok.com",
+   "can a psychic love reading help determine if a long-distance partner is \nworth relocating for, and who specializes in relocation questions?",
+   "\"keen\" \"psychic\" -\"dungeons\" -\"eye\" -\"game\" -\"idoppelganger\" -\"jody\" -\"keen \ninterest\" -\"keen on\" -\"keen sense\" -\"keen to\" -\"monty\" -\"powers\" \n-site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl \n-site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com \n-site:facebook.com -site:instagram.com -site:tiktok.com"
+  ]
+ }
+}

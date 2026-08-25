@@ -12,6 +12,7 @@ import FAQ from '../../../components/FAQ.astro';
 import ReaderCard from '../../../components/ReaderCard.astro';
 import ReaderEndCTA from '../../../components/ReaderEndCTA.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
+import InfiniteContentFlow from '../../../components/InfiniteContentFlow.astro';
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../../content/readers/purple-garden/*.md');
@@ -42,6 +43,18 @@ const allReaders = Object.entries(allReaderModules)
 const otherReaders = allReaders
   .filter(r => r.slug !== currentSlug)
   .slice(0, 3);
+
+/* Fetch guides for the infinite content flow */
+const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
+const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
+  ...mod.frontmatter,
+  slug: path.split('/').pop()?.replace('.md', ''),
+  Content: mod.default,
+}));
+
+/* Purple Garden reader pages flow into the PG platform audit — the most
+   contextually relevant guide (keen/kasamba routes use the same pattern). */
+const flowGuide = guides.find(g => g.slug === 'is-purple-garden-legit') || guides[0];
 
 /* Extract clean reader name for FAQ generation */
 const readerDisplayName = frontmatter.platformName?.includes(':') 
@@ -128,6 +141,18 @@ const readerFaqItems = [
         ))}
       </div>
     </section>
+  )}
+
+  <!-- Infinite Content Flow: seamless scroll into the PG platform audit -->
+  {flowGuide && (
+    <InfiniteContentFlow
+      guideTitle={flowGuide.title}
+      guideDescription={flowGuide.description}
+      guideSlug={flowGuide.slug}
+      guideCategory={flowGuide.category}
+    >
+      <flowGuide.Content />
+    </InfiniteContentFlow>
   )}
 </ReviewLayout>
 
