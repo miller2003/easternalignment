@@ -384,6 +384,7 @@ If Kelly777 tells you there is a woman at his office making a move on him, **do 
 Do not call Golden Eye every Friday night at midnight to ask "where he is." If you cannot trust him across state lines without weekly psychic verification, the distance has already killed the relationship. Use these elite readers for major energetic shifts, not as a digital ankle monitor.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

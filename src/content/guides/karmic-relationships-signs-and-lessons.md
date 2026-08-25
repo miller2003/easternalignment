@@ -98,5 +98,7 @@ Karmic relationships feel fated because they are built on your oldest wounds, an
 If you suspect you are in one, the useful questions are not "is this destiny" but "what is this showing me about myself" and "what am I ready to stop repeating." A good reader can help you see the pattern clearly, which is the hardest part. My [relationship reading guide](/guides/purple-garden-love-readings-review/) and the [vetted relationship readers on this site](/reviews/keen/) are where I would start — with the understanding that the goal of the reading is not to confirm the fate, but to see the lesson.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Get a Clear Read: 5 Minutes for $1 →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Get a Clear Read: 5 Minutes for $1 →</a>
 </div>

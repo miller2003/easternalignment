@@ -173,3 +173,7 @@ Yes. In most karmic frameworks, the purpose of a past-life connection is not ete
 No. The framework is useful regardless of your metaphysical commitments. Even approached purely psychologically, the questions a past-life reading asks —what is the recurring theme in this connection, what does this person represent energetically, what would resolution require —generate genuinely useful insight. The framework is a lens, not a belief requirement.
 
 [Explore Past-Life Connections with a Kasamba Reader (3 Free Minutes) →](/go/kasamba)
+
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+[Or Try Keen With Built-In Reviews (5 Mins for $1) -->](/go/keen)

@@ -257,6 +257,7 @@ Do not ask, *"Does she still love me?"* (Love does not equal reconciliation).
 Ask: *"What is the primary energetic blockage keeping her from returning, and what specific action (or inaction) do I need to take over the next 30 days to clear it?"*
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

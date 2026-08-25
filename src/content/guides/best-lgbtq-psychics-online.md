@@ -342,6 +342,7 @@ Do not wait for the psychic to guess. Start the session by typing: *"I am a [Gen
 If you find yourself having to constantly correct a psychic's assumptions during a reading, hit the disconnect button. You are paying them for their insight, not paying them to educate them on your existence. Use the 6 readers on this list to guarantee a fluent, respectful, and highly accurate session.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

@@ -96,5 +96,7 @@ The four clairs are the operating system of the psychic industry: clairvoyance s
 Recognize your own channel — it will tell you both how your intuition works and which readers you will understand instantly. And when you book, read the profile for the channel, not just the star rating. My [guide on choosing a reader](/guides/how-to-choose-a-psychic-reader/) and the [individual reader reviews on this site](/reviews/keen/) both describe practitioners by their dominant channels, because that is the information that actually predicts whether the session will work for you.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Find a Reader in Your Channel: 5 Minutes for $1 →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Find a Reader in Your Channel: 5 Minutes for $1 →</a>
 </div>

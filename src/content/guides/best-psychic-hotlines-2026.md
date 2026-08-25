@@ -113,4 +113,5 @@ If you are new to phone readings entirely, start with [my guide on what a psychi
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
   <a href="/go/keen/" class="btn btn--primary">Try Keen: 5 Minutes for $1 →</a>
   <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+  <a href="/go/purple-garden/" class="btn btn--secondary">Try Purple Garden: $30 Credit →</a>
 </div>

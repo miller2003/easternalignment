@@ -36,7 +36,7 @@ customSchema: |
         "name": "Is Keen or Kasamba better?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Keen is better for phone readings, roster depth, and review transparency; Kasamba is better for chat readings with permanent transcripts and for testing many advisors risk-free with 3 free minutes per new reader. Most seekers should start with Keen's $1 trial and Kasamba's free minutes to test both."
+          "text": "Kasamba is better for chat readings with permanent transcripts and for testing many advisors risk-free with 3 free minutes per new reader; Keen is better for phone readings, roster depth, and review transparency. Most seekers should start with Kasamba's free minutes and Keen's $1 trial to test both."
         }
       }
     ]
@@ -55,14 +55,14 @@ I have tested all three in depth — the full reviews are [here](/reviews/keen/)
 
 ## The Head-to-Head Table
 
-| | Keen | Kasamba | Purple Garden |
+| | Kasamba | Purple Garden | Keen |
 | :--- | :--- | :--- | :--- |
-| **Primary Modality** | Phone voice, web chat | Chat, phone | Live video, phone, chat |
-| **Roster Size** | Thousands | 500+ | Mid-size, curated |
-| **Accountability** | Un-deletable review ledger | Public reviews + transcripts | Video intros + Journeys ledger |
-| **Entry Offer** | 5 min for $1 | 3 free min/reader + 50% off | $30 credit |
-| **Price Range** | $1.99→–$20+/min | $1.99→–$30+/min | $0.99→–$15+/min |
-| **Best Strength** | Depth & voice | Transcripts & testing | Video transparency |
+| **Primary Modality** | Chat, phone | Live video, phone, chat | Phone voice, web chat |
+| **Roster Size** | 500+ | Mid-size, curated | Thousands |
+| **Accountability** | Public reviews + transcripts | Video intros + Journeys ledger | Un-deletable review ledger |
+| **Entry Offer** | 3 free min/reader + 50% off | $30 credit | 5 min for $1 |
+| **Price Range** | $1.99→–$30+/min | $0.99→–$15+/min | $1.99→–$20+/min |
+| **Best Strength** | Transcripts & testing | Video transparency | Depth & voice |
 
 ## Round 1: Roster Depth and Specialization
 
@@ -104,18 +104,18 @@ Video readings — Purple Garden's identity — add visual accountability: you w
 
 ## The Verdict: Which One Should You Choose
 
-The overall winner, by the criteria I use in my [full platform ranking](/reviews/), is Keen — the deepest roster, the most honest review system, and the best phone infrastructure make it the strongest default choice for most seekers.
+The overall winner, by the criteria I use in my [full platform ranking](/reviews/), is Kasamba — the 3-free-minutes-per-reader testing structure, the permanent chat transcripts, and the relationship-specialist roster make it the strongest default choice for most seekers. Keen remains the better pick if you are phone-first and want the deepest roster in the industry.
 
 But the honest recommendation is situational, and it is the same one I give everyone who asks:
 
-Start with Keen's $1 trial and Kasamba's free minutes, because the trial offers cost you almost nothing and the only way to know which reader-connection style works for you is to feel it. If you want to see your advisor before paying, add Purple Garden's $30 credit to the test set.
+Start with Kasamba's free minutes and Keen's $1 trial, because the trial offers cost you almost nothing and the only way to know which reader-connection style works for you is to feel it. If you want to see your advisor before paying, add Purple Garden's $30 credit to the test set.
 
 Then commit based on modality: phone and depth → Keen. Chat, transcripts, and risk-free testing → Kasamba. Video, mobile, and visual vetting → Purple Garden.
 
 The three platforms are not competitors for the same customer; they are three different tools for three different ways of seeking. My [guides](/guides/) — especially [how to choose a psychic](/guides/how-to-choose-a-psychic-reader/) and [questions to ask](/guides/questions-to-ask-a-psychic/) — apply on all of them. For ex-recovery questions specifically, see [Kasamba ex-recovery picks](/guides/best-kasamba-psychics-ex-recovery/) and [Purple Garden ex-recovery picks](/guides/best-purple-garden-psychics-ex-recovery/). For readers who will not soften the picture, [honest Kasamba readers](/guides/brutally-honest-psychics-kasamba/) and [honest Purple Garden readers](/guides/brutally-honest-psychics-purple-garden/) are the accountability shortlists. On Keen, the [brutally honest Keen readers](/guides/brutally-honest-psychics-keen/) guide covers the same ground for the phone-first format.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Try Keen: 5 Minutes for $1 →</a>
-  <a href="/go/kasamba/" class="btn btn--secondary">Try Kasamba: 3 Free Minutes →</a>
+  <a href="/go/kasamba/" class="btn btn--primary">Try Kasamba: 3 Free Minutes →</a>
   <a href="/go/purple-garden/" class="btn btn--secondary">Try Purple Garden: $30 Credit →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Try Keen: 5 Minutes for $1 →</a>
 </div>

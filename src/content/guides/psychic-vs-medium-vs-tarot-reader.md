@@ -96,5 +96,7 @@ Psychic, medium, and tarot reader are three distinct disciplines that the indust
 Start with [what a psychic reading is](/guides/what-is-psychic-reading/) if you are brand new, then use my [platform reviews](/reviews/) to find vetted practitioners in each category. The right reader for your question exists on every major platform — the work is in the choosing, not the finding.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Find the Right Reader: 5 Minutes for $1 →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Find the Right Reader: 5 Minutes for $1 →</a>
 </div>

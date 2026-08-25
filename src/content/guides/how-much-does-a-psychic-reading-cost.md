@@ -103,5 +103,7 @@ Psychic readings in 2026 cost between $1 and $30+ per minute, with real sessions
 Start with a trial offer, test with a specific question, and escalate only when a reader has earned it. My [platform reviews](/reviews/) rank the services I have tested by exactly these criteria, and my [first reading guide](/guides/first-psychic-reading-guide/) walks through the whole process step by step.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Test a Reader: 5 Minutes for $1 →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Test a Reader: 5 Minutes for $1 →</a>
 </div>

@@ -182,3 +182,7 @@ Astrology can identify whether there are strong ongoing karmic indicators betwee
 A serious synastry analysis requires at minimum 20—0 minutes. Be wary of any reader who claims to give you a full two-chart comparison in five minutes. At that pace, they are giving you Sun-sign generalities, not actual chart work. Budget accordingly and come with focused, specific questions.
 
 [Find a Psychic Astrologer on Kasamba (3 Free Minutes) →](/go/kasamba)
+
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+[Or Try Keen With Built-In Reviews (5 Mins for $1) -->](/go/keen)

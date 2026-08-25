@@ -98,5 +98,7 @@ Palmistry describes temperament and tendency; it does not answer questions about
 For questions with stakes — a relationship, a career move, a timing question — a live psychic reading layers intuition, tarot, or astrology onto the map the palm provides. The readers I have tested on [Keen](/reviews/keen/) and [Kasamba](/reviews/kasamba/) are experienced with this kind of layered work, and both platforms offer trial minutes. My [guide on choosing a psychic](/guides/how-to-choose-a-psychic-reader/) explains how to vet them before you spend a dollar.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

@@ -213,6 +213,7 @@ Instead, ask: *"I need you to look at his energetic capacity for domestic respon
 If a master psychic tells you that his energy is fundamentally toxic to your child's aura, **do not try to 'fix' him.** Your first duty is to the ecosystem of your children. Trust the reading, cut the cord, and protect your home.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

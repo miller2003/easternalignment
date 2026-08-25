@@ -94,5 +94,7 @@ The most valuable thing a reconciliation reading can give you is not a verdict. 
 If you are in this situation, my [guide on breakups and reconciliation](/guides/divorce-breakup-psychics-online/) covers the broader territory, and the [Keen reader series](/reviews/keen/) includes several relationship specialists I have vetted for exactly this question — including readers who are known for telling clients when it is over.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Get an Honest Read: 5 Minutes for $1 →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Get an Honest Read: 5 Minutes for $1 →</a>
 </div>

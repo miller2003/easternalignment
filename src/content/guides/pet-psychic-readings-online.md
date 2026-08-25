@@ -95,5 +95,7 @@ Pet psychic readings are a real market serving a real emotional need, and the be
 If you are grieving a pet and want closure, or if you have a behavioral mystery you have exhausted normal avenues on, a reading is a reasonable thing to try — with your skepticism intact and your vet bills paid first. If you do book one, my [first reading guide](/guides/first-psychic-reading-guide/) covers how to prepare so you get the most from the session.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Find a Pet Psychic on Keen →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Find a Pet Psychic on Keen →</a>
 </div>

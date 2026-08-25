@@ -386,6 +386,7 @@ Do not let the psychic assume your priority is marriage. Start the session by sa
 Instead of asking, *"Does he still love me even though we work so much?"* ask: *"Looking at my 10th House transits over the next year, when will I actually have the energetic bandwidth to focus on this relationship, and will he still be there when I do?"*
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

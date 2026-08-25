@@ -197,4 +197,6 @@ This happens, and it is frustrating. The most honest explanation: readers are pe
 
 [Get a No-Contact Reading on Kasamba (3 Free Minutes + 50% Off) →](/go/kasamba)
 
-[Or Try Keen for Fast Phone Readings (5 Mins for $1) →](/go/keen)
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+

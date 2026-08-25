@@ -210,6 +210,7 @@ When you call the Medium, be completely transparent. Say: *"I am a widow. I am t
 Do not waste the session asking when you will get married again. Focus entirely on the energetic release. Once the "Permission Blockage" is cleared by the Medium, the predictions will naturally unfold on their own because your aura is finally open to receive.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

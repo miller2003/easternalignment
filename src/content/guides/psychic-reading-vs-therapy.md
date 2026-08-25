@@ -212,4 +212,6 @@ I understand the financial constraint, and I want to be honest: readings are not
 
 [Get Situational Insight on Kasamba (3 Free Minutes Per Reader) -->](/go/kasamba)
 
-[Or Try Keen for Quick Perspective (5 Mins for $1) -->](/go/keen)
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+

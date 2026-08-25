@@ -110,5 +110,7 @@ Am I psychic? The honest answer is that you might be, and the only reliable way 
 If your journal shows a genuine pattern, explore it — with practice, with curiosity, and with a professional reader as an observer of the craft rather than a gatekeeper of it. The [platforms I have reviewed](/reviews/) all have readers who work with developing intuitives, and my [guide on choosing a psychic](/guides/how-to-choose-a-psychic-reader/) explains how to find one who will reflect your pattern honestly instead of monetizing it.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Talk to a Reader: 5 Minutes for $1 →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Talk to a Reader: 5 Minutes for $1 →</a>
 </div>

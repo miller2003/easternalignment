@@ -98,5 +98,7 @@ Angel numbers are real in the only way that matters: they reliably show up durin
 If you want a personal interpretation, the [psychic platforms I have tested and reviewed](/reviews/) all have readers experienced with numerology and angel numbers. My [guide on choosing a reader](/guides/how-to-choose-a-psychic-reader/) walks through how to vet them before you spend a dollar, and my [guide to questions you can ask](/guides/questions-to-ask-a-psychic/) includes the exact phrasing that turns an angel number question into a useful reading.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen/" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen/" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

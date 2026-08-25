@@ -197,4 +197,6 @@ In my experience, broad timeframes ("within the next year") are modestly reliabl
 
 [Assess Your Marriage Potential on Kasamba (3 Free Minutes) -->](/go/kasamba)
 
-[Or Try Keen for Commitment Readings (5 Mins for $1) -->](/go/keen)
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+

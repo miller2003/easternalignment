@@ -192,4 +192,6 @@ Some readers attempt this with varying degrees of success. But I would strongly 
 
 [Get Third-Party Clarity on Kasamba (3 Free Minutes) →](/go/kasamba)
 
-[Or Use Keen for Immediate Answers (5 Mins for $1) →](/go/keen)
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+

@@ -191,4 +191,6 @@ Not necessarily, but the frequency should naturally decrease when life is stable
 
 [Find Your Primary Reader on Kasamba (3 Free Minutes Per Reader) -->](/go/kasamba)
 
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
 [Start With Keen for a Quick Check-In (5 Mins for $1) -->](/go/keen)

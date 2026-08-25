@@ -212,6 +212,7 @@ When you connect with the medium, say only this: *"My husband passed away. I wan
 Evidential mediums receive information in flashes of images or symbols. The medium might say, *"He is showing me a yellow bicycle."* You might think it makes no sense during the reading, but three days later, you will find a picture of him as a child riding a yellow bicycle. Take notes. The proof often validates itself after the session ends.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

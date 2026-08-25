@@ -188,3 +188,7 @@ There is no formula. One session with the right practitioner who names the right
 In the framework most practitioners use: yes. Cord release is primarily a shift in your own energetic field. It does not require the other person's participation, because you are not asking them to change —you are releasing your own attachment to the cord from your side.
 
 [Find an Empath for Grief & Recovery Support on Kasamba →](/go/kasamba)
+
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+[Or Try Keen With Built-In Reviews (5 Mins for $1) -->](/go/keen)

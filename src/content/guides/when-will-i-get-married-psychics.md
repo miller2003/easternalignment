@@ -298,6 +298,7 @@ Do not book an Astrologer or Numerologist if you do not know your birth info. Yo
 Almost everyone has a marriage window in their chart. The question is never *"Will I?"* The question is *"When does the energetic window open, and what inner healing must I complete before then to ensure I don't attract another karmic lesson instead of a spouse?"*
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

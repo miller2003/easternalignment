@@ -39,10 +39,10 @@ customSchema: |
       },
       {
         "@type": "Question",
-        "name": "Are psychic readings on platforms like Kasamba and Keen legitimate?",
+        "name": "Are psychic readings on platforms like Purple Garden, Kasamba, and Keen legitimate?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Established platforms like Kasamba and Keen have vetting processes, review systems, and accountability mechanisms that significantly reduce -- though do not eliminate -- the risk of encountering fraud. The review systems allow you to evaluate a reader's track record before connecting. However, the quality of individual readers varies, which is why testing multiple readers using free or introductory minute offers before committing is always recommended."
+          "text": "Established platforms like Purple Garden, Kasamba, and Keen have vetting processes, review systems, and accountability mechanisms that significantly reduce -- though do not eliminate -- the risk of encountering fraud. The review systems allow you to evaluate a reader's track record before connecting. However, the quality of individual readers varies, which is why testing multiple readers using free or introductory minute offers before committing is always recommended."
         }
       }
     ]
@@ -114,7 +114,7 @@ Manufactured urgency is a sales technique, not a psychic impression. Energy does
 
 ### Red Flag 6: Requests to Contact You Outside the Platform
 
-If you are using a platform like [Kasamba](/go/kasamba) or [Keen](/go/keen), any reader who asks you to contact them through a personal email, phone number, WhatsApp, or private website is either circumventing the platform's payment protections or collecting your personal data for other purposes.
+If you are using a platform like [Purple Garden](/go/purple-garden), [Kasamba](/go/kasamba), or [Keen](/go/keen), any reader who asks you to contact them through a personal email, phone number, WhatsApp, or private website is either circumventing the platform's payment protections or collecting your personal data for other purposes.
 
 Platforms exist to protect both parties. The payment processing, the recorded session, the review system, and the dispute resolution -- all of these evaporate when you move off-platform. Any reader who suggests this is prioritizing their own financial interest over your protection.
 
@@ -193,7 +193,7 @@ A genuine psychic will still produce specific, verifiable perceptions. A cold re
 
 The good news: genuine practitioners exist. They are not the majority, but they are findable if you know what to look for.
 
-**Use established platforms with review systems.** [Kasamba](/go/kasamba) and [Keen](/go/keen) both have review systems that allow you to evaluate a reader's track record before connecting. Pay attention to reviews that describe specific accurate perceptions, not just reviews that say "loved my reading."
+**Use established platforms with review systems.** [Purple Garden](/go/purple-garden), [Kasamba](/go/kasamba), and [Keen](/go/keen) all have review systems that allow you to evaluate a reader's track record before connecting. Pay attention to reviews that describe specific accurate perceptions, not just reviews that say "loved my reading."
 
 **Use free or introductory minutes to vet.** Do not commit significant money to any reader until you have tested their ability during a low-cost or free session. Kasamba's 3-free-minutes-per-reader model is specifically designed for this purpose.
 
@@ -211,7 +211,7 @@ The most reliable test is specificity without prompting. A real psychic provides
 
 ### What should I do if I think I have been scammed by a psychic?
 
-On a platform like Kasamba or Keen, report the reader through the platform's feedback system. If you paid for a separate service (curse removal, spell work) that was sold through fear tactics, consider filing a complaint with your credit card company and your local consumer protection agency. Document everything -- screenshots, receipts, session transcripts if available.
+On a platform like Purple Garden, Kasamba, or Keen, report the reader through the platform's feedback system. If you paid for a separate service (curse removal, spell work) that was sold through fear tactics, consider filing a complaint with your credit card company and your local consumer protection agency. Document everything -- screenshots, receipts, session transcripts if available.
 
 ### Are all psychics fake?
 
@@ -220,6 +220,8 @@ No. The industry contains genuinely skilled practitioners alongside fraudulent o
 ### Can a psychic really read my mind?
 
 Psychic perception is not mind reading in the science fiction sense. What skilled practitioners describe is the ability to perceive energetic states, emotional frequencies, and relational dynamics -- not specific thoughts. A reader who claims to read your exact thoughts in real time is overstating their ability. A reader who accurately describes the emotional quality of a situation or the energetic state of a person you are asking about is demonstrating a more realistic -- and more useful -- form of perception.
+
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
 
 [Find Verified Readers on Kasamba (3 Free Minutes Per Reader) -->](/go/kasamba)
 

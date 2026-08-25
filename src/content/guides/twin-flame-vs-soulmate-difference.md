@@ -213,4 +213,6 @@ Look for specificity. A reader who tells you "this is definitely your twin flame
 
 [Get Your Connection Assessed on Kasamba (3 Free Minutes) -->](/go/kasamba)
 
-[Or Try Keen for Direct Answers (5 Mins for $1) -->](/go/keen)
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+

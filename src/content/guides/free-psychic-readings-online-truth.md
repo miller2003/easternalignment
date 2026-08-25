@@ -282,4 +282,6 @@ Kasamba's 3-free-minutes-per-reader model. It is not close. The per-reader struc
 
 [Try Kasamba Free -- 3 Minutes With Every New Reader, No Obligation -->](/go/kasamba)
 
-[Or Start on Keen -- 5 Minutes for $1 for New Users -->](/go/keen)
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+

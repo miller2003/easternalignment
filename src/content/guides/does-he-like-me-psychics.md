@@ -342,6 +342,7 @@ If you call the psychic and spend three minutes talking about how perfect he is,
 Instead of asking, *"Are we going to fall in love?"* (which is desperate), ask: *"I recently met [Name]. What is his current intent toward me, and is he emotionally available for a serious relationship?"* This forces the psychic to look at *his* reality, rather than *your* fantasy.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

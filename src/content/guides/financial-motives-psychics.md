@@ -301,6 +301,7 @@ Say: *"I am the sole financial provider right now. I need you to look at his Roo
 A true financial parasite often has an exit plan. Ask the psychic: *"If I were to lose my job tomorrow and the money stopped, would his energy remain anchored to me, or would he immediately sever the connection?"* The answer to that question will tell you everything you need to know.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

@@ -192,4 +192,6 @@ You can create conditions that make safety more available. You cannot guarantee 
 
 [Read His Emotional Reality with a Kasamba Empath (3 Free Minutes) →](/go/kasamba)
 
-[Or Get Fast Insight on Keen (5 Mins for $1) →](/go/keen)
+[Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
+
+

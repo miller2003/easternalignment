@@ -386,6 +386,7 @@ Do not play "test the psychic." Start the session by saying: *"My husband filed 
 Instead of asking, *"Will he cancel the divorce?"* (which surrenders all your power), ask, *"What is the most energetically favorable path for me to take right now regarding these legal proceedings?"* This forces the reading to focus on your empowerment and protection.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-  <a href="/go/keen" class="btn btn--primary">Get 5 Minutes for $1 on Keen →</a>
-  <a href="/go/kasamba" class="btn btn--secondary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>
+  <a href="/go/purple-garden" class="btn btn--secondary">Claim $30 Free Credit on Purple Garden →</a>
+  <a href="/go/keen" class="btn btn--secondary">Get 5 Minutes for $1 on Keen →</a>
 </div>

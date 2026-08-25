@@ -24,16 +24,9 @@ interface DealCardData {
   btn: string;
 }
 
+// Default order = site-wide priority (Kasamba → Purple Garden → Keen).
+// A page-specific platform context re-sorts this array at render time.
 const CARDS: DealCardData[] = [
-  {
-    key: 'keen',
-    reviewPath: '/reviews/keen/',
-    logotypeStyle: 'color: #004d40; font-family: Georgia, serif; font-style: italic; font-size: 1.4em;',
-    logotype: 'keen',
-    faviconDomain: 'keen.com',
-    text: 'Enjoy a <strong>5-minute</strong> introductory reading for only $1.',
-    btn: 'Claim $1 Offer',
-  },
   {
     key: 'kasamba',
     reviewPath: '/reviews/kasamba/',
@@ -51,6 +44,15 @@ const CARDS: DealCardData[] = [
     faviconDomain: 'purplegarden.co',
     text: 'Grab a complimentary <strong>$30 credit</strong> to connect with any advisor of your choice.',
     btn: 'Claim $30 Credit',
+  },
+  {
+    key: 'keen',
+    reviewPath: '/reviews/keen/',
+    logotypeStyle: 'color: #004d40; font-family: Georgia, serif; font-style: italic; font-size: 1.4em;',
+    logotype: 'keen',
+    faviconDomain: 'keen.com',
+    text: 'Enjoy a <strong>5-minute</strong> introductory reading for only $1.',
+    btn: 'Claim $1 Offer',
   },
 ];
 
