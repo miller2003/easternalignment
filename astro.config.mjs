@@ -13,7 +13,6 @@ export default defineConfig({
             // noindex'd programmatic sections: keep them out of the sitemap so
             // the sitemap only lists pages we actually want ranked.
             !page.includes('/astrology/') &&
-            !page.includes('/tools/') &&
             // Spanish legal pages (noindexed) — keep OUT of the sitemap.
             // NOTE: /es/divulgacion/ is intentionally indexable (it carries
             // `index,follow` and the English /disclosure/ page points at it via

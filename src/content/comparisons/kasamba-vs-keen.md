@@ -217,7 +217,7 @@ Kasamba has a structural advantage for the most common ex-recovery questions bec
 
 ---
 
-For deep dives into each platform, read [our full Kasamba review](/reviews/kasamba/) and [full Keen review](/reviews/keen/). For love-reading specific comparisons, see [Kasamba vs Keen for love readings](/comparisons/kasamba-vs-keen-love-readings/). If you are considering Purple Garden alongside these two, the [three-platform comparison](/comparisons/keen-vs-kasamba-vs-purple-garden/) covers all three side by side. For the platforms' respective love psychic shortlists, see [best love psychics on Kasamba](/guides/best-love-psychics-kasamba-ranked/) and [best love psychics on Keen](/guides/best-love-psychics-keen-ex-recovery/).
+For deep dives into each platform, read [our full Kasamba review](/reviews/kasamba/) and [full Keen review](/reviews/keen/). If you are considering Purple Garden alongside these two, the [three-platform comparison](/comparisons/keen-vs-kasamba-vs-purple-garden/) covers all three side by side. For the platforms' respective love psychic shortlists, see [best love psychics on Kasamba](/guides/best-love-psychics-kasamba-ranked/) and [best love psychics on Keen](/guides/best-love-psychics-keen-ex-recovery/).
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
   <a href="/go/kasamba" class="btn btn--primary">Test Kasamba: 3 Free Minutes Per Reader →</a>

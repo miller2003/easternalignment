@@ -65,30 +65,36 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
 const SITE_URL = 'https://easternalignment.com';
 const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
 
-// Build Article JSON-LD from manual fields (with fallbacks)
+// Build Article JSON-LD from manual fields (with fallbacks).
+// Top-tier: entity-linked author/publisher (@id), articleSection, and a
+// SpeakableSpecification so voice assistants (Google Assistant, etc.) can read
+// the headline + body aloud — an alive 2026 rich-result surface.
 const articleSchema: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": `${canonical}#article`,
   "headline": schemaHeadline || title,
   "description": schemaDescription || description,
   "author": {
     "@type": "Person",
+    "@id": "https://easternalignment.com/#sarah",
     "name": schemaAuthor || "Sarah",
     "url": "https://easternalignment.com/about/",
+    "jobTitle": "Reviewer & Researcher",
   },
+  "publisher": { "@id": "https://easternalignment.com/#organization" },
   "datePublished": schemaDatePublished || publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
   ...(ogImage ? { "image": ogImage } : {}),
-  "publisher": {
-    "@type": "Organization",
-    "name": "Eastern Alignment",
-    "url": "https://easternalignment.com",
-    "logo": "https://easternalignment.com/logo.jpg",
-  },
+  ...(category ? { "articleSection": category } : {}),
   ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": canonical
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".article-content"]
   }
 };
 

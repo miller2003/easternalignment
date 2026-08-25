@@ -1,19 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { buildWebApplication } from '../../lib/toolSchema';
 
 const toolSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Moon Phase Tracker",
-      "url": "https://easternalignment.com/tools/moon-phase/",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Free moon phase tracker showing the current lunar phase, illumination, and a countdown to the next full moon and new moon."
-    },
+    buildWebApplication({
+      name: "Moon Phase Tracker",
+      url: "https://easternalignment.com/tools/moon-phase/",
+      description: "Free moon phase tracker showing the current lunar phase, illumination, and a countdown to the next full moon and new moon.",
+    }),
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -42,7 +39,7 @@ const toolSchema = {
   title="Moon Phase Today: Tracker & Next Full Moon"
   description="What phase is the moon in today? Free moon phase tracker showing the current lunar phase, illumination, and a countdown to the next full moon and new moon."
   jsonLd={toolSchema}
-  noindex={true}
+  noindex={false}
 >
   <div class="tool-page section">
     <div class="container container--narrow">

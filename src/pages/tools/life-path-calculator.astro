@@ -1,19 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { buildWebApplication } from '../../lib/toolSchema';
 
 const toolSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Life Path Number Calculator",
-      "url": "https://easternalignment.com/tools/life-path-calculator/",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Free Life Path number calculator. Enter your birth date to discover your Life Path number — the most important number in your numerology chart — with its meaning explained."
-    },
+    buildWebApplication({
+      name: "Life Path Number Calculator",
+      url: "https://easternalignment.com/tools/life-path-calculator/",
+      description: "Free Life Path number calculator. Enter your birth date to discover your Life Path number — the most important number in your numerology chart — with its meaning explained.",
+    }),
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -42,7 +39,7 @@ const toolSchema = {
   title="Life Path Number Calculator: Free & Instant"
   description="Free Life Path number calculator. Enter your birth date to discover your Life Path number — the most important number in your numerology chart — with its meaning explained."
   jsonLd={toolSchema}
-  noindex={true}
+  noindex={false}
 >
   <div class="tool-page section">
     <div class="container container--narrow">

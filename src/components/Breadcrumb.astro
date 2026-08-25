@@ -13,6 +13,13 @@ const { items } = Astro.props;
 /* Always prepend Home */
 const crumbs = [{ label: 'Home', href: '/' }, ...items];
 
+// The last crumb is the current page and is passed without an href. Google
+// requires every ListItem to carry an `item` URL, so fall back to the live
+// request path for the current page — this completes the BreadcrumbList so the
+// SERP can render the path instead of a bare URL.
+const SITE_URL = 'https://easternalignment.com';
+const currentPath = Astro.url.pathname;
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -20,7 +27,7 @@ const breadcrumbSchema = {
     "@type": "ListItem",
     "position": index + 1,
     "name": item.label,
-    ...(item.href ? { "item": `https://easternalignment.com${item.href}` } : {}),
+    "item": `${SITE_URL}${item.href ?? currentPath}`,
   })),
 };
 ---

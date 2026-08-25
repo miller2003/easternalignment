@@ -15,9 +15,11 @@ const navLinks = [
       { href: '/reviews/keen/', label: 'Keen Psychics' },
     ],
   },
+  { href: '/guides/', label: 'Guides' },
   { href: '/comparisons/', label: 'Comparisons' },
   { href: '/tools/', label: 'Tool' },
   { href: '/about/', label: 'About' },
+  { href: '/coupons/', label: 'Coupons', variant: 'button' },
 ];
 
 ---
@@ -37,7 +39,7 @@ const navLinks = [
           <li class:list={[{ 'has-dropdown': link.children }]}>
             <a
               href={link.href}
-              class:list={['nav-link', { 'nav-link--active': currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+              class:list={['nav-link', { 'nav-link--active': currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)), 'nav-link--button': link.variant === 'button' }]}
             >
               {link.label}
               {link.children && <span class="nav-chevron" aria-hidden="true">▾</span>}
@@ -85,7 +87,7 @@ const navLinks = [
         <li>
           <a
             href={link.href}
-            class:list={['mobile-nav-link', { 'mobile-nav-link--active': currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+            class:list={['mobile-nav-link', { 'mobile-nav-link--active': currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)), 'mobile-nav-link--button': link.variant === 'button' }]}
           >
             {link.label}
           </a>
@@ -215,6 +217,22 @@ const navLinks = [
     color: var(--color-primary);
     background: var(--color-bg-alt);
     font-weight: var(--weight-semibold);
+  }
+
+  /* Brown "Coupons" CTA button — visually distinct from the text nav links */
+  .nav-link--button {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: #ffffff;
+    font-weight: var(--weight-semibold);
+    box-shadow: 0 2px 8px rgba(107, 84, 56, 0.28);
+  }
+
+  .nav-link--button:hover,
+  .nav-link--button.nav-link--active {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #4f3d27 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(107, 84, 56, 0.38);
   }
 
   .nav-chevron {
@@ -369,6 +387,20 @@ const navLinks = [
   .mobile-nav-link--active {
     color: var(--color-primary);
     background: var(--color-bg-alt);
+  }
+
+  /* Brown "Coupons" CTA button on mobile */
+  .mobile-nav-link--button {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    font-weight: var(--weight-semibold);
+    box-shadow: 0 2px 8px rgba(107, 84, 56, 0.28);
+  }
+
+  .mobile-nav-link--button:hover,
+  .mobile-nav-link--button.mobile-nav-link--active {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #4f3d27 100%);
   }
 
   /* Mobile Sub-navigation */

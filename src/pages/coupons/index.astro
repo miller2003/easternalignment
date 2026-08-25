@@ -1,0 +1,597 @@
+---
+/**
+ * Coupons & Free Offers — /coupons/
+ *
+ * A dedicated deals landing page:
+ *   1. Hero with the three platform welcome offers surfaced up top.
+ *   2. Three detailed platform "offer cards" (the canonical PLATFORM_OFFERS).
+ *   3. Scrolling down: individual reader bonuses, grouped by platform, each
+ *      reader rendered with the existing ReaderCard (avatar, rating, their
+ *      specific free offer, Book + Full Review CTAs).
+ *
+ * All offer copy + links come from src/lib/offers.ts (single source of truth),
+ * so this page can never drift from the rest of the site's CTAs.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReaderCard from '../../components/ReaderCard.astro';
+import { PLATFORM_OFFERS, PLATFORM_PRIORITY, goPath, platformLogo } from '../../lib/offers';
+
+/* Load every reader across the three platforms (content/readers/<platform>/*.md). */
+const readerModules = import.meta.glob('../../content/readers/**/*.md', { eager: true });
+const allReaders = Object.entries(readerModules)
+  .map(([path, mod]: [string, any]) => {
+    const parts = path.split('/');
+    const slug = parts.pop()?.replace('.md', '') || '';
+    const platformFolder = parts[parts.length - 1]; // 'kasamba' | 'keen' | 'purple-garden'
+    return { ...(mod.frontmatter || {}), slug, platform: platformFolder };
+  })
+  .filter((r) => r.platform && ['kasamba', 'keen', 'purple-garden'].includes(r.platform) && r.rating);
+
+/* Group by platform, sorted by rating desc within each group. */
+const readersByPlatform: Record<string, any[]> = { kasamba: [], 'purple-garden': [], keen: [] };
+for (const r of allReaders) {
+  if (readersByPlatform[r.platform]) readersByPlatform[r.platform].push(r);
+}
+for (const k of Object.keys(readersByPlatform)) {
+  readersByPlatform[k].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+}
+
+const totalReaders = allReaders.length;
+const totalReviewed = PLATFORM_PRIORITY.reduce((sum, k) => sum + PLATFORM_OFFERS[k].reviewedCount, 0);
+const editorChoice = PLATFORM_PRIORITY[0]; // kasamba
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://easternalignment.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Coupons & Free Offers', item: 'https://easternalignment.com/coupons/' },
+  ],
+};
+---
+
+<BaseLayout
+  title="Psychic Reading Coupons & Free Offers (2026)"
+  description="Verified 2026 psychic reading coupons and welcome offers from Kasamba, Purple Garden, and Keen — plus per-reader bonuses on individual psychics. No promo code needed; just tap to claim your free minutes or credit."
+  seoTitle="Psychic Reading Coupons & Free Offers 2026 — Kasamba, Purple Garden & Keen Deals"
+  metaDescription="Verified 2026 psychic reading coupons & welcome offers: Kasamba (3 free minutes + 50% off), Purple Garden ($30 free credit) & Keen (5 minutes for $1). Plus per-reader bonuses. No code needed."
+  canonicalUrl="https://easternalignment.com/coupons/"
+  jsonLd={breadcrumbSchema}
+>
+  <main class="container coupons-body">
+    <!-- ============ PLATFORM OFFER CARDS ============ -->
+    <section id="platform-offers" class="offer-section">
+      <div class="section-head section-head--center">
+        <span class="eyebrow eyebrow--center">The Big Three</span>
+        <h1 class="section-title">Psychic Reading Coupons &amp; Free Offers</h1>
+        <p class="section-desc">
+          Every new-client deal below is pulled live from each platform. Claim in one tap —
+          your bonus is applied automatically at checkout.
+        </p>
+      </div>
+
+      <div class="offer-grid">
+        {PLATFORM_PRIORITY.map((key) => {
+          const offer = PLATFORM_OFFERS[key];
+          const isChoice = key === editorChoice;
+          return (
+            <article class:list={['coupon-card', { 'coupon-card--featured': isChoice }]}>
+              {isChoice && <span class="coupon-card__ribbon">Editor's Choice</span>}
+
+              <div class="coupon-card__top">
+                <span class="coupon-card__brand">
+                  <img
+                    src={platformLogo(key, 64)}
+                    alt=""
+                    class="coupon-card__logo"
+                    width="34"
+                    height="34"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                  {offer.name}
+                </span>
+                <span class="coupon-card__count">{offer.reviewedCount} advisors reviewed</span>
+              </div>
+
+              <div class="coupon-card__offer">
+                <span class="coupon-card__offer-label">Welcome Offer</span>
+                <span class="coupon-card__offer-value">{offer.offer}</span>
+              </div>
+
+              <p class="coupon-card__deal">{offer.dealLine}</p>
+
+              <span class="coupon-card__perf" aria-hidden="true"></span>
+
+              <p class="coupon-card__micro">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                {offer.microLine}
+              </p>
+
+              <div class="coupon-card__actions">
+                <a
+                  href={goPath(key)}
+                  class="btn btn--primary btn--lg btn--full"
+                  rel="nofollow sponsored"
+                  target="_blank"
+                  data-cta-source="coupons-platform"
+                  data-cta-platform={key}
+                >
+                  {offer.ctaLabel}
+                </a>
+                <a href={`/reviews/${key}/`} class="coupon-card__reviewlink">
+                  Read the full {offer.name} review →
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      <!-- How it works -->
+      <div class="how-strip">
+        <div class="how-step">
+          <span class="how-step__num">1</span>
+          <div>
+            <h4 class="how-step__title">Tap your offer</h4>
+            <p class="how-step__text">No code to copy — the link opens the platform's new-client promo directly.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <span class="how-step__num">2</span>
+          <div>
+            <h4 class="how-step__title">Sign up free</h4>
+            <p class="how-step__text">Create an account (always free, no subscription) and pick your reader.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <span class="how-step__num">3</span>
+          <div>
+            <h4 class="how-step__title">Bonus applies</h4>
+            <p class="how-step__text">Your free minutes or credit land automatically at checkout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INDIVIDUAL READER BONUSES ============ -->
+    <section class="readers-section">
+      <div class="section-head">
+        <span class="eyebrow">Per-Reader Bonuses</span>
+        <h2 class="section-title">Claim a Bonus with a Specific Reader</h2>
+        <p class="section-desc">
+          Prefer a particular reader? Every psychic below carries their own new-client bonus.
+          Scroll through and tap <strong>Book Now</strong> to claim it on that exact profile.
+        </p>
+      </div>
+
+      {PLATFORM_PRIORITY.map((platform) => (
+        <div class="reader-group" id={`readers-${platform}`}>
+          <div class="reader-group__header">
+            <img
+              src={platformLogo(platform, 64)}
+              alt=""
+              class="reader-group__logo"
+              width="28"
+              height="28"
+              loading="lazy"
+              aria-hidden="true"
+            />
+            <h3 class="reader-group__title">{PLATFORM_OFFERS[platform].name} Readers</h3>
+            <span class="reader-group__count">{readersByPlatform[platform].length} readers</span>
+            <a href={`/reviews/${platform}/`} class="reader-group__all">View all on {PLATFORM_OFFERS[platform].name} →</a>
+          </div>
+
+          <div class="reader-grid">
+            {readersByPlatform[platform].map((reader) => (
+              <ReaderCard
+                name={reader.platformName}
+                slug={reader.slug}
+                platform={platform}
+                rating={reader.rating}
+                verdict={reader.verdict}
+                pricing={reader.pricing}
+                bestFor={reader.bestFor}
+                affiliateUrl={reader.affiliateUrl}
+                freeOffer={reader.freeOffer}
+                avatarUrl={reader.avatarUrl}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <!-- ============ SITE-WIDE DISCLAIMER ============ -->
+    <p class="coupons-disclaimer">
+      Eastern Alignment is reader-supported. Some links on this page are affiliate links — if you
+      sign up through them we may earn a commission, at no extra cost to you. Offers are set by each
+      platform and can change without notice; the figure shown is what was live at the time of
+      review. We only recommend platforms and readers we have personally tested with paid sessions.
+    </p>
+  </main>
+</BaseLayout>
+
+<style>
+  /* ===================== BODY WRAPPER ===================== */
+  .coupons-body {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-20);
+  }
+
+  .section-head {
+    margin-bottom: var(--space-10);
+    max-width: 720px;
+  }
+
+  .section-head--center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-3);
+  }
+
+  .eyebrow--center {
+    display: block;
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-desc {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .section-desc strong {
+    color: var(--color-text);
+  }
+
+  /* ===================== OFFER CARDS ===================== */
+  .offer-section {
+    margin-bottom: var(--space-20);
+  }
+
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    align-items: stretch;
+  }
+
+  .coupon-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    overflow: hidden;
+  }
+
+  .coupon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+  }
+
+  .coupon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent-light);
+  }
+
+  .coupon-card--featured {
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 28px rgba(196, 149, 106, 0.18);
+  }
+
+  .coupon-card__ribbon {
+    position: absolute;
+    top: 16px;
+    right: -34px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--color-star), var(--color-accent));
+    color: #fff;
+    font-size: 10px;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 5px 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  }
+
+  .coupon-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  .coupon-card__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-text);
+  }
+
+  .coupon-card__logo {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-md);
+    background: #fff;
+    padding: 2px;
+    border: 1px solid var(--color-border-light);
+    flex-shrink: 0;
+  }
+
+  .coupon-card__count {
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+    white-space: nowrap;
+  }
+
+  .coupon-card__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+    background: linear-gradient(160deg, #fdf6ee 0%, #f6ece0 100%);
+    border: 1px dashed var(--color-accent);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    position: relative;
+  }
+
+  /* Perforated ticket notches */
+  .coupon-card__offer::before,
+  .coupon-card__offer::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--color-surface);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .coupon-card__offer::before {
+    left: -9px;
+    border-right: 1px dashed var(--color-accent);
+  }
+
+  .coupon-card__offer::after {
+    right: -9px;
+    border-left: 1px dashed var(--color-accent);
+  }
+
+  .coupon-card__offer-label {
+    font-size: 10px;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-primary);
+  }
+
+  .coupon-card__offer-value {
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 1.1rem + 1vw, 1.7rem);
+    line-height: 1.15;
+    color: var(--color-primary-dark);
+  }
+
+  .coupon-card__deal {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-4);
+    flex: 1;
+  }
+
+  .coupon-card__perf {
+    display: block;
+    height: 0;
+    border-top: 1px dashed var(--color-border);
+    margin: 0 0 var(--space-4);
+  }
+
+  .coupon-card__micro {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--color-success);
+    margin: 0 0 var(--space-5);
+  }
+
+  .coupon-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: auto;
+  }
+
+  .coupon-card__reviewlink {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+    text-align: center;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .coupon-card__reviewlink:hover {
+    color: var(--color-primary);
+  }
+
+  /* ===================== HOW IT WORKS STRIP ===================== */
+  .how-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+    padding: var(--space-8);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-xl);
+  }
+
+  .how-step {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+  }
+
+  .how-step__num {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    box-shadow: 0 3px 10px rgba(107, 84, 56, 0.3);
+  }
+
+  .how-step__title {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    margin: 0 0 2px;
+    color: var(--color-text);
+  }
+
+  .how-step__text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  /* ===================== READER SECTIONS ===================== */
+  .readers-section {
+    border-top: 1px solid var(--color-border-light);
+    padding-top: var(--space-16);
+  }
+
+  .reader-group {
+    margin-bottom: var(--space-16);
+  }
+
+  .reader-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .reader-group__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-4);
+    border-bottom: 2px solid var(--color-border-light);
+  }
+
+  .reader-group__logo {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-sm);
+    background: #fff;
+    padding: 1px;
+    border: 1px solid var(--color-border-light);
+  }
+
+  .reader-group__title {
+    font-size: var(--text-2xl);
+    color: var(--color-primary-dark);
+    margin: 0;
+  }
+
+  .reader-group__count {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    background: var(--color-accent-light);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+  }
+
+  .reader-group__all {
+    margin-left: auto;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color var(--transition-fast);
+  }
+
+  .reader-group__all:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .coupons-disclaimer {
+    margin-top: var(--space-16);
+    padding: var(--space-6);
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+    color: var(--color-text-light);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+  }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 1024px) {
+    .offer-grid {
+      grid-template-columns: 1fr;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .how-strip {
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .coupon-card__ribbon {
+      font-size: 9px;
+      padding: 4px 36px;
+      top: 14px;
+      right: -32px;
+    }
+  }
+</style>

@@ -1,19 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { buildWebApplication } from '../../lib/toolSchema';
 
 const toolSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Angel Number Calculator",
-      "url": "https://easternalignment.com/tools/angel-number-calculator/",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Free angel number calculator. Enter the number you keep seeing or your birth date to reveal its angel number meaning — 111, 222, 333, 444 and more explained."
-    },
+    buildWebApplication({
+      name: "Angel Number Calculator",
+      url: "https://easternalignment.com/tools/angel-number-calculator/",
+      description: "Free angel number calculator. Enter the number you keep seeing or your birth date to reveal its angel number meaning — 111, 222, 333, 444 and more explained.",
+    }),
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -42,7 +39,7 @@ const toolSchema = {
   title="Angel Number Calculator: 111, 222, 333"
   description="Free angel number calculator. Enter any number you keep seeing — or your birth date — to reveal its angel number meaning. 111, 222, 333, 444 and more explained."
   jsonLd={toolSchema}
-  noindex={true}
+  noindex={false}
 >
   <div class="tool-page section">
     <div class="container container--narrow">

@@ -91,34 +91,36 @@ const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://easternalignment.com/#organization",
   "name": SITE_NAME,
+  "alternateName": "Eastern Alignment Reseñas Psíquicas",
   "url": SITE_URL,
   "logo": {
     "@type": "ImageObject",
+    "@id": "https://easternalignment.com/#logo",
     "url": `${SITE_URL}/logo.jpg`,
-    "width": 200,
-    "height": 200,
+    "width": 1024,
+    "height": 817,
   },
+  "image": `${SITE_URL}/logo.jpg`,
   "description": "Plataforma independiente de análisis y reseñas de servicios de lectura psíquica en línea para hispanohablantes.",
-  "sameAs": [],
+  // TODO: add real social profile URLs here to unlock the Google Knowledge Panel.
+  // "sameAs": ["https://www.facebook.com/...", "https://www.instagram.com/...", "..."],
 };
 
-// ── WebSite Schema with SearchAction (enables Google Sitelinks Searchbox potential)
+// ── WebSite Schema (Site Name signal for Google). The Sitelinks Searchbox
+// (SearchAction) was retired by Google in Nov 2024 and no longer yields a rich
+// result, so it is intentionally omitted.
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://easternalignment.com/#website",
   "name": SITE_NAME,
+  "alternateName": "Eastern Alignment Reseñas Psíquicas",
   "url": SITE_URL,
   "description": "Reseñas honestas y análisis independientes de plataformas de lectura psíquica en línea.",
   "inLanguage": "es",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${SITE_URL}/es/resenas/?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
+  "publisher": { "@id": "https://easternalignment.com/#organization" },
 };
 ---
 
@@ -127,6 +129,7 @@ const websiteSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content={SITE_NAME} />
     <meta name='impact-site-verification' value='9b281445-730b-4b8f-ae89-484d7da8e36e'>
     <PostHog />
 

@@ -1,19 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { buildWebApplication } from '../../lib/toolSchema';
 
 const toolSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "One Card Tarot",
-      "url": "https://easternalignment.com/tools/one-card-tarot/",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Free one card tarot reading. Draw a single card from the Major Arcana for your daily guidance — a simple ritual to start your day with clarity and intention."
-    },
+    buildWebApplication({
+      name: "One Card Tarot",
+      url: "https://easternalignment.com/tools/one-card-tarot/",
+      description: "Free one card tarot reading. Draw a single card from the Major Arcana for your daily guidance — a simple ritual to start your day with clarity and intention.",
+    }),
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -42,7 +39,7 @@ const toolSchema = {
   title="Daily One Card Tarot: Draw Your Card"
   description="Free one card tarot reading. Draw a single card from the Major Arcana for your daily guidance — a simple ritual to start your day with clarity and intention."
   jsonLd={toolSchema}
-  noindex={true}
+  noindex={false}
 >
   <div class="tool-page section">
     <div class="container container--narrow">

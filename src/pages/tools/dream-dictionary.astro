@@ -1,19 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { buildWebApplication } from '../../lib/toolSchema';
 
 const toolSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Dream Dictionary",
-      "url": "https://easternalignment.com/tools/dream-dictionary/",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Free dream meaning search. Look up what your dream symbols mean — exes, snakes, water, teeth, death, and 40+ common dream themes explained."
-    },
+    buildWebApplication({
+      name: "Dream Dictionary",
+      url: "https://easternalignment.com/tools/dream-dictionary/",
+      description: "Free dream meaning search. Look up what your dream symbols mean — exes, snakes, water, teeth, death, and 40+ common dream themes explained.",
+    }),
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -42,7 +39,7 @@ const toolSchema = {
   title="Dream Dictionary: Search Dream Meanings Free"
   description="Free dream meaning search. Look up what your dream symbols mean — exes, snakes, water, teeth, death, and 40+ common dream themes explained."
   jsonLd={toolSchema}
-  noindex={true}
+  noindex={false}
 >
   <div class="tool-page section">
     <div class="container container--narrow">

@@ -79,28 +79,51 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage.replace('http://', 'http
 const hreflangSelf = canonical; // en
 const hreflangXDefault = canonical; // x-default defaults to English version
 
+// ── Site Name + Organization entity graph ────────────────────────────────────
+// These three nodes (WebSite / Organization / Person) are the structured-data
+// foundation for Google's "Site Name" feature — the thing that decides whether
+// the SERP shows "Eastern Alignment" or the bare domain. They are weakly linked
+// via shared @id so the brand resolves to one entity.
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://easternalignment.com/#website",
   "name": SITE_NAME,
+  "alternateName": "Eastern Alignment Psychic Reviews",
   "url": SITE_URL,
-  "description": "Honest reviews and guidance for online psychic reading platforms. Independently tested by real users.",
+  "description": "Honest, independently tested reviews and guidance for online psychic reading platforms.",
+  "inLanguage": "en-US",
+  "publisher": { "@id": "https://easternalignment.com/#organization" },
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://easternalignment.com/#organization",
   "name": SITE_NAME,
+  "alternateName": "Eastern Alignment Psychic Reviews",
   "url": SITE_URL,
-  "logo": `${SITE_URL}/logo.jpg`,
+  "logo": {
+    "@type": "ImageObject",
+    "@id": "https://easternalignment.com/#logo",
+    "url": `${SITE_URL}/logo.jpg`,
+    "width": 1024,
+    "height": 817,
+  },
+  "image": `${SITE_URL}/logo.jpg`,
+  "description": "Independent review site for online psychic reading platforms — Kasamba, Purple Garden, and Keen — tested by real users.",
+  // TODO: add real social profile URLs here to unlock the Google Knowledge Panel.
+  // "sameAs": ["https://www.facebook.com/...", "https://www.instagram.com/...", "..."],
 };
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://easternalignment.com/#sarah",
   "name": "Sarah",
   "url": `${SITE_URL}/about/`,
-  "jobTitle": "Reviewer & Researcher"
+  "jobTitle": "Reviewer & Researcher",
+  "worksFor": { "@id": "https://easternalignment.com/#organization" },
 };
 ---
 
@@ -109,6 +132,7 @@ const personSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content={SITE_NAME} />
     <meta name='impact-site-verification' value='9b281445-730b-4b8f-ae89-484d7da8e36e'>
     <PostHog />
 
@@ -144,6 +168,9 @@ const personSchema = {
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={metaDesc.slice(0, 100)} />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:locale" content="en_US" />
 

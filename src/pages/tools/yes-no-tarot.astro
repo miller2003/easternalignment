@@ -1,19 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { buildWebApplication } from '../../lib/toolSchema';
 
 const toolSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Yes/No Tarot Card Generator",
-      "url": "https://easternalignment.com/tools/yes-no-tarot/",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Free yes/no tarot card generator. Shuffle a virtual tarot deck, draw a single card, and get an instant answer with the card meaning explained."
-    },
+    buildWebApplication({
+      name: "Yes/No Tarot Card Generator",
+      url: "https://easternalignment.com/tools/yes-no-tarot/",
+      description: "Free yes/no tarot card generator. Shuffle a virtual tarot deck, draw a single card, and get an instant answer with the card meaning explained.",
+    }),
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -42,7 +39,7 @@ const toolSchema = {
   title="Free Yes/No Tarot: Instant Card Answer"
   description="Free yes/no tarot card generator. Shuffle a virtual tarot deck, draw a single card, and get an instant answer to your yes or no question — with the card meaning explained."
   jsonLd={toolSchema}
-  noindex={true}
+  noindex={false}
 >
   <div class="tool-page section">
     <div class="container container--narrow">

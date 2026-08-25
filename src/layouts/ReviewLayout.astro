@@ -30,6 +30,7 @@ interface Props {
   freeOffer?: string;
   ctaOverride?: string;
   avatarUrl?: string;
+  hideSidebarDeal?: boolean;
   publishDate: string;
   updatedDate?: string;
   // SEO meta fields
@@ -56,6 +57,7 @@ const {
   freeOffer,
   ctaOverride,
   avatarUrl,
+  hideSidebarDeal,
   publishDate,
   updatedDate,
   metaRobots,
@@ -345,7 +347,7 @@ const sidebarDeal = hasCtaContext
     </div>
 
     <!-- RIGHT SIDEBAR -->
-    <RightSidebar deal={sidebarDeal} />
+    <RightSidebar deal={hideSidebarDeal ? undefined : sidebarDeal} />
   </div>
 </BaseLayout>
 

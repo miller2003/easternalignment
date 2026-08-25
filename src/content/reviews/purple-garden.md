@@ -96,22 +96,11 @@ Because advisors cannot edit or delete client Journeys updates, you can quickly 
 
 Purple Garden allows advisors to offer up to three reading formats simultaneously, each with its own per-minute rate. Here is how my $840 testing budget broke down across the three channels:
 
-```
-+-----------------------------------------------------------------------------------+
-|                     PURPLE GARDEN MODALITY COMPARISON                             |
-+-----------------------------------------------------------------------------------+
-| MODALITY    | TYPICAL RATE      | MY PERSONAL ASSESSMENT                          |
-+-------------+-------------------+-------------------------------------------------+
-| Live Video  | $4.99 - $15.00/m  | Best for initial deep-dives. You see real-time  |
-|             |                   | card shuffles & micro-expressions. Zero script. |
-+-------------+-------------------+-------------------------------------------------+
-| Voice Call  | $2.99 - $9.99/m   | Excellent auditory empathy. Faster than chat,   |
-|             |                   | ideal for urgent emotional grounding.           |
-+-------------+-------------------+-------------------------------------------------+
-| Live Chat   | $0.99 - $6.99/m   | Permanent written transcript. Great for quick   |
-|             |                   | date/name verifications and budget control.     |
-+-----------------------------------------------------------------------------------+
-```
+| Modality | Typical Rate | My Personal Assessment |
+| :--- | :--- | :--- |
+| Live Video | $4.99 – $15.00/min | Best for initial deep-dives. You see real-time card shuffles & micro-expressions. Zero script. |
+| Voice Call | $2.99 – $9.99/min | Excellent auditory empathy. Faster than chat, ideal for urgent emotional grounding. |
+| Live Chat | $0.99 – $6.99/min | Permanent written transcript. Great for quick date/name verifications and budget control. |
 
 ### My Personal Flaw Warning: The Low-Tier Chat Trap
 In the spirit of complete honesty, let me share a mistake I made early in my audit. I tested several advisors in the **$0.99/min Chat category**. While a couple were talented newcomers building their review count, nearly half typed slowly or used generic astrology scripts to pad out the minutes.

@@ -3,21 +3,145 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import LeftSidebar from '../../components/LeftSidebar.astro';
 
-
+/* ── Existing written comparisons (kept, moved below the toolkit) ── */
 const comparisonModules = import.meta.glob('../../content/comparisons/*.md', { eager: true });
 const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string, any]) => ({
   ...mod.frontmatter,
   slug: path.split('/').pop()?.replace('.md', ''),
 }));
+
+/* ── Real, computed comparison data (see methodology note) ──
+   Numbers sourced from reader frontmatter on this site:
+   - avg rating + advisors reviewed: computed across all published reviews
+   - avg $/min: mean of every "$X.XX/min" mention in reviews
+   - welcome-offer value + risk-free trial: editorial estimates from the
+     real new-client offers (offers.ts), not invented statistics.            */
+const PLATFORMS = [
+  {
+    key: 'kasamba',
+    name: 'Kasamba',
+    color: '#4a6ee0',
+    go: '/go/kasamba/',
+    offer: '3 free minutes + 50% off',
+    offerShort: '3 Free Min + 50% Off',
+    valueEst: '~$75 est. value',
+    avgRating: 4.89,
+    reviewed: 35,
+    avgPrice: 9.38,
+    editorChoice: true,
+    scores: { rating: 100, price: 40, offer: 100, catalog: 56, risk: 58 },
+  },
+  {
+    key: 'purple-garden',
+    name: 'Purple Garden',
+    color: '#6b4d8c',
+    go: '/go/purplegarden/',
+    offer: '$30 free credit',
+    offerShort: '$30 Free Credit',
+    valueEst: '$30 value',
+    avgRating: 4.86,
+    reviewed: 30,
+    avgPrice: 4.78,
+    editorChoice: false,
+    scores: { rating: 74, price: 100, offer: 40, catalog: 40, risk: 100 },
+  },
+  {
+    key: 'keen',
+    name: 'Keen',
+    color: '#004d40',
+    go: '/go/keen/',
+    offer: '5 minutes for $1',
+    offerShort: '5 Min for $1',
+    valueEst: '~$34 est. value',
+    avgRating: 4.82,
+    reviewed: 49,
+    avgPrice: 7.0,
+    editorChoice: false,
+    scores: { rating: 40, price: 61, offer: 45, catalog: 100, risk: 72 },
+  },
+];
+
+/* ── Radar axes: normalized 40–100 (best of three = 100) ── */
+const RADAR_AXES = [
+  { key: 'rating', label: 'Advisor Rating', vals: { kasamba: 100, 'purple-garden': 74, keen: 40 }, raw: { kasamba: '4.89★', 'purple-garden': '4.86★', keen: '4.82★' } },
+  { key: 'catalog', label: 'Advisor Catalog', vals: { kasamba: 56, 'purple-garden': 40, keen: 100 }, raw: { kasamba: '35 reviewed', 'purple-garden': '30 reviewed', keen: '49 reviewed' } },
+  { key: 'offer', label: 'Welcome Offer', vals: { kasamba: 100, 'purple-garden': 40, keen: 45 }, raw: { kasamba: '~$75', 'purple-garden': '$30', keen: '~$34' } },
+  { key: 'price', label: 'Price Value', vals: { kasamba: 40, 'purple-garden': 100, keen: 61 }, raw: { kasamba: '$9.38/min', 'purple-garden': '$4.78/min', keen: '$7.00/min' } },
+  { key: 'risk', label: 'Risk-Free Trial', vals: { kasamba: 58, 'purple-garden': 100, keen: 72 }, raw: { kasamba: '3 free min', 'purple-garden': '$30 credit', keen: '5 min for $1' } },
+  { key: 'breadth', label: 'Specialty Breadth', vals: { kasamba: 100, 'purple-garden': 100, keen: 100 }, raw: { kasamba: '8 / 8 areas', 'purple-garden': '8 / 8 areas', keen: '8 / 8 areas' } },
+];
+
+/* ── "Best for" editorial scenarios ── */
+const SCENARIOS = [
+  { key: 'love', label: 'Love & Relationships', winner: 'kasamba', why: 'Highest average advisor rating (4.89★) and the deepest love & mediumship catalog in our reviews.' },
+  { key: 'career', label: 'Career & Direction', winner: 'keen', why: 'Largest advisor pool (49 reviewed) means the best odds of a precise career match.' },
+  { key: 'money', label: 'Money & Finance', winner: 'purple-garden', why: 'Lowest rate ($4.78/min) plus a $30 credit stretches a finance question furthest.' },
+  { key: 'first', label: 'First-Timer / Lowest Risk', winner: 'purple-garden', why: 'A $30 free credit + the cheapest per-minute rate = the smallest commitment to start.' },
+  { key: 'tarot', label: 'Tarot & Astrology', winner: 'kasamba', why: 'Top-rated readers and full tarot/astrology coverage across our reviewed advisors.' },
+  { key: 'spiritual', label: 'Spiritual & Mediumship', winner: 'keen', why: 'Broadest catalog with strong spiritual, energy, and mediumship specialists.' },
+];
+
+/* ── Radar geometry (server-rendered) ── */
+const CX = 260, CY = 250, R = 180;
+const N = RADAR_AXES.length;
+function pt(axisIndex: number, value: number) {
+  const ang = (-90 + axisIndex * (360 / N)) * (Math.PI / 180);
+  const r = R * (value / 100);
+  return [CX + r * Math.cos(ang), CY + r * Math.sin(ang)];
+}
+const rings = [25, 50, 75, 100].map((lvl) =>
+  RADAR_AXES.map((_, i) => pt(i, lvl).map((n) => n.toFixed(1)).join(',')).join(' ')
+);
+const axisLines = RADAR_AXES.map((_, i) => pt(i, 100));
+const axisLabels = RADAR_AXES.map((ax, i) => {
+  const [x, y] = pt(i, 118);
+  const cos = Math.cos((-90 + i * (360 / N)) * (Math.PI / 180));
+  const anchor = Math.abs(cos) < 0.2 ? 'middle' : cos > 0 ? 'start' : 'end';
+  return { label: ax.label, x: x.toFixed(1), y: y.toFixed(1), anchor };
+});
+const platformPolys = PLATFORMS.map((p) => ({
+  ...p,
+  points: RADAR_AXES.map((ax, i) => pt(i, ax.vals[p.key]).map((n) => n.toFixed(1)).join(',')).join(' '),
+  dots: RADAR_AXES.map((ax, i) => ({ ...pt(i, ax.vals[p.key]), raw: ax.raw[p.key], axis: ax.label, val: ax.vals[p.key] })),
+}));
+
+/* Feature matrix rows (real values) */
+const MATRIX_ROWS = [
+  { group: 'Welcome Offer', feature: 'New-client welcome deal', cells: { kasamba: '3 free min + 50% off', 'purple-garden': '$30 free credit', keen: '5 min for $1' }, type: 'text' },
+  { group: 'Welcome Offer', feature: 'Estimated welcome value', cells: { kasamba: '~$75', 'purple-garden': '$30', keen: '~$34' }, type: 'text' },
+  { group: 'Welcome Offer', feature: 'Risk-free to try', cells: { kasamba: 'Partial (3 min)', 'purple-garden': 'Full ($30 credit)', keen: 'Near-free (5 min/$1)' }, type: 'text' },
+  { group: 'Pricing', feature: 'Average rate (our reviews)', cells: { kasamba: '$9.38/min', 'purple-garden': '$4.78/min', keen: '$7.00/min' }, type: 'text' },
+  { group: 'Pricing', feature: 'Free to join', cells: { kasamba: true, 'purple-garden': true, keen: true }, type: 'bool' },
+  { group: 'Quality', feature: 'Avg advisor rating (reviewed)', cells: { kasamba: 4.89, 'purple-garden': 4.86, keen: 4.82 }, type: 'rating' },
+  { group: 'Quality', feature: 'Advisors individually reviewed', cells: { kasamba: 35, 'purple-garden': 30, keen: 49 }, type: 'num' },
+  { group: 'Coverage', feature: 'Specialty areas covered', cells: { kasamba: '8 / 8', 'purple-garden': '8 / 8', keen: '8 / 8' }, type: 'text' },
+  { group: 'Coverage', feature: 'iOS + Android app', cells: { kasamba: true, 'purple-garden': true, keen: true }, type: 'bool' },
+  { group: 'Coverage', feature: 'Satisfaction guarantee', cells: { kasamba: 'Per-advisor', 'purple-garden': 'Up to $50 credit', keen: 'Per-advisor' }, type: 'text' },
+  { group: 'Experience', feature: 'Chat + Phone + Video', cells: { kasamba: 'Chat + Phone', 'purple-garden': 'Chat + Phone + Video', keen: 'Chat + Phone' }, type: 'text' },
+];
+function rowIsDifferent(row: any) {
+  const vals = PLATFORMS.map((p) => JSON.stringify(row.cells[p.key]));
+  return new Set(vals).size > 1;
+}
+
+/* Rank-builder factor metadata */
+const FACTORS = [
+  { key: 'rating', label: 'Advisor Rating', icon: '★' },
+  { key: 'price', label: 'Price Value', icon: '$' },
+  { key: 'offer', label: 'Welcome Offer', icon: '🎁' },
+  { key: 'catalog', label: 'Advisor Catalog', icon: '👥' },
+  { key: 'risk', label: 'Risk-Free Trial', icon: '🛡' },
+];
 ---
 
 <BaseLayout
-  title="Psychic Platform Comparisons — Head-to-Head Reviews"
-  description="Detailed side-by-side comparisons of top online psychic reading platforms. Find out which service is right for you."
+  title="Kasamba vs Purple Garden vs Keen: Interactive Comparison (2026)"
+  description="Compare Kasamba, Purple Garden and Keen with interactive tools: a capability radar, a build-your-own ranking, a feature matrix, and per-need recommendations. Real ratings, prices and offers."
+  seoTitle="Kasamba vs Purple Garden vs Keen — Interactive Comparison Tools (2026)"
+  metaDescription="Interactive Kasamba vs Purple Garden vs Keen comparison: capability radar, weighted ranking builder, feature matrix, and best-for recommendations using real ratings, prices, and offers."
   topOfferPlatform="kasamba"
 >
   <div class="page-with-sidebars">
-    <!-- LEFT SIDEBAR -->
     <LeftSidebar />
 
     <main class="main-col">
@@ -25,36 +149,418 @@ const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string,
         <Breadcrumb items={[{ label: 'Comparisons' }]} />
 
         <header class="hub-header">
-          <h1>Platform Comparisons</h1>
+          <span class="hub-eyebrow">Interactive Comparison Toolkit</span>
+          <h1>Kasamba vs Purple Garden vs Keen</h1>
           <p class="hub-description text-muted">
-            Can't decide between two platforms? My head-to-head comparisons break down the strengths and weaknesses of each, so you can make a confident choice.
+            Three of the largest psychic-reading platforms, measured side by side. Every number
+            below comes from advisors we've actually reviewed on this site — average ratings,
+            real per-minute rates, and the genuine new-client offers. Use the tools to find
+            your fit, then read our head-to-head write-ups further down.
           </p>
         </header>
 
-        <div class="prose">
-          <h2 id="platform-battles">Head-to-Head Battles</h2>
-          <div class="comparison-grid grid grid--2 stagger">
-            {comparisons.map(comp => (
-              <a href={`/comparisons/${comp.slug}/`} class="comparison-card card card--elevated">
-                <div class="vs-badge">VS</div>
-                <h3 class="comparison-card-title">{comp.platforms?.join(' vs ')}</h3>
-                <p class="comparison-card-desc text-muted text-sm">{comp.description}</p>
-                {comp.winner && (
-                  <div class="comparison-winner-line">
-                    <span class="text-xs text-muted">Winner:</span>
-                    <span class="text-sm" style="font-weight: 600; color: var(--color-sage);">{comp.winner}</span>
+        <!-- SUB-NAV -->
+        <nav class="comp-subnav" aria-label="Comparison sections">
+          <a href="#radar">Capability Radar</a>
+          <a href="#rank">Build Your Ranking</a>
+          <a href="#matrix">Feature Matrix</a>
+          <a href="#bestfor">Best For</a>
+          <a href="#offers">Welcome Offers</a>
+          <a href="#written">Written Comparisons</a>
+        </nav>
+
+        <!-- ============ 1. CAPABILITY RADAR ============ -->
+        <section id="radar" class="comp-section">
+          <div class="section-head">
+            <span class="eyebrow">Capability Radar</span>
+            <h2>How the three stack up, axis by axis</h2>
+            <p class="section-sub text-muted">
+              Each axis is normalized 40–100 relative to the three platforms (best of the three = 100).
+              Toggle a platform to isolate it, and hover any point for the raw figure.
+            </p>
+          </div>
+
+          <div class="radar-layout">
+            <div class="radar-canvas">
+              <svg viewBox="0 0 520 500" class="radar-svg" role="img" aria-label="Capability radar comparing the three platforms">
+                <!-- rings -->
+                {rings.map((r, i) => (
+                  <polygon points={r} class={`radar-ring ${i === rings.length - 1 ? 'radar-ring--outer' : ''}`} />
+                ))}
+                <!-- axis lines -->
+                {axisLines.map(([x, y]) => (
+                  <line x1={CX} y1={CY} x2={x.toFixed(1)} y2={y.toFixed(1)} class="radar-axis" />
+                ))}
+                <!-- platform polygons -->
+                {platformPolys.map((p) => (
+                  <g class="radar-series" data-key={p.key} style={`--c:${p.color}`}>
+                    <polygon points={p.points} class="radar-poly" />
+                    {p.dots.map((d) => (
+                      <circle cx={d[0].toFixed(1)} cy={d[1].toFixed(1)} r="4.5" class="radar-dot"
+                        data-axis={d.axis} data-raw={d.raw} data-val={d.val} data-name={p.name} />
+                    ))}
+                  </g>
+                ))}
+                <!-- axis labels -->
+                {axisLabels.map((l) => (
+                  <text x={l.x} y={l.y} text-anchor={l.anchor} class="radar-label">{l.label}</text>
+                ))}
+              </svg>
+              <div class="radar-tooltip" id="radarTooltip" hidden></div>
+            </div>
+
+            <div class="radar-side">
+              <p class="radar-side__title">Toggle platforms</p>
+              <div class="radar-legend">
+                {platformPolys.map((p) => (
+                  <button class="legend-btn is-active" data-key={p.key} style={`--c:${p.color}`} aria-pressed="true">
+                    <span class="legend-swatch"></span>
+                    <span class="legend-name">{p.name}</span>
+                    {p.editorChoice && <span class="legend-badge">Editor's Choice</span>}
+                  </button>
+                ))}
+              </div>
+              <div class="radar-takeaways">
+                <h4>What the shape says</h4>
+                <ul>
+                  <li><strong>Kasamba</strong> leads on rating and welcome-offer value, but carries the highest per-minute rate.</li>
+                  <li><strong>Purple Garden</strong> wins price value and the risk-free trial ($30 credit), tying on breadth.</li>
+                  <li><strong>Keen</strong> owns the deepest catalog and solid all-round value at a mid price.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. BUILD YOUR RANKING ============ -->
+        <section id="rank" class="comp-section">
+          <div class="section-head">
+            <span class="eyebrow">Build Your Ranking</span>
+            <h2>Weight what matters to you</h2>
+            <p class="section-sub text-muted">
+              Drag the sliders to tell us what you care about. The bars recompute live and re-rank
+              the platforms by your personal priorities.
+            </p>
+          </div>
+
+          <div class="rank-layout">
+            <div class="rank-controls" id="rankControls">
+              {FACTORS.map((f) => (
+                <div class="rank-factor" data-factor={f.key}>
+                  <div class="rank-factor__top">
+                    <span class="rank-factor__icon">{f.icon}</span>
+                    <span class="rank-factor__label">{f.label}</span>
+                    <span class="rank-factor__val" data-out>{20}</span>
                   </div>
-                )}
-                <span class="comparison-card-link text-primary text-sm">Read Full Comparison →</span>
-              </a>
+                  <input type="range" min="0" max="100" value="20" class="rank-slider" data-factor={f.key} aria-label={f.label} />
+                </div>
+              ))}
+              <button class="rank-reset" id="rankReset" type="button">Reset to equal weights</button>
+            </div>
+
+            <div class="rank-results" id="rankResults" aria-live="polite">
+              {PLATFORMS.map((p) => (
+                <div class="rank-row" data-key={p.key} style={`--c:${p.color}`}>
+                  <div class="rank-row__head">
+                    <span class="rank-row__name">{p.name}</span>
+                    <span class="rank-row__score" data-score>0</span>
+                  </div>
+                  <div class="rank-bar"><span class="rank-bar__fill" data-fill></span></div>
+                  {p.editorChoice && <span class="rank-row__ec">Editor's Choice</span>}
+                </div>
+              ))}
+              <p class="rank-winner" id="rankWinner"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. FEATURE MATRIX ============ -->
+        <section id="matrix" class="comp-section">
+          <div class="section-head">
+            <span class="eyebrow">Feature Matrix</span>
+            <h2>Every detail, in one table</h2>
+            <p class="section-sub text-muted">
+              Sortable by category. Flip the switch to hide rows where all three are identical.
+            </p>
+          </div>
+
+          <div class="matrix-toolbar">
+            <label class="matrix-toggle">
+              <input type="checkbox" id="diffOnly" />
+              <span class="matrix-toggle__track"><span class="matrix-toggle__thumb"></span></span>
+              <span class="matrix-toggle__label">Show differences only</span>
+            </label>
+            <span class="matrix-hint text-muted">★ = average rating across reviewed advisors</span>
+          </div>
+
+          <div class="matrix-wrap">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th class="matrix-th-feature">Feature</th>
+                  {PLATFORMS.map((p) => (
+                    <th class="matrix-th-plat" style={`--c:${p.color}`}>
+                      {p.name}{p.editorChoice && <span class="matrix-ec">EC</span>}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {MATRIX_ROWS.map((row) => (
+                  <tr class="matrix-row" class:list={[{ 'matrix-row--same': !rowIsDifferent(row) }]} data-group={row.group}>
+                    <td class="matrix-feature">{row.feature}</td>
+                    {PLATFORMS.map((p) => {
+                      const v = row.cells[p.key];
+                      if (row.type === 'bool') {
+                        return (
+                          <td class="matrix-cell"><span class={`cell-bool ${v ? 'yes' : 'no'}`}>{v ? '✓' : '—'}</span></td>
+                        );
+                      }
+                      if (row.type === 'rating') {
+                        const full = Math.round(Number(v));
+                        return (
+                          <td class="matrix-cell">
+                            <span class="cell-rating">{Number(v).toFixed(2)}</span>
+                            <span class="cell-stars" aria-hidden="true">{'★'.repeat(full)}{'☆'.repeat(5 - full)}</span>
+                          </td>
+                        );
+                      }
+                      return <td class="matrix-cell">{v}</td>;
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ============ 4. BEST FOR ============ -->
+        <section id="bestfor" class="comp-section">
+          <div class="section-head">
+            <span class="eyebrow">Best For</span>
+            <h2>Pick your situation</h2>
+            <p class="section-sub text-muted">
+              Tell us what you need a reading for. We'll highlight the platform we'd point you to and why.
+            </p>
+          </div>
+
+          <div class="bestfor-picker" id="bestforPicker">
+            {SCENARIOS.map((s, i) => (
+              <button class="bestfor-chip" data-scenario={s.key} data-winner={s.winner} aria-pressed="false">
+                {s.label}
+              </button>
             ))}
           </div>
-        </div>
+
+          <div class="bestfor-result" id="bestforResult" hidden>
+            <div class="bestfor-winner">
+              <span class="bestfor-winner__label">Our pick</span>
+              <span class="bestfor-winner__name" id="bfName"></span>
+            </div>
+            <p class="bestfor-why" id="bfWhy"></p>
+          </div>
+
+          <div class="bestfor-cards">
+            {PLATFORMS.map((p) => (
+              <div class="bestfor-card" data-key={p.key} style={`--c:${p.color}`}>
+                <div class="bestfor-card__top">
+                  <span class="bestfor-card__name">{p.name}</span>
+                  {p.editorChoice && <span class="bestfor-card__ec">Editor's Choice</span>}
+                </div>
+                <p class="bestfor-card__offer">{p.offer}</p>
+                <a href={p.go} class="bestfor-card__cta" data-ph-event="affiliate_click">Claim offer →</a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- ============ 5. WELCOME OFFERS ============ -->
+        <section id="offers" class="comp-section">
+          <div class="section-head">
+            <span class="eyebrow">Welcome Offers</span>
+            <h2>The real new-client deals</h2>
+            <p class="section-sub text-muted">
+              No promo codes required — tap through and the offer applies at sign-up.
+            </p>
+          </div>
+
+          <div class="offer-grid">
+            {PLATFORMS.map((p) => (
+              <article class="offer-card" style={`--c:${p.color}`} class:list={[{ 'offer-card--ec': p.editorChoice }]}>
+                {p.editorChoice && <span class="offer-ribbon">Editor's Choice</span>}
+                <div class="offer-card__head">
+                  <span class="offer-card__name">{p.name}</span>
+                  <span class="offer-card__value">{p.valueEst}</span>
+                </div>
+                <p class="offer-card__deal">{p.offer}</p>
+                <div class="offer-card__meta">
+                  <span>Avg {p.avgRating.toFixed(2)}★</span>
+                  <span>·</span>
+                  <span>{p.reviewed} reviewed</span>
+                  <span>·</span>
+                  <span>${p.avgPrice.toFixed(2)}/min</span>
+                </div>
+                <a href={p.go} class="offer-card__cta" data-ph-event="affiliate_click">Claim {p.offerShort} →</a>
+                <p class="offer-card__micro">Free to join · No subscription</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- ============ EXISTING WRITTEN COMPARISONS (kept) ============ -->
+        <section id="written" class="comp-section">
+          <div class="prose">
+            <h2 id="platform-battles">Head-to-Head Written Comparisons</h2>
+            <p class="text-muted">Long-form, advisor-by-advisor breakdowns for when you want the full reasoning:</p>
+            <div class="comparison-grid grid grid--2 stagger">
+              {comparisons.map((comp) => (
+                <a href={`/comparisons/${comp.slug}/`} class="comparison-card card card--elevated">
+                  <div class="vs-badge">VS</div>
+                  <h3 class="comparison-card-title">{comp.platforms?.join(' vs ')}</h3>
+                  <p class="comparison-card-desc text-muted text-sm">{comp.description}</p>
+                  {comp.winner && (
+                    <div class="comparison-winner-line">
+                      <span class="text-xs text-muted">Winner:</span>
+                      <span class="text-sm" style="font-weight: 600; color: var(--color-sage);">{comp.winner}</span>
+                    </div>
+                  )}
+                  <span class="comparison-card-link text-primary text-sm">Read Full Comparison →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <p class="comp-methodology text-muted">
+          <strong>Methodology:</strong> Average ratings, advisor counts and per-minute rates are computed from the
+          individual psychic reviews published on this site. Welcome-offer value and risk-free-trial scores are
+          editorial estimates based on each platform's genuine new-client promotion. Specialty breadth reflects the
+          eight categories (love, career, money, tarot, astrology, mediumship, dreams, spiritual) covered in our
+          reviewed advisors. This is an affiliate site; recommendations are independent of commission.
+        </p>
       </div>
     </main>
-    <!-- RIGHT SIDEBAR (Removed for Hub pages) -->
   </div>
 </BaseLayout>
+
+<script define:vars={{ PLATFORMS, FACTORS, SCENARIOS }}>
+  /* ── Radar: toggle platforms + tooltip ── */
+  (function () {
+    const svg = document.querySelector('.radar-svg');
+    if (!svg) return;
+    const tooltip = document.getElementById('radarTooltip');
+    const legendBtns = document.querySelectorAll('.legend-btn');
+
+    legendBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.key;
+        const active = btn.classList.toggle('is-active');
+        btn.setAttribute('aria-pressed', String(active));
+        const series = svg.querySelector(`.radar-series[data-key="${key}"]`);
+        if (series) series.classList.toggle('is-hidden', !active);
+      });
+    });
+
+    svg.querySelectorAll('.radar-dot').forEach((dot) => {
+      dot.addEventListener('mouseenter', (e) => {
+        const r = dot.getBoundingClientRect();
+        const wrap = svg.parentElement.getBoundingClientRect();
+        tooltip.hidden = false;
+        tooltip.innerHTML = `<strong>${dot.dataset.name}</strong><br>${dot.dataset.axis}: ${dot.dataset.raw}`;
+        tooltip.style.left = (r.left - wrap.left + r.width / 2) + 'px';
+        tooltip.style.top = (r.top - wrap.top - 10) + 'px';
+      });
+      dot.addEventListener('mouseleave', () => { tooltip.hidden = true; });
+    });
+  })();
+
+  /* ── Build-your-own ranking ── */
+  (function () {
+    const sliders = document.querySelectorAll('.rank-slider');
+    const rows = document.querySelectorAll('.rank-row');
+    const winnerEl = document.getElementById('rankWinner');
+    const resetBtn = document.getElementById('rankReset');
+    if (!sliders.length || !rows.length) return;
+
+    function compute() {
+      const w = {};
+      let total = 0;
+      sliders.forEach((s) => { w[s.dataset.factor] = +s.value; total += +s.value; });
+      // reflect numbers
+      sliders.forEach((s) => {
+        const out = s.closest('.rank-factor').querySelector('[data-out]');
+        if (out) out.textContent = s.value;
+      });
+      const comp = {};
+      PLATFORMS.forEach((p) => {
+        let sum = 0;
+        FACTORS.forEach((f) => { sum += (p.scores[f.key] || 0) * (w[f.key] || 0); });
+        comp[p.key] = total > 0 ? sum / total : 0;
+      });
+      const max = Math.max(...Object.values(comp), 1);
+      // sort platforms by composite desc
+      const ordered = PLATFORMS.map((p) => ({ key: p.key, v: comp[p.key] })).sort((a, b) => b.v - a.v);
+      rows.forEach((row) => {
+        const v = comp[row.dataset.key];
+        const fill = row.querySelector('[data-fill]');
+        const score = row.querySelector('[data-score]');
+        if (fill) fill.style.width = (v / max * 100).toFixed(1) + '%';
+        if (score) score.textContent = (v / 100).toFixed(1);
+        row.style.order = ordered.findIndex((o) => o.key === row.dataset.key);
+      });
+      if (winnerEl && ordered[0]) {
+        const top = PLATFORMS.find((p) => p.key === ordered[0].key);
+        winnerEl.innerHTML = `🏆 <strong>${top.name}</strong> is your best fit at these weights.`;
+      }
+    }
+    sliders.forEach((s) => s.addEventListener('input', compute));
+    if (resetBtn) resetBtn.addEventListener('click', () => {
+      sliders.forEach((s) => { s.value = 20; });
+      compute();
+    });
+    compute();
+  })();
+
+  /* ── Feature matrix: differences only ── */
+  (function () {
+    const toggle = document.getElementById('diffOnly');
+    if (!toggle) return;
+    toggle.addEventListener('change', () => {
+      const on = toggle.checked;
+      document.querySelectorAll('.matrix-row--same').forEach((row) => {
+        row.style.display = on ? 'none' : '';
+      });
+    });
+  })();
+
+  /* ── Best-for picker ── */
+  (function () {
+    const picker = document.getElementById('bestforPicker');
+    const result = document.getElementById('bestforResult');
+    const nameEl = document.getElementById('bfName');
+    const whyEl = document.getElementById('bfWhy');
+    if (!picker) return;
+    picker.querySelectorAll('.bestfor-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        picker.querySelectorAll('.bestfor-chip').forEach((c) => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
+        chip.classList.add('is-active');
+        chip.setAttribute('aria-pressed', 'true');
+        const winner = chip.dataset.winner;
+        const sc = SCENARIOS.find((s) => s.key === chip.dataset.scenario);
+        if (nameEl) {
+          const plat = PLATFORMS.find((p) => p.key === winner);
+          nameEl.textContent = plat ? plat.name : winner;
+        }
+        if (whyEl && sc) whyEl.textContent = sc.why;
+        if (result) result.hidden = false;
+        document.querySelectorAll('.bestfor-card').forEach((card) => {
+          card.classList.toggle('is-dim', card.dataset.key !== winner);
+          card.classList.toggle('is-pick', card.dataset.key === winner);
+        });
+      });
+    });
+  })();
+</script>
 
 <style>
   /* ── 3-Column Sidebar Layout ── */
@@ -67,93 +573,230 @@ const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string,
     margin: 0 auto;
     padding: var(--space-4) var(--space-6) var(--space-12);
   }
+  .main-col { flex: 1; min-width: 0; max-width: var(--max-width-content); }
 
-  .main-col {
-    flex: 1;
-    min-width: 0;
-    max-width: var(--max-width-content);
-  }
-
-  .hub-header {
-    margin-bottom: var(--space-6);
-  }
-
+  .hub-header { margin-bottom: var(--space-5); }
   .hub-header h1 {
-    margin-bottom: var(--space-4);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-  }
-
-  .hub-description {
-    font-size: var(--text-lg);
-    line-height: var(--leading-relaxed);
-  }
-
-  /* Structural Headings for TOC */
-  .prose h2 {
-    margin: var(--space-10) 0 var(--space-6);
-    padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--color-border-light);
-    font-size: var(--text-2xl);
+    margin: var(--space-3) 0 var(--space-4);
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
+    line-height: 1.05;
     color: var(--color-primary-dark);
   }
-
-  .comparison-grid {
-    margin-top: var(--space-4);
-  }
-
-  .comparison-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-    text-decoration: none;
-    padding: var(--space-6);
-    position: relative;
-    height: 100%;
-  }
-
-  .vs-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--color-accent-light);
-    color: var(--color-primary-dark);
-    font-weight: var(--weight-bold);
+  .hub-eyebrow {
+    display: inline-block;
     font-size: var(--text-xs);
-    letter-spacing: 0.05em;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-primary-dark);
+    background: var(--color-accent-light);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
   }
+  .hub-description { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
 
-  .comparison-card-title {
-    font-size: var(--text-xl);
-    margin: 0;
-    transition: color var(--transition-fast);
-  }
-
-  .comparison-card:hover .comparison-card-title {
-    color: var(--color-primary);
-  }
-
-  .comparison-card-desc {
-    margin: 0;
-    flex: 1;
-  }
-
-  .comparison-winner-line {
+  /* Sub-nav */
+  .comp-subnav {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: var(--space-2);
+    padding: var(--space-3) 0;
+    margin-bottom: var(--space-8);
+    border-top: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
+    position: sticky;
+    top: 64px;
+    background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+    backdrop-filter: blur(6px);
+    z-index: 90;
   }
-
-  .comparison-card-link {
+  .comp-subnav a {
+    font-size: var(--text-sm);
     font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
   }
+  .comp-subnav a:hover { color: var(--color-primary); background: var(--color-bg-alt); }
 
-  /* Mobile Adjustments */
+  /* Section shell */
+  .comp-section { margin-bottom: var(--space-16); scroll-margin-top: 64px; }
+  .section-head { margin-bottom: var(--space-8); }
+  .section-head .eyebrow {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-2);
+  }
+  .section-head h2 {
+    font-size: var(--text-3xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-3);
+    line-height: 1.15;
+  }
+  .section-sub { font-size: var(--text-lg); line-height: var(--leading-relaxed); max-width: 62ch; }
+
+  /* ── Radar ── */
+  .radar-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--space-10); align-items: center; }
+  .radar-canvas { position: relative; }
+  .radar-svg { width: 100%; height: auto; overflow: visible; }
+  .radar-ring { fill: none; stroke: var(--color-border); stroke-width: 1; }
+  .radar-ring--outer { stroke: var(--color-border-light); }
+  .radar-axis { stroke: var(--color-border); stroke-width: 1; }
+  .radar-poly {
+    fill: var(--c);
+    fill-opacity: 0.14;
+    stroke: var(--c);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    transition: opacity var(--transition-base);
+    animation: radarIn 0.7s ease both;
+  }
+  .radar-dot { fill: var(--c); stroke: #fff; stroke-width: 2; cursor: pointer; transition: r var(--transition-fast); }
+  .radar-dot:hover { r: 6.5; }
+  .radar-series.is-hidden { opacity: 0; pointer-events: none; }
+  .radar-label { font-size: 12.5px; font-weight: var(--weight-semibold); fill: var(--color-text); font-family: var(--font-body); }
+  @keyframes radarIn { from { opacity: 0; transform: scale(0.9); transform-origin: 260px 250px; } to { opacity: 1; } }
+  .radar-tooltip {
+    position: absolute; transform: translate(-50%, -100%);
+    background: var(--color-primary-dark); color: #fff;
+    padding: var(--space-2) var(--space-3); border-radius: var(--radius-md);
+    font-size: var(--text-xs); line-height: 1.4; pointer-events: none;
+    box-shadow: var(--shadow-lg); white-space: nowrap; z-index: 5;
+  }
+  .radar-side__title { font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-text-muted); margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 0.08em; }
+  .radar-legend { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-6); }
+  .legend-btn {
+    display: flex; align-items: center; gap: var(--space-3);
+    background: var(--color-surface); border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4);
+    cursor: pointer; transition: all var(--transition-fast); font-family: var(--font-body);
+  }
+  .legend-btn.is-active { border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 18%, transparent); }
+  .legend-swatch { width: 16px; height: 16px; border-radius: 5px; background: var(--c); flex: none; }
+  .legend-name { font-weight: var(--weight-semibold); color: var(--color-text); flex: 1; text-align: left; }
+  .legend-badge { font-size: var(--text-xs); font-weight: var(--weight-bold); color: var(--color-accent); background: var(--color-accent-light); padding: 2px var(--space-2); border-radius: var(--radius-full); }
+  .radar-takeaways h4 { font-size: var(--text-base); color: var(--color-primary-dark); margin-bottom: var(--space-3); }
+  .radar-takeaways ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+  .radar-takeaways li { font-size: var(--text-sm); line-height: 1.55; color: var(--color-text-muted); padding-left: var(--space-4); position: relative; }
+  .radar-takeaways li::before { content: ''; position: absolute; left: 0; top: 8px; width: 7px; height: 7px; border-radius: 50%; background: var(--color-accent); }
+  .radar-takeaways strong { color: var(--color-text); }
+
+  /* ── Rank builder ── */
+  .rank-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: start; }
+  .rank-controls { display: flex; flex-direction: column; gap: var(--space-5); }
+  .rank-factor__top { display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2); }
+  .rank-factor__icon { color: var(--color-primary); font-size: var(--text-lg); width: 22px; text-align: center; }
+  .rank-factor__label { font-weight: var(--weight-semibold); flex: 1; color: var(--color-text); }
+  .rank-factor__val { font-variant-numeric: tabular-nums; font-weight: var(--weight-bold); color: var(--color-primary-dark); min-width: 28px; text-align: right; }
+  .rank-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: var(--radius-full); background: var(--color-border); outline: none; }
+  .rank-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--color-primary); cursor: pointer; border: 3px solid #fff; box-shadow: var(--shadow-md); }
+  .rank-slider::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--color-primary); cursor: pointer; border: 3px solid #fff; box-shadow: var(--shadow-md); }
+  .rank-reset { align-self: flex-start; margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-primary); background: none; border: 1.5px solid var(--color-border); border-radius: var(--radius-full); padding: var(--space-2) var(--space-4); cursor: pointer; font-weight: var(--weight-medium); transition: all var(--transition-fast); }
+  .rank-reset:hover { border-color: var(--color-primary); background: var(--color-bg-alt); }
+  .rank-results { display: flex; flex-direction: column; gap: var(--space-4); }
+  .rank-row { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); transition: order var(--transition-base), box-shadow var(--transition-fast); position: relative; }
+  .rank-row__head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-3); }
+  .rank-row__name { font-weight: var(--weight-bold); color: var(--color-text); font-size: var(--text-lg); }
+  .rank-row__score { font-variant-numeric: tabular-nums; font-weight: var(--weight-bold); color: var(--c); font-size: var(--text-lg); }
+  .rank-bar { height: 12px; background: var(--color-bg-alt); border-radius: var(--radius-full); overflow: hidden; }
+  .rank-bar__fill { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 70%, #fff)); border-radius: var(--radius-full); transition: width var(--transition-base); }
+  .rank-row__ec { position: absolute; top: -9px; right: var(--space-4); font-size: 10px; font-weight: var(--weight-bold); color: var(--color-accent); background: var(--color-accent-light); padding: 2px var(--space-2); border-radius: var(--radius-full); }
+  .rank-winner { margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); }
+
+  /* ── Matrix ── */
+  .matrix-toolbar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-4); flex-wrap: wrap; }
+  .matrix-toggle { display: inline-flex; align-items: center; gap: var(--space-3); cursor: pointer; user-select: none; }
+  .matrix-toggle input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .matrix-toggle__track { width: 42px; height: 24px; border-radius: var(--radius-full); background: var(--color-border); position: relative; transition: background var(--transition-fast); flex: none; }
+  .matrix-toggle__thumb { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: var(--shadow-sm); transition: transform var(--transition-fast); }
+  .matrix-toggle input:checked + .matrix-toggle__track { background: var(--color-primary); }
+  .matrix-toggle input:checked + .matrix-toggle__track .matrix-toggle__thumb { transform: translateX(18px); }
+  .matrix-toggle__label { font-weight: var(--weight-medium); color: var(--color-text); font-size: var(--text-sm); }
+  .matrix-hint { font-size: var(--text-sm); }
+  .matrix-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+  .matrix-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  .matrix-table thead th { background: var(--color-bg-alt); text-align: left; padding: var(--space-4) var(--space-5); font-size: var(--text-sm); font-weight: var(--weight-bold); color: var(--color-primary-dark); border-bottom: 2px solid var(--color-border); position: sticky; top: 0; }
+  .matrix-th-plat { text-align: center !important; color: var(--c) !important; }
+  .matrix-ec { font-size: 10px; background: var(--color-accent-light); color: var(--color-accent); padding: 1px 6px; border-radius: var(--radius-full); margin-left: var(--space-2); font-weight: var(--weight-bold); }
+  .matrix-row { transition: background var(--transition-fast); }
+  .matrix-row:hover { background: var(--color-bg-alt); }
+  .matrix-row td { padding: var(--space-4) var(--space-5); border-bottom: 1px solid var(--color-border-light); font-size: var(--text-sm); }
+  .matrix-feature { font-weight: var(--weight-medium); color: var(--color-text); }
+  .matrix-cell { text-align: center; color: var(--color-text-muted); }
+  .cell-bool.yes { color: var(--color-sage); font-weight: var(--weight-bold); font-size: var(--text-lg); }
+  .cell-bool.no { color: var(--color-border); }
+  .cell-rating { display: block; font-weight: var(--weight-bold); color: var(--color-primary-dark); font-size: var(--text-base); }
+  .cell-stars { color: var(--color-accent); font-size: var(--text-xs); letter-spacing: 1px; }
+
+  /* ── Best for ── */
+  .bestfor-picker { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-6); }
+  .bestfor-chip {
+    font-family: var(--font-body); font-size: var(--text-sm); font-weight: var(--weight-medium);
+    color: var(--color-text); background: var(--color-surface); border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-full); padding: var(--space-3) var(--space-5); cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  .bestfor-chip:hover { border-color: var(--color-primary-light); color: var(--color-primary); }
+  .bestfor-chip.is-active { background: var(--color-primary); border-color: var(--color-primary); color: #fff; box-shadow: var(--shadow-md); }
+  .bestfor-result { background: var(--color-bg-alt); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-6); border-left: 4px solid var(--color-accent); }
+  .bestfor-winner { display: flex; align-items: baseline; gap: var(--space-3); margin-bottom: var(--space-2); }
+  .bestfor-winner__label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); font-weight: var(--weight-bold); }
+  .bestfor-winner__name { font-size: var(--text-xl); font-weight: var(--weight-bold); color: var(--color-primary-dark); font-family: var(--font-heading); }
+  .bestfor-why { margin: 0; font-size: var(--text-base); line-height: 1.6; color: var(--color-text); }
+  .bestfor-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+  .bestfor-card { background: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); text-align: center; transition: all var(--transition-base); }
+  .bestfor-card.is-dim { opacity: 0.45; filter: grayscale(0.4); }
+  .bestfor-card.is-pick { border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 20%, transparent), var(--shadow-lg); transform: translateY(-4px); }
+  .bestfor-card__top { display: flex; align-items: center; justify-content: center; gap: var(--space-2); margin-bottom: var(--space-3); }
+  .bestfor-card__name { font-weight: var(--weight-bold); font-size: var(--text-lg); color: var(--c); }
+  .bestfor-card__ec { font-size: 10px; font-weight: var(--weight-bold); color: var(--color-accent); background: var(--color-accent-light); padding: 2px 8px; border-radius: var(--radius-full); }
+  .bestfor-card__offer { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-4); min-height: 2.4em; }
+  .bestfor-card__cta { display: inline-block; font-weight: var(--weight-semibold); color: var(--c); text-decoration: none; font-size: var(--text-sm); }
+  .bestfor-card__cta:hover { text-decoration: underline; }
+
+  /* ── Offer cards ── */
+  .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+  .offer-card { position: relative; background: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6) var(--space-6) var(--space-5); box-shadow: var(--shadow-sm); transition: all var(--transition-base); overflow: hidden; }
+  .offer-card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 5px; background: var(--c); }
+  .offer-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+  .offer-card--ec { border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 15%, transparent); }
+  .offer-ribbon { position: absolute; top: var(--space-4); right: calc(-1 * var(--space-8)); transform: rotate(45deg); background: var(--c); color: #fff; font-size: var(--text-xs); font-weight: var(--weight-bold); padding: var(--space-1) var(--space-10); letter-spacing: 0.05em; }
+  .offer-card__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: var(--space-3); }
+  .offer-card__name { font-weight: var(--weight-bold); font-size: var(--text-xl); color: var(--color-primary-dark); }
+  .offer-card__value { font-size: var(--text-xs); font-weight: var(--weight-bold); color: var(--c); background: color-mix(in srgb, var(--c) 12%, #fff); padding: 2px var(--space-2); border-radius: var(--radius-full); }
+  .offer-card__deal { font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--color-text); margin-bottom: var(--space-4); line-height: 1.4; }
+  .offer-card__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-5); }
+  .offer-card__cta { display: block; text-align: center; background: var(--c); color: #fff; text-decoration: none; font-weight: var(--weight-semibold); padding: var(--space-3); border-radius: var(--radius-md); transition: filter var(--transition-fast); }
+  .offer-card__cta:hover { filter: brightness(1.08); }
+  .offer-card__micro { text-align: center; font-size: var(--text-xs); color: var(--color-text-muted); margin: var(--space-3) 0 0; }
+
+  /* ── Written comparisons (kept) ── */
+  .prose h2 { margin: var(--space-10) 0 var(--space-6); padding-bottom: var(--space-3); border-bottom: 1px solid var(--color-border-light); font-size: var(--text-2xl); color: var(--color-primary-dark); }
+  .comparison-grid { margin-top: var(--space-4); }
+  .comparison-card { display: flex; flex-direction: column; gap: var(--space-3); text-decoration: none; padding: var(--space-6); position: relative; height: 100%; }
+  .vs-badge { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent-light); color: var(--color-primary-dark); font-weight: var(--weight-bold); font-size: var(--text-xs); letter-spacing: 0.05em; }
+  .comparison-card-title { font-size: var(--text-xl); margin: 0; transition: color var(--transition-fast); }
+  .comparison-card:hover .comparison-card-title { color: var(--color-primary); }
+  .comparison-card-desc { margin: 0; flex: 1; }
+  .comparison-winner-line { display: flex; align-items: center; gap: var(--space-2); }
+  .comparison-card-link { font-weight: var(--weight-medium); }
+
+  .comp-methodology { margin-top: var(--space-10); padding: var(--space-5) var(--space-6); background: var(--color-bg-alt); border-radius: var(--radius-lg); font-size: var(--text-sm); line-height: 1.65; }
+  .comp-methodology strong { color: var(--color-primary-dark); }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .radar-layout, .rank-layout { grid-template-columns: 1fr; gap: var(--space-8); }
+    .bestfor-cards, .offer-grid { grid-template-columns: 1fr; }
+    .comp-section { margin-bottom: var(--space-12); }
+  }
   @media (max-width: 1100px) {
-    .page-with-sidebars {
-      gap: var(--space-6);
-    }
+    .page-with-sidebars { gap: var(--space-6); }
   }
 </style>

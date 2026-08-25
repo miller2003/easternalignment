@@ -1,20 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { buildWebApplication } from '../../lib/toolSchema';
 import { SIGNS, compatibilityScore, ELEMENTS } from '../../data/zodiac';
 
 const toolSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Zodiac Love Compatibility Calculator",
-      "url": "https://easternalignment.com/tools/zodiac-compatibility-calculator/",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Free zodiac love compatibility calculator. Select two zodiac signs and get an instant compatibility score with romance, communication, and long-term ratings."
-    },
+    buildWebApplication({
+      name: "Zodiac Love Compatibility Calculator",
+      url: "https://easternalignment.com/tools/zodiac-compatibility-calculator/",
+      description: "Free zodiac love compatibility calculator. Select two zodiac signs and get an instant compatibility score with romance, communication, and long-term ratings.",
+    }),
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -43,7 +40,7 @@ const toolSchema = {
   title="Zodiac Compatibility Calculator: Love Match Score"
   description="Free zodiac love compatibility calculator. Select two zodiac signs — or enter two birth dates — and get an instant compatibility score with romance, communication, and long-term ratings."
   jsonLd={toolSchema}
-  noindex={true}
+  noindex={false}
 >
   <div class="tool-page section">
     <div class="container container--narrow">
