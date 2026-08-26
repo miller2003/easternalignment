@@ -5,7 +5,7 @@
 // the CURRENT page's platform context: on a Kasamba page the Kasamba card
 // comes first and carries the "featured" treatment, instead of always
 // pushing Keen. This mirrors the page's intent instead of fighting it.
-import { PLATFORM_OFFERS, type PlatformKey } from '../lib/offers';
+import { PLATFORM_OFFERS, platformLogo, type PlatformKey } from '../lib/offers';
 
 interface Props {
   /** Platform this page is about; its card is promoted to the top slot. */
@@ -19,7 +19,6 @@ interface DealCardData {
   reviewPath: string;
   logotypeStyle: string;
   logotype: string;
-  faviconDomain: string;
   text: string;      // offer sentence (may contain <strong>)
   btn: string;
 }
@@ -32,7 +31,6 @@ const CARDS: DealCardData[] = [
     reviewPath: '/reviews/kasamba/',
     logotypeStyle: 'color: #4a6ee0; font-weight: 700; letter-spacing: -0.02em; font-size: 1.3em;',
     logotype: 'kasamba',
-    faviconDomain: 'kasamba.com',
     text: 'Claim your first <strong>3 minutes</strong> absolutely free, plus receive half off your initial session.',
     btn: 'Claim 3 Free Min',
   },
@@ -41,7 +39,6 @@ const CARDS: DealCardData[] = [
     reviewPath: '/reviews/purple-garden/',
     logotypeStyle: 'color: #6b4d8c; font-weight: 500;',
     logotype: 'purple garden',
-    faviconDomain: 'purplegarden.co',
     text: 'Grab a complimentary <strong>$30 credit</strong> to connect with any advisor of your choice.',
     btn: 'Claim $30 Credit',
   },
@@ -50,7 +47,6 @@ const CARDS: DealCardData[] = [
     reviewPath: '/reviews/keen/',
     logotypeStyle: 'color: #004d40; font-family: Georgia, serif; font-style: italic; font-size: 1.4em;',
     logotype: 'keen',
-    faviconDomain: 'keen.com',
     text: 'Enjoy a <strong>5-minute</strong> introductory reading for only $1.',
     btn: 'Claim $1 Offer',
   },
@@ -76,7 +72,7 @@ const ordered = platform
           {featured && platform && <span class="deal-card__tag">On this page</span>}
           <a href={card.reviewPath} class="deal-card__logo-link" title={`Read ${offer.name} Review`}>
             <div class="deal-card__logo-wrapper">
-              <img src={`https://www.google.com/s2/favicons?domain=${card.faviconDomain}&sz=128`} alt={`${offer.name} icon`} class="deal-card__icon" loading="lazy" />
+              <img src={platformLogo(card.key)} alt={`${offer.name} icon`} class="deal-card__icon" loading="lazy" />
               <span class="deal-card__logotype" style={card.logotypeStyle}>{card.logotype}</span>
             </div>
           </a>
@@ -284,7 +280,7 @@ const ordered = platform
     padding: 8px;
     border-radius: 6px;
     background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
-    color: #ffffff;
+    color: #ffffff !important;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;

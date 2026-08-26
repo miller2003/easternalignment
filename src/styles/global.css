@@ -261,7 +261,11 @@ h5, h6 {
   margin-bottom: var(--space-5);
 }
 
-.prose a:not(.btn):not(.card):not(.card *) {
+/* Prose link styling applies ONLY to bare in-text links. Any anchor whose
+   class marks it as a button/CTA (class contains "btn" or "cta") is excluded:
+   otherwise this rule's stacked :not() specificity (0,6,1) silently recolours
+   white CTA button text to brown -- the brown-on-brown button bug. */
+.prose a:not(.btn):not(.card):not(.card *):not([class*="btn"]):not([class*="cta"]) {
   color: var(--color-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -269,7 +273,7 @@ h5, h6 {
   transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
 }
 
-.prose a:not(.btn):not(.card):not(.card *):hover {
+.prose a:not(.btn):not(.card):not(.card *):not([class*="btn"]):not([class*="cta"]):hover {
   color: var(--color-primary-dark);
   text-decoration-color: var(--color-primary);
 }

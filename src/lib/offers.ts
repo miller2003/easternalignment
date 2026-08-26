@@ -37,8 +37,6 @@ export interface PlatformOffer {
   microLine: string;
   /** Brand accent colour used for the platform name / logo text. */
   color: string;
-  /** Domain used for the favicon/logo (Google s2 service, same as sidebars). */
-  faviconDomain: string;
   /** Real number of individual advisor reviews published on this site. */
   reviewedCount: number;
   /** Top promo bar line (gift icon + this text). */
@@ -55,7 +53,6 @@ export const PLATFORM_OFFERS: Record<PlatformKey, PlatformOffer> = {
     ctaLabel: 'Claim 5 Minutes for $1 →',
     microLine: 'Free to join · Offer applied at checkout · No subscription',
     color: '#004d40',
-    faviconDomain: 'keen.com',
     reviewedCount: 49,
     topBarLine: 'Keen Special Offer — your first 5 minutes for just $1 (new clients)',
   },
@@ -68,7 +65,6 @@ export const PLATFORM_OFFERS: Record<PlatformKey, PlatformOffer> = {
     ctaLabel: 'Claim 3 Free Minutes →',
     microLine: 'Free to join · 3 free minutes with each new advisor · No subscription',
     color: '#4a6ee0',
-    faviconDomain: 'kasamba.com',
     reviewedCount: 35,
     topBarLine: 'Kasamba Special Offer — 3 FREE minutes + 50% OFF your first session',
   },
@@ -81,7 +77,6 @@ export const PLATFORM_OFFERS: Record<PlatformKey, PlatformOffer> = {
     ctaLabel: 'Claim $30 Free Credit →',
     microLine: 'Free to join · Credit applied to your first reading · No subscription',
     color: '#6b4d8c',
-    faviconDomain: 'purplegarden.co',
     reviewedCount: 30,
     topBarLine: 'Purple Garden Special Offer — $30 in FREE credit for new clients',
   },
@@ -114,7 +109,29 @@ export function proofTooltip(key: PlatformKey): string {
   return `${o.reviewedCount} ${o.name} advisors individually reviewed on this site — with real paid sessions.`;
 }
 
-/** Favicon/logo URL for a platform (same Google s2 service the sidebars use). */
-export function platformLogo(key: PlatformKey, size = 64): string {
-  return `https://www.google.com/s2/favicons?domain=${PLATFORM_OFFERS[key].faviconDomain}&sz=${size}`;
+/**
+ * Self-hosted brand icon path for a platform.
+ *
+ * 2026-08-26 migration: switched from Google's `s2/favicons` service to
+ * locally-hosted official app icons (256×256 PNG, pulled from each
+ * platform's iOS App Store listing). Why the change was necessary:
+ *   - google.com is unreachable for part of the audience (easternalignment's
+ *     owner QA included), which rendered every CTA icon as a blank white
+ *     chip on those visits — a silent conversion killer.
+ *   - s2/favicons returned a 16×16 ICO upscaled to 24–128px display slots,
+ *     visibly blurry against the card chrome.
+ *   - hotlinking google leaked visitor IPs to a third party (GDPR risk),
+ *     and the service has no SLA — a single Google outage blanks every
+ *     brand mark site-wide.
+ *
+ * The `size` parameter is preserved for backward compatibility with
+ * existing callers (EndCTA/StickyCTA/ScorePanel/etc. pass 64 or 128);
+ * a single 256px master serves every slot, including retina @128px.
+ *
+ * Assets live in /public/logos/ and are served by Cloudflare's CDN —
+ * one round-trip, immutable, cacheable for a year via filename hashing
+ * when future revisions land.
+ */
+export function platformLogo(key: PlatformKey, _size = 64): string {
+  return `/logos/${key}.png`;
 }
