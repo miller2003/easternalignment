@@ -106,4 +106,4 @@ Because her sessions run deep and reflective, set a budget and a timer before yo
 
 ---
 
-**More Purple Garden reviews:** [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/) · [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Emmanuelle Berger](/reviews/purple-garden/emmanuelle-berger/) · [Empathic Intuitive Marcus](/reviews/purple-garden/empathic-intuitive-marcus/) · [Fanny Dalfiume](/reviews/purple-garden/fanny-dalfiume/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

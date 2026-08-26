@@ -146,3 +146,7 @@ For more high-volume options, see our reviews of [The Psychic One](/reviews/keen
 Use the **$1 intro session** as a calibration test. Call or chat in with one specific decision you are weighing, then listen. What he advises in those first five minutes is your signal. If you want an experienced, lineage-backed reader who points you toward action, Master Psychic Dev is a solid upper-mid choice.
 
 Master Psychic Dev has held a 4.92 across 7,500+ ratings for over a decade by pairing third-generation skill with clarity and purpose. At $7.39/min, that direction is the product you are paying for.
+
+---
+
+**More Keen reviews:** [Psychic Visions by Atlantis](/reviews/keen/psychic-visions-by-atlantis-on-keen-review-2026/) · [psychicreader19622](/reviews/keen/psychicreader19622-raymond-keen-review-2026/) · [readings by kelly777](/reviews/keen/readings-by-kelly777/) · [Browse all Keen advisors](/reviews/keen/)

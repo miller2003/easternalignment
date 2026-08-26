@@ -114,3 +114,7 @@ He was OFFLINE when we checked — expected for a 24-year veteran whose regulars
 **Book him if** your question is about career, business, money, or a decision with numbers attached — and you want the only reader on Kasamba who has actually been the CFO, the auditor, and the judge, with 24 years of perfect-5.0 readings on top. Also book him for love and life questions if a measured, proven, no-theater style is what you trust.
 
 **Skip him if** you want mystical theater or a reader who performs the occult. Fruno is the opposite: the most credentialed person in the room who also happens to see things.
+
+---
+
+**More Kasamba reviews:** [Spirit Amy](/reviews/kasamba/spirit-amy-kasamba-review/) · [Spiritual Annie](/reviews/kasamba/spiritual-annie-kasamba-review/) · [Spiritual Divini Service](/reviews/kasamba/spiritual-divini-service-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

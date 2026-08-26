@@ -119,3 +119,7 @@ If you want fast, hard timelines above all else and don't care about emotional c
 Use the **$1 intro session** (for new users) as your gateway. Call in, state the bare shape of your question, and then let him lead. What he says in those first five minutes without your prompting will show you exactly why he has been trusted by so many. 
 
 Eli Casey's 200,000 readings are proof of immense longevity and trust. If you need a compassionate, highly experienced empath to navigate complex relationship dynamics, he remains one of the safest and most rewarding bets on the Keen platform.
+
+---
+
+**More Keen reviews:** [Psychic Jane Just Knows](/reviews/keen/psychic-jane-just-knows/) · [Psychic SuZen](/reviews/keen/psychic-suzen-on-keen-review-2026/) · [Psychic Visions by Atlantis](/reviews/keen/psychic-visions-by-atlantis-on-keen-review-2026/) · [Browse all Keen advisors](/reviews/keen/)

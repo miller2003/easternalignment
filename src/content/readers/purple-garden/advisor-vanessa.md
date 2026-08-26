@@ -107,3 +107,7 @@ The lesson for you: **be specific with Vanessa, and confirm your connection earl
 **Skip her if** you're in a fragile place and need the answer softened, or if you want a reader who'll confirm what you're hoping rather than what she sees. Vanessa doesn't do that — and her reviews are better for it.
 
 The first session is effectively free. Bring her the exact question — *is he lying, is this salvageable, what does she actually want* — and let her tell you straight. If the answer isn't what you wanted, mindy's review is the reminder that you'll be grateful for it anyway.
+
+---
+
+**More Purple Garden reviews:** [Insight by Soni](/reviews/purple-garden/insight-by-soni/) · [Fanny Dalfiume](/reviews/purple-garden/fanny-dalfiume/) · [Jackies Tea Tarot](/reviews/purple-garden/jackies-tea-tarot/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

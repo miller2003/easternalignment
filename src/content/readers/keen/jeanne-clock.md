@@ -129,3 +129,7 @@ For other patient, relationship-focused options, compare with [Dr Lisa Powerful 
 Jeanne Clock is a reader you book when you want to be *understood*, not just informed. With 95,000 readings since 2007 and a 4.96 average across 24,000 ratings, her track record is stable and her multi-gift approach is genuinely unusual on Keen.
 
 Start with the **$1 intro**. Use it to feel her pace and see whether her recognition of your situation lands - that is her signature. If it does, a full voice session on a love, family, or life-path question is a safe, high-quality booking.
+
+---
+
+**More Keen reviews:** [That Magic Man](/reviews/keen/that-magic-man/) · [the psychic one](/reviews/keen/the-psychic-one/) · [Tarot With Meg](/reviews/keen/tarot-with-meg-on-keen-review-2026/) · [Browse all Keen advisors](/reviews/keen/)

@@ -146,3 +146,7 @@ Master Sher runs a consistent weekly schedule  -  primarily **1am - 9am PST, dai
 ### What to Have Ready Before Your Session Starts
 
 Write down your core question in one sentence before you open the chat. Not a paragraph  -  one sentence. The most wasted money in psychic readings comes from clients who spend the first several minutes explaining backstory at $4.29/min. Master Sher's bio explicitly states he *"respects his client's time"*  -  meet him halfway by arriving prepared.
+
+---
+
+**More Keen reviews:** [That Magic Man](/reviews/keen/that-magic-man/) · [the psychic one](/reviews/keen/the-psychic-one/) · [Advisor Suzan](/reviews/keen/advisor-suzan/) · [Browse all Keen advisors](/reviews/keen/)

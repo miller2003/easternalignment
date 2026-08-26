@@ -96,4 +96,4 @@ She works by video, voice, or chat, and for an eye-reader the video option is al
 
 **Start with the $30 credit.** Ask one question, see whether her eye-reading, no-tools style resonates, and let the session — not the marketing — decide.
 
-**More Purple Garden reviews:** [Niki Medium](/reviews/purple-garden/niki-medium/) · [Psychic Medium Chloe](/reviews/purple-garden/psychic-medium-chloe/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [PlutonianDust](/reviews/purple-garden/plutoniandust/) · [Oh Life Tarot](/reviews/purple-garden/oh-life-tarot/) · [Paul85](/reviews/purple-garden/paul85/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

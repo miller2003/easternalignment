@@ -103,4 +103,4 @@ One practical note: because Adam's readings run deep, set a budget and a timer b
 
 ---
 
-**More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Andrew Angel](/reviews/purple-garden/andrew-angel/) · [Annah](/reviews/purple-garden/annah/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

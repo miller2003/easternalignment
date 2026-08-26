@@ -170,3 +170,7 @@ New Kasamba clients receive three free minutes with Seek Chelle before any charg
 Connect via chat or phone based on your preference. Have your primary situation in mind but do not over-script your opening. Her triple clair method will begin accessing the energy as soon as the session opens. Give the reading room to find what is unspoken before directing it toward what you have already decided to ask.
 
 ---
+
+---
+
+**More Kasamba reviews:** [Sweet Spirit of Love](/reviews/kasamba/sweet-spirit-of-love-kasamba-review/) · [tarot](/reviews/kasamba/tarot-kasamba-review/) · [The Fruno](/reviews/kasamba/the-fruno-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

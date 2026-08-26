@@ -111,4 +111,4 @@ Psychic Willow is the veteran's veteran: 48 years, an Egyptian deck, a no-dates 
 
 ---
 
-**More Purple Garden reviews:** [Emmanuelle Berger](/reviews/purple-garden/emmanuelle-berger/) · [Sagest](/reviews/purple-garden/sagest/) · [Psychic Logan](/reviews/purple-garden/psychic-logan/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Lirschia](/reviews/purple-garden/lirschia/) · [Mystic Mark](/reviews/purple-garden/mystic-mark/) · [Namrata](/reviews/purple-garden/namrata/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

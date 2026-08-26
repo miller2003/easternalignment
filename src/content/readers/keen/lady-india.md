@@ -126,3 +126,7 @@ For other long-tenured options, compare [Eli Casey](/reviews/keen/eli-casey/) (s
 Lady India's published record — on Keen since 2001, $8.99/min, with live client reviews that show a genuine repeat-caller pattern and independent coverage confirming her time-frame and love/life focus — is a credible signal of a trusted long-term Keen advisor. The earlier gap (no individually attributed client voices) is now filled with sourced reviews, including an honest negative one.
 
 The one caveat is price: at $8.99/min, the value depends on wanting her specific direct style. Start with the **$1 intro** to experience her "Uncovering Truth" approach directly. If her directness lands — as it did for the client who called back twice in one summer — a full call or chat session is a reasonable mid-premium booking.
+
+---
+
+**More Keen reviews:** [Intuitive Azzy](/reviews/keen/intuitive-azzy/) · [Intuitive Guidance with LC](/reviews/keen/intuitive-guidance-with-lc-on-keen-review-2026/) · [Intuitive Jade](/reviews/keen/intuitive-jade/) · [Browse all Keen advisors](/reviews/keen/)

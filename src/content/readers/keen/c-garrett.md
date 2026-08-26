@@ -207,3 +207,7 @@ Book through her Tarot Card Readings profile  -  that's where her full track rec
 The $1 for 5 minutes new user offer applies here as with any Keen reader. Use those minutes to see whether her energetic read on your situation resonates  -  not to extract a full answer. If the first two minutes feel like she's picking up on something real, continue. If it feels like she's working from what you've told her rather than what she's perceiving, you have your answer before you've spent much.
 
 Her wide availability means you don't need to book days out. Check her schedule and connect when the timing works for you  -  that flexibility alone makes the logistics easier than with higher-demand readers.
+
+---
+
+**More Keen reviews:** [Chloe Has Your Love Insights](/reviews/keen/chloe-has-your-love-insights/) · [ChosenOne77](/reviews/keen/chosenone77/) · [Clairvoyant Nicky Power](/reviews/keen/clairvoyant-nicky-power/) · [Browse all Keen advisors](/reviews/keen/)

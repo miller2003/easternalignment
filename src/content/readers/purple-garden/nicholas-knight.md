@@ -123,4 +123,4 @@ For the dual method to fully activate, the session needs at least 20 minutes. Th
 
 ---
 
-**More Purple Garden reviews:** [Namrata](/reviews/purple-garden/namrata/) · [Tarot Instincts](/reviews/purple-garden/tarot-instincts/) · [Psychic Shirla](/reviews/purple-garden/psychic-shirla/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Sagest](/reviews/purple-garden/sagest/) · [Satie Readings](/reviews/purple-garden/satie-readings/) · [Quantum Drew](/reviews/purple-garden/quantum-drew/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

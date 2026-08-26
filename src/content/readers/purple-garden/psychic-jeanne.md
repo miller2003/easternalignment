@@ -117,3 +117,7 @@ A focused 15-minute chat runs about **$90** if you're paying cash — mid-range,
 **Skip her if** you've got a list of five questions and want them all answered in one sitting, or if you need a reader with a softer, more open-ended style. Jeanne is structured, and she's upfront about it.
 
 The first session is effectively free. Bring her the one question you've been carrying. If you leave the way makoto did — a little steadier, a little less alone — you'll understand the 25,082 readings that came before yours.
+
+---
+
+**More Purple Garden reviews:** [Psychic Norell](/reviews/purple-garden/psychic-norell/) · [Psychic Sandra](/reviews/purple-garden/psychic-sandra/) · [Psychic Shirla](/reviews/purple-garden/psychic-shirla/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

@@ -117,4 +117,4 @@ If you are raw and need comfort, her directness can land hard — a gentler read
 
 New Kasamba clients get three free minutes with Danielle. Use them to ask one direct relationship question — her honesty shows immediately, and you’ll know within minutes whether her style is what you need.
 
-**More Kasamba reviews:** [Invincible Insights](/reviews/kasamba/invincible-insights-kasamba-review/) · [Truthful Visions](/reviews/kasamba/truthful-visions-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
+**More Kasamba reviews:** [SOULFUL JOURNEYS](/reviews/kasamba/soulful-journeys-kasamba-review/) · [Sparks Of Insight](/reviews/kasamba/sparks-of-insight-kasamba-review/) · [Spirit Amy](/reviews/kasamba/spirit-amy-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

@@ -119,3 +119,7 @@ But none of that touches the accuracy. *"Scary accurate," "predictions have come
 **Skip him if** you need a rigid yes/no format, or you're impatient with a reader who follows the energy rather than a script.
 
 Either way, the first session is effectively free. Come with your question, let yourself ramble, and see what lands. If you leave with goosebumps — or just the quiet relief of being truly heard — you'll understand the 13,745 readings that came before yours.
+
+---
+
+**More Purple Garden reviews:** [Psychic Jeanne](/reviews/purple-garden/psychic-jeanne/) · [Psychic Jewels](/reviews/purple-garden/psychic-jewels/) · [Psychic Logan](/reviews/purple-garden/psychic-logan/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

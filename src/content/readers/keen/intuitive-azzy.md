@@ -175,3 +175,7 @@ Unlike a clairvoyant-first reader where you deliberately withhold context to tes
 ### My Final Verdict: Where She Fits Among Keen's Best-Value Advisors
 
 At $2.22/min with a 4.9-star rating and a decade of consistent performance, Intuitive Azzy is one of the few advisors on Keen where the math is unambiguously in the client's favor before the session even starts. The guidance-first philosophy is a genuine differentiator  -  honest in a way that most platform readers aren't, and more useful for clients who have moved past the stage of wanting to be told everything will work out. She won't tell you your ex is definitely coming back. She will tell you what the energy around that situation actually looks like right now, what the cards suggest about the trajectory, and what you can do with that information. For clients who are ready for that kind of reading, she's one of the best options on the platform at any price.
+
+---
+
+**More Keen reviews:** [Eye of Pheobe](/reviews/keen/eye-of-pheobe-on-keen-review-2026/) · [Flora Knows All](/reviews/keen/flora-knows-all-keen-review-2026/) · [Gabriel the Messenger](/reviews/keen/gabriel-the-messenger/) · [Browse all Keen advisors](/reviews/keen/)

@@ -120,4 +120,4 @@ If you are strictly secular and the prayer framing would distract you, note it u
 
 New Kasamba clients get three free minutes with Truthful Visions. Use them to ask one love or career question and feel her pace — if the detail and warmth land in the first exchange, continue without hesitation.
 
-**More Kasamba reviews:** [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [Supernormal Soul](/reviews/kasamba/supernormal-soul-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
+**More Kasamba reviews:** [Love Specialist Isabelle](/reviews/kasamba/love-specialist-isabelle-kasamba-review/) · [Love Stefan](/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/) · [Magical Aura](/reviews/kasamba/magical-aura-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

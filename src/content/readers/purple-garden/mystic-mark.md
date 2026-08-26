@@ -133,4 +133,4 @@ Purple Garden offers video, voice, and chat. **Video is the right format for thi
 
 ---
 
-**More Purple Garden reviews:** [Nick](/reviews/purple-garden/nick/) · [PlutonianDust](/reviews/purple-garden/plutoniandust/) · [Truthful Love](/reviews/purple-garden/truthful-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Júpiter](/reviews/purple-garden/jupiter/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [JoJoEmpowers](/reviews/purple-garden/jojoempowers/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

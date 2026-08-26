@@ -111,4 +111,4 @@ Emmanuelle Berger is what eleven years of kept promises looks like: 76,154 readi
 
 ---
 
-**More Purple Garden reviews:** [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Namrata](/reviews/purple-garden/namrata/) · [Psychic Shirla](/reviews/purple-garden/psychic-shirla/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Bella Love](/reviews/purple-garden/bella-love/) · [BellasPsychic](/reviews/purple-garden/bellaspsychic/) · [Empathic Intuitive Marcus](/reviews/purple-garden/empathic-intuitive-marcus/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

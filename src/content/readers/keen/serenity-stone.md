@@ -137,3 +137,7 @@ For broader context, see our reviews of [Readings by Kelly777](/reviews/keen/rea
 Use the **$1 intro session** as a pace test. Call in, state a specific question, and watch how she handles it. If she connects fast and lands points, book a full voice session. If she drifts or stalls in the intro, you have spent a dollar, not thirty.
 
 Serenity Stone has earned her two-decade medium track record on Keen. The 4.66 average and the slow-session complaints are real, but so is the deep loyalty of clients who found closure with her. For patient clients seeking a compassionate medium at a fair rate, she remains a credible option.
+
+---
+
+**More Keen reviews:** [David7](/reviews/keen/david7/) · [Dr Lisa Powerful Insights](/reviews/keen/dr-lisa-powerful-insights/) · [Eli Casey](/reviews/keen/eli-casey/) · [Browse all Keen advisors](/reviews/keen/)

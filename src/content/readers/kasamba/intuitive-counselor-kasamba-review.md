@@ -105,3 +105,7 @@ At our audited **$4.99/min** (confirm the live rate), a focused 15-minute sessio
 **Book her if** your love question comes with an injury — a breakup you're still carrying, trust issues, the soulmate question that won't quiet down — and you want a nineteen-year veteran who treats healing and prediction as the same session, at a price built for ongoing counsel.
 
 **Skip her if** you want exact-date guarantees or a purely transactional yes/no. She sells clarity with confidence, and confidence takes a few more minutes than a verdict.
+
+---
+
+**More Kasamba reviews:** [tarot](/reviews/kasamba/tarot-kasamba-review/) · [Supernormal Soul](/reviews/kasamba/supernormal-soul-kasamba-review/) · [Sweet Spirit of Love](/reviews/kasamba/sweet-spirit-of-love-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

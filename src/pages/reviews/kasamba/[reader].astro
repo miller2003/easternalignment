@@ -13,6 +13,7 @@ import ReaderCard from '../../../components/ReaderCard.astro';
 import ReaderEndCTA from '../../../components/ReaderEndCTA.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
 import InfiniteContentFlow from '../../../components/InfiniteContentFlow.astro';
+import { pickRelatedReaders, pickRelatedGuides } from '../../../lib/relatedReaders';
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../../content/readers/kasamba/*.md');
@@ -41,10 +42,16 @@ const allReaders = Object.entries(allReaderModules)
 
 const totalKasambaReaders = allReaders.length;
 
-const otherReaders = allReaders
-  .filter(r => r.slug !== currentSlug)
-  .sort((a, b) => (b.rating || 0) - (a.rating || 0))
-  .slice(0, 4); // Show top 4 related readers
+// Fair + topically-aware cross-link selector (replaces naive top-4-by-rating, which
+// collapsed link equity onto a tiny elite and starved the 44 newly-added readers).
+const currentReader = {
+  slug: currentSlug,
+  rating: frontmatter.rating,
+  entities: frontmatter.entities,
+  bestFor: frontmatter.bestFor,
+  platformName: frontmatter.platformName,
+};
+const otherReaders = pickRelatedReaders(currentReader, allReaders, 4);
 
 /* Fetch guides for cross-linking */
 const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
@@ -85,7 +92,7 @@ const relatedItems = [
     badge: 'Platform Review',
     badgeVariant: 'primary' as const,
   },
-  ...guides.map(g => ({
+  ...pickRelatedGuides(currentReader, guides, 4).map(g => ({
     title: g.title,
     href: `/guides/${g.slug}/`,
     description: g.description,

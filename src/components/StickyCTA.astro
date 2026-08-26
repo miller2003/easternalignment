@@ -417,7 +417,12 @@ const isFocusedMode = focused !== null;
 
   .sticky-cta__btn--ghost {
     background: #ffffff;
-    color: var(--color-primary, #8b6f4e);
+    /* !important: the base .sticky-cta__btn rule above stamps color:#fff!important
+       (so white text always wins on the primary gold-fill button). Without this
+       override, ghost buttons inherit that white-on-white and "disappear".
+       Same specificity (0,2,1) vs the base rule, so !important is the only
+       way to flip them to legible brown text. */
+    color: var(--color-primary, #8b6f4e) !important;
     border: 1.5px solid var(--color-primary, #8b6f4e);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     font-weight: 600;
@@ -425,7 +430,9 @@ const isFocusedMode = focused !== null;
 
   .sticky-cta__btn--ghost:hover {
     background: var(--color-primary, #8b6f4e);
-    color: #ffffff;
+    /* Symmetric: also force white text on hover — the base :hover rule wins
+       without !important for the ghost variant too. */
+    color: #ffffff !important;
     box-shadow: 0 4px 10px rgba(139, 111, 78, 0.35);
   }
 

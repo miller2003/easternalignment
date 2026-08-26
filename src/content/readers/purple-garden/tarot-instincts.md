@@ -128,4 +128,4 @@ For the tarot-and-numerology combination to have room to work, 20–25 minutes i
 
 ---
 
-**More Purple Garden reviews:** [Fanny Dalfiume](/reviews/purple-garden/fanny-dalfiume/) · [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Sea Love](/reviews/purple-garden/sea-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [PlutonianDust](/reviews/purple-garden/plutoniandust/) · [Psychic Advisor Serena](/reviews/purple-garden/psychic-advisor-serena/) · [Psychic Jeanne](/reviews/purple-garden/psychic-jeanne/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

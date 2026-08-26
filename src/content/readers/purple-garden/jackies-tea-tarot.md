@@ -96,4 +96,4 @@ Her from-price sits in Purple Garden's upper-middle tier, not the budget rack. F
 
 **Start with the $30 credit.** Ask one real question, watch how she works, and decide whether a decade-deep, no-sugarcoat tarot reader is your kind of honest.
 
-**More Purple Garden reviews:** [Satie Readings](/reviews/purple-garden/satie-readings/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Ayla](/reviews/purple-garden/ayla-love-resolution/) · [Athina Mystic](/reviews/purple-garden/athina-mystic/) · [Bella Love](/reviews/purple-garden/bella-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

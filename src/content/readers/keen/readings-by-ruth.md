@@ -136,3 +136,7 @@ For more high-volume options, see our reviews of [Readings by Kelly777](/reviews
 Use the **$1 intro session** as a calibration test. Call or chat in with your name, the other person's name, and your first question - then listen. What she picks up unprompted in those first five minutes is your signal. If you want a direct, experienced navigator who tells you the truth but does it with patience, Ruth is one of the more balanced direct readers on Keen.
 
 Readings by Ruth has held a 4.91 across 8,000+ ratings for a decade by pairing third-generation skill with honesty and heart. At $5.99/min, that balance is the product you are paying for.
+
+---
+
+**More Keen reviews:** [psychicreader19622](/reviews/keen/psychicreader19622-raymond-keen-review-2026/) · [readings by kelly777](/reviews/keen/readings-by-kelly777/) · [Regina Jacks](/reviews/keen/regina-jacks/) · [Browse all Keen advisors](/reviews/keen/)

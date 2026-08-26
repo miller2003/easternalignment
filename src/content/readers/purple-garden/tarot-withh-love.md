@@ -115,4 +115,4 @@ Purple Garden backs your first session with a given advisor with a satisfaction 
 
 **Start with the $30 credit.** At $3.99/min it covers about seven or eight minutes — enough for one specific, well-framed question so you can feel her detailed, no-sugar-coating style before you commit to longer sessions.
 
-**More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/)
+**More Purple Garden reviews:** [Satie Readings](/reviews/purple-garden/satie-readings/) · [Sagest](/reviews/purple-garden/sagest/) · [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

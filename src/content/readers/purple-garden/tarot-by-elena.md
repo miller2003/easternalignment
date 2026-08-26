@@ -115,4 +115,4 @@ Purple Garden backs your first session with a given advisor with a satisfaction 
 
 **Start with the $30 credit.** It covers roughly seven or eight minutes with Elena — enough for one focused, fully transcribed question. Ask it plainly, save the chat, and decide from the record whether her card-anchored style is yours.
 
-**More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/)
+**More Purple Garden reviews:** [Júpiter](/reviews/purple-garden/jupiter/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [Lirschia](/reviews/purple-garden/lirschia/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

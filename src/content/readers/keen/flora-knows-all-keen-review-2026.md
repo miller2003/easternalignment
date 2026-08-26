@@ -198,3 +198,7 @@ What to bring: a specific question rather than an open invitation to tell you wh
 The new-user offer ($1 for 5 minutes) applies here as with any Keen reader, but the math is kinder than usual: even at full rate, a 10-minute calibration session is $25.20. You don't need to cram everything into 5 minutes to protect yourself financially. Take the time to actually assess whether she's connecting with your situation before deciding whether to continue.
 
 Flora Knows All is the most accessible reader in this series by a large margin, and her early engagement numbers suggest something real is developing. Whether you're booking a budget-conscious first reading or looking for a compassionate reader who will genuinely sit with you through something difficult — she's worth the relatively small bet at this stage of her trajectory.
+
+---
+
+**More Keen reviews:** [ChosenOne77](/reviews/keen/chosenone77/) · [Dar66](/reviews/keen/dar66/) · [Clairvoyant Nicky Power](/reviews/keen/clairvoyant-nicky-power/) · [Browse all Keen advisors](/reviews/keen/)

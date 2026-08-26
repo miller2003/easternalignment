@@ -13,6 +13,7 @@ import ReaderCard from '../../../components/ReaderCard.astro';
 import ReaderEndCTA from '../../../components/ReaderEndCTA.astro';
 import RelatedContent from '../../../components/RelatedContent.astro';
 import InfiniteContentFlow from '../../../components/InfiniteContentFlow.astro';
+import { pickRelatedReaders, pickRelatedGuides } from '../../../lib/relatedReaders';
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../../content/readers/purple-garden/*.md');
@@ -39,10 +40,16 @@ const allReaders = Object.entries(allReaderModules)
     slug: path.split('/').pop()?.replace('.md', ''),
   }));
 
-/* Pick 3 related readers (not current) */
-const otherReaders = allReaders
-  .filter(r => r.slug !== currentSlug)
-  .slice(0, 3);
+/* Pick related readers with the fair + topically-aware selector (replaces the old
+   first-3-in-file-order, which meant readers added later never appeared). */
+const currentReader = {
+  slug: currentSlug,
+  rating: frontmatter.rating,
+  entities: frontmatter.entities,
+  bestFor: frontmatter.bestFor,
+  platformName: frontmatter.platformName,
+};
+const otherReaders = pickRelatedReaders(currentReader, allReaders, 4);
 
 /* Fetch guides for the infinite content flow */
 const guideModules = import.meta.glob('../../../content/guides/*.md', { eager: true });
@@ -75,6 +82,24 @@ const readerFaqItems = [
     answer: `We recommend watching their pre-recorded video intro profile on the Purple Garden app first, then choosing the reading format (${frontmatter.bestFor || 'Live Video or Chat'}) that best fits your situation.`
   },
 ];
+
+/* Cross-link block: platform review + guides relevant to this reader's niche. */
+const relatedItems = [
+  {
+    title: 'Purple Garden Review 2026 — Full Platform Assessment',
+    href: '/reviews/purple-garden/',
+    description: 'My comprehensive review of Purple Garden — video readings, $30 free credit, Journeys community verification, and overall experience.',
+    badge: 'Platform Review',
+    badgeVariant: 'primary' as const,
+  },
+  ...pickRelatedGuides(currentReader, guides, 4).map(g => ({
+    title: g.title,
+    href: `/guides/${g.slug}/`,
+    description: g.description,
+    badge: g.category || 'Guide',
+    badgeVariant: 'sage' as const,
+  })),
+];
 ---
 
 <ReviewLayout
@@ -88,6 +113,15 @@ const readerFaqItems = [
   avatarUrl={frontmatter.avatarUrl}
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
+  metaRobots={frontmatter.metaRobots}
+  canonicalUrl={frontmatter.canonicalUrl}
+  ogImage={frontmatter.ogImage}
+  seoTitle={frontmatter.seoTitle || frontmatter.metaTitle}
+  metaDescription={frontmatter.metaDescription}
+  schemaAuthor={frontmatter.schemaAuthor}
+  schemaDatePublished={frontmatter.schemaDatePublished}
+  customSchema={frontmatter.customSchema}
+  entities={frontmatter.entities}
 >
   <Content />
 
@@ -142,6 +176,9 @@ const readerFaqItems = [
       </div>
     </section>
   )}
+
+  <!-- Cross-linking to platform review, comparisons, guides -->
+  <RelatedContent title="Continue Your Research" items={relatedItems} />
 
   <!-- Infinite Content Flow: seamless scroll into the PG platform audit -->
   {flowGuide && (

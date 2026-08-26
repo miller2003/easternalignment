@@ -111,3 +111,7 @@ Two structural notes work in your favor. First, chat and voice cost the same her
 **Book her if** your question involves another person's heart — what they feel, what they intend, whether to hold on or let go — and you want a reader whose perfect score coexists with the honesty to admit no one bats a thousand. At the half-price promo, the answer to your question has rarely been cheaper.
 
 **Skip her if** you want guaranteed outcomes or soft-focus validation. She sells the truth, and the truth is the product.
+
+---
+
+**More Kasamba reviews:** [Diana Shoshone](/reviews/kasamba/diana-shoshone-kasamba-review/) · [Divine Master](/reviews/kasamba/divine-master-kasamba-review/) · [David James](/reviews/kasamba/david-james-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

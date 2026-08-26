@@ -104,4 +104,4 @@ If you want the full experience, book live video and watch his manner as he read
 
 ---
 
-**More Purple Garden reviews:** [Twin Flame Specialist Aria](/reviews/purple-garden/twin-flame-specialist-aria/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Namrata](/reviews/purple-garden/namrata/) · [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Mystic Mark](/reviews/purple-garden/mystic-mark/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

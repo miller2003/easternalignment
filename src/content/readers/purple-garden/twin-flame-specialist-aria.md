@@ -113,4 +113,4 @@ Purple Garden backs your first session with a given advisor with a satisfaction 
 
 **Start with the $30 credit.** It covers about five minutes with Aria at $5.99/min — enough to bring one specific person and one specific question, watch how she reframes the pattern, and decide whether her honest, boundary-setting style is the one you've been missing.
 
-**More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Tarot Withh Love](/reviews/purple-garden/tarot-withh-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [psychic willow](/reviews/purple-garden/psychic-willow/) · [Sagest](/reviews/purple-garden/sagest/) · [Quantum Drew](/reviews/purple-garden/quantum-drew/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

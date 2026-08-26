@@ -120,3 +120,7 @@ For another direct male reader, compare [That Magic Man](/reviews/keen/that-magi
 Clairvoyant Nicky Power offers a rare combination on Keen: direct, tarot-forward delivery that still leaves clients feeling supported. With 19,000 readings since 2001 at 4.86 stars, his record is stable, if based on a smaller rating sample than the platform's giants.
 
 Use the **$1 intro** to feel his confident, kind style. If you want direct answers with cards and a supportive close, he is a solid mid-rate booking.
+
+---
+
+**More Keen reviews:** [Readings by Ruth](/reviews/keen/readings-by-ruth/) · [Regina Jacks](/reviews/keen/regina-jacks/) · [Serenity Stone](/reviews/keen/serenity-stone/) · [Browse all Keen advisors](/reviews/keen/)

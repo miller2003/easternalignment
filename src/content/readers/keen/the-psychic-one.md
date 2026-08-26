@@ -167,3 +167,7 @@ One practical note: **book by phone rather than chat if you can.** At $3.92/min,
 ### My Final Verdict: Where She Stands Among Keen's Highest-Volume Advisors
 
 Twenty-five years. 183,000 sessions. A promise specific enough to be proven wrong every day  -  and still standing. The psychic one is not for every client, and the feedback history is honest enough that I wouldn't recommend booking her without using the intro session as a deliberate test first. But for clients who arrive with a focused question and a real desire for timeline-specific answers, she represents something that very few advisors on any platform can offer: a genuine two-decade track record built specifically around delivering the kind of detail most readers won't commit to. That's not nothing. That's worth one dollar to find out.
+
+---
+
+**More Keen reviews:** [readings by kelly777](/reviews/keen/readings-by-kelly777/) · [Readings by Ruth](/reviews/keen/readings-by-ruth/) · [Regina Jacks](/reviews/keen/regina-jacks/) · [Browse all Keen advisors](/reviews/keen/)

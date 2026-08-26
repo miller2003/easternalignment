@@ -113,3 +113,7 @@ The session design that works here: one question, tightly framed. *"We broke up 
 **Book him if** you're in the aftermath — fresh breakup, ambiguous silence, the "will we get back together" loop — or facing a commitment decision, and you want a specialist with fifteen years of receipts who gives timelines and solutions instead of vague comfort. Three free minutes, half price after that, and one tightly-framed question is all it takes to know.
 
 **Skip him if** you need a long exploratory session, thick public testimonials, or a specialty outside his lane.
+
+---
+
+**More Kasamba reviews:** [Golden Eye](/reviews/kasamba/golden-eye-kasamba-review/) · [Elizabeth](/reviews/kasamba/elizabeth-kasamba-review/) · [George Wic](/reviews/kasamba/george-wic-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

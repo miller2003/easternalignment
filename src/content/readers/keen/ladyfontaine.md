@@ -122,3 +122,7 @@ For other no-tools options, compare [Gina Marie](/reviews/keen/gina-marie/) and 
 LadyFontaine's 4.99 average across 5,098 ratings and 16,000 readings since 2007 is one of the strongest records on Keen, and her real reviews back the number with a decade of loyal clients. Her live Keen rate is $8.97/min, which places her in the platform's upper tier - use the $1 intro to gauge fit before committing to a full session.
 
 Use the **$1 intro** to experience her no-tools, insightful style. If her honesty and accuracy land for you, she is one of the best no-tools, certified bookings on the platform.
+
+---
+
+**More Keen reviews:** [Mike Pace](/reviews/keen/mike-pace/) · [Master Psychic Dev](/reviews/keen/master-psychic-dev/) · [Master Sher](/reviews/keen/master-sher/) · [Browse all Keen advisors](/reviews/keen/)

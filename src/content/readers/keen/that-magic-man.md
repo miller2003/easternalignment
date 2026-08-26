@@ -126,3 +126,7 @@ For other no-tools readers, compare [Gina Marie](/reviews/keen/gina-marie/) and 
 That Magic Man (James) backs his direct, no-tools style with 56,000 readings and a 4.93 average across 14,000 ratings - a high, stable record for a no-tools reader, and at **$2.99/min** an unusually low rate for that volume. Use the $1 intro to confirm fit; if he connects, he is one of the best-value male, no-tools bookings on Keen.
 
 Use the **$1 intro**. His speed and specificity mean you will know quickly whether his "magic" connects for you. If it does, he is one of the strongest male, no-tools bookings on Keen.
+
+---
+
+**More Keen reviews:** [lorrie c](/reviews/keen/lorrie-c/) · [Love Psychic Victoria Sands](/reviews/keen/love-psychic-victoria-sands-keen-review-2026/) · [Master Psychic Adam Stone](/reviews/keen/master-psychic-adam-stone/) · [Browse all Keen advisors](/reviews/keen/)

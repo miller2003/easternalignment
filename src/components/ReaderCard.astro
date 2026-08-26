@@ -30,10 +30,34 @@ const {
 // Extract readable reader name from platformName (e.g., "Keen: arradaza" → "arradaza")
 const readerDisplayName = name.includes(':') ? name.split(':').pop()?.trim() : name;
 
-// Clean up pricing string (e.g., "$3.59/min (Love & Relationships profile)" -> "$3.59/min")
-const cleanPrice = pricing 
-  ? pricing.split('(')[0].replace(/chat|phone/i, '').trim() 
-  : '';
+// Clean up pricing for the card only: show a fixed price or a per-minute range,
+// stripping promo/reg/free-minute/verify/profile noise and chat/voice/video splits.
+// Source `pricing` stays untouched — this is display-layer only.
+function formatPrice(p) {
+  if (!p) return '';
+  const re = /\$\s*(\d+(?:\.\d+)?)\s*\/min/gi;
+  const nums = [];
+  let m;
+  while ((m = re.exec(p)) !== null) nums.push(parseFloat(m[1]));
+  if (nums.length === 0) {
+    // fallback: just drop parentheses and chat/phone text
+    return p.split('(')[0].replace(/chat|phone/i, '').trim();
+  }
+  const min = Math.min(...nums);
+  const max = Math.max(...nums);
+  // map numbers back to their original $-string (no internal spaces)
+  const strMap = {};
+  let mm;
+  const re2 = /\$\s*(\d+(?:\.\d+)?)\s*\/min/gi;
+  while ((mm = re2.exec(p)) !== null) {
+    const n = parseFloat(mm[1]);
+    if (!(n in strMap)) strMap[n] = mm[0].replace(/\s+/g, '').replace(/\/min$/i, '');
+  }
+  const minS = strMap[min];
+  const maxS = strMap[max];
+  return min === max ? `${minS}/min` : `${minS}–${maxS}/min`;
+}
+const cleanPrice = formatPrice(pricing);
 
 // Generate compact CTA based on offer
 let ctaText = 'Book Now';
@@ -201,8 +225,9 @@ const fallbackAvatarSrc = `data:image/svg+xml,${encodeURIComponent(avatarSvg)}`;
 
   .reader-meta {
     display: flex;
-    align-items: center;
-    gap: var(--space-3);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
   }
 
   .reader-price {

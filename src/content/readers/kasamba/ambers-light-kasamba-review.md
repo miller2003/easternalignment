@@ -113,3 +113,7 @@ One logistics note that matters: she keeps human hours. Her schedule runs Monday
 **Book her if** you're carrying a loss and need closure, if you're asking "am I on the right path," or if you want a 22-year veteran whose honesty policies are printed on her own storefront — and whose clients come back to report that things unfolded as she said.
 
 **Skip her if** you need a date stamp, a Saturday night session, or rapid-fire certainty. She offers something rarer: the truth, gently, from someone who's been delivering it since 2004.
+
+---
+
+**More Kasamba reviews:** [Reunite Love MO](/reviews/kasamba/reunite-love-mo-kasamba-review/) · [Seek Chelle](/reviews/kasamba/seek-chelle-kasamba-review/) · [Seek Love Clarity~RYAN](/reviews/kasamba/seek-love-clarity-ryan-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

@@ -115,3 +115,7 @@ Promos rotate — confirm the rate shown on her profile before your session. The
 **Book her if** your question actually matters — a marriage at a crossroads, a person you can't read, a decision you can't afford to get wrong — and you want the single most validated love reader on Kasamba, at half her usual rate, with the first three minutes free.
 
 **Skip her if** you're price-shopping for the cheapest minutes or want a quick novelty yes/no. She's built for stakes.
+
+---
+
+**More Kasamba reviews:** [A Divine Spirit](/reviews/kasamba/divine-spirit-kasamba-review/) · [Divinely Spiritual](/reviews/kasamba/divinely-spiritual-kasamba-review/) · [Elizabeth](/reviews/kasamba/elizabeth-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

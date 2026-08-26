@@ -146,3 +146,7 @@ For more high-volume options, see our reviews of [The Psychic One](/reviews/keen
 Use the **$1 intro session** as a calibration test. Call or chat in, give her the shape of your question, then listen. What she picks up unprompted in those first five minutes is your signal. If you want an experienced, spiritually rooted reader who does not charge premium rates, Dar66 is one of the better value plays on Keen today.
 
 Dar66 has held a 4.91 across 11,000 ratings for over fifteen years on Keen by being steady, accurate, and fairly priced. At $4.20/min, that is a genuinely good deal on tenure.
+
+---
+
+**More Keen reviews:** [Alice Runyon](/reviews/keen/alice-runyon/) · [AllMyAngels](/reviews/keen/allmyangels/) · [arradaza](/reviews/keen/arradaza/) · [Browse all Keen advisors](/reviews/keen/)

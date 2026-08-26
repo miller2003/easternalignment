@@ -111,3 +111,7 @@ One practical note: she's US-based and her feed shows steady daily traffic, so o
 **Book her if** your situation is a tangle — an ex, a mess with too many moving parts, a question you want asked at the guide level rather than the card level — and you want a board-certified professional with fifty years of practice, stated ethics, and a perfect 5.0 across 64,270 readings. The first 3 minutes are free; ask the real question and see if a name comes back.
 
 **Skip her if** your question falls in her excluded categories, or if the guide framework doesn't match your beliefs. She's a specialist with a method, and the method is the product.
+
+---
+
+**More Kasamba reviews:** [Diana Shoshone](/reviews/kasamba/diana-shoshone-kasamba-review/) · [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [David James](/reviews/kasamba/david-james-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

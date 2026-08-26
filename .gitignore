@@ -27,53 +27,16 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# scratch site-config dumps containing live API tokens — never commit
-scratch/_api.json
-scratch/_t_kas.html
-scratch/_t_pg.html
+# scratch/ is a local-only workspace (one-off scripts, scrape dumps, fix
+# staging, AI notes). Nothing in it belongs in version control — the whole
+# directory is ignored. Keep valuable artifacts here locally only.
+scratch/
 
-# avatar-fix staging (rebuilt by `_fx_*.py` scripts) — never commit
-scratch/_fx_pg_pages/
-scratch/_fx_kas_pages/
-scratch/_fx_pg_avatars/
-scratch/_fx_kas_avatars/
-scratch/_fx_pg.html
-scratch/_fx_kas.html
-scratch/_av_fix_map.json
-scratch/_pg_canonical.json
-scratch/_pg_diff.json
-scratch/_kas_diff.json
-scratch/_av_fix_map.py
-scratch/_fx_pg_fetch.py
-scratch/_fx_pg_diff.py
-scratch/_fx_kas_diff.py
-scratch/_fx_kas_diff2.py
-# run-once local Keen avatar fix script (user's machine only)
-scratch/keen_fix.py
+# scripts/ — only these two dev tools are tracked; everything else is a
+# run-once content-fix script kept locally only.
+scripts/*
+!scripts/fetch-reader-avatars.mjs
+!scripts/validate-reviews.mjs
 
-# avatar-fix round-2 staging (fx2_*: page dumps, downloads, scripts) — never commit
-scratch/fx2/
-scratch/fx2_k/
-scratch/fx2_k_stage/
-scratch/fx2_stage/
-scratch/fx2_keen_pages/
-scratch/fx2_keen_stage/
-scratch/fx2_keen_urls.json
-scratch/fx2_keen_result.json
-scratch/fx2_keen.py
-scratch/fx2_keen_dl.sh
-scratch/fx2_kas.py
-scratch/fx2_pg.py
-scratch/fx2_pg2.py
-scratch/fx2_pg_result.json
-scratch/fx2_batch*.txt
-scratch/fx2_b4.txt
-scratch/fx2_raj*.html
-scratch/fx2_keen_alice.html
-scratch/fx2_keen_alice.html
-scratch/fx2_missing.txt
-
-# scratch temp scrape dumps & binary artifacts (incl. PG/Kasamba pages with
-# embedded FbConversionsApiToken) — never commit; keep only .py/.csv/.md scripts
-scratch/**/*.html
-scratch/**/*.bin
+# throwaway repo-cleanup audit report (one-time, never commit)
+REPO_CLEANUP_AUDIT_2026-08-27.md

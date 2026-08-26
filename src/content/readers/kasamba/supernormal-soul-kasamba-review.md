@@ -133,4 +133,4 @@ Never book her by voice at $39.99 unless price is no object — that rate is har
 
 New Kasamba clients get three free minutes with Supernormal Soul. Use them on chat to ask one love question and feel her tone — if the spiritual, structured style connects, continue on chat to keep the rate reasonable.
 
-**More Kasamba reviews:** [Truthful Visions](/reviews/kasamba/truthful-visions-kasamba-review/) · [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
+**More Kasamba reviews:** [Divinely Spiritual](/reviews/kasamba/divinely-spiritual-kasamba-review/) · [Elizabeth](/reviews/kasamba/elizabeth-kasamba-review/) · [George Wic](/reviews/kasamba/george-wic-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

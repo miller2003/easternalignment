@@ -204,3 +204,7 @@ David7 is listed as available and can be reached by both phone and chat. His pri
 Write your question before you start. One sentence. Not a paragraph of backstory  -  a single sentence that names what you actually need to know. At $6.99/min, every minute you spend explaining context is money spent not receiving a reading. David7's track record suggests he picks up quickly without needing extensive setup  -  meet him there by arriving focused.
 
 If you're a new Keen user, your first 5 minutes cost $1. Use that window as a genuine calibration, then decide whether to continue into a full session.
+
+---
+
+**More Keen reviews:** [Eli Casey](/reviews/keen/eli-casey/) · [Eye of Pheobe](/reviews/keen/eye-of-pheobe-on-keen-review-2026/) · [Flora Knows All](/reviews/keen/flora-knows-all-keen-review-2026/) · [Browse all Keen advisors](/reviews/keen/)

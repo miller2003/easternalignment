@@ -96,4 +96,4 @@ Her own site frames it plainly — she reads with the tools live, on video, conn
 
 **Start with the $30 credit.** Ask your sharpest love-or-money question, watch her work the ball and the cards, and decide whether a full-toolkit reader is your speed.
 
-**More Purple Garden reviews:** [Jackies Tea Tarot](/reviews/purple-garden/jackies-tea-tarot/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Satie Readings](/reviews/purple-garden/satie-readings/) · [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Tarot Instincts](/reviews/purple-garden/tarot-instincts/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

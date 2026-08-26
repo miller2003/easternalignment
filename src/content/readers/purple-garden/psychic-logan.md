@@ -107,4 +107,4 @@ Psychic Logan has been answering Purple Garden's hardest question — *what am I
 
 ---
 
-**More Purple Garden reviews:** [Emmanuelle Berger](/reviews/purple-garden/emmanuelle-berger/) · [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Tarot Instincts](/reviews/purple-garden/tarot-instincts/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [BellasPsychic](/reviews/purple-garden/bellaspsychic/) · [Emmanuelle Berger](/reviews/purple-garden/emmanuelle-berger/) · [Empathic Intuitive Marcus](/reviews/purple-garden/empathic-intuitive-marcus/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

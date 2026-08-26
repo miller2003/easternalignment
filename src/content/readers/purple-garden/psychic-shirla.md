@@ -100,4 +100,4 @@ New clients get $30 in credit on a first purchase — about six or seven minutes
 
 **Start with the $30 credit.** Six minutes is enough to ask one real relationship question and feel whether the coach's style is the one that moves you. If the homework lands, you have found a reader worth keeping.
 
-**More Purple Garden reviews:** [Truthful love](/reviews/purple-garden/truthful-love/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Ayla](/reviews/purple-garden/ayla-love-resolution/) · [Bella Love](/reviews/purple-garden/bella-love/) · [BellasPsychic](/reviews/purple-garden/bellaspsychic/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

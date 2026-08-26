@@ -100,4 +100,4 @@ Purple Garden now backs your first session with a given advisor with a satisfact
 
 **Start with the $30 credit.** It's enough for a proper first session with Ayla — ask one real relationship question, watch how she works, and decide from there whether the multi-tool style is yours.
 
-**More Purple Garden reviews:** [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Truthful love](/reviews/purple-garden/truthful-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Nick](/reviews/purple-garden/nick/) · [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Niki Medium](/reviews/purple-garden/niki-medium/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

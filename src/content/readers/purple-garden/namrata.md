@@ -111,4 +111,4 @@ Arrive with the full context of what's actually going on, not just the surface q
 
 ---
 
-**More Purple Garden reviews:** [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Sea Love](/reviews/purple-garden/sea-love/) · [Fanny Dalfiume](/reviews/purple-garden/fanny-dalfiume/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Paul85](/reviews/purple-garden/paul85/) · [PlutonianDust](/reviews/purple-garden/plutoniandust/) · [Psychic Advisor Serena](/reviews/purple-garden/psychic-advisor-serena/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

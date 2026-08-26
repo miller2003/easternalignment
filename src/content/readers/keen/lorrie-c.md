@@ -105,4 +105,4 @@ lorrie c is the empath the skeptics ended up verifying: 60,595 readings, a 4.98 
 
 ---
 
-**More Keen reviews:** [Ask Fran](/reviews/keen/ask-fran/) · [Psychic Suzen](/reviews/keen/psychic-suzen-on-keen-review-2026/) · [Browse all Keen advisors](/reviews/keen/)
+**More Keen reviews:** [arradaza](/reviews/keen/arradaza/) · [C Garrett](/reviews/keen/c-garrett/) · [Ask Fran](/reviews/keen/ask-fran/) · [Browse all Keen advisors](/reviews/keen/)

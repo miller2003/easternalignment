@@ -120,3 +120,7 @@ And the practical side of that same trait: her predictions often unfold over mon
 **Skip her if** you want a quick yes/no tonight and a different answer next week if you don't like it. She doesn't sell that. Her 5.0 exists precisely because she refuses to.
 
 The first 3 minutes are free. Bring her the question you keep re-asking everyone else — and notice what it feels like when someone answers it the same way twice.
+
+---
+
+**More Kasamba reviews:** [Zara Insights](/reviews/kasamba/zara-insights-kasamba-review/) · [A Psychic Friend](/reviews/kasamba/a-psychic-friend-kasamba-review/) · [Accurate Love Readings](/reviews/kasamba/accurate-love-readings-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

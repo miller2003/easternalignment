@@ -107,4 +107,4 @@ SYMONNE is 23 years of spiritual depth at a budget price — the reader for the 
 
 ---
 
-**More Keen reviews:** [lorrie c](/reviews/keen/lorrie-c/) · [Ask Fran](/reviews/keen/ask-fran/) · [Browse all Keen advisors](/reviews/keen/)
+**More Keen reviews:** [Spirit Answers](/reviews/keen/spirit-answers-on-keen-review-2026/) · [Tammy the Voice Reader](/reviews/keen/tammy-the-voice-reader/) · [Tarot With Meg](/reviews/keen/tarot-with-meg-on-keen-review-2026/) · [Browse all Keen advisors](/reviews/keen/)

@@ -104,4 +104,4 @@ New clients get $30 in credit on a first purchase — enough for roughly seven o
 
 **Start with the $30 credit.** Eight minutes is enough to ask one real question and feel whether her no-sugarcoat style is the one that helps you. If the truth lands — and for most of her 8,900-plus clients it has — you will know you have found your reader.
 
-**More Purple Garden reviews:** [Ayla Love Resolution](/reviews/purple-garden/ayla-love-resolution/) · [Psychic Shirla](/reviews/purple-garden/psychic-shirla/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Namrata](/reviews/purple-garden/namrata/) · [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Nick](/reviews/purple-garden/nick/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

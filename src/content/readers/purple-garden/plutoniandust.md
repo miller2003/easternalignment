@@ -151,4 +151,4 @@ For the astrology dimension to be at its richest, come prepared with your **birt
 
 ---
 
-**More Purple Garden reviews:** [Nick](/reviews/purple-garden/nick/) · [Mystic Mark](/reviews/purple-garden/mystic-mark/) · [Athina Mystic](/reviews/purple-garden/athina-mystic/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Empathic Intuitive Marcus](/reviews/purple-garden/empathic-intuitive-marcus/) · [Fanny Dalfiume](/reviews/purple-garden/fanny-dalfiume/) · [Insight by Soni](/reviews/purple-garden/insight-by-soni/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

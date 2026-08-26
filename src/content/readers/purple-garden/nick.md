@@ -147,4 +147,4 @@ Purple Garden supports video, voice, and chat. For a tarot reader, **video gives
 
 ---
 
-**More Purple Garden reviews:** [Mystic Mark](/reviews/purple-garden/mystic-mark/) · [PlutonianDust](/reviews/purple-garden/plutoniandust/) · [Jackies Tea Tarot](/reviews/purple-garden/jackies-tea-tarot/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Andrew Angel](/reviews/purple-garden/andrew-angel/) · [Advisor Vanessa](/reviews/purple-garden/advisor-vanessa/) · [Annah](/reviews/purple-garden/annah/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

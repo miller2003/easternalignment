@@ -111,3 +111,7 @@ When you book her, you are paying for *speed of connection*. Cheaper advisors of
 Advisor Suzan is a Keen institution for a reason. Her ability to consistently tap into the complex emotional undercurrents of romantic relationships has kept her at the top of the platform for nearly 20 years. 
 
 If you are a new user on Keen, you can utilize the **first 5 minutes for $1** introductory offer. This is the perfect window to test her empathic connection. Call in, provide just the first name of your person of interest, and let her tune in. Once she accurately describes their current energy, you will know exactly why she has 136,000 readings under her belt.
+
+---
+
+**More Keen reviews:** [Alice Runyon](/reviews/keen/alice-runyon/) · [AllMyAngels](/reviews/keen/allmyangels/) · [arradaza](/reviews/keen/arradaza/) · [Browse all Keen advisors](/reviews/keen/)

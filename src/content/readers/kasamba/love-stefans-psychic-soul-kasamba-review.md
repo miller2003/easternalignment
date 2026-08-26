@@ -128,3 +128,7 @@ If you're ready for the answer — whichever one it is — there's barely a safe
 **Skip him if** you want your hopes repeated back to you, or if the regular $10.99 rate is past your budget and you'd only book at full price. Use the promo or don't go.
 
 The free three minutes exist for a reason. Ask the question you've been carrying. If Gueshna could walk out of her session *"relieved, waiting for results,"* you can walk out of yours knowing where you stand.
+
+---
+
+**More Kasamba reviews:** [Love Psychic Indi](/reviews/kasamba/love-psychic-indi-kasamba-review/) · [LOVE READINGS BY SAJ](/reviews/kasamba/love-readings-by-saj-kasamba-review/) · [Love Readings By Sarah](/reviews/kasamba/love-readings-by-sarah-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

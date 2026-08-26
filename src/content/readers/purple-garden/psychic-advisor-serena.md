@@ -92,4 +92,4 @@ Two practical notes. First, she's on Purple Garden part-time alongside a full-ti
 
 **Start with the $30 credit.** Set the bell alert, ask one real question, and see whether two decades of straight-talk mediumship is your kind of truth.
 
-**More Purple Garden reviews:** [Niki Medium](/reviews/purple-garden/niki-medium/) · [Psychic Medium Chloe](/reviews/purple-garden/psychic-medium-chloe/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Nick](/reviews/purple-garden/nick/) · [Niki Medium](/reviews/purple-garden/niki-medium/) · [nuwatarot](/reviews/purple-garden/nuwatarot/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

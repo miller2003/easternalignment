@@ -115,4 +115,4 @@ Sagest is what happens when a trained life coach with a medium's gift decides th
 
 ---
 
-**More Purple Garden reviews:** [Emmanuelle Berger](/reviews/purple-garden/emmanuelle-berger/) · [Psychic Logan](/reviews/purple-garden/psychic-logan/) · [Nicholas Knight](/reviews/purple-garden/nicholas-knight/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Tarot Instincts](/reviews/purple-garden/tarot-instincts/) · [Tarot Withh Love](/reviews/purple-garden/tarot-withh-love/) · [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

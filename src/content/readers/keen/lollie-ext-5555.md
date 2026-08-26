@@ -138,3 +138,7 @@ For context on high-volume alternatives, see our reviews of [Readings by Kelly77
 Use Lollie's **"FIRSTREAD" message offer** (3 free minutes) or the **$1 intro** as a calibration test. Message her your name, the other person's name, and your single most pressing question - then stop. What she says without prompting is your signal. If you want a reader who respects your clock and tells you the truth you need rather than the truth you want, she is one of the most consistent direct voices active on Keen.
 
 Lollie has earned her 4.92 across 20,000 ratings by doing one thing relentlessly: giving raw, practical reads without the fluff. At $6.99/min, that is a fair price for the clients who want exactly that.
+
+---
+
+**More Keen reviews:** [Serenity Stone](/reviews/keen/serenity-stone/) · [Sophia Rose Light](/reviews/keen/sophia-rose-light-on-keen-review-2026/) · [Spirit Answers](/reviews/keen/spirit-answers-on-keen-review-2026/) · [Browse all Keen advisors](/reviews/keen/)

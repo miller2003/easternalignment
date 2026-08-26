@@ -218,3 +218,7 @@ Chat is also available for clients who prefer text. Given the humor and warmth d
 Before you connect: his first name is Raymond. Use it. The clients who get the most from him seem to treat it as a real relationship rather than a service transaction, and he apparently responds to that. Have one focused question, give him the first name of anyone involved, and let the session go where it goes — his read on your situation has 19 years of pattern recognition behind it, and the evidence suggests he doesn't need a lot of setup time to get there.
 
 The generic username is not the reader. Raymond is.
+
+---
+
+**More Keen reviews:** [Heather Ashera](/reviews/keen/heather-ashera/) · [Gabriel the Messenger](/reviews/keen/gabriel-the-messenger/) · [Gina Marie](/reviews/keen/gina-marie/) · [Browse all Keen advisors](/reviews/keen/)

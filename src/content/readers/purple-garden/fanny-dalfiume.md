@@ -105,4 +105,4 @@ Set a timer if you tend to linger — the price makes it easy to keep talking �
 
 ---
 
-**More Purple Garden reviews:** [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Tarot Withh Love](/reviews/purple-garden/tarot-withh-love/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Psychic Jewels](/reviews/purple-garden/psychic-jewels/) · [Psychic Logan](/reviews/purple-garden/psychic-logan/) · [Chloe Psychic UK](/reviews/purple-garden/psychic-medium-chloe/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

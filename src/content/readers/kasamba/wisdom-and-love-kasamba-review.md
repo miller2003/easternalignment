@@ -120,3 +120,7 @@ The other honest flag: his status often shows offline. No.2 overall creates a qu
 **Skip him if** it's a low-stakes curiosity check, or if $13.99/min at promo would strain your budget for what amounts to a "will he text" question. There are excellent readers here at a third of his price. Save Andrew for the storm.
 
 The first 3 minutes are free. Bring him the heaviest question you're carrying. User_6870274 walked out of her "worst storm" with "what will be will be" — and that kind of peace is exactly what the premium buys.
+
+---
+
+**More Kasamba reviews:** [Quietsound](/reviews/kasamba/quietsound-kasamba-review/) · [Raven Franks](/reviews/kasamba/raven-franks-kasamba-review/) · [Rekindle HopesHearts Amena](/reviews/kasamba/rekindle-hopeshearts-amena-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

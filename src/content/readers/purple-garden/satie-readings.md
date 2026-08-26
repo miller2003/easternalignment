@@ -104,4 +104,4 @@ New clients get $30 in credit on a first purchase — about six minutes at her f
 
 **Start with the $30 credit.** Six minutes on camera is enough to ask one real love question and feel whether her 40-year, no-sugarcoat style is the one that helps you. If the clarity lands — and for most of her nearly 18,000 clients it has — you have found a reader worth keeping.
 
-**More Purple Garden reviews:** [Tarot by Elena](/reviews/purple-garden/tarot-by-elena/) · [Lejla Kristal](/reviews/purple-garden/lejla-kristal/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)
+**More Purple Garden reviews:** [Ayla](/reviews/purple-garden/ayla-love-resolution/) · [Athena Love](/reviews/purple-garden/athena-love/) · [Athina Mystic](/reviews/purple-garden/athina-mystic/) · [Browse all Purple Garden advisors](/reviews/purple-garden/)

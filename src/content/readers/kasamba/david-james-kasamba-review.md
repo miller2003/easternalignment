@@ -114,3 +114,7 @@ But be honest with yourself about which problem you have. If the last three read
 **Skip him if** you want warmth first and truth second, or if a promo-dependent price annoys you — check the card on his page and decide with your eyes open.
 
 His own bio ends with an invitation: *"you, the cosmos, and me."* Three free minutes is long enough to find out if that's the conversation you've been avoiding having.
+
+---
+
+**More Kasamba reviews:** [True Love Connection](/reviews/kasamba/true-love-connection-kasamba-review/) · [Truth and Light](/reviews/kasamba/truth-and-light-kasamba-review/) · [Truthful Visions](/reviews/kasamba/truthful-visions-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

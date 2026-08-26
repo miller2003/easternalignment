@@ -117,4 +117,4 @@ If your questions are mostly career or finance, her love-centred focus is a weak
 
 New Kasamba clients get three free minutes with Advisor by Jenny. At her promo rates, even a paid follow-up is cheap — use the free window to ask one relationship question and see whether her clear, structured style works for you.
 
-**More Kasamba reviews:** [Invincible Insights](/reviews/kasamba/invincible-insights-kasamba-review/) · [Danielle Psychic](/reviews/kasamba/danielle-psychic-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)
+**More Kasamba reviews:** [Intuitive Counselor](/reviews/kasamba/intuitive-counselor-kasamba-review/) · [light4you](/reviews/kasamba/light4you-kasamba-review/) · [Invincible Insights](/reviews/kasamba/invincible-insights-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

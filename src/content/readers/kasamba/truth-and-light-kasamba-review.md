@@ -114,3 +114,7 @@ If budget is your primary constraint, book a $1.99–$5.49 reader from our other
 **Book him if** the question keeping you up is heavy — love, purpose, a decision with consequences — and you want Kasamba's highest-ranked reader: a perfect 5.0 across 21 years, delivered by someone formally trained to help you carry the answer. Use the 3 free minutes. Feel the difference a counsellor's pacing makes. Then decide.
 
 **Skip him if** you want the cheapest possible minutes or a quick yes/no novelty. He's neither, and at his rate he shouldn't be.
+
+---
+
+**More Kasamba reviews:** [Golden Eye](/reviews/kasamba/golden-eye-kasamba-review/) · [Inspired Within](/reviews/kasamba/inspired-within-kasamba-review/) · [Immense Spark](/reviews/kasamba/immense-spark-n-au-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

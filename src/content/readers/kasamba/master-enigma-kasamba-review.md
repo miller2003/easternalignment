@@ -122,3 +122,7 @@ The other caveat is mechanical: he's popular enough that even when his status sh
 **Skip him if** you're shopping for the cheapest possible minutes, or if what you really need is emotional support rather than information. He's a specialist in the truth. Price and pacing both assume that's what you came for.
 
 Either way, the math on finding out is close to zero: 3 free minutes, half-price promo, and a satisfaction guarantee behind it. Ask him the real question — the one you've been circling — and watch what happens in the first three minutes. That answer will tell you everything about the next fifteen.
+
+---
+
+**More Kasamba reviews:** [Truthful Visions](/reviews/kasamba/truthful-visions-kasamba-review/) · [Wisdom and Love](/reviews/kasamba/wisdom-and-love-kasamba-review/) · [Truth and Light](/reviews/kasamba/truth-and-light-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

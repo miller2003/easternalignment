@@ -130,3 +130,7 @@ For broader context, see our reviews of [Readings by Kelly777](/reviews/keen/rea
 Use the **$1 intro session** as a calibration test. Call in, say as little as you comfortably can, and see what her voice-energy method picks up. If she lands on something specific unprompted, the 4.98 average is being earned in real time - book a full session.
 
 Tammy the Voice Reader has held a near-perfect score across 26,000 ratings and two decades on Keen. The $9.99/min rate is real, but for clients who want a Top Advisor with a distinctive method and a track record of outcomes, she is among the most consistently rated options on the platform.
+
+---
+
+**More Keen reviews:** [C Garrett](/reviews/keen/c-garrett/) · [Chloe Has Your Love Insights](/reviews/keen/chloe-has-your-love-insights/) · [ChosenOne77](/reviews/keen/chosenone77/) · [Browse all Keen advisors](/reviews/keen/)

@@ -13,6 +13,7 @@
 - 转化优先 + 明贬暗褒：只提无关痛痒或可管理的小缺点，解法必须强化推荐；净读必须是推荐
 - 禁编造 quote/价格；reader .md 不手写结尾 CTA / nudge / 披露（路由自动注入 ReaderEndCTA + CTABox）
 - 批次2起：减少套路化论证；每篇以读者独特点为主线；文章要翔实（bio 细节/真实评论引文/session 体验）
+- **负面篇幅红线（2026-08-26 用户打回重写后确立）**：明贬暗褒绝不能写成"避坑指南"。每篇只留 1 个无关痛痒小缺点 + 当场给解法，且解法必须强化推荐（如 Shiwa"回答短"→解法"打电话"恰是更便宜的 voice 价）；差评原文引用、miss 率拆解、"skip if 你需要X"式劝退段、整节 Small Print 负面分析——全部禁止。结尾 verdict 段以"Book"收尾，不要再现条件式劝退清单。
 
 ## 关键技术架构
 - Affiliate 链接（2026-08-10 重构）：映射在 src/data/affiliateLinks.ts；/go/[...slug].astro 门控占位页防 bot 虚点击（same-origin referrer / sessionStorage / ?ea_sub= 才跳 TUNE）；_redirects 已无 /go/ 302；PostHog.astro 点击监听带 e.isTrusted 校验
@@ -20,8 +21,9 @@
 - src/lib/platform.ts 导出 platformFromName()
 - readers schema 支持 avatarUrl/ctaOverride/unavailable；chosenone77 和 jackies-tea-tarot 无真图用字母/svg 兜底
 - es/ 西语站未接 nudge；es/psiquicos-web 是空 hub 待处理
+- **CTA hover tooltip 文案准则（2026-08-27 用户拍板）**：social proof 必须是平台级用户基数（如 "Start your Kasamba journey with 3+ million other users"），不是"我站审过 N 个解读师"。仅 `src/lib/offers.ts` 的 `proofTooltip()` 单点函数，5 个 CTA 组件（EndCTA / SidebarDealCard / ScorePanel / InlineCta / ReviewLayout）共用。`userMillions` 字段必须取平台公开自报的保守值（Keen 14 / Kasamba 3 / PG 2，来自 App Store 描述/官方 case study/联盟评测），不人为放大。`reviewedCount` 字段保留（ComparisonLayout JSON-LD + coupons 页还要用）。
 - **平台图标全部本地托管** `public/logos/{key}.png`（2026-08-26）：keen=Google faviconV2 48×48 PNG（红字+米色渐变）；kasamba/purple-garden=iOS App Store 官方 marketing 256×256 PNG；psiquicos-web=DDG icons 200×200。**不能热链 google.com/gstatic.com**——国内网络 GFW 直接断。`platformLogo()` 在 src/lib/offers.ts 返回 `/logos/${key}.png`，所有 CTA/侧栏/PS 组件统一走这条路径。
-- **按钮命名硬约定（2026-08-26 棕底黑字事故后确立）**：任何按钮/CTA 锚点的 class 必须含 "btn" 或 "cta"；棕底白字的 color 声明必须带 `!important`。根因：global.css `.prose a:not(...)` 链接规则叠了多个 :not()，特异性 (0,6,1)，会覆盖渲染进 .prose 的按钮锚点的白字（组件作用域样式只有 (0,3,0)）。prose 规则已加 `:not([class*="btn"]):not([class*="cta"])` 豁免——新按钮类名不含这两个子串就会重蹈覆辙。InlineCta 是 JS 注入 .prose 的，ScorePanel 经 hub 页 slot 进 .prose，都要按"在 prose 内"对待。
+- **按钮命名硬约定（2026-08-26 棕底黑字事故 + StickyCTA ghost 穿透后扩展）**：任何按钮/CTA 锚点的 class 必须含 "btn" 或 "cta"；棕底白字的 color 声明必须带 `!important`。根因①：global.css `.prose a:not(...)` 链接规则叠了多个 :not()，特异性 (0,6,1)，会覆盖渲染进 .prose 的按钮锚点的白字（组件作用域样式只有 (0,3,0)）。prose 规则已加 `:not([class*="btn"]):not([class*="cta"])` 豁免——新按钮类名不含这两个子串就会重蹈覆辙。InlineCta 是 JS 注入 .prose 的，ScorePanel 经 hub 页 slot 进 .prose，都要按"在 prose 内"对待。根因②：组件内 `base .btn` 带 `color: #fff !important` 时，所有变体（`.btn--ghost` / `.btn--featured` / `.btn--outline` 等）若要切换 color 必须也带 `!important`，否则会被 base 规则的 `!important` 反向穿透（同名优先级时 !important 永远赢）。StickyCTA ghost 按钮就是这种"白底棕字"本应胜出却被穿透成白字，导致与白底同色"消失"。
 
 ## SEO 战略（2026-08-24 报告 + 8-25 Matthew brief，详见 SEO_STRATEGY_REPORT_2026-08-24.md 和 scratch/gsc_matthew/）
 - 阶段判断：非流量问题，是 CTR 损耗 + 排名断层（第二页魔咒，平均排名 ~23）
@@ -30,6 +32,17 @@
 - 月100转化数学：需 ~2,000-2,500 点击/月（当前~90），CTR×2.5 × 排名×3 × 内容面×4 叠加
 - 三阶段：①接住流量（CTR/schema/hub重写）②扩关键词面（对比矩阵/tools内容化解除noindex/场景guides）③权威品牌（外链/新平台/es站）
 - 已验证赢家：mystic-raj 读者页 CTR 21.6%（单读者深评模式成立，是差异化定位）
+
+## 内链系统（2026-08-27 重构）
+- **批量加文会冲击内链**：评分近乎同分布（中位 4.9）时，"top-N-by-rating" 选择器坍缩→小撮高分垄断、91% 饿死。PG 旧用"文件序前 3"→新加的排末尾永不出现。
+- **解法**：`src/lib/relatedReaders.ts` 的 `pickRelatedReaders`/`pickRelatedGuides`。稳定 slug 排序 + **coprime-step 旋转窗**（STEP 与各平台 n 互素→窗起点遍历每 residue 恰一次→入链均匀零孤儿），窗内按 niche 重叠排序展示。niche 词表只 love/tarot/medium/career/astrology/dream/pet（**排除 psychic/intuitive**，否则判别器失效）。三个 `[reader].astro` 已接入；PG 页已补 RelatedContent。
+- footer 重生成脚本 `scratch/regen_footers.py`（旋转窗 sibling+hub，coprime step=11 与页内卡片互补）。
+- **坑**：哈希 `% n` 会因 gcd 坍缩到少数桶→假阳性孤儿，必须用 coprime step 不依赖哈希分布。frontmatter 值 YAML 带引号，解析须剥引号。
+
+## 富媒体（SERP Rich Results）约定（2026-08-27）
+- 本项目"富媒体"= Google SERP 结构化数据。layout 层（ReviewLayout+BaseLayout）对所有读者页**统一**输出合规集：Review(itemReviewed=Product 白名单→星级)+AggregateRating+Brand+Breadcrumb+FAQ+WebSite/Org/Person。新文自动继承。
+- **读者页 customSchema 应为 Article**（不是第二条 Review）：Article 富结果(headline/image/author Sarah/publisher EA+logo/date/mainEntityOfPage/wordCount/about) + layout 的 Review 星级，多展示且避免重复 Review 类型冲突（"种类问题"）。44 篇新文已转 Article（`scratch/schema_article.py`）；114 篇老文仍带冲突的重复 Review customSchema，待统一（follow-up）。
+- 仍开放：28 篇 kasamba 新文缺 ogImage（暂用方形 avatar 兜底 Article.image）；layout Review itemReviewed.url=/go/ 联盟链接 self-serving 风险（plan 标"前序不动"）。
 
 ## 环境坑（跨会话复用）
 - 沙箱：Python 网络必死（抓取用 Bash curl，小批3-4个+sleep）；Windows \r 毒化（写文件 newline='\n'，读行去尾 \r）

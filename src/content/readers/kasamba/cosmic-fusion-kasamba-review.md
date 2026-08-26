@@ -116,3 +116,7 @@ The other honest flag: her status often shows offline. A 5.0 at $3.99/min is in 
 **Skip her if** you need voice-by-default (her voice rate is a trap), or if you want a reader whose reviews read like dramatic prediction-fulfillment stories rather than steady repeat-customer warmth.
 
 Either way, start with the 3 free minutes on chat. Ask the question that's been sitting with you. At $3.99/min after that, you can afford to actually stay for the answer — which is the whole point of a reading this affordable from a reader this rated.
+
+---
+
+**More Kasamba reviews:** [Spiritual Anna](/reviews/kasamba/powerful-visions-kasamba-review/) · [Psychic Safina](/reviews/kasamba/psychic-safina-kasamba-review/) · [Psychic Satire](/reviews/kasamba/psychic-satire-kasamba-review/) · [Browse all Kasamba advisors](/reviews/kasamba/)

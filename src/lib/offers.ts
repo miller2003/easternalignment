@@ -11,8 +11,11 @@
  *    advertises to new clients (same claims already used in EndCTA /
  *    LeftSidebar / platform frontmatter).
  *  - No fabricated social proof ("19,897 people visited last week").
- *    Proof points must be verifiable from our own content (e.g. number of
- *    advisor reviews we have published).
+ *    Proof points must be verifiable from the platform's own public
+ *    marketing materials (e.g. platform-self-reported user/customer base
+ *    in app-store listings, used in `proofTooltip` for hover-proof) or
+ *    from our own content (e.g. number of advisor reviews we have
+ *    published — see `reviewedCount`).
  *  - Every link routes through /go/<goSlug>/ so the PostHog gating +
  *    click attribution in PostHog.astro keeps working.
  */
@@ -39,6 +42,14 @@ export interface PlatformOffer {
   color: string;
   /** Real number of individual advisor reviews published on this site. */
   reviewedCount: number;
+  /**
+   * Platform-wide user/customer base in millions (conservative, self-reported
+   * by the platform itself — verified against the platforms' own public
+   * marketing, NOT inflated). Used by `proofTooltip()` for the hover social-
+   * proof pill. Update this only when a fresh platform-published number is
+   * found; do NOT round up to make copy punchier.
+   */
+  userMillions: number;
   /** Top promo bar line (gift icon + this text). */
   topBarLine: string;
 }
@@ -54,6 +65,7 @@ export const PLATFORM_OFFERS: Record<PlatformKey, PlatformOffer> = {
     microLine: 'Free to join · Offer applied at checkout · No subscription',
     color: '#004d40',
     reviewedCount: 49,
+    userMillions: 14,
     topBarLine: 'Keen Special Offer — your first 5 minutes for just $1 (new clients)',
   },
   kasamba: {
@@ -66,6 +78,7 @@ export const PLATFORM_OFFERS: Record<PlatformKey, PlatformOffer> = {
     microLine: 'Free to join · 3 free minutes with each new advisor · No subscription',
     color: '#4a6ee0',
     reviewedCount: 35,
+    userMillions: 3,
     topBarLine: 'Kasamba Special Offer — 3 FREE minutes + 50% OFF your first session',
   },
   'purple-garden': {
@@ -78,6 +91,7 @@ export const PLATFORM_OFFERS: Record<PlatformKey, PlatformOffer> = {
     microLine: 'Free to join · Credit applied to your first reading · No subscription',
     color: '#6b4d8c',
     reviewedCount: 30,
+    userMillions: 2,
     topBarLine: 'Purple Garden Special Offer — $30 in FREE credit for new clients',
   },
 };
@@ -100,13 +114,16 @@ export function goPath(key: PlatformKey): string {
 }
 
 /**
- * Honest hover-proof line for the CTA tooltip — mysticmag's hover
- * social-proof technique, rebuilt with our real numbers (never fabricated
- * "visitors last week" counts).
+ * Hover-proof line for the CTA tooltip — site-wide consistent format:
+ * mirrors mysticmag's "join X other readers" social-proof mechanic but
+ * rebuilt with each platform's own self-reported user/customer base
+ * (never fabricated, see `userMillions` provenance comments). Tells the
+ * visitor they're joining an existing large community, not being pitched
+ * at by a one-off brand.
  */
 export function proofTooltip(key: PlatformKey): string {
   const o = PLATFORM_OFFERS[key];
-  return `${o.reviewedCount} ${o.name} advisors individually reviewed on this site — with real paid sessions.`;
+  return `Start your ${o.name} journey with ${o.userMillions}+ million other users.`;
 }
 
 /**

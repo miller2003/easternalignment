@@ -152,3 +152,7 @@ Regina runs multiple Keen profiles across different categories: Love & Relations
 ### What to Prepare  -  and What to Deliberately Leave Out
 
 Have your question ready, but resist the urge to front-load context. With most readers, arriving prepared means giving them background. With Regina, arriving prepared means knowing exactly what you want to know  -  and then letting her start. Give her the question, not the story behind it. If she's operating at the level her 18K reviews suggest, the story will come from her side of the conversation.
+
+---
+
+**More Keen reviews:** [the psychic one](/reviews/keen/the-psychic-one/) · [Alice Runyon](/reviews/keen/alice-runyon/) · [Advisor Suzan](/reviews/keen/advisor-suzan/) · [Browse all Keen advisors](/reviews/keen/)
