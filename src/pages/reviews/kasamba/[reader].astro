@@ -61,8 +61,15 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
   Content: mod.default,
 }));
 
-/* Pick a guide for infinite content flow — choose the most relevant one */
-const flowGuide = guides.find(g => g.slug === 'what-is-psychic-reading') || guides[0];
+/* Intent-matched guide picks (2026-08-28): niche overlap + same-platform
+ * bonus. Top pick feeds the InfiniteContentFlow "continue reading" article —
+ * previously HARDCODED to a generic intro guide for every reader, which
+ * leaked retention (a love-reader visitor flowed into "what is a psychic
+ * reading"). The next 4 fill the bottom grid (no URL appears twice). */
+const guidePicks = pickRelatedGuides(currentReader, guides, 5, 'kasamba',
+  [...allReaders].sort((a, b) => a.slug.localeCompare(b.slug)).findIndex(r => r.slug === currentSlug));
+const flowGuide = guidePicks[0] || guides[0];
+const gridGuides = guidePicks.slice(1, 5);
 
 /* Extract the reader's display name */
 const readerName = frontmatter.platformName?.includes(':')
@@ -92,7 +99,7 @@ const relatedItems = [
     badge: 'Platform Review',
     badgeVariant: 'primary' as const,
   },
-  ...pickRelatedGuides(currentReader, guides, 4).map(g => ({
+  ...gridGuides.map(g => ({
     title: g.title,
     href: `/guides/${g.slug}/`,
     description: g.description,

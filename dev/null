@@ -1,0 +1,151 @@
+"use strict";
+const NICHE_KEYWORDS = {
+  love: ["love", "relationship", "twin", "soulmate", "ex-", "romance", "heart", "reunion"],
+  tarot: ["tarot", "cards", "cartomancy"],
+  medium: ["medium", "spirit", "passed", "channel", "loss"],
+  career: ["career", "money", "finance", "business", "job"],
+  astrology: ["astrology", "zodiac", "horoscope", "birth chart"],
+  dream: ["dream"],
+  pet: ["pet", "animal"]
+};
+function readerNicheText(r) {
+  return [...r.entities ?? [], r.bestFor ?? "", r.platformName ?? ""].join(" ").toLowerCase();
+}
+function nichesOf(text) {
+  const t = text.toLowerCase();
+  const out = /* @__PURE__ */ new Set();
+  for (const [niche, keys] of Object.entries(NICHE_KEYWORDS)) {
+    if (keys.some((k) => t.includes(k))) out.add(niche);
+  }
+  return out;
+}
+export function nicheOverlap(a, b) {
+  const na = nichesOf(readerNicheText(a));
+  const nb = nichesOf(readerNicheText(b));
+  let n = 0;
+  for (const x of na) if (nb.has(x)) n++;
+  return n;
+}
+function gcd(a, b) {
+  while (b) {
+    [a, b] = [b, a % b];
+  }
+  return a;
+}
+export function pickRelatedReaders(current, all, count = 4) {
+  if (all.length <= 1) return [];
+  const base = [...all].sort((a, b) => a.slug.localeCompare(b.slug));
+  const n = base.length;
+  const i = base.findIndex((r) => r.slug === current.slug);
+  if (i < 0) return [];
+  let step = 5;
+  while (gcd(step, n) !== 1) step += 2;
+  const start = i * step % n;
+  const window = [...base.slice(start), ...base.slice(0, start)].slice(0, count + 1);
+  const picks = window.filter((r) => r.slug !== current.slug).slice(0, count);
+  return picks.sort((a, b) => nicheOverlap(current, b) - nicheOverlap(current, a));
+}
+const GUIDE_CLUSTER_KEYWORDS = {
+  love: ["love", "relationship", "twin", "soulmate", "ex-", "breakup", "divorce", "no-contact", "marri", "romance", "reconcil", "heart", "dating", "lgbtq", "age-gap", "long-distance", "does-he", "is-he", "karmic", "specific-person", "coming-back", "avoidant", "triangle", "situationship", "jealousy", "third-party", "other-woman", "single-parent", "propose", "win-her", "win-him", "crush", "soul-tie", "pregnancy", "ldr-", "-ldr"],
+  medium: ["medium", "passed", "deceased", "grief", "loss", "evidential", "loved-one"],
+  tarot: ["tarot", "cards"],
+  career: ["career", "money", "finance", "job", "business"],
+  astrology: ["astrology", "zodiac", "horoscope", "birth-chart"],
+  dream: ["dream"],
+  spirituality: ["angel", "aura", "clair", "palm", "past-life", "spiritual", "am-i-psychic", "intuition", "empath", "healing", "energy", "pet", "animal"],
+  gettingStarted: ["first-", "how-to", "cost", "prepare", "choose", "fake", "free-psychic", "how-often", "anxiety", "beginner", "hotline", "are-psychics-real", "prediction", "legit", "online-truth", "what-is", "accurate", "honest", "therapy", "journeys", "credit", "free-minutes"]
+};
+function guideTopicText(g) {
+  return [g.slug, g.title ?? "", g.category ?? ""].join(" ").toLowerCase();
+}
+export function guideClusters(g) {
+  const t = guideTopicText(g);
+  const out = /* @__PURE__ */ new Set();
+  for (const [cluster, keys] of Object.entries(GUIDE_CLUSTER_KEYWORDS)) {
+    if (keys.some((k) => t.includes(k))) out.add(cluster);
+  }
+  return out;
+}
+function realPlatform(p) {
+  return p && p !== "cross-platform" ? p : null;
+}
+function platformOf(g) {
+  const p = realPlatform(g.platform);
+  if (p) return p;
+  const s = g.slug.toLowerCase();
+  if (s.includes("purple-garden")) return "purple-garden";
+  if (s.includes("kasamba")) return "kasamba";
+  if (/(^|-)keen(-|$)/.test(s)) return "keen";
+  return null;
+}
+function clusterOverlap(a, b) {
+  let n = 0;
+  for (const c of b) if (a.has(c)) n++;
+  return n;
+}
+function samePlatform(current, g) {
+  const p = platformOf(current);
+  return !!p && p === platformOf(g);
+}
+function crossFunnel(current, g) {
+  return Boolean(g.affiliateUrl) !== Boolean(current.affiliateUrl);
+}
+function guideScore(current, curClusters, g) {
+  let score = 4 * clusterOverlap(curClusters, guideClusters(g));
+  if (samePlatform(current, g)) score += 2;
+  if (crossFunnel(current, g)) score += 1;
+  return score;
+}
+function rotatedWindow(list, i, count) {
+  if (list.length <= count) return list;
+  const n = list.length;
+  let step = 5;
+  while (gcd(step, n) !== 1) step += 2;
+  const start = i * step % n;
+  return [...list.slice(start), ...list.slice(0, start)].slice(0, count);
+}
+export function pickRelatedGuidesForGuide(current, allGuides, count = 6) {
+  if (allGuides.length <= 1) return [];
+  const fullSorted = [...allGuides].sort((a, b) => a.slug.localeCompare(b.slug));
+  const i = fullSorted.findIndex((g) => g.slug === current.slug);
+  if (i < 0) return [];
+  const curClusters = guideClusters(current);
+  const clusterSize = /* @__PURE__ */ new Map();
+  for (const g of allGuides) {
+    for (const c of guideClusters(g)) clusterSize.set(c, (clusterSize.get(c) ?? 0) + 1);
+  }
+  const others = fullSorted.filter((g) => g.slug !== current.slug);
+  const admitted = others.filter(
+    (g) => clusterOverlap(curClusters, guideClusters(g)) > 0 || samePlatform(current, g)
+  );
+  const notAdmitted = others.filter((g) => !admitted.includes(g));
+  const rareCluster = [...curClusters].sort(
+    (a, b) => (clusterSize.get(a) ?? 0) - (clusterSize.get(b) ?? 0) || a.localeCompare(b)
+  )[0];
+  const rare = rareCluster ? admitted.filter((g) => guideClusters(g).has(rareCluster)) : [];
+  const rest = admitted.filter((g) => !rare.includes(g));
+  const picks = rare.length >= count ? rotatedWindow(rare, i, count) : [...rare, ...rotatedWindow(rest, i, count - rare.length)];
+  const need = count - picks.length;
+  if (need > 0) picks.push(...rotatedWindow(notAdmitted, i, need));
+  return picks.slice(0, count).sort((a, b) => guideScore(current, curClusters, b) - guideScore(current, curClusters, a));
+}
+export function pickRelatedGuides(reader, guides, max = 4) {
+  const rNiche = nichesOf(readerNicheText(reader));
+  if (rNiche.size === 0 || guides.length === 0) {
+    return guides.slice(0, max);
+  }
+  const scored = guides.map((g) => {
+    const slug = g.slug.toLowerCase();
+    const title = (g.title ?? "").toLowerCase();
+    const blob = [slug, title, g.description ?? "", g.category ?? ""].join(" ").toLowerCase();
+    let score = 0;
+    for (const n of rNiche) {
+      if (slug.includes(n) || title.includes(n)) score += 2;
+      else if (blob.includes(n)) score += 1;
+    }
+    return { g, score };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  const top = scored.filter((s) => s.score > 0).slice(0, max);
+  return (top.length ? top : scored.slice(0, max)).map((s) => s.g);
+}

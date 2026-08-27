@@ -15,6 +15,9 @@ interface Props {
   publishDate: string;
   updatedDate?: string;
   breadcrumbParent?: { label: string; href: string };
+  /** Optional cluster level between parent and title, e.g.
+   *  Guides › Love & Relationship Readings › {title} (2026-08-28). */
+  breadcrumbMiddle?: { label: string; href: string };
   // SEO meta fields
   metaRobots?: string;
   canonicalUrl?: string;
@@ -42,6 +45,7 @@ const {
   publishDate,
   updatedDate,
   breadcrumbParent = { label: 'Guides', href: '/guides/' },
+  breadcrumbMiddle,
   metaRobots,
   canonicalUrl,
   ogImage,
@@ -150,6 +154,7 @@ const sidebarDeal = guideOffer
       <div class="article-breadcrumb">
         <Breadcrumb items={[
           breadcrumbParent,
+          ...(breadcrumbMiddle ? [breadcrumbMiddle] : []),
           { label: title }
         ]} />
       </div>

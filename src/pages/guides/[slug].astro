@@ -1,6 +1,8 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
+import MidArticleLink from '../../components/MidArticleLink.astro';
+import { pickRelatedGuidesForGuide, pickMidArticleGuide, guideSection, guideClusters } from '../../lib/relatedReaders';
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../content/guides/*.md');
@@ -18,16 +20,32 @@ export async function getStaticPaths() {
 
 const { default: Content, frontmatter } = Astro.props;
 
-/* Fetch other guides for cross-linking */
+/* Fetch all guides, then pick INTENT-MATCHED related ones.
+ * (2026-08-28: replaced the old "dump all 85 guides + every review/comparison"
+ * block — 92 boilerplate cards/page — with a topic-cluster selector.) */
 const guideModules = import.meta.glob('../../content/guides/*.md', { eager: true });
-const otherGuides = Object.entries(guideModules)
+const allGuides = Object.entries(guideModules)
   .map(([path, mod]: [string, any]) => ({
     ...mod.frontmatter,
     slug: path.split('/').pop()?.replace('.md', ''),
-  }))
-  .filter(g => g.slug !== Astro.params.slug);
+  }));
 
-/* Fetch platform reviews for cross-linking */
+const currentGuide = { ...frontmatter, slug: Astro.params.slug };
+const currentClusters = guideClusters(currentGuide);
+
+/* Mid-article "keep reading" card: the ONE most relevant follow-up (same
+ * cluster, commercial-first, rotated). Picked FIRST so the bottom grid can
+ * exclude it — the same URL never appears twice on the page. */
+const midGuide = pickMidArticleGuide(currentGuide, allGuides);
+const section = guideSection(currentGuide);
+
+/* Bottom grid: 6 intent-matched guides, deduped against the mid-article pick. */
+const relatedGuides = pickRelatedGuidesForGuide(currentGuide, allGuides, 7)
+  .filter(g => g.slug !== midGuide?.slug)
+  .slice(0, 6);
+
+/* Platform reviews: only shown when this guide is platform-specific,
+ * and only the matching platform (intent alignment). */
 const reviewModules = import.meta.glob('../../content/reviews/*.md', { eager: true });
 const reviews = Object.entries(reviewModules)
   .map(([path, mod]: [string, any]) => ({
@@ -35,30 +53,52 @@ const reviews = Object.entries(reviewModules)
     slug: mod.frontmatter.platformName?.toLowerCase().replace(/\s+/g, '-') || path.split('/').pop()?.replace('.md', ''),
   }))
   .sort((a, b) => (a.rank || 99) - (b.rank || 99));
+const matchedReviews = frontmatter.platform
+  ? reviews.filter(r => r.slug === frontmatter.platform)
+  : [];
 
-/* Fetch comparisons */
+/* Comparisons: platform-specific guides get comparisons featuring that
+ * platform; love-cluster guides may also surface the love comparisons.
+ * General platform guides never get love-only comparisons. */
+const LOVE_COMPARISON_SLUGS = ['purple-garden-vs-kasamba', 'purple-garden-vs-keen'];
+const PLATFORM_DISPLAY: Record<string, string> = {
+  kasamba: 'Kasamba',
+  keen: 'Keen',
+  'purple-garden': 'Purple Garden',
+};
 const comparisonModules = import.meta.glob('../../content/comparisons/*.md', { eager: true });
 const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string, any]) => ({
   ...mod.frontmatter,
   slug: path.split('/').pop()?.replace('.md', ''),
 }));
+const platformDisplay = frontmatter.platform ? PLATFORM_DISPLAY[frontmatter.platform] : null;
+const matchedComparisons = comparisons.filter(c => {
+  const isLoveComparison = LOVE_COMPARISON_SLUGS.includes(c.slug);
+  if (platformDisplay) {
+    const involvesPlatform = c.platforms?.includes(platformDisplay);
+    // Love comparisons only on love-topic guides; general comparisons on any platform guide
+    return involvesPlatform && (!isLoveComparison || currentClusters.has('love'));
+  }
+  // Info guides: only love comparisons, only for love-topic articles
+  return isLoveComparison && currentClusters.has('love');
+}).slice(0, 2);
 
 const relatedItems = [
-  ...reviews.map(r => ({
+  ...matchedReviews.map(r => ({
     title: `${r.platformName} Review 2026`,
     href: `/reviews/${r.slug}/`,
     description: r.verdict?.length > 120 ? r.verdict.substring(0, 120) + '…' : r.verdict,
     badge: `#${r.rank} Pick`,
     badgeVariant: 'primary' as const,
   })),
-  ...comparisons.map(c => ({
+  ...matchedComparisons.map(c => ({
     title: c.title,
     href: `/comparisons/${c.slug}/`,
     description: c.description,
     badge: 'Comparison',
     badgeVariant: 'primary' as const,
   })),
-  ...otherGuides.map(g => ({
+  ...relatedGuides.map(g => ({
     title: g.title,
     href: `/guides/${g.slug}/`,
     description: g.description,
@@ -74,6 +114,7 @@ const relatedItems = [
   category={frontmatter.category}
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
+  breadcrumbMiddle={{ label: section.heading, href: `/guides/#${section.id}` }}
   metaRobots={frontmatter.metaRobots}
   canonicalUrl={frontmatter.canonicalUrl}
   ogImage={frontmatter.ogImage}
@@ -89,6 +130,18 @@ const relatedItems = [
   affiliateUrl={frontmatter.affiliateUrl}
 >
   <Content />
+
+  {/* Mid-article internal link: auto-injected before the 4th H2 inside
+      .prose (InlineCta owns the 2nd). Retention touchpoint — keeps mid-scroll
+      bailers inside the site's funnel with the most relevant next read. */}
+  {midGuide && (
+    <MidArticleLink
+      href={`/guides/${midGuide.slug}/`}
+      title={midGuide.title}
+      description={midGuide.description}
+      sectionLabel={section.heading}
+    />
+  )}
 
   <!-- CTA Section — guide readers to tested platforms -->
   <div class="guide-cta-section">

@@ -2,13 +2,34 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import LeftSidebar from '../../components/LeftSidebar.astro';
+import { guideClusters, GUIDE_SECTIONS } from '../../lib/relatedReaders';
 
+/* Guides hub — topic-cluster sections (2026-08-28).
+ * Same URL, same 86 article cards as before (zero link loss); the flat list
+ * was regrouped into intent sections so the hub itself works as a topical
+ * landing page. Section definitions live in src/lib/relatedReaders.ts
+ * (GUIDE_SECTIONS) — the single source also used by guide-page breadcrumbs. */
 
 const guideModules = import.meta.glob('../../content/guides/*.md', { eager: true });
 const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
   ...mod.frontmatter,
   slug: path.split('/').pop()?.replace('.md', ''),
 }));
+
+const assigned = new Set<string>();
+const sections = GUIDE_SECTIONS.map((s) => {
+  const items = guides.filter((g) => {
+    if (assigned.has(g.slug)) return false;
+    const ok = s.test(g, guideClusters(g));
+    if (ok) assigned.add(g.slug);
+    return ok;
+  });
+  return { ...s, items };
+}).filter((s) => s.items.length > 0);
+
+// Display order: highest-value sections first (assignment order ≠ display order)
+const DISPLAY_ORDER = ['love', 'breakups-ex-recovery', 'mediumship', 'tarot', 'career-money', 'spirituality', 'getting-started', 'more-guides'];
+sections.sort((a, b) => DISPLAY_ORDER.indexOf(a.id) - DISPLAY_ORDER.indexOf(b.id));
 ---
 
 <BaseLayout
@@ -27,22 +48,27 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
         <header class="hub-header">
           <h1>Guides & Resources</h1>
           <p class="hub-description text-muted">
-            Whether you're new to psychic readings or looking to deepen your practice, my guides cover everything from the basics to advanced topics.
+            Whether you're new to psychic readings or looking to deepen your practice, my guides cover everything from the basics to advanced topics — organized by what you're actually going through.
           </p>
         </header>
 
         <div class="prose">
-          <h2 id="all-guides">All Psychic Guides</h2>
-          <div class="guides-grid grid grid--2 stagger">
-            {guides.map(guide => (
-              <a href={`/guides/${guide.slug}/`} class="guide-card card card--elevated">
-                {guide.category && <span class="badge badge--sage">{guide.category}</span>}
-                <h3 class="guide-card-title">{guide.title}</h3>
-                <p class="guide-card-desc text-muted text-sm">{guide.description}</p>
-                <span class="guide-card-link text-primary text-sm">Read Guide →</span>
-              </a>
-            ))}
-          </div>
+          {sections.map(section => (
+            <>
+              <h2 id={section.id}>{section.heading}</h2>
+              <p class="section-intro text-muted">{section.intro}</p>
+              <div class="guides-grid grid grid--2 stagger">
+                {section.items.map(guide => (
+                  <a href={`/guides/${guide.slug}/`} class="guide-card card card--elevated">
+                    {guide.category && <span class="badge badge--sage">{guide.category}</span>}
+                    <h3 class="guide-card-title">{guide.title}</h3>
+                    <p class="guide-card-desc text-muted text-sm">{guide.description}</p>
+                    <span class="guide-card-link text-primary text-sm">Read Guide →</span>
+                  </a>
+                ))}
+              </div>
+            </>
+          ))}
         </div>
       </div>
     </main>
@@ -84,11 +110,16 @@ const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => 
 
   /* Structural Headings for TOC */
   .prose h2 {
-    margin: var(--space-10) 0 var(--space-6);
+    margin: var(--space-10) 0 var(--space-3);
     padding-bottom: var(--space-3);
     border-bottom: 1px solid var(--color-border-light);
     font-size: var(--text-2xl);
     color: var(--color-primary-dark);
+  }
+
+  .section-intro {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-sm);
   }
 
   .guides-grid {

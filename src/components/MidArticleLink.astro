@@ -1,0 +1,157 @@
+---
+/**
+ * MidArticleLink.astro — Mid-article INTERNAL "keep reading" card with
+ * automatic in-content injection (retention companion to InlineCta, which is
+ * the affiliate touchpoint).
+ *
+ * Why this exists (2026-08-28): the bottom related-grid only reaches readers
+ * who finish the article — a minority. The majority bail mid-scroll, and
+ * previously met no internal next step there. This card surfaces the ONE
+ * most relevant follow-up read (same topic cluster, commercial-first so info
+ * traffic flows toward money pages) inside the body, where both engagement
+ * and link equity are strongest.
+ *
+ * Mechanics mirror InlineCta: a hidden <template> + a tiny script that
+ * inserts the card right BEFORE the Nth <h2> inside .prose (default 4th —
+ * InlineCta owns the 2nd position). Short articles with fewer headings are
+ * skipped; the bottom grid remains their internal-link surface.
+ *
+ * Anchor text is the target guide's full title — keyword-rich by design.
+ *
+ * Props:
+ *   href         — target guide URL
+ *   title        — target guide title (used as the anchor)
+ *   description  — target guide description (one-line teaser)
+ *   sectionLabel — hub section name for the eyebrow line (e.g. "Love & Relationship Readings")
+ *   position     — which h2 index to insert before (default 4)
+ */
+
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  sectionLabel?: string;
+  position?: number;
+}
+
+const { href, title, description, sectionLabel, position = 4 } = Astro.props;
+---
+
+<template data-mid-article-link data-position={position}>
+  <div class="mid-article-link">
+    <span class="mid-article-link__eyebrow">
+      {sectionLabel ? `Keep exploring · ${sectionLabel}` : 'Keep exploring'}
+    </span>
+    <a href={href} class="mid-article-link__title">{title}</a>
+    {description && <p class="mid-article-link__desc">{description}</p>}
+    <span class="mid-article-link__cta">Read the guide →</span>
+  </div>
+</template>
+
+<script>
+  (function () {
+    function mount() {
+      var tpl = document.querySelector('template[data-mid-article-link]');
+      if (!tpl) return;
+
+      var prose = document.querySelector('.prose');
+      if (!prose) return;
+
+      var pos = parseInt(tpl.getAttribute('data-position') || '4', 10);
+      var headings = prose.querySelectorAll('h2');
+      if (headings.length < pos) return;
+
+      var target = headings[pos - 1];
+      var first = tpl instanceof HTMLTemplateElement ? tpl.content.firstElementChild : null;
+      if (!target.parentNode || !first) return;
+      target.parentNode.insertBefore(first.cloneNode(true), target);
+    }
+
+    // Whole-card click → navigate (the title <a> remains the semantic anchor
+    // for crawlers and keyboard users; this is a progressive enhancement).
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      var card = t && t.closest ? t.closest('.mid-article-link') : null;
+      if (!card) return;
+      if (t.closest && t.closest('a')) return; // let the real anchor work
+      var a = card.querySelector('a.mid-article-link__title');
+      if (a) a.click();
+    });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', mount);
+    } else {
+      mount();
+    }
+  })();
+</script>
+
+<style>
+  .mid-article-link {
+    margin: var(--space-8, 2rem) 0;
+    padding: var(--space-5, 1.25rem) var(--space-6, 1.5rem);
+    background: var(--color-bg-alt, #f7f4ef);
+    border: 1px solid var(--color-border, #e3ddd2);
+    border-left: 3px solid var(--color-primary, #8b6f4e);
+    border-radius: var(--radius-md, 8px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2, 0.5rem);
+  }
+
+  .mid-article-link__eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-light, #a39a8b);
+  }
+
+  .mid-article-link__title {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: var(--text-lg, 1.125rem);
+    font-weight: 600;
+    line-height: var(--leading-snug, 1.35);
+    color: var(--color-text, #2d2a26);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .mid-article-link:hover .mid-article-link__title {
+    color: var(--color-primary, #8b6f4e);
+  }
+
+  .mid-article-link__desc {
+    margin: 0;
+    font-size: var(--text-sm, 0.875rem);
+    color: var(--color-text-muted, #7a746b);
+    line-height: var(--leading-normal, 1.5);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .mid-article-link__cta {
+    font-size: var(--text-sm, 0.875rem);
+    font-weight: 500;
+    color: var(--color-primary, #8b6f4e);
+  }
+
+  /* The whole card behaves as one link target for pointer users. */
+  .mid-article-link {
+    cursor: pointer;
+  }
+
+  /* Prose-leak reset: injected INTO .prose, whose link rules would otherwise
+     recolour and underline the title. */
+  :global(.prose) .mid-article-link a,
+  :global(.prose) .mid-article-link a:visited {
+    text-decoration: none;
+    color: var(--color-text, #2d2a26);
+  }
+
+  :global(.prose) .mid-article-link:hover a {
+    color: var(--color-primary, #8b6f4e);
+  }
+</style>
