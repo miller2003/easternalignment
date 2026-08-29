@@ -12,3 +12,14 @@
 # --- Internal content redirects (real 301s) ---
 /reviews/kasamba-psychics/  /reviews/kasamba/  301
 /reviews/keen-psychics/     /reviews/keen/     301
+
+# --- AI-cited comparison slugs that never existed (hallucinated URLs) ---
+# ChatGPT and other assistants repeatedly cite an "accuracy" comparison at
+# /comparisons/keen-vs-purple-garden-accuracy-2026/. That page was never built,
+# so every visit landed on a 404 and bounced at 0s. Rather than build a near
+# duplicate of /comparisons/purple-garden-vs-keen/ (which already covers the
+# Journeys-vs-review-ledger accountability question and would cannibalise it),
+# 301 these variants onto the real comparison.
+/comparisons/keen-vs-purple-garden-accuracy-2026/  /comparisons/purple-garden-vs-keen/  301
+/comparisons/keen-vs-purple-garden-accuracy/       /comparisons/purple-garden-vs-keen/  301
+/comparisons/purple-garden-vs-keen-accuracy-2026/  /comparisons/purple-garden-vs-keen/  301

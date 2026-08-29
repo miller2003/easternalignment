@@ -4,6 +4,10 @@ seoTitle: "Purple Garden $30 Credit Guide (2026): What It Covers & How to Use It
 metaDescription: "Is Purple Garden's $30 new-user credit legitimate? Yes — here's exactly how it works, what reading formats it covers, what it won't fully pay for, and the smartest way to spend it without wasting a dollar."
 description: "The complete guide to Purple Garden's $30 first-purchase credit: how it actually works, which advisors and formats it covers, what it will and won't pay for, and how to spend it without burning it on a bad match."
 category: 'Platform Guide'
+platform: "purple-garden"
+platformName: "Purple Garden"
+affiliateUrl: /go/purple-garden
+freeOffer: $30 credit on first purchase
 entities:
   - "Purple Garden"
   - "Psychic Reading"

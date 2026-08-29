@@ -4,7 +4,7 @@ import Footer from '../components/Footer.astro';
 import TopDisclosureBar from '../components/TopDisclosureBar.astro';
 import TopOfferBar from '../components/TopOfferBar.astro';
 import PostHog from '../components/PostHog.astro';
-import StickyCTA from '../components/StickyCTA.astro';
+import SideOfferTab from '../components/SideOfferTab.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -28,10 +28,12 @@ interface Props {
    */
   topOfferPlatform?: 'keen' | 'kasamba' | 'purple-garden';
   /**
-   * Optional focused-CTA config for the bottom sticky bar. When provided, the
-   * StickyCTA collapses to a single primary button pointing at this page's
-   * platform/reader deeplink (e.g. /go/kasamba-master-enigma/). When omitted,
-   * the legacy dual-button (Keen + Kasamba) layout is used.
+   * Optional focused-CTA config for the right-edge offer tab. When provided,
+   * the tab promotes a single primary platform and deep-links to that page's
+   * platform/reader affiliate URL (e.g. /go/kasamba-master-enigma/). When
+   * omitted, the tab falls back to the site-wide No.1 (Kasamba).
+   * `prompt` is accepted for backwards compatibility but unused — the tab
+   * renders one short vertical line of copy, not a panel.
    */
   stickyCta?: {
     slug: string;
@@ -202,14 +204,19 @@ const personSchema = {
 
     <Footer />
 
-    <!-- Mobile/tablet persistent CTA (hidden >= 1100px where the sidebar shows).
-         Pages may pass `stickyCta` to switch this into "focused" mode: a single
-         primary button that deep-links to that page's reader-level affiliate URL
-         (e.g. /go/kasamba-master-enigma/) instead of the generic dual-button. -->
-    <StickyCTA
+    <!-- Slim right-edge offer tab: the persistent CTA surface. Replaces both
+         the old full-width bottom bar (which covered the last lines of every
+         article) and the sliding dock panel. It IS the affiliate link — no
+         panel, no toggle, no JavaScript. Pages may pass `stickyCta` to point
+         the tab at that page's own platform/reader URL
+         (e.g. /go/kasamba-master-enigma/).
+
+         NOTE: `stickyCta.label` is deliberately NOT forwarded. Layouts still
+         supply horizontal-button copy ("Try Keen · 5 min for $1 →") which is
+         far too long for a 40px vertical tab — the tab derives its own short
+         line from `stickyCta.platform` instead. -->
+    <SideOfferTab
       slug={stickyCta?.slug}
-      label={stickyCta?.label}
-      prompt={stickyCta?.prompt}
       platform={stickyCta?.platform}
     />
   </body>

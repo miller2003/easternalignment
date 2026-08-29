@@ -4,6 +4,9 @@ seoTitle: "Kasamba 3 Free Minutes Guide (2026): How It Works, What to Ask, Real 
 metaDescription: "Kasamba gives you 3 free minutes with EVERY new psychic —not just the first. Here's exactly how the offer works, the protocol to use in each session, and how to turn free minutes into the best consumer tool in the psychic industry."
 description: "The definitive guide to Kasamba's 3-free-minutes offer: the economic mechanics, the exact vetting protocol to use in each session, which reader tier to test first, and the common mistakes that burn the offer before you get any value."
 category: 'Platform Guide'
+platform: kasamba
+platformName: "Kasamba"
+affiliateUrl: /go/kasamba
 publishDate: '2026-08-14'
 updatedDate: '2026-08-14'
 canonicalUrl: https://easternalignment.com/guides/kasamba-3-free-minutes-guide/

@@ -2,6 +2,9 @@
 title: 'Free Psychic Readings Online: What Is Actually Free, What Is a Funnel, and What Is a Scam'
 description: 'An honest breakdown of every type of free psychic reading available online -- from loss-leader introductory minutes to community tarot pulls to outright data harvesting operations. What is genuinely free, what is marketing, and how to extract maximum value from both.'
 category: Beginners
+platform: kasamba
+platformName: "Kasamba"
+affiliateUrl: /go/kasamba
 publishDate: '2026-06-13'
 updatedDate: '2026-06-13'
 seoTitle: 'Free Psychic Readings Online: What Is Actually Free vs. a Scam (2026 Truth)'

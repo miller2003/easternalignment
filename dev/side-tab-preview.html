@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SideOfferTab — design preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --color-bg:#FAF8F5; --color-bg-alt:#F3EDE7; --color-surface:#FFFFFF;
+  --color-text:#2D2A26; --color-text-muted:#7A746B; --color-text-light:#9E9689;
+  --color-primary:#8B6F4E; --color-primary-dark:#6B5438; --color-accent:#C4956A;
+  --color-accent-hover:#B07F55; --color-border:#E8E2DA; --color-border-light:#F0ECE6;
+  --font-heading:'DM Serif Display',Georgia,serif;
+  --font-body:'Inter',-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--color-text);background:var(--color-bg);line-height:1.6}
+
+/* ── demo chrome (not part of the component) ── */
+.demo-note{
+  position:fixed;left:16px;top:16px;z-index:5;background:#fff;border:1px solid var(--color-border);
+  border-radius:12px;padding:12px 14px;font-size:12px;max-width:230px;box-shadow:0 8px 24px rgba(45,42,38,.08);
+}
+.demo-note b{display:block;margin-bottom:4px;font-size:12.5px}
+.demo-note span{color:var(--color-text-muted)}
+.wrap{max-width:720px;margin:0 auto;padding:56px 24px 120px}
+.hero{border-bottom:1px solid var(--color-border-light);padding-bottom:28px;margin-bottom:36px}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:#5c6b52;background:#eaf0e7;border-radius:999px;padding:4px 10px;margin-bottom:14px}
+h1{font-family:var(--font-heading);font-size:40px;line-height:1.15;margin-bottom:14px}
+.lede{font-size:19px;color:var(--color-text-muted);margin-bottom:22px}
+.hero-cta{display:inline-block;background:linear-gradient(135deg,#c4956a,#a9793f);color:#fff;
+  padding:13px 26px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px}
+.prose p{margin-bottom:20px;font-size:16.5px}
+.prose h2{font-family:var(--font-heading);font-size:26px;margin:38px 0 14px}
+.end-cta{margin-top:56px;padding:26px;border:1px solid var(--color-border);border-radius:16px;background:#fff;text-align:center}
+.end-cta p{color:var(--color-text-muted);font-size:14px}
+
+/* ============================================================
+   SideOfferTab — verbatim copy of src/components/SideOfferTab.astro
+   ============================================================ */
+.side-tab {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 70;
+  translate: 100% -50%;
+  animation: sd-in .6s cubic-bezier(.16,1,.3,1) .55s forwards;
+  width: 40px;
+  min-height: 168px;
+  padding: 14px 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 13px 0 0 13px;
+  background: linear-gradient(168deg, #8b6f4e 0%, #6b5438 60%, #54402a 100%);
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow:
+    inset 1px 0 0 rgba(255,255,255,.16),
+    -8px 0 22px rgba(84,64,42,.20);
+  transition: filter .2s ease, box-shadow .2s ease, transform .2s ease, scale .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+@keyframes sd-in { to { translate: 0 -50%; } }
+.side-tab:hover{
+  filter:brightness(1.09);
+  transform:translateX(-3px);
+  box-shadow:inset 1px 0 0 rgba(255,255,255,.2),-12px 0 30px rgba(84,64,42,.28);
+}
+.side-tab:active{scale:.97}
+.side-tab:focus-visible{outline:2px solid #e8cdb0;outline-offset:-4px}
+.side-tab::after{
+  content:'';position:absolute;inset:-30% -60%;
+  background:linear-gradient(100deg,transparent 34%,rgba(255,255,255,.22) 48%,transparent 62%);
+  animation:sd-sweep 5.2s ease-in-out 1.6s infinite;pointer-events:none;
+}
+@keyframes sd-sweep{0%{transform:translateY(-70%)}38%,100%{transform:translateY(70%)}}
+.side-tab__logo{width:24px;height:24px;border-radius:8px;background:#fff;padding:2px;flex-shrink:0;
+  box-shadow:0 1px 4px rgba(40,28,16,.28)}
+.side-tab__label{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--font-body);
+  font-size:12.5px;font-weight:600;letter-spacing:.06em;white-space:nowrap;
+  text-shadow:0 1px 2px rgba(40,28,16,.35)}
+.side-tab__arrow{width:13px;height:13px;flex-shrink:0;opacity:.85}
+@media (max-width:600px){
+  .side-tab{width:36px;min-height:152px}
+  .side-tab__label{font-size:11.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  .side-tab{animation:none;translate:0 -50%}
+  .side-tab::after{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-note">
+  <b>Handle-only version</b>
+  <span>No panel, no popup, no JS. The tab <strong>is</strong> the link — it slides in once on load and stays put. Hover it for the nudge, resize the window to see the mobile sizing.</span>
+</div>
+
+<div class="wrap">
+  <header class="hero">
+    <span class="badge">Review</span>
+    <h1>Master Enigma — Kasamba Review</h1>
+    <p class="lede">What actually happens in a session, what it costs, and who should skip it entirely.</p>
+    <a href="#" class="hero-cta">Get 3 Free Minutes on Kasamba →</a>
+  </header>
+
+  <article class="article-content">
+    <div class="prose">
+      <p>Most reader pages open with a claim about accuracy. This one opens with a mechanism, because accuracy claims are unfalsifiable and mechanisms are not. What follows is what a session with this reader actually looks like, measured across paid sessions, and the conditions under which it stops working.</p>
+      <h2>How the session opens</h2>
+      <p>The first two minutes follow a fixed sequence: a name, a timeframe, and one concrete detail offered before any question is asked. That ordering matters. A reader who asks what you want to know before offering anything is working from your answers, not from their own impressions.</p>
+      <p>Across the sessions logged here, the opening detail landed on something verifiable roughly two times out of three. That is a real signal, and it is also a bounded one — it tells you the reader is doing evidential work, not that every subsequent claim will hold up.</p>
+      <h2>Where it breaks down</h2>
+      <p>The failure mode is consistent and worth naming: once the session moves past the opening into forecasting, specificity collapses. Dates become seasons, names become initials, outcomes become tendencies. This is not unusual, and it is not deception — it is what the medium actually is.</p>
+      <p>What separates a useful session from a disappointing one is whether the reader signals that transition or hides it. Readers who mark the shift — who say, in effect, now I am interpreting rather than reporting — give you something you can act on. Readers who do not leave you unable to tell which part was evidence and which part was inference.</p>
+      <h2>The cost, in full</h2>
+      <p>Per-minute pricing is the least useful number on the page, because almost nobody books one minute. The realistic figure is the total for a session long enough to be worth having, and that is what you should budget against. The new-client discount changes the first session materially and does nothing for the second.</p>
+      <p>The exit condition is the part most reviews skip. You can end a session at any point, you are billed for the minutes used, and the unused balance of a package stays available. Knowing that in advance is what turns the first booking from a commitment into a test.</p>
+      <h2>Who should book someone else</h2>
+      <p>Three profiles consistently get poor value here. Readers who want a fixed, scheduled relationship rather than on-demand access. Readers whose question is fundamentally a medical or legal one. And readers who want the session to end with a decision made for them — this reader will describe, and the description will be good, but the decision stays with you.</p>
+      <p>For the first profile, a platform with scheduled appointment booking is the better fit. For the second, the answer is not a psychic reading at all. For the third, look for readers who explicitly work in a directive style — they exist, and they say so in their profiles.</p>
+      <h2>What to do with this</h2>
+      <p>If the opening sequence described above matches what you want from a session, the free minutes are enough to test it, and testing it costs you nothing but the time. If it does not match, no amount of discount makes it a better fit — go find the profile that does.</p>
+      <p>That is the whole recommendation. Not a rating out of five, not a verdict about whether psychic readings work — a description of one working style, and the conditions under which it is worth paying for.</p>
+    </div>
+
+    <div class="end-cta" id="end-cta-anchor">
+      <p><strong>End of article offer block</strong> — nothing overlaps it now.</p>
+    </div>
+  </article>
+</div>
+
+<a class="side-tab" id="side-offer-tab" href="#" target="_blank" rel="nofollow sponsored"
+   aria-label="Kasamba new-client offer: 3 free minutes + 50% off (opens in a new tab)">
+  <span class="side-tab__logo" style="display:flex;align-items:center;justify-content:center;
+        font-family:var(--font-heading);font-size:14px;color:#4a6ee0;background:#fff">K</span>
+  <span class="side-tab__label">3 Free Minutes</span>
+  <svg class="side-tab__arrow" viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M5.5 10.5L10.5 5.5M6.4 5.5h4.1v4.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+
+</body>
+</html>

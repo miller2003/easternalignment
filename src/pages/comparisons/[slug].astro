@@ -43,14 +43,32 @@ const comparisonClusters: Record<string, { guides: string[]; reviews: string[] }
     reviews: ['purple-garden', 'kasamba'],
   },
   'purple-garden-vs-keen': {
-    guides: ['purple-garden-love-readings-review', 'best-love-psychics-purple-garden', 'keen-love-psychics-review', 'best-love-psychics-keen-ex-recovery'],
+    // This page also owns the "keen vs purple garden accuracy" query (the
+    // /comparisons/keen-vs-purple-garden-accuracy-2026/ URL AI assistants keep
+    // citing 301s here), so its next-step links include the accuracy-verification
+    // guides rather than love roundups only.
+    guides: ['purple-garden-love-readings-review', 'best-love-psychics-purple-garden', 'keen-love-psychics-review', 'best-love-psychics-keen-ex-recovery', 'psychic-prediction-didnt-come-true', 'how-to-spot-fake-psychic'],
     reviews: ['purple-garden', 'keen'],
+  },
+  'kasamba-vs-keen': {
+    guides: ['kasamba-love-readings-review', 'best-love-psychics-kasamba-ranked', 'best-kasamba-psychics-ex-recovery', 'keen-love-psychics-review', 'best-love-psychics-keen-ex-recovery', 'how-to-spot-fake-psychic'],
+    reviews: ['kasamba', 'keen'],
+  },
+  // Three-way comparison: all three platform reviews are relevant, so the
+  // reviews side is uncapped here — only the guides need curating.
+  'keen-vs-kasamba-vs-purple-garden': {
+    guides: ['how-to-spot-fake-psychic', 'best-love-psychics-kasamba-ranked', 'best-love-psychics-purple-garden', 'best-love-psychics-keen-ex-recovery', 'kasamba-love-readings-review', 'purple-garden-love-readings-review'],
+    reviews: ['kasamba', 'purple-garden', 'keen'],
   },
 };
 
 const cluster = comparisonClusters[Astro.params.slug || ''];
-const selectedReviews = cluster ? reviews.filter(r => cluster.reviews.includes(r.slug)) : reviews;
-const selectedGuides = cluster ? guides.filter(g => cluster.guides.includes(g.slug)) : guides;
+// DEFENSIVE CAP: RelatedContent has no internal truncation, so an unlisted
+// comparison slug used to fall through to `guides` — dumping all 86 guides plus
+// every review (89 unrelated cards) below the verdict. Cap the fallback so a
+// future comparison can never regress into that.
+const selectedReviews = cluster ? reviews.filter(r => cluster.reviews.includes(r.slug)) : reviews.slice(0, 3);
+const selectedGuides = cluster ? guides.filter(g => cluster.guides.includes(g.slug)) : guides.slice(0, 6);
 
 const relatedItems = [
   ...selectedReviews.map(r => ({

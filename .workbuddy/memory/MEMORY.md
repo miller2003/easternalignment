@@ -1,55 +1,61 @@
-# 项目记忆 - easternalignment
+# Eastern Alignment 项目长期约定
 
-## 项目概况
-- 英文玄学/灵媒测评独立站（affiliate 流量站），Astro 静态站 → Cloudflare Pages，约 8 个月站龄（2026-08）
-- 变现：TUNE/Barges 联盟网络（bargestech.go2cloud.org，aff_id=2326），广告主 Keen / Kasamba / Purple Garden
-- 佣金：**Kasamba 和 PG 的 CPA 均已谈至 $125**（2026-08-26 用户确认；Kasamba 追溯生效）。转化（2026-08-25 用户确认）：10 conversions，其中 4 个 qualified 新客首单付费
-- 增长目标（2026-08-26 确立）：每月 100 个合格付费转化 ≈ $12,500/月，需 ~2,000-2,500 点击/月（当前 ~90）
-- 主推顺序（2026-08-25 全站重置）：Kasamba #1 (4.9) → PG #2 (4.88) → Keen #3 (4.8)；Editor's Choice 归 Kasamba
-- AM 关系：Maayan Bronstein（Ingenio，PG 内容指导：Top Psychics/love/mediumship LP 转化最好，别先做 Tarot）；Matthew Tenney（Ingenio Organic Growth Manager）——8-24 发现本站 fake-psychic 指南被 Claude 引用
-- 用户邮件署名 huanchao wang <nuhannmiller@gmail.com>；不熟 PostHog 看板（已写 POSTHOG_PER_PAGE_GUIDE.md）
+## 业务基线
+英文 psychic reading 联盟站（Astro 静态站，Cloudflare Pages 部署）。三平台：Kasamba(#1) / Purple Garden(#2) / Keen(#3)，优先级见 `src/lib/offers.ts` 的 `PLATFORM_PRIORITY`。
+商业目标：月 100 个合格转化，CPA $125。当前 Google 月点击基线 ~90，缺口 22–28 倍 —— **瓶颈是量级，不是跳出率**。
 
-## 内容基调（review 写法硬规则）
-- 转化优先 + 明贬暗褒：只提无关痛痒或可管理的小缺点，解法必须强化推荐；净读必须是推荐
-- 禁编造 quote/价格；reader .md 不手写结尾 CTA / nudge / 披露（路由自动注入 ReaderEndCTA + CTABox）
-- 批次2起：减少套路化论证；每篇以读者独特点为主线；文章要翔实（bio 细节/真实评论引文/session 体验）
-- **负面篇幅红线（2026-08-26 用户打回重写后确立）**：明贬暗褒绝不能写成"避坑指南"。每篇只留 1 个无关痛痒小缺点 + 当场给解法，且解法必须强化推荐（如 Shiwa"回答短"→解法"打电话"恰是更便宜的 voice 价）；差评原文引用、miss 率拆解、"skip if 你需要X"式劝退段、整节 Small Print 负面分析——全部禁止。结尾 verdict 段以"Book"收尾，不要再现条件式劝退清单。
+## 内容红线（用户确立，2026-08-26）
+- **禁止**：针对产品本身的缺陷拆解、miss 率 / 投诉率 / 差评占比当卖点、差评原文引用、论坛 Reddit 投诉拆解、`The Small Print` 式负面罗列。
+- **允许**：**人群匹配式劝退** —— "你是这类人就不适合找她，**那你该找谁**"，必须给替代方案 + 内链。判定标准：负面指向**人**的匹配度，不是指向**产品**的缺陷。
 
-## 关键技术架构
-- Affiliate 链接（2026-08-10 重构）：映射在 src/data/affiliateLinks.ts；/go/[...slug].astro 门控占位页防 bot 虚点击（same-origin referrer / sessionStorage / ?ea_sub= 才跳 TUNE）；_redirects 已无 /go/ 302；PostHog.astro 点击监听带 e.isTrusted 校验
-- ReaderEndCTA nudge 段按平台分桶（3桶×6段=18 段）：Keen=咖啡价锚定 / Kasamba=前3分钟免费 / PG=$30免费额度；data-cta-copy + data-cta-platform 标记供 PostHog 分桶分析
-- src/lib/platform.ts 导出 platformFromName()
-- readers schema 支持 avatarUrl/ctaOverride/unavailable；chosenone77 和 jackies-tea-tarot 无真图用字母/svg 兜底
-- es/ 西语站未接 nudge；es/psiquicos-web 是空 hub 待处理
-- **CTA hover tooltip 文案准则（2026-08-27 用户拍板）**：social proof 必须是平台级用户基数（如 "Start your Kasamba journey with 3+ million other users"），不是"我站审过 N 个解读师"。仅 `src/lib/offers.ts` 的 `proofTooltip()` 单点函数，5 个 CTA 组件（EndCTA / SidebarDealCard / ScorePanel / InlineCta / ReviewLayout）共用。`userMillions` 字段必须取平台公开自报的保守值（Keen 14 / Kasamba 3 / PG 2，来自 App Store 描述/官方 case study/联盟评测），不人为放大。`reviewedCount` 字段保留（ComparisonLayout JSON-LD + coupons 页还要用）。
-- **平台图标全部本地托管** `public/logos/{key}.png`（2026-08-26）：keen=Google faviconV2 48×48 PNG（红字+米色渐变）；kasamba/purple-garden=iOS App Store 官方 marketing 256×256 PNG；psiquicos-web=DDG icons 200×200。**不能热链 google.com/gstatic.com**——国内网络 GFW 直接断。`platformLogo()` 在 src/lib/offers.ts 返回 `/logos/${key}.png`，所有 CTA/侧栏/PS 组件统一走这条路径。
-- **按钮命名硬约定（2026-08-26 棕底黑字事故 + StickyCTA ghost 穿透后扩展）**：任何按钮/CTA 锚点的 class 必须含 "btn" 或 "cta"；棕底白字的 color 声明必须带 `!important`。根因①：global.css `.prose a:not(...)` 链接规则叠了多个 :not()，特异性 (0,6,1)，会覆盖渲染进 .prose 的按钮锚点的白字（组件作用域样式只有 (0,3,0)）。prose 规则已加 `:not([class*="btn"]):not([class*="cta"])` 豁免——新按钮类名不含这两个子串就会重蹈覆辙。InlineCta 是 JS 注入 .prose 的，ScorePanel 经 hub 页 slot 进 .prose，都要按"在 prose 内"对待。根因②：组件内 `base .btn` 带 `color: #fff !important` 时，所有变体（`.btn--ghost` / `.btn--featured` / `.btn--outline` 等）若要切换 color 必须也带 `!important`，否则会被 base 规则的 `!important` 反向穿透（同名优先级时 !important 永远赢）。StickyCTA ghost 按钮就是这种"白底棕字"本应胜出却被穿透成白字，导致与白底同色"消失"。
+## 🔑 内容原则：不要共情，要诊断（用户确立，2026-08-29）
+**禁止任何形式共情段落**（"我知道你很难受""凌晨三点的焦虑"）。三条理由：
+1. 会猜错——猜中命中，猜错读者判定"作者不懂我"直接划走，比不写更糟。
+2. **共情不产生信任，判断才产生信任**。读者要的不是被理解，是"我的情况属于哪一种、该怎么做"。
+3. 共情段是 AI 味重灾区（`we understand how painful this is` 全行业都在写）。
+替代方案 = **诊断**：描述"类型"而非描述"你"。读者自己对照，不需要猜她的感受，且天然带"我见过很多案例"的权威感。
+*（用户原话：「用户凌晨一点反复刷他的社交动态，别乱猜啊，没猜对的话用户直接划走了！」→「不太好，就不应该共情。」）*
 
-## SEO 战略（2026-08-24 报告 + 8-25 Matthew brief，详见 SEO_STRATEGY_REPORT_2026-08-24.md 和 scratch/gsc_matthew/）
-- 阶段判断：非流量问题，是 CTR 损耗 + 排名断层（第二页魔咒，平均排名 ~23）
-- 最高 ROI 动作：CTR 修复（首页零点击词如 keen free 3 minutes 排名7.8零点击）+ AggregateRating schema 全站补
-- mysticmag.com 对标：~420 URL、日访客~4K、域名早5年；差距在体系（EEAT实体化/转化模板/每日运势/42平台）非单篇质量
-- 月100转化数学：需 ~2,000-2,500 点击/月（当前~90），CTR×2.5 × 排名×3 × 内容面×4 叠加
-- 三阶段：①接住流量（CTR/schema/hub重写）②扩关键词面（对比矩阵/tools内容化解除noindex/场景guides）③权威品牌（外链/新平台/es站）
-- 已验证赢家：mystic-raj 读者页 CTR 21.6%（单读者深评模式成立，是差异化定位）
+## 单篇 reader review 的标准结构（v2，见 `READER_REVIEW_PROMPT_v2.md`）
+H1（必含判断/质疑，禁命名式）→ 第0块 首屏判定块（四要素：一句话判定 + 三行情境分流 + 真实总预算 + 最低门槛路径；不滚动可见）→ 第1块 诊断框（问题分三类，她只对1–2类有效）→ 第2块 **检验报告**（用 how-to-spot-fake-psychic 的三条标准逐条检验，必含一项对她不利的发现）→ 第3块 工作方式与失效条件（开场顺序、失效条件、开场句、判断信号）→ 第4块 真实成本账（**总额不是单价** + 下限 + 新客优惠覆盖 + 退出条件含是否扣费）→ 第5块 分流与劝退（该订三类 / 该换人两类带内链 / **硬劝退三条：先别订任何人**）→ 第6块 FAQ（答案必须有机制，AI 只引用有因果的解释）。
+**转化机制**：不是 CTA 堆叠，是降低决策重量 —— 读者能在脑子里预演这次会话 + 知道不值钱就能退出时，下单就从"花 $100 赌博"变成"用免费分钟试一下"。
 
-## 内链系统（2026-08-27 重构）
-- **批量加文会冲击内链**：评分近乎同分布（中位 4.9）时，"top-N-by-rating" 选择器坍缩→小撮高分垄断、91% 饿死。PG 旧用"文件序前 3"→新加的排末尾永不出现。
-- **解法**：`src/lib/relatedReaders.ts` 的 `pickRelatedReaders`/`pickRelatedGuides`。稳定 slug 排序 + **coprime-step 旋转窗**（STEP 与各平台 n 互素→窗起点遍历每 residue 恰一次→入链均匀零孤儿），窗内按 niche 重叠排序展示。niche 词表只 love/tarot/medium/career/astrology/dream/pet（**排除 psychic/intuitive**，否则判别器失效）。三个 `[reader].astro` 已接入；PG 页已补 RelatedContent。
-- footer 重生成脚本 `scratch/regen_footers.py`（旋转窗 sibling+hub，coprime step=11 与页内卡片互补）。
-- **坑**：哈希 `% n` 会因 gcd 坍缩到少数桶→假阳性孤儿，必须用 coprime step 不依赖哈希分布。frontmatter 值 YAML 带引号，解析须剥引号。
+## GEO / AI 引用约定（2026-08-29 确立）
+- **两阶段模型**：阶段1 检索（相对排序，吃传统 SEO，是入场券）→ 阶段2 抽取（绝对判断"这段能答吗"，吃内容形态）。**用户踩中的是阶段2**，与 llms.txt / AI 摘要块 / schema 堆叠等表层 GEO 技巧无关。写作时优先保阶段2 四要素：**自包含答案块（脱离上下文也能读）／枚举结构／具体数字锚点／信息增量（别处没有的独家事实）**。
+- **被 AI 引用后的改动边界**：锁 URL、H1、**被引用那一段的措辞**；CTA／样式／内链可随意改；补新事实是加法，安全。判定标准：**改的是"答案"还是"包装"**。
+- **chrome 稀释红线**：全站 chrome 恒定 620–740 词（两遍导航＋disclosure bar＋offer bar＋双侧栏＋SideDock＋EndCTA＋AuthorBio）。**正文 < ~1,500 词的页面，chrome 占比 > 30%** → 此类页面禁止再叠加新 CTA。测量：`python scratch/geo_text_ratio.py dist/<path>/index.html`。
+- **CTA 位置伤害排序**（大→小）：`InlineCta` 打断 H2 与答案的语义单元 ＞ 顶部 disclosure/offer bar 占开头加权位 ＞ 底部 EndCTA（几乎无害）＞ 折叠但仍输出 HTML 的 SideDock（纯浪费 token）。
+- 待修：导航 DOM 输出两遍（可砍 15–20% chrome）；SideDock panel 改 JS 动态注入；`InlineCta` 改按标记插入而非"第 2 个 H2 前"。
 
-## 富媒体（SERP Rich Results）约定（2026-08-27）
-- 本项目"富媒体"= Google SERP 结构化数据。layout 层（ReviewLayout+BaseLayout）对所有读者页**统一**输出合规集：Review(itemReviewed=Product 白名单→星级)+AggregateRating+Brand+Breadcrumb+FAQ+WebSite/Org/Person。新文自动继承。
-- **读者页 customSchema 应为 Article**（不是第二条 Review）：Article 富结果(headline/image/author Sarah/publisher EA+logo/date/mainEntityOfPage/wordCount/about) + layout 的 Review 星级，多展示且避免重复 Review 类型冲突（"种类问题"）。44 篇新文已转 Article（`scratch/schema_article.py`）；114 篇老文仍带冲突的重复 Review customSchema，待统一（follow-up）。
-- 仍开放：28 篇 kasamba 新文缺 ogImage（暂用方形 avatar 兜底 Article.image）；layout Review itemReviewed.url=/go/ 联盟链接 self-serving 风险（plan 标"前序不动"）。
+## 生产约定
+- **信息准入闸门**：BRIEF 四项第一手信息（实测次数与花费 / 沉默测试原文 / 可验证的具体项 / 一次不满意的发现）缺任何一项 → **停止，不许写**。宁可不发布也不产 AI 味空文。
+- **反模板化**：骨架固定保可批量，但每块给 2–3 种展开形态由 AI 轮换，且标题不得与同平台最近 5 篇重复（v1 时代 60+ 篇共用一副骨架是最大教训）。
+- **CTA 由路由注入**（ReaderEndCTA + CTABox），正文禁止手写 CTA / `/go/` 链接 / 结尾 nudge 段。
+- **不在沙箱 build**（会卡死，已知坑）。本机跑：`pkill -9 -f "npm run build"; CODEBUDDY_SESSION_ID= CLAUDE_SESSION_ID= npm run build`。
 
-## 环境坑（跨会话复用）
-- 沙箱：Python 网络必死（抓取用 Bash curl，小批3-4个+sleep）；Windows \r 毒化（写文件 newline='\n'，读行去尾 \r）
-- 构建：沙箱内 astro build 确定性卡死（2026-08-14 起），**build 必须用户本机跑**；本机构建需前置 CODEBUDDY_SESSION_ID= CLAUDE_SESSION_ID= 关 safe-delete shim
-- keen.com 主站被 Cloudflare 拦（本环境无法验证，须用户本机确认）；images.keen.com 头像 CDN 可 curl
-- **Google favicon 服务至少两个端点、返回不同图片**：`www.google.com/s2/favicons?domain=X&sz=N` ≈ 16×16 ICO；`t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&url=X&size=N` ≈ 48×48 PNG。curl 一个端点不能推断另一个 —— 同一域名在两个端点下的视觉可能完全不一样（keen.com 就是典型：s2 返回红底白字 ICO，faviconV2 返回红字白底 PNG）。
+## ⚠️ 审计口径铁律（2026-08-29 踩坑后确立）
+**凡涉及「转化路径 / CTA / 链接是否缺失」的审计，统计必须落在渲染后的 `dist/**/*.html`，
+禁止只看 `src/content/**/*.md` 源文件下结论。** 曾据此误报两条 P0：
+①「某文无 /go/ 链接」—— 实际 `EndCTA` 恒定遍历输出三平台链接，源文件没有才是规范；
+②「PG 无深层链接」—— 实际 `src/data/affiliateLinks.ts` 里 46 条全带 `url=` 参数、完好可用。
+源文件层面的统计只能回答「内容写了什么」，不能回答「页面输出什么」。
 
-## 用户
-- Windows + Git Bash；中英文混用；自称 samja
-- **国内网络（GFW）但有海外 IP 切换能力做站点 QA**——做"打不开/显示异常"类问题诊断时，海外 IP 通常一切正常，问题大概率是 GFW 拦境外域名（google.com / gstatic.com / keen.com 主站等）。早期做诊断别直接归因到"资源本身坏了"，先问"海外能不能看到"
+## `platform` 字段的双重作用（改 frontmatter 前必读）
+`platform` 不只是分类标签，它有**两处**消费点，缺标影响远大于"少一组内链"：
+1. `src/pages/guides/[slug].astro` → `matchedReviews` / `matchedComparisons`（是否展示对应平台 review 卡片与对比页）。
+2. **`src/layouts/ArticleLayout.astro` → 决定全页 CTA 的平台归属**：
+   `pagePlatform = (rawPlatform==='keen'||'purple-garden') ? rawPlatform : 'kasamba'`。
+   缺失即 hero CTA / `InlineCta` / sticky CTA / 右侧 deal 卡 / TopOfferBar **全部回落 Kasamba**。
+   中立科普文这样合理（Kasamba 是站内 #1），但**平台专文漏标 = 把用户送去竞品**
+   （`purple-garden-30-credit-guide` 曾真实踩此坑，2026-08-29 已修）。
+**新写任何平台专文，frontmatter 必须显式写 `platform` + `affiliateUrl`。**
+
+## 编码红线（2026-08-28 发现的全站 bug）
+新写内容禁止引入 `→–`、`→’`、孤立控制字节 0x02，以及数字区间错写为 `$3—/min`、`8—0 minutes`。正确为 en dash 完整区间 `$3–6/min`、`8–10 minutes`。
+（frontmatter 里的 `\"` 是**合法 YAML 转义**，不是 bug，勿修。）
+
+## 平台优惠口径（唯一事实源 `src/lib/offers.ts`）
+Kasamba `kasamba`：每个新顾问 3 分钟免费 + 首单 5 折 ｜ Keen `keen`：5 分钟 $1（一次性）｜ Purple Garden **`purplegarden`**（无连字符）：$30 credit。
+
+## 范本页（PostHog 验证，永不修改）
+`david7`、`ask-fran`、`c-garrett`、`master-sher`、`readings-by-kelly777`、`master-enigma-kasamba-review`、`how-to-spot-fake-psychic`、`brutally-honest-psychics-keen`、`psychic-prediction-didnt-come-true`、`karmic-relationships-signs-and-lessons`、`evidential-mediums-passed-spouse`、`reviews/keen`
