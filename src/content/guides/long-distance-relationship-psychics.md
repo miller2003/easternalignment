@@ -289,7 +289,7 @@ When panic strikes at 2 AM because he didn't answer his phone, you do not need a
   </div>
 </div>
 
-Golden Eye→’s 21 years of experience means she operates with extreme speed. Provide his name, and she will immediately drop into the energy cord. She is perfect for the highly anxious client who needs immediate verification of his loyalty to calm a panic attack before it causes a fight.
+Golden Eye's 21 years of experience means she operates with extreme speed. Provide his name, and she will immediately drop into the energy cord. She is perfect for the highly anxious client who needs immediate verification of his loyalty to calm a panic attack before it causes a fight.
 
 [Test His Loyalty Instantly with Golden Eye (3 Free Mins) →](/go/kasamba-golden-eye)
 

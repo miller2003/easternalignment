@@ -63,11 +63,11 @@ This creates a market dynamic that is genuinely rare: top-tier readers on Kasamb
 
 Kasamba's pricing is decentralized — advisors set their own rates based on demand — and the resulting structure breaks into three distinct tiers, each serving a different strategic purpose.
 
-The Proving Ground ($1.99→–$4.99/min) holds newer advisors building their review counts. These are not necessarily inexperienced psychics; occasionally you find genuinely gifted readers here who simply have not raised their rates yet. The strategy: use this tier for general energy reads and secondary questions, and watch for the rare talent trading at a discount.
+The Proving Ground ($1.99–$4.99/min) holds newer advisors building their review counts. These are not necessarily inexperienced psychics; occasionally you find genuinely gifted readers here who simply have not raised their rates yet. The strategy: use this tier for general energy reads and secondary questions, and watch for the rare talent trading at a discount.
 
-The Professional Class ($5.00→–$14.99/min) is the sweet spot. Advisors here have established track records, thousands of reviews, and consistent accuracy. The strategy: spend 80% of your time here. Readers in this bracket have enough skin in the game to deliver high-value insights without the celebrity markup.
+The Professional Class ($5.00–$14.99/min) is the sweet spot. Advisors here have established track records, thousands of reviews, and consistent accuracy. The strategy: spend 80% of your time here. Readers in this bracket have enough skin in the game to deliver high-value insights without the celebrity markup.
 
-The Elite Tier ($15.00→–$30.00+/min) holds the platform's veterans — advisors like Ask Cristina and David James with massive, loyal followings. The strategy: never use them for exploratory sessions. Bring hyper-specific, surgical questions, and treat a focused 5-minute session with an elite advisor as more clarifying than a meandering 20-minute session with a novice.
+The Elite Tier ($15.00–$30.00+/min) holds the platform's veterans — advisors like Ask Cristina and David James with massive, loyal followings. The strategy: never use them for exploratory sessions. Bring hyper-specific, surgical questions, and treat a focused 5-minute session with an elite advisor as more clarifying than a meandering 20-minute session with a novice.
 
 The common failure mode is tier confusion: paying elite rates for open-ended exploration, or trusting the Proving Ground for high-stakes questions. Both waste money. Match the tier to the job.
 

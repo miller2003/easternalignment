@@ -214,4 +214,4 @@ I understand the financial constraint, and I want to be honest: readings are not
 
 [Find Verified Readers on Purple Garden ($30 Free Credit for New Users) -->](/go/purple-garden)
 
-
+

@@ -86,7 +86,7 @@ The third is the escalation pattern. The predatory side of this industry makes i
 
 Putting it together with real numbers, based on my actual testing:
 
-A focused 20-minute chat session with a professional-tier reader on Kasamba ($5→–$10/min) runs $100 to $200, minus free minutes. A 20-minute phone session with a professional reader on Keen ($5→–$15/min) runs $100 to $300, with the $1 trial covering the first five minutes. A 20-minute video session on Purple Garden ($5→–$6/min) runs $100 to $120, with the $30 credit cutting the first one to roughly $70 to $90.
+A focused 20-minute chat session with a professional-tier reader on Kasamba ($5–$10/min) runs $100 to $200, minus free minutes. A 20-minute phone session with a professional reader on Keen ($5–$15/min) runs $100 to $300, with the $1 trial covering the first five minutes. A 20-minute video session on Purple Garden ($5–$6/min) runs $100 to $120, with the $30 credit cutting the first one to roughly $70 to $90.
 
 The cheapest realistic full reading is around $50; the most expensive are $300+. Anyone who promises you a complete, meaningful reading for $5 is selling you either a trial, a cold read, or a teaser for an escalation.
 

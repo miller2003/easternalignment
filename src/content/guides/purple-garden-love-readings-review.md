@@ -90,7 +90,7 @@ The correct protocol, applied to any advisor before a love reading:
 
 **Step 4: Identify the time-delay pattern.** The most powerful Journeys evidence is the return entry from a client who was initially resistant — who came back months later to document that the uncomfortable reading proved accurate. This is the accuracy signal that matters most, because it demonstrates delivery of true information over comfortable information.
 
-This protocol takes 8→–10 minutes and tells you more about an advisor's actual love reading accuracy than any amount of time spent reading their profile description.
+This protocol takes 8–10 minutes and tells you more about an advisor's actual love reading accuracy than any amount of time spent reading their profile description.
 
 ---
 
@@ -105,8 +105,8 @@ Purple Garden's three formats — live video, voice call, and live chat — are 
 - Your question involves a tarot reading and you want to see the actual card draws in real time
 - You want to assess the advisor's communication style and authenticity under the emotional pressure of your question before paying for an extended session
 
-**Rates:** $4.99→–$15.00/min at mid-to-premium tier.
-**What the $30 credit covers:** 3→–6 minutes at mid-tier rates — sufficient for a process-evaluation session.
+**Rates:** $4.99–$15.00/min at mid-to-premium tier.
+**What the $30 credit covers:** 3–6 minutes at mid-tier rates — sufficient for a process-evaluation session.
 
 **Best video love questions:**
 - *"Can you pull a spread on the current state of the energetic connection between [name] and me — and tell me what each position shows, including the difficult ones?"*
@@ -121,14 +121,14 @@ Purple Garden's three formats — live video, voice call, and live chat — are 
 - You are dealing with a twin flame or reconciliation situation where specific timeline predictions need to be audited weeks later
 - You distrust your own memory under emotional pressure (this is most people in most love situations)
 
-**Rates:** $0.99→–$6.99/min — the most credit-efficient format.
-**What the $30 credit covers:** 8→–30 minutes depending on advisor tier.
+**Rates:** $0.99–$6.99/min — the most credit-efficient format.
+**What the $30 credit covers:** 8–30 minutes depending on advisor tier.
 
 **Best chat love questions:**
 - *"Lay out a complete picture of this connection's current state — where is the energy, what is the trajectory, and what timeline are you seeing?"*
 - *"What is [name] currently experiencing emotionally regarding this connection?"*
 
-**The chat advantage for love questions:** The transcript is the most powerful accountability tool in the psychic reading space. A specific, written prediction — *"the Three of Swords in the near-future position indicates ongoing difficulty in reconciliation for the next 8→–10 weeks"* — can be evaluated against reality with precision. You cannot unconsciously renegotiate a written record.
+**The chat advantage for love questions:** The transcript is the most powerful accountability tool in the psychic reading space. A specific, written prediction — *"the Three of Swords in the near-future position indicates ongoing difficulty in reconciliation for the next 8–10 weeks"* — can be evaluated against reality with precision. You cannot unconsciously renegotiate a written record.
 
 ### Voice Call: When Real-Time Exchange Matters
 
@@ -137,7 +137,7 @@ Purple Garden's three formats — live video, voice call, and live chat — are 
 - The conversational, real-time quality of a spoken exchange is important for how you receive information under stress
 - You want a reading that feels closer to a conversation than a transaction
 
-**Rates:** $2.99→–$9.99/min at mid-tier.
+**Rates:** $2.99–$9.99/min at mid-tier.
 **The voice limitation:** Like video, voice produces no written transcript. For any session with specific timeline predictions, ask the advisor to summarize their key points at the end so you can write them down immediately.
 
 ---
@@ -202,14 +202,14 @@ See the [Purple Garden twin flame reading guide](/guides/purple-garden-twin-flam
 
 The credit is applied on your first purchase and supplements your deposit. Depending on the advisor tier and format, it covers:
 
-- **Chat (entry tier, $0.99→–$2/min):** 15→–30 minutes
-- **Chat (mid-tier, $3→–4/min):** 8→–10 minutes
-- **Video (mid-tier, $5→–8/min):** 4→–6 minutes
-- **Video (premium, $10→–12/min):** 2→–3 minutes
+- **Chat (entry tier, $0.99–$2/min):** 15–30 minutes
+- **Chat (mid-tier, $3–4/min):** 8–10 minutes
+- **Video (mid-tier, $5–8/min):** 4–6 minutes
+- **Video (premium, $10–12/min):** 2–3 minutes
 
 **The smartest allocation:**
 
-For a first love reading: Use half the credit (effectively) on a short 5→–7 minute video session with a pre-vetted advisor (who has passed the Journeys audit). This functions as a process evaluation — you are assessing the advisor's authenticity and methodology before committing to a longer engagement.
+For a first love reading: Use half the credit (effectively) on a short 5–7 minute video session with a pre-vetted advisor (who has passed the Journeys audit). This functions as a process evaluation — you are assessing the advisor's authenticity and methodology before committing to a longer engagement.
 
 If the video session produces specific, grounded information, use the remaining credit on a chat session with the same advisor, where the predictions go into writing.
 
@@ -223,11 +223,11 @@ If the video session feels generic or comfort-managed, end it. The credit has pr
 
 The most expensive love reading behavior on Purple Garden — or any platform — is what I call the confirmation extension: a session that produces a hopeful prediction, which creates relief, which dissipates when the prediction does not materialize on schedule, which leads to another booking for the same question.
 
-At video rates of $6→–8/min, this cycle costs $60→–$120 per iteration. Over 10 iterations in a year — one per month during a protracted post-breakup situation — the total reaches $600→–$1,200 without the underlying situation having materially changed.
+At video rates of $6–8/min, this cycle costs $60–$120 per iteration. Over 10 iterations in a year — one per month during a protracted post-breakup situation — the total reaches $600–$1,200 without the underlying situation having materially changed.
 
 The correct session structure for love questions on Purple Garden:
 
-1. **One complete reading** with a Journeys-verified advisor: current state, trajectory, specific prediction with timeframe. Budget 15→–20 minutes in chat format.
+1. **One complete reading** with a Journeys-verified advisor: current state, trajectory, specific prediction with timeframe. Budget 15–20 minutes in chat format.
 
 2. **One follow-up** if a significant event occurs: unexpected contact, a major life change, a clear behavioral shift that makes the original reading's picture incomplete.
 
@@ -265,7 +265,7 @@ Accuracy on Purple Garden, like on all psychic platforms, is reader-specific rat
 
 ### How much does a Purple Garden love reading cost?
 
-Chat sessions start at $0.99/min for entry-tier advisors and run to $6.99/min for established chat specialists. Video sessions run $4.99→–$15.00/min. A complete 15-minute love reading at mid-tier chat rates ($3→–4/min) costs $45→–$60. The $30 first-purchase credit covers most of this for a first session.
+Chat sessions start at $0.99/min for entry-tier advisors and run to $6.99/min for established chat specialists. Video sessions run $4.99–$15.00/min. A complete 15-minute love reading at mid-tier chat rates ($3–4/min) costs $45–$60. The $30 first-purchase credit covers most of this for a first session.
 
 ---
 

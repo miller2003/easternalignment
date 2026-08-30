@@ -203,7 +203,7 @@ Arradaza boasts a 25-year track record and uses a massive five-tool method to cr
   </div>
 </div>
 
-If Arradaza→’s Western Astrology chart says you will meet someone in 2027, she will cross-reference that date with Chinese Astrology and Numerology. When three different ancient mathematical systems point to the exact same year, you are no longer dealing with a psychic guess; you are dealing with a cosmic certainty. 
+If Arradaza's Western Astrology chart says you will meet someone in 2027, she will cross-reference that date with Chinese Astrology and Numerology. When three different ancient mathematical systems point to the exact same year, you are no longer dealing with a psychic guess; you are dealing with a cosmic certainty. 
 
 [Cross-Reference Your Timeline with Arradaza (5 mins for $1) →](/go/keen-arradaza)
 
@@ -242,7 +242,7 @@ If you don't want a deep psychological breakdown and just want rapid-fire, multi
   </div>
 </div>
 
-Golden Eye→’s 21 years of experience means she operates with extreme speed. She seamlessly blends Tarot with Astrology to map out your future trajectories. She is perfect for the client who is feeling sudden panic about their single status and needs an immediate, accurate projection of their romantic future.
+Golden Eye's 21 years of experience means she operates with extreme speed. She seamlessly blends Tarot with Astrology to map out your future trajectories. She is perfect for the client who is feeling sudden panic about their single status and needs an immediate, accurate projection of their romantic future.
 
 [Get Fast Timeline Answers with Golden Eye (3 Free Mins) →](/go/kasamba-golden-eye)
 

@@ -81,7 +81,12 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
 
 // Detect whether this is a reader-level review (e.g., "Keen: arradaza")
 const isReaderReview = platformName.includes(':');
-const parentPlatform = isReaderReview ? platformName.split(':')[0].trim().toLowerCase() : null;
+// NOTE: must be slugified — "Purple Garden" contains a space, and without the
+// `.replace()` below the breadcrumb/badge hrefs render as `/reviews/purple garden/`,
+// a dead link on every Purple Garden reader page (46 pages). Verified 2026-08-30.
+const parentPlatform = isReaderReview
+  ? platformName.split(':')[0].trim().toLowerCase().replace(/\s+/g, '-')
+  : null;
 const parentPlatformLabel = isReaderReview ? platformName.split(':')[0].trim() : null;
 const readerLabel = isReaderReview ? platformName.split(':').pop()?.trim() : platformName;
 

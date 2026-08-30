@@ -24,7 +24,7 @@ pros:
   - "Transparent badge system distinguishing 'Staff Picks', 'Top Rated', and 'Trending' advisors."
 cons:
   - "The desktop web browser interface feels secondary and clunky compared to their polished iOS/Android app."
-  - "Lowest-tier ($0.99→–$1.99/min) chat readers experience high turnover and occasional copy-paste horoscopes."
+  - "Lowest-tier ($0.99–$1.99/min) chat readers experience high turnover and occasional copy-paste horoscopes."
   - "Customer service resolves technical billing disputes through app credit rather than credit card refunds."
 entities:
   - "Purple Garden"
@@ -50,7 +50,7 @@ Here is my unfiltered, insider review of Purple Garden in 2026: the brilliant in
 
 ## 1. First Impressions & The App-First Architecture
 
-Let→’s get one realistic annoyance out of the way immediately: **If you try to use Purple Garden on a laptop or desktop web browser, you are going to feel underwhelmed.** The web interface works, but it feels like an afterthought—slightly cramped and missing the smooth navigation of their mobile app.
+Let's get one realistic annoyance out of the way immediately: **If you try to use Purple Garden on a laptop or desktop web browser, you are going to feel underwhelmed.** The web interface works, but it feels like an afterthought—slightly cramped and missing the smooth navigation of their mobile app.
 
 However, the moment you download the **Purple Garden iOS or Android app**, everything clicks. Backed by the veteran engineering team behind Purple Ocean and BitWine, the app is modern, intuitive, and blisteringly fast.
 
@@ -105,7 +105,7 @@ Purple Garden allows advisors to offer up to three reading formats simultaneousl
 ### My Personal Flaw Warning: The Low-Tier Chat Trap
 In the spirit of complete honesty, let me share a mistake I made early in my audit. I tested several advisors in the **$0.99/min Chat category**. While a couple were talented newcomers building their review count, nearly half typed slowly or used generic astrology scripts to pad out the minutes.
 
-**My Rule of Thumb:** Use **Live Video ($4.99→–$8.99/min)** for your first major reading with a vetted **Staff Pick** advisor. Once you trust their connection to your situation, switch to **Live Chat** for quick 3-minute follow-ups where having a permanent text transcript is invaluable.
+**My Rule of Thumb:** Use **Live Video ($4.99–$8.99/min)** for your first major reading with a vetted **Staff Pick** advisor. Once you trust their connection to your situation, switch to **Live Chat** for quick 3-minute follow-ups where having a permanent text transcript is invaluable.
 
 ---
 

@@ -164,7 +164,7 @@ If you know he loves you, but every time the word "marriage" is mentioned he shu
   </div>
 </div>
 
-Operating with a "Triple Clair" capacity, Seek Chelle bypasses his words and taps directly into his subconscious fears. She doesn→’t just give you a date; she translates his unhealed trauma and provides you with actionable steps on how to create a safe emotional container that will naturally prompt him to commit without an ultimatum.
+Operating with a "Triple Clair" capacity, Seek Chelle bypasses his words and taps directly into his subconscious fears. She doesn't just give you a date; she translates his unhealed trauma and provides you with actionable steps on how to create a safe emotional container that will naturally prompt him to commit without an ultimatum.
 
 [Uncover His True Intentions with Seek Chelle (3 Free Mins) →](/go/kasamba-chelle)
 

@@ -51,7 +51,7 @@ One practical pattern I have observed in my testing: the people who do best on K
 
 ## Cost of a Real Session: Doing the Math
 
-A genuine relationship reading is rarely a 5-minute affair. On Kasamba, a substantive 20-minute chat session with a professional-tier advisor ($5→–$10/min) runs $100 to $200, minus your free minutes. On Purple Garden, a comparable 20-minute video session ($4.99→–$5.99/min) runs $100 to $120, with the $30 credit reducing the first one to roughly $70→–$90. Purple Garden is typically the cheaper option for equivalent depth — but only if you actually use the video and Journeys tools to vet before booking. If you skip the vetting, the cost advantage evaporates into wasted sessions.
+A genuine relationship reading is rarely a 5-minute affair. On Kasamba, a substantive 20-minute chat session with a professional-tier advisor ($5–$10/min) runs $100 to $200, minus your free minutes. On Purple Garden, a comparable 20-minute video session ($4.99–$5.99/min) runs $100 to $120, with the $30 credit reducing the first one to roughly $70–$90. Purple Garden is typically the cheaper option for equivalent depth — but only if you actually use the video and Journeys tools to vet before booking. If you skip the vetting, the cost advantage evaporates into wasted sessions.
 
 ## The Verdict
 

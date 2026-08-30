@@ -65,7 +65,7 @@ Keen's pricing spans the full industry spectrum, from $1.99/min entry-level chat
 
 Because you are essentially receiving $50 to $100 worth of elite psychic time for a single dollar, bring one hyper-specific question. If an advisor who charges $15/minute cannot deliver a profound, validating hit within five minutes, they are not worth your ongoing investment at any price. That single test tells you more about an advisor than an hour of reading their reviews.
 
-Below the elite tier, the roster behaves like any mature market: professional-class advisors in the $5→–$10 range carry the bulk of the volume, and entry-level readers at $1.99→–$4.99 are where you do cheap exploration. The disciplined pattern is to use the $1 trial on elites, the mid-tier for sustained relationships, and the entry tier for quick second opinions — and to treat every tier transition as a test, not a commitment.
+Below the elite tier, the roster behaves like any mature market: professional-class advisors in the $5–$10 range carry the bulk of the volume, and entry-level readers at $1.99–$4.99 are where you do cheap exploration. The disciplined pattern is to use the $1 trial on elites, the mid-tier for sustained relationships, and the entry tier for quick second opinions — and to treat every tier transition as a test, not a commitment.
 
 ## Where Keen Falls Short
 

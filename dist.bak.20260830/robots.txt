@@ -1,0 +1,27 @@
+# =========================================================
+# Eastern Alignment - Optimized Robots Control
+# =========================================================
+
+# NOTE: /go/* affiliate redirects are NO LONGER handled here.
+# They are served as gated static pages by Astro (src/pages/go/[...slug].astro)
+# so that only real human clicks trigger the affiliate navigation.
+# The slug -> destination map lives in src/data/affiliateLinks.ts.
+
+# 1. Content is OPEN to all crawlers (including AI scrapers) for discovery.
+User-agent: *
+
+# Utility / redirect paths that should never be indexed or crawled
+Disallow: /go/
+Disallow: /out/
+Disallow: /refer/
+Disallow: /privacy/
+Disallow: /terms/
+Disallow: *?aff=*
+Disallow: *?rid=*
+Disallow: *?tracking_id=*
+
+# Performance
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://easternalignment.com/sitemap-index.xml

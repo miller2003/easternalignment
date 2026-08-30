@@ -66,7 +66,7 @@ A reader who delivers specific, accurate, person-characteristic information in t
 
 When you end a phone reading, the session exists only in your memory. Memory, under emotional pressure, is not reliable. Three weeks after a reading, most people remember a more hopeful version of what was actually said — the prediction softened in recollection, the timeline extended, the caveat forgotten. This is not deception; it is how human memory works under emotional loading.
 
-Kasamba's permanent chat transcript eliminates this distortion. Every word the reader typed is saved to your account, available to re-read at any temperature. If the reader stated "I see communication resuming within 10→–14 days, initiated by him," that specific claim is in writing. Two weeks later, you evaluate it against the actual record, not against a memory that has been influenced by hope.
+Kasamba's permanent chat transcript eliminates this distortion. Every word the reader typed is saved to your account, available to re-read at any temperature. If the reader stated "I see communication resuming within 10–14 days, initiated by him," that specific claim is in writing. Two weeks later, you evaluate it against the actual record, not against a memory that has been influenced by hope.
 
 For love readings — where the emotional investment in a specific outcome is at its highest — this accountability mechanism is the most significant practical advantage Kasamba offers over phone-based platforms.
 
@@ -96,7 +96,7 @@ The free minutes are not the beginning of a reading. They are an audition. You a
 
 ### How Many Readers to Test
 
-There is no stated limit on how many advisors you can test using this protocol. The practical answer is: as many as you need to find one who demonstrates genuine access in the free window. Most seekers who apply this protocol correctly identify 1→–2 readers out of 5→–8 tested who pass the stress test. Those are the readers worth paying for.
+There is no stated limit on how many advisors you can test using this protocol. The practical answer is: as many as you need to find one who demonstrates genuine access in the free window. Most seekers who apply this protocol correctly identify 1–2 readers out of 5–8 tested who pass the stress test. Those are the readers worth paying for.
 
 ---
 
@@ -106,7 +106,7 @@ Kasamba's rates run from $2.10/min to $30+/min, and most users make the error of
 
 This assumption is wrong. The rate is a function of multiple factors, only one of which is accuracy.
 
-### Entry Tier ($2.10→–$4.99/min)
+### Entry Tier ($2.10–$4.99/min)
 
 This bracket contains newer advisors building session volume, readers who have chosen accessible pricing as a deliberate practice philosophy, and — honestly — some practitioners who are still refining their methodology.
 
@@ -114,13 +114,13 @@ The hidden gems in this tier are readers like Elizabeth ($2.40/min) and Ask Cris
 
 **Best use:** Extended sessions where you want to fully unpack a complex relationship dynamic without the financial pressure of a premium rate. At $2.40/min, a 25-minute deep-dive costs $60 — a fraction of what the same session costs at $10/min.
 
-### Professional Tier ($5.00→–$12.99/min)
+### Professional Tier ($5.00–$12.99/min)
 
 This bracket holds the core of Kasamba's professional class: readers who have built their rate on the strength of sustained high ratings across high session volumes. Golden Eye ($4.99/min, edge of this tier) and Cosmic Fusion ($3.99/min) represent the accessible edge of proven professional performance.
 
-**Best use:** Your first substantive paid session after the stress test. You have verified connection in the free window; now you want enough session depth (15→–20 minutes) to get a complete picture of the situation. At $7→–10/min, this costs $105→–$200 — a meaningful investment that is justified by the prior verification.
+**Best use:** Your first substantive paid session after the stress test. You have verified connection in the free window; now you want enough session depth (15–20 minutes) to get a complete picture of the situation. At $7–10/min, this costs $105–$200 — a meaningful investment that is justified by the prior verification.
 
-### Elite Tier ($13.00→–$19.99/min+)
+### Elite Tier ($13.00–$19.99/min+)
 
 Love Stefans ($19.99/min) and Seek Chelle ($9.98/min, high end of professional) represent the platform's veterans. At the elite tier, the premium is not for higher accuracy per se — it is for immediate access to practitioners who have the highest documented consistency over the longest timeframes.
 
@@ -195,7 +195,7 @@ It works like this: A reading tells you the connection is still energetically ac
 This is not gathering information. It is paying psychic session rates for temporary anxiety relief. The two are not the same, and one costs significantly more than the other.
 
 The correct session structure for any love question:
-1. **One complete diagnostic reading** — current state, psychological driver, trajectory. 15→–20 minutes.
+1. **One complete diagnostic reading** — current state, psychological driver, trajectory. 15–20 minutes.
 2. **One check-in if a significant event occurs** — unexpected contact, a major life change, a clear behavioral shift.
 3. **One assessment if the situation has materially changed** — not because the anxiety has returned, but because new information has made the previous reading's picture incomplete.
 
@@ -223,7 +223,7 @@ Yes. Kasamba is a legitimate platform that has operated since 1999. The platform
 
 ### How much does a Kasamba love reading cost?
 
-Entry-tier readers start at $2.10/min (Ask Cristina). Professional-tier readers run $5→–$13/min. Elite-tier readers like Love Stefans charge $19.99/min. A complete diagnostic love reading at professional tier ($7→–10/min) for 15 minutes costs $105→–$150. The first session comes with 50% off after the free vetting minutes.
+Entry-tier readers start at $2.10/min (Ask Cristina). Professional-tier readers run $5–$13/min. Elite-tier readers like Love Stefans charge $19.99/min. A complete diagnostic love reading at professional tier ($7–10/min) for 15 minutes costs $105–$150. The first session comes with 50% off after the free vetting minutes.
 
 ### How do I know if a Kasamba reader is accurate before paying?
 

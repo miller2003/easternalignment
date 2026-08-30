@@ -78,7 +78,7 @@ We audited the **Kasamba** platform to find the 5 most compassionate, non-judgme
 Before you book a session, you must understand how a master psychic differentiates biological reality from esoteric truth.
 
 ### 1. Biological Age vs. "Soul Age"
-A true psychic does not look at your driver→’s license. They look at your soul. It is incredibly common in age-gap relationships for the biologically younger person to possess a massive "Old Soul" energy, while the biologically older person carries the erratic, playful energy of a "Young Soul." When an elite psychic maps this, they often find that the energetic ages of the couple match perfectly, even if their physical ages do not. 
+A true psychic does not look at your driver's license. They look at your soul. It is incredibly common in age-gap relationships for the biologically younger person to possess a massive "Old Soul" energy, while the biologically older person carries the erratic, playful energy of a "Young Soul." When an elite psychic maps this, they often find that the energetic ages of the couple match perfectly, even if their physical ages do not. 
 
 ### 2. The Saturn Transit (Astrological Karma)
 In astrology, Saturn is the planet of time, restriction, and maturity. When an astrologer looks at a successful age-gap couple, they almost always find profound Saturn connections in their Synastry chart (e.g., her Venus conjunct his Saturn). This means the relationship was mathematically destined to bridge a generation. It is not a psychological complex; it is a cosmic contract.
@@ -203,7 +203,7 @@ Sometimes the biggest enemy of an age-gap relationship isn't society; it is your
   </div>
 </div>
 
-As Kasamba→’s top-ranked advisor, Elizabeth provides a sanctuary. She combines Tarot with active Reiki healing. If you are constantly anxious about what your friends or family think of your older/younger partner, Elizabeth will use her session to actively clear that toxic external energy from your aura, helping you ground yourself back in the pure love of the connection.
+As Kasamba's top-ranked advisor, Elizabeth provides a sanctuary. She combines Tarot with active Reiki healing. If you are constantly anxious about what your friends or family think of your older/younger partner, Elizabeth will use her session to actively clear that toxic external energy from your aura, helping you ground yourself back in the pure love of the connection.
 
 [Clear Societal Shame with Elizabeth (3 Free Mins) →](/go/kasamba-elizabeth)
 

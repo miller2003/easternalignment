@@ -100,7 +100,7 @@ Flora Knows All's written review rate is among the highest on the platform — c
 
 ### Negative Review Forensics
 
-The most underused research tool on Keen is the 1→–2 star review. Most clients skip them. They should read them carefully, looking for one specific distinction:
+The most underused research tool on Keen is the 1–2 star review. Most clients skip them. They should read them carefully, looking for one specific distinction:
 
 **Negative Review Type A (accuracy-positive signal):** "She told me things I didn't want to hear." "She refused to give me hope when the situation was clear." "She was blunt and uncomfortable but right about everything." These reviews indicate an advisor who prioritized truth over comfort — and who received negative stars for it. These negative reviews are quality evidence.
 
@@ -180,14 +180,14 @@ Kelly777's relational-field methodology reads the space between two people rathe
 
 Keen's rates run from $1.99/min at entry level to $20+/min at the elite tier. The correct use of each tier depends on your session goal.
 
-### Entry Tier ($1.99→–$4.99/min)
-Newer readers and established advisors who have chosen accessible pricing. Use for longer exploratory sessions where session time is the priority. A 30-minute emotional unpack session costs $60→–$150 at this tier — accessible enough to not create financial pressure to end early.
+### Entry Tier ($1.99–$4.99/min)
+Newer readers and established advisors who have chosen accessible pricing. Use for longer exploratory sessions where session time is the priority. A 30-minute emotional unpack session costs $60–$150 at this tier — accessible enough to not create financial pressure to end early.
 
-### Professional Tier ($5.00→–$9.99/min)
-The majority of Keen's proven practitioners operate in this range. David7, Flora Knows All, and similar high-volume veterans are in this bracket. A 15-minute diagnostic reading costs $75→–$150.
+### Professional Tier ($5.00–$9.99/min)
+The majority of Keen's proven practitioners operate in this range. David7, Flora Knows All, and similar high-volume veterans are in this bracket. A 15-minute diagnostic reading costs $75–$150.
 
-### Elite Tier ($10.00→–$20.00+/min)
-The highest-rate practitioners are typically those with the most specialized methodologies (advanced Vedic astrology, complex Hellenistic timing) or the highest demand-to-availability ratios. A 5-minute precision reading costs $50→–$100 at this tier — appropriate when you have a very specific, high-stakes question and have pre-verified connection through prior sessions.
+### Elite Tier ($10.00–$20.00+/min)
+The highest-rate practitioners are typically those with the most specialized methodologies (advanced Vedic astrology, complex Hellenistic timing) or the highest demand-to-availability ratios. A 5-minute precision reading costs $50–$100 at this tier — appropriate when you have a very specific, high-stakes question and have pre-verified connection through prior sessions.
 
 **Rate strategy for love questions:** Start at professional tier after doing the review research. Reserve elite-tier readings for high-stakes precision questions once you have an established reader relationship.
 

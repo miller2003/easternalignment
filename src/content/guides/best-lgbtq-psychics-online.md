@@ -169,7 +169,7 @@ If your relationship blocks are deeply tied to religious guilt, familial rejecti
   </div>
 </div>
 
-As Kasamba→’s top-ranked advisor, Elizabeth operates at a shockingly low price point ($2.40/min). She combines Tarot reading with active Reiki healing. If a past trauma is currently sabotaging your queer relationship, she won't just predict the outcome; she will actively send Reiki energy to clear the block. She provides an incredibly safe, loving container for clients who have been spiritually abused by traditional religion.
+As Kasamba's top-ranked advisor, Elizabeth operates at a shockingly low price point ($2.40/min). She combines Tarot reading with active Reiki healing. If a past trauma is currently sabotaging your queer relationship, she won't just predict the outcome; she will actively send Reiki energy to clear the block. She provides an incredibly safe, loving container for clients who have been spiritually abused by traditional religion.
 
 [Get Spiritual Healing with Elizabeth (3 Free Mins) →](/go/kasamba-elizabeth)
 

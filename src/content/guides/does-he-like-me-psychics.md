@@ -208,7 +208,7 @@ Sometimes you don't want a deep psychological breakdown. You just want a direct 
   </div>
 </div>
 
-Golden Eye→’s 21 years of experience means she operates like an energetic machine. Provide his name, and she will immediately drop into the connection. She is perfect for the highly anxious client who needs immediate verification of his interest level before making a move.
+Golden Eye's 21 years of experience means she operates like an energetic machine. Provide his name, and she will immediately drop into the connection. She is perfect for the highly anxious client who needs immediate verification of his interest level before making a move.
 
 [Get Fast Clarity with Golden Eye (3 Free Mins) →](/go/kasamba-golden-eye)
 
