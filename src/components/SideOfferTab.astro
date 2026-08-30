@@ -13,12 +13,13 @@
  * Mobile behaviour (the critical path):
  *   • Anchored to the lower-right instead of vertically centred, because a
  *     `top: 50%` fixed element rides the visual viewport and visibly jumps
- *     every time Chrome/Safari shows or hides the address bar.
+ *     every time Chrome/Safari shows or hides the address bar. iOS Safari
+ *     puts its bar at the BOTTOM, so those devices get a top anchor instead
+ *     (see `.side-tab--ios`) — the two platforms need opposite edges.
  *   • Renders immediately on first paint — the old 0.5s entrance delay is gone.
- *   • Starts fully expanded so the offer is readable, then auto-collapses to
- *     a slim logo-pill on touch devices after 4 seconds of inactivity. A
- *     tap/hover expands it again. This keeps the CTA reachable without
- *     permanently covering article text.
+ *   • Always fully expanded. An earlier auto-collapse (slide out to a 14px
+ *     handle) was removed on request — the offer is the point of the element,
+ *     so it stays readable rather than playing hide-and-seek.
  *
  * Offer copy is never invented here — it is read from lib/offers.ts (the
  * single source of truth) so wording stays truthful site-wide. Keen's deal
@@ -74,7 +75,6 @@ const ctaSource = `side-tab-${primary.goSlug}`;
   rel="nofollow sponsored"
   data-cta-source={ctaSource}
   aria-label={`${primary.name} new-client offer: ${primary.offer} (opens in a new tab)`}
-  aria-expanded="true"
 >
   <img
     class="side-tab__logo"
@@ -96,10 +96,8 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     const tab = document.getElementById('side-offer-tab');
     if (!tab) return;
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isNarrow = window.matchMedia('(max-width: 768px)').matches;
     const isTouch = window.matchMedia('(pointer: coarse)').matches;
-
     if (!isNarrow || !isTouch) return;
 
     /* Anchor side depends on where the browser puts its collapsing toolbar:
@@ -111,49 +109,6 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     const isIOS = /iPad|iPhone|iPod/.test(ua) ||
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     if (isIOS) tab.classList.add('side-tab--ios');
-
-    // Auto-collapse is only useful on small touch screens where the tab can
-    // obscure body text. On desktop we leave it fully expanded.
-    if (prefersReducedMotion) return;
-
-    const COLLAPSE_AFTER = 4000;
-    let timer = 0;
-
-    function expand() {
-      tab.classList.remove('side-tab--collapsed');
-      tab.setAttribute('aria-expanded', 'true');
-      clearTimeout(timer);
-    }
-
-    function collapse() {
-      tab.classList.add('side-tab--collapsed');
-      tab.setAttribute('aria-expanded', 'false');
-    }
-
-    function scheduleCollapse() {
-      clearTimeout(timer);
-      timer = window.setTimeout(collapse, COLLAPSE_AFTER);
-    }
-
-    // Start expanded so the offer is readable on first paint, then yield.
-    scheduleCollapse();
-
-    /* Scrolling means the reader has moved on to the article — get out of
-       the way immediately instead of waiting out the timer. The guard keeps
-       this cheap: once collapsed, further scroll events are a no-op. */
-    window.addEventListener('scroll', function () {
-      if (tab.classList.contains('side-tab--collapsed')) return;
-      clearTimeout(timer);
-      collapse();
-    }, { passive: true });
-
-    // Pointer interactions temporarily expand the tab.
-    tab.addEventListener('mouseenter', expand);
-    tab.addEventListener('mouseleave', scheduleCollapse);
-    tab.addEventListener('focus', expand);
-    tab.addEventListener('blur', scheduleCollapse);
-    tab.addEventListener('touchstart', expand, { passive: true });
-    tab.addEventListener('touchend', scheduleCollapse, { passive: true });
   })();
 </script>
 
@@ -186,14 +141,7 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     box-shadow:
       inset 1px 0 0 rgba(255, 255, 255, 0.16),
       -8px 0 22px rgba(84, 64, 42, 0.20);
-    transition:
-      width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-      min-height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-      padding 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-      filter 0.2s ease,
-      box-shadow 0.2s ease,
-      transform 0.2s ease,
-      scale 0.2s ease;
+    transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, scale 0.2s ease;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -247,8 +195,6 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     letter-spacing: 0.06em;
     white-space: nowrap;
     text-shadow: 0 1px 2px rgba(40, 28, 16, 0.35);
-    opacity: 1;
-    transition: opacity 0.25s ease, width 0.25s ease, height 0.25s ease;
   }
 
   .side-tab__arrow {
@@ -256,7 +202,6 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     height: 13px;
     flex-shrink: 0;
     opacity: 0.85;
-    transition: opacity 0.25s ease, width 0.25s ease, height 0.25s ease;
   }
 
   /* ── Mobile: anchored to the lower-right rather than vertically centred,
@@ -269,8 +214,11 @@ const ctaSource = `side-tab-${primary.goSlug}`;
          devices that make up most of this site's mobile traffic.
        • 15vh resolves against the large viewport (a constant), so the offset
          stays put instead of tracking the toolbar.
-     Content gets a matching right gutter via global.css, so the tab never
-     covers body text wherever it sits vertically. ── */
+
+     The tab stays fully expanded at all times (no auto-collapse). At 36px
+     wide it overlaps the last ~20px of the text column on mobile; that is
+     accepted deliberately — indenting the article to make room was rejected
+     because it wrecked the left/right symmetry of every page. ── */
   @media (max-width: 768px) {
     .side-tab {
       top: auto;
@@ -296,64 +244,10 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     }
 
     .side-tab:hover { transform: translateX(-3px); }
-    /* Collapsed = slid mostly off-screen, leaving a 14px handle.
-       That 14px fits inside the article's own 16px right padding, so the
-       resting state covers zero characters of body text — without needing
-       to indent the article (which wrecked the left/right symmetry).
-       Tapping or hovering slides it back out in full. */
-    .side-tab--collapsed {
-      transform: translateX(22px);
-      width: 36px;
-      min-height: 68px;
-      padding: 8px 0;
-      gap: 0;
-      align-items: flex-start;
-    }
-    .side-tab--collapsed .side-tab__logo,
-    .side-tab--collapsed .side-tab__label {
-      opacity: 0;
-      width: 0;
-      height: 0;
-      overflow: hidden;
-    }
-    /* The arrow is the only thing left in the visible handle. */
-    .side-tab--collapsed .side-tab__arrow {
-      width: 12px;
-      height: 12px;
-      margin-left: 1px;
-      opacity: 0.95;
-    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .side-tab { animation: none; }
     .side-tab::after { animation: none; }
-
-    /* Keep the expanded state for users who asked for less motion.
-       (The script already opts out, this is a belt-and-braces fallback.) */
-    .side-tab--collapsed {
-      transform: none;
-      width: 36px;
-      min-height: 152px;
-      padding: 14px 0 12px;
-      gap: 10px;
-      align-items: center;
-    }
-    .side-tab--collapsed .side-tab__logo {
-      opacity: 1;
-      width: 24px;
-      height: 24px;
-    }
-    .side-tab--collapsed .side-tab__label {
-      opacity: 1;
-      width: auto;
-      height: auto;
-    }
-    .side-tab--collapsed .side-tab__arrow {
-      opacity: 0.85;
-      width: 13px;
-      height: 13px;
-      margin-left: 0;
-    }
   }
 </style>
