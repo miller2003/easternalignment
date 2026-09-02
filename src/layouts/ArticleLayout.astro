@@ -36,6 +36,13 @@ interface Props {
   // union (e.g. "cross-platform") — they are normalised to a PlatformKey below.
   platform?: string;
   affiliateUrl?: string;
+  /**
+   * Pure-content mode (2026-09-02): suppresses every affiliate CTA on the
+   * page — top offer bar, left deal cards, hero button, inline CTA, end
+   * block, right-rail deal card, and the edge tab. For trust/GEO articles
+   * that must read as zero-commercial. TOC navigation and AuthorBio stay.
+   */
+  noCta?: boolean;
 }
 
 const {
@@ -57,6 +64,7 @@ const {
   schemaDatePublished,
   customSchema,
   entities,
+  noCta = false,
 } = Astro.props;
 
 const displayDate = updatedDate || publishDate;
@@ -68,6 +76,11 @@ const formattedDate = new Date(displayDate).toLocaleDateString('en-US', {
 
 const SITE_URL = 'https://easternalignment.com';
 const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href;
+
+/* Only a handful of articles declare ogImage in frontmatter, but `image` is a
+ * required property for Article rich results. Falling back to the site default
+ * keeps the property present on every article instead of omitting it. */
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
 
 // Build Article JSON-LD from manual fields (with fallbacks).
 // Top-tier: entity-linked author/publisher (@id), articleSection, and a
@@ -89,7 +102,7 @@ const articleSchema: Record<string, unknown> = {
   "publisher": { "@id": "https://easternalignment.com/#organization" },
   "datePublished": schemaDatePublished || publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
-  ...(ogImage ? { "image": ogImage } : {}),
+  "image": ogImage || DEFAULT_OG_IMAGE,
   ...(category ? { "articleSection": category } : {}),
   ...(entities ? { "about": entities.map(e => ({ "@type": "Thing", "name": e })) } : {}),
   "mainEntityOfPage": {
@@ -140,13 +153,14 @@ const sidebarDeal = guideOffer
   seoTitle={seoTitle}
   metaDescription={metaDescription}
   customSchema={customSchema}
-  topOfferPlatform={pagePlatform}
-  stickyCta={articleStickyCta}
+  topOfferPlatform={noCta ? undefined : pagePlatform}
+  stickyCta={noCta ? undefined : articleStickyCta}
+  noCta={noCta}
 >
   <!-- Full-page 3-column grid: sidebars span the entire page height -->
   <div class="page-with-sidebars">
     <!-- LEFT SIDEBAR -->
-    <LeftSidebar platform={pagePlatform} />
+    {!noCta && <LeftSidebar platform={pagePlatform} />}
 
     <!-- MAIN COLUMN: breadcrumb + hero + content -->
     <div class="main-col">
@@ -177,14 +191,16 @@ const sidebarDeal = guideOffer
           <span class="author-name-sm">Sarah</span>
         </div>
 
-        <div class="article-hero-cta-wrap">
-          <a href={defaultGoLink} class="article-hero-cta btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
-            {pagePlatform === 'kasamba' ? 'Get 3 Free Minutes on Kasamba →' :
-             pagePlatform === 'purple-garden' ? 'Claim $30 Credit on Purple Garden →' :
-             'Get 5 Minutes for $1 on Keen →'}
-          </a>
-          {guideOffer && <p class="article-hero-cta-note">{guideOffer.microLine}</p>}
-        </div>
+        {!noCta && (
+          <div class="article-hero-cta-wrap">
+            <a href={defaultGoLink} class="article-hero-cta btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="hero">
+              {pagePlatform === 'kasamba' ? 'Get 3 Free Minutes on Kasamba →' :
+               pagePlatform === 'purple-garden' ? 'Claim $30 Credit on Purple Garden →' :
+               'Get 5 Minutes for $1 on Keen →'}
+            </a>
+            {guideOffer && <p class="article-hero-cta-note">{guideOffer.microLine}</p>}
+          </div>
+        )}
       </header>
 
       <!-- Article Content -->
@@ -194,23 +210,25 @@ const sidebarDeal = guideOffer
         </div>
 
         {/* Mid-article CTA: auto-injected before the 2nd H2 inside .prose */}
-        <InlineCta platform={pagePlatform} href={defaultGoLink} />
+        {!noCta && <InlineCta platform={pagePlatform} href={defaultGoLink} />}
 
         <!-- End-of-article offer block: captures the highest-intent moment.
              primarySlug follows the page's platform context (defaulting to
              Kasamba, the site-wide No.1) so the featured card matches the
              article's theme while still showing all three platforms. -->
-        <EndCTA
-          primarySlug={pagePlatform}
-          subheading="I’ve personally tested each platform with my own money. Pick the one that fits your question — every link is an independent recommendation."
-        />
+        {!noCta && (
+          <EndCTA
+            primarySlug={pagePlatform}
+            subheading="I’ve personally tested each platform with my own money. Pick the one that fits your question — every link is an independent recommendation."
+          />
+        )}
 
         <AuthorBio />
       </article>
     </div>
 
     <!-- RIGHT SIDEBAR -->
-    <RightSidebar deal={sidebarDeal} />
+    <RightSidebar deal={noCta ? undefined : sidebarDeal} />
   </div>
 </BaseLayout>
 

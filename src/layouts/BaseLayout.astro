@@ -41,6 +41,14 @@ interface Props {
     prompt?: string;
     platform?: 'keen' | 'kasamba' | 'purple-garden';
   };
+  /**
+   * Pure-content mode (2026-09-02): when true, suppresses every affiliate
+   * CTA surface — the right-edge SideOfferTab and (via the caller omitting
+   * topOfferPlatform) the top promo bar. Used for trust/GEO articles that
+   * must carry zero commercial components. Header, Footer, and the
+   * disclosure bar are NOT CTAs and stay.
+   */
+  noCta?: boolean;
 }
 
 const {
@@ -57,6 +65,7 @@ const {
   hreflangEs,
   topOfferPlatform,
   stickyCta,
+  noCta = false,
 } = Astro.props;
 
 const SITE_NAME = 'Eastern Alignment';
@@ -209,15 +218,17 @@ const personSchema = {
          article) and the sliding dock panel. It IS the affiliate link — no
          panel, no toggle, no JavaScript. Pages may pass `stickyCta` to point
          the tab at that page's own platform/reader URL
-         (e.g. /go/kasamba-master-enigma/).
+         (e.g. /go/kasamba-master-enigma/). Suppressed entirely in noCta mode.
 
          NOTE: `stickyCta.label` is deliberately NOT forwarded. Layouts still
          supply horizontal-button copy ("Try Keen · 5 min for $1 →") which is
          far too long for a 40px vertical tab — the tab derives its own short
          line from `stickyCta.platform` instead. -->
-    <SideOfferTab
-      slug={stickyCta?.slug}
-      platform={stickyCta?.platform}
-    />
+    {!noCta && (
+      <SideOfferTab
+        slug={stickyCta?.slug}
+        platform={stickyCta?.platform}
+      />
+    )}
   </body>
 </html>

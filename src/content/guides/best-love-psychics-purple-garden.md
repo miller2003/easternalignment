@@ -1,8 +1,8 @@
 ---
-title: "Best Love Psychics on Purple Garden (2026): 5 Ranked Readers for Every Relationship Question"
-seoTitle: "Best Love Psychics on Purple Garden (2026): 5 Readers Ranked & Reviewed"
-metaDescription: "Which Purple Garden advisors are actually best for love and relationship readings? We ranked 5 readers by video bio authenticity, Journeys track record, and format compatibility —with pricing from $0.99/min."
-description: "A detailed ranking of Purple Garden's 5 best love psychics, including methodology breakdown, format recommendations, pricing tiers, specific-question guidance, and the video-first research protocol to find your best match before spending."
+title: "How to Vet a Purple Garden Love Psychic Before You Book (2026): The 3-Layer Protocol"
+seoTitle: "How to Vet a Purple Garden Love Psychic Before You Book (2026)"
+metaDescription: "How to vet a Purple Garden love psychic before you spend: a 3-layer check on video bios, Journeys records and format fit, plus 5 advisors who pass it."
+description: "The screening protocol we use before booking any Purple Garden love reader: how to read a 60-second video bio for authenticity tells, how to audit the Journeys prediction ledger, and how to match format to question type — followed by the five advisors that survive all three checks."
 category: "Love & Relationships"
 platform: "purple-garden"
 rating: 4.8
@@ -72,6 +72,8 @@ canonicalUrl: https://easternalignment.com/guides/best-love-psychics-purple-gard
 The best love psychic is not the one who promises you the outcome you want. It is the one whose methodology, delivery style, and platform tools can give you genuine insight into a situation you are too close to see clearly. On Purple Garden, where a warm and confident 60-second video introduction can make every advisor feel immediately trustworthy, that distinction requires active effort to maintain.
 
 This guide is built on a different standard than most platform roundups. We did not rank these five readers by star average or profile presentation. We ranked them by three things that actually predict reading quality: the authenticity signals in their video biography, the specificity and verification rate of their Journeys entries, and the structural fit between their methodology and the specific type of love question you need answered.
+
+**This page is the screening method, not the full shortlist.** If you want the complete ranked list of Purple Garden love readers, go to [Top 10 Love Psychics on Purple Garden](/guides/top-love-psychics-purple-garden/) — this is the vetting protocol we ran to build it, plus the five advisors that survive all three checks.
 
 Before getting to the list, you need to understand why Purple Garden's architecture is uniquely suited to love readings —and how to use its native tools to do the vetting work before you spend anything.
 

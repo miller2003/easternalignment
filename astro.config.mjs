@@ -1,9 +1,17 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import rehypeAffiliateLinks from './src/plugins/rehype-affiliate-links.mjs';
 
 export default defineConfig({
     site: 'https://easternalignment.com',
     trailingSlash: 'always',
+    // Affiliate links written inline in Markdown (`[text](/go/slug/)`) used to
+    // render as bare dofollow anchors. Google requires paid/affiliate links to
+    // carry rel="sponsored". Stamping them at the rehype level means the rule
+    // holds for every current and future page, not just the ones we remember.
+    markdown: {
+        rehypePlugins: [rehypeAffiliateLinks],
+    },
     integrations: [sitemap({
         filter: (page) =>
             !page.includes('/privacy/') &&

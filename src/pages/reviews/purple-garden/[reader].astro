@@ -73,20 +73,41 @@ const readerDisplayName = frontmatter.platformName?.includes(':')
   ? frontmatter.platformName.split(':').pop()?.trim() 
   : frontmatter.title?.split(' ')[0] || 'This reader';
 
-const readerFaqItems = [
-  {
-    question: `Is ${readerDisplayName} accurate on Purple Garden?`,
-    answer: `${readerDisplayName} has been evaluated based on client outcome logs, Journeys community verification, and modality consistency. Read our full analysis above for specific timeline accuracy and communication traits.`
-  },
-  {
-    question: `How much does a reading with ${readerDisplayName} cost?`,
-    answer: `${readerDisplayName}'s rate is currently ${frontmatter.pricing || '$4.99/min'} on Purple Garden. Pricing may vary depending on whether you choose Video, Phone, or Chat.`
-  },
-  {
-    question: `What reading modality is best for ${readerDisplayName}?`,
-    answer: `We recommend watching their pre-recorded video intro profile on the Purple Garden app first, then choosing the reading format (${frontmatter.bestFor || 'Live Video or Chat'}) that best fits your situation.`
-  },
-];
+/* Advisor delisted from Purple Garden? Honour it in CTA copy + FAQ,
+ * mirroring the keen/[reader].astro pattern (2026-09-02 CTA audit).
+ * Clicks still land live: affiliateLinks.ts repoints the reader's slug
+ * to the generic PG offer — this switch only keeps the copy honest. */
+const unavailable = frontmatter.unavailable === true;
+
+const readerFaqItems = unavailable
+  ? [
+      {
+        question: `Was ${readerDisplayName} a legitimate psychic reader on Purple Garden?`,
+        answer: `${readerDisplayName} was a reader on Purple Garden and the subject of my review, based on their documented track record and client feedback. Note: ${readerDisplayName} is no longer listed on Purple Garden. You can browse the platform's current live advisors via the button below.`
+      },
+      {
+        question: `How much did a reading with ${readerDisplayName} cost?`,
+        answer: `${readerDisplayName}'s prior rate was ${frontmatter.pricing || 'rates vary'}. Since they are no longer listed on Purple Garden, that rate no longer applies — browse the platform's live advisors for current pricing and the new-client offer.`
+      },
+      {
+        question: `How do I find a similar reader on Purple Garden?`,
+        answer: `${readerDisplayName} is no longer on Purple Garden, but the platform still has many advisors with a comparable style. Use the button below to browse the live roster — the $30 new-client credit still applies to any advisor you pick.`
+      },
+    ]
+  : [
+      {
+        question: `Is ${readerDisplayName} accurate on Purple Garden?`,
+        answer: `${readerDisplayName} has been evaluated based on client outcome logs, Journeys community verification, and modality consistency. Read our full analysis above for specific timeline accuracy and communication traits.`
+      },
+      {
+        question: `How much does a reading with ${readerDisplayName} cost?`,
+        answer: `${readerDisplayName}'s rate is currently ${frontmatter.pricing || '$4.99/min'} on Purple Garden. Pricing may vary depending on whether you choose Video, Phone, or Chat.`
+      },
+      {
+        question: `What reading modality is best for ${readerDisplayName}?`,
+        answer: `We recommend watching their pre-recorded video intro profile on the Purple Garden app first, then choosing the reading format (${frontmatter.bestFor || 'Live Video or Chat'}) that best fits your situation.`
+      },
+    ];
 
 /* Cross-link block: platform review + guides relevant to this reader's niche. */
 const relatedItems = [
@@ -141,10 +162,12 @@ const relatedItems = [
 
   <div id="end-cta-anchor">
     <CTABox
-      title={`Ready for a reading with ${readerDisplayName}?`}
-      description={frontmatter.freeOffer ? `Offer available: ${frontmatter.freeOffer}` : `Connect with ${readerDisplayName} on Purple Garden today.`}
-      buttonText={`Book ${readerDisplayName} on Purple Garden →`}
-      buttonUrl={frontmatter.affiliateUrl || '#'}
+      title={unavailable ? `Looking for a reader like ${readerDisplayName}?` : `Ready for a reading with ${readerDisplayName}?`}
+      description={unavailable
+        ? `${readerDisplayName} is no longer listed on Purple Garden. Browse the platform's live advisors and their current new-client offer.`
+        : (frontmatter.freeOffer ? `Offer available: ${frontmatter.freeOffer}` : `Connect with ${readerDisplayName} on Purple Garden today.`)}
+      buttonText={unavailable ? 'See Live Purple Garden Advisors →' : `Book ${readerDisplayName} on Purple Garden →`}
+      buttonUrl={unavailable ? '/go/purple-garden/' : (frontmatter.affiliateUrl || '#')}
       variant="highlight"
     />
   </div>

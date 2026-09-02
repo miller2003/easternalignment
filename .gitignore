@@ -1,6 +1,8 @@
 # build output
 dist/
 dist2/
+# dated build snapshots — never commit (2,200+ files each; restore-able by rebuild)
+dist.bak.*/
 out-verify/
 out-verify2/
 out-verify3/

@@ -48,6 +48,10 @@ Cloudflare 曾在边缘 403 OpenAI / Anthropic / Perplexity 全家桶 + CCBot，
 - **信息准入闸门**：BRIEF 四项第一手信息（实测次数与花费 / 沉默测试原文 / 可验证的具体项 / 一次不满意的发现）缺一项 → 停止不写。
 - **反模板化**：骨架固定保批量，但每块给 2–3 种展开形态轮换，H2 骨架不得与最近 5 篇重复。
 - **CTA 由路由注入**（ReaderEndCTA + CTABox），正文禁止手写 CTA / `/go/` 链接 / 结尾 nudge。
+- **纯内容页用 `noCta: true`**（2026-09-02 新增基础设施）：frontmatter 加此字段即关闭全页 CTA
+  （TopOfferBar/左栏 deal 卡/hero 按钮/InlineCta/EndCTA/右栏 deal 卡/SideOfferTab），
+  TOC 与 AuthorBio 保留。用于 GEO 信任资产文（如 ai-psychic-readings-vs-human）。
+  实现：BaseLayout/ArticleLayout 有 noCta prop，guides/[slug].astro 已透传。
 - 跑构建前先 `set CODEBUDDY_SESSION_ID= && set CLAUDE_SESSION_ID=` 清空会话变量。
 
 ## 构建与部署
@@ -107,3 +111,19 @@ Cloudflare 曾在边缘 403 OpenAI / Anthropic / Perplexity 全家桶 + CCBot，
 
 ## 内容分工
 **用户定方向，AI 落地**：一次改透一篇，跑出效果再批量复制。高风险主题（`financial-motives-psychics`、`other-woman-psychic-readings`）需用户先定调。
+
+## 旗舰文打法（用户 2026-09-02 确立）
+- **选题**：只要旗舰大词，不要长尾场景。榜单标题模板："Top N {Category} on {Platform} (2026): We Tested N+ Readers — These N Gave the Best Answers"。
+- **结构（倒金字塔，必须）**：开头第一段直接给结论（#1 是谁+一句话理由+替代选择），首屏放完整速览表（排名/Lane/价格/首读成本）——前三分之一拿到结论，AI 抽取和 Google 都偏好。然后 How We Tested → 逐个详解 → 场景对照 → 预算 → FAQ。
+- **"We Tested" 口径**：以本站已发布深度 review 数为池（Kasamba 60+ / Keen 45+ / PG 40+ / 跨平台 150+），不写超出此范围的数字。
+- **平台覆盖配比**：用户指示"其中 1 篇 Keen 即可"——Kasamba 为主、PG 次之、Keen 最少。
+- **批次节奏**：用户说"后面无需每次做检查，我最后会统一检查"——多批写完再统一构建校验，不逐批跑构建。
+
+## CTA/联盟链接长期约定（2026-09-02 全站审计后确立）
+- **审计工具**：`scratch/audit20260902_cta/audit_cta_aff_mapping.py`（360 页五层校验：slug 存在性/落地域名/落地 profile/页面身份/存活实测），报告 `全站CTA对应关系审计_2026-09-02.md`。新增 reader 页或改 CTA 后可复跑。
+- **CTA 链路结构**：reader 页 end CTA + side tab ← frontmatter `affiliateUrl`；topbar ← 页面平台；左栏三平台 deal 卡是设计内全列。CTA 表面分类靠 `data-cta-source` 属性，别靠 class 猜。
+- **TUNE 落地在 `url=` 参数里**（域名是 bargestech.go2cloud.org），解析时要 percent-decode 后再取 profile 段；keen.com profile URL 末段是数字 ID、顾问名在倒数第二段；PG profile 末段有 `数字-` 前缀要剥。
+- **平台 URL slug ≠ 显示名是常态**（annah=annaleota、isis-jade=Intuitive Jade、marcus-andy=Marcus Andy），判同一人看页内嵌 JSON 的 nickname/readings_count/year_joined。curl 测平台页必须 `--noproxy '*'`；Keen 被 Cloudflare 挡时用 WebSearch 拿 profile 文本。
+- **顾问流失监控**：顾问离开平台后 profile 变 58KB 空壳（正常 570KB 含 JSON）。keen-raj 已处理（回落通用链），**tarot-by-elena 待处理**（PG 11714 已死）。定期复跑审计脚本。
+- **offer 口径**：keen-intuitive-jade、keen-suzen 走 offer_id=209（有效），其余 keen 走 221——TUNE 按 offer 分报表，对账别漏 209。
+- **西语站机制缺陷**：EsSpanishCTA 直链 TUNE 绕过 /go/ → PostHog 只拦 /go/ → 西语主 CTA 无埋点；EsLeftSidebar 硬编码的 /go/psiquicos、/go/purple-garden-es 未注册会 404。修复时 slug 与 TUNE 参数同源（psiquicos=offer 42、purple-garden-es=offer 34）。

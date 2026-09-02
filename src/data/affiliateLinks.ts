@@ -7,7 +7,11 @@ export const affiliateLinks: Record<string, string> = {
   "purplegarden": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326",
   "purple-garden": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326",
   "purple-garden-chloe": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F1884-chloe-psychic-uk%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
-  "purple-garden-elena": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F11714-psychic-elena%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
+  // NOTE (2026-09-02 audit): Tarot by Elena has LEFT Purple Garden — profile
+  // 11714-psychic-elena now serves an empty shell (no advisor JSON), same
+  // churn as keen-raj. Repointed to the generic PG offer so every surface
+  // (end CTA / side tab / hero / summary blocks) lands on a LIVE page.
+  "purple-garden-elena": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326",
   "purple-garden-marcus": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F2146-marcus-andy%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
   "purple-garden-serena": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F12093-advisor-serena%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
   "purple-garden-aria": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F2270-readings-by-aria%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
@@ -186,4 +190,15 @@ export const affiliateLinks: Record<string, string> = {
   "purple-garden-psychic-norell": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F2280-psychic-norell%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
   "purple-garden-psychic-sandra": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F594-psychic-sandra%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
   "purple-garden-truelovetarot": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F3910-truelovetarot%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
+  // ── Spanish subsite (/es) — registered 2026-09-02 ──────────────────────────
+  // EsLeftSidebar.astro previously hard-coded /go/psiquicos/ and
+  // /go/purple-garden-es/ WITHOUT these slugs existing (sidebar buttons 404'd),
+  // while EsSpanishCTA.astro linked DIRECTLY to TUNE (bypassing the /go/ gate,
+  // so PostHog never recorded affiliate_link_click for the /es subsite).
+  // Registering the slugs fixes both: params mirror EsSpanishCTA exactly
+  // (Psíquicos Web = offer 42, Purple Garden ES = offer 34).
+  "psiquicos": "https://bargestech.go2cloud.org/aff_c?offer_id=42&aff_id=2326",
+  "purple-garden-es": "https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326",
+  "purple-garden-es-luz-tarot": "https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fes%2Fpsychics%2F7046-luz-tarot%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
+  "purple-garden-es-luna-aestethic": "https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F4921-luna-aestethic%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
 };

@@ -10,7 +10,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $3.99/min (Chat / Call)"
 bestFor: "Analytical seekers who want a permanent transcript and concrete, card-anchored tarot interpretations"
 publishDate: '2026-06-16'
-updatedDate: '2026-08-13'
+updatedDate: '2026-09-02'
+unavailable: true
 customSchema: |
   {
     "@context": "https://schema.org",
@@ -48,7 +49,7 @@ customSchema: |
       }
     ],
     "datePublished": "2026-06-16",
-    "dateModified": "2026-08-13"
+    "dateModified": "2026-09-02"
   }
 platform: purple-garden
 canonicalUrl: https://easternalignment.com/reviews/purple-garden/tarot-by-elena/
@@ -74,6 +75,8 @@ entities:
 ---
 
 
+
+> **Status update (September 2026):** Tarot by Elena is no longer listed in Purple Garden's public advisor roster at the time of this update — her profile may have been paused or she may have left the platform. The review below is preserved as an archive of her documented method and track record. If you want a chat tarot reader with the same auditable, card-anchored style, use the button below to browse Purple Garden's current live advisors — the $30 new-client credit applies to any advisor you pick.
 
 Most people open Purple Garden and head straight for the video readings, and for a lot of questions that is the right instinct — watching someone pull cards in real time builds trust fast. But video and voice share a flaw nobody mentions until it has already cost them: the session disappears the second it ends. You remember a name, a date, a phrase that landed, and three weeks later, when you most need to check what was actually said, the details have softened into whatever your anxiety wants them to be. Text chat deletes that problem. Every keystroke is saved. Every prediction is a written record you can hold up against what actually happened.
 

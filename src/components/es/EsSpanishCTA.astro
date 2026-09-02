@@ -39,11 +39,20 @@ const {
 } = Astro.props;
 
 // ────────────────────────────────────────────────────────────────────────────
-// AFFILIATE URLS — change here to update across ALL /es pages simultaneously
+// AFFILIATE URLS — 2026-09-02: now routed through /go/<slug>/ gated pages
+// (single mechanism with the English site). Why this matters:
+//   1. PostHog.astro only intercepts /go/ links → direct TUNE links produced
+//      ZERO affiliate_link_click events for the whole /es subsite (the raw
+//      TUNE URLs below were invisible to revenue reconciliation).
+//   2. /go/ pages bot-gate the affiliate network (same as English CTAs).
+// The slugs live in src/data/affiliateLinks.ts ("psiquicos",
+// "purple-garden-es", "purple-garden-es-luz-tarot",
+// "purple-garden-es-luna-aestethic") with params identical to the old direct
+// URLs (Psíquicos Web = offer 42, Purple Garden ES = offer 34).
 // ────────────────────────────────────────────────────────────────────────────
 const OFFERS = {
-  'psiquicos': 'https://bargestech.go2cloud.org/aff_c?offer_id=42&aff_id=2326',
-  'purple-garden-es': 'https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326',
+  'psiquicos': '/go/psiquicos/',
+  'purple-garden-es': '/go/purple-garden-es/',
 } as const;
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -59,8 +68,8 @@ const PLATFORM_NAMES = {
 // when the readerSlug matches. key = reader slug (md filename).
 // ────────────────────────────────────────────────────────────────────────────
 const READER_URLS: Record<string, string> = {
-  'luz-tarot': 'https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fes%2Fpsychics%2F7046-luz-tarot%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}',
-  'luna-aestethic': 'https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F4921-luna-aestethic%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}',
+  'luz-tarot': '/go/purple-garden-es-luz-tarot/',
+  'luna-aestethic': '/go/purple-garden-es-luna-aestethic/',
 } as const;
 
 const href = (readerSlug && READER_URLS[readerSlug]) || OFFERS[platform];
