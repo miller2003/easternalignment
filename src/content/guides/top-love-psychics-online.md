@@ -45,52 +45,62 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/",
+            "name": "Love Stefans (Kasamba)"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/keen/advisor-suzan/"
+            "url": "https://easternalignment.com/reviews/keen/advisor-suzan/",
+            "name": "Advisor Suzan (Keen)"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/purple-garden/annah/"
+            "url": "https://easternalignment.com/reviews/purple-garden/annah/",
+            "name": "Annah (Purple Garden)"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/",
+            "name": "Wisdom and Love (Kasamba)"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/keen/lorrie-c/"
+            "url": "https://easternalignment.com/reviews/keen/lorrie-c/",
+            "name": "lorrie c (Keen)"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/purple-garden/truelovetarot/"
+            "url": "https://easternalignment.com/reviews/purple-garden/truelovetarot/",
+            "name": "Truelovetarot (Purple Garden)"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/kasamba/love-specialist-isabelle-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/love-specialist-isabelle-kasamba-review/",
+            "name": "Love Specialist Isabelle (Kasamba)"
           },
           {
             "@type": "ListItem",
             "position": 8,
-            "url": "https://easternalignment.com/reviews/keen/eli-casey/"
+            "url": "https://easternalignment.com/reviews/keen/eli-casey/",
+            "name": "Eli Casey (Keen)"
           },
           {
             "@type": "ListItem",
             "position": 9,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-norell/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-norell/",
+            "name": "Psychic Norell (Purple Garden)"
           },
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://easternalignment.com/reviews/kasamba/sparks-of-insight-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/sparks-of-insight-kasamba-review/",
+            "name": "Sparks Of Insight (Kasamba)"
           }
         ]
       },

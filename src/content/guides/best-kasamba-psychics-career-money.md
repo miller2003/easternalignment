@@ -44,27 +44,32 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/kasamba/the-fruno-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/the-fruno-kasamba-review/",
+            "name": "The Fruno"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/kasamba/master-enigma-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/master-enigma-kasamba-review/",
+            "name": "Master Enigma"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/kasamba/zara-insights-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/zara-insights-kasamba-review/",
+            "name": "Zara Insights"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/kasamba/psychic-safina-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/psychic-safina-kasamba-review/",
+            "name": "Psychic Safina"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/kasamba/spiritual-shiwa-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/spiritual-shiwa-kasamba-review/",
+            "name": "Spiritual Shiwa"
           }
         ]
       },

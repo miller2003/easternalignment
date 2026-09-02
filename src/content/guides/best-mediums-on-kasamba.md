@@ -44,37 +44,44 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/kasamba/spirit-amy-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/spirit-amy-kasamba-review/",
+            "name": "Spirit Amy"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/kasamba/quietsound-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/quietsound-kasamba-review/",
+            "name": "Quietsound"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/kasamba/ambers-light-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/ambers-light-kasamba-review/",
+            "name": "Ambers Light"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/kasamba/psychic-satire-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/psychic-satire-kasamba-review/",
+            "name": "Psychic Satire"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/kasamba/inspired-within-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/inspired-within-kasamba-review/",
+            "name": "Inspired Within"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/kasamba/raven-franks-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/raven-franks-kasamba-review/",
+            "name": "Raven Franks"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/kasamba/truth-and-light-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/truth-and-light-kasamba-review/",
+            "name": "Truth and Light"
           }
         ]
       },

@@ -10,7 +10,7 @@ entities:
   - "Psychic Reading"
   - "Free Psychic Credit"
 platform: purple-garden
-rating: 4.9
+rating: 4.88
 platformName: "Purple Garden"
 avatarUrl: "/avatars/purple-garden/psychic-norell.jpg"
 pros:
@@ -43,27 +43,32 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-norell/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-norell/",
+            "name": "Psychic Norell"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-logan/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-logan/",
+            "name": "Psychic Logan"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/purple-garden/namrata/"
+            "url": "https://easternalignment.com/reviews/purple-garden/namrata/",
+            "name": "Namrata"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/purple-garden/truthful-love/"
+            "url": "https://easternalignment.com/reviews/purple-garden/truthful-love/",
+            "name": "Truthful Love"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/purple-garden/tarot-instincts/"
+            "url": "https://easternalignment.com/reviews/purple-garden/tarot-instincts/",
+            "name": "Tarot Instincts"
           }
         ]
       },

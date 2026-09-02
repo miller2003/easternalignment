@@ -11,7 +11,7 @@ entities:
   - "Evidential Medium"
   - "Video Psychic Reading"
 platform: purple-garden
-rating: 4.9
+rating: 4.88
 platformName: "Purple Garden"
 avatarUrl: "/avatars/purple-garden/psychic-advisor-serena.jpg"
 pros:
@@ -44,37 +44,44 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-advisor-serena/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-advisor-serena/",
+            "name": "Psychic Advisor Serena"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/purple-garden/tattooed-psychic/"
+            "url": "https://easternalignment.com/reviews/purple-garden/tattooed-psychic/",
+            "name": "Tattooed Psychic"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-medium-chloe/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-medium-chloe/",
+            "name": "Psychic Medium Chloe"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/purple-garden/niki-medium/"
+            "url": "https://easternalignment.com/reviews/purple-garden/niki-medium/",
+            "name": "Niki Medium"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-sandra/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-sandra/",
+            "name": "Psychic Sandra"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/purple-garden/nuwatarot/"
+            "url": "https://easternalignment.com/reviews/purple-garden/nuwatarot/",
+            "name": "nuwatarot"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-jeanne/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-jeanne/",
+            "name": "Psychic Jeanne"
           }
         ]
       },

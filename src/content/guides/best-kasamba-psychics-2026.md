@@ -45,52 +45,62 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/kasamba/master-enigma-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/master-enigma-kasamba-review/",
+            "name": "Master Enigma"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/",
+            "name": "Love Stefans"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/",
+            "name": "Wisdom and Love"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/kasamba/love-specialist-isabelle-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/love-specialist-isabelle-kasamba-review/",
+            "name": "Love Specialist Isabelle"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/kasamba/the-fruno-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/the-fruno-kasamba-review/",
+            "name": "The Fruno"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/kasamba/psychic-safina-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/psychic-safina-kasamba-review/",
+            "name": "Psychic Safina"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/kasamba/spirit-amy-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/spirit-amy-kasamba-review/",
+            "name": "Spirit Amy"
           },
           {
             "@type": "ListItem",
             "position": 8,
-            "url": "https://easternalignment.com/reviews/kasamba/quietsound-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/quietsound-kasamba-review/",
+            "name": "Quietsound"
           },
           {
             "@type": "ListItem",
             "position": 9,
-            "url": "https://easternalignment.com/reviews/kasamba/miss-bathsheba-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/miss-bathsheba-kasamba-review/",
+            "name": "Miss Bathsheba"
           },
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://easternalignment.com/reviews/kasamba/sparks-of-insight-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/sparks-of-insight-kasamba-review/",
+            "name": "Sparks Of Insight"
           }
         ]
       },

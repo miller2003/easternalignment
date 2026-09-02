@@ -11,7 +11,7 @@ entities:
   - "Phone Psychic"
   - "Psychic Medium"
 platform: keen
-rating: 4.9
+rating: 4.8
 platformName: "Keen"
 avatarUrl: "/avatars/keen/advisor-suzan.png"
 pros:
@@ -44,52 +44,62 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/keen/advisor-suzan/"
+            "url": "https://easternalignment.com/reviews/keen/advisor-suzan/",
+            "name": "Advisor Suzan"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/keen/eli-casey/"
+            "url": "https://easternalignment.com/reviews/keen/eli-casey/",
+            "name": "Eli Casey"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/keen/lorrie-c/"
+            "url": "https://easternalignment.com/reviews/keen/lorrie-c/",
+            "name": "lorrie c"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/keen/david7/"
+            "url": "https://easternalignment.com/reviews/keen/david7/",
+            "name": "David7"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/keen/ladyfontaine/"
+            "url": "https://easternalignment.com/reviews/keen/ladyfontaine/",
+            "name": "LadyFontaine"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/keen/dr-lisa-powerful-insights/"
+            "url": "https://easternalignment.com/reviews/keen/dr-lisa-powerful-insights/",
+            "name": "Dr Lisa Powerful Insights"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/keen/readings-by-kelly777/"
+            "url": "https://easternalignment.com/reviews/keen/readings-by-kelly777/",
+            "name": "Readings by Kelly777"
           },
           {
             "@type": "ListItem",
             "position": 8,
-            "url": "https://easternalignment.com/reviews/keen/tammy-the-voice-reader/"
+            "url": "https://easternalignment.com/reviews/keen/tammy-the-voice-reader/",
+            "name": "Tammy the Voice Reader"
           },
           {
             "@type": "ListItem",
             "position": 9,
-            "url": "https://easternalignment.com/reviews/keen/that-magic-man/"
+            "url": "https://easternalignment.com/reviews/keen/that-magic-man/",
+            "name": "That Magic Man"
           },
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://easternalignment.com/reviews/keen/krys-britton-on-keen-review-2026/"
+            "url": "https://easternalignment.com/reviews/keen/krys-britton-on-keen-review-2026/",
+            "name": "Krys Britton"
           }
         ]
       },

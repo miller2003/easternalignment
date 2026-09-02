@@ -44,62 +44,74 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/",
+            "name": "Love Stefans"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/wisdom-and-love-kasamba-review/",
+            "name": "Wisdom and Love"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/kasamba/love-specialist-isabelle-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/love-specialist-isabelle-kasamba-review/",
+            "name": "Love Specialist Isabelle"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/kasamba/accurate-love-readings-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/accurate-love-readings-kasamba-review/",
+            "name": "Accurate Love Readings"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/kasamba/seek-chelle-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/seek-chelle-kasamba-review/",
+            "name": "Seek Chelle"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/kasamba/divine-master-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/divine-master-kasamba-review/",
+            "name": "Divine Master"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/kasamba/love-psychic-indi-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/love-psychic-indi-kasamba-review/",
+            "name": "Love Psychic Indi"
           },
           {
             "@type": "ListItem",
             "position": 8,
-            "url": "https://easternalignment.com/reviews/kasamba/intuitive-counselor-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/intuitive-counselor-kasamba-review/",
+            "name": "Intuitive Counselor"
           },
           {
             "@type": "ListItem",
             "position": 9,
-            "url": "https://easternalignment.com/reviews/kasamba/spiritual-annie-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/spiritual-annie-kasamba-review/",
+            "name": "Spiritual Annie"
           },
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://easternalignment.com/reviews/kasamba/true-love-connection-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/true-love-connection-kasamba-review/",
+            "name": "True Love Connection"
           },
           {
             "@type": "ListItem",
             "position": 11,
-            "url": "https://easternalignment.com/reviews/kasamba/sparks-of-insight-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/sparks-of-insight-kasamba-review/",
+            "name": "Sparks Of Insight"
           },
           {
             "@type": "ListItem",
             "position": 12,
-            "url": "https://easternalignment.com/reviews/kasamba/a-psychic-friend-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/a-psychic-friend-kasamba-review/",
+            "name": "A Psychic Friend"
           }
         ]
       },

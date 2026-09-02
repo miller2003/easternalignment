@@ -32,6 +32,10 @@ interface Props {
   // Custom / FAQPage schema
   customSchema?: string;
   entities?: string[];
+  /** Editorial score for the page's single named platform — powers the SERP
+   *  star snippet (Review + aggregateRating) and the hero score badge. The
+   *  value MUST equal the same platform's score on its /reviews/ page. */
+  rating?: number;
   // Contextual CTA overrides. Raw frontmatter values may be outside the
   // union (e.g. "cross-platform") — they are normalised to a PlatformKey below.
   platform?: string;
@@ -64,6 +68,7 @@ const {
   schemaDatePublished,
   customSchema,
   entities,
+  rating,
   noCta = false,
 } = Astro.props;
 
@@ -98,6 +103,7 @@ const articleSchema: Record<string, unknown> = {
     "name": schemaAuthor || "Sarah",
     "url": "https://easternalignment.com/about/",
     "jobTitle": "Reviewer & Researcher",
+    "image": `${SITE_URL}/sarah-avatar.jpg`,
   },
   "publisher": { "@id": "https://easternalignment.com/#organization" },
   "datePublished": schemaDatePublished || publishDate,
@@ -116,6 +122,26 @@ const articleSchema: Record<string, unknown> = {
 };
 
 const noindex = metaRobots ? metaRobots.includes('noindex') : false;
+
+/* ── BreadcrumbList ──────────────────────────────────────────────────────
+ * The visible breadcrumb above the title renders this same trail, so the
+ * markup mirrors it exactly. Lets Google draw the section path in the SERP
+ * instead of a bare URL. */
+const breadcrumbTrail = [
+  breadcrumbParent.href
+    ? { "@type": "ListItem", "position": 1, "name": breadcrumbParent.label, "item": new URL(breadcrumbParent.href, SITE_URL).href }
+    : null,
+  ...(breadcrumbMiddle?.href
+    ? [{ "@type": "ListItem", "position": 2, "name": breadcrumbMiddle.label, "item": new URL(breadcrumbMiddle.href, SITE_URL).href }]
+    : []),
+  { "@type": "ListItem", "position": breadcrumbMiddle?.href ? 3 : 2, "name": title, "item": canonical },
+].filter(Boolean) as Record<string, unknown>[];
+
+const breadcrumbSchema = {
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbTrail,
+};
+
 
 // ── Contextual Offer Resolution ──────────────────────────────────────────────
 // Determine which platform this article primarily targets to route the hero CTA
@@ -139,6 +165,58 @@ const guideOffer = PLATFORM_OFFERS[pagePlatform as keyof typeof PLATFORM_OFFERS]
 const sidebarDeal = guideOffer
   ? { platform: pagePlatform as 'keen' | 'kasamba' | 'purple-garden', href: defaultGoLink }
   : undefined;
+
+/* ── Review + aggregateRating (SERP star snippet) ────────────────────────
+ * Only for guides that name exactly ONE platform and carry an editorial
+ * score. Three hard rules keep it eligible:
+ *   1. the hero badge renders the same number — markup matches visible text;
+ *   2. the score equals the platform's own /reviews/ page (one entity, one
+ *      score site-wide — a second value reads as a contradiction to Google);
+ *   3. cross-platform roundups are excluded: there is no single item being
+ *      rated, and faking one is a rich-result manual-action risk. */
+const PLATFORM_LABELS: Record<string, string> = {
+  kasamba: 'Kasamba',
+  keen: 'Keen',
+  'purple-garden': 'Purple Garden',
+};
+const isSinglePlatform =
+  rawPlatform === 'kasamba' || rawPlatform === 'keen' || rawPlatform === 'purple-garden';
+const platformLabel = isSinglePlatform ? PLATFORM_LABELS[rawPlatform] : undefined;
+
+const reviewSchema = rating && platformLabel
+  ? {
+      "@type": "Review",
+      "headline": schemaHeadline || title,
+      "author": { "@id": "https://easternalignment.com/#sarah" },
+      "publisher": { "@id": "https://easternalignment.com/#organization" },
+      "itemReviewed": {
+        "@type": "Product",
+        "name": platformLabel,
+        "url": `${SITE_URL}/reviews/${rawPlatform}/`,
+        "image": `${SITE_URL}/logo.jpg`,
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": rating,
+          "bestRating": 5,
+          "worstRating": 1,
+          "reviewCount": 1,
+        },
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": rating,
+        "bestRating": 5,
+        "worstRating": 1,
+      },
+    }
+  : null;
+
+/* Article + BreadcrumbList (+ Review) ship as one @graph with shared @id
+ * references instead of three disconnected blobs. */
+const jsonLdOut = {
+  "@context": "https://schema.org",
+  "@graph": [articleSchema, breadcrumbSchema, ...(reviewSchema ? [reviewSchema] : [])],
+};
 ---
 
 
@@ -146,7 +224,7 @@ const sidebarDeal = guideOffer
   title={title}
   description={description}
   ogType="article"
-  jsonLd={articleSchema}
+  jsonLd={jsonLdOut}
   ogImage={ogImage}
   canonicalUrl={canonicalUrl}
   noindex={noindex}
@@ -177,6 +255,12 @@ const sidebarDeal = guideOffer
       <header class="article-hero">
         <div class="article-hero-meta">
           {category && <span class="badge badge--sage">{category}</span>}
+          {rating && platformLabel && (
+            <span class="article-rating" aria-label={`${platformLabel} editorial score ${rating} out of 5`}>
+              <span class="article-rating__star" aria-hidden="true">★</span>
+              {rating}/5 · {platformLabel} score
+            </span>
+          )}
           <span class="article-date">
             {updatedDate ? 'Updated' : 'Published'} {formattedDate}
           </span>
@@ -273,6 +357,24 @@ const sidebarDeal = guideOffer
   .article-date {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
+  }
+
+  /* Hero score badge — the visible twin of the Review/aggregateRating markup.
+   * Same number, same page: that pairing is what keeps the star snippet
+   * eligible. Fixed amber fallback because --color-warning is not guaranteed
+   * in every theme bundle. */
+  .article-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium, 500);
+    color: var(--color-warning, #b45309);
+    white-space: nowrap;
+  }
+
+  .article-rating__star {
+    font-size: 0.9375rem;
   }
 
   .article-title {

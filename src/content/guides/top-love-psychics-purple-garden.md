@@ -11,7 +11,7 @@ entities:
   - "Video Psychic Reading"
   - "Relationship Psychic"
 platform: purple-garden
-rating: 4.9
+rating: 4.88
 platformName: "Purple Garden"
 avatarUrl: "/avatars/purple-garden/annah.jpg"
 pros:
@@ -44,52 +44,62 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/purple-garden/annah/"
+            "url": "https://easternalignment.com/reviews/purple-garden/annah/",
+            "name": "Annah"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/purple-garden/truelovetarot/"
+            "url": "https://easternalignment.com/reviews/purple-garden/truelovetarot/",
+            "name": "Truelovetarot"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/purple-garden/athena-love/"
+            "url": "https://easternalignment.com/reviews/purple-garden/athena-love/",
+            "name": "Athena Love"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-norell/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-norell/",
+            "name": "Psychic Norell"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-jewels/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-jewels/",
+            "name": "Psychic Jewels"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/purple-garden/advisor-vanessa/"
+            "url": "https://easternalignment.com/reviews/purple-garden/advisor-vanessa/",
+            "name": "Advisor Vanessa"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/purple-garden/niki-medium/"
+            "url": "https://easternalignment.com/reviews/purple-garden/niki-medium/",
+            "name": "Niki Medium"
           },
           {
             "@type": "ListItem",
             "position": 8,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-sandra/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-sandra/",
+            "name": "Psychic Sandra"
           },
           {
             "@type": "ListItem",
             "position": 9,
-            "url": "https://easternalignment.com/reviews/purple-garden/truthful-love/"
+            "url": "https://easternalignment.com/reviews/purple-garden/truthful-love/",
+            "name": "Truthful Love"
           },
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://easternalignment.com/reviews/purple-garden/oh-life-tarot/"
+            "url": "https://easternalignment.com/reviews/purple-garden/oh-life-tarot/",
+            "name": "Oh Life Tarot"
           }
         ]
       },

@@ -44,32 +44,38 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/kasamba/miss-bathsheba-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/miss-bathsheba-kasamba-review/",
+            "name": "Miss Bathsheba"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/kasamba/divine-spirit-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/divine-spirit-kasamba-review/",
+            "name": "A Divine Spirit"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/kasamba/andi-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/andi-kasamba-review/",
+            "name": "Andi"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/kasamba/tarot-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/tarot-kasamba-review/",
+            "name": "tarot"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/kasamba/elizabeth-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/elizabeth-kasamba-review/",
+            "name": "Elizabeth"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/kasamba/tomorrow-by-tabitha-kasamba-review/"
+            "url": "https://easternalignment.com/reviews/kasamba/tomorrow-by-tabitha-kasamba-review/",
+            "name": "Tomorrow By Tabitha"
           }
         ]
       },

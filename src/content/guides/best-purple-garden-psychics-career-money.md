@@ -11,7 +11,7 @@ entities:
   - "Business Psychic"
   - "Video Psychic Reading"
 platform: purple-garden
-rating: 4.9
+rating: 4.88
 platformName: "Purple Garden"
 avatarUrl: "/avatars/purple-garden/andrew-angel.jpg"
 pros:
@@ -44,37 +44,44 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/purple-garden/andrew-angel/"
+            "url": "https://easternalignment.com/reviews/purple-garden/andrew-angel/",
+            "name": "Andrew Angel"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/purple-garden/sagest/"
+            "url": "https://easternalignment.com/reviews/purple-garden/sagest/",
+            "name": "Sagest"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-logan/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-logan/",
+            "name": "Psychic Logan"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/purple-garden/paul85/"
+            "url": "https://easternalignment.com/reviews/purple-garden/paul85/",
+            "name": "Paul85"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/purple-garden/adam-africa/"
+            "url": "https://easternalignment.com/reviews/purple-garden/adam-africa/",
+            "name": "Adam Africa"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://easternalignment.com/reviews/purple-garden/plutoniandust/"
+            "url": "https://easternalignment.com/reviews/purple-garden/plutoniandust/",
+            "name": "PlutonianDust"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://easternalignment.com/reviews/purple-garden/namrata/"
+            "url": "https://easternalignment.com/reviews/purple-garden/namrata/",
+            "name": "Namrata"
           }
         ]
       },

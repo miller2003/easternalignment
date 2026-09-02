@@ -11,7 +11,7 @@ entities:
   - "Psychic Medium"
   - "Tarot Reading"
 platform: purple-garden
-rating: 4.9
+rating: 4.88
 platformName: "Purple Garden"
 avatarUrl: "/avatars/purple-garden/satie-readings.jpg"
 pros:
@@ -44,27 +44,32 @@ customSchema: |
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://easternalignment.com/reviews/purple-garden/satie-readings/"
+            "url": "https://easternalignment.com/reviews/purple-garden/satie-readings/",
+            "name": "Satie Readings"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://easternalignment.com/reviews/purple-garden/niki-medium/"
+            "url": "https://easternalignment.com/reviews/purple-garden/niki-medium/",
+            "name": "Niki Medium"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://easternalignment.com/reviews/purple-garden/psychic-jeanne/"
+            "url": "https://easternalignment.com/reviews/purple-garden/psychic-jeanne/",
+            "name": "Psychic Jeanne"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://easternalignment.com/reviews/purple-garden/quantum-drew/"
+            "url": "https://easternalignment.com/reviews/purple-garden/quantum-drew/",
+            "name": "Quantum Drew"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://easternalignment.com/reviews/purple-garden/truthful-love/"
+            "url": "https://easternalignment.com/reviews/purple-garden/truthful-love/",
+            "name": "Truthful Love"
           }
         ]
       },
