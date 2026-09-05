@@ -29,7 +29,7 @@ customSchema: |
         "name": "How long should my first psychic reading be?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For a focused single question, 15—0 minutes is typically sufficient. For a comprehensive reading covering multiple life areas, 30—5 minutes. Avoid booking open-ended sessions without a defined scope —the absence of structure tends to produce unfocused readings and inflated costs."
+          "text": "For a focused single question, 15–20 minutes is typically sufficient. For a comprehensive reading covering multiple life areas, 30–45 minutes. Avoid booking open-ended sessions without a defined scope —the absence of structure tends to produce unfocused readings and inflated costs."
         }
       },
       {
@@ -51,6 +51,8 @@ customSchema: |
     ]
   }
 ---
+
+<p class="text-sm text-muted">Latest 2026 edition: <a href="/guides/what-to-expect-from-your-first-psychic-reading/">What Should You Expect From Your First Psychic Reading? A Complete Beginner's Guide</a></p>
 
 I went into my first psychic reading having done almost no preparation. I had a rough idea of what I wanted to know —something about a relationship I was confused about —and I had a vague plan to "just see what comes up."
 
@@ -203,8 +205,8 @@ Do not draw broad conclusions from a single poor reading. Use the vetting system
 
 For a first session, I recommend:
 
-- **Maximum per session:** $50—5 for a new reader, regardless of their rate. If their rate is $15/min, that gives you five focused minutes. Come with surgical questions.
-- **Where to start:** Kasamba's mid-tier readers ($3.99—7.99/min) offer the best balance of verified track record and accessible pricing for a first session.
+- **Maximum per session:** $50–75 for a new reader, regardless of their rate. If their rate is $15/min, that gives you five focused minutes. Come with surgical questions.
+- **Where to start:** Kasamba's mid-tier readers ($3.99–7.99/min) offer the best balance of verified track record and accessible pricing for a first session.
 - **Use the free minutes first:** On Kasamba, use 3 free minutes with two or three readers before committing paid time to any of them. The vetting cost is zero.
 - **Do not book time you cannot emotionally afford to spend:** A reading conducted in a state of acute emotional crisis produces a reader who is essentially counseling you through distress. That is valuable but expensive. If possible, wait until you are emotionally regulated before booking.
 

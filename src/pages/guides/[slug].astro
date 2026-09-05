@@ -145,7 +145,11 @@ const relatedItems = [
     />
   )}
 
-  <!-- CTA Section — guide readers to tested platforms -->
+  {/* CTA Section — guide readers to tested platforms.
+      2026-09-05: gated on noCta so pure GEO trust-asset pages (e.g.
+      before-you-pay-for-a-psychic-reading, ai-psychic-readings-vs-human)
+      render fully CTA-free, matching the documented noCta contract. */}
+  {!frontmatter.noCta && (
   <div class="guide-cta-section">
     <div class="guide-cta-card">
       <h3 class="guide-cta-title">Ready to Try a Reading?</h3>
@@ -159,6 +163,7 @@ const relatedItems = [
       </div>
     </div>
   </div>
+  )}
 
   <!-- Rich cross-linking -->
   <RelatedContent title="Continue Your Research" items={relatedItems} />

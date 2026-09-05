@@ -49,6 +49,8 @@ customSchema: |
   }
 ---
 
+<p class="text-sm text-muted">Latest 2026 edition: <a href="/guides/how-to-tell-if-an-online-psychic-is-legitimate/">How to Tell If an Online Psychic Is Legitimate: 15 Red Flags to Watch For</a></p>
+
 I have been scammed by a psychic.
 
 I want to get that out front because I think it matters. I write about this industry professionally. I have tested over a hundred readers across multiple platforms over three years. I consider myself reasonably intelligent and appropriately skeptical. And I still got taken -- not by a street-corner fortune teller with a neon sign, but by a reader on a legitimate platform who was skilled enough at the performance to bypass my defenses during a period of emotional vulnerability.

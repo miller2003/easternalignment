@@ -2,24 +2,30 @@
 /**
  * SideOfferTab.astro — Slim right-edge offer tab (the whole CTA surface).
  *
- * History: this replaces BOTH the old full-width bottom bar (StickyCTA.astro,
- * which covered the last lines of every article) and the sliding SideDock
- * panel (over-designed — the expanding card was too much furniture for what
- * is fundamentally one link).
+ * What it is: a single vertical tab pinned to the right edge of the viewport
+ * that IS the affiliate link. No panel, no toggle UI.
  *
- * What it is now: a single vertical tab pinned to the right edge of the
- * viewport that IS the affiliate link. No panel, no toggle.
+ * Mobile interaction model (2026-09-05, user directive — AssistiveTouch):
+ *   • DEFAULT is fully expanded — the offer is the point of the element.
+ *     Collapse NEVER happens automatically; only an explicit user swipe
+ *     toward the edge tucks it in. State (position + tucked) persists in
+ *     sessionStorage, so the tab never plays hide-and-seek per navigation:
+ *     it neither auto-hides nor nags by re-expanding on its own.
+ *   • Vertical drag follows the finger 1:1 (Pointer Events + capture,
+ *     transition killed while dragging), rubber-bands past the top/bottom
+ *     clamps, then settles with a hint of momentum on an iOS-style spring
+ *     curve (0.32, 0.72, 0, 1).
+ *   • A rightward flick (or pull past threshold) tucks the tab to a 14px
+ *     handle with a chevron grip. Tap the handle → springs back out.
+ *     While tucked, a leftward pull reopens it too.
+ *   • Tap on the expanded tab navigates (it is a plain <a target="_blank">);
+ *     taps are separated from drags by a 9px / 500ms threshold.
+ *   • No entrance fly-in, no light sweep, no sticky :hover on touch —
+ *     the tab is simply there, instantly, every page load.
  *
- * Mobile behaviour (the critical path):
- *   • Anchored to the lower-right instead of vertically centred, because a
- *     `top: 50%` fixed element rides the visual viewport and visibly jumps
- *     every time Chrome/Safari shows or hides the address bar. iOS Safari
- *     puts its bar at the BOTTOM, so those devices get a top anchor instead
- *     (see `.side-tab--ios`) — the two platforms need opposite edges.
- *   • Renders immediately on first paint — the old 0.5s entrance delay is gone.
- *   • Always fully expanded. An earlier auto-collapse (slide out to a 14px
- *     handle) was removed on request — the offer is the point of the element,
- *     so it stays readable rather than playing hide-and-seek.
+ * Fallbacks: without JS (or on desktop) the tab stays exactly as before —
+ * CSS bottom anchor (Android) / `.side-tab--ios` top anchor (iOS), entrance
+ * animation and sweep intact on desktop.
  *
  * Offer copy is never invented here — it is read from lib/offers.ts (the
  * single source of truth) so wording stays truthful site-wide. Keen's deal
@@ -56,14 +62,17 @@ const href = explicitSlug || goPath(key);
 
 /* ── Tab copy ────────────────────────────────────────────────────────────────
    Concrete, not a vague invitation. A 40px-wide vertical tab has one job:
-   say exactly what you get. Override per page via `label`. ── */
-const defaultLabels: Record<'keen' | 'kasamba' | 'purple-garden', string> = {
-  kasamba: '3 Free Minutes',
+   say exactly what you get. Override per page via `label`. A label may be a
+   [string, string] pair: two SHORT vertical lines side by side, which keeps
+   the tab compact when the offer carries two facts (free mins + discount). ── */
+const defaultLabels: Record<'keen' | 'kasamba' | 'purple-garden', string | [string, string]> = {
+  kasamba: ['3 FREE MINS', '+50% OFF'],
   'purple-garden': '$30 Free Credit',
   keen: '5 Min for $1',
 };
 
-const label = (props.label && props.label.trim()) || defaultLabels[key];
+const rawLabel = (props.label && props.label.trim()) || defaultLabels[key];
+const labelLines = Array.isArray(rawLabel) ? rawLabel : [rawLabel];
 const ctaSource = `side-tab-${primary.goSlug}`;
 ---
 
@@ -85,30 +94,170 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     loading="lazy"
     aria-hidden="true"
   />
-  <span class="side-tab__label">{label}</span>
+  <span class:list={['side-tab__label', { 'side-tab__label--dual': labelLines.length > 1 }]}>
+    {labelLines.map(line => <span class="side-tab__label-line">{line}</span>)}
+  </span>
   <svg class="side-tab__arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
     <path d="M5.5 10.5L10.5 5.5M6.4 5.5h4.1v4.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+  <svg class="side-tab__grip" viewBox="0 0 9 16" aria-hidden="true" focusable="false">
+    <path d="M6.5 2.5 L1.8 8 L6.5 13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
   </svg>
 </a>
 
 <script>
   (function () {
-    const tab = document.getElementById('side-offer-tab');
+    var tab = document.getElementById('side-offer-tab');
     if (!tab) return;
 
-    const isNarrow = window.matchMedia('(max-width: 768px)').matches;
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    if (!isNarrow || !isTouch) return;
+    var isNarrow = window.matchMedia('(max-width: 768px)').matches;
+    var isTouch = window.matchMedia('(pointer: coarse)').matches;
 
     /* Anchor side depends on where the browser puts its collapsing toolbar:
        Android Chrome collapses from the TOP, iOS Safari from the BOTTOM.
-       A fixed element must be anchored to the opposite edge to stay put
-       relative to the content. The CSS default (bottom) suits Android;
-       iOS gets switched to a fixed top offset. */
-    const ua = navigator.userAgent || '';
-    const isIOS = /iPad|iPhone|iPod/.test(ua) ||
+       The class below drives both the no-JS CSS fallback anchor and the
+       initial Y the JS engine picks. */
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     if (isIOS) tab.classList.add('side-tab--ios');
+
+    if (!isNarrow || !isTouch) return; /* desktop: CSS-only, unchanged */
+
+    /* ── Touch interaction engine (AssistiveTouch model) ──────────────────
+       State: y (px from viewport top) + tucked (boolean). The tab springs
+       between states on an iOS-style curve; while a finger is down all
+       transitions are killed so the element tracks 1:1. */
+    var KEY = 'ea_side_tab_v1';
+    var TUCK = 22; /* px hidden when tucked: 36px tab - 14px handle */
+
+    function tabH() { return tab.offsetHeight || 152; }
+    function minY() { return 96; } /* below the sticky offer-bar + header */
+    function maxY() { return Math.max(minY(), window.innerHeight - tabH() - 16); }
+    function clamp(v, a, b) { return v < a ? a : (v > b ? b : v); }
+    function defaultY() {
+      if (isIOS) return Math.round(window.innerHeight * 0.42);
+      /* mirror the old CSS rule: bottom offset = max(6.5rem, 15vh) */
+      return Math.round(window.innerHeight - Math.max(104, window.innerHeight * 0.15) - tabH());
+    }
+
+    var restored = null;
+    try { restored = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+    var y = (restored && typeof restored.y === 'number')
+      ? clamp(restored.y, minY(), maxY())
+      : clamp(defaultY(), minY(), maxY());
+    var tucked = !!(restored && restored.tucked);
+
+    function save() {
+      try { sessionStorage.setItem(KEY, JSON.stringify({ y: Math.round(y), tucked: tucked })); } catch (e) {}
+    }
+    function render() {
+      tab.style.top = Math.round(y) + 'px';
+      tab.style.transform = tucked ? 'translate3d(' + TUCK + 'px,0,0)' : 'translate3d(0,0,0)';
+      tab.dataset.tucked = tucked ? 'true' : 'false';
+    }
+
+    tab.classList.add('side-tab--js');
+    render();
+
+    var pid = null, dragging = false;
+    var sx = 0, sy = 0, baseY = 0, moved = 0, t0 = 0;
+    var lastY = 0, lastT = 0, vY = 0, vX = 0, curOX = 0, lastDX = 0;
+
+    tab.addEventListener('pointerdown', function (e) {
+      if (!e.isPrimary || dragging) return;
+      pid = e.pointerId;
+      try { tab.setPointerCapture(pid); } catch (err) {}
+      sx = e.clientX; sy = e.clientY; baseY = y;
+      moved = 0; t0 = performance.now();
+      lastY = sy; lastT = t0; vY = 0; vX = 0; curOX = 0; lastDX = 0;
+      dragging = true;
+      tab.dataset.dragging = 'true';
+    });
+
+    tab.addEventListener('pointermove', function (e) {
+      if (!dragging || e.pointerId !== pid) return;
+      var dy = e.clientY - sy, dx = e.clientX - sx;
+      lastDX = dx;
+      var total = Math.abs(dy) + Math.abs(dx);
+      if (total > moved) moved = total;
+
+      /* vertical: 1:1 follow, rubber-band resistance past the clamps */
+      var raw = baseY + dy, ny;
+      if (raw < minY()) ny = minY() - (minY() - raw) * 0.28;
+      else if (raw > maxY()) ny = maxY() + (raw - maxY()) * 0.28;
+      else ny = raw;
+      y = ny;
+
+      /* horizontal: rightward pull (tuck gesture) with resistance; while
+         tucked, a leftward pull peels the tab back out live. */
+      var baseX = tucked ? TUCK : 0;
+      var ox = dx < 0 ? dx * 0.5 : dx * 0.55;
+      ox = Math.max(-baseX, ox);
+      curOX = baseX + ox;
+
+      tab.style.top = Math.round(y) + 'px';
+      tab.style.transform = 'translate3d(' + Math.round(curOX) + 'px,0,0)';
+
+      var now = performance.now(), dt = now - lastT;
+      if (dt > 0) {
+        vY = 0.75 * vY + 0.25 * ((e.clientY - lastY) / dt);
+        vX = 0.75 * vX + 0.25 * (dx / Math.max(1, now - t0));
+      }
+      lastY = e.clientY; lastT = now;
+    });
+
+    function finish(e) {
+      if (!dragging || (e && e.pointerId !== pid)) return;
+      dragging = false;
+      tab.dataset.dragging = 'false';
+
+      var dt = performance.now() - t0;
+      var isTap = moved < 9 && dt < 500;
+
+      if (isTap) {
+        /* snap back from any rubber-band offset; click handler does the rest */
+        y = clamp(y, minY(), maxY());
+        render();
+        return;
+      }
+
+      /* settle vertical with a hint of momentum, then clamp hard */
+      y = clamp(y + vY * 90, minY(), maxY());
+
+      if (!tucked) {
+        if (curOX > 26 || vX > 0.35) tucked = true;   /* flicked to the edge */
+      } else if (lastDX < -18) {
+        tucked = false;                                /* peeled back open */
+      }
+      render();
+      save();
+    }
+
+    tab.addEventListener('pointerup', finish);
+    tab.addEventListener('pointercancel', finish);
+
+    tab.addEventListener('click', function (e) {
+      if (moved >= 9) {                       /* it was a drag, not a tap */
+        e.preventDefault();
+        e.stopPropagation();
+        moved = 0;
+        return;
+      }
+      if (tucked) {                           /* tap on the handle: spring out */
+        e.preventDefault();
+        e.stopPropagation();
+        tucked = false;
+        render();
+        save();
+      }
+      /* expanded tap: default <a target="_blank"> navigation proceeds */
+    });
+
+    window.addEventListener('resize', function () {
+      y = clamp(y, minY(), maxY());
+      render();
+    }, { passive: true });
   })();
 </script>
 
@@ -133,31 +282,38 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     justify-content: center;
     gap: 10px;
 
-    border-radius: 13px 0 0 13px;
-    background: linear-gradient(168deg, #8b6f4e 0%, #6b5438 60%, #54402a 100%);
+    border-radius: 14px 0 0 14px;
+    background: linear-gradient(165deg, #8f7350 0%, #6b5438 55%, #4f3c26 100%);
     color: #ffffff;
     text-decoration: none;
     overflow: hidden;
     box-shadow:
       inset 1px 0 0 rgba(255, 255, 255, 0.16),
-      -8px 0 22px rgba(84, 64, 42, 0.20);
+      0 10px 28px rgba(61, 43, 24, 0.22),
+      0 2px 8px rgba(61, 43, 24, 0.14);
     transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, scale 0.2s ease;
     -webkit-tap-highlight-color: transparent;
   }
 
   @keyframes sd-in { to { translate: 0 -50%; } }
 
-  .side-tab:hover {
-    filter: brightness(1.09);
-    transform: translateX(-3px);
-    box-shadow:
-      inset 1px 0 0 rgba(255, 255, 255, 0.2),
-      -12px 0 30px rgba(84, 64, 42, 0.28);
+  /* Hover only where hover truly exists — touch devices keep no sticky state. */
+  @media (hover: hover) and (pointer: fine) {
+    .side-tab:hover {
+      filter: brightness(1.09);
+      transform: translateX(-3px);
+      box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 14px 34px rgba(61, 43, 24, 0.28),
+        0 3px 10px rgba(61, 43, 24, 0.16);
+    }
   }
-  .side-tab:active { scale: 0.97; }
+  .side-tab:active { scale: 0.96; }
   .side-tab:focus-visible { outline: 2px solid #e8cdb0; outline-offset: -4px; }
 
-  /* Slow light sweep across the tab — catches the eye once, never blinks. */
+  /* Slow light sweep across the tab — catches the eye once, never blinks.
+     Desktop only: on mobile it costs permanent GPU compositing on a fixed
+     element, which is felt as scroll jank. */
   .side-tab::after {
     content: '';
     position: absolute;
@@ -187,14 +343,26 @@ const ctaSource = `side-tab-${primary.goSlug}`;
   }
 
   .side-tab__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-family: var(--font-body);
+  }
+  .side-tab__label-line {
     writing-mode: vertical-rl;
     transform: rotate(180deg);   /* reads bottom-to-top, the right-edge convention */
-    font-family: var(--font-body);
     font-size: 12.5px;
     font-weight: 600;
     letter-spacing: 0.06em;
     white-space: nowrap;
     text-shadow: 0 1px 2px rgba(40, 28, 16, 0.35);
+  }
+  /* Dual-line labels run slightly smaller so two columns fit the narrow
+     tab and the block stays short. */
+  .side-tab__label--dual .side-tab__label-line {
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
   }
 
   .side-tab__arrow {
@@ -204,46 +372,90 @@ const ctaSource = `side-tab-${primary.goSlug}`;
     opacity: 0.85;
   }
 
-  /* ── Mobile: anchored to the lower-right rather than vertically centred,
-     because a `top: 50%` fixed element rides the VISUAL viewport and visibly
-     jumps whenever Chrome/Safari shows or hides its toolbars.
+  /* Chevron grip shown only in the tucked (handle) state — see mobile rules. */
+  .side-tab__grip { display: none; }
 
-     Vertical offset is deliberately generous (min 6.5rem / 15vh):
-       • iOS Safari 15+ puts its address bar at the BOTTOM (~88px). A tab
-         sitting at `bottom: 1.5rem` would be buried under it on the very
-         devices that make up most of this site's mobile traffic.
-       • 15vh resolves against the large viewport (a constant), so the offset
-         stays put instead of tracking the toolbar.
+  /* ── Mobile: anchored to the lower-right by default (Android-friendly);
+     iOS gets the top anchor via `.side-tab--ios`. With JS the tab switches
+     to explicit px positioning (`--js`) and becomes draggable — see the
+     inline script for the full interaction model.
 
-     The tab stays fully expanded at all times (no auto-collapse). At 36px
-     wide it overlaps the last ~20px of the text column on mobile; that is
-     accepted deliberately — indenting the article to make room was rejected
-     because it wrecked the left/right symmetry of every page. ── */
+     The tab stays fully expanded by default (collapse is user-initiated
+     only). At 36px wide it overlaps the last ~20px of the text column on
+     mobile; that is accepted deliberately — indenting the article to make
+     room was rejected because it wrecked the left/right symmetry. ── */
   @media (max-width: 768px) {
     .side-tab {
       top: auto;
       bottom: calc(max(6.5rem, 15vh) + env(safe-area-inset-bottom, 0px));
       right: env(safe-area-inset-right, 0px);
-      translate: 100% 0;
-      animation-name: sd-in-mobile;
+      translate: none;
+      animation: none;                 /* appear instantly — no per-page fly-in */
       width: 36px;
-      min-height: 152px;
+      min-height: 0;                   /* content-sized: dual-line label stays compact */
+      padding: 12px 0;
+      gap: 8px;
+      touch-action: none;              /* the tab owns its gestures */
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
     }
 
-    @keyframes sd-in-mobile { to { translate: 0 0; } }
+    .side-tab::after { display: none; }  /* no sweep on mobile (GPU/jank) */
+    .side-tab__arrow { display: none; }  /* arrow costs 23px of vertical space */
 
-    /* iOS Safari (incl. iPadOS) keeps its address bar at the BOTTOM, so a
-       bottom-anchored tab rides the toolbar as it collapses. Those devices
-       get a fixed top offset instead — iOS never moves the visual viewport's
-       top edge, so the tab stays perfectly still. Android Chrome is the
-       opposite (bar on top), which is why the CSS default anchors to the
-       bottom. Applied by the inline script. */
+    /* iOS Safari (incl. iPadOS) keeps its address bar at the BOTTOM, so the
+       no-JS fallback anchors to the top where iOS never moves the viewport
+       edge. */
     .side-tab--ios {
       top: 42vh;
       bottom: auto;
     }
 
-    .side-tab:hover { transform: translateX(-3px); }
+    /* JS engine active: explicit px top + iOS-style spring transitions.
+       `top` transitions are fine here — the element is a 36px fixed chip. */
+    .side-tab--js {
+      top: 0;
+      bottom: auto;
+      transition:
+        top 0.42s cubic-bezier(0.32, 0.72, 0, 1),
+        transform 0.42s cubic-bezier(0.32, 0.72, 0, 1),
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+      will-change: top, transform;
+    }
+    .side-tab--js[data-dragging="true"] {
+      transition: none;                /* direct manipulation: 1:1 finger track */
+    }
+
+    /* Tucked handle: quieter shadow, slight transparency (idle AssistiveTouch
+       look), plus an invisible ::before that widens the 14px handle's tap
+       area so it stays easy to hit. */
+    .side-tab--js[data-tucked="true"] {
+      opacity: 0.88;
+      box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.16),
+        -3px 0 12px rgba(61, 43, 24, 0.18);
+    }
+    .side-tab--js[data-tucked="true"]::before {
+      content: '';
+      position: absolute;
+      inset: -6px 0 -6px -14px;
+    }
+    .side-tab--js[data-tucked="true"] .side-tab__grip {
+      display: block;
+      position: absolute;
+      left: 2.5px;
+      top: 50%;
+      translate: 0 -50%;
+      width: 9px;
+      height: 16px;
+      opacity: 0.75;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .side-tab--js { transition: none; }
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {

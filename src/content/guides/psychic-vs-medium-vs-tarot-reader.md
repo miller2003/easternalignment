@@ -45,6 +45,8 @@ entities:
   - "Psychic Reading Types"
 ---
 
+<p class="text-sm text-muted">Latest 2026 edition: <a href="/guides/psychic-vs-tarot-vs-astrology/">Psychic vs. Tarot vs. Astrology: Which Type of Reading Should You Choose?</a></p>
+
 The three most common labels in the psychic industry — psychic, medium, and tarot reader — are treated as interchangeable by most platforms, most marketing, and most clients. They are not. The differences are real, they matter to the outcome of your session, and the single most common source of disappointing readings I have seen is not bad readers; it is the wrong kind of reader for the question.
 
 This guide exists to end that confusion. Here is what each label actually means, what each practitioner can and cannot do, and how to match the practitioner to your situation before you spend a dollar.

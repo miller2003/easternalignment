@@ -79,7 +79,7 @@ export const PLATFORM_OFFERS: Record<PlatformKey, PlatformOffer> = {
     color: '#4a6ee0',
     reviewedCount: 35,
     userMillions: 3,
-    topBarLine: 'Kasamba Special Offer — 3 FREE minutes + 50% OFF your first session',
+    topBarLine: 'Kasamba Special Offer: 3 FREE Mins + 50% Off',
   },
   'purple-garden': {
     key: 'purple-garden',

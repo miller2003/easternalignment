@@ -44,6 +44,8 @@ entities:
   - "Online Psychic Pricing"
 ---
 
+<p class="text-sm text-muted">Latest 2026 edition: <a href="/guides/psychic-reading-prices/">How Much Does a Psychic Reading Cost? A Complete Guide to Psychic Reading Prices</a></p>
+
 The most common question I receive about psychic readings is also the one most review sites dodge: what does this actually cost? The dodge is understandable — the answer is genuinely complicated, because rates vary by platform, modality, reader experience, and demand, and because the advertised price is almost never the price you will pay. The per-minute rate is the headline; the session structure is the real cost.
 
 Here is the honest, complete picture of what psychic readings cost in 2026, based on years of testing the major platforms, plus the hidden costs and pricing traps that most first-timers discover the hard way.
