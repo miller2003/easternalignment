@@ -1,7 +1,7 @@
 ---
 title: "Purple Garden Review (2026): Is It Legit? $30 Credit, Pricing & Love Readings"
-seoTitle: "Purple Garden Review 2026: $30 Free Credit — 30 Advisors Tested"
-metaDescription: "Is Purple Garden worth it? 30 advisors tested with real sessions — how the $30 new-user credit works, video intro vetting, real pricing, refunds, and who should book in 2026."
+seoTitle: "Purple Garden Review 2026: $30 Free Credit — 46 Advisors Tested"
+metaDescription: "Is Purple Garden worth it? 46 advisors tested with real sessions — how the $30 new-user credit works, video intro vetting, real pricing, refunds, and who should book in 2026."
 description: "An independent Purple Garden review of its $30 new-user credit, video-first advisor vetting, live chat and voice options, pricing, and fit for love and relationship questions."
 platformName: "Purple Garden"
 rating: 4.88
@@ -12,7 +12,7 @@ pricing: "$0.99/min to $15.00+/min"
 bestFor: "Mobile-first video readings & community-verified vetting"
 rank: 2
 publishDate: "2026-06-12"
-updatedDate: "2026-08-24"
+updatedDate: '2026-09-06'
 highlights:
   - "Mandatory 60-second video profile bios let you assess an advisor's voice, energy, and spiritual environment before spending a single dollar."
   - "The 'Journeys' community feed acts as a public ledger where clients document predictions and update whether timelines actually materialized."

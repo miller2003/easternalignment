@@ -1,7 +1,7 @@
 ---
 title: "Kasamba Review (2026): Pricing, 3 Free Minutes & Love Psychics"
-seoTitle: "Kasamba Review 2026: 3 Free Minutes + 50% Off — 35 Readers Tested"
-metaDescription: "Is Kasamba legit? 35 readers individually tested — how 3 free minutes with every new psychic plus 50% off works, real pricing, chat transcripts, and the advisors worth shortlisting in 2026."
+seoTitle: "Kasamba Review 2026: 3 Free Minutes + 50% Off — 63 Readers Tested"
+metaDescription: "Is Kasamba legit? 63 readers individually tested — how 3 free minutes with every new psychic plus 50% off works, real pricing, chat transcripts, and the advisors worth shortlisting in 2026."
 description: "An independent Kasamba review for people weighing love, breakup, and relationship readings: pricing, the 3-free-minute offer, chat transcripts, and the trade-offs to know first."
 platformName: "Kasamba Psychics"
 rating: 4.9
@@ -24,7 +24,7 @@ cons:
   - "The massive roster requires strict personal vetting to filter out generalists."
   - "Lack of native video reading options in an increasingly visual era."
 publishDate: "2026-05-09"
-updatedDate: "2026-08-24"
+updatedDate: '2026-09-06'
 rank: 1
 entities:
   - "Kasamba"

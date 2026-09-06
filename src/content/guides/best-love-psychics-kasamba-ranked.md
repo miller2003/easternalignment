@@ -21,7 +21,7 @@ freeOffer: 3 free minutes + 50% off your first reading
 pricing: From $1.99/min to $30+/min
 bestFor: Clients seeking deep relationship forensics, ex-recovery timelines, and specific person insights.
 publishDate: '2026-03-10'
-updatedDate: '2026-08-24'
+updatedDate: '2026-09-06'
 highlights:
 - Selection filtered from thousands of profiles down to 5 data-backed practitioners.
 - Includes readers with specific methodologies: Triple Clair, Remote Telepathy, and Vision Channeling.
@@ -67,7 +67,7 @@ When a relationship hits a crisis point—whether it's an unexplained separation
 
 We do not evaluate psychics based on magic. We evaluate them as specialized service providers.
 
-**This page is about what a Kasamba love reading can realistically deliver — not the full shortlist.** If you already know what you want to ask and just need the right reader, go to [Top 12 Love Psychics on Kasamba](/guides/top-love-psychics-kasamba/), the complete ranked list from our 60+ reader audit. 
+**This page is about what a Kasamba love reading can realistically deliver — not the full shortlist.** If you already know what you want to ask and just need the right reader, go to [Top 12 Love Psychics on Kasamba](/guides/top-love-psychics-kasamba/), the complete ranked list from our 63-reader audit. 
 
 Kasamba is one of the oldest psychic networks on the internet, operating since 1999. Because of its tenure, it hosts some of the most experienced intuitive practitioners in the world—readers with tens of thousands of verified sessions spanning decades. However, it also hosts hundreds of generalists who will gladly take your per-minute rate to tell you exactly what you want to hear. 
 

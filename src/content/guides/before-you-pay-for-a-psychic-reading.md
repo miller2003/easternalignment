@@ -3,7 +3,7 @@ title: "13 Things to Know Before You Pay for a Psychic Reading (2026)"
 description: "The complete pre-payment checklist for a psychic reading: how to vet the platform and the individual reader, what a first session really costs in total (with the math), how to prepare your questions, how to control the session once the meter is running, and the five red flags that mean end it immediately. Distilled from 150+ published single-advisor reviews."
 category: Guide
 publishDate: '2026-09-05'
-updatedDate: '2026-09-05'
+updatedDate: '2026-09-06'
 seoTitle: 'Before You Pay for a Psychic Reading: 13 Checks (2026)'
 metaDescription: '13 checks before you pay for a psychic reading: platform vetting, reader numbers, real cost math, session control, and the red flags that mean hang up.'
 schemaDescription: "A 13-point pre-payment checklist for psychic readings, covering platform vetting, advisor-level due diligence, realistic first-session cost calculations, question preparation, in-session control techniques, end-the-session red flags, and exit procedures."
@@ -43,7 +43,7 @@ customSchema: |
         "name": "Are more expensive psychics more accurate?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No reliable correlation exists above a platform's baseline quality floor. Per-minute price tracks demand, seniority, and self-positioning more than measured accuracy. Across our 150+ published single-advisor reviews, several of the strongest performers sit in the mid-range ($3–6/min), while some $20+/min readers survive on reputation alone. Price tells you how booked a reader is, not how often they are right."
+          "text": "No reliable correlation exists above a platform's baseline quality floor. Per-minute price tracks demand, seniority, and self-positioning more than measured accuracy. Across our 158 published single-advisor reviews, several of the strongest performers sit in the mid-range ($3–6/min), while some $20+/min readers survive on reputation alone. Price tells you how booked a reader is, not how often they are right."
         }
       },
       {
@@ -117,7 +117,7 @@ The limitation, stated plainly: scale filters out bad *operators*, not bad *read
 
 **An advisor's profile carries three numbers that predict session quality better than anything they write about themselves: completed readings, average rating weighed against written review count, and the year they joined.** Longevity is a market filter — an advisor who burns clients does not accumulate eight years and twenty thousand sessions on a platform that displays every rating.
 
-How we read them, after reviewing 150+ advisors:
+How we read them, after reviewing 158 advisors:
 
 - **Completed readings.** Volume is repetitions. A reader with five-figure session counts has heard your question type hundreds of times and stopped being surprised by it years ago.
 - **Rating × review count.** A 4.7 average across 2,000 written reviews is a stronger signal than a perfect 5.0 across 40. Small samples hide everything; large samples can only be maintained by consistently not disappointing people.
@@ -251,7 +251,7 @@ Chat, for most first-timers, for three reasons: it leaves a written transcript y
 
 ### Are more expensive psychics more accurate?
 
-No reliable correlation exists above the platform's baseline quality floor. Per-minute price tracks demand, seniority, and self-positioning more than measured accuracy. Across our 150+ published single-advisor reviews, several of the strongest performers sit in the $3–6/min mid-range, while some $20+/min readers persist on reputation alone. Price tells you how booked a reader is, not how often they are right.
+No reliable correlation exists above the platform's baseline quality floor. Per-minute price tracks demand, seniority, and self-positioning more than measured accuracy. Across our 158 published single-advisor reviews, several of the strongest performers sit in the $3–6/min mid-range, while some $20+/min readers persist on reputation alone. Price tells you how booked a reader is, not how often they are right.
 
 ### What if a psychic's prediction does not come true?
 
