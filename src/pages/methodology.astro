@@ -1,0 +1,1604 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const readerModules = import.meta.glob('../content/readers/**/*.md', { eager: true });
+const totalReaders = Object.keys(readerModules).length;
+
+const methodologySchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "How Eastern Alignment Tests & Reviews Psychic Services",
+  "description": "Our complete testing standards, evidence requirements, scoring framework, and editorial independence policy. Every methodology decision is documented and open to scrutiny.",
+  "url": "https://easternalignment.com/methodology/",
+  "author": {
+    "@type": "Person",
+    "@id": "https://easternalignment.com/#sarah",
+    "name": "Sarah",
+    "url": "https://easternalignment.com/about/"
+  },
+  "publisher": {
+    "@id": "https://easternalignment.com/#organization"
+  },
+  "datePublished": "2026-09-07",
+  "dateModified": "2026-09-07",
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@id": "https://easternalignment.com/#website"
+  }
+};
+---
+
+<BaseLayout
+  title="How We Test & Review Psychic Services — Methodology & Editorial Standards"
+  description="Eastern Alignment's complete methodology: our 7-step testing protocol, weighted scoring framework, evidence classification system, editorial independence policy, and the documented limitations of our approach. No black boxes."
+  jsonLd={methodologySchema}
+  noCta={true}
+>
+  <div class="methodology-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Methodology' }]} />
+
+      <!-- ═══════════════════════════════════════════════
+           HERO
+      ═══════════════════════════════════════════════ -->
+      <header class="meth-hero">
+        <span class="badge badge--sage">Editorial Standards</span>
+        <h1>How Eastern Alignment Tests & Reviews Psychic Services</h1>
+        <p class="meth-subtitle text-muted">
+          Our testing standards, evidence requirements, scoring framework, and editorial independence policy. Every methodology decision documented below is open to scrutiny.
+        </p>
+        <p class="meth-positioning">
+          We don't rank psychic platforms from their marketing pages. We use them as paying customers, document the experience, apply a consistent evaluation framework, and update our findings when the evidence changes.
+        </p>
+      </header>
+
+      <!-- ═══════════════════════════════════════════════
+           FIVE QUESTIONS
+      ═══════════════════════════════════════════════ -->
+      <div class="five-q card">
+        <div class="five-q-item">
+          <span class="five-q-label">Who</span>
+          <span class="five-q-answer"><a href="/about/">Sarah</a> — sole tester, researcher, and editor. All assessments are conducted and authored by one person, not a rotating staff of anonymous freelancers.</span>
+        </div>
+        <div class="five-q-item">
+          <span class="five-q-label">What</span>
+          <span class="five-q-answer">Online psychic platforms, individual readers, reading formats (chat, phone, video), customer experience, pricing mechanics, safety, and satisfaction guarantees.</span>
+        </div>
+        <div class="five-q-item">
+          <span class="five-q-label">How</span>
+          <span class="five-q-answer">Real accounts → real money → multiple sessions → documented observations → follow-up verification → cross-referencing with community data.</span>
+        </div>
+        <div class="five-q-item">
+          <span class="five-q-label">What we measure</span>
+          <span class="five-q-answer">Reading quality, unprompted specificity, communication, value, platform transparency, consumer protection, customer support, and documented outcomes.</span>
+        </div>
+        <div class="five-q-item">
+          <span class="five-q-label">What we don't claim</span>
+          <span class="five-q-answer">We do not claim to scientifically prove or disprove whether any reader possesses supernatural abilities. We evaluate what you actually get when you spend money on these services.</span>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════
+           TESTING IN NUMBERS
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="testing-in-numbers">
+        <h2>Our Testing in Numbers</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Platforms tested in depth</span>
+            <a href="/reviews/" class="stat-evidence">View platform reviews →</a>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">{totalReaders}+</span>
+            <span class="stat-label">Individual readers reviewed</span>
+            <a href="/reviews/" class="stat-evidence">Browse reader reviews →</a>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Hours of documented testing</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">$840</span>
+            <span class="stat-label">Spent on our longest audit</span>
+            <a href="/reviews/purple-garden/" class="stat-evidence">View Purple Garden audit →</a>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">12 mo</span>
+            <span class="stat-label">Longest continuous audit</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">150</span>
+            <span class="stat-label">Journeys threads audited</span>
+            <a href="/reviews/purple-garden/" class="stat-evidence">View underlying research →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           THREE CONTENT TYPES
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="content-types">
+        <h2>Three Types of Content, Three Distinct Methodologies</h2>
+        <p>Eastern Alignment publishes three structurally different categories of content. Each follows its own research protocol because the evidence requirements are fundamentally different. We never apply a platform-level methodology to a reader-level assessment, or vice versa.</p>
+
+        <div class="content-type-grid">
+          <div class="content-type-card card">
+            <div class="ct-icon">📊</div>
+            <h3>Platform Reviews</h3>
+            <p class="text-muted text-sm">Full-lifecycle testing of the platform as a product: signup, payment, reader discovery, session experience, customer support, refund handling, and policy verification. Requires real accounts, real spending, and multi-reader sampling.</p>
+            <a href="#platform-methodology" class="ct-link text-primary text-sm">See platform methodology ↓</a>
+          </div>
+          <div class="content-type-card card">
+            <div class="ct-icon">👤</div>
+            <h3>Reader Assessments</h3>
+            <p class="text-muted text-sm">Individual reader profiles evaluated on specificity, communication, question handling, value, and documented track record. Combines direct session observations with verified public data (ratings, session counts, review distributions).</p>
+            <a href="#reader-methodology" class="ct-link text-primary text-sm">See reader methodology ↓</a>
+          </div>
+          <div class="content-type-card card">
+            <div class="ct-icon">📖</div>
+            <h3>Guides & Comparisons</h3>
+            <p class="text-muted text-sm">Research-driven editorial content synthesizing firsthand testing data, community intelligence, and verified platform information into actionable buyer guidance. Not firsthand testing — structured aggregation with declared sources.</p>
+            <a href="#guide-methodology" class="ct-link text-primary text-sm">See guide methodology ↓</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           TESTING PROTOCOL
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="testing-protocol">
+        <h2>Our Testing Protocol</h2>
+        <p>Every platform review on Eastern Alignment follows this 7-step protocol. Steps are executed in sequence; we do not skip steps or reorder them based on the platform being tested.</p>
+
+        <div class="protocol-steps">
+          <div class="protocol-step">
+            <div class="step-marker">01</div>
+            <div class="step-content">
+              <h3>We Create a Normal Customer Account</h3>
+              <p>We sign up with standard consumer email addresses. We do not announce ourselves as reviewers, request press accounts, or accept platform-provisioned credentials. The platform does not know we are evaluating them. This is non-negotiable: any special treatment would invalidate the firsthand evidence.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="step-marker">02</div>
+            <div class="step-content">
+              <h3>We Pay With Our Own Money</h3>
+              <p>No complimentary readings. No sponsored credits. No paid editorial placements. Every session is funded out of pocket at the same rates any customer would pay. Our 12-month Purple Garden audit alone cost $840 across 24 advisors — that is not a marketing number; it is a documented expense.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="step-marker">03</div>
+            <div class="step-content">
+              <h3>We Sample Multiple Readers</h3>
+              <p>A single reader's performance cannot represent an entire platform. We sample across different specialties (tarot, astrology, mediumship, intuitive counseling), pricing tiers (budget through premium), communication formats (chat, phone, video where available), and rating levels. The goal is to test the platform's <em>range</em>, not just its best performer.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="step-marker">04</div>
+            <div class="step-content">
+              <h3>We Use a Consistent Question Framework</h3>
+              <p>We prepare question categories in advance so that sessions can be compared across readers and platforms without changing the standard. Categories include: relationship dynamics, career direction, decision-making, and general life guidance. We do not feed readers pre-scripted answers or test them on verifiable trivia — we evaluate how they handle the kind of open, emotionally complex questions that real customers bring.</p>
+              <p class="text-sm text-muted"><strong>Note:</strong> We do not publish the exact question wording to prevent readers from preparing rehearsed responses if they become aware of this site.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="step-marker">05</div>
+            <div class="step-content">
+              <h3>We Document the Session</h3>
+              <p>We preserve transcripts (where the platform permits, e.g. Kasamba's automatic chat logs), timestamps, pricing charged, reader profile information, promotional terms used, and session notes. For phone and video sessions where transcripts are not available, we take contemporaneous notes during or immediately after the session. Sensitive personal information is redacted before any content is published or referenced.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="step-marker">06</div>
+            <div class="step-content">
+              <h3>We Evaluate Immediately</h3>
+              <p>Within 24 hours of the session, we record structured assessments on: unprompted specificity, relevance to the stated question, communication quality, value relative to cost, and any red flags (pressure tactics, upselling, fear-based statements). Immediate evaluation prevents memory distortion — we do not score sessions weeks later from faded impressions.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="step-marker">07</div>
+            <div class="step-content">
+              <h3>We Revisit When Claims Can Be Verified</h3>
+              <p>If a reader makes a time-bound claim ("you will hear from this person within three weeks"), we record the claim and its stated window, then revisit it after the window closes. We do not treat predictions as automatically true or false at the time of the session. A vague statement is never counted as a successful prediction simply because it feels relevant after the fact — that is hindsight bias, and we explicitly guard against it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           WHAT WE ACTUALLY TEST — FOUR LAYERS
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="what-we-test">
+        <h2>What We Actually Test</h2>
+        <p>We don't just "test the psychic." We evaluate the full service lifecycle across four distinct layers. Each layer has its own evidence requirements and contributes independently to our assessment.</p>
+
+        <div class="test-layers">
+          <div class="test-layer card">
+            <h3><span class="layer-num">1</span> The Reader</h3>
+            <div class="layer-metrics">
+              <span class="metric-tag">Unprompted specificity</span>
+              <span class="metric-tag">Relevance to question</span>
+              <span class="metric-tag">Internal consistency</span>
+              <span class="metric-tag">Communication quality</span>
+              <span class="metric-tag">Question handling</span>
+              <span class="metric-tag">Transparency</span>
+              <span class="metric-tag">Pressure tactics (red flag)</span>
+              <span class="metric-tag">Session value</span>
+            </div>
+          </div>
+
+          <div class="test-layer card">
+            <h3><span class="layer-num">2</span> The Platform</h3>
+            <div class="layer-metrics">
+              <span class="metric-tag">Reader discovery & filtering</span>
+              <span class="metric-tag">Pricing transparency</span>
+              <span class="metric-tag">Availability & wait times</span>
+              <span class="metric-tag">Introductory offers</span>
+              <span class="metric-tag">Review system integrity</span>
+              <span class="metric-tag">Reader profiles depth</span>
+              <span class="metric-tag">Transcript/record availability</span>
+              <span class="metric-tag">Payment flow</span>
+              <span class="metric-tag">Refund & satisfaction policy</span>
+              <span class="metric-tag">Customer support</span>
+            </div>
+          </div>
+
+          <div class="test-layer card">
+            <h3><span class="layer-num">3</span> The Transaction</h3>
+            <div class="layer-metrics">
+              <span class="metric-tag">Advertised vs. actual cost</span>
+              <span class="metric-tag">Intro offer usability</span>
+              <span class="metric-tag">Hidden fees or charges</span>
+              <span class="metric-tag">Terms clarity</span>
+              <span class="metric-tag">Cancellation process</span>
+              <span class="metric-tag">Refund request outcome</span>
+              <span class="metric-tag">Support resolution quality</span>
+            </div>
+          </div>
+
+          <div class="test-layer card">
+            <h3><span class="layer-num">4</span> The Aftermath</h3>
+            <div class="layer-metrics">
+              <span class="metric-tag">Prediction follow-up</span>
+              <span class="metric-tag">Outcome documentation</span>
+              <span class="metric-tag">Transcript re-audit</span>
+              <span class="metric-tag">Platform policy changes</span>
+              <span class="metric-tag">Long-term reader consistency</span>
+            </div>
+            <p class="text-sm text-muted layer-note">This layer is what separates a review from a reaction. Most review sites evaluate the moment; we evaluate the service lifecycle.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           WHAT "ACCURACY" MEANS TO US
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="accuracy-definition">
+        <h2>What "Accuracy" Means to Us</h2>
+        <p>We do not treat psychic ability as a scientifically established quantity that can be reduced to a single percentage. You will never see us claim "87% psychic accuracy" — that framing is misleading and unverifiable. Instead, we assess the <strong>information quality</strong> of a reading: whether the reader delivers content that is specific, relevant, internally consistent, and — where applicable — later checkable against observable reality.</p>
+
+        <p>When a reader makes statements during a session, we classify them into four categories:</p>
+
+        <div class="accuracy-taxonomy">
+          <div class="taxonomy-item card">
+            <div class="taxonomy-badge taxonomy-a">Specific & Verifiable</div>
+            <p class="taxonomy-example">"You will receive a job-related communication from someone in the healthcare sector within the next 30 days."</p>
+            <p class="taxonomy-note text-sm text-muted">Time-bound, domain-specific, independently checkable. We record these and revisit after the stated window.</p>
+          </div>
+          <div class="taxonomy-item card">
+            <div class="taxonomy-badge taxonomy-b">Specific but Not Yet Verifiable</div>
+            <p class="taxonomy-example">"A person from your past — someone connected to your early twenties — will re-enter your life."</p>
+            <p class="taxonomy-note text-sm text-muted">Contains specifics but no clear verification timeline. We record without scoring.</p>
+          </div>
+          <div class="taxonomy-item card">
+            <div class="taxonomy-badge taxonomy-c">Subjective / Interpretive</div>
+            <p class="taxonomy-example">"You are entering a period of emotional renewal and shedding old patterns."</p>
+            <p class="taxonomy-note text-sm text-muted">Potentially meaningful to the individual but not independently scorable. We evaluate these on therapeutic usefulness, not predictive accuracy.</p>
+          </div>
+          <div class="taxonomy-item card">
+            <div class="taxonomy-badge taxonomy-d">Non-Verifiable</div>
+            <p class="taxonomy-example">"You have an old soul." / "Your energy is very purple."</p>
+            <p class="taxonomy-note text-sm text-muted">Untestable by any method. We note whether a reader relies heavily on this category — a session dominated by non-verifiable statements is a red flag for vagueness.</p>
+          </div>
+        </div>
+
+        <p class="meth-callout"><strong>Key principle:</strong> A vague statement is never counted as a successful prediction simply because it feels relevant after the fact. That is <a href="https://en.wikipedia.org/wiki/Barnum_effect" target="_blank" rel="noopener">the Barnum effect</a>, and we explicitly guard against it in our evaluation process.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           SCORING FRAMEWORK
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="scoring-framework">
+        <h2>Scoring Framework</h2>
+
+        <h3 id="platform-methodology">Platform Review Scoring</h3>
+        <p>Platform reviews receive an overall score on a 5.0 scale derived from five weighted dimensions. Weights are fixed before testing begins and do not change based on the platform being evaluated. The overall score is a weighted average rounded to two decimal places (e.g. 4.88) when the second decimal is non-zero, or one decimal place (e.g. 4.9) when it is.</p>
+
+        <div class="score-table-wrapper">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Weight</th>
+                <th>What Earns a High Score (4.5–5.0)</th>
+                <th>What Earns a Low Score (1.0–2.5)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Reading Quality</strong></td>
+                <td>25%</td>
+                <td>Multiple readers deliver unprompted, specific details relevant to the question within the first 2–3 minutes. Statements are internally consistent across sessions. Verifiable claims show documented follow-through.</td>
+                <td>Readers rely on Barnum statements, ask excessive clarifying questions (cold reading), or deliver contradictory information across sessions. Specificity is absent.</td>
+              </tr>
+              <tr>
+                <td><strong>Trust & Safety</strong></td>
+                <td>20%</td>
+                <td>No pressure tactics, no fear-based upselling, clear refund policy honored in practice, transparent pricing with no hidden charges, robust reader vetting process.</td>
+                <td>Readers employ scare tactics ("you have a curse"), platform resists legitimate refunds, pricing is misleading, or the platform accepts readers with no meaningful vetting.</td>
+              </tr>
+              <tr>
+                <td><strong>Value</strong></td>
+                <td>20%</td>
+                <td>Per-minute cost is competitive for the quality delivered. Introductory offers are genuinely usable (not bait-and-switch). Session depth justifies the price — you leave with actionable insight, not filler.</td>
+                <td>High per-minute rates with generic output. Intro offers have hidden conditions. Sessions feel padded with pleasantries to run up the clock.</td>
+              </tr>
+              <tr>
+                <td><strong>Platform Experience</strong></td>
+                <td>20%</td>
+                <td>Reader discovery is intuitive with useful filters. Wait times are reasonable. Profile information helps informed selection. Transcript or session records are available. Payment flow is clear.</td>
+                <td>Poor search/filter functionality, excessive wait times, thin reader profiles, no session records, confusing checkout or auto-billing.</td>
+              </tr>
+              <tr>
+                <td><strong>Communication</strong></td>
+                <td>15%</td>
+                <td>Readers listen actively, respond to the actual question asked, provide clarity without jargon, manage session time respectfully, and close with actionable takeaways.</td>
+                <td>Readers monologue, ignore the stated question, use excessive jargon, or rush the session without checking comprehension.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="reader-methodology">Reader Assessment Scoring</h3>
+        <p>Individual reader assessments use the same 5.0 scale but with dimensions calibrated to the individual rather than the platform. Readers are assessed on the basis of direct session observation (where available) combined with verified public data.</p>
+
+        <div class="score-table-wrapper">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Weight</th>
+                <th>Data Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Specificity & Relevance</strong></td>
+                <td>30%</td>
+                <td>Direct session observation + transcript analysis (where available)</td>
+              </tr>
+              <tr>
+                <td><strong>Communication Quality</strong></td>
+                <td>20%</td>
+                <td>Direct session observation</td>
+              </tr>
+              <tr>
+                <td><strong>Verified Track Record</strong></td>
+                <td>20%</td>
+                <td>Public rating, total sessions, rating distribution, years active — all verified from the platform</td>
+              </tr>
+              <tr>
+                <td><strong>Value</strong></td>
+                <td>15%</td>
+                <td>Per-minute rate vs. platform average, session depth per minute spent</td>
+              </tr>
+              <tr>
+                <td><strong>Professionalism & Safety</strong></td>
+                <td>15%</td>
+                <td>Presence or absence of red flags: pressure tactics, fear-based statements, dependency creation, upselling</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="meth-callout"><strong>One-strike rule:</strong> Any reader who employs documented scare tactics (e.g. "you have a curse that needs removal"), attempts to create emotional dependency, or engages in demonstrable cold-reading manipulation receives a 0 on Professionalism & Safety regardless of other scores. This is not a weighted reduction — it is a categorical disqualification.</p>
+
+        <h3 id="guide-methodology">Guide & Comparison Methodology</h3>
+        <p>Guides and comparison articles are not firsthand testing reports. They are <strong>structured research syntheses</strong> that aggregate data from our platform reviews, reader assessments, verified platform information, and community intelligence into actionable buyer guidance. We are transparent about this distinction because the evidence basis is different:</p>
+
+        <div class="guide-method-grid">
+          <div class="guide-method-item card">
+            <h4>Data Sources for Guides</h4>
+            <ul>
+              <li><strong>Our own platform reviews & reader assessments</strong> — firsthand testing data from the protocols described above</li>
+              <li><strong>Verified platform data</strong> — pricing, roster size, feature availability, policies (independently confirmed, not copied from marketing)</li>
+              <li><strong>Community intelligence</strong> — user experiences aggregated from forums, Reddit threads, review aggregators, and social platforms, with AI-assisted processing to surface patterns and filter noise</li>
+              <li><strong>Published research</strong> — academic and journalistic sources where relevant to claims about the industry</li>
+            </ul>
+          </div>
+          <div class="guide-method-item card">
+            <h4>What Guides Are Not</h4>
+            <ul>
+              <li>They are not firsthand testing reports (those are platform reviews and reader assessments)</li>
+              <li>They are not rewritten platform marketing copy</li>
+              <li>They are not fabricated testimonials or invented user stories</li>
+              <li>They do not present aggregated community data as our own firsthand experience</li>
+            </ul>
+            <p class="text-sm text-muted">When a guide references a finding from our firsthand testing, it links directly to the underlying review. When it references community data, it says so.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           EVIDENCE LEVELS
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="evidence-standards">
+        <h2>Evidence Classification System</h2>
+        <p>Not all evidence is equally strong. We classify every material claim in our reviews by its evidence basis so you can immediately gauge how hard the underlying data is.</p>
+
+        <div class="evidence-levels">
+          <div class="evidence-level card">
+            <div class="ev-badge ev-a">Level A</div>
+            <div class="ev-content">
+              <h4>Directly Verified</h4>
+              <p>We tested, measured, or confirmed it ourselves through firsthand interaction with the platform or reader.</p>
+              <p class="text-sm text-muted"><strong>Examples:</strong> Pricing paid, session experience, refund outcome, signup process, feature availability, customer support response time.</p>
+            </div>
+          </div>
+
+          <div class="evidence-level card">
+            <div class="ev-badge ev-b">Level B</div>
+            <div class="ev-content">
+              <h4>Independently Corroborated</h4>
+              <p>Confirmed through multiple reliable third-party sources, even if not directly tested by us.</p>
+              <p class="text-sm text-muted"><strong>Examples:</strong> Platform policies documented across multiple user reports, published pricing confirmed by independent shoppers, app store ratings.</p>
+            </div>
+          </div>
+
+          <div class="evidence-level card">
+            <div class="ev-badge ev-c">Level C</div>
+            <div class="ev-content">
+              <h4>User-Reported</h4>
+              <p>Sourced from individual user accounts (forums, reviews, social media). Informative but not independently fully verifiable by us.</p>
+              <p class="text-sm text-muted"><strong>Examples:</strong> Individual customer testimonials, specific reader experiences shared on Reddit, user-reported wait times.</p>
+            </div>
+          </div>
+
+          <div class="evidence-level card">
+            <div class="ev-badge ev-d">Level D</div>
+            <div class="ev-content">
+              <h4>Platform Claim</h4>
+              <p>Stated by the platform itself and not independently verified. We include it when useful but label it clearly.</p>
+              <p class="text-sm text-muted"><strong>Examples:</strong> "500+ advisors" (platform self-report), "satisfaction guarantee" (terms not stress-tested), claimed screening process details.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>When a platform claims "500+ advisors," we label it as a platform claim (Level D). When we independently browse the directory and count available readers, that becomes Level A. This distinction matters — and you deserve to know which one you're reading.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           OBJECTIVE vs. SUBJECTIVE DISCLOSURE
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="evidence-types">
+        <h2>Objective vs. Editorial Metrics</h2>
+        <p>Some of our evaluation metrics can be objectively measured. Others require editorial judgment. We disclose which is which — because "unbiased" means nothing without showing your work.</p>
+
+        <div class="score-table-wrapper">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Evidence Type</th>
+                <th>How We Assess It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Starting price per minute</td>
+                <td><span class="inline-badge ib-obj">Verified factual</span></td>
+                <td>Confirmed during live signup process</td>
+              </tr>
+              <tr>
+                <td>Introductory offer terms</td>
+                <td><span class="inline-badge ib-obj">Verified factual</span></td>
+                <td>Tested as a new customer; terms documented</td>
+              </tr>
+              <tr>
+                <td>Refund policy & outcome</td>
+                <td><span class="inline-badge ib-obj">Verified factual</span></td>
+                <td>Policy documented + at least one refund request tested</td>
+              </tr>
+              <tr>
+                <td>Transcript availability</td>
+                <td><span class="inline-badge ib-obj">Verified feature</span></td>
+                <td>Confirmed through actual use</td>
+              </tr>
+              <tr>
+                <td>Customer support response time</td>
+                <td><span class="inline-badge ib-measured">Measured</span></td>
+                <td>Timed from inquiry submission to first substantive response</td>
+              </tr>
+              <tr>
+                <td>Reader rating & session count</td>
+                <td><span class="inline-badge ib-obj">Verified factual</span></td>
+                <td>Recorded directly from the platform's public profile page</td>
+              </tr>
+              <tr>
+                <td>Unprompted specificity</td>
+                <td><span class="inline-badge ib-edit">Editorial assessment</span></td>
+                <td>Assessed using the same rubric across every reader</td>
+              </tr>
+              <tr>
+                <td>Communication quality</td>
+                <td><span class="inline-badge ib-edit">Editorial assessment</span></td>
+                <td>Assessed using the same rubric across every reader</td>
+              </tr>
+              <tr>
+                <td>Prediction outcome</td>
+                <td><span class="inline-badge ib-measured">Follow-up observation</span></td>
+                <td>Recorded claim vs. observed outcome after stated time window</td>
+              </tr>
+              <tr>
+                <td>Community sentiment</td>
+                <td><span class="inline-badge ib-agg">Third-party / UGC</span></td>
+                <td>Aggregated from public forums, app store reviews, and social media</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Where judgment is involved, we apply the same rubric across every reader and disclose the basis for the assessment. Consistency is the mechanism; perfection is not the claim.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           EDITORIAL INDEPENDENCE
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="editorial-independence">
+        <h2>Editorial Independence & Affiliate Disclosure</h2>
+        <p>Eastern Alignment earns commissions when visitors sign up for or purchase through certain links on this site (including links to Kasamba, Purple Garden, and Keen). This is the economic model that funds the site, the testing, and the ongoing research.</p>
+
+        <p>Here is how we prevent that relationship from compromising the work:</p>
+
+        <ul class="independence-list">
+          <li><strong>Scoring dimensions and weights are fixed before testing begins.</strong> They are documented on this page. A platform cannot negotiate its weight distribution.</li>
+          <li><strong>A higher commission does not produce a higher score.</strong> We have rated platforms with lower affiliate payouts above platforms with higher payouts — our current rankings reflect this.</li>
+          <li><strong>We do not accept payment for rankings, placements, or favorable coverage.</strong> No platform can buy a higher position.</li>
+          <li><strong>We do not accept free readings in exchange for coverage.</strong> Every session we reference was paid for at standard consumer rates.</li>
+          <li><strong>No platform reviews or approves our content before publication.</strong> Platforms see our reviews when the public does.</li>
+        </ul>
+
+        <p>We disclose the affiliate relationship on every page that contains affiliate links, in the <a href="/disclosure/">site-wide disclosure</a>, and here. The relationship is real, the firewall is real, and both are visible.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           WHAT WE DON'T DO
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="what-we-dont-do">
+        <h2>What We Explicitly Do Not Do</h2>
+        <div class="dont-list card">
+          <ul>
+            <li>We don't accept payment for rankings or editorial placements.</li>
+            <li>We don't accept free readings in exchange for favorable coverage.</li>
+            <li>We don't fabricate sessions or firsthand experiences.</li>
+            <li>We don't rewrite platform marketing copy and present it as independent testing.</li>
+            <li>We don't treat user testimonials as proof of psychic ability.</li>
+            <li>We don't suppress negative findings because a platform pays a higher commission.</li>
+            <li>We don't allow any platform to review or approve our content before publication.</li>
+            <li>We don't claim to measure "psychic accuracy" as a scientific quantity.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           LIMITS OF OUR METHOD
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="limitations">
+        <h2>Limits of Our Method</h2>
+        <p>Intellectual honesty requires acknowledging what our methodology cannot do. These are structural limitations, not failures of effort:</p>
+
+        <ul class="limitations-list">
+          <li><strong>A personal reading experience is not a controlled experiment.</strong> Our sessions are real, but they are not double-blinded studies. We mitigate bias through structured rubrics and multi-reader sampling, but cannot eliminate subjectivity entirely.</li>
+          <li><strong>Small samples have statistical limitations.</strong> Testing 24 readers on a platform with 500+ does not capture every possible experience. We are explicit about our sample sizes.</li>
+          <li><strong>A positive session does not prove supernatural ability.</strong> A reader may deliver strikingly accurate insights through skill, cold reading, pattern recognition, genuine intuition, or some combination. We evaluate information quality, not metaphysical mechanism.</li>
+          <li><strong>A negative session does not condemn an entire platform.</strong> Connection quality varies. We counterbalance this by sampling multiple readers across different conditions.</li>
+          <li><strong>Platform policies and pricing change.</strong> Our documentation reflects conditions at the time of testing. We update when we learn of material changes, but there is always a lag between platform changes and our verification.</li>
+          <li><strong>Outcome tracking cannot eliminate coincidence or hindsight bias.</strong> When a prediction appears to "come true," we note it but do not treat it as scientific proof. When one doesn't, we note that too.</li>
+          <li><strong>We are one person, not a testing laboratory.</strong> Eastern Alignment is researched, tested, written, and maintained by <a href="/about/">Sarah</a> — not a team of anonymous staff writers. This means deeper expertise but narrower throughput.</li>
+        </ul>
+
+        <p>These limitations are not caveats designed to protect us legally. They are honest boundaries on what any individual reviewer can credibly claim — and respecting them is what separates a methodology from marketing.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           DATA COLLECTION — FIRSTHAND vs. SECONDHAND
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="data-sources">
+        <h2>Firsthand Testing vs. Aggregated Research</h2>
+        <p>We separate our data sources clearly so you always know what is direct experience and what is synthesized research. This is not a caveat — it is an integrity requirement.</p>
+
+        <div class="data-source-grid">
+          <div class="data-source-card card">
+            <h4>🔬 Firsthand Testing (Level A Evidence)</h4>
+            <p>Content produced from our own paid sessions, our own platform interactions, and our own documented observations. Every <strong>platform review</strong> and most <strong>reader assessments</strong> on this site are based on firsthand testing.</p>
+            <p class="text-sm text-muted">Identifiable by: specific session details, documented spending, named readers, timestamps, and references to transcripts or session notes.</p>
+          </div>
+          <div class="data-source-card card">
+            <h4>📊 Aggregated Research (Level B–C Evidence)</h4>
+            <p>Content synthesized from verified platform data, community user experiences, public reviews, and AI-assisted information processing. Most <strong>guides and comparisons</strong> combine firsthand testing data with aggregated research.</p>
+            <p class="text-sm text-muted">Identifiable by: references to "user reports," "community sentiment," or "based on platform data." We do not present aggregated research as personal testing.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           UPDATE CADENCE
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="update-cadence">
+        <h2>How and When We Update</h2>
+        <p>A static review becomes a stale review. The psychic reading market has high advisor turnover, frequent pricing changes, and evolving platform policies. We maintain our content on the following cadence:</p>
+
+        <div class="score-table-wrapper">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Content Type</th>
+                <th>Review Cadence</th>
+                <th>Trigger for Immediate Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Platform pricing & offers</td>
+                <td>Checked regularly</td>
+                <td>Verified pricing change, new or expired promotion</td>
+              </tr>
+              <tr>
+                <td>Platform features & policies</td>
+                <td>Rechecked upon material changes</td>
+                <td>Refund policy change, new communication format, reader vetting change</td>
+              </tr>
+              <tr>
+                <td>Major platform reviews</td>
+                <td>Comprehensive re-evaluation at least annually</td>
+                <td>Platform rebrand, major UX overhaul, acquisition, or verified safety issue</td>
+              </tr>
+              <tr>
+                <td>Reader assessments</td>
+                <td>Updated when material data changes</td>
+                <td>Reader leaves platform, significant rating shift, pricing tier change</td>
+              </tr>
+              <tr>
+                <td>Guides & comparisons</td>
+                <td>Reviewed at least every 6 months</td>
+                <td>Underlying platform review update, new platform entry, factual error report</td>
+              </tr>
+              <tr>
+                <td>This methodology page</td>
+                <td>Updated when methodology evolves</td>
+                <td>Change in scoring weights, new evidence level, process change</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Every review page displays a "Last updated" date. When we update, the date changes. A ranking can move down — positions are not permanently sold.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           RESEARCH LEDGER
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="research-ledger">
+        <h2>Research Ledger</h2>
+        <p>A summary of our documented testing across all platforms. Every number below is tied to published research on this site.</p>
+
+        <div class="score-table-wrapper">
+          <table class="score-table ledger-table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Readers Reviewed</th>
+                <th>Audit Duration</th>
+                <th>Documented Spend</th>
+                <th>Last Updated</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Kasamba</strong></td>
+                <td>63</td>
+                <td>2+ years ongoing</td>
+                <td>—</td>
+                <td>Sep 2026</td>
+                <td><a href="/reviews/kasamba/" class="ledger-link">View research →</a></td>
+              </tr>
+              <tr>
+                <td><strong>Purple Garden</strong></td>
+                <td>46</td>
+                <td>12 months</td>
+                <td>$840</td>
+                <td>Sep 2026</td>
+                <td><a href="/reviews/purple-garden/" class="ledger-link">View research →</a></td>
+              </tr>
+              <tr>
+                <td><strong>Keen</strong></td>
+                <td>49</td>
+                <td>Ongoing</td>
+                <td>—</td>
+                <td>Sep 2026</td>
+                <td><a href="/reviews/keen/" class="ledger-link">View research →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-sm text-muted">Spend figures marked "—" are not publicly disclosed for those platforms at this time. All sessions were funded out of pocket at standard consumer rates.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           SEE OUR METHOD IN PRACTICE
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="examples">
+        <h2>See Our Method in Practice</h2>
+        <p>Methodology is only meaningful if it produces real, visible work. Here are three examples of how these protocols translate into published research:</p>
+
+        <div class="example-grid">
+          <a href="/reviews/purple-garden/" class="example-card card card--elevated">
+            <span class="example-badge">12-Month Audit</span>
+            <h3>Purple Garden</h3>
+            <div class="example-stats text-sm text-muted">
+              <span>$840 spent</span>
+              <span>24 advisors</span>
+              <span>150 Journeys threads</span>
+            </div>
+            <p class="text-sm">Our longest and most expensive audit — 12 months of continuous testing including video, voice, and chat sessions with documentation of prediction follow-through.</p>
+            <span class="example-link text-primary">Read the full audit →</span>
+          </a>
+
+          <a href="/reviews/kasamba/" class="example-card card card--elevated">
+            <span class="example-badge">Transcript-Based Testing</span>
+            <h3>Kasamba</h3>
+            <div class="example-stats text-sm text-muted">
+              <span>63 readers reviewed</span>
+              <span>Permanent chat transcripts</span>
+              <span>Multi-year tracking</span>
+            </div>
+            <p class="text-sm">Kasamba's permanent chat logs enable a level of precision testing unavailable on any other platform — every prediction is auditable against the original text.</p>
+            <span class="example-link text-primary">Read the full review →</span>
+          </a>
+
+          <a href="/reviews/keen/" class="example-card card card--elevated">
+            <span class="example-badge">$1 Elite Test</span>
+            <h3>Keen</h3>
+            <div class="example-stats text-sm text-muted">
+              <span>49 readers reviewed</span>
+              <span>5-minute controlled tests</span>
+              <span>$1 out-of-pocket</span>
+            </div>
+            <p class="text-sm">Keen's "$1 for 5 minutes" offer creates the most cost-efficient testing environment in the industry — top-tier readers at $15–$20/min become accessible for structured evaluation.</p>
+            <span class="example-link text-primary">Read the full review →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           ERROR CORRECTION
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="corrections">
+        <h2>Error Correction & Contact</h2>
+        <p>If you find a factual error in any review, guide, or data point on this site — a wrong price, an outdated policy, a misattributed quote, or anything else — please contact me directly. I take corrections seriously because accuracy is the foundation of everything else on this page.</p>
+
+        <ul class="corrections-list">
+          <li><strong>Factual errors</strong> (pricing, dates, policy details): Corrected within 48 hours of verification.</li>
+          <li><strong>Material methodology changes</strong> (scoring weight adjustments, new evidence categories): Documented on this page with the date of change.</li>
+          <li><strong>Reader status changes</strong> (reader leaves platform, significant rating shift): Updated in the next review cycle or upon notification.</li>
+        </ul>
+
+        <p>📧 <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a></p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           AUTHOR
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="reviewer">
+        <h2>Who Wrote This & Who Applies These Standards</h2>
+        <div class="author-card card">
+          <img src="/sarah-avatar.jpg" alt="Sarah — Founder of Eastern Alignment" class="author-avatar" width="64" height="64" loading="lazy" />
+          <div class="author-info">
+            <h3>Sarah</h3>
+            <p class="text-muted text-sm">Founder, sole tester, and editor of Eastern Alignment. Self-taught practitioner of Western astrology, tarot, BaZi, and feng shui. 3+ years testing online psychic reading platforms. Every review, assessment, and guide on this site is authored by one person applying the standards documented on this page.</p>
+            <a href="/about/" class="text-primary text-sm">Read my full story →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           CHANGELOG
+      ═══════════════════════════════════════════════ -->
+      <section class="meth-section" id="changelog">
+        <h2>Methodology Changelog</h2>
+        <p class="text-sm text-muted">A record of material changes to this methodology. Minor copyediting is not logged.</p>
+        <ul class="changelog-list">
+          <li><strong>September 2026:</strong> Initial publication of the full methodology page. Scoring weights, evidence classification system, testing protocol, and editorial independence policy documented for the first time as a standalone resource.</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  /* ── Hero ────────────────────────────────────────── */
+  .meth-hero {
+    text-align: center;
+    margin-bottom: var(--space-10);
+    padding-top: var(--space-4);
+  }
+
+  .meth-hero h1 {
+    font-size: var(--text-3xl);
+    margin: var(--space-4) 0 var(--space-4);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .meth-subtitle {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+    margin: 0 auto var(--space-4);
+  }
+
+  .meth-positioning {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--color-text);
+    font-style: italic;
+    border-left: 3px solid var(--color-primary-light);
+    padding-left: var(--space-4);
+    text-align: left;
+  }
+
+  /* ── Five Questions ─────────────────────────────── */
+  .five-q {
+    padding: var(--space-6);
+    margin-bottom: var(--space-10);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .five-q-item {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .five-q-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .five-q-item:first-child {
+    padding-top: 0;
+  }
+
+  .five-q-label {
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    min-width: 110px;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 2px;
+  }
+
+  .five-q-answer {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+  }
+
+  .five-q-answer a {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 600px) {
+    .five-q-item {
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .five-q-label {
+      min-width: unset;
+    }
+  }
+
+  /* ── Sections ───────────────────────────────────── */
+  .meth-section {
+    margin-bottom: var(--space-12);
+  }
+
+  .meth-section h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .meth-section h3 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+  }
+
+  .meth-section h4 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+  }
+
+  .meth-section > p {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+  }
+
+  .meth-section ul, .meth-section ol {
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-4);
+  }
+
+  .meth-section li {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-2);
+  }
+
+  /* ── Stats Grid ─────────────────────────────────── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: var(--space-5);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: var(--space-2);
+  }
+
+  .stat-label {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2);
+  }
+
+  .stat-evidence {
+    font-size: var(--text-xs);
+    color: var(--color-primary-light);
+    text-decoration: none;
+  }
+
+  .stat-evidence:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ── Content Type Grid ──────────────────────────── */
+  .content-type-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .content-type-card {
+    padding: var(--space-5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .ct-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .content-type-card h3 {
+    margin: 0;
+    font-size: var(--text-lg);
+  }
+
+  .ct-link {
+    font-weight: var(--weight-medium);
+    text-decoration: none;
+    margin-top: auto;
+  }
+
+  .ct-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .content-type-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── Protocol Steps ─────────────────────────────── */
+  .protocol-steps {
+    margin-top: var(--space-6);
+  }
+
+  .protocol-step {
+    display: flex;
+    gap: var(--space-5);
+    padding: var(--space-5) 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .protocol-step:last-child {
+    border-bottom: none;
+  }
+
+  .step-marker {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-primary-light);
+    min-width: 40px;
+    padding-top: 2px;
+  }
+
+  .step-content h3 {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-lg);
+  }
+
+  .step-content p {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  .step-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── Test Layers ────────────────────────────────── */
+  .test-layers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .test-layer {
+    padding: var(--space-5);
+  }
+
+  .test-layer h3 {
+    margin: 0 0 var(--space-3);
+    font-size: var(--text-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .layer-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-light);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    flex-shrink: 0;
+  }
+
+  .layer-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .metric-tag {
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background: var(--color-bg-alt);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .layer-note {
+    margin-top: var(--space-3);
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+  /* ── Accuracy Taxonomy ──────────────────────────── */
+  .accuracy-taxonomy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+  }
+
+  .taxonomy-item {
+    padding: var(--space-4);
+  }
+
+  .taxonomy-badge {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-2);
+  }
+
+  .taxonomy-a { background: var(--color-success-bg); color: var(--color-success); }
+  .taxonomy-b { background: var(--color-warning-bg); color: var(--color-warning); }
+  .taxonomy-c { background: var(--color-bg-alt); color: var(--color-text-muted); }
+  .taxonomy-d { background: var(--color-error-bg); color: var(--color-error); }
+
+  .taxonomy-example {
+    font-style: italic;
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+  }
+
+  .taxonomy-note {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 640px) {
+    .accuracy-taxonomy {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── Score Tables ───────────────────────────────── */
+  .score-table-wrapper {
+    overflow-x: auto;
+    margin: var(--space-4) 0 var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+  }
+
+  .score-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+
+  .score-table th {
+    background: var(--color-bg-alt);
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .score-table td {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--color-border-light);
+    vertical-align: top;
+    line-height: var(--leading-relaxed);
+  }
+
+  .score-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ── Inline Evidence Badges ─────────────────────── */
+  .inline-badge {
+    display: inline-block;
+    font-size: var(--text-xs);
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-sm);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+  }
+
+  .ib-obj { background: var(--color-success-bg); color: var(--color-success); }
+  .ib-measured { background: #EAF0FA; color: #4A6FA5; }
+  .ib-edit { background: var(--color-warning-bg); color: var(--color-warning); }
+  .ib-agg { background: var(--color-bg-alt); color: var(--color-text-muted); }
+
+  /* ── Evidence Levels ────────────────────────────── */
+  .evidence-levels {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+  }
+
+  .evidence-level {
+    display: flex;
+    gap: var(--space-5);
+    padding: var(--space-5);
+    align-items: flex-start;
+  }
+
+  .ev-badge {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    min-width: 80px;
+    text-align: center;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+  }
+
+  .ev-a { background: var(--color-success-bg); color: var(--color-success); }
+  .ev-b { background: #EAF0FA; color: #4A6FA5; }
+  .ev-c { background: var(--color-warning-bg); color: var(--color-warning); }
+  .ev-d { background: var(--color-error-bg); color: var(--color-error); }
+
+  .ev-content h4 {
+    margin: 0 0 var(--space-1);
+    font-size: var(--text-base);
+  }
+
+  .ev-content p {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+  }
+
+  .ev-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 600px) {
+    .evidence-level {
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+  }
+
+  /* ── Meth Callout ───────────────────────────────── */
+  .meth-callout {
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-primary);
+    padding: var(--space-4) var(--space-5);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+  }
+
+  .meth-callout a {
+    color: var(--color-primary);
+  }
+
+  /* ── Guide Methodology Grid ─────────────────────── */
+  .guide-method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin: var(--space-4) 0;
+  }
+
+  .guide-method-item {
+    padding: var(--space-5);
+  }
+
+  .guide-method-item h4 {
+    margin-top: 0;
+  }
+
+  .guide-method-item ul {
+    padding-left: var(--space-5);
+    margin-bottom: var(--space-2);
+  }
+
+  .guide-method-item li {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+  }
+
+  @media (max-width: 768px) {
+    .guide-method-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── Independence List ──────────────────────────── */
+  .independence-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .independence-list li {
+    position: relative;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-3);
+  }
+
+  .independence-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: var(--weight-semibold);
+  }
+
+  /* ── Don't List ─────────────────────────────────── */
+  .dont-list {
+    padding: var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+
+  .dont-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dont-list li {
+    position: relative;
+    padding-left: var(--space-6);
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: var(--text-sm);
+  }
+
+  .dont-list li:last-child {
+    border-bottom: none;
+  }
+
+  .dont-list li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: var(--color-error);
+    font-weight: var(--weight-semibold);
+  }
+
+  /* ── Limitations List ───────────────────────────── */
+  .limitations-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .limitations-list li {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .limitations-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* ── Data Source Grid ───────────────────────────── */
+  .data-source-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin: var(--space-4) 0;
+  }
+
+  .data-source-card {
+    padding: var(--space-5);
+  }
+
+  .data-source-card h4 {
+    margin-top: 0;
+    font-size: var(--text-base);
+  }
+
+  @media (max-width: 768px) {
+    .data-source-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── Corrections List ───────────────────────────── */
+  .corrections-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .corrections-list li {
+    padding: var(--space-2) 0;
+    font-size: var(--text-sm);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .corrections-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* ── Ledger Table ───────────────────────────────── */
+  .ledger-link {
+    font-size: var(--text-xs);
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .ledger-link:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Example Grid ───────────────────────────────── */
+  .example-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .example-card {
+    padding: var(--space-5);
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .example-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .example-badge {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background: var(--color-sage-light);
+    color: var(--color-sage);
+    align-self: flex-start;
+  }
+
+  .example-card h3 {
+    margin: 0;
+    font-size: var(--text-lg);
+  }
+
+  .example-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .example-stats span {
+    padding: 2px var(--space-2);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
+  }
+
+  .example-link {
+    font-weight: var(--weight-medium);
+    margin-top: auto;
+  }
+
+  @media (max-width: 768px) {
+    .example-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── Author Card ────────────────────────────────── */
+  .author-card {
+    display: flex;
+    gap: var(--space-5);
+    padding: var(--space-5);
+    align-items: flex-start;
+  }
+
+  .author-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 2px solid var(--color-border-light);
+    flex-shrink: 0;
+  }
+
+  .author-info h3 {
+    margin: 0 0 var(--space-1);
+    font-size: var(--text-lg);
+  }
+
+  .author-info a {
+    text-decoration: none;
+  }
+
+  .author-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Changelog ──────────────────────────────────── */
+  .changelog-list {
+    list-style: none;
+    padding: 0;
+    border-left: 2px solid var(--color-border);
+    margin-left: var(--space-2);
+  }
+
+  .changelog-list li {
+    padding: var(--space-2) 0 var(--space-2) var(--space-5);
+    font-size: var(--text-sm);
+    position: relative;
+  }
+
+  .changelog-list li::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: var(--space-3);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+  }
+
+  /* ── Badge ──────────────────────────────────────── */
+  .badge--sage {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background: var(--color-sage-light);
+    color: var(--color-sage);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

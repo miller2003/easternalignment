@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Partial Negative Case Study Gallery (Incomplete)",
+  "description": "A collection of documented red flags and manipulative practices encountered during our psychic platform testing.",
+  "url": "https://easternalignment.com/red-flags/"
+};
+---
+
+<BaseLayout
+  title="Partial Negative Case Study Gallery (Incomplete) — Eastern Alignment"
+  description="A collection of documented red flags and manipulative practices encountered during our psychic platform testing."
+  jsonLd={pageSchema}
+>
+  <div class="red-flags-page section">
+    <div class="container container--narrow">
+      <Breadcrumb items={[{ label: 'Red Flags Gallery' }]} />
+
+      <header class="page-hero">
+        <h1>Partial Negative Case Study Gallery (Incomplete)</h1>
+        <p class="text-muted">
+          This page is currently under construction. Content will be added here to document specific examples of manipulative practices, scare tactics, and misleading policies we've encountered during testing.
+        </p>
+      </header>
+      
+      <div class="prose">
+        <p><em>Check back later for updates.</em></p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    margin-bottom: var(--space-8);
+  }
+  .page-hero h1 {
+    margin-bottom: var(--space-3);
+  }
+</style>

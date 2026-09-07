@@ -7,17 +7,20 @@ const authorSchema = {
   "@type": "AboutPage",
   "mainEntity": {
     "@type": "Person",
+    "@id": "https://easternalignment.com/#sarah",
     "name": "Sarah",
-    "jobTitle": "Spiritual Wellness Researcher",
+    "jobTitle": "Metaphysics Enthusiast & Online Psychic Reading Reviewer",
+    "description": "Self-taught practitioner of astrology, tarot, psychology, BaZi, and feng shui. Founder of Eastern Alignment — an independent review site helping people navigate the online psychic reading market.",
     "url": "https://easternalignment.com/about/",
+    "knowsAbout": ["Astrology", "Tarot", "BaZi", "Feng Shui", "Psychology", "Online Psychic Readings"],
     "sameAs": [],
   }
 };
 ---
 
 <BaseLayout
-  title="About Sarah — My Story"
-  description="Learn why I started Eastern Alignment and how my personal journey with psychic readings led me to help others navigate this space with honest reviews."
+  title="About Sarah — Eastern Alignment Founder"
+  description="Meet Sarah, a dedicated metaphysics enthusiast who has self-studied astrology, tarot, BaZi & feng shui since age 21. After 3 years of testing online psychic platforms firsthand, she built Eastern Alignment to help real seekers navigate this space."
   jsonLd={authorSchema}
   hreflangEs="https://easternalignment.com/es/acerca-de/"
 >
@@ -26,66 +29,86 @@ const authorSchema = {
       <Breadcrumb items={[{ label: 'About' }]} />
 
       <header class="about-hero">
-        <img src="/sarah-avatar.jpg" alt="Sarah — Spiritual Wellness Researcher" class="about-avatar-lg" width="100" height="100" loading="lazy" />
+        <img src="/sarah-avatar.jpg" alt="Sarah — Founder of Eastern Alignment" class="about-avatar-lg" width="100" height="100" loading="lazy" />
         <h1>Hi, I'm Sarah</h1>
         <p class="about-subtitle text-muted">
-          Spiritual wellness researcher and the person behind every review on Eastern Alignment.
+          Metaphysics enthusiast, self-taught reader, and the person behind Eastern Alignment.
         </p>
       </header>
 
       <div class="prose">
-        <h2>How It All Started</h2>
+        <h2>Who I Am</h2>
 
-        <p>Three years ago, I was going through the darkest period of my life. A toxic relationship had ended, I was questioning every decision I'd ever made, and I felt completely unmoored. Traditional therapy was helping with the clinical side, but I needed something else — something that could help me feel connected to a bigger picture.</p>
+        <p>I've been a dedicated metaphysics enthusiast for years. Starting at 21, I began self-studying <strong>astrology, tarot, psychology, and eventually BaZi (Chinese Four Pillars) and feng shui</strong> — not as a passing interest, but as a genuine, ongoing exploration that I return to in my free time again and again. Over the years, I've spent a lot of my spare hours diving deep into these different systems, cross-referencing ideas across traditions, and building a real working understanding of how these frameworks operate.</p>
 
-        <p>On a sleepless Tuesday night at 2 AM, I found myself typing "online psychic reading" into Google. Half skeptical, half desperate. I signed up for the first platform I found and connected with a psychic who would unknowingly change the trajectory of my life.</p>
+        <p>I'm not a professional practitioner — I'm someone who genuinely loves this world and has put in the time to learn it from the inside.</p>
 
-        <p>She didn't tell me what I wanted to hear. She told me what I needed to hear. And the startling accuracy of her observations — things she couldn't possibly have known — made me realize there was something genuinely valuable happening here, beyond what my rational mind could easily explain.</p>
+        <h2>How I Got Into Online Psychic Readings</h2>
 
-        <h2>Why I Started This Site</h2>
+        <p>About three years ago, I started exploring the world of <strong>online psychic readings</strong>. I was curious — as someone with a background in metaphysics, I wanted to see what the experience was actually like from the customer side. So I started booking sessions across different platforms and with different readers, spending my own money to see what was out there.</p>
 
-        <p>After that first experience, I went on a deep dive. I tried <strong>every major psychic reading platform</strong> I could find. Some were incredible. Some were mediocre. A few were outright disappointing. And I realized that there was a massive gap in the market: honest, first-hand reviews from someone who had actually used these services as a real customer.</p>
+        <p>I also spent a lot of time reading through the internet — forums, Reddit threads, review sites, community discussions — collecting as much real user experience as I could find. And what I discovered was a market that was, frankly, all over the place:</p>
 
-        <p>Most "review" sites I found were either:</p>
         <ul>
-          <li>Thinly veiled advertisements written by people who clearly never had a reading</li>
-          <li>Overly skeptical takedowns dismissing the entire field</li>
-          <li>Generic listicles recycling the same information from each other</li>
+          <li><strong>Quality varies wildly.</strong> Some readers were genuinely impressive. Others were vague, generic, or worse — manipulative.</li>
+          <li><strong>Useful information is scattered and scarce.</strong> Real reviews from real people are buried across dozens of corners of the internet, and most "review" sites are just ads wearing a different hat.</li>
+          <li><strong>Nobody was doing the work.</strong> There was no single, trustworthy place where someone who actually understood these traditions was evaluating platforms and readers <em>before</em> people spent their money.</li>
         </ul>
 
-        <p>I wanted to create something different. A resource that treats seekers with respect, shares genuine experiences (including the bad ones), and helps people navigate this space without wasting their money or, worse, being taken advantage of.</p>
+        <p>That gap is why I built Eastern Alignment.</p>
 
-        <h2>My Approach</h2>
+        <h2>Why This Site Exists</h2>
 
-        <p>Every review on Eastern Alignment follows the same process:</p>
+        <p>I created Eastern Alignment to be the resource I wished existed when I started. A straightforward, honest site that helps people who are genuinely looking for online psychic reading services — whether it's their first time or they've been burned before — make better decisions before they spend.</p>
+
+        <p>This isn't a marketing site pretending to be a review site. It's a small, independent project run by one person who cares about this space and wants to do it right.</p>
+
+        <h2>How I Research & Review</h2>
+
+        <p>Every review and guide on Eastern Alignment is built on a layered process that I've refined over time. The full details — including my <strong>weighted scoring framework</strong>, <strong>evidence classification system</strong>, <strong>7-step testing protocol</strong>, and <strong>editorial independence policy</strong> — are documented in the complete <a href="/methodology/"><strong>Methodology & Editorial Standards</strong></a> page. Here's the short version:</p>
 
         <ol>
-          <li><strong>I sign up personally</strong> — creating a real account just like you would</li>
-          <li><strong>I pay out of my own pocket</strong> — no free readings from platforms</li>
-          <li><strong>I do multiple readings</strong> — across different psychics and specialties</li>
-          <li><strong>I take detailed notes</strong> — on accuracy, communication, value, and overall experience</li>
-          <li><strong>I revisit and update</strong> — platforms change, and so do my reviews</li>
+          <li><strong>Direct platform testing</strong> — I create real accounts and pay with my own money. No free credits, no press accounts, no special treatment. My Purple Garden audit alone cost $840 over 12 months.</li>
+          <li><strong>Multi-reader sampling</strong> — I don't judge a platform on one reader. I test across different specialties, price tiers, and communication formats to understand the platform's range.</li>
+          <li><strong>Community research</strong> — I systematically gather and analyze real user experiences from forums, Reddit, review aggregators, and social communities — separating genuine signal from noise.</li>
+          <li><strong>AI-assisted analysis</strong> — I use current AI tools to help process large volumes of public information efficiently, surface patterns in user sentiment, and catch things manual review might miss.</li>
+          <li><strong>Metaphysical competency lens</strong> — Because I've studied these traditions myself for years, I can assess whether a reader's approach is actually coherent and skilled — not just whether they were friendly.</li>
+          <li><strong>Ongoing updates</strong> — Platforms change, readers come and go, pricing shifts. I revisit and update my content when the evidence changes.</li>
         </ol>
 
-        <h2>A Note on Honesty</h2>
+        <p>The <a href="/methodology/">methodology page</a> also documents my <a href="/methodology/#scoring-framework">scoring dimensions and weights</a>, my <a href="/methodology/#evidence-standards">evidence level system (A/B/C/D)</a>, and <a href="/methodology/#limitations">the specific structural limitations</a> I acknowledge in my work. If you want to understand exactly how a score or recommendation was reached, that's where to look.</p>
 
-        <p>Yes, this site contains affiliate links. When you sign up for a platform through my links, I may earn a commission. This is how I fund the site and continue doing this work.</p>
+        <h2>What We Publish — And What We Don't</h2>
 
-        <p>But here's what I want you to know: <strong>the affiliate relationship never influences my reviews</strong>. I've given mediocre ratings to platforms that pay higher commissions, and I've enthusiastically recommended platforms with lower affiliate payouts. My recommendations are based on one thing only: which platforms provided the best experience for real people seeking genuine guidance.</p>
+        <p>I want to be transparent about an important editorial decision.</p>
 
-        <p>If a platform isn't good, I'll tell you. If I had a bad reading, you'll hear about it. My credibility is the only asset I have, and I'm not willing to trade it for a bigger commission check.</p>
+        <p>To be completely honest, to avoid unnecessary legal headaches or potential retaliation, I will probably never publish a master "blacklist" of platforms or readers to avoid. But please don't mistake my silence for approval. As someone who deeply respects these traditions, I absolutely despise seeing them used for manipulation—whether that's through scare tactics, hidden billing traps, or emotional exploitation. I've put together a <a href="/red-flags/">Partial Negative Case Study Gallery (Incomplete)</a> just to give you an idea of the kind of behavior I watch out for, though it only scratches the surface.</p>
 
-        <h2>What I Believe</h2>
+        <p>As a general rule, <strong>I don't go out of my way to publish negative hit pieces.</strong> If a platform or reader doesn't meet my standards, I simply don't feature them. I don't recommend them, and I don't give them visibility on this site.</p>
 
-        <p>I believe that psychic readings, at their best, are a tool for self-reflection and empowerment — not a crutch or a crystal ball. The best psychics I've encountered help you see your own situation more clearly, not create dependence.</p>
+        <p>That said, I want to be clear: <strong>the absence of a platform or reader from this site doesn't mean they're bad.</strong> It may simply mean I haven't had the time or budget to test them yet. Eastern Alignment is a one-person operation, and there are real limits to what I can cover at any given time. I'm working on expanding, but I'd rather publish nothing than publish something I haven't personally verified.</p>
 
-        <p>I believe everyone deserves access to honest information before spending their money. And I believe this industry, like any other, has both genuine talent and opportunists — my job is to help you tell the difference.</p>
+        <h2>An Honest Word About Limitations</h2>
+
+        <p>I've put a lot of effort into making my research methodology as rigorous as I can. I use structured analysis, draw on years of personal study across multiple metaphysical traditions, collect data from every relevant source I can find, and use AI tools to help process and synthesize information at scale. I genuinely try to give you the clearest, most reliable picture possible.</p>
+
+        <p>But I want to be upfront: <strong>none of this can guarantee a perfect fit for every person in every situation.</strong> Metaphysical guidance is inherently personal. A reader who connects deeply with one person may not click with another. A platform that fits your needs today may not be the right choice six months from now with a different question.</p>
+
+        <p>What I publish reflects my experience, my research, and my best honest judgment — not a universal guarantee. I can't promise that every recommendation will work perfectly for you. What I <em>can</em> promise is that I'll always tell you what I actually found — including the parts I'm uncertain about — and that I will never trade that honesty for anything.</p>
+
+        <h2>Affiliate Links & How This Site Is Funded</h2>
+
+        <p>Eastern Alignment contains affiliate links. If you sign up for a platform through one of my links, I may earn a commission at no extra cost to you. This is how I fund the site, the testing, and the ongoing research.</p>
+
+        <p>The affiliate relationship <strong>does not influence my ratings, rankings, or recommendations.</strong> My scoring framework and evaluation criteria are <a href="/methodology/#scoring-framework">publicly documented</a> and fixed before testing begins — no platform can negotiate a higher score. I've rated platforms poorly that pay higher commissions, and enthusiastically recommended platforms with lower payouts. The only thing that matters to me is whether a service genuinely helps the people who use it.</p>
 
         <h2>Get in Touch</h2>
 
-        <p>Have a question about a platform? Want to share your own experience? I'd love to hear from you.</p>
+        <p>Have a question about a platform or reader I've reviewed? Found a factual error? Want to share your own experience? I read every message and take corrections seriously.</p>
 
-        <p>📧 Email: <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a></p>
+        <p>If you're a deep-dive metaphysics enthusiast like me, feel free to reach out. I'm more than happy to share my raw, behind-the-scenes testing data and notes with you (just be warned, they are unfiltered and pretty messy!). However, for obvious reasons, I will not share this raw data with psychic platforms, commercial entities, or anyone with a financial stake in this industry.</p>
+
+        <p>📧 <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a></p>
       </div>
     </div>
   </div>
