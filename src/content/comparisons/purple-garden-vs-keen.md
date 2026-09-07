@@ -178,6 +178,8 @@ On either platform, supplying the background yourself destroys your ability to e
 
 Say the question. Then stop talking. It is the least comfortable ninety seconds of the session, and it is the only part that produces usable evidence.
 
+<div id="inline-cta-target"></div>
+
 ---
 
 ## Pricing Comparison

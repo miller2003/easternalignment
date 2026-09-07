@@ -67,6 +67,8 @@ Because you are essentially receiving $50 to $100 worth of elite psychic time fo
 
 Below the elite tier, the roster behaves like any mature market: professional-class advisors in the $5–$10 range carry the bulk of the volume, and entry-level readers at $1.99–$4.99 are where you do cheap exploration. The disciplined pattern is to use the $1 trial on elites, the mid-tier for sustained relationships, and the entry tier for quick second opinions — and to treat every tier transition as a test, not a commitment.
 
+<div id="inline-cta-target"></div>
+
 ## Where Keen Falls Short
 
 The flaws are real, and an honest review names them.

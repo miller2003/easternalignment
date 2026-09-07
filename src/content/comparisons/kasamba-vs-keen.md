@@ -90,6 +90,8 @@ Keen's trial is better when you have already done the research: when you have id
 
 The optimal strategy for a first-time psychic platform user: use Kasamba's free minutes to determine which type of reader connects with your situation, and use Keen's $1 trial to access a specific vetted practitioner once you know what you are looking for.
 
+<div id="inline-cta-target"></div>
+
 ---
 
 ## The Modality Comparison: Phone vs. Chat

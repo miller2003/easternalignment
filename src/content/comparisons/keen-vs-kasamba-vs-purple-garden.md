@@ -53,6 +53,8 @@ The psychic platform market has consolidated around three serious players, and t
 
 I have tested all three in depth — the full reviews are [here](/reviews/keen/), [here](/reviews/kasamba/), and [here](/reviews/purple-garden/) — and this comparison answers the question I actually get asked: not "is this one good" but "which one is for me." The honest answer is that all three are legitimate and all three are excellent at something. The right choice depends on four things: your modality, your budget, your tolerance for research, and what you want to see before you pay.
 
+<div id="inline-cta-target"></div>
+
 ## The Head-to-Head Table
 
 | | Kasamba | Purple Garden | Keen |

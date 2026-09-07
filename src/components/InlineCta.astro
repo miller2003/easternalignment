@@ -79,14 +79,22 @@ const hookText =
 
       var prose = document.querySelector('.prose');
       if (!prose) return;
+      
+      var first = tpl instanceof HTMLTemplateElement ? tpl.content.firstElementChild : null;
+      if (!first) return;
+
+      var manualTarget = prose.querySelector('#inline-cta-target');
+      if (manualTarget && manualTarget.parentNode) {
+        manualTarget.parentNode.insertBefore(first.cloneNode(true), manualTarget);
+        return;
+      }
 
       var pos = parseInt(tpl.getAttribute('data-position') || '2', 10);
       var headings = prose.querySelectorAll('h2');
       if (headings.length < pos) return;
 
       var target = headings[pos - 1];
-      var first = tpl instanceof HTMLTemplateElement ? tpl.content.firstElementChild : null;
-      if (!target.parentNode || !first) return;
+      if (!target.parentNode) return;
       target.parentNode.insertBefore(first.cloneNode(true), target);
     }
 

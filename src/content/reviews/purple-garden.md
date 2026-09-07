@@ -74,6 +74,8 @@ During my 12-month test, I developed a strict 3-point checklist when watching an
 
 By spending ten minutes watching video bios, I was able to filter out mediocre readers for free before booking my first paid session.
 
+<div id="inline-cta-target"></div>
+
 ---
 
 ## 3. The "Journeys" Feed: The Ultimate Anti-Scam Ledger
