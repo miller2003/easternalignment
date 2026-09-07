@@ -7,6 +7,7 @@ rating: 5.0
 verdict: "Zara Insights brings an engineer's toolkit to astrology: a Master's in Computer Applications alongside nine years of professional reading, working three astrological systems — Chinese, Indian, and Western — to triangulate what a single system might miss. 37,844 Kasamba readings at a perfect 5.0, 10,018 likes against 206 dislikes (98.0%). Her feed is built on long-term professional relationships: 59% repeat clients, led by regulars at 23, 19, and 15 reviews — including a Marine who reviews her like a service professional: 'Service quality here is excellent. Zara is enthusiastic, courteous, and I am well informed.' The style is direct and non-sugar-coated, the specialty is future-pacing for love and career. $8.99/min flat with 3 free minutes; email readings from $35. Book her for planning-grade questions where you want systems, not vibes."
 affiliateUrl: /go/kasamba-zara-insights/
 avatarUrl: /avatars/kasamba/zara-insights-kasamba-review.jpg
+ogImage: "/avatars/kasamba/zara-insights-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat & Voice $8.99/min · 3 free minutes for new clients · email readings from $35"
 bestFor: "Planning-grade love and career questions — clients who want three astrological systems cross-checked and delivered with professional directness"

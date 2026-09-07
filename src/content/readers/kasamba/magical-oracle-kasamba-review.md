@@ -7,6 +7,7 @@ rating: 4.9
 verdict: "Magical Oracle is the premium benchmark of our Kasamba audit: $33.99/min chat, $34.99/min voice — and 45,518 readings since 2008 at 4.9 stars with 15,628 likes against 60 dislikes, a clientele her bio says has read with her for decades. Her differentiator is specificity: initials, locations, colors, timeframes — predictions concrete enough to check later, delivered in a style clients call calm and consistent. The price works as a filter for clients who'd rather pay once for a decisive reading, and the 3 free minutes let you test the fit before the meter runs."
 affiliateUrl: /go/kasamba-magical-oracle/
 avatarUrl: /avatars/kasamba/magical-oracle-kasamba-review.jpg
+ogImage: "/avatars/kasamba/magical-oracle-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $33.99/min · Voice $34.99/min · 3 free minutes for new clients"
 bestFor: "Clients who want concrete, checkable predictions — initials, timeframes, sequences — from a 17-year NYC clairvoyant, and who'd rather invest in one decisive premium reading than cycle through vague ones"

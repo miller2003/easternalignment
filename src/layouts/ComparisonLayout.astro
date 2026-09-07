@@ -84,18 +84,13 @@ const articleSchema = {
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
 };
 
-// ── AggregateRating for versus-pages ────────────────────────────────────────
-// Platform editorial ratings — single source: content/reviews/*.md frontmatter
-// (the same ratings rendered in the ScorePanels on this page). reviewCount is
-// the real number of published reader reviews per platform (offers.ts).
+// ── Editorial scores are UI-only (ScorePanels) ─────────────────────────────
+// They are deliberately NOT emitted as schema.org aggregateRating. An expert
+// editorial score is not a user-review aggregate; labelling it as one violates
+// Review-snippet policy (self-serving reviews) and risks spam classification.
+// SERP rating markup stays limited to Review.reviewRating on single-entity
+// pages. The comparison schema below carries ItemList + entity links only.
 const SITE_URL = 'https://easternalignment.com';
-const platformReviewModules = import.meta.glob('../content/reviews/*.md', { eager: true });
-const ratingByKey: Record<string, number> = {};
-for (const mod of Object.values(platformReviewModules) as any[]) {
-  const fm = mod.frontmatter;
-  const key = platformFromName(fm?.platformName || '');
-  if (key && typeof fm?.rating === 'number') ratingByKey[key] = fm.rating;
-}
 
 const comparisonItemList = {
   "@type": "ItemList",
@@ -103,7 +98,6 @@ const comparisonItemList = {
   "numberOfItems": platforms.length,
   "itemListElement": platforms.map((p, i) => {
     const key = platformFromName(p);
-    const rating = key ? ratingByKey[key] : undefined;
     return {
       "@type": "ListItem",
       "position": i + 1,
@@ -111,15 +105,6 @@ const comparisonItemList = {
         "@type": "Product",
         "name": p,
         ...(key ? { "url": `${SITE_URL}/reviews/${key}/` } : {}),
-        ...(rating !== undefined ? {
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": rating,
-            "bestRating": 5,
-            "worstRating": 1,
-            "reviewCount": key ? PLATFORM_OFFERS[key].reviewedCount : 1,
-          },
-        } : {}),
       },
     };
   }),

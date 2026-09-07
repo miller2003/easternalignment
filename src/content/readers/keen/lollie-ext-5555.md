@@ -7,6 +7,7 @@ rating: 4.92
 verdict: "Lollie is one of the most unambiguously direct readers on Keen. With 20,000 ratings at 4.92 stars and 70,000+ readings since 2001, she has built a following on a simple promise: no small talk, no sugarcoating, practical steps. At $6.99/min she is mid-priced, and her 'message FIRSTREAD for 3 free minutes' offer lets you test her style before spending. Book her if you want blunt truth about love and you are comfortable steering your own questions."
 affiliateUrl: /go/keen-lollie-ext-5555/
 avatarUrl: /avatars/keen/lollie-ext-5555.jpg
+ogImage: "/avatars/keen/lollie-ext-5555.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a blunt, practical love coach who skips reassurance and gets straight to what they see - and who are happy to arrive with tight, ordered questions"

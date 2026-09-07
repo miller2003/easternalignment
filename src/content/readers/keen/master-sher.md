@@ -10,6 +10,7 @@ verdict: Best for seekers who want direct, tarot-grounded clarity on relationshi
   his slower chat pace is the only real trade-off.
 affiliateUrl: /go/keen-master-sher/
 avatarUrl: /avatars/keen/master-sher.jpg
+ogImage: "/avatars/keen/master-sher.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $4.29/min
 bestFor: People who want honest, structured tarot readings without sugar-coating

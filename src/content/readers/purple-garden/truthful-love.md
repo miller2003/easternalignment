@@ -7,6 +7,7 @@ rating: 4.8
 verdict: "Truthful Love is Purple Garden's #1 trending advisor with 28,199 readings since 2024 at a 4.8 — and one client who left 8 reviews in a single 4-minute span. Chat from $2.99/min with no sugar coating. Book her for affordable, high-volume love and breakup readings from a fast, blunt reader; skip her if you want gentle padding."
 affiliateUrl: /go/purple-garden-truthful-love/
 avatarUrl: /avatars/purple-garden/truthful-love.jpg
+ogImage: "/avatars/purple-garden/truthful-love.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $2.99/min · Voice $3.99/min · Video $4.99/min"
 bestFor: "High-volume, affordable love and breakup readings from a fast, no-sugar-coating reader"

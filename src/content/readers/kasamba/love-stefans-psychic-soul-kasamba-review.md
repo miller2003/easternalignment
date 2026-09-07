@@ -7,6 +7,7 @@ rating: 4.9
 verdict: "Love Stefan is a third-generation psychic with 138,003 Kasamba readings since 2007 and a 'Top 3 most experienced' tag, specializing in the exact questions people can't say out loud — is he cheating, will they come back, should I reach out. At the $5.49/min new-client promo with 3 free minutes, book him if you want a proven answer on love; skip him if you only want your hopes repeated back."
 affiliateUrl: /go/kasamba-stefan/
 avatarUrl: /avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg
+ogImage: "/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat & Voice $5.49/min promo (reg. $10.99) · 3 free minutes"
 bestFor: "People stuck on one person or one question — the POI spiral, the almost-relationship, the silence you need read"

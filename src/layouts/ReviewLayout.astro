@@ -18,14 +18,6 @@ interface Props {
   platformName: string;
   rating: number;
   verdict: string;
-  /**
-   * Number of individual assessments behind the editorial rating, rendered as
-   * aggregateRating.reviewCount in the JSON-LD. Platform hubs pass their
-   * reader-review count (49/35/30 — the real number of published reader
-   * reviews). Individual reader pages omit it and default to 1 (a single
-   * expert review — factually accurate, never fabricated).
-   */
-  reviewCount?: number;
   affiliateUrl?: string;
   freeOffer?: string;
   ctaOverride?: string;
@@ -52,7 +44,6 @@ const {
   platformName,
   rating,
   verdict,
-  reviewCount,
   affiliateUrl = '#',
   freeOffer,
   ctaOverride,
@@ -128,7 +119,10 @@ const reviewSchema = {
   },
   "datePublished": schemaDatePublished || publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
-  ...(ogImage ? { "image": ogImage } : {}),
+  // Top-level image: Google reads this for SERP thumbnails / image-rich
+  // results. Prefer the reviewed reader's own avatar (absoluteAvatarUrl),
+  // then ogImage, then the site logo. Always an absolute URL.
+  "image": absoluteAvatarUrl || (ogImage ? new URL(ogImage, SITE_URL).href : undefined) || `${SITE_URL}/logo.jpg`,
   "reviewRating": {
     "@type": "Rating",
     "ratingValue": rating,
@@ -141,16 +135,10 @@ const reviewSchema = {
     "url": affiliateUrl !== '#' ? new URL(affiliateUrl, SITE_URL).href : undefined,
     "image": absoluteAvatarUrl || ogImage || "https://easternalignment.com/logo.jpg",
     "description": description,
-    // aggregateRating is what Google reads for SERP star snippets. reviewCount
-    // is the real number of published assessments (hubs: reader-review count;
-    // reader pages: 1 single expert review) — never a fabricated volume.
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": rating,
-      "bestRating": 5,
-      "worstRating": 1,
-      "reviewCount": reviewCount ?? 1,
-    },
+    // Editorial score is expressed ONLY via the outer Review.reviewRating.
+    // No nested aggregateRating: one expert's assessment is not a user-review
+    // aggregate — marking it as one violates Review-snippet policy
+    // (self-serving reviews) and risks spam classification.
     ...(isReaderReview ? {
       "brand": {
         "@type": "Brand",

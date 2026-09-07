@@ -33,7 +33,7 @@ interface Props {
   customSchema?: string;
   entities?: string[];
   /** Editorial score for the page's single named platform — powers the SERP
-   *  star snippet (Review + aggregateRating) and the hero score badge. The
+   *  star snippet (Review.reviewRating) and the hero score badge. The
    *  value MUST equal the same platform's score on its /reviews/ page. */
   rating?: number;
   // Contextual CTA overrides. Raw frontmatter values may be outside the
@@ -166,14 +166,17 @@ const sidebarDeal = guideOffer
   ? { platform: pagePlatform as 'keen' | 'kasamba' | 'purple-garden', href: defaultGoLink }
   : undefined;
 
-/* ── Review + aggregateRating (SERP star snippet) ────────────────────────
+/* ── Review (editorial score) ────────────────────────────────────────────
  * Only for guides that name exactly ONE platform and carry an editorial
- * score. Three hard rules keep it eligible:
+ * score. Rules keep it compliant:
  *   1. the hero badge renders the same number — markup matches visible text;
  *   2. the score equals the platform's own /reviews/ page (one entity, one
  *      score site-wide — a second value reads as a contradiction to Google);
  *   3. cross-platform roundups are excluded: there is no single item being
- *      rated, and faking one is a rich-result manual-action risk. */
+ *      rated, and faking one is a rich-result manual-action risk;
+ *   4. the score ships as Review.reviewRating only — never as an embedded
+ *      aggregateRating, which would mislabel an expert opinion as a
+ *      user-review aggregate (Review-snippet policy, self-serving reviews). */
 const PLATFORM_LABELS: Record<string, string> = {
   kasamba: 'Kasamba',
   keen: 'Keen',
@@ -194,13 +197,6 @@ const reviewSchema = rating && platformLabel
         "name": platformLabel,
         "url": `${SITE_URL}/reviews/${rawPlatform}/`,
         "image": `${SITE_URL}/logo.jpg`,
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": rating,
-          "bestRating": 5,
-          "worstRating": 1,
-          "reviewCount": 1,
-        },
       },
       "reviewRating": {
         "@type": "Rating",
@@ -359,7 +355,7 @@ const jsonLdOut = {
     color: var(--color-text-muted);
   }
 
-  /* Hero score badge — the visible twin of the Review/aggregateRating markup.
+  /* Hero score badge — the visible twin of the Review/reviewRating markup.
    * Same number, same page: that pairing is what keeps the star snippet
    * eligible. Fixed amber fallback because --color-warning is not guaranteed
    * in every theme bundle. */

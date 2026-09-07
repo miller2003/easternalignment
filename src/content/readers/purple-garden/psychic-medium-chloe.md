@@ -6,6 +6,7 @@ rating: 4.8
 verdict: "Chloe Psychic UK is a 4.8-star Purple Garden reader based in England who blends psychic, clairsentient, energy, and tarot work with a blunt, no-fairytales honesty. With over 8,900 readings since 2016 and a top-accuracy badge, she is best for clients who want the unvarnished truth rather than comfort."
 affiliateUrl: /go/purple-garden-chloe/
 avatarUrl: /avatars/purple-garden/psychic-medium-chloe.jpg
+ogImage: "/avatars/purple-garden/psychic-medium-chloe.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $3.99/min"
 bestFor: "Blunt, honest relationship and clarity readings from a UK-based reader in UK hours"

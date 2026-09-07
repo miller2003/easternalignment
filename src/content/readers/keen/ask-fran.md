@@ -15,6 +15,7 @@ verdict: Ask Fran is one of the most genuinely useful readers on Keen  -  for th
   you land on the right side of it.
 affiliateUrl: /go/keen-fran/
 avatarUrl: /avatars/keen/ask-fran.jpg
+ogImage: "/avatars/keen/ask-fran.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $2.99/min (Love & Relationships profile)
 bestFor: Clients who want warmth, genuine connection, and honest conversational guidance

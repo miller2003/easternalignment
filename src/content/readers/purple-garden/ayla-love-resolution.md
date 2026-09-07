@@ -6,6 +6,7 @@ rating: 4.8
 verdict: "Ayla is a 4.8-star Purple Garden love-resolution reader whose nearly 15,000 readings since 2021 and Top Rated badge reflect a multi-tool style — clairvoyance, tarot, numerology, energy insight — built for clients who want to understand a relationship, not just hear a yes or no. Best for people who'd rather pay $2.99/min for substance than theater."
 affiliateUrl: /go/purple-garden-ayla/
 avatarUrl: /avatars/purple-garden/ayla-love-resolution.jpg
+ogImage: "/avatars/purple-garden/ayla-love-resolution.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $2.99/min"
 bestFor: "Relationship clarity from a multi-tool clairvoyant who blends tarot, numerology, and energy insight"

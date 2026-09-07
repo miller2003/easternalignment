@@ -6,6 +6,7 @@ rating: 5
 verdict: "Supernormal Soul markets herself as a \"Supreme Seer\" and backs it with a 5.0-star rating across 54,000+ readings since 2017 — a love-and-soulmate specialist whose clients praise her spiritual depth and warmth. The split chat/voice pricing is the one thing to watch."
 affiliateUrl: /go/kasamba-supernormal-soul/
 avatarUrl: /avatars/kasamba/supernormal-soul-kasamba-review.jpg
+ogImage: "/avatars/kasamba/supernormal-soul-kasamba-review.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$5.99/min chat · $39.99/min voice"
 bestFor: "Love, soulmate, and relationship questions from a spiritually oriented clairvoyant"

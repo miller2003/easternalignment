@@ -1,6 +1,6 @@
 ---
 title: "Best Purple Garden Psychics for Your First Reading (2026): Where the $30 Credit Goes Furthest"
-seoTitle: 'Best Purple Garden Psychics for Your First Reading (2026): 7'
+seoTitle: "Best Purple Garden Psychics for First Reading: The $30 Credit Play"
 metaDescription: 'The 7 best Purple Garden psychics for a first reading, ranked by how far the $30 credit goes. Low-risk video starters with honest per-minute math.'
 description: "A first-timer's shortlist of the five best Purple Garden psychics in 2026, ranked by the metric that matters most for a first session: minutes of verified quality per dollar of the $30 new-client credit. Includes the credit allocation decision tree, the free pre-session research protocol, and honest limitations."
 category: Roundup

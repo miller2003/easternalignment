@@ -12,7 +12,7 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $7.99/min · Voice $8.99/min · $30 free credit on your first purchase"
 bestFor: "Skeptics who want a reading that can't be explained by cold-reading — plus anyone needing mediumship or paranormal insight from a 30-year practitioner"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/tattooed-psychic/"
-seoTitle: "Tattooed Psychic Purple Garden Review 2026: 4.9"
+seoTitle: "Tattooed Psychic Purple Garden Review 2026: 51,404 Readings at 4.9"
 metaDescription: "Tattooed Psychic (Jon Moss) on Purple Garden: 30 years, 51,404 readings at 4.9. The reader who refuses your backstory — from $7.99/min, $30 free credit."
 highlights:
   - "51,404 readings since 2017 at 4.9 — 18,722 likes vs 591 dislikes (96.9%)"

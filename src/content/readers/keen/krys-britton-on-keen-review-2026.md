@@ -7,6 +7,7 @@ rating: 4.7
 verdict: "Krys Britton is the most undervalued reader in this entire series. Twenty years of practice, a 93% five-star rate, independently verified prediction accuracy, and a $2.25/min rate that belongs on a much newer advisor's profile. Her Egyptian Oracle Cards approach is genuinely distinctive — grounded, direct, and built around concrete answers rather than energetic impressions. If you want a reader who gives you something specific to act on and doesn't charge you a premium to do it, KB is the most straightforward recommendation I can make."
 affiliateUrl: "/go/keen-krys/"
 avatarUrl: /avatars/keen/krys-britton-on-keen-review-2026.jpg
+ogImage: "/avatars/keen/krys-britton-on-keen-review-2026.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$2.25/min (Tarot Card Readings profile)"
 bestFor: "Clients who want concrete, actionable answers from a structured oracle-based reading — without the premium pricing of clairvoyant-first advisors"

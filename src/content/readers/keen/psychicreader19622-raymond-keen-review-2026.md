@@ -1,12 +1,13 @@
 ---
 title: "psychicreader19622 (Raymond) on Keen Review 2026: The Worst-Looking Profile With the Best Numbers — What 19 Years Behind a Generic Username Actually Delivers"
-seoTitle: "psychicreader19622 (Raymond) on Keen Review 2026: The"
+seoTitle: "psychicreader19622 Keen Review 2026: Worst Look, Best Numbers"
 description: "An honest third-party review of psychicreader19622 on Keen — unpacking the 98% five-star rating, Keen's Top Advisor badge, Raymond's cartomancy-with-playing-cards method, humor as a reading quality, and exactly who should book him at $4.99/min."
 platformName: "Keen: psychicreader19622"
 rating: 4.9
 verdict: "Raymond has built one of the strongest client loyalty records on Keen behind the most anonymous-looking profile in this review series. The 98% five-star rating, Top Advisor certification, and 19-year tenure speak louder than a generic username ever could. At $4.99/min he sits in an accessible tier with depth that punches well above it — particularly for love, twin flame, and past life questions where his cartomancy and intuitive style consistently deliver specific, checkable predictions."
 affiliateUrl: "/go/keen-raymond/"
 avatarUrl: /avatars/keen/psychicreader19622-raymond-keen-review-2026.jpg
+ogImage: "/avatars/keen/psychicreader19622-raymond-keen-review-2026.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$4.99/min"
 bestFor: "Love, twin flame, and past life readings from a warm, humorous male reader whose cartomancy-led intuitive style generates some of the highest client return rates in this review series"

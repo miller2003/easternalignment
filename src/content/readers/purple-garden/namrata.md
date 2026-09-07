@@ -9,6 +9,7 @@ bestFor: "Budget-conscious clients who want a broadly experienced advisor for re
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/namrata/"
 affiliateUrl: /go/purple-garden-namrata/
 avatarUrl: /avatars/purple-garden/namrata.jpg
+ogImage: "/avatars/purple-garden/namrata.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-08'
 updatedDate: '2026-07-08'

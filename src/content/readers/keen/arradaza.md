@@ -13,6 +13,7 @@ verdict: A 25-year veteran with the widest tool set of any reader I've assessed 
   claim deserve an honest look before you book.
 affiliateUrl: /go/keen-arradaza/
 avatarUrl: /avatars/keen/arradaza.jpg
+ogImage: "/avatars/keen/arradaza.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $5.99/min
 bestFor: Multi-layered readings combining intuition and multiple divination tools  -  love,

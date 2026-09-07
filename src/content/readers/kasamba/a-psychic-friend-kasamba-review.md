@@ -7,6 +7,7 @@ rating: 4.9
 verdict: "A Psychic Friend is Kasamba's founding-era survivor: on the platform since 2003, twenty-three years and 47,090 readings at 4.9 stars, with 12,419 likes against 220 dislikes. Her most instructive client is her most frequent reviewer — a user named Skeptic100001, who has left six five-star reviews across nine months ('quick communicator, direct and to the point... warm and comforting'). Her product spec is published upfront: quick, honest, accurate readings, most of them 5–7 minutes, focused on love, relationship, and marriage. Clients confirm the spec word for word — 'accurate' appears 21 times in her last 150 reviews. At $3.99/min chat (voice $4.49) with 3 free minutes, a complete reading costs about $16 — the cheapest full session we've audited from a 23-year veteran."
 affiliateUrl: /go/kasamba-a-psychic-friend/
 avatarUrl: /avatars/kasamba/a-psychic-friend-kasamba-review.jpg
+ogImage: "/avatars/kasamba/a-psychic-friend-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $3.99/min · Voice $4.49/min · 3 free minutes for new clients · most readings 5–7 minutes"
 bestFor: "First-timers and skeptics who want one real question answered quickly and kindly — a complete 5–7 minute reading from a 23-year veteran for roughly the price of lunch"

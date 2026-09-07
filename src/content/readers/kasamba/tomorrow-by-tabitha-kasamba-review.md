@@ -7,6 +7,7 @@ rating: 5.0
 verdict: "Tomorrow By Tabitha is Kasamba's speed specialist: 48,592 readings since 2007 at a perfect 5.0, with 'quick' and 'fast' appearing 27 times across her last 150 reviews — clients describe a reader who connects in seconds and wastes no paid minute. Speed usually signals shallow; her feed disproves it with the highest repeat-client concentration we've ever measured (66% of her reviews come from clients with 3+ sessions, one holding 13). A natural-born psychic specializing in love and relationships, she also carries a rare pricing inversion: voice ($1.99/min) costs half her chat ($3.99). For a fast, honest read from a 19-year veteran at a budget rate, she's the most efficient booking on Kasamba."
 affiliateUrl: /go/kasamba-tomorrow-by-tabitha/
 avatarUrl: /avatars/kasamba/tomorrow-by-tabitha-kasamba-review.jpg
+ogImage: "/avatars/kasamba/tomorrow-by-tabitha-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Voice $1.99/min · Chat $3.99/min · 3 free minutes for new clients"
 bestFor: "Love and relationship questions when you want a fast, direct answer — the highest-efficiency session we've audited, from a 19-year veteran at a $1.99 voice rate"

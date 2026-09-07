@@ -7,6 +7,7 @@ rating: 4.7
 verdict: "LOVE READINGS BY SAJ is Kasamba's twenty-year man: on the platform since 2006, 52,913 readings, and a review feed anchored by regulars who've returned 25, 18, and 12 times each. His stated contract — 'the most honest and truthful readings, sometimes painful, but always delivered in a clear and compassionate way' — is exactly what clients describe receiving: direct answers, kindly carried, with explanations attached. At $3.99/min chat with 3 free minutes, he's the cheapest twenty-year veteran you'll find anywhere. Book him for love questions where you want the truth without the bruise."
 affiliateUrl: /go/kasamba-love-readings-by-saj/
 avatarUrl: /avatars/kasamba/love-readings-by-saj-kasamba-review.jpg
+ogImage: "/avatars/kasamba/love-readings-by-saj-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $3.99/min · Voice $15.99/min · 3 free minutes for new clients"
 bestFor: "Love and relationship questions where you want a twenty-year veteran's honest read — direct about the answer, gentle about the delivery — at a budget-friendly chat rate"

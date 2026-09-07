@@ -14,6 +14,7 @@ verdict: 'The psychic one is Keen''s longest-tenured high-volume advisor with a 
   which version you''re dealing with.'
 affiliateUrl: /go/keen-the-psychic-one/
 avatarUrl: /avatars/keen/the-psychic-one.jpg
+ogImage: "/avatars/keen/the-psychic-one.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $3.92/min (Love & Relationships profile)
 bestFor: Clients who want specific timeline predictions on love and relationship questions  -  and

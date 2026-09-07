@@ -10,6 +10,7 @@ verdict: Best for relationship readings where you want a reader who leads withou
   means she works best for clients who arrive ready to receive, not process.
 affiliateUrl: /go/keen-regina/
 avatarUrl: /avatars/keen/regina-jacks.jpg
+ogImage: "/avatars/keen/regina-jacks.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $3.59/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships

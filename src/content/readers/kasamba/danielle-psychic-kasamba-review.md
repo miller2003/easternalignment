@@ -6,6 +6,7 @@ rating: 5
 verdict: "Danielle Psychic is a natural-born clairaudient and clairvoyant who delivers \"brutally honest\" love and relationship readings — 57,935 readings since 2008 at a 5.0-star rating, from just $0.99/min."
 affiliateUrl: /go/kasamba-danielle/
 avatarUrl: /avatars/kasamba/danielle-psychic-kasamba-review.jpg
+ogImage: "/avatars/kasamba/danielle-psychic-kasamba-review.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$4.99/min chat · $1.99/min voice (promo rates as low as $0.99–$2.49)"
 bestFor: "Clients who want unfiltered truth about a partner’s real intentions and feelings"

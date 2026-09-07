@@ -1,12 +1,13 @@
 ---
 title: "Dar66 on Keen Review 2026: 43,000 Readings of 'Spirit's Truth' at $4.20/Min"
-seoTitle: "Dar66 on Keen Review 2026: 43,000 Readings of "
+seoTitle: "Dar66 Keen Review 2026: 43,000 'Spirit's Truth' Readings at $4.20/Min"
 description: "An independent review of Dar66 on Keen - 11,000 ratings, 43,620 readings since 2009, and a $4.20/min rate. What her 32-years-of-wisdom approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Dar66"
 rating: 4.91
 verdict: "Dar66 is one of Keen's better-kept value secrets: 11,000 ratings at 4.91 stars, 43,000+ readings since 2009, and a $4.20/min rate that sits well below most high-volume readers. She frames herself as channeling 'Spirit's Truth with 32 years of intuitive wisdom.' Book her if you want an experienced, spiritually rooted reader at a genuinely moderate price."
 affiliateUrl: /go/keen-dar66/
 avatarUrl: /avatars/keen/dar66.jpg
+ogImage: "/avatars/keen/dar66.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$4.20/min"
 bestFor: "People who want an experienced, spiritually rooted read on love, life questions, and spirit guidance - and who want it at a moderate price below most tenured readers"

@@ -7,6 +7,7 @@ rating: 4.99
 verdict: "LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. Her no-tools, energy-reading style and 'Love Doctor' reputation show up clearly in real reviews - clients praise insight, honesty, and accuracy over a decade plus. Book her by voice for love and relationship questions; at $8.97/min she sits in Keen's upper tier, so use the $1 intro to confirm fit first."
 affiliateUrl: /go/keen-ladyfontaine/
 avatarUrl: /avatars/keen/ladyfontaine.jpg
+ogImage: "/avatars/keen/ladyfontaine.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.97/min"
 bestFor: "Clients who want a certified, no-tools master psychic for love and relationship clarity - and who value insight and honesty over gentle softening"

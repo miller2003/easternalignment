@@ -1,6 +1,6 @@
 ---
 title: "Best Purple Garden Psychics for Career & Money (2026): 7 Video Readers for Work Decisions"
-seoTitle: 'Best Purple Garden Psychics for Career & Money (2026): 7'
+seoTitle: "Best Purple Garden Career & Money Psychics: 7 Top Video Readers"
 metaDescription: 'The 7 best Purple Garden psychics for career and money questions. Video readers ranked for job, business and finance decisions, with real pricing.'
 description: "A ranking of the seven best Purple Garden psychics for career and money questions in 2026 — built on the platform's unusual density of dual-credentialed readers: certified coaches, accuracy-badged decision specialists, and readers whose career predictions are verified in the public Journeys ledger."
 category: Roundup

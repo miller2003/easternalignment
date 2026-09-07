@@ -7,6 +7,7 @@ rating: 4.93
 verdict: "That Magic Man - James - is a direct, no-tools male reader on Keen with 14,000 ratings at 4.93 stars and 56,000+ readings since 2011. His reviews show a pattern of specific, sometimes dated predictions coming true, delivered with straight-talk reassurance. Book him by voice for love and relationship questions if you want a male perspective without tools or fluff."
 affiliateUrl: /go/keen-that-magic-man/
 avatarUrl: /avatars/keen/that-magic-man.jpg
+ogImage: "/avatars/keen/that-magic-man.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$2.99/min"
 bestFor: "Clients who want a direct, no-tools male reader for love and relationship questions - and who value straight-talk reassurance over gentle hand-holding"

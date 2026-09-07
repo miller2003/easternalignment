@@ -7,6 +7,7 @@ rating: 4.4
 verdict: "Love Readings By Sarah is the budget love specialist of our Kasamba audit: 43,454 readings since 2011 with 13,366 likes against 539 dislikes — a 96.1% like ratio — at $1.99/min chat. A self-described born psychic with an MBA and fifteen years of practice, she focuses on exactly the questions her name promises, and her regulars call her accurate and very on point, re-booking across months. One hard rule: book chat, not voice — her phone line runs $24.99/min, twelve times her chat rate. Stay in text, use the 3 free minutes, and the value math is hard to beat."
 affiliateUrl: /go/kasamba-love-readings-by-sarah/
 avatarUrl: /avatars/kasamba/love-readings-by-sarah-kasamba-review.jpg
+ogImage: "/avatars/kasamba/love-readings-by-sarah-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $1.99/min · Voice $24.99/min · 3 free minutes for new clients"
 bestFor: "Love-and-relationship questioners on a budget who want a fifteen-year veteran at $1.99/min — especially first-timers who want a low-stakes, high-experience first reading"

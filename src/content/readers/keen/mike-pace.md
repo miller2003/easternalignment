@@ -7,6 +7,7 @@ rating: 4.95
 verdict: "Mike Pace's 4.95 across 81,000 ratings is the kind of number that survives scrutiny. He is a direct, psychology-trained reader who leads with hard impressions rather than comfort, and he sits at the very top of Keen's pricing at $9.99/min. Use the $1 intro to test whether his fast, no-fluff style fits before committing to a full session - at this rate, a few unfocused minutes cost real money."
 affiliateUrl: /go/keen-mike-pace/
 avatarUrl: /avatars/keen/mike-pace.jpg
+ogImage: "/avatars/keen/mike-pace.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$9.99/min"
 bestFor: "People who want a fast, direct, prediction-first reader for love and relationship questions - and who can afford a premium rate"

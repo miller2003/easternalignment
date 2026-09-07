@@ -7,6 +7,7 @@ rating: 4.91
 verdict: "Readings by Ruth is a third-generation psychic who has built 41,000+ readings on Keen since 2016 at a steady 4.91 stars. She positions herself as an 'Intuitive Navigator' with 31 years of experience and a direct, no-sugarcoating style. At $5.99/min she is moderately priced for a reader with both lineage and a large sample. Book her if you want a direct, detail-rich love and relationship read with a compassionate edge."
 affiliateUrl: /go/keen-readings-by-ruth/
 avatarUrl: /avatars/keen/readings-by-ruth.jpg
+ogImage: "/avatars/keen/readings-by-ruth.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$5.99/min"
 bestFor: "People who want a direct, detailed love and relationship read from an experienced third-generation psychic - and who want honesty delivered with a patient, compassionate side"

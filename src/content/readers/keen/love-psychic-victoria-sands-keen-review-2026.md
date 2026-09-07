@@ -7,6 +7,7 @@ rating: 4.8
 verdict: "Victoria Sands is one of the most verified readers on Keen by sheer ratings volume — 60,000 data points at 4.84 stars across 24 years. Her Inspirational style, deep mediumship, and remote viewing make her genuinely exceptional for specific needs. But $19.99/min is a categorically different financial commitment, and most clients asking love and relationship questions will get equivalent or better value from readers at a third of her rate. Know exactly what you're paying for before you connect."
 affiliateUrl: "/go/keen-victoria/"
 avatarUrl: /avatars/keen/love-psychic-victoria-sands-keen-review-2026.jpg
+ogImage: "/avatars/keen/love-psychic-victoria-sands-keen-review-2026.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$19.99/min"
 bestFor: "Clients seeking deep mediumship work, grief and closure readings, or remote viewing on a specific person — situations where experience depth and spiritual connection matter more than price"

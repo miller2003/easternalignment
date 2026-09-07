@@ -7,6 +7,7 @@ rating: 5.0
 verdict: "Sparks Of Insight holds a perfect 5.0 across 54,146 Kasamba readings since 2016 — 18,334 likes against 129 dislikes, the cleanest ratio we've audited — while charging $1.99/min, the lowest price among Kasamba's high-volume love advisors. A twin-flame and relationship specialist, they combine emotional precision ('knows things that no one else knows') with timeline calls their regulars confirm ('always gets timelines accurate'). We found zero negative reviews in their 150 most recent. The style is warm and emoji-sprinkled; the lane is love. For a first Kasamba reading, the 3 free minutes plus $1.99 make this the lowest-risk audition on the platform."
 affiliateUrl: /go/kasamba-sparks-of-insight/
 avatarUrl: /avatars/kasamba/sparks-of-insight-kasamba-review.jpg
+ogImage: "/avatars/kasamba/sparks-of-insight-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat & Voice $1.99/min · 3 free minutes for new clients · email readings $19.95"
 bestFor: "Love, relationship, and twin-flame questions — especially first-time Kasamba clients who want a perfect-rated reader at the platform's friendliest price"

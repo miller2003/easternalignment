@@ -9,6 +9,7 @@ bestFor: "Clients navigating complex love situations who want both psychic insig
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/nicholas-knight/"
 affiliateUrl: /go/purple-garden-nicholas-knight/
 avatarUrl: /avatars/purple-garden/nicholas-knight.jpg
+ogImage: "/avatars/purple-garden/nicholas-knight.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-07'
 updatedDate: '2026-07-07'

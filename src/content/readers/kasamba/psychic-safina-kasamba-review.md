@@ -7,6 +7,7 @@ rating: 4.9
 verdict: "Psychic Safina is a third-generation psychic with 59,565 Kasamba readings since 2007 and a 4.9, whose great-grandmother read a ragged Tarot deck with staggering accuracy. She blends Tarot, Astrology, and intuition, and clients call her a 'guiding light' through career transitions. $7.99/min flat with 3 free minutes. Book her for a grounded, multi-method reading; skip her if you need a perfect 5.0."
 affiliateUrl: /go/kasamba-safina/
 avatarUrl: /avatars/kasamba/psychic-safina-kasamba-review.png
+ogImage: "/avatars/kasamba/psychic-safina-kasamba-review.png"
 freeOffer: "3 free minutes"
 pricing: "Chat & Voice $7.99/min · 3 free minutes"
 bestFor: "People at a crossroads — a career transition, a relationship fork — who want a multi-method reader (Tarot + Astrology + intuition) with a lineage behind her"

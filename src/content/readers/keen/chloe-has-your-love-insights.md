@@ -7,6 +7,7 @@ rating: 4.56
 verdict: "Chloe Has Your Love Insights is a budget-priced Keen reader - 7,370 ratings, 35,997 readings since 2015, at just $2.58/min. She is a direct, tarot-and-Lenormand reader who promises truth 'with compassion' after 25 years. Her 4.56 average is solid but below the elite tier, and some clients note impatience. Book her if you want an affordable, straight-talking love read and can handle a blunt delivery."
 affiliateUrl: /go/keen-chloe-has-your-love-insights/
 avatarUrl: /avatars/keen/chloe-has-your-love-insights.jpg
+ogImage: "/avatars/keen/chloe-has-your-love-insights.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$2.58/min"
 bestFor: "People who want an affordable, direct love-and-relationship read from an experienced tarot reader - and who can handle blunt honesty without needing reassurance"

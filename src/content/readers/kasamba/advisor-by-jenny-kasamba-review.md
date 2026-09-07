@@ -6,6 +6,7 @@ rating: 4.7
 verdict: "Advisor by Jenny is an unusual combination — an MBA and computer-science graduate who is also a natural-born psychic and tarot reader — with 50,170 readings since 2008 and some of the lowest promo rates on Kasamba."
 affiliateUrl: /go/kasamba-jenny/
 avatarUrl: /avatars/kasamba/advisor-by-jenny-kasamba-review.jpg
+ogImage: "/avatars/kasamba/advisor-by-jenny-kasamba-review.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$3.99/min chat · $5.99/min voice (promo $1.99–$2.99)"
 bestFor: "Relationship clarity and reconnection from an affordable, detail-oriented reader"

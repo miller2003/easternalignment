@@ -11,6 +11,7 @@ verdict: Best for people navigating emotionally complex relationship situations 
   assets; his premium price point demands you come prepared.
 affiliateUrl: /go/keen-david7/
 avatarUrl: /avatars/keen/david7.jpg
+ogImage: "/avatars/keen/david7.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $6.99/min
 bestFor: Twin flame and relationship readings from a direct, tool-free male intuitive

@@ -7,6 +7,7 @@ rating: 4.8
 verdict: "Advisor Vanessa is a 4.8-star Purple Garden reader with 20,578 readings since 2016, specializing in love, infidelity, and the hard truths that go with them. Chat $2.99/min. Book her if you need an unsweetened answer about a partner; skip her if you want comfort over truth."
 affiliateUrl: /go/purple-garden-advisor-vanessa/
 avatarUrl: /avatars/purple-garden/advisor-vanessa.jpg
+ogImage: "/avatars/purple-garden/advisor-vanessa.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $2.99/min · Voice $5.99/min · Video $4.99/min"
 bestFor: "People who suspect something is off in their relationship and need an honest, unsweetened read — not reassurance"

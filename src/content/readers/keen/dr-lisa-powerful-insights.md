@@ -7,6 +7,7 @@ rating: 4.97
 verdict: "Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Her 'very fast, compassionate, no tools' approach is a genuine differentiator - she leads with quick, accurate pickup rather than props. Book her by voice for love and relationship questions; at $14.99/min, start with the $1 intro to confirm fit before a full session."
 affiliateUrl: /go/keen-dr-lisa-powerful-insights/
 avatarUrl: /avatars/keen/dr-lisa-powerful-insights.jpg
+ogImage: "/avatars/keen/dr-lisa-powerful-insights.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$14.99/min (new clients: 5 min for $1)"
 bestFor: "Clients who want a fast, no-tools, compassionate reader for love and relationship questions - and who value quick, accurate pickup over slow build-up"

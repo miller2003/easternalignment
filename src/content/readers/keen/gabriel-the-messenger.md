@@ -7,6 +7,7 @@ rating: 4.94
 verdict: "Gabriel the Messenger's 4.94 across 23,000 ratings and 138,000+ readings since 2008 is a heavyweight track record, and his no-tools approach is a genuine authenticity signal. At $8.99/min he is priced in the upper tier, but the volume and score are hard to argue with. Use the $1 intro to test his no-tools pickup before a full session."
 affiliateUrl: /go/keen-gabriel-the-messenger/
 avatarUrl: /avatars/keen/gabriel-the-messenger.jpg
+ogImage: "/avatars/keen/gabriel-the-messenger.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "People who want a no-tools, relationship-focused reader with a massive track record - and who can absorb a premium rate"

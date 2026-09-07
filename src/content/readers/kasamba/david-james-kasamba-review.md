@@ -7,6 +7,7 @@ rating: 4.7
 verdict: "David James is a 30-year Glasgow veteran with 111,359 Kasamba readings and a self-declared 'no sugarcoating' style. His 4.7 is earned in public, bad reviews included — which is exactly why it means something. Listed at $6.99/min with 3 free minutes (new-client promos have dropped it as low as $3.49). Book him if you want the truth straight; skip him if you need it sweetened."
 affiliateUrl: /go/kasamba-david-james/
 avatarUrl: /avatars/kasamba/david-james-kasamba-review.jpg
+ogImage: "/avatars/kasamba/david-james-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat & Voice $6.99/min · new-client promos fluctuate (we've seen $3.49) · 3 free minutes"
 bestFor: "People done with being told what they want to hear — who want a 30-year reader to say it straight, in plain language, at a fair price"

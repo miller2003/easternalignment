@@ -14,6 +14,7 @@ verdict: Intuitive Azzy is one of the most honest value propositions currently a
   a reader who won't oversell what the cards can do  -  she's exceptional.
 affiliateUrl: /go/keen-azzy/
 avatarUrl: /avatars/keen/intuitive-azzy.jpg
+ogImage: "/avatars/keen/intuitive-azzy.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $2.22/min (Spiritual Readings profile)
 bestFor: Clients who want guidance-oriented readings with genuine energetic support  -  especially

@@ -6,6 +6,7 @@ rating: 4.9
 verdict: "Satie Readings is a 4.9-star Purple Garden love-tarot reader with 40+ years of experience and nearly 18,000 readings since 2020, read live on camera. Best for clients who want seasoned, boundary-setting truth with no sugarcoating."
 affiliateUrl: /go/purple-garden-satie-readings/
 avatarUrl: /avatars/purple-garden/satie-readings.jpg
+ogImage: "/avatars/purple-garden/satie-readings.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "Experienced, camera-transparent love-tarot readings from a 40-year practitioner"

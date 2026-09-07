@@ -7,6 +7,7 @@ rating: 4.9
 verdict: "advisor Rainbow is Kasamba's aftercare specialist: 36,605 readings since 2013 at 4.9 stars, 8,773 likes against 144 dislikes (98.4%) — and a review that captures her economics in one sentence: 'my advisor send me a message afterwards to complete my reading even though the credit had expired.' A born psychic with 17 years of experience, her style is fast, detailed, and generous — 'she can tune into the situation very quickly and she's spot on with all her predictions.' 61% of her current feed is repeat clients, led by a 23-review regular. At $2.99/min flat for chat or voice with 3 free minutes, she's the budget-friendly reader whose clients report care that outlasts the meter. Book her for love and career questions where you want depth without watching the clock."
 affiliateUrl: /go/kasamba-advisor-rainbow/
 avatarUrl: /avatars/kasamba/advisor-rainbow-kasamba-review.jpg
+ogImage: "/avatars/kasamba/advisor-rainbow-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat & Voice $2.99/min · 3 free minutes for new clients"
 bestFor: "Clients who want a fast, detailed, generous reader at a budget rate — with documented aftercare when the meter runs out"

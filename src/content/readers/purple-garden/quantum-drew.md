@@ -7,6 +7,7 @@ rating: 5.0
 verdict: "Quantum Drew is a 5.0-star intuitive empath with 13,746 Purple Garden readings since 2017, known for reading emotional energy first and landing details clients never told him. Chat $3.99/min. Book him if you want a calm, 'scary accurate' reader who makes you feel at ease; skip him if you want rigid yes/no formats."
 affiliateUrl: /go/purple-garden-quantum-drew/
 avatarUrl: /avatars/purple-garden/quantum-drew.jpg
+ogImage: "/avatars/purple-garden/quantum-drew.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $3.99/min · Voice $7.49/min · Video $8.49/min"
 bestFor: "People who want an empathic, 'calm friend' energy reading that lands specific, verifiable details — without the pressure"

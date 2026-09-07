@@ -9,6 +9,7 @@ bestFor: "Clients who want astrological context layered under tarot interpretati
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/plutoniandust/"
 affiliateUrl: /go/purple-garden-plutoniandust/
 avatarUrl: /avatars/purple-garden/plutoniandust.jpg
+ogImage: "/avatars/purple-garden/plutoniandust.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-03'
 updatedDate: '2026-07-03'

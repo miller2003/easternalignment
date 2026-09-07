@@ -7,6 +7,7 @@ rating: 4.96
 verdict: "Jeanne Clock combines clairvoyance, clairaudience, mediumship, and empathy into one of the broader skill sets on Keen, backed by 95,000+ readings since 2007 at 4.96 stars. She is a patient, compassionate reader who is especially strong on love, career, and family dynamics. Book her by voice for relationship and life-path questions; just know her gentle pace is a feature, not a bug."
 affiliateUrl: /go/keen-jeanne-clock/
 avatarUrl: /avatars/keen/jeanne-clock.jpg
+ogImage: "/avatars/keen/jeanne-clock.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$15.99/min"
 bestFor: "Clients who want a patient, multi-gifted reader for love, family, and life-path questions - and who value being truly listened to"

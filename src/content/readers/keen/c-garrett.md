@@ -11,6 +11,7 @@ verdict: Best for people who want intuition-led clarity on relationships or care
   Not suited for tight timelines or general open-ended sessions.
 affiliateUrl: /go/keen-garrett/
 avatarUrl: /avatars/keen/c-garrett.jpg
+ogImage: "/avatars/keen/c-garrett.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $4.89/min
 bestFor: Relationship and career readings where you want empathic depth over structural

@@ -6,6 +6,7 @@ rating: 4.7
 verdict: "Twin Flame Specialist Aria brings rare ethical maturity to the most abused category in online readings. Rather than validating obsessive attachments, she uses soul-contract framing to separate genuine spiritual connection from an attachment wound — and tells paying clients to stop waiting, which is the strongest integrity signal available in this niche."
 affiliateUrl: /go/purple-garden-aria/
 avatarUrl: /avatars/purple-garden/twin-flame-specialist-aria.jpg
+ogImage: "/avatars/purple-garden/twin-flame-specialist-aria.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $5.99/min (Video / Call)"
 bestFor: "Seekers stuck in an intense connection who want the truth about it, not validation"

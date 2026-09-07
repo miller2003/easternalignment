@@ -7,6 +7,7 @@ rating: 4.89
 verdict: "Psychic Jane Just Knows is a genuine Top Advisor - 21,000 ratings, 94,000+ readings since 2006, and a track record of specific, timing-based hits in her reviews. But at $17.99/min she is one of the most expensive readers on Keen. Book her only if you have a concrete love or career question and want to use the $1 intro to confirm her style before paying the premium."
 affiliateUrl: /go/keen-psychic-jane-just-knows/
 avatarUrl: /avatars/keen/psychic-jane-just-knows.jpg
+ogImage: "/avatars/keen/psychic-jane-just-knows.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$17.99/min (profile also shows $14.99-$18.99/min tiers)"
 bestFor: "Clients with a specific love or career question who want a Top Advisor with a history of tight, timing-based predictions - and who can justify a premium rate"

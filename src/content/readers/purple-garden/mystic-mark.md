@@ -9,6 +9,7 @@ bestFor: "Clients who want tarot readings cross-validated by a second, independe
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/mystic-mark/"
 affiliateUrl: /go/purple-garden-mystic-mark/
 avatarUrl: /avatars/purple-garden/mystic-mark.jpg
+ogImage: "/avatars/purple-garden/mystic-mark.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-03'
 updatedDate: '2026-08-03'

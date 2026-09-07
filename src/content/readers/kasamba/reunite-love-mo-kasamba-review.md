@@ -7,6 +7,7 @@ rating: 4.8
 verdict: "Reunite Love MO carries the endorsement money can't buy: practicing psychics bring him their own problems. One regular — herself a working psychic — writes: 'Mo will see things I completely miss or doubt. 10/10.' Behind the gift sits a Master of Science and a certified holistic healer credential, plus a seventh-generation lineage claim. The numbers: 38,389 readings since 2020 at 4.8 stars, 8,346 likes against 300 dislikes (96.5%), with 46% of his current feed from repeat clients (one holds 20). His style is consultative — insight plus advice on how to improve the situation — at $2.99/min chat, a budget rate that makes his peer-endorsed reads startlingly accessible. Voice runs $29.99, so book text. For crossroads decisions where you want the reader the professionals trust, MO is the value play of this batch."
 affiliateUrl: /go/kasamba-reunite-love-mo/
 avatarUrl: /avatars/kasamba/reunite-love-mo-kasamba-review.jpg
+ogImage: "/avatars/kasamba/reunite-love-mo-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $2.99/min · Voice $29.99/min · 3 free minutes for new clients"
 bestFor: "Crossroads decisions — love, career, life direction — where you want consultative insight from the reader other psychics consult"

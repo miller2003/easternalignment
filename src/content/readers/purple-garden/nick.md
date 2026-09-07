@@ -9,6 +9,7 @@ bestFor: "Clients who want direct, grounded tarot guidance on love and life deci
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/nick/"
 affiliateUrl: /go/purple-garden-nick/
 avatarUrl: /avatars/purple-garden/nick.jpg
+ogImage: "/avatars/purple-garden/nick.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-10'
 updatedDate: '2026-07-10'

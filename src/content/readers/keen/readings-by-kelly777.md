@@ -7,6 +7,7 @@ rating: 4.9
 verdict: "One of the most battle-tested readers on Keen by sheer volume  -  159,000+ sessions at 4.91 stars is a track record that's hard to dismiss. Best for love and soulmate clarity, past life context, and remote viewing on specific people or situations. The promotional bio language and chat-only format are the only real friction points."
 affiliateUrl: "/go/keen-kelly/"
 avatarUrl: /avatars/keen/readings-by-kelly777.jpg
+ogImage: "/avatars/keen/readings-by-kelly777.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "Love, soulmate, and past life readings with a high-volume reader whose track record speaks louder than her bio"

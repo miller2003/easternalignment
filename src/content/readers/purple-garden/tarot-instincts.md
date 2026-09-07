@@ -9,6 +9,7 @@ bestFor: "Budget-first clients who want tarot-plus-numerology combination readin
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/tarot-instincts/"
 affiliateUrl: /go/purple-garden-tarot-instincts/
 avatarUrl: /avatars/purple-garden/tarot-instincts.jpg
+ogImage: "/avatars/purple-garden/tarot-instincts.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-02'
 updatedDate: '2026-07-02'

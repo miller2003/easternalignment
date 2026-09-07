@@ -7,6 +7,7 @@ rating: 4.66
 verdict: "Serenity Stone's 4th-generation medium background and 122,000 readings since 2001 are genuinely impressive, and at $6.99/min she is priced fairly for that volume. But her rating sits lower than Keen's elite tier, and a real subset of reviews describe slow, vague sessions. Book her by voice, come with a specific question, and use the $1 intro to decide if her pace fits you."
 affiliateUrl: /go/keen-serenity-stone/
 avatarUrl: /avatars/keen/serenity-stone.jpg
+ogImage: "/avatars/keen/serenity-stone.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a long-tenured medium for closure, spirit messages, and relationship clarity - and who are patient with a slower, softer delivery"

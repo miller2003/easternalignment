@@ -6,6 +6,7 @@ rating: 5
 verdict: "Truthful Visions pairs a perfect 5.0-star rating with 55,271 readings since 2015, offering warm, down-to-earth love and career guidance that repeat clients describe as exceptionally in tune."
 affiliateUrl: /go/kasamba-truthful-visions/
 avatarUrl: /avatars/kasamba/truthful-visions-kasamba-review.jpg
+ogImage: "/avatars/kasamba/truthful-visions-kasamba-review.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$4.99/min chat · $5.99/min voice"
 bestFor: "Love and career questions from a warm, detailed, repeat-client-friendly reader"

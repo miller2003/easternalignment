@@ -7,6 +7,7 @@ rating: 4.4
 verdict: "Spiritual Shiwa's profile rewards a closer look: 44,530 readings since 2015, 6,920 likes against 380 dislikes, and a feed where the praise comes from clients who keep re-booking — one regular, Cooper, holds six of her ten most recent reviews and calls her reliable, strong, and clear. Behind the tarot deck: an Honors commerce degree, an MBA in Marketing and Finance, and a family astrology tradition. Her pricing hides a gift: voice ($2.49/min) is cheaper than chat ($2.99/min), so calling her is both the better experience and the better deal. 3 free minutes for new clients."
 affiliateUrl: /go/kasamba-spiritual-shiwa/
 avatarUrl: /avatars/kasamba/spiritual-shiwa-kasamba-review.jpg
+ogImage: "/avatars/kasamba/spiritual-shiwa-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $2.99/min · Voice $2.49/min · 3 free minutes for new clients"
 bestFor: "Clients who want a grounded, structured reader — part tarot practitioner, part business-school graduate — at a price where a long phone session stays affordable, and who value speed and clarity over ceremony"

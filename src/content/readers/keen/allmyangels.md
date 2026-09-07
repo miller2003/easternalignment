@@ -7,6 +7,7 @@ rating: 4.88
 verdict: "AllMyAngels has quietly built one of the more durable mid-volume profiles on Keen: 13,000 ratings at 4.88 stars and 50,000+ readings since 2002. She positions herself as an intuitive truth-teller who connects minds, hearts, and spirits - a warm, relationship-leaning style rather than a blunt one. At $6.99/min she is fairly priced for the sample size. Book her if you want a steady, compassionate-intuitive read on love and life-path questions."
 affiliateUrl: /go/keen-allmyangels/
 avatarUrl: /avatars/keen/allmyangels.jpg
+ogImage: "/avatars/keen/allmyangels.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a warm, intuitive read on love, relationships, and life-path questions - and who value a long-tenured advisor with a calm, connecting style"

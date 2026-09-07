@@ -7,6 +7,7 @@ rating: 4.86
 verdict: "Clairvoyant Nicky Power is a direct, tarot-forward male reader on Keen with 5,491 ratings at 4.86 stars and 19,000+ readings since 2001. His reviews praise confidence, accuracy, and a genuine, supportive delivery. At $6.99/min he is moderately priced. Book him by voice for money, destiny, and breakup questions if you want a direct reader who still leaves you feeling supported."
 affiliateUrl: /go/keen-clairvoyant-nicky-power/
 avatarUrl: /avatars/keen/clairvoyant-nicky-power.jpg
+ogImage: "/avatars/keen/clairvoyant-nicky-power.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "Clients who want a direct, tarot-forward male reader for money, destiny, and breakup questions - and who value confidence with kindness"

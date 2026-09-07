@@ -7,6 +7,7 @@ rating: 4.96
 verdict: "Eli Casey's numbers are difficult to argue with: 81,000 ratings and more than 200,000 completed readings on Keen since 2001. He is a call-first, compassionately styled empath who leads with reassurance rather than raw prediction. At $8.97/min he sits in the upper tier, so use the $1 intro to test whether his thorough, supportive style fits your question before committing to a full session."
 affiliateUrl: /go/keen-eli-casey/
 avatarUrl: /avatars/keen/eli-casey.jpg
+ogImage: "/avatars/keen/eli-casey.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.97/min"
 bestFor: "People who want a warm, thorough, reassuring empath for love, breakup, and commitment questions - and who value being talked through a situation step by step"

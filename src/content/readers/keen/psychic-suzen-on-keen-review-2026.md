@@ -7,6 +7,7 @@ rating: 4.8
 verdict: "Best for people who want more than a prediction — who want to understand what's happening, why it's happening, and what they can actually do about it. SuZen's dual background as a psychic and trained life coach and social worker produces a different kind of reading: one that ends with options, not just outcomes. Not the right fit for pure prediction-seekers or those wanting a structured tool-based session."
 affiliateUrl: "/go/keen-suzen/"
 avatarUrl: /avatars/keen/psychic-suzen-on-keen-review-2026.jpg
+ogImage: "/avatars/keen/psychic-suzen-on-keen-review-2026.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$5.40/min"
 bestFor: "Sensitive, intuitive people seeking clarity on relationships or life direction — especially those who want actionable guidance alongside the reading itself"

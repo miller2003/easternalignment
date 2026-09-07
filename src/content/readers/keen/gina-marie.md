@@ -12,6 +12,7 @@ verdict: Gina Marie's 20-year track record on Keen is hard to dismiss  -  but at
   deliberately.
 affiliateUrl: /go/keen-gina-marie/
 avatarUrl: /avatars/keen/gina-marie.jpg
+ogImage: "/avatars/keen/gina-marie.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $6.99/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships

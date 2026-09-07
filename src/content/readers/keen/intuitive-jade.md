@@ -7,6 +7,7 @@ rating: 4.98
 verdict: "Intuitive Jade is one of the highest-rated readers in her volume tier on Keen: 8,151 ratings at 4.98 stars and 27,636 readings since 2006. Her signature method - 'revealing truth through name vibrations' - is unusual and draws clients who want a read from little more than a name. At $8.99/min she is premium-priced. Book her if you want an elite-average intuitive who works from names and energy rather than long explanations."
 affiliateUrl: /go/keen-intuitive-jade/
 avatarUrl: /avatars/keen/intuitive-jade.jpg
+ogImage: "/avatars/keen/intuitive-jade.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "People who want an elite-rated (4.98) intuitive read and are curious about a name-vibration method - and who are willing to pay a premium rate for a top-tier average"

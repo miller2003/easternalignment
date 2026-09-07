@@ -6,6 +6,7 @@ rating: 5
 verdict: "Lejla Kristal is a 5.0-star Purple Garden multi-tool reader whose 12,058 readings since 2019 and crystal-ball-plus-runes-plus-tarot method span love and money. A versatile, high-rated pick for clients who want more than one lens on a question."
 affiliateUrl: /go/purple-garden-lejla-kristal/
 avatarUrl: /avatars/purple-garden/lejla-kristal.jpg
+ogImage: "/avatars/purple-garden/lejla-kristal.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "Multi-tool readings (crystal ball, runes, tarot) for love and money questions"
