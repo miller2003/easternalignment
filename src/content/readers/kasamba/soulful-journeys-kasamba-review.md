@@ -20,7 +20,7 @@ highlights:
   - "Third-generation reader: the practice passed down from father and great-grandfather"
   - "The candor quirk: a full plain-dealing disclaimer printed inside his own bio"
 pros:
-  - "$1.99/min for a 44,859-reading veteran — the strongest value ratio we've audited"
+  - "$1.99/min for a 44,859-reading veteran — the strongest value ratio we've reviewed"
   - "Step-by-step reading structure — clients can follow the logic, not just the verdict"
   - "4.8 stars at extreme volume: consistency that outlasts luck by a decade"
   - "Unusually candid bio — the printed disclaimer signals a straight dealer"

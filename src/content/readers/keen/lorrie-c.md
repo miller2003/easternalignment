@@ -29,7 +29,7 @@ cons:
   - "Forum texture suggests she's strongest on relationship/empath reads; pure career questions got mixed reports"
   - "Not a date-machine: her hits are behavioral and emotional, so date-demanding clients should calibrate"
   - "Stats from our audit (profile unreachable in our environment) — verify rate and rating on her live page"
-verdict: "lorrie c holds a 4.98 across 60,595 readings — the highest rating we've audited at that volume on Keen — and her case is unusual: the toughest third-party psychic forum tracked her predictions in real time and watched them land on the specifics that matter (contact, behavior, reasoning). She's an empath for the 'what is my person feeling' question, not a deadline vendor. At $5.99/min with a $1 trial, she's the relationship read to try first on Keen."
+verdict: "lorrie c holds a 4.98 across 60,595 readings — the highest rating we've reviewed at that volume on Keen — and her case is unusual: the toughest third-party psychic forum tracked her predictions in real time and watched them land on the specifics that matter (contact, behavior, reasoning). She's an empath for the 'what is my person feeling' question, not a deadline vendor. At $5.99/min with a $1 trial, she's the relationship read to try first on Keen."
 customSchema: |
   {
     "@context": "https://schema.org",

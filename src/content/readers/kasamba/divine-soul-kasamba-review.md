@@ -94,7 +94,7 @@ One more honest observation: her bio prose is rough — run-on sentences, uneven
 
 ## The $2.99 Value Case
 
-At our audited **$2.99/min** (confirm live — promos rotate), Divine Soul is priced at budget tier despite veteran volume. The math is almost disarming: a full 15-minute session costs **$44.85 at sticker**, and with the new-client **3 free minutes plus 50% off**, roughly **$18** at promo. Eighteen dollars, with a twelve-year, 69k-reading clairvoyant pastor.
+At our verified **$2.99/min** (confirm live — promos rotate), Divine Soul is priced at budget tier despite veteran volume. The math is almost disarming: a full 15-minute session costs **$44.85 at sticker**, and with the new-client **3 free minutes plus 50% off**, roughly **$18** at promo. Eighteen dollars, with a twelve-year, 69k-reading clairvoyant pastor.
 
 Why so cheap? Her model is clearly relationship, not transaction — priced for the weekly check-in, not the one-night splurge. That pricing philosophy matches everything else on the page: the pastoral credentials, the sisterhood reviews, the explicit welcome to clients other profiles ignore. Budget rate, top-tier heart.
 

@@ -4,7 +4,7 @@ description: "An independent review of A Psychic Friend on Kasamba: reading sinc
 platform: kasamba
 platformName: "Kasamba: A Psychic Friend"
 rating: 4.9
-verdict: "A Psychic Friend is Kasamba's founding-era survivor: on the platform since 2003, twenty-three years and 47,090 readings at 4.9 stars, with 12,419 likes against 220 dislikes. Her most instructive client is her most frequent reviewer — a user named Skeptic100001, who has left six five-star reviews across nine months ('quick communicator, direct and to the point... warm and comforting'). Her product spec is published upfront: quick, honest, accurate readings, most of them 5–7 minutes, focused on love, relationship, and marriage. Clients confirm the spec word for word — 'accurate' appears 21 times in her last 150 reviews. At $3.99/min chat (voice $4.49) with 3 free minutes, a complete reading costs about $16 — the cheapest full session we've audited from a 23-year veteran."
+verdict: "A Psychic Friend is Kasamba's founding-era survivor: on the platform since 2003, twenty-three years and 47,090 readings at 4.9 stars, with 12,419 likes against 220 dislikes. Her most instructive client is her most frequent reviewer — a user named Skeptic100001, who has left six five-star reviews across nine months ('quick communicator, direct and to the point... warm and comforting'). Her product spec is published upfront: quick, honest, accurate readings, most of them 5–7 minutes, focused on love, relationship, and marriage. Clients confirm the spec word for word — 'accurate' appears 21 times in her last 150 reviews. At $3.99/min chat (voice $4.49) with 3 free minutes, a complete reading costs about $16 — the cheapest full session we've reviewed from a 23-year veteran."
 affiliateUrl: /go/kasamba-a-psychic-friend/
 avatarUrl: /avatars/kasamba/a-psychic-friend-kasamba-review.jpg
 ogImage: "/avatars/kasamba/a-psychic-friend-kasamba-review.jpg"
@@ -113,7 +113,7 @@ And the "friend" half of the name holds up under the same scrutiny. **Stacey** (
 
 ## How to Book Her Smart — the $16 Complete Reading
 
-The math here is uniquely friendly. **Chat is $3.99/min with 3 free minutes; voice is $4.49/min** — a nearly flat rate, so format is preference, not economics. Combine her published 5–7 minute session length with the 3 free minutes, and a complete reading costs roughly **$8 to $16 out of pocket**. That is the cheapest full session we've audited from any reader with two decades of tenure — less than lunch, for twenty-three years of pattern recognition.
+The math here is uniquely friendly. **Chat is $3.99/min with 3 free minutes; voice is $4.49/min** — a nearly flat rate, so format is preference, not economics. Combine her published 5–7 minute session length with the 3 free minutes, and a complete reading costs roughly **$8 to $16 out of pocket**. That is the cheapest full session we've reviewed from any reader with two decades of tenure — less than lunch, for twenty-three years of pattern recognition.
 
 The play: bring one question about one relationship, stated in one sentence — *"Where does he actually stand, and where is this heading?"* Her format was built for exactly that. If you process better by voice than text, the $0.50 difference is small enough to ignore; if you want the transcript to re-read, chat is the pick.
 

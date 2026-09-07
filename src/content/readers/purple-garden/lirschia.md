@@ -105,7 +105,7 @@ The recent notes keep the same register. **Harps7** (August 23): *"Thank you for
 
 ## The 38-Review Regular — and the Repeat Core
 
-**Cllhel holds 38 reviews** — the anchor of a repeat structure that spans **65% of her current feed** (nuxi23 and mamz at 10 each, naynay at 7). Thirty-eight paid sessions is the kind of loyalty that only consistency produces: same completeness, same specificity, session after session. Fun detail for the industry-watchers: this same Cllhel appears as a top regular in another elite Purple Garden feed we've audited — clients at the very top of the platform's spending curve distribute their trust across only a handful of readers, and Lirschia is on that shortlist.
+**Cllhel holds 38 reviews** — the anchor of a repeat structure that spans **65% of her current feed** (nuxi23 and mamz at 10 each, naynay at 7). Thirty-eight paid sessions is the kind of loyalty that only consistency produces: same completeness, same specificity, session after session. Fun detail for the industry-watchers: this same Cllhel appears as a top regular in another elite Purple Garden feed we've reviewed — clients at the very top of the platform's spending curve distribute their trust across only a handful of readers, and Lirschia is on that shortlist.
 
 ## How to Book Her Smart
 

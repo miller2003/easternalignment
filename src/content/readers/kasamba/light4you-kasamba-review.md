@@ -1,10 +1,10 @@
 ---
 title: "light4you Kasamba Review 2026: Jodee Lynn, 24 Years on Kasamba and the Proposal She Called to the Week"
-description: "An independent review of light4you (Jodee Lynn) on Kasamba: on the platform since 2002, 56,253 readings at 4.9 stars, and a client who says she predicted a proposal 'within a certain timeframe — and it happened.' We analyzed 150 recent reviews and mapped the longest client diary we've ever audited. Voice $4.99/min — cheaper than her chat."
+description: "An independent review of light4you (Jodee Lynn) on Kasamba: on the platform since 2002, 56,253 readings at 4.9 stars, and a client who says she predicted a proposal 'within a certain timeframe — and it happened.' We analyzed 150 recent reviews and mapped the longest client diary we've ever reviewed. Voice $4.99/min — cheaper than her chat."
 platform: kasamba
 platformName: "Kasamba: light4you"
 rating: 4.9
-verdict: "light4you — real name Jodee Lynn — has read on Kasamba since 2002: 56,253 readings, a 4.9 rating, and 15,276 likes against 242 dislikes. A certified life coach who learned tarot kitchen-table style from a friend's mother, her documented specialty is timing — clients report dated predictions landing, including a proposal called within its window. Her longest regular has left 39 reviews, the deepest client diary we've audited. She works slowly and asks for ten-minute sessions; unusually, her voice rate ($4.99/min) is cheaper than chat ($5.99/min), so take the call. Book her for love and timing questions you can give room to breathe."
+verdict: "light4you — real name Jodee Lynn — has read on Kasamba since 2002: 56,253 readings, a 4.9 rating, and 15,276 likes against 242 dislikes. A certified life coach who learned tarot kitchen-table style from a friend's mother, her documented specialty is timing — clients report dated predictions landing, including a proposal called within its window. Her longest regular has left 39 reviews, the deepest client diary we've reviewed. She works slowly and asks for ten-minute sessions; unusually, her voice rate ($4.99/min) is cheaper than chat ($5.99/min), so take the call. Book her for love and timing questions you can give room to breathe."
 affiliateUrl: /go/kasamba-light4you/
 avatarUrl: /avatars/kasamba/light4you-kasamba-review.jpg
 ogImage: "/avatars/kasamba/light4you-kasamba-review.jpg"
@@ -17,7 +17,7 @@ metaDescription: "light4you (Jodee Lynn) on Kasamba: reading since 2002, 56,253 
 highlights:
   - "On Kasamba since 2002 — twenty-four years, one of the platform's founding generation"
   - "56,253 readings at 4.9 stars: 15,276 likes, 242 dislikes (98.4% approval)"
-  - "Her longest regular holds 39 reviews — the deepest client diary we've audited"
+  - "Her longest regular holds 39 reviews — the deepest client diary we've reviewed"
   - "Voice $4.99/min is cheaper than chat $5.99/min — a rare inverted price"
 pros:
   - "Documented timing calls: 'she told me he was going to propose... within a certain timeframe and it happened'"

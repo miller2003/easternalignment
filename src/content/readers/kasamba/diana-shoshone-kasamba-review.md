@@ -4,7 +4,7 @@ description: "An independent review of Diana Shoshone on Kasamba: 42,628 reading
 platform: kasamba
 platformName: "Kasamba: Diana Shoshone"
 rating: 5.0
-verdict: "Diana Shoshone holds the second-cleanest ledger we've ever audited: 17,921 likes against 32 dislikes across 42,628 readings since 2006, at a perfect 5.0. Her signature is specificity with follow-through: clients credit her with predicting a partner's exact initial and timing — and her memory is its own evidence, with one client returning after nine years to find Diana remembered her and exactly what she did for a living. A Reiki Master with 25 years of experience working past-life and soul-tie frameworks, her feed is 59% repeat clients, some spanning fourteen years. Pricing is a flat $8.99/min for chat or voice with 3 free minutes. Book her for love questions where you want a dated, initialed answer from a reader who'll still know your story in 2035."
+verdict: "Diana Shoshone holds the second-cleanest ledger we've ever reviewed: 17,921 likes against 32 dislikes across 42,628 readings since 2006, at a perfect 5.0. Her signature is specificity with follow-through: clients credit her with predicting a partner's exact initial and timing — and her memory is its own evidence, with one client returning after nine years to find Diana remembered her and exactly what she did for a living. A Reiki Master with 25 years of experience working past-life and soul-tie frameworks, her feed is 59% repeat clients, some spanning fourteen years. Pricing is a flat $8.99/min for chat or voice with 3 free minutes. Book her for love questions where you want a dated, initialed answer from a reader who'll still know your story in 2035."
 affiliateUrl: /go/kasamba-diana-shoshone/
 avatarUrl: /avatars/kasamba/diana-shoshone-kasamba-review.jpg
 ogImage: "/avatars/kasamba/diana-shoshone-kasamba-review.jpg"
@@ -16,7 +16,7 @@ seoTitle: "Diana Shoshone Kasamba Review 2026: 5.0, 32 Dislikes"
 metaDescription: "Diana Shoshone on Kasamba: 42,628 readings at 5.0 — 32 dislikes in 20 years. She remembered a client after 9 years — $8.99/min flat."
 highlights:
   - "42,628 readings since 2006 at a perfect 5.0"
-  - "17,921 likes against 32 dislikes — 99.8%, the second-cleanest ledger we've audited"
+  - "17,921 likes against 32 dislikes — 99.8%, the second-cleanest ledger we've reviewed"
   - "The 9-year memory: a client returned after nine years — Diana remembered her and her job"
   - "Initials and timing: 'Diana predicted my husband with exact timing and exact initial'"
 pros:
@@ -131,7 +131,7 @@ First, **the framework is explicit.** Past lives, soul ties, time-walking — Di
 
 ## Should You Book Diana Shoshone?
 
-**Book her** if your question is love and you want it answered with specifics by the second-cleanest ledger we've ever audited — 42,628 readings, 32 dislikes, and a reader who remembered a client across nine years. Take chat for the transcript, spend the 3 free minutes on the real question, and write down the initial.
+**Book her** if your question is love and you want it answered with specifics by the second-cleanest ledger we've ever reviewed — 42,628 readings, 32 dislikes, and a reader who remembered a client across nine years. Take chat for the transcript, spend the 3 free minutes on the real question, and write down the initial.
 
 **Skip her** if past-life framing is a dealbreaker or you need email format. For everyone else: twenty years, a perfect 5.0, and predictions that come back confirmed — with exact timing and exact initials.
 

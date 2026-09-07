@@ -86,7 +86,7 @@ The multi-tool point deserves a sentence of its own: a reader who cross-referenc
 
 ## The Session Experience and the $4.99 Math
 
-Logan reads across Purple Garden's formats, and at our audited **$4.99/min** (older third-party listings show lower — rates change, so confirm on his live profile) he sits in the platform's accessible mid-tier. Purple Garden's **$30 new-client credit** covers roughly six minutes — enough for one properly-framed life-path question and a taste of the participatory style.
+Logan reads across Purple Garden's formats, and at our verified **$4.99/min** (older third-party listings show lower — rates change, so confirm on his live profile) he sits in the platform's accessible mid-tier. Purple Garden's **$30 new-client credit** covers roughly six minutes — enough for one properly-framed life-path question and a taste of the participatory style.
 
 A focused 15-minute session runs about **$75** at full rate. Our structural advice for a destiny reading: come with the *decision* you're facing, not just the curiosity. "Should I take the new city / leave the relationship / start the business" activates the empowerment model; "tell me about my future" gets you the trailer instead of the film. His compassionate-but-clarity-driven style, per the review themes, does the rest.
 

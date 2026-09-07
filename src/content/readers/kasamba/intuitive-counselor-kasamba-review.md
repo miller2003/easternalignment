@@ -90,7 +90,7 @@ Kasamba's AI summary across the full review history: *"strong intuition, detaile
 
 Her sessions run **psychic & tarot readings, clairvoyant guidance, astrology insights** — past, present, and future, in her framing, with clients leaving *"with clarity and confidence."* Nineteen years of experience reading for *"clients, family, friends, and colleagues."*
 
-At our audited **$4.99/min** (confirm the live rate), a focused 15-minute session is **$74.85 at sticker** — and with the new-client **3 free minutes plus 50% off**, roughly **$30** at promo. For a healing-oriented session, chat is the right format: you'll want her words saved, because the clients who get the most from this style re-read them. Her regulars' pattern — repeated short check-ins over months — suggests the intended use is an ongoing counsel relationship, and the mid-tier price is built for exactly that.
+At our verified **$4.99/min** (confirm the live rate), a focused 15-minute session is **$74.85 at sticker** — and with the new-client **3 free minutes plus 50% off**, roughly **$30** at promo. For a healing-oriented session, chat is the right format: you'll want her words saved, because the clients who get the most from this style re-read them. Her regulars' pattern — repeated short check-ins over months — suggests the intended use is an ongoing counsel relationship, and the mid-tier price is built for exactly that.
 
 ## Who Should Skip This Reader
 

@@ -104,7 +104,7 @@ Her own introduction frames the blend directly: *"Greetings, I am Shiwani, Known
 
 ## The MBA on the Tarot Table
 
-Her bio opens with the expected tapestry — born in India, *"a family steeped in the rich tradition of astrology"* — and then detours somewhere unusual: *"earning an Honors degree in commerce and a Master of Business Administration in Marketing and Finance."* We've audited a lot of bios. Family astrology lineages are common. Accredited business degrees are not.
+Her bio opens with the expected tapestry — born in India, *"a family steeped in the rich tradition of astrology"* — and then detours somewhere unusual: *"earning an Honors degree in commerce and a Master of Business Administration in Marketing and Finance."* We've reviewed a lot of bios. Family astrology lineages are common. Accredited business degrees are not.
 
 It reframes everything the feed says about her. Her toolkit is *"meditation, astrology, numerology, vastu, and tarot"* — five systems — but the delivery her clients describe (fast, concise, clear, structured) sounds less like a séance and more like a well-run briefing: intake, assessment, answer, done. If you want a reading that behaves like a sharp consultation — mysticism with a spreadsheet spine — this is the profile in the batch. She even has a profile video on her page, so you can see who you're calling before you spend a cent.
 
@@ -112,7 +112,7 @@ Her five-system toolkit — *"meditation, astrology, numerology, vastu, and taro
 
 ## How to Book Her Smart
 
-Her pricing hides a genuine anomaly, and it's in your favor: **voice is $2.49/min — cheaper than chat at $2.99/min.** Across every profile we've audited, voice costs the same or more; here the phone is the discount lane. It also happens to be her best format: a concise reader's answers land complete when spoken, and **Redsss** already told you the move — *"she's a must call."*
+Her pricing hides a genuine anomaly, and it's in your favor: **voice is $2.49/min — cheaper than chat at $2.99/min.** Across every profile we've reviewed, voice costs the same or more; here the phone is the discount lane. It also happens to be her best format: a concise reader's answers land complete when spoken, and **Redsss** already told you the move — *"she's a must call."*
 
 New clients get **3 free minutes**. Given her speed — *super fast* is the regulars' consensus — three minutes is genuinely enough for a verdict on one focused question, which makes her free trial unusually informative. A twenty-minute call at the voice rate runs about **$50** — business-school clarity at community-college prices.
 

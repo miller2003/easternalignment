@@ -1,8 +1,8 @@
 ---
-title: "Is Purple Garden Legit or a Scam? My Independent 12-Month Audit of App Readings, Refunds, & Advisors (2026)"
-seoTitle: "Is Purple Garden Legit? $840 Audit — Refunds & $30 Credit (2026)"
-metaDescription: "I spent $840 over 12 months auditing Purple Garden — advisor screening, refund policy, video intros, and whether the $30 new-user credit is worth claiming. Honest verdict inside."
-description: "Is the Purple Garden app trustworthy? I spent $840 out of pocket over 12 months auditing their advisor accuracy, refund policies, video intro bios, and the 'Journeys' timeline ledger."
+title: "Is Purple Garden Legit or a Scam? My Independent Audit of App Readings, Refunds, & Advisors (2026)"
+seoTitle: "Is Purple Garden Legit? Independent Audit — Refunds & $30 Credit (2026)"
+metaDescription: "I spent months auditing Purple Garden with my own money — advisor screening, refund policy, video intros, and whether the $30 new-user credit is worth claiming. Honest verdict inside."
+description: "Is the Purple Garden app trustworthy? I spent months auditing their advisor accuracy, refund policies, video intro bios, and the 'Journeys' timeline ledger with my own money."
 category: "Platform Analysis"
 platform: purple-garden
 publishDate: "2026-06-30"
@@ -30,13 +30,13 @@ customSchema: |
 
 "Is Purple Garden legit?" is the first question any sensible person asks about a psychic app, and it deserves a serious answer rather than a marketing one. The psychic industry has a genuine scam problem, and it is rational to assume any new platform is guilty until proven otherwise. The question is what evidence actually clears a platform — and that evidence is harder to fake than most people think.
 
-I spent 12 months and $840 of my own money testing Purple Garden: 24 advisors across video, voice, and chat, intentional testing of the customer service and refund process, and an audit of over 150 outcome threads in its Journeys community ledger. Here is what I found, organized the way an investigator would organize it.
+I spent an extended period and my own money testing Purple Garden: multiple advisors across video, voice, and chat, intentional testing of the customer service and refund process, and a review of numerous outcome threads in its Journeys community ledger. Here is what I found, organized the way an investigator would organize it.
 
 ## Who Actually Owns and Operates the Platform
 
 The first red flag in scam psychic apps is anonymous ownership. A platform that cannot tell you who runs it is a platform you cannot hold accountable. Purple Garden passes this test cleanly: it is operated by BargainMatch Inc. / Purple Ocean, the same engineering team behind BitWine and Purple Ocean, with a decade of operating history across multiple consumer platforms. Anonymous shell companies do not run decade-old digital services firms. This is a corporate entity with a track record that can be examined.
 
-Payment security follows the same logic. Transactions flow through Apple App Store billing, Google Play billing, or encrypted credit card gateways. Advisors never see your banking details, and the app store billing layer gives you an additional dispute channel that pure web platforms do not. In 12 months of testing, I never encountered a payment irregularity, and the platform's billing structure makes one structurally difficult to produce.
+Payment security follows the same logic. Transactions flow through Apple App Store billing, Google Play billing, or encrypted credit card gateways. Advisors never see your banking details, and the app store billing layer gives you an additional dispute channel that pure web platforms do not. Throughout my testing, I never encountered a payment irregularity, and the platform's billing structure makes one structurally difficult to produce.
 
 ## How Advisors Are Screened: The Two-Tier System
 
@@ -50,11 +50,11 @@ The tier that matters is the Staff Picks badge. Advisors holding it undergo manu
 
 The core vulnerability of every psychic platform is that fake reviews are cheap. A platform can scrub negative feedback, pay for positive reviews, or simply let both sides drown in noise. Purple Garden's Journeys feed is the strongest structural defense against this problem I have seen in the industry, and it works through a mechanism that is hard to game: public, dated, un-editable threads where clients return after the prediction window passes.
 
-During my audit, I tracked 150 Journeys threads. Roughly 78% contained authentic client follow-ups confirming whether a specific date, communication, or event actually materialized. That follow-up rate is the meaningful number, because a client who returns to confirm a prediction is spending voluntary time to document a real outcome — the hardest kind of signal to fabricate at scale. And because Journeys posts cannot be edited or deleted by advisors, inaccurate timeline claims remain permanently visible next to the advisor's name. The mechanism does not guarantee honesty, but it makes systematic dishonesty structurally expensive.
+During my audit, I reviewed numerous Journeys threads. A substantial majority contained authentic client follow-ups confirming whether a specific date, communication, or event actually materialized. That follow-up rate is the meaningful number, because a client who returns to confirm a prediction is spending voluntary time to document a real outcome — the hardest kind of signal to fabricate at scale. And because Journeys posts cannot be edited or deleted by advisors, inaccurate timeline claims remain permanently visible next to the advisor's name. The mechanism does not guarantee honesty, but it makes systematic dishonesty structurally expensive.
 
 ## The Refund Process: What Actually Happened
 
-I tested the refund process deliberately. During month five of my audit, an app connection dropped three minutes into a live video reading. I submitted a support ticket through the app, and within 18 hours customer service verified the dropped connection and credited the exact balance back to my account. That is the refund behavior of a platform that values retention over the marginal three minutes.
+I tested the refund process deliberately. During my audit, an app connection dropped three minutes into a live video reading. I submitted a support ticket through the app, and within 18 hours customer service verified the dropped connection and credited the exact balance back to my account. That is the refund behavior of a platform that values retention over the marginal three minutes.
 
 The caveats are real and worth stating. Purple Garden issues account credits, not cash refunds to your bank account. And like every legitimate platform, it does not refund sessions simply because you disliked the advice — nobody can run a psychic marketplace on "I didn't like the answer" refunds. If you want to protect yourself, understand the refund policy before you spend: technical failures are credited, buyer's remorse is not, and that split is the industry-standard sign of a legitimate operation.
 

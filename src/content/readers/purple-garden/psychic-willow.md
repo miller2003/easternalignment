@@ -94,7 +94,7 @@ One detail we love: **LGBT friendly, stated plainly at the top of her services**
 
 ## The Session, Priced
 
-At our audited **$5.99/min** (confirm live — rates rotate), Willow sits mid-tier. Purple Garden's **$30 new-client credit** covers about five minutes — and five minutes with a two-question, no-warm-up reader is a real session, not a teaser. A full 15-minute run costs about **$90** at sticker; her regulars' pattern (short, frequent, purpose-built visits) suggests most get what they came for in less. Come with your two questions chosen, names and DOBs ready, and an open mind — that last one is literally in her requirements, and after 48 years she's earned the ask.
+At our verified **$5.99/min** (confirm live — rates rotate), Willow sits mid-tier. Purple Garden's **$30 new-client credit** covers about five minutes — and five minutes with a two-question, no-warm-up reader is a real session, not a teaser. A full 15-minute run costs about **$90** at sticker; her regulars' pattern (short, frequent, purpose-built visits) suggests most get what they came for in less. Come with your two questions chosen, names and DOBs ready, and an open mind — that last one is literally in her requirements, and after 48 years she's earned the ask.
 
 ## The Straight Talk Section
 

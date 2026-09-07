@@ -139,7 +139,7 @@ Second: **that all-caps profile.** LOVE READINGS BY SAJ, frozen in 2006 web aest
 
 **The overthinker.** You don't just want the answer; you want to understand *why* it's the answer, so your brain can finally stop spinning at 2 a.m. The explain-as-he-goes style was built for you.
 
-**The value hunter.** You want the most experienced reader your money can reach. Twenty years at $3.99/min with 3 free minutes is the best experience-per-dollar ratio we've audited this month.
+**The value hunter.** You want the most experienced reader your money can reach. Twenty years at $3.99/min with 3 free minutes is the best experience-per-dollar ratio we've reviewed this month.
 
 ## Should You Book LOVE READINGS BY SAJ?
 

@@ -201,4 +201,16 @@ export const affiliateLinks: Record<string, string> = {
   "purple-garden-es": "https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326",
   "purple-garden-es-luz-tarot": "https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fes%2Fpsychics%2F7046-luz-tarot%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
   "purple-garden-es-luna-aestethic": "https://bargestech.go2cloud.org/aff_c?offer_id=34&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F4921-luna-aestethic%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
+  // --- NEW (2026-09-07) score-system expansion: Sister Michelle (advisor 4935),
+  // Enchantress Ragini (advisor 26194). Two honest-rating reviews (3.8 / 4.1)
+  // that decouple our independent score from the platform average. Deep-linked
+  // to live profiles; reuse the generic PG offer_id=30 + aff_id=2326.
+  "purple-garden-sister-michelle": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F4935-sister-michelle%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
+  "purple-garden-enchantress-ragini": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F26194-enchantress-ragini%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
+  // --- NEW (2026-09-08) score-system expansion round 2: AdvisorTiffany
+  // (PG advisor 4614, honest 3.9) and PSYCHIC TSAHAI (Kasamba, honest 3.7).
+  // Two more reviews that decouple our independent score from the platform
+  // average, spanning PG + Kasamba. PG uses offer_id=30; Kasamba offer_id=191.
+  "purple-garden-advisortiffany": "https://bargestech.go2cloud.org/aff_c?offer_id=30&aff_id=2326&url=https%3A%2F%2Fwww.purplegarden.co%2Fpsychics%2F4614-advisortiffany%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
+  "kasamba-psychic-tsahai": "https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=2326&url=https%3A%2F%2Fwww.kasamba.com%2Fpsychic%2Fpsychic-tsahai%2F%3Fclickid%3D{transaction_id}%26utm_content%3Dsubid2%26utm_medium%3Daffiliation_tune%26utm_source%3D{affiliate_id}-{affiliate_name}",
 };

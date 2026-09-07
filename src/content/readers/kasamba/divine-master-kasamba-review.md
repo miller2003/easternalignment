@@ -96,7 +96,7 @@ The local-shop detail is worth one sentence though: a reader who faces paying cl
 
 ## The $7.99/min Math
 
-At our audited **$7.99/min** (confirm the live rate — promos rotate), Divine Master sits in Kasamba's value mid-tier. New-client terms — **3 free minutes plus 50% off** — put a focused 15-minute first session at roughly **$48** instead of $120.
+At our verified **$7.99/min** (confirm the live rate — promos rotate), Divine Master sits in Kasamba's value mid-tier. New-client terms — **3 free minutes plus 50% off** — put a focused 15-minute first session at roughly **$48** instead of $120.
 
 The session design that works here: one question, tightly framed. *"We broke up three weeks ago after two years. Is this final, and if not, what changes it?"* His style — quick connection, to the point, solutions-oriented — is built for exactly that. Ten to fifteen prepared minutes will carry the whole thing. What his regulars demonstrate is that the second and third sessions are where the value compounds: prediction, verification, next move.
 

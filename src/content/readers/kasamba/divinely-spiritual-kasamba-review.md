@@ -95,7 +95,7 @@ Psychic bios follow a small set of templates: the childhood visions, the ancestr
 
 *"Master of Science and extensive training in psychological education."*
 
-Read that combination slowly. On one side: the gift narrative, unverifiable, the same one every reader claims (our standard caveat applies — the ancestors are the story, not the evidence). On the other: a postgraduate science degree and formal training in how human minds actually work — credentials with registrars behind them. We've audited dozens of advisor bios across two platforms. This is the only one that could survive both a séance and a thesis defense.
+Read that combination slowly. On one side: the gift narrative, unverifiable, the same one every reader claims (our standard caveat applies — the ancestors are the story, not the evidence). On the other: a postgraduate science degree and formal training in how human minds actually work — credentials with registrars behind them. We've reviewed dozens of advisor bios across two platforms. This is the only one that could survive both a séance and a thesis defense.
 
 Why the combination matters in a reading: psychology training is, functionally, twenty years of coursework in pattern recognition — attachment styles, avoidance cycles, the ways people sabotage the thing they say they want. Layer a genuine intuitive practice on top of that scaffolding and you get the session his clients describe: **structured like a consultation, landing like a revelation.**
 

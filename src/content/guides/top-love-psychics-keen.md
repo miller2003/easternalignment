@@ -1,8 +1,8 @@
 ---
-title: "Top 10 Love Psychics on Keen (2026): We Tested 49 Advisors — These 10 Gave the Best Answers"
-seoTitle: 'Top 10 Love Psychics on Keen (2026): 49 Advisors Tested'
-metaDescription: 'The top 10 love psychics on Keen, ranked after testing 49 Keen advisors. Verified track records, real per-minute pricing and the 5-minutes-for-$1 math.'
-description: "The definitive ranking of the top 10 love psychics on Keen in 2026. We tested and audited 49 Keen advisors across every love question type — POI reads, twin flames, breakups, hard truths — and these 10 gave the best answers. Full methodology, per-reader evidence, and first-call costs."
+title: "Top 10 Love Psychics on Keen (2026): Independently Ranked — These 10 Gave the Best Answers"
+seoTitle: 'Top 10 Love Psychics on Keen (2026): Independently Ranked'
+metaDescription: 'The top 10 love psychics on Keen, ranked after reviewing dozens of Keen advisors. Verified track records, real per-minute pricing and the 5-minutes-for-$1 math.'
+description: "The definitive ranking of the top 10 love psychics on Keen in 2026. We independently reviewed Keen advisors across every love question type — POI reads, twin flames, breakups, hard truths — and these 10 gave the best answers. Full methodology, per-reader evidence, and first-call costs."
 category: Roundup
 entities:
   - "Keen"
@@ -38,7 +38,7 @@ customSchema: |
     "@graph": [
       {
         "@type": "ItemList",
-        "name": "Top 10 Love Psychics on Keen (2026): We Tested 49 Advisors — These 10 Gave the Best Answers",
+        "name": "Top 10 Love Psychics on Keen (2026): Independently Ranked — These 10 Gave the Best Answers",
         "description": "The definitive ranking of the top 10 love psychics on Keen in 2026.",
         "itemListElement": [
           {
@@ -173,9 +173,9 @@ The full ranking first — then the method, then the evidence.
 
 ---
 
-## How We Tested: The 49-Advisor Audit
+## How We Ranked: The Methodology
 
-This ranking comes out of our full Keen review program — 49 in-depth advisor reviews published on this site, each built on the same protocol: session-count and tenure verification, review-feed language analysis across hundreds of client comments, negative-review forensics (we read the 1-stars for content, not just the count), and firsthand session testing on selected advisors. From that pool we selected the 10 strongest for love questions, ranked within their lanes.
+This ranking comes out of our full Keen review program — dozens of in-depth advisor reviews published on this site, each built on the same protocol: session-count and tenure verification, review-feed language analysis across hundreds of client comments, negative-review forensics (we read the 1-stars for content, not just the count), and firsthand session testing on selected advisors. From that pool we selected the 10 strongest for love questions, ranked within their lanes.
 
 Three evidence rules governed every pick:
 

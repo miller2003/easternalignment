@@ -4,7 +4,7 @@ description: "An independent review of Andi on Kasamba: a platform insider who o
 platform: kasamba
 platformName: "Kasamba: Andi"
 rating: 5.0
-verdict: "Andi is the insider's insider: a reader Kasamba itself once hired to write its Birthday and Weekend Love Horoscopes — with 43,151 readings on the platform since 2002 at a perfect 5.0 (12,166 likes against 174 dislikes). Her résumé reads like the field's syllabus: Reiki Master trained with Diane Stein, ordained minister since 1997, American Tarot Association and Tarosophy member. Her review feed is 59% repeat clients, whose verdict is unusually blunt — 'she is the truth... She is never wrong' — delivered fast ('does not waste your money'). At $2.99/min chat with 3 free minutes, she is the cheapest 24-year veteran we've audited. Book her for love, tarot, or astrology questions where you want a credentialed reader at a budget rate."
+verdict: "Andi is the insider's insider: a reader Kasamba itself once hired to write its Birthday and Weekend Love Horoscopes — with 43,151 readings on the platform since 2002 at a perfect 5.0 (12,166 likes against 174 dislikes). Her résumé reads like the field's syllabus: Reiki Master trained with Diane Stein, ordained minister since 1997, American Tarot Association and Tarosophy member. Her review feed is 59% repeat clients, whose verdict is unusually blunt — 'she is the truth... She is never wrong' — delivered fast ('does not waste your money'). At $2.99/min chat with 3 free minutes, she is the cheapest 24-year veteran we've reviewed. Book her for love, tarot, or astrology questions where you want a credentialed reader at a budget rate."
 affiliateUrl: /go/kasamba-andi/
 avatarUrl: /avatars/kasamba/andi-kasamba-review.jpg
 ogImage: "/avatars/kasamba/andi-kasamba-review.jpg"
@@ -111,7 +111,7 @@ Notice the combination, because it's rarer than it sounds: fast *and* thorough, 
 
 ## How to Book Her Smart
 
-The pricing is the friendliest in this batch: **chat $2.99/min, voice $3.99/min, with 3 free minutes** for new clients. At chat rate, a focused 15-minute session after the free minutes costs about **$36** — the cheapest access we've audited to a reader with two-plus decades of tenure. Choose voice only if you process better by ear; the $1 difference is minor either way.
+The pricing is the friendliest in this batch: **chat $2.99/min, voice $3.99/min, with 3 free minutes** for new clients. At chat rate, a focused 15-minute session after the free minutes costs about **$36** — the cheapest access we've reviewed to a reader with two-plus decades of tenure. Choose voice only if you process better by ear; the $1 difference is minor either way.
 
 The highest-value session plays to her range. Love question? Ask it straight. But if you have a birth date and a decision window, use the instrument most readers don't carry: *"What do the transits say about this move in October?"* — an astrology-literate answer from an American Tarot Association member who wrote horoscopes professionally is a genuinely different product than a vibe read. Her regulars' advice by example: come with real questions, plural — **libby**'s *"always answers every question i ask"* suggests she handles a list, fast, in order.
 

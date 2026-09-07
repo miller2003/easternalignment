@@ -1,6 +1,6 @@
 ---
 title: "Insight by Soni Purple Garden Review 2026: 10 Dislikes. Ever. — 37,140 Readings at 5.0"
-description: "An independent review of Insight by Soni on Purple Garden: 37,140 readings since 2019 at a perfect 5.0 — with 9,166 likes against just 10 dislikes, the cleanest approval ledger we have ever audited. One client holds 69 reviews; another verified her 20-day POI timeline to the day. UK-based, 25 years of experience. $11.99/min, $30 free credit."
+description: "An independent review of Insight by Soni on Purple Garden: 37,140 readings since 2019 at a perfect 5.0 — with 9,166 likes against just 10 dislikes, the cleanest approval ledger we have ever reviewed. One client holds 69 reviews; another verified her 20-day POI timeline to the day. UK-based, 25 years of experience. $11.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Insight by Soni"
 rating: 5.0
@@ -10,13 +10,13 @@ avatarUrl: /avatars/purple-garden/insight-by-soni.jpg
 ogImage: "/avatars/purple-garden/insight-by-soni.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $11.99/min · Voice $13.99/min · $30 free credit on your first purchase"
-bestFor: "Clients who want the most statistically validated reader on the platform — cleanest ledger ever audited — for relationship questions with dated, checkable answers"
+bestFor: "Clients who want the most statistically validated reader on the platform — cleanest ledger ever reviewed — for relationship questions with dated, checkable answers"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/insight-by-soni/"
 seoTitle: "Insight by Soni Purple Garden Review 2026: 5.0, 10 Dislikes"
 metaDescription: "Insight by Soni on Purple Garden: 37,140 readings at 5.0 — 9,166 likes vs 10 dislikes, the cleanest ledger ever. One client holds 69 reviews — $11.99/min."
 highlights:
   - "37,140 readings since 2019 at a perfect 5.0 — 'highest rated' badge"
-  - "9,166 likes vs 10 dislikes — 99.9%, the cleanest approval ledger we've ever audited"
+  - "9,166 likes vs 10 dislikes — 99.9%, the cleanest approval ledger we've ever reviewed"
   - "80% of her feed is repeat clients — one holds 69 reviews"
   - "The 20-day receipt: POI timeline 'hit right on point'"
 pros:
@@ -87,7 +87,7 @@ customSchema: |
   }
 ---
 
-**Book Insight by Soni if** you want the most statistically validated reader we have ever audited — 37,140 readings since 2019 at a perfect 5.0, with an approval ledger that looks like a misprint: 9,166 likes against **10 dislikes**. **Skip her if** you're shopping the budget tier or want a reader in U.S. hours; she's UK-based and premium-priced, and both are part of the deal. Every audit series eventually finds a number that makes you check the data twice. Hers is the one.
+**Book Insight by Soni if** you want the most statistically validated reader we have ever reviewed — 37,140 readings since 2019 at a perfect 5.0, with an approval ledger that looks like a misprint: 9,166 likes against **10 dislikes**. **Skip her if** you're shopping the budget tier or want a reader in U.S. hours; she's UK-based and premium-priced, and both are part of the deal. Every audit series eventually finds a number that makes you check the data twice. Hers is the one.
 
 ## Ten Dislikes. Ever.
 
@@ -101,7 +101,7 @@ You cannot produce that number by luck, and you cannot produce it by flattery �
 
 The ledger's mirror image is the retention: **80% of Soni's current feed is repeat clients** — and at the center of it sits **Ferry, with 69 reviews.**
 
-Sixty-nine. That is the deepest single-client relationship we've recorded on Purple Garden — a client who has paid for and reviewed sixty-nine separate sessions. We've audited feeds with fewer total reviews than Ferry's personal streak. Whatever Soni sells, one client has bought it more often than most people visit their dentist in a lifetime. And the wide-angle view holds the same shape: MommaS at 12, Hope Docksey at 7, pattybell27 at 6 — **ten repeat clients hold 120 of the 150 reviews.**
+Sixty-nine. That is the deepest single-client relationship we've recorded on Purple Garden — a client who has paid for and reviewed sixty-nine separate sessions. We've reviewed feeds with fewer total reviews than Ferry's personal streak. Whatever Soni sells, one client has bought it more often than most people visit their dentist in a lifetime. And the wide-angle view holds the same shape: MommaS at 12, Hope Docksey at 7, pattybell27 at 6 — **ten repeat clients hold 120 of the 150 reviews.**
 
 **Rimps** (July 20) describes what the long game feels like from inside: *"soni has been on my journey with me for 18 months and all I can say is that she has never misled me nor has she sugar coated anything. **everything has happened the way she said it would**... i have also found a best friend who tells me exactly how it is."*
 

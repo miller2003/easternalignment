@@ -98,7 +98,7 @@ Given the protocol, the winning session design is deliberate. Before you connect
 
 One more practical asset: she lists **24/7 availability on Purple Ocean** (Purple Garden hours vary). For the 2 a.m. version of your question, that's worth money.
 
-At our audited **$5.99/min** (confirm live), a disciplined 10-minute session — two questions, properly worked — runs about **$60**, and Purple Garden's **$30 new-client credit** halves your first one. Under her protocol, ten minutes is not a short session; it's a complete one.
+At our verified **$5.99/min** (confirm live), a disciplined 10-minute session — two questions, properly worked — runs about **$60**, and Purple Garden's **$30 new-client credit** halves your first one. Under her protocol, ten minutes is not a short session; it's a complete one.
 
 ## The Honest Caveats
 

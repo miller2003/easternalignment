@@ -87,7 +87,7 @@ customSchema: |
   }
 ---
 
-**Book Paul85 if** you want a top-rated reader *tonight* — not after a three-day wait for a slot — because Paul runs the most available premium practice we've audited: online every single day, 07:00 to 21:00 Atlantic, with 43,000 readings in six years and a "highest rated" badge at 4.9 stars. **Skip him if** you want to wander in with a vague "tell me about my life" — his intake is strict (name, birthdate, two lines of context) and he declines general readings on principle. Everyone else: the numbers behind that availability are the story, and so is what all those clients keep coming back for.
+**Book Paul85 if** you want a top-rated reader *tonight* — not after a three-day wait for a slot — because Paul runs the most available premium practice we've reviewed: online every single day, 07:00 to 21:00 Atlantic, with 43,000 readings in six years and a "highest rated" badge at 4.9 stars. **Skip him if** you want to wander in with a vague "tell me about my life" — his intake is strict (name, birthdate, two lines of context) and he declines general readings on principle. Everyone else: the numbers behind that availability are the story, and so is what all those clients keep coming back for.
 
 ## The 14-Hour Man
 
@@ -117,7 +117,7 @@ The strategic play his regulars use is the scheduled check-in: with 14 hours of 
 
 ## The Small Print — Three Notes Before You Connect
 
-First, **the intake is non-negotiable.** Arrive without the birthdate and context and you'll spend paid minutes on paperwork — or get declined. Prepare it, and the requirement inverts into the reason his readings are dense. Second, **no general readings.** If your question is "what does my future hold," sharpen it before you connect; he answers specific questions specifically, which is precisely what you want at $12.99 a minute. Third, **the schedule has edges.** Fourteen hours a day is extraordinary availability — but it means the 3 a.m. spiral may need a different reader tonight. Inside his hours, he's the most reachable top-rated reader we've audited; outside them, plan for 07:00 Atlantic.
+First, **the intake is non-negotiable.** Arrive without the birthdate and context and you'll spend paid minutes on paperwork — or get declined. Prepare it, and the requirement inverts into the reason his readings are dense. Second, **no general readings.** If your question is "what does my future hold," sharpen it before you connect; he answers specific questions specifically, which is precisely what you want at $12.99 a minute. Third, **the schedule has edges.** Fourteen hours a day is extraordinary availability — but it means the 3 a.m. spiral may need a different reader tonight. Inside his hours, he's the most reachable top-rated reader we've reviewed; outside them, plan for 07:00 Atlantic.
 
 ## Three Clients Who Should Book Paul Tonight
 

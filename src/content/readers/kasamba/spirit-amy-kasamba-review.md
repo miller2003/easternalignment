@@ -1,10 +1,10 @@
 ---
 title: "Spirit Amy Kasamba Review 2026: 49,727 Readings, a Perfect 5.0 — and Only 25 Dislikes in 18 Years"
-description: "An independent review of Spirit Amy on Kasamba: 49,727 readings since 2008 at a perfect 5.0 — with 17,297 likes against just 25 dislikes, the cleanest approval ledger we have ever audited. A clairvoyant and clairaudient medium who volunteers on missing-person cases, her feed is 64% repeat clients. We analyzed 150 recent reviews. Chat $12.99/min, 3 free minutes."
+description: "An independent review of Spirit Amy on Kasamba: 49,727 readings since 2008 at a perfect 5.0 — with 17,297 likes against just 25 dislikes, the cleanest approval ledger we have ever reviewed. A clairvoyant and clairaudient medium who volunteers on missing-person cases, her feed is 64% repeat clients. We analyzed 150 recent reviews. Chat $12.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Spirit Amy"
 rating: 5.0
-verdict: "Spirit Amy owns the cleanest ledger we have ever audited: 17,297 likes against 25 dislikes across 49,727 readings since 2008 — a 99.9% approval ratio at a perfect 5.0. A clairvoyant and clairaudient medium (she sees symbols and pictures, and hears what she describes as Spirit's words), she's also the reader third-party directories credit with volunteering on missing-person cases. Her review feed is 64% repeat clients, her single 'negative' review in the last 150 reads 'amazing as always the absolute best,' and her dated receipts include a meeting predicted with a date and a description that 'happened exactly.' Chat runs $12.99/min with 3 free minutes; voice is $25.49, so book text. For love, loss, and the questions in between, this is the safest premium booking on Kasamba."
+verdict: "Spirit Amy owns the cleanest ledger we have ever reviewed: 17,297 likes against 25 dislikes across 49,727 readings since 2008 — a 99.9% approval ratio at a perfect 5.0. A clairvoyant and clairaudient medium (she sees symbols and pictures, and hears what she describes as Spirit's words), she's also the reader third-party directories credit with volunteering on missing-person cases. Her review feed is 64% repeat clients, her single 'negative' review in the last 150 reads 'amazing as always the absolute best,' and her dated receipts include a meeting predicted with a date and a description that 'happened exactly.' Chat runs $12.99/min with 3 free minutes; voice is $25.49, so book text. For love, loss, and the questions in between, this is the safest premium booking on Kasamba."
 affiliateUrl: /go/kasamba-spirit-amy/
 avatarUrl: /avatars/kasamba/spirit-amy-kasamba-review.jpg
 ogImage: "/avatars/kasamba/spirit-amy-kasamba-review.jpg"
@@ -16,7 +16,7 @@ seoTitle: "Spirit Amy Kasamba Review 2026: 5.0 Stars, 25 Dislikes"
 metaDescription: "Spirit Amy on Kasamba: 49,727 readings since 2008 at a perfect 5.0 — 17,297 likes vs 25 dislikes. Clairvoyant medium — chat $12.99/min, 3 free minutes."
 highlights:
   - "49,727 readings since 2008 at a perfect 5.0"
-  - "17,297 likes against 25 dislikes — a 99.9% approval ledger, the cleanest we've ever audited"
+  - "17,297 likes against 25 dislikes — a 99.9% approval ledger, the cleanest we've ever reviewed"
   - "Clairvoyant + clairaudient medium; volunteers her time on missing-person cases"
   - "64% of her current review feed comes from repeat clients"
 pros:
@@ -91,7 +91,7 @@ customSchema: |
 
 ## The Ledger With Twenty-Five Smudges
 
-Every reader on a per-minute platform collects dislikes. They're the tax on public work: mismatched expectations, clients angry at the message rather than the messenger, bad days. The best readers we've audited carry 96, 129, 208, 591 of them. It's simply what a decade of honest scorekeeping looks like.
+Every reader on a per-minute platform collects dislikes. They're the tax on public work: mismatched expectations, clients angry at the message rather than the messenger, bad days. The best readers we've reviewed carry 96, 129, 208, 591 of them. It's simply what a decade of honest scorekeeping looks like.
 
 Spirit Amy has **twenty-five**.
 
@@ -135,7 +135,7 @@ Three things to know, none of which touch the product. First: **$12.99/min is no
 
 ## Should You Book Spirit Amy?
 
-**Book her** if your question is love, loss, or the space between — and you want it answered by the cleanest statistical record we have ever audited, from a medium whose clients measure their loyalty in years. Start with chat, spend the 3 free minutes on the question you actually care about, and keep the transcript.
+**Book her** if your question is love, loss, or the space between — and you want it answered by the cleanest statistical record we have ever reviewed, from a medium whose clients measure their loyalty in years. Start with chat, spend the 3 free minutes on the question you actually care about, and keep the transcript.
 
 **Skip her** if the budget tier is where you're shopping tonight — Kasamba has excellent $1.99 readers, and we review them too. But when the question deserves the premium shelf: eighteen years, 49,727 readings, 25 dislikes. The ledger doesn't lie, because it can't.
 

@@ -1,6 +1,6 @@
 ---
 title: "Inspired Within Kasamba Review 2026: The Loan Was Declined — She Said It Would Come Through. It Did. 42,038 Readings"
-description: "An independent review of Inspired Within (Charmaine) on Kasamba: 42,038 readings since 2008 at 4.9 stars, a certified medium and Reiki Master — and the most instructive receipt we've audited: a client whose loan was declined, told it would come through anyway, who fought for reassessment and was approved. 71% of her feed is repeat clients. $5.49/min flat, 3 free minutes."
+description: "An independent review of Inspired Within (Charmaine) on Kasamba: 42,038 readings since 2008 at 4.9 stars, a certified medium and Reiki Master — and the most instructive receipt we've reviewed: a client whose loan was declined, told it would come through anyway, who fought for reassessment and was approved. 71% of her feed is repeat clients. $5.49/min flat, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Inspired Within"
 rating: 4.9

@@ -21,7 +21,7 @@ highlights:
   - "Calm, reiki-infused style that clients in crisis credit with steadying them"
 pros:
   - "Bold, specific predictions with timeframes — concrete enough to actually verify"
-  - "15,628 likes at 4.9 stars: the most-decorated premium profile we've audited"
+  - "15,628 likes at 4.9 stars: the most-decorated premium profile we've reviewed"
   - "Calm, steadying delivery — clients in crisis consistently mention feeling re-centered"
   - "LGBTQ+ welcome and complex-dynamics fluent: third parties, ex returns, married-but-unhappy"
 cons:

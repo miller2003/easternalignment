@@ -5,7 +5,7 @@ category: Beginners
 publishDate: '2026-06-06'
 updatedDate: '2026-06-06'
 seoTitle: 'How to Spot a Fake Psychic: 12 Red Flags That Reveal a Fraud (2026 Guide)'
-metaDescription: 'How do you know if a psychic is fake? After testing 100+ readers, we reveal the 12 specific warning signs of psychic fraud -- plus the tactics scammers use to keep you paying.'
+metaDescription: 'How do you know if a psychic is fake? After years of reviewing readers across major platforms, we reveal the 12 specific warning signs of psychic fraud -- plus the tactics scammers use to keep you paying.'
 schemaDescription: 'A comprehensive guide to identifying fake psychics and psychic scams, based on extensive testing across major platforms. Covers 12 specific red flags, common fraud tactics, cold reading techniques, and how to find legitimate practitioners instead.'
 canonicalUrl: https://easternalignment.com/guides/how-to-spot-fake-psychic/
 customSchema: |

@@ -23,7 +23,7 @@ pros:
   - "Documented one-week turnaround: a client's 11 reviews trace 'lost' to 'hopeful and actually excited'"
   - "'She remembered what we talked about before' — continuity across sessions, like a real advisor"
   - "76% of her current feed comes from repeat clients"
-  - "$1.99/min chat: the cheapest sustainable advisor relationship we've audited"
+  - "$1.99/min chat: the cheapest sustainable advisor relationship we've reviewed"
 cons:
   - "Voice runs $39.99/min — twenty times her chat rate; her entire regular base lives in $1.99 text"
   - "Her strength is clarity and direction over date-stamped prophecy — clients shopping for lottery numbers should calibrate"
@@ -113,7 +113,7 @@ Then the kicker, still inside the same week: *"I feel like something has changed
 
 The pricing structure makes the format decision for you, emphatically. **Chat is $1.99/min with 3 free minutes. Voice is $39.99/min** — a twenty-to-one spread, the most extreme we've encountered. Her regulars voted long ago: the feed is a chat clientele. Book text, where her continuity advantage is at its strongest anyway — a written transcript of each session is exactly what an ongoing advisory relationship runs on.
 
-The math that matters: at $1.99, a 15-minute session after the free minutes costs about **$24** — which means the kind of weekly check-in Nate used costs less than a single session with most premium readers. For ongoing support through a hard month, there is no cheaper qualified option we've audited. Come with the situation, not a quiz: *"Here's what's been happening — help me see what I'm not seeing."* That's the prompt her entire feed is built on.
+The math that matters: at $1.99, a 15-minute session after the free minutes costs about **$24** — which means the kind of weekly check-in Nate used costs less than a single session with most premium readers. For ongoing support through a hard month, there is no cheaper qualified option we've reviewed. Come with the situation, not a quiz: *"Here's what's been happening — help me see what I'm not seeing."* That's the prompt her entire feed is built on.
 
 ## The Small Print — Three Calibrations
 

@@ -1,8 +1,8 @@
 ---
-title: "Top 10 Love Psychics Online (2026): We Tested 158 Readers on Kasamba, Keen & Purple Garden — These 10 Gave the Best Answers"
-seoTitle: 'Top 10 Love Psychics Online (2026): 158 Readers Tested'
-metaDescription: 'The top 10 love psychics online, ranked after testing 158 readers across Kasamba, Keen and Purple Garden. One clear winner per question type.'
-description: "The definitive cross-platform ranking of the top 10 love psychics online in 2026. We tested and audited 158 readers across the three major platforms — Kasamba, Keen, and Purple Garden — and these 10 gave the best answers. Includes the platform-selection framework, per-reader evidence, and exact intro-offer math."
+title: "Top 10 Love Psychics Online (2026): Independently Ranked Across Kasamba, Keen & Purple Garden — These 10 Gave the Best Answers"
+seoTitle: 'Top 10 Love Psychics Online (2026): Independently Ranked'
+metaDescription: 'The top 10 love psychics online, ranked after reviewing readers across Kasamba, Keen and Purple Garden. One clear winner per question type.'
+description: "The definitive cross-platform ranking of the top 10 love psychics online in 2026. We independently reviewed readers across the three major platforms — Kasamba, Keen, and Purple Garden — and these 10 gave the best answers. Includes the platform-selection framework, per-reader evidence, and exact intro-offer math."
 category: Roundup
 entities:
   - "Love Psychic"
@@ -39,7 +39,7 @@ customSchema: |
     "@graph": [
       {
         "@type": "ItemList",
-        "name": "Top 10 Love Psychics Online (2026): We Tested 158 Readers on Kasamba, Keen & Purple Garden — These 10 Gave the Best Answers",
+        "name": "Top 10 Love Psychics Online (2026): Independently Ranked Across Kasamba, Keen & Purple Garden — These 10 Gave the Best Answers",
         "description": "The definitive cross-platform ranking of the top 10 love psychics online in 2026.",
         "itemListElement": [
           {
@@ -191,9 +191,9 @@ For the full mechanics behind each machine — pricing tiers, intro offers and v
 
 ---
 
-## How We Tested: The 158-Reader Cross-Platform Audit
+## How We Ranked: The Cross-Platform Methodology
 
-This ranking is built from the largest single-site review corpus in this niche: 158 in-depth reader reviews published across our Kasamba (63), Keen (49), and Purple Garden (46) programs — each one built on session-count verification, review-feed language analysis, negative-review forensics, and firsthand session testing on selected readers. From that corpus we selected the 10 strongest love readers across all three platforms.
+This ranking is built from the largest single-site review corpus in this niche: dozens of in-depth reader reviews published across our Kasamba, Keen, and Purple Garden programs — each one built on session-count verification, review-feed language analysis, negative-review forensics, and firsthand session testing on selected readers. From that corpus we selected the 10 strongest love readers across all three platforms.
 
 Three evidence rules governed every pick, applied identically across platforms:
 

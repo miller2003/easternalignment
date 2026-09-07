@@ -94,7 +94,7 @@ Her services text names the use case plainly: *"Powerful psychic insights can he
 
 ## The Booking Math
 
-At our audited **$6.99/min** (confirm the live rate — promos rotate), she's mid-tier pricing with top-tier credentials. New clients get **3 free minutes plus 50% off**, so a focused 15-minute first session runs about **$42** instead of $105. Given the "fast and accurate" signature across her reviews, you will not need the fifteen — but take them anyway on a first session, because the relay method has a texture worth settling into: give her the question cleanly, let the chain complete, and listen for the name at the end. That's the moment her regulars come back for.
+At our verified **$6.99/min** (confirm the live rate — promos rotate), she's mid-tier pricing with top-tier credentials. New clients get **3 free minutes plus 50% off**, so a focused 15-minute first session runs about **$42** instead of $105. Given the "fast and accurate" signature across her reviews, you will not need the fifteen — but take them anyway on a first session, because the relay method has a texture worth settling into: give her the question cleanly, let the chain complete, and listen for the name at the end. That's the moment her regulars come back for.
 
 One practical note: she's US-based and her feed shows steady daily traffic, so off-peak hours connect faster.
 

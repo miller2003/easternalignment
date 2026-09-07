@@ -1,6 +1,6 @@
 ---
 title: "A Divine Spirit Kasamba Review: A Perfect 5.0 Across 46,731 Readings — and the Client Who Kept Score for Five Years"
-description: "An independent review of A Divine Spirit on Kasamba: 46,731 readings since 2007 at a perfect 5.0 stars, with 3,683 likes against just 18 dislikes — the cleanest record we've audited on the platform. One client has taken notes on Maura's predictions for five years and puts her accuracy at 95 percent. We read her feed, her bio, and her numbers to see what a flawless score at this scale actually means. Chat $12.99/min, 3 free minutes for new clients."
+description: "An independent review of A Divine Spirit on Kasamba: 46,731 readings since 2007 at a perfect 5.0 stars, with 3,683 likes against just 18 dislikes — the cleanest record we've reviewed on the platform. One client has taken notes on Maura's predictions for five years and puts her accuracy at 95 percent. We read her feed, her bio, and her numbers to see what a flawless score at this scale actually means. Chat $12.99/min, 3 free minutes for new clients."
 platform: kasamba
 platformName: "Kasamba: A Divine Spirit"
 rating: 5.0
@@ -20,7 +20,7 @@ highlights:
   - "35 years of practice; tarot-based readings built on the full Major and Minor Arcana"
   - "Same $12.99/min for chat and voice — no premium for calling"
 pros:
-  - "99.5% positive feedback across 3,683 client ratings — the cleanest ratio we've audited"
+  - "99.5% positive feedback across 3,683 client ratings — the cleanest ratio we've reviewed"
   - "Documented long-range accuracy: five years of client notes, self-scored at 95%"
   - "Clients consistently flag her as non-judgmental — safe for messy situations"
   - "Voice and chat both $12.99/min — call her without paying a call premium"
@@ -86,7 +86,7 @@ customSchema: |
   }
 ---
 
-**Book A Divine Spirit if** you want the closest thing this industry offers to a sure bet: a reader with 46,731 Kasamba sessions since 2007, a perfect 5.0 rating, and a 99.5% like ratio — plus a client who has literally kept score for five years. New clients start with **3 free minutes**, so the first test costs nothing. Of the dozens of profiles we've audited across the platform, this is the one we show skeptics first.
+**Book A Divine Spirit if** you want the closest thing this industry offers to a sure bet: a reader with 46,731 Kasamba sessions since 2007, a perfect 5.0 rating, and a 99.5% like ratio — plus a client who has literally kept score for five years. New clients start with **3 free minutes**, so the first test costs nothing. Of the dozens of profiles we've reviewed across the platform, this is the one we show skeptics first.
 
 ## The Number That Shouldn't Survive This Many Readings
 

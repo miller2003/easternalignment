@@ -4,7 +4,7 @@ description: "Miss Bathsheba on Kasamba: 71,618 readings since 2006, 4.9 stars, 
 platform: kasamba
 platformName: "Kasamba: Miss Bathsheba"
 rating: 4.9
-verdict: "Miss Bathsheba pairs 71,618 readings since 2006 with the cleanest feedback ratio we've ever audited: 144 negative reviews against 23,229 positive — 0.6%. She's a second-generation clairvoyant whose tarot work clients describe in almost technical terms ('she was reading them right'), and her feed is full of daily regulars. At $4.99/min she's the best pure-tarot value in Kasamba's top tier. Book her for love and career questions where you want fast, honest, card-anchored answers."
+verdict: "Miss Bathsheba pairs 71,618 readings since 2006 with the cleanest feedback ratio we've ever reviewed: 144 negative reviews against 23,229 positive — 0.6%. She's a second-generation clairvoyant whose tarot work clients describe in almost technical terms ('she was reading them right'), and her feed is full of daily regulars. At $4.99/min she's the best pure-tarot value in Kasamba's top tier. Book her for love and career questions where you want fast, honest, card-anchored answers."
 affiliateUrl: /go/kasamba-miss-bathsheba/
 avatarUrl: /avatars/kasamba/miss-bathsheba-kasamba-review.jpg
 ogImage: "/avatars/kasamba/miss-bathsheba-kasamba-review.jpg"
@@ -16,7 +16,7 @@ seoTitle: "Miss Bathsheba Kasamba Review 2026: 4.9, $4.99/min"
 metaDescription: "Miss Bathsheba: 71,618 Kasamba readings since 2006, 4.9 stars, only 0.6% negative reviews. The tarot specialist clients visit daily."
 highlights:
   - "71,618 readings since 2006 — 20 years of continuous top-volume practice"
-  - "0.6% negative: 144 critical reviews out of 23,229 — the cleanest ratio we've audited"
+  - "0.6% negative: 144 critical reviews out of 23,229 — the cleanest ratio we've reviewed"
   - "Second-generation clairvoyant tarot specialist — 'a wonder with the tarot card' per clients"
   - "US-based, tagged 'FAST Professional Honest' — rapid, card-anchored sessions"
 pros:
@@ -68,7 +68,7 @@ customSchema: |
   }
 ---
 
-The conclusion first: **Miss Bathsheba has 71,618 readings since 2006, a 4.9 rating — and the single most impressive statistic we've audited this year: out of 23,229 written reviews, only 144 are negative. That's a 0.6% complaint rate across twenty years.** For context, beloved restaurants run 5–10% negative. She's a second-generation clairvoyant tarot reader whose clients don't just return — they return *daily* — and at **$4.99/min** she's the best pure-tarot value in Kasamba's top tier. The full case follows.
+The conclusion first: **Miss Bathsheba has 71,618 readings since 2006, a 4.9 rating — and the single most impressive statistic we've reviewed this year: out of 23,229 written reviews, only 144 are negative. That's a 0.6% complaint rate across twenty years.** For context, beloved restaurants run 5–10% negative. She's a second-generation clairvoyant tarot reader whose clients don't just return — they return *daily* — and at **$4.99/min** she's the best pure-tarot value in Kasamba's top tier. The full case follows.
 
 ## What 0.6% Negative Actually Proves
 
@@ -94,7 +94,7 @@ Kasamba's AI summary across her review history: *"rapid, accurate insights, deta
 
 ## The $4.99 Math
 
-At our audited **$4.99/min** (confirm the live rate — promos rotate), Miss Bathsheba sits in the platform's value mid-tier — remarkable for a 20-year veteran with her feedback ratio. With the new-client **3 free minutes plus 50% off**, a focused 15-minute first session runs about **$30** instead of $75.
+At our verified **$4.99/min** (confirm the live rate — promos rotate), Miss Bathsheba sits in the platform's value mid-tier — remarkable for a 20-year veteran with her feedback ratio. With the new-client **3 free minutes plus 50% off**, a focused 15-minute first session runs about **$30** instead of $75.
 
 Her speed changes the equation further. A reader whose signature is *instant* situation pickup — "hits the ground running" — doesn't burn your minutes on warm-up. Ten prepared minutes with a fast reader beats twenty-five with a slow one, at half the cost. Bring one formed question, concentrate your energy as she asks, and let the cards do the talking.
 
@@ -108,7 +108,7 @@ Her speed changes the equation further. A reader whose signature is *instant* si
 
 ## Should You Book Miss Bathsheba?
 
-**Book her if** you want fast, honest, tarot-anchored answers on love or career from the reader with the cleanest twenty-year feedback record we've audited — at a mid-tier price where a first session costs less than dinner.
+**Book her if** you want fast, honest, tarot-anchored answers on love or career from the reader with the cleanest twenty-year feedback record we've reviewed — at a mid-tier price where a first session costs less than dinner.
 
 **Skip her if** you need a non-tarot method or a purely passive session. She's a specialist with a doorway ritual, and both are part of why the ratio is 0.6%.
 
