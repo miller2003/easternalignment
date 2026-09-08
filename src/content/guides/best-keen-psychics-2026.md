@@ -615,7 +615,7 @@ Krys Britton is the value anomaly of our entire Keen audit: twenty years of prac
 
 **Honest limitation:** Oracle-card structure is a specific product — if you want tool-free pure intuition, book #3 or #5 instead.
 
-**Book her if:** You want verified accuracy at the lowest rate on this list — and you like answers you can act on.
+**Book her if:** You want documented consistency at the lowest rate on this list — and you like answers you can act on.
 
 [Get the undervalued read from Krys →](/go/keen-krys/)
 
@@ -647,7 +647,7 @@ Keen's intro offer is a single deep audition, not a sampler. The protocol:
 3. **Decide at minute four.** If the read is landing, continue into paid time — switching now costs the connection you just verified. If it is not, end at $1 and the lesson cost a dollar.
 4. **Choose phone or chat deliberately.** Keen's top bench is phone-first, but if you want a transcript to check in three weeks, book a chat-format reader (Kelly777 on this list) or request chat on the profile.
 
-For love-specific picks, see [the top 10 love psychics on Keen](/guides/top-love-psychics-keen/). For accuracy-only rankings, see [the most accurate psychics on Keen](/guides/most-accurate-psychics-keen/). For the platform itself, read [our full Keen review](/reviews/keen/).
+For love-specific picks, see [the top 10 love psychics on Keen](/guides/top-love-psychics-keen/). For accuracy-only rankings, see [the most accurate psychics on Keen](/guides/most-accurate-psychics-keen/), ranked by documented consistency. For the platform itself, read [our full Keen review](/reviews/keen/).
 
 ---
 

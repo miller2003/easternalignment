@@ -131,7 +131,7 @@ The quality of your question determines the quality of your answer. Here are the
 
 **"What is his current internal orientation toward long-term commitment in this relationship?"**
 
-This tells you whether the energetic direction is toward marriage, toward maintaining the status quo, or toward something else entirely. It is a present-tense read, which is where psychic perception is most accurate.
+This tells you whether the energetic direction is toward marriage, toward maintaining the status quo, or toward something else entirely. It is a present-tense read, which is where readers tend to give their most concrete information.
 
 ### Instead of "When will we get married?" ask:
 

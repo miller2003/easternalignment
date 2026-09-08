@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import LeftSidebar from '../../components/LeftSidebar.astro';
+import { siteStats } from '../../lib/siteStats';
 
 /* ── Existing written comparisons (kept, moved below the toolkit) ── */
 const comparisonModules = import.meta.glob('../../content/comparisons/*.md', { eager: true });
@@ -12,7 +13,7 @@ const comparisons = Object.entries(comparisonModules).map(([path, mod]: [string,
 
 /* ── Real, computed comparison data (see methodology note) ──
    Numbers sourced from reader frontmatter on this site:
-   - avg rating + advisors reviewed: computed across all published reviews
+   - avg rating + advisor profiles: computed across all published reviews
    - avg $/min: mean of every "$X.XX/min" mention in reviews
    - welcome-offer value + risk-free trial: editorial estimates from the
      real new-client offers (offers.ts), not invented statistics.            */
@@ -25,11 +26,11 @@ const PLATFORMS = [
     offer: '3 free minutes + 50% off',
     offerShort: '3 Free Min + 50% Off',
     valueEst: '~$75 est. value',
-    avgRating: 4.89,
-    reviewed: 35,
-    avgPrice: 9.38,
+    avgRating: siteStats.avgRating('kasamba'),
+    reviewed: siteStats.count('kasamba'),
+    avgPrice: 6.73,
     editorChoice: true,
-    scores: { rating: 100, price: 40, offer: 100, catalog: 56, risk: 58 },
+    scores: { rating: 100, price: 58, offer: 100, catalog: 100, risk: 58 },
   },
   {
     key: 'purple-garden',
@@ -39,11 +40,11 @@ const PLATFORMS = [
     offer: '$30 free credit',
     offerShort: '$30 Free Credit',
     valueEst: '$30 value',
-    avgRating: 4.86,
-    reviewed: 30,
-    avgPrice: 4.78,
+    avgRating: siteStats.avgRating('purple-garden'),
+    reviewed: siteStats.count('purple-garden'),
+    avgPrice: 5.98,
     editorChoice: false,
-    scores: { rating: 74, price: 100, offer: 40, catalog: 40, risk: 100 },
+    scores: { rating: 57, price: 100, offer: 40, catalog: 40, risk: 100 },
   },
   {
     key: 'keen',
@@ -53,20 +54,20 @@ const PLATFORMS = [
     offer: '5 minutes for $1',
     offerShort: '5 Min for $1',
     valueEst: '~$34 est. value',
-    avgRating: 4.82,
-    reviewed: 49,
-    avgPrice: 7.0,
+    avgRating: siteStats.avgRating('keen'),
+    reviewed: siteStats.count('keen'),
+    avgPrice: 7.04,
     editorChoice: false,
-    scores: { rating: 40, price: 61, offer: 45, catalog: 100, risk: 72 },
+    scores: { rating: 40, price: 40, offer: 45, catalog: 40, risk: 72 },
   },
 ];
 
 /* ── Radar axes: normalized 40–100 (best of three = 100) ── */
 const RADAR_AXES = [
-  { key: 'rating', label: 'Advisor Rating', vals: { kasamba: 100, 'purple-garden': 74, keen: 40 }, raw: { kasamba: '4.89★', 'purple-garden': '4.86★', keen: '4.82★' } },
-  { key: 'catalog', label: 'Advisor Catalog', vals: { kasamba: 56, 'purple-garden': 40, keen: 100 }, raw: { kasamba: '35 reviewed', 'purple-garden': '30 reviewed', keen: '49 reviewed' } },
+  { key: 'rating', label: 'Advisor Rating', vals: { kasamba: 100, 'purple-garden': 57, keen: 40 }, raw: { kasamba: `${siteStats.avgRating('kasamba')}★`, 'purple-garden': `${siteStats.avgRating('purple-garden')}★`, keen: `${siteStats.avgRating('keen')}★` } },
+  { key: 'catalog', label: 'Advisor Catalog', vals: { kasamba: 100, 'purple-garden': 40, keen: 40 }, raw: { kasamba: `${siteStats.count('kasamba')} profiles`, 'purple-garden': `${siteStats.count('purple-garden')} profiles`, keen: `${siteStats.count('keen')} profiles` } },
   { key: 'offer', label: 'Welcome Offer', vals: { kasamba: 100, 'purple-garden': 40, keen: 45 }, raw: { kasamba: '~$75', 'purple-garden': '$30', keen: '~$34' } },
-  { key: 'price', label: 'Price Value', vals: { kasamba: 40, 'purple-garden': 100, keen: 61 }, raw: { kasamba: '$9.38/min', 'purple-garden': '$4.78/min', keen: '$7.00/min' } },
+  { key: 'price', label: 'Price Value', vals: { kasamba: 58, 'purple-garden': 100, keen: 40 }, raw: { kasamba: '$6.73/min', 'purple-garden': '$5.98/min', keen: '$7.04/min' } },
   { key: 'risk', label: 'Risk-Free Trial', vals: { kasamba: 58, 'purple-garden': 100, keen: 72 }, raw: { kasamba: '3 free min', 'purple-garden': '$30 credit', keen: '5 min for $1' } },
   { key: 'breadth', label: 'Specialty Breadth', vals: { kasamba: 100, 'purple-garden': 100, keen: 100 }, raw: { kasamba: '8 / 8 areas', 'purple-garden': '8 / 8 areas', keen: '8 / 8 areas' } },
 ];
@@ -75,7 +76,7 @@ const RADAR_AXES = [
 const SCENARIOS = [
   { key: 'love', label: 'Love & Relationships', winner: 'kasamba', why: 'Highest average advisor rating (4.89★) and the deepest love & mediumship catalog in our reviews.' },
   { key: 'career', label: 'Career & Direction', winner: 'keen', why: 'Largest advisor pool (49 reviewed) means the best odds of a precise career match.' },
-  { key: 'money', label: 'Money & Finance', winner: 'purple-garden', why: 'Lowest rate ($4.78/min) plus a $30 credit stretches a finance question furthest.' },
+  { key: 'money', label: 'Money & Finance', winner: 'purple-garden', why: 'Lowest average rate ($5.98/min) plus a $30 credit stretches a finance question furthest.' },
   { key: 'first', label: 'First-Timer / Lowest Risk', winner: 'purple-garden', why: 'A $30 free credit + the cheapest per-minute rate = the smallest commitment to start.' },
   { key: 'tarot', label: 'Tarot & Astrology', winner: 'kasamba', why: 'Top-rated readers and full tarot/astrology coverage across our reviewed advisors.' },
   { key: 'spiritual', label: 'Spiritual & Mediumship', winner: 'keen', why: 'Broadest catalog with strong spiritual, energy, and mediumship specialists.' },
@@ -110,10 +111,10 @@ const MATRIX_ROWS = [
   { group: 'Welcome Offer', feature: 'New-client welcome deal', cells: { kasamba: '3 free min + 50% off', 'purple-garden': '$30 free credit', keen: '5 min for $1' }, type: 'text' },
   { group: 'Welcome Offer', feature: 'Estimated welcome value', cells: { kasamba: '~$75', 'purple-garden': '$30', keen: '~$34' }, type: 'text' },
   { group: 'Welcome Offer', feature: 'Risk-free to try', cells: { kasamba: 'Partial (3 min)', 'purple-garden': 'Full ($30 credit)', keen: 'Near-free (5 min/$1)' }, type: 'text' },
-  { group: 'Pricing', feature: 'Average rate (our reviews)', cells: { kasamba: '$9.38/min', 'purple-garden': '$4.78/min', keen: '$7.00/min' }, type: 'text' },
+  { group: 'Pricing', feature: 'Average rate (published profiles)', cells: { kasamba: '$6.73/min', 'purple-garden': '$5.98/min', keen: '$7.04/min' }, type: 'text' },
   { group: 'Pricing', feature: 'Free to join', cells: { kasamba: true, 'purple-garden': true, keen: true }, type: 'bool' },
-  { group: 'Quality', feature: 'Avg advisor rating (reviewed)', cells: { kasamba: 4.89, 'purple-garden': 4.86, keen: 4.82 }, type: 'rating' },
-  { group: 'Quality', feature: 'Advisors individually reviewed', cells: { kasamba: 35, 'purple-garden': 30, keen: 49 }, type: 'num' },
+  { group: 'Quality', feature: 'Avg advisor rating (published profiles)', cells: { kasamba: siteStats.avgRating('kasamba'), 'purple-garden': siteStats.avgRating('purple-garden'), keen: siteStats.avgRating('keen') }, type: 'rating' },
+  { group: 'Quality', feature: 'Advisor profiles published', cells: { kasamba: siteStats.count('kasamba'), 'purple-garden': siteStats.count('purple-garden'), keen: siteStats.count('keen') }, type: 'num' },
   { group: 'Coverage', feature: 'Specialty areas covered', cells: { kasamba: '8 / 8', 'purple-garden': '8 / 8', keen: '8 / 8' }, type: 'text' },
   { group: 'Coverage', feature: 'iOS + Android app', cells: { kasamba: true, 'purple-garden': true, keen: true }, type: 'bool' },
   { group: 'Coverage', feature: 'Satisfaction guarantee', cells: { kasamba: 'Per-advisor', 'purple-garden': 'Up to $50 credit', keen: 'Per-advisor' }, type: 'text' },
@@ -380,7 +381,7 @@ const FACTORS = [
             <span class="eyebrow">Welcome Offers</span>
             <h2>The real new-client deals</h2>
             <p class="section-sub text-muted">
-              No promo codes required — tap through and the offer applies at sign-up.
+              The offer is applied through our promotional link. If the signup page asks for a code, use the current code shown there — the credit itself is unchanged.
             </p>
           </div>
 
@@ -396,7 +397,7 @@ const FACTORS = [
                 <div class="offer-card__meta">
                   <span>Avg {p.avgRating.toFixed(2)}★</span>
                   <span>·</span>
-                  <span>{p.reviewed} reviewed</span>
+                  <span>{p.reviewed} profiles</span>
                   <span>·</span>
                   <span>${p.avgPrice.toFixed(2)}/min</span>
                 </div>
@@ -432,8 +433,10 @@ const FACTORS = [
         </section>
 
         <p class="comp-methodology text-muted">
-          <strong>Methodology:</strong> Average ratings, advisor counts and per-minute rates are computed from the
-          individual psychic reviews published on this site. Welcome-offer value and risk-free-trial scores are
+          <strong>Methodology:</strong> Average ratings and advisor counts are computed from the
+          individual psychic reviews published on this site. Average rate = arithmetic mean of the primary
+          per-minute rates recorded across those published profiles, computed 2026-09-08; promotional rates
+          excluded. Welcome-offer value and risk-free-trial scores are
           editorial estimates based on each platform's genuine new-client promotion. Specialty breadth reflects the
           eight categories (love, career, money, tarot, astrology, mediumship, dreams, spiritual) covered in our
           reviewed advisors. This is an affiliate site; recommendations are independent of commission.

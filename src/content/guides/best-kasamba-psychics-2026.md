@@ -481,7 +481,7 @@ Spirit Amy owns the cleanest ledger we have ever audited: 17,297 likes against 2
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
-        <span class="reader-summary__value">Statistically the safest premium booking on Kasamba. Her dated receipts include a meeting predicted with a date and a physical description that the client reports "happened exactly."</span>
+        <span class="reader-summary__value">The steadiest premium track record on Kasamba. Her dated receipts include a meeting predicted with a date and a physical description that the client reports "happened exactly."</span>
       </div>
     </div>
   </div>
@@ -497,7 +497,7 @@ Mediumship is the easiest specialty to fake and the hardest to verify, which is 
 
 **Book her if:** Your question involves loss, a loved one who has passed, or closure that has not come on its own.
 
-[Book the safest premium medium on Kasamba →](/go/kasamba-spirit-amy/)
+[Book the most consistent premium medium on Kasamba →](/go/kasamba-spirit-amy/)
 
 ---
 

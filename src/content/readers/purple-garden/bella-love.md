@@ -1,10 +1,10 @@
 ---
 title: "Bella Love Purple Garden Review 2026: $24.99 a Minute — Is the Platform's Most Accurate Reader Worth It?"
-description: "An independent review of Bella Love on Purple Garden: the most expensive reader we've ever reviewed at $24.99/min — and the most decorated, with a 'most accurate' badge, a 91% accuracy score, a perfect 5.0 across 50,917 readings, and one negative review in her last 150. We did the math on what a premium reading actually buys. $30 free credit for new clients."
+description: "An independent review of Bella Love on Purple Garden: the most expensive reader we've ever reviewed at $24.99/min — and the most decorated, with a 'most accurate' badge, a platform-reported 91% accuracy score, a perfect 5.0 across 50,917 readings, and one negative review in her last 150. We did the math on what a premium reading actually buys. $30 free credit for new clients."
 platform: purple-garden
 platformName: "Purple Garden: Bella Love"
 rating: 5.0
-verdict: "Bella Love is Purple Garden's premium outlier: $24.99/min — five to twelve times the rate of every other reader in our audit series — matched against credentials no one else in the series holds: a platform 'most accurate' badge, a 91% accuracy score, a perfect 5.0 across 50,917 readings since 2019, and 17,000 likes against just 96 dislikes (99.4%, the cleanest ratio we've ever measured). A video-first, triple-clair reader specializing in twin-flame and soulmate questions, she's the answer to a specific client problem: when the question matters enough that being wrong costs more than the reading. The $30 credit covers your first minute-plus — use it to feel the connection, then decide with evidence in hand."
+verdict: "Bella Love is Purple Garden's premium outlier: $24.99/min — five to twelve times the rate of every other reader in our audit series — matched against credentials no one else in the series holds: a platform 'most accurate' badge, a platform-reported 91% accuracy score, a perfect 5.0 across 50,917 readings since 2019, and 17,000 likes against just 96 dislikes (99.4%, the cleanest ratio we've ever measured). A video-first, triple-clair reader specializing in twin-flame and soulmate questions, she's the answer to a specific client problem: when the question matters enough that being wrong costs more than the reading. The $30 credit covers your first minute-plus — use it to feel the connection, then decide with evidence in hand."
 affiliateUrl: /go/purple-garden-bella-love/
 avatarUrl: /avatars/purple-garden/bella-love.jpg
 ogImage: "/avatars/purple-garden/bella-love.jpg"
@@ -13,10 +13,10 @@ pricing: "Chat & Voice $24.99/min · $30 free credit on your first purchase"
 bestFor: "High-stakes questions — twin flame, soulmate, the relationship you can't afford to misread — where accuracy matters more than the per-minute rate"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/bella-love/"
 seoTitle: "Bella Love Purple Garden Review 2026: $24.99/min, 5.0"
-metaDescription: "Bella Love on Purple Garden: $24.99/min — 'most accurate' badge, 91% accuracy, 5.0 across 50,917 readings, 99.4% approval."
+metaDescription: "Bella Love on Purple Garden: $24.99/min — 'most accurate' badge, platform-reported 91% accuracy, 5.0 across 50,917 readings, 99.4% approval."
 highlights:
   - "Perfect 5.0 across 50,917 readings since 2019 — at a premium $24.99/min"
-  - "Platform 'most accurate' badge plus a 91% accuracy score"
+  - "Platform 'most accurate' badge plus a platform-reported 91% accuracy score"
   - "17,000 likes vs 96 dislikes — 99.4%, the cleanest ratio we've ever reviewed"
   - "Video-first method: she reads the energy around you, on camera"
 pros:
@@ -40,7 +40,7 @@ customSchema: |
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Bella Love Purple Garden Review 2026: $24.99/min, 5.0",
-    "description": "Bella Love on Purple Garden: $24.99/min — 'most accurate' badge, 91% accuracy, 5.0 across 50,917 readings, 99.4% approval.",
+    "description": "Bella Love on Purple Garden: $24.99/min — 'most accurate' badge, platform-reported 91% accuracy, 5.0 across 50,917 readings, 99.4% approval.",
     "image": "https://easternalignment.com/avatars/purple-garden/bella-love.jpg",
     "author": {
       "@type": "Person",

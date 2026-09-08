@@ -10,7 +10,7 @@ avatarUrl: /avatars/kasamba/divine-spirit-kasamba-review.jpg
 ogImage: "/avatars/kasamba/divine-spirit-kasamba-review.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $12.99/min · Voice $12.99/min · 3 free minutes for new clients"
-bestFor: "Anyone who wants the statistically safest pair of hands on Kasamba — a 19-year veteran with a documented five-year track record — especially for love, life-direction, and tarot-based questions where you want the answer in writing"
+bestFor: "Anyone who wants the steadiest track record on Kasamba — a 19-year veteran with a documented five-year track record — especially for love, life-direction, and tarot-based questions where you want the answer in writing"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/divine-spirit-kasamba-review/
 seoTitle: "A Divine Spirit Kasamba Review: 5.0 Stars, 46,731 Readings"
 metaDescription: "A Divine Spirit on Kasamba: 46,731 readings since 2007 at a perfect 5.0 — one client kept five years of notes and says 95% came true. Chat $12.99/min."

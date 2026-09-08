@@ -112,7 +112,7 @@ customSchema: |
             "name": "What is a fair price for a good tarot reading on Kasamba?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "On this list: $1.99–$4.99/min for the value tier (tarot, Andi, Tabitha, Elizabeth, Bathsheba) and $12.99/min for the documented-accuracy premium tier (A Divine Spirit). A focused 10-minute session at value rates costs $20–$50; the new-client promo (3 free minutes + 50% off the first session) halves your first verification read. --- For the all-specialty platform ranking, see the best Kasamba psychics of 2026. For readers ranked by verified accuracy across all methods, see the most accurate psychics on Kasamba. For love-focused tarot picks across platforms, see the best tarot readers for love. For the platform itself, read our full Kasamba review. Test a Tarot Reader With 3 Free Minutes →"
+              "text": "On this list: $1.99–$4.99/min for the value tier (tarot, Andi, Tabitha, Elizabeth, Bathsheba) and $12.99/min for the documented-accuracy premium tier (A Divine Spirit). A focused 10-minute session at value rates costs $20–$50; the new-client promo (3 free minutes + 50% off the first session) halves your first verification read. --- For the all-specialty platform ranking, see the best Kasamba psychics of 2026. For readers ranked by documented consistency across all methods, see the most accurate psychics on Kasamba. For love-focused tarot picks across platforms, see the best tarot readers for love. For the platform itself, read our full Kasamba review. Test a Tarot Reader With 3 Free Minutes →"
             }
           }
         ]
@@ -461,7 +461,7 @@ On this list: $1.99–$4.99/min for the value tier (tarot, Andi, Tabitha, Elizab
 
 ---
 
-For the all-specialty platform ranking, see [the best Kasamba psychics of 2026](/guides/best-kasamba-psychics-2026/). For readers ranked by verified accuracy across all methods, see [the most accurate psychics on Kasamba](/guides/most-accurate-psychics-kasamba/). For love-focused tarot picks across platforms, see [the best tarot readers for love](/guides/best-tarot-readers-for-love/). For the platform itself, read [our full Kasamba review](/reviews/kasamba/).
+For the all-specialty platform ranking, see [the best Kasamba psychics of 2026](/guides/best-kasamba-psychics-2026/). For readers ranked by documented consistency across all methods, see [the most accurate psychics on Kasamba](/guides/most-accurate-psychics-kasamba/). For love-focused tarot picks across platforms, see [the best tarot readers for love](/guides/best-tarot-readers-for-love/). For the platform itself, read [our full Kasamba review](/reviews/kasamba/).
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
   <a href="/go/kasamba" class="btn btn--primary">Test a Tarot Reader With 3 Free Minutes →</a>

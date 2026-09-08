@@ -120,7 +120,7 @@ That may sound inadequate for a substantive reading, but it is exactly the right
 
 ## 3. The Smartest Way to Use Your $30 Credit
 
-The credit is finite and one-time, which means the stakes of how you spend it are higher than any subsequent session. Here is the protocol I recommend after 12 months of testing the platform.
+The credit is finite and one-time, which means the stakes of how you spend it are higher than any subsequent session. Here is the protocol I recommend after months of testing the platform.
 
 ### Step 1: Do the Pre-Session Research Before You Deposit
 
@@ -224,7 +224,7 @@ Depending on the advisor's rate and format, yes — but "complete" is relative. 
 
 ---
 
-For the full platform audit covering video modality economics, the Journeys accountability system, and individual advisor assessments, read [our complete Purple Garden review](/reviews/purple-garden/). For a love-psychics shortlist across all question types, see [the best love psychics on Purple Garden](/guides/best-love-psychics-purple-garden/). For readers with verified accuracy track records, the [brutally honest Purple Garden readers guide](/guides/brutally-honest-psychics-purple-garden/) explains how to use the Journeys ledger to identify them. For post-breakup questions specifically, [the Purple Garden ex-recovery picks](/guides/best-purple-garden-psychics-ex-recovery/) covers the five advisors with the strongest reconciliation reading records. And if you are comparing the video-first experience against Kasamba's chat-and-transcript model, the [Purple Garden vs Kasamba comparison](/comparisons/purple-garden-vs-kasamba/) is the definitive side-by-side breakdown.
+For the full platform audit covering video modality economics, the Journeys accountability system, and individual advisor assessments, read [our complete Purple Garden review](/reviews/purple-garden/). For a love-psychics shortlist across all question types, see [the best love psychics on Purple Garden](/guides/best-love-psychics-purple-garden/). For readers with documented consistency records, the [brutally honest Purple Garden readers guide](/guides/brutally-honest-psychics-purple-garden/) explains how to use the Journeys ledger to identify them. For post-breakup questions specifically, [the Purple Garden ex-recovery picks](/guides/best-purple-garden-psychics-ex-recovery/) covers the five advisors with the strongest reconciliation reading records. And if you are comparing the video-first experience against Kasamba's chat-and-transcript model, the [Purple Garden vs Kasamba comparison](/comparisons/purple-garden-vs-kasamba/) is the definitive side-by-side breakdown.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
   <a href="/go/purple-garden" class="btn btn--primary">Claim Your $30 Purple Garden Credit →</a>

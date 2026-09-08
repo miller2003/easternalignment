@@ -44,7 +44,7 @@ Love is the category that brings most people to a psychic platform for the first
 *"You are in a separation phase — divine timing is working."* — Followed by months of paid waiting.
 *"There is a dark energy blocking your reunion."* — Followed by additional fees to remove it.
 
-The question this review answers is whether Purple Garden's video-first architecture actually protects seekers from these patterns, or whether it is the same machine with a better-designed interface. After 12 months of systematic testing across multiple advisors, formats, and question types, the honest answer is: video genuinely changes the dynamics — but only for people who use it correctly.
+The question this review answers is whether Purple Garden's video-first architecture actually protects seekers from these patterns, or whether it is the same machine with a better-designed interface. After months of systematic testing across multiple advisors, formats, and question types, the honest answer is: video genuinely changes the dynamics — but only for people who use it correctly.
 
 Here is what that actually means.
 
@@ -60,7 +60,7 @@ Purple Garden's live video format removes that cover. On camera, you watch the a
 
 This visual accountability matters most precisely for love readings, because love readings are where reassurance is most profitable. A reader who must react to cards on camera, in real time, is structurally less able to manage the reading toward the client's preferred outcome than a reader typing into a chat interface.
 
-After 12 months, I can say with confidence: the advisors who consistently produce the most verifiable readings on Purple Garden are those whose video sessions show authentic card-response behavior — who pause at difficult draws, whose facial expression precedes their interpretation, and who acknowledge uncertainty rather than projecting confidence about unfalsifiable outcomes.
+After months of testing, I can say with confidence: the advisors who consistently produce the most verifiable readings on Purple Garden are those whose video sessions show authentic card-response behavior — who pause at difficult draws, whose facial expression precedes their interpretation, and who acknowledge uncertainty rather than projecting confidence about unfalsifiable outcomes.
 
 ### What Video Cannot Fix
 
@@ -144,7 +144,7 @@ Purple Garden's three formats — live video, voice call, and live chat — are 
 
 ## 4. What Good Love Reading Looks Like on Purple Garden — and What Bad Looks Like
 
-After 12 months of testing, the pattern differences between high-value and low-value love sessions on Purple Garden are consistent.
+After months of testing, the pattern differences between high-value and low-value love sessions on Purple Garden are consistent.
 
 ### High-Value Session Markers
 

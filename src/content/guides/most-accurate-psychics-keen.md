@@ -20,8 +20,8 @@ pros:
   - "Defines three accuracy categories and matches each reader to their strongest type"
 cons:
   - "The most accurate readers for phone-based timeline work command premium per-minute rates"
-  - "Keen's vast roster makes finding verified accuracy without this guide extremely time-consuming"
-verdict: "David7 and Arradaza represent the peak of verified accuracy for timeline and pattern-reading work; Master Sher for methodological transparency and Tarot-grounded accountability; Flora Knows All for empathic depth on emotional and psychological questions."
+  - "Keen's vast roster makes finding dependable, well-documented readers without this guide extremely time-consuming"
+verdict: "David7 and Arradaza hold the strongest documented track records for timeline and pattern-reading work; Master Sher for methodological transparency and Tarot-grounded accountability; Flora Knows All for empathic depth on emotional and psychological questions."
 affiliateUrl: /go/keen
 freeOffer: 5 minutes for $1 for new clients
 pricing: From $3.59/min to $20.00+/min

@@ -518,7 +518,7 @@ Inspired Within — Charmaine to her regulars — is a certified medium and Reik
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">The Receipt</span>
-        <span class="reader-summary__value">The situation was closed — a formal decline. The prediction was falsifiable — "you would get it." The client acted on it, and the outcome reversed. That is a verified accuracy event, not a feeling.</span>
+        <span class="reader-summary__value">The situation was closed — a formal decline. The prediction was falsifiable — "you would get it." The client acted on it, and the outcome reversed. That is a checkable outcome, not a feeling.</span>
       </div>
     </div>
   </div>

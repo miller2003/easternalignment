@@ -52,7 +52,7 @@ const link = goPath(platform);
 const facts: { label: string; value: string }[] = [];
 if (pricing) facts.push({ label: 'Pricing', value: pricing });
 if (advisorsReviewed) {
-  facts.push({ label: 'Advisors', value: `${advisorsReviewed} independently reviewed` });
+  facts.push({ label: 'Advisors', value: `${advisorsReviewed} reader profiles published` });
 }
 facts.push({ label: 'Commitment', value: 'Pay per minute · No subscription' });
 ---
@@ -91,7 +91,7 @@ facts.push({ label: 'Commitment', value: 'Pay per minute · No subscription' });
   <!-- Trust pills row (under the header) -->
   <div class="score-panel__pills">
     {badge && <span class="score-panel__pill score-panel__pill--choice">★ {badge}</span>}
-    <span class="score-panel__pill score-panel__pill--trusted">✓ Independently tested</span>
+    <span class="score-panel__pill score-panel__pill--trusted">✓ Independently researched</span>
   </div>
 
   <div class="score-panel__divider" aria-hidden="true"></div>

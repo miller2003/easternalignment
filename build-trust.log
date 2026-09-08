@@ -1,0 +1,12 @@
+
+> easternalignment@0.0.1 build
+> astro build
+
+[2m14:40:29[22m [34m[content][39m Syncing content
+[2m14:40:29[22m [34m[content][39m Synced content
+[2m14:40:30[22m [34m[types][39m Generated [2m1.28s[22m
+[2m14:40:30[22m [34m[build][39m output: [34m"static"[39m
+[2m14:40:30[22m [34m[build][39m mode: [34m"static"[39m
+[2m14:40:30[22m [34m[build][39m directory: [34mC:\Users\samja\Desktop\site\easternalignment\dist\[39m
+[2m14:40:30[22m [34m[build][39m Collecting build info...
+[2m14:40:30[22m [34m[build][39m [32m✓ Completed in 1.36s.[39m

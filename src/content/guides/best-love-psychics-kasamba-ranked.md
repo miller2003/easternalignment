@@ -83,7 +83,7 @@ Before you connect with an advisor, you must understand the structural limits an
 
 ### The Power of "Specific Person" Readings
 
-When you ask about a specific person—an ex, a current partner, or a complicated situationship—a skilled clairsentient or telepathic reader can bypass the things that person *says* and tune directly into what they actually *feel*. This is critical when you are dealing with an avoidant partner or someone who has shut down communication. The reading acts as a diagnostic tool, identifying the core fear or external pressure that is driving their behavior.
+When you ask about a specific person—an ex, a current partner, or a complicated situationship—the readers we rank here frame their work as intuitive insight into that person's emotional state. We treat that as an interpretive service rather than verified access to someone else's thoughts. Used that way, a reading functions like a structured second opinion: it surfaces the core fear or external pressure that may be driving the behavior, and gives you a framework to test against what actually happens. This matters most when you are dealing with an avoidant partner or someone who has shut down communication, because the goal is a hypothesis about the dynamic — not a verdict about their private thoughts.
 
 ### Timelines vs. Trajectories
 
@@ -205,7 +205,7 @@ With eighteen years on Kasamba and over 134,000 completed sessions, Stefans' dat
 **Pros:**
 - Platform-verified as one of the most experienced readers globally.
 - Extreme clarity; does not waste paid time shuffling cards.
-- Highly accurate regarding male psychological withdrawal.
+- Frequently cited by clients for insight into avoidant-withdrawal patterns.
 
 **Cons:**
 - $19.99/min rate makes extended exploratory sessions prohibitively expensive.

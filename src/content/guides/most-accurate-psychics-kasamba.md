@@ -21,7 +21,7 @@ pros:
 cons:
   - "High-accuracy readers at the top of this list command premium rates"
   - "Session availability for the most sought-after readers can involve wait times"
-verdict: "Love Stefans and Seek Chelle represent the peak of verified accuracy on Kasamba for relationship questions; Elizabeth holds the strongest accuracy-to-cost ratio on the entire platform."
+verdict: "Love Stefans and Seek Chelle hold the strongest documented track records on Kasamba for relationship questions; Elizabeth holds the strongest consistency-to-cost ratio on the entire platform."
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $2.10/min to $19.99/min
@@ -250,7 +250,7 @@ Golden Eye's accuracy is self-verifying in a particularly useful way: because sh
 
 ### #4 Elizabeth — Best Accuracy-to-Cost Ratio on the Platform
 
-Elizabeth is the strategic pick for seekers who need high accuracy at a price point that does not compound the financial pressure of a relationship crisis. At $2.40/min — a rate she has deliberately maintained despite being Kasamba's top-ranked advisor by some metrics — she represents an extraordinary efficiency in the relationship between verified accuracy and session cost.
+Elizabeth is the strategic pick for seekers who need high accuracy at a price point that does not compound the financial pressure of a relationship crisis. At $2.40/min — a rate she has deliberately maintained despite being Kasamba's top-ranked advisor by some metrics — she represents an extraordinary efficiency in the relationship between documented consistency and session cost.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth Kasamba" class="reader-summary__avatar" />

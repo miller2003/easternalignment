@@ -133,7 +133,7 @@ First, **the price.** $11.99/min is premium-tier, full stop. The counterweight i
 
 ## Should You Book Insight by Soni?
 
-**Book her** if you want the safest premium booking on Purple Garden — the cleanest ledger ever recorded, a perfect 5.0, dated predictions that land, and a client who came back sixty-nine times. Prepare the names and birthdates, claim the credit, ask the real question.
+**Book her** if you want the steadiest premium booking on Purple Garden — the cleanest ledger ever recorded, a perfect 5.0, dated predictions that land, and a client who came back sixty-nine times. Prepare the names and birthdates, claim the credit, ask the real question.
 
 **Skip her** if the budget tier is tonight's plan or you need U.S.-timezone hours. For everyone else: ten dislikes. Ever. The rest of the platform is playing a different game.
 

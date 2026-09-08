@@ -37,7 +37,7 @@ for (const k of Object.keys(readersByPlatform)) {
 }
 
 const totalReaders = allReaders.length;
-const totalReviewed = PLATFORM_PRIORITY.reduce((sum, k) => sum + PLATFORM_OFFERS[k].reviewedCount, 0);
+const totalReviewed = Object.values(readersByPlatform).reduce((sum, arr) => sum + (arr as any[]).length, 0);
 const editorChoice = PLATFORM_PRIORITY[0]; // kasamba
 
 const breadcrumbSchema = {
@@ -52,9 +52,9 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title="Psychic Reading Coupons & Free Offers (2026)"
-  description="Verified 2026 psychic reading coupons and welcome offers from Kasamba, Purple Garden, and Keen — plus per-reader bonuses on individual psychics. No promo code needed; just tap to claim your free minutes or credit."
+  description="Verified 2026 psychic reading coupons and welcome offers from Kasamba, Purple Garden, and Keen — plus per-reader bonuses on individual psychics. Claimed through our promotional link; if a signup page asks for a code, use the code shown on that page."
   seoTitle="Psychic Reading Coupons & Free Offers 2026 — Kasamba, Purple Garden & Keen Deals"
-  metaDescription="Verified 2026 psychic reading coupons & welcome offers: Kasamba (3 free minutes + 50% off), Purple Garden ($30 free credit) & Keen (5 minutes for $1). Plus per-reader bonuses. No code needed."
+  metaDescription="Verified 2026 psychic reading coupons & welcome offers: Kasamba (3 free minutes + 50% off), Purple Garden ($30 free credit) & Keen (5 minutes for $1). Plus per-reader bonuses — claimed via our promotional link."
   canonicalUrl="https://easternalignment.com/coupons/"
   jsonLd={breadcrumbSchema}
 >
@@ -65,8 +65,8 @@ const breadcrumbSchema = {
         <span class="eyebrow eyebrow--center">The Big Three</span>
         <h1 class="section-title">Psychic Reading Coupons &amp; Free Offers</h1>
         <p class="section-desc">
-          Every new-client deal below is pulled live from each platform. Claim in one tap —
-          your bonus is applied automatically at checkout.
+          Every new-client deal below mirrors each platform's current new-client promotion. Claim through our
+          promotional link — if the signup page asks for a code, use the code shown there.
         </p>
       </div>
 
@@ -91,7 +91,7 @@ const breadcrumbSchema = {
                   />
                   {offer.name}
                 </span>
-                <span class="coupon-card__count">{offer.reviewedCount} advisors reviewed</span>
+                <span class="coupon-card__count">{(readersByPlatform[key] || []).length} reader profiles published</span>
               </div>
 
               <div class="coupon-card__offer">

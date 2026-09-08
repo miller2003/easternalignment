@@ -21,7 +21,7 @@ pros:
 cons:
   - "The most accurate video readers have peak-hour queues of 15–20 minutes"
   - "Journeys verification requires 10 minutes of pre-session research to use correctly"
-verdict: "Satie Readings and Advisor Vanessa lead for video-verified accuracy; Tarot by Elena delivers the most auditable accuracy via chat transcript; Psychic Medium Chloe holds the strongest Journeys verification record for specific-detail accuracy."
+verdict: "Satie Readings and Advisor Vanessa lead for video-documented consistency; Tarot by Elena delivers the most auditable record via chat transcript; Psychic Medium Chloe holds the strongest Journeys record for specific, checkable predictions."
 affiliateUrl: /go/purple-garden
 freeOffer: $30 credit on first purchase
 pricing: From $0.99/min to $15.00+/min
@@ -73,7 +73,7 @@ Accuracy on a psychic platform is not a platform-level property. It is a reader-
 
 Purple Garden is different, and the difference is not the video introductions — though those matter. It is the Journeys feature: a public prediction ledger where clients document what an advisor told them and then return weeks or months later to confirm or contradict the outcome. Journeys entries are permanent; advisors cannot edit or delete them; and a reader with a strong Journeys track record has verifiable accuracy evidence that exists nowhere else in the psychic industry at this scale.
 
-This ranking is built on that evidence. Here is how we read it — and which five readers have the strongest verified accuracy on Purple Garden in 2026.
+This ranking is built on that evidence. Here is how we read it — and which five readers have the strongest documented track records on Purple Garden in 2026.
 
 ---
 
@@ -188,7 +188,7 @@ The Journeys entries relevant to Truthful Love's accuracy are clustered around p
 **Journeys use:** Look specifically for entries about no-contact situations with specific predictions about when contact resumed or whether it did.
 
 **Accuracy category:** Relationship-trajectory accuracy at accessible rates.
-**Best use case:** Budget-conscious seekers who want verified accuracy without premium rates, for focused post-breakup and no-contact questions.
+**Best use case:** Budget-conscious seekers who want documented consistency without premium rates, for focused post-breakup and no-contact questions.
 
 [Read the full Truthful Love review →](/reviews/purple-garden/truthful-love/)
 
