@@ -3,7 +3,7 @@ title: "Love Psychic Indi Kasamba Review (2026): 102,522 Readings, a Gold Medal 
 description: "Love Psychic Indi on Kasamba: 102,522 readings since 2008, 4.9 stars, $7.99/min, and a credential stack we've never seen — Gold Medal Vedic astrologer, MBA, certified angelic healer, NLP practitioner. Real client reviews, the pricing math, and who should book."
 platform: kasamba
 platformName: "Kasamba: Love Psychic Indi"
-rating: 4.9
+rating: 4.4
 verdict: "Love Psychic Indi pairs 18 years and 102,522 readings of platform proof with the most credentialed background we've reviewed — Gold Medal Vedic astrologer, MBA, certified energy healer, NLP practitioner. Clients who've read with him for years report predictions with specific timelines that came to pass, delivered without sugarcoating. At $7.99/min he sits in the value mid-tier: the right pick if you want a direct, structured, timeline-driven answer to a love or career question."
 affiliateUrl: /go/kasamba-love-psychic-indi/
 avatarUrl: /avatars/kasamba/love-psychic-indi-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Love Psychic Indi has 102,522 Kasamba readings since 2008 at a 4.9 rating, pairing psychic work with credentialed Vedic astrology (Gold Medal, Horary), an MBA, and NLP training. Long-term clients report timeline-specific predictions that came to pass, delivered in a direct, no-sugarcoat style at $7.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

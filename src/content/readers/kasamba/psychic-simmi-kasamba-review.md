@@ -4,7 +4,7 @@ description: "An independent review of Psychic Simmi on Kasamba. She's a quiet, 
 seoTitle: 'Psychic Simmi Kasamba Review (2026): 4.9-Star Oracle Reader'
 metaDescription: 'Psychic Simmi on Kasamba: a 4.9-star oracle-card reader with 29,000+ readings. We review her method, real quotes, and who should book.'
 platformName: 'Kasamba: Psychic Simmi'
-rating: 4.9
+rating: 4.6
 verdict: "An independent review of Psychic Simmi on Kasamba. She's a quiet, detail-oriented 4.9-star oracle-card reader whose grounded interpretations avoid theatrical cold-reading tactics."
 affiliateUrl: /go/kasamba-simmi/
 avatarUrl: /avatars/kasamba/psychic-simmi-kasamba-review.png

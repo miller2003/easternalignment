@@ -3,7 +3,7 @@ title: "Psychic Jeanne Purple Garden Review (2026): A Fifth-Generation, Licensed
 description: "Psychic Jeanne on Purple Garden: 25,083 readings since 2016, a 4.8, fifth-generation psychic and licensed reader in Davenport, Iowa. Chat $5.99/min. One client thanked her for support through a 'difficult state of mind.' We read the receipts — bad reviews included — to find out who should book her."
 platform: purple-garden
 platformName: "Purple Garden: Psychic Jeanne"
-rating: 4.8
+rating: 4.5
 verdict: "Psychic Jeanne is a fifth-generation, licensed psychic with 25,083 Purple Garden readings since 2016 and a 4.8, specializing in love with clear boundaries and no sugarcoating. Chat $5.99/min. Book her for a steady, honest read through a hard season; skip her if you want a reader to answer an endless list of questions."
 affiliateUrl: /go/purple-garden-psychic-jeanne/
 avatarUrl: /avatars/purple-garden/psychic-jeanne.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Psychic Jeanne is a fifth-generation, licensed psychic with 25,083 Purple Garden readings since 2016 and a 4.8, specializing in love with clear boundaries and no sugarcoating. Chat $5.99/min. Real client stories and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

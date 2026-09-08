@@ -3,7 +3,7 @@ title: "Ambers Light Kasamba Review (2026): 74,229 Readings Since 2004 — the C
 description: "Ambers Light on Kasamba: 74,229 readings since 2004 (22 years), 4.9 stars, $6.99/min chat. An empath and Reiki healer specializing in closure and grief questions — with a stated policy of never inventing timelines. Real reviews, honest caveats, and who should book."
 platform: kasamba
 platformName: "Kasamba: Ambers Light"
-rating: 4.9
+rating: 4.8
 verdict: "Ambers Light is one of Kasamba's longest-serving advisors — 74,229 readings since 2004, a 4.9 rating — with a rare specialty: closure. Her profile leads with grief work ('needing closure or wanting to make sure they are in a safe place?'), and her bio contains the most honest sentence on the platform: 'If you are looking for precise timing then I am NOT the one for you.' At $6.99/min chat she's the booking for grief, closure, and life-path questions where compassion and honesty matter more than date stamps."
 affiliateUrl: /go/kasamba-ambers-light/
 avatarUrl: /avatars/kasamba/ambers-light-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Ambers Light is one of Kasamba's longest-serving advisors — 74,229 readings since 2004 at 4.9 stars. An empath, clairvoyant, and Reiki healer specializing in grief and closure questions, with stated policies of never lying to appease and never inventing timelines. Chat $6.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.8",
       "bestRating": "5",
       "worstRating": "1"
     },

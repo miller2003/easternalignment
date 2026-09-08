@@ -3,7 +3,7 @@ title: "Wisdom and Love Kasamba Review (2026): Kasamba's No.2 Psychic Is the Mos
 description: "Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic — 102,414 readings since 2004, a perfect 5.0, 31,000+ five-star reviews. At $13.99/min chat promo he's the priciest reader we cover. We read the receipts — including the client who came back through her 'worst storm' — to find out who should pay premium."
 platform: kasamba
 platformName: "Kasamba: Wisdom and Love"
-rating: 5.0
+rating: 4.6
 verdict: "Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic with 102,414 readings since 2004, a perfect 5.0, and 31,000+ five-star reviews. He's the most expensive reader on this site at $13.99/min chat promo (reg. $27.99) — and the receipts explain why people pay it. Book him for the highest-stakes question you've got; skip him for a casual curiosity check."
 affiliateUrl: /go/kasamba-wisdom-and-love/
 avatarUrl: /avatars/kasamba/wisdom-and-love-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic with 102,414 readings since 2004, a perfect 5.0, and 31,000+ five-star reviews. Most expensive reader reviewed here at $13.99/min promo. Real client stories and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

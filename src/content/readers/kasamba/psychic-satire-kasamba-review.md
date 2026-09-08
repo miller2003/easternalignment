@@ -4,7 +4,7 @@ description: "An independent review of Psychic Satire on Kasamba. She's a 4.7-st
 seoTitle: "Psychic Satire Kasamba Review 2026: 4.7 Stars, 20,000+ Reviews, $2.99/min"
 metaDescription: "Psychic Satire on Kasamba: a 4.7-star medium with 20,000+ reviews at $2.99/min (promo $1.49). Independent review — method, spirit-guide readings, honest fit."
 platformName: 'Kasamba: Psychic Satire'
-rating: 4.7
+rating: 4.4
 verdict: "An independent review of Psychic Satire on Kasamba. She's a 4.7-star medium and spiritual healer with 20,000+ reviews — and her emotional accuracy is the most striking thing about her sessions."
 affiliateUrl: /go/kasamba-satire/
 avatarUrl: /avatars/kasamba/psychic-satire-kasamba-review.jpg

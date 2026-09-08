@@ -3,7 +3,7 @@ title: "Love Soulmate Kasamba Review 2026: 'Think From Head, Not Heart' — 39,7
 description: "An independent review of Love Soulmate (Alex) on Kasamba: 39,789 readings since 2007 at a perfect 5.0 — a certified Level II counselor whose clients quote her advice back like a mantra: think from head, not heart. 62% of her feed is repeat clients. We analyzed 150 reviews. Chat $4.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Love Soulmate"
-rating: 5.0
+rating: 4.5
 verdict: "Love Soulmate — Alex to her regulars — holds a perfect 5.0 across 39,789 Kasamba readings since 2007, with 9,960 likes against 205 dislikes (98.0%). Her differentiator is a certified Level II counseling credential fused with the reading: clients describe leaving with a strategy, not just a prediction — 'think from head and not heart is like a home run for me.' Her repeat structure is strong (62% of her current feed, with regulars at 26, 22, and 17 reviews), and her fans are emphatic: 'she's not here to waste time or take money. she's here to genuinely help and predictions are always correct.' Chat $4.99/min with 3 free minutes; voice runs $39.99, so book text. For love questions where your heart needs a head, she's the specialist."
 affiliateUrl: /go/kasamba-love-soulmate/
 avatarUrl: /avatars/kasamba/love-soulmate-kasamba-review.jpg

@@ -3,7 +3,7 @@ title: "Athena Love Purple Garden Review 2026: The Reader Whose One-Star Reviews
 description: "An independent review of Athena Love on Purple Garden: 54,032 readings since 2019 at 4.8 stars, a 'trending' badge, and the most unusual review feed we've reviewed — where even the negative reviews confirm the accuracy. A Christian reader offering Holy Spirit-guided sessions at $4.99/min with $30 free credit. Here's who thrives with her."
 platform: purple-garden
 platformName: "Purple Garden: Athena Love"
-rating: 4.8
+rating: 4.4
 verdict: "Athena Love is Purple Garden's truth-with-a-plan specialist: 54,032 readings since 2019 at 4.8 stars and a 'trending' badge, delivered by a Christian reader working from Holy Spirit guidance. Her bio famously tells confirmation-seekers to book someone else — and her review feed is the only one we've reviewed where even the negative reviews read as accuracy endorsements ('I am deeply hurt but I know this is probably very accurate'). Her readings map your situation, the people in it, and what you can change — insight plus a growth step. Come prepared (names, birthdates, your real question) and she'll give you the most honest six minutes on the platform."
 affiliateUrl: /go/purple-garden-athena-love/
 avatarUrl: /avatars/purple-garden/athena-love.jpg

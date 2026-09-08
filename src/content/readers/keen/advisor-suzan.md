@@ -3,7 +3,7 @@ title: "Advisor Suzan on Keen Review 2026: The Truth About Her 136,000 Readings"
 seoTitle: "Advisor Suzan on Keen Review 2026: 4.98, 136,000 Readings, $9.99/min"
 description: "With over 136,000 readings and a 4.98 rating on Keen, Advisor Suzan is a legend. But is she right for you? We break down her empathic style and who she helps best."
 platformName: "Keen: Advisor Suzan"
-rating: 4.98
+rating: 4.8
 verdict: "Advisor Suzan is a Keen institution with over 136,000 readings and a 4.98-star average since 2005. She is a Clairvoyant Empath who specializes in Love & Relationships, focusing heavily on empowerment and positive outcomes. She is the perfect fit if you want a highly supportive, fast-connecting empath to guide you toward the highest potential outcome."
 affiliateUrl: /go/keen-advisor-suzan/
 avatarUrl: /avatars/keen/advisor-suzan.png

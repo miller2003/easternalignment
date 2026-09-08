@@ -3,7 +3,7 @@ title: "Nick on Purple Garden Review (2026): What 14,642 Readings at a Perfect 5
 seoTitle: "Nick Purple Garden Review 2026: 14,642 Readings, 5.0 Stars, $4.99/min | EasternAlignment"
 description: "An independent review of Nick on Purple Garden — a 5.0-star tarot reader with over 14,600 readings since 2021. Why this perfect score is statistically meaningful, what a focused session actually looks like, and who should book him."
 platformName: "Purple Garden: Nick"
-rating: 5
+rating: 4.7
 pricing: "$4.99/min"
 bestFor: "Clients who want direct, grounded tarot guidance on love and life decisions — without spiritual performance"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/nick/"
@@ -40,7 +40,7 @@ customSchema: |
     "reviewBody": "Nick is a 5.0-star tarot reader on Purple Garden with over 14,642 readings since 2021, rated $4.99/min. His perfect rating across five years of high volume reflects consistent, grounded tarot-based guidance — not a small sample of handpicked sessions. For clients who want direct card-based insight on love or life decisions, Nick's track record and Top Accuracy badge make him one of the platform's most credible choices at this price point.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5",
+      "ratingValue": "4.7",
       "bestRating": "5",
       "worstRating": "1"
     },

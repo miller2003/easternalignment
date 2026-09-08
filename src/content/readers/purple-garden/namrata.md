@@ -3,7 +3,7 @@ title: "Namrata Purple Garden Review 2026: Is a 10-Year Veteran at $2.49/Min Rea
 seoTitle: "Namrata Purple Garden Review 2026: $2.49/Min, 4.9 Stars, Relationship & Finance Readings | EasternAlignment"
 description: "An independent review of Namrata on Purple Garden — a 4.9-star advisor covering relationships, work, and finance, with 5,466 readings and 10 years on the platform at $2.49/min. Who gets the most from her, and why the modest reading count at this tenure tells an interesting story."
 platformName: "Purple Garden: Namrata"
-rating: 4.9
+rating: 4.4
 pricing: "$2.49/min"
 bestFor: "Budget-conscious clients who want a broadly experienced advisor for relationship, career, or finance questions — especially those who prefer a thoughtful, measured pace over high-volume speed"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/namrata/"
@@ -40,7 +40,7 @@ customSchema: |
     "reviewBody": "Namrata is a 4.9-star Purple Garden advisor covering relationships, work, and finance, with 10 years on the platform and 5,466 readings at $2.49/min. Her selective session volume relative to her tenure signals a quality-over-quantity approach that aligns with her sustained 4.9 rating. For clients who want experienced, broad-scope guidance at a budget price point, she is one of the most underrated advisors on the platform.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

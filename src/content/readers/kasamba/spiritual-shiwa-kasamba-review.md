@@ -3,7 +3,7 @@ title: "Spiritual Shiwa Kasamba Review: An MBA With a Tarot Deck — and the Reg
 description: "An independent review of Spiritual Shiwa on Kasamba: 44,530 readings since 2015 at 4.4 stars, 6,920 likes against 380 dislikes — at $2.99/min chat, with voice actually cheaper at $2.49/min. Behind the tarot deck: an MBA in Marketing and Finance, a family astrology tradition, and a regular named Cooper whose reviews read like a long-term relationship. We read her feed to see what's behind the numbers. Chat $2.99/min, 3 free minutes for new clients."
 platform: kasamba
 platformName: "Kasamba: Spiritual Shiwa"
-rating: 4.4
+rating: 4.2
 verdict: "Spiritual Shiwa's profile rewards a closer look: 44,530 readings since 2015, 6,920 likes against 380 dislikes, and a feed where the praise comes from clients who keep re-booking — one regular, Cooper, holds six of her ten most recent reviews and calls her reliable, strong, and clear. Behind the tarot deck: an Honors commerce degree, an MBA in Marketing and Finance, and a family astrology tradition. Her pricing hides a gift: voice ($2.49/min) is cheaper than chat ($2.99/min), so calling her is both the better experience and the better deal. 3 free minutes for new clients."
 affiliateUrl: /go/kasamba-spiritual-shiwa/
 avatarUrl: /avatars/kasamba/spiritual-shiwa-kasamba-review.jpg

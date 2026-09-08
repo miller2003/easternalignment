@@ -3,7 +3,7 @@ title: "LOVE READINGS BY SAJ Kasamba Review 2026: Twenty Years on Kasamba, 52,91
 description: "An independent review of LOVE READINGS BY SAJ on Kasamba: on the platform since 2006 — twenty full years — with 52,913 readings and a core of regulars who hold 25, 18, and 12 reviews each. His contract: 'sometimes painful, but always delivered in a clear and compassionate way.' We analyzed 150 recent reviews to see how that promise holds up. Chat $3.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: LOVE READINGS BY SAJ"
-rating: 4.7
+rating: 4.4
 verdict: "LOVE READINGS BY SAJ is Kasamba's twenty-year man: on the platform since 2006, 52,913 readings, and a review feed anchored by regulars who've returned 25, 18, and 12 times each. His stated contract — 'the most honest and truthful readings, sometimes painful, but always delivered in a clear and compassionate way' — is exactly what clients describe receiving: direct answers, kindly carried, with explanations attached. At $3.99/min chat with 3 free minutes, he's the cheapest twenty-year veteran you'll find anywhere. Book him for love questions where you want the truth without the bruise."
 affiliateUrl: /go/kasamba-love-readings-by-saj/
 avatarUrl: /avatars/kasamba/love-readings-by-saj-kasamba-review.jpg

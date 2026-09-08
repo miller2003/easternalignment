@@ -3,7 +3,7 @@ title: "Rekindle HopesHearts Amena Kasamba Review 2026: 'Timing Is Off, but the 
 description: "An independent review of Rekindle HopesHearts Amena on Kasamba: 41,065 readings at 4.8 stars — and the most concentrated client loyalty we've ever measured: 81% of her current feed comes from repeat clients, one holding 52 reviews. Her regulars state the trade explicitly: outcomes over dates. We analyzed 150 reviews. Chat $5.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Rekindle HopesHearts Amena"
-rating: 4.8
+rating: 4.5
 verdict: "Rekindle HopesHearts Amena has the most concentrated client loyalty we've ever reviewed: 81% of her 150 most recent reviews come from repeat clients — one holds 52, another 36. And her regulars are unusually articulate about the deal they're making: 'even though timing is off I rather have prediction coming to pass not timing' — outcome accuracy over date precision, traded knowingly, for years. A natural-born psychic with 15 years of professional experience, her feed runs on long arcs: clients report predictions unfolding correctly across years, not weeks. 41,065 readings at 4.8 stars, 10,606 likes against 165 dislikes (98.5%). Chat $5.99/min with 3 free minutes; voice $15.99. Book her for the long game — the relationship that unfolds over seasons — not for deadline questions."
 affiliateUrl: /go/kasamba-rekindle-hopeshearts-amena/
 avatarUrl: /avatars/kasamba/rekindle-hopeshearts-amena-kasamba-review.jpg

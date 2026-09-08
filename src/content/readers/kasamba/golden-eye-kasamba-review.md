@@ -3,7 +3,7 @@ title: "Golden Eye Kasamba Review (2026): One Reader for Every Question You're C
 description: "Golden Eye on Kasamba: 113,722 readings since 2004, a 4.9, and a rare range — tarot, astrology, mediumship, numerology, love advice in one reader. Chat $4.99/min, voice $10.99/min, 3 free minutes. The review about a 'snail's race' explains everything."
 platform: kasamba
 platformName: "Kasamba: Golden Eye"
-rating: 4.9
+rating: 4.5
 verdict: "Golden Eye is a 4.9-star Kasamba veteran with 113,722 readings since 2004 who covers nearly every method — tarot, astrology, dream analysis, mediumship, numerology, love advice — so you build one relationship instead of vetting five readers. Chat at $4.99/min with 3 free minutes is the smart entry. Book if you want one trusted guide for whatever life throws next."
 affiliateUrl: /go/kasamba-golden-eye/
 avatarUrl: /avatars/kasamba/golden-eye-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Golden Eye is a 4.9-star Kasamba veteran with 113,722 readings since 2004 covering tarot, astrology, mediumship, numerology and love advice. Chat $4.99/min, voice $10.99/min, 3 free minutes. Who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

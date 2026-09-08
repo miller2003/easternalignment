@@ -3,7 +3,7 @@ title: "Psychic Norell Purple Garden Review 2026: 'Talk to This Person First' �
 description: "An independent review of Psychic Norell on Purple Garden: 39,794 readings since 2016 at a perfect 5.0 with a 'highest rated' badge — and a review from a veteran of years of readings elsewhere that says it plainly: talk to this person first. 58% of her feed is repeat clients, one holding 26 reviews. Chat $3.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Psychic Norell"
-rating: 5.0
+rating: 4.6
 verdict: "Psychic Norell holds a perfect 5.0 across 39,794 Purple Garden readings since 2016, with 16,357 likes against 111 dislikes (99.3%) and a 'highest rated' badge. Her most instructive review comes from a client who's been read for years across the industry: 'I've never had someone who was so on point... you need to talk to this person first.' Her style is instant connection plus lengthy, compassionate responses — 'picked up on the situation instantly,' 'no time wasted in responding' — at $3.99/min chat, one of the lowest rates among the platform's elite. 58% of her current feed is repeat clients, led by a 26-review regular. She's recently added live video calls for clients who want face-to-face connection. For a first reading on Purple Garden — or the one that finally sticks — Norell is the reader the veterans recommend."
 affiliateUrl: /go/purple-garden-psychic-norell/
 avatarUrl: /avatars/purple-garden/psychic-norell.jpg

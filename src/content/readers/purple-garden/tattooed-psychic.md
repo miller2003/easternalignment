@@ -3,7 +3,7 @@ title: "Tattooed Psychic Purple Garden Review 2026: The Reader Who Refuses Your 
 description: "An independent review of Tattooed Psychic (Jon Moss) on Purple Garden: 30 years of experience, 51,404 readings since 2017 at 4.9 — and the most unusual rule we've seen on any profile: NO BACK STORY. He won't let you feed him context, which means everything he tells you comes from the reading itself. We analyzed 150 reviews, including a job prediction that landed on a Monday. From $7.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Tattooed Psychic"
-rating: 4.9
+rating: 4.4
 verdict: "Tattooed Psychic — Jon Moss, 30 years of practice, attuned at Stonehenge — is Purple Garden's anti-stereotype reader: tattooed, direct, and bound by the most telling rule we've found on any profile: NO BACK STORY. He refuses your context, which means the specifics he produces can't have come from you — the strongest structural proof of gift a client can ask for. The receipts match: a client told she'd get a new job 'saw me in training — I started training Monday.' 51,404 readings since 2017 at 4.9, 18,722 likes, plus a rare paranormal-services specialty. From $7.99/min with $30 free credit. Book him when you want answers that didn't come from your own hints."
 affiliateUrl: /go/purple-garden-tattooed-psychic/
 avatarUrl: /avatars/purple-garden/tattooed-psychic.jpg

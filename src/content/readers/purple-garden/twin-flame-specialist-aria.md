@@ -2,7 +2,7 @@
 title: "Twin Flame Specialist Aria Purple Garden Review (2026): The Reader Who Won't Sell You a Reunion"
 description: "Review of Twin Flame Specialist Aria on Purple Garden — a 4.7-star twin-flame and soulmate reader from $5.99/min who refuses to validate toxic dynamics and tells clients to stop waiting. Why that costs her business, and why it's the best proof she's honest."
 platformName: "Purple Garden: Twin Flame Specialist Aria"
-rating: 4.7
+rating: 4.6
 verdict: "Twin Flame Specialist Aria brings rare ethical maturity to the most abused category in online readings. Rather than validating obsessive attachments, she uses soul-contract framing to separate genuine spiritual connection from an attachment wound — and tells paying clients to stop waiting, which is the strongest integrity signal available in this niche."
 affiliateUrl: /go/purple-garden-aria/
 avatarUrl: /avatars/purple-garden/twin-flame-specialist-aria.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Review of Twin Flame Specialist Aria on Purple Garden — a 4.7-star twin-flame and soulmate reader from $5.99/min who refuses to validate toxic dynamics and tells clients to stop waiting. Why that is the best proof she is honest.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.7",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

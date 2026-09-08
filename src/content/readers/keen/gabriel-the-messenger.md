@@ -3,7 +3,7 @@ title: "Gabriel the Messenger on Keen Review 2026: A No-Tools Reader Holding 23,
 seoTitle: "Gabriel the Messenger on Keen Review 2026: A No-Tools"
 description: "An independent review of Gabriel the Messenger on Keen - 23,000 ratings, 138,000+ readings since 2008, and a $8.99/min rate. A no-tools love specialist's track record, real client reviews, and what the premium buys."
 platformName: "Keen: Gabriel the Messenger"
-rating: 4.94
+rating: 4.6
 verdict: "Gabriel the Messenger's 4.94 across 23,000 ratings and 138,000+ readings since 2008 is a heavyweight track record, and his no-tools approach is a genuine authenticity signal. At $8.99/min he is priced in the upper tier, but the volume and score are hard to argue with. Use the $1 intro to test his no-tools pickup before a full session."
 affiliateUrl: /go/keen-gabriel-the-messenger/
 avatarUrl: /avatars/keen/gabriel-the-messenger.jpg

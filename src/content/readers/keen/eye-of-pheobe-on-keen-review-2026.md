@@ -3,7 +3,7 @@ title: "Eye of Pheobe on Keen Review 2026: The Only Psychic Medium in This Serie
 seoTitle: "Eye of Pheobe on Keen Review 2026: The Only Psychic Medium"
 description: "An independent review of Eye of Pheobe on Keen — why 24 years with 2,680 sessions is a professional signal not a weakness, what 4.69 stars actually means for a dedicated medium, and who she is the only right choice for in this entire series."
 platformName: "Keen: Eye of Pheobe"
-rating: 4.6
+rating: 4.3
 verdict: "Eye of Pheobe occupies a category none of the other eight readers in this series can enter. If your question involves connecting with someone who has passed — grief, unresolved communication, wanting to know they are okay — she is not one option among many. She is the only option in this entire review series. Her 4.69 rating across 241 sessions, evaluated against the hardest success condition in psychic practice, tells a different story than the same number would for a love or career reader. If you are not looking for mediumship, she is not your reader. If you are, she has been doing this work for 24 years."
 affiliateUrl: "/go/keen-pheobe/"
 avatarUrl: /avatars/keen/eye-of-pheobe-on-keen-review-2026.jpg

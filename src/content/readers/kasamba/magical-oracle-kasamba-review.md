@@ -3,7 +3,7 @@ title: "Magical Oracle Kasamba Review: $33.99 a Minute — and a Clientele That 
 description: "An independent review of Magical Oracle on Kasamba: 45,518 readings since 2008 at 4.9 stars, with 15,628 likes against 60 dislikes — at $33.99/min, the premium tier of our audit series. Her bio makes a promise few readers dare: bold, specific predictions, with timeframes, that she stands by. We read her feed to find out what the platform's premium rate actually buys. Chat $33.99/min, 3 free minutes for new clients."
 platform: kasamba
 platformName: "Kasamba: Magical Oracle"
-rating: 4.9
+rating: 4.7
 verdict: "Magical Oracle is the premium benchmark of our Kasamba audit: $33.99/min chat, $34.99/min voice — and 45,518 readings since 2008 at 4.9 stars with 15,628 likes against 60 dislikes, a clientele her bio says has read with her for decades. Her differentiator is specificity: initials, locations, colors, timeframes — predictions concrete enough to check later, delivered in a style clients call calm and consistent. The price works as a filter for clients who'd rather pay once for a decisive reading, and the 3 free minutes let you test the fit before the meter runs."
 affiliateUrl: /go/kasamba-magical-oracle/
 avatarUrl: /avatars/kasamba/magical-oracle-kasamba-review.jpg

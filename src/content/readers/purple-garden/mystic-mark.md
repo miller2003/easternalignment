@@ -3,7 +3,7 @@ title: "Mystic Mark on Purple Garden Review (2026): The Scrying Differentiator T
 seoTitle: "Mystic Mark Purple Garden Review 2026: 13,274 Readings, Tarot + Scrying, $4.99/min | EasternAlignment"
 description: "An independent review of Mystic Mark on Purple Garden — a 4.9-star reader combining tarot with scrying, 13,274 sessions since 2020. What scrying actually adds to a reading, who benefits from the dual-method approach, and what his rating tells you about consistency at volume."
 platformName: "Purple Garden: Mystic Mark"
-rating: 4.9
+rating: 4.4
 pricing: "$4.99/min"
 bestFor: "Clients who want tarot readings cross-validated by a second, independent channel — particularly for complex situations where a single method feels insufficient"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/mystic-mark/"
@@ -40,7 +40,7 @@ customSchema: |
     "reviewBody": "Mystic Mark is a 4.9-star Purple Garden advisor who combines tarot with scrying across 13,274 sessions since 2020, at $4.99/min. The dual-method approach sets him apart from readers who work with a single framework — scrying provides an independent second channel that can corroborate or complicate what the cards show, which clients dealing with layered or contradictory situations often find more revealing than a single-method read.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

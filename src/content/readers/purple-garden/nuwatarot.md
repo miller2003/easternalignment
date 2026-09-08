@@ -2,7 +2,7 @@
 title: "nuwatarot Purple Garden Review (2026): The Eye-Reader Who Works Without a Deck"
 description: "Honest review of nuwatarot on Purple Garden — a 5.0-star oculomancer and psychic medium who reads without tools, 6,229 readings since 2025, from $4.99/min. Method, the new-reader trade-off, and who should book."
 platformName: "Purple Garden: nuwatarot"
-rating: 5
+rating: 4.5
 verdict: "nuwatarot is a 5.0-star Purple Garden oculomancer and psychic medium who reads without tools — 6,229 readings since 2025 mark her as a newer but flawless-rated, distinctive no-tools reader. A rare pick for clients drawn to eye-reading and mediumship."
 affiliateUrl: /go/purple-garden-nuwatarot/
 avatarUrl: /avatars/purple-garden/nuwatarot.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of nuwatarot on Purple Garden — a 5.0-star oculomancer and psychic medium who reads without tools, 6,229 readings since 2025, from $4.99/min. Method, the new-reader trade-off, and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

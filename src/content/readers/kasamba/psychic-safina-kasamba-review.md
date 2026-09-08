@@ -3,7 +3,7 @@ title: "Psychic Safina Kasamba Review (2026): Third-Generation Psychic, a Ragged
 description: "Psychic Safina on Kasamba: 59,565 readings since 2007, a 4.9, third-generation psychic whose great-grandmother read a ragged Tarot deck to staggering accuracy. Chat & voice $7.99/min, 3 free minutes. We read the reviews — including a career-transition client who calls her a 'guiding light' — to find out who should book."
 platform: kasamba
 platformName: "Kasamba: Psychic Safina"
-rating: 4.9
+rating: 4.4
 verdict: "Psychic Safina is a third-generation psychic with 59,565 Kasamba readings since 2007 and a 4.9, whose great-grandmother read a ragged Tarot deck with staggering accuracy. She blends Tarot, Astrology, and intuition, and clients call her a 'guiding light' through career transitions. $7.99/min flat with 3 free minutes. Book her for a grounded, multi-method reading; skip her if you need a perfect 5.0."
 affiliateUrl: /go/kasamba-safina/
 avatarUrl: /avatars/kasamba/psychic-safina-kasamba-review.png
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Psychic Safina is a third-generation psychic with 59,565 Kasamba readings since 2007 and a 4.9, blending Tarot, Astrology, and intuition. Her great-grandmother's ragged Tarot deck, the career-transition review, and who should book. Standard rate $7.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -3,7 +3,7 @@ title: "Mystic Raj on Keen Review 2026: The Only Male Reader in This Series — 
 seoTitle: "Mystic Raj on Keen: The Only Male Reader, Feng Shui Included"
 description: "An independent review of Mystic Raj on Keen — why Kind ranking above Accurate in 270 endorsements is his strongest credential, what Feng Shui actually adds to a psychic reading, and who gets the most from the series' only warmth-first male advisor."
 platformName: "Keen: Mystic Raj"
-rating: 4.6
+rating: 4.3
 verdict: "Mystic Raj is the most distinctly positioned reader in this series — not because of volume or price, but because of what his clients consistently reach for first. When 270 people independently choose 'Kind' as their top descriptor for a psychic advisor, that is a specific product being delivered with consistency. Combined with a toolkit that includes Feng Shui — a tool no other reader in this series offers — and a fourth-generation Asian lineage that makes his Hindi-language capability culturally grounded rather than merely translational, he fills a genuine gap in the Keen advisor landscape. At $2.25/min, the barrier to finding out whether his style works for you is about as low as it gets."
 affiliateUrl: "/go/keen-raj/"
 avatarUrl: /avatars/keen/mystic-raj-on-keen-review-2026.jpg

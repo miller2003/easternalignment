@@ -3,7 +3,7 @@ title: "Sagest Purple Garden Review 2026: 62,205 Readings at a Perfect 5.0 — t
 seoTitle: "Sagest Purple Garden Review 2026: 5.0, $5.99/min"
 description: "An independent review of Sagest on Purple Garden — 62,205 readings since 2018 at a perfect 5.0 with a Top Accuracy badge, and the strictest booking requirements on the platform: first names only, two questions per reading, one clarification allowed. What the discipline buys you, and who should book."
 platformName: "Purple Garden: Sagest"
-rating: 5.0
+rating: 4.8
 pricing: "$5.99/min (verify on live profile)"
 bestFor: "Clients who want maximum accuracy per minute and are willing to follow a strict session protocol — two well-chosen questions, first names only — for love, dream analysis, or past-life insight"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/sagest/"
@@ -38,7 +38,7 @@ customSchema: |
     "reviewBody": "Sagest is a Top Accuracy badged advisor with 62,205 Purple Garden readings since 2018 at a perfect 5.0. Her strict protocol — first names only, two questions per reading, one clarification — functions as an accuracy discipline. Also a trained life coach specializing in fears, self-worth, and abuse. $5.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.8",
       "bestRating": "5",
       "worstRating": "1"
     },

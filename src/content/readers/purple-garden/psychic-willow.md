@@ -3,7 +3,7 @@ title: "Psychic Willow Purple Garden Review 2026: 48 Years of Egyptian Tarot —
 seoTitle: "psychic willow Purple Garden Review 2026: 4.9, $5.99/min"
 description: "An independent review of psychic Willow on Purple Garden — a love psychic and Egyptian tarot reader with 48 years of experience, 61,756 readings since 2016 at 4.9 stars, $5.99/min. Her no-timeframe policy, two-question discipline, LGBT-friendly practice, and the clients who return to report her predictions came true."
 platformName: "Purple Garden: psychic willow"
-rating: 4.9
+rating: 4.5
 pricing: "$5.99/min (verify on live profile)"
 bestFor: "Love questions where you want nearly five decades of pattern recognition delivered fast and unvarnished — including LGBT clients, whom she explicitly welcomes — with Egyptian tarot as the instrument"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/psychic-willow/"
@@ -38,7 +38,7 @@ customSchema: |
     "reviewBody": "Psychic Willow is a love psychic and Egyptian tarot reader with 48 years of claimed experience and 61,756 Purple Garden readings since 2016 at 4.9 stars. Explicitly LGBT-friendly, strict no-timeframe policy, two-question discipline. Clients return to confirm predictions came true. $5.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -3,7 +3,7 @@ title: "Tarot With Meg on Keen Review 2026: The Reader Whose Most Important Tool
 seoTitle: "Tarot With Meg on Keen Review 2026: The Reader Whose Most"
 description: "An independent review of Tarot With Meg on Keen — what Hellenistic astrology adds that modern Western astrology cannot, why the Rider Waite Smith deck with a 26-year grief history changes how readings feel, and who she is specifically built for."
 platformName: "Keen: Tarot With Meg"
-rating: 4.7
+rating: 4.4
 verdict: "Tarot With Meg is the reader in this series who has most clearly decided what she is not trying to do. She is not trying to predict. She is trying to help you understand — the pattern underneath the situation, the why beneath the what, the context that makes the outcome make sense. That positioning, combined with a toolkit that includes Hellenistic astrology, four distinct Tarot decks, dream decipherment, and a primary reading deck whose personal history is unlike anything else in this series, produces a session experience that is genuinely different from every other Tarot reader on this platform. For clients who have had readings before and are still confused about why things keep happening the way they do, Meg is the most targeted recommendation I can make."
 affiliateUrl: "/go/keen-meg/"
 avatarUrl: /avatars/keen/tarot-with-meg-on-keen-review-2026.jpg

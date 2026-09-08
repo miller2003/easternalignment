@@ -2,7 +2,7 @@
 title: "Chloe Psychic UK Purple Garden Review (2026): The Honest Reader Who Schedules in Your Time Zone"
 description: "Honest review of Chloe Psychic UK on Purple Garden — a 4.8-star UK-based reader (psychic, clairsentient, energy, tarot) with over 8,900 readings since 2016, from $3.99/min. Known for blunt honesty and a top-accuracy badge. Who she is for, and the one catch that is actually a selling point."
 platformName: "Purple Garden: Chloe Psychic UK"
-rating: 4.8
+rating: 4.4
 verdict: "Chloe Psychic UK is a 4.8-star Purple Garden reader based in England who blends psychic, clairsentient, energy, and tarot work with a blunt, no-fairytales honesty. With over 8,900 readings since 2016 and a top-accuracy badge, she is best for clients who want the unvarnished truth rather than comfort."
 affiliateUrl: /go/purple-garden-chloe/
 avatarUrl: /avatars/purple-garden/psychic-medium-chloe.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Chloe Psychic UK on Purple Garden — a 4.8-star UK-based reader blending psychic, clairsentient, energy, and tarot work with blunt honesty, over 8,900 readings since 2016, from $3.99/min. Who she is for, and the one catch that is actually a selling point.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -3,7 +3,7 @@ title: "Divinely Spiritual Kasamba Review 2026: The Scientist on the Psychic Lin
 description: "An independent review of Divinely Spiritual on Kasamba: a reader with a Master of Science, formal psychology training, and an inherited ancestral gift — 50,022 readings since 2016 at 4.9 stars. One client says he predicted her divorce date years out, when no other reader got it right. We analyzed 150 reviews to see what the science-plus-gift combination produces. Chat $3.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Divinely Spiritual"
-rating: 4.9
+rating: 4.4
 verdict: "Divinely Spiritual holds the strangest résumé we've reviewed: a Master of Science and extensive psychological education, alongside an inherited ancestral gift — science and spirit in one reader. The combination produces a distinctive session: clinically structured, emotionally precise, and direct. The standout receipt in his feed: a client whose divorce finalization date he predicted years in advance — 'the only one who got that right.' 50,022 readings since 2016 at 4.9 stars, 11,171 likes against 208 dislikes, with a fiercely loyal core (one regular holds 17 reviews and 'doesn't bother' with anyone else). Chat $3.99/min with 3 free minutes; voice runs $39.99/min, so book chat."
 affiliateUrl: /go/kasamba-divinely-spiritual/
 avatarUrl: /avatars/kasamba/divinely-spiritual-kasamba-review.jpg

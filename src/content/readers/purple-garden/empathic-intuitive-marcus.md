@@ -2,7 +2,7 @@
 title: "Empathic Intuitive Marcus Purple Garden Review (2026): The Male Reader Who Translates Male Behavior From the Inside"
 description: "Honest review of Empathic Intuitive Marcus on Purple Garden — a 4.8-star male relationship reader blending clairsentience with behavioral analysis, 2,800+ sessions, from $4.99/min. Why his refusal to validate fantasies is the selling point."
 platformName: "Purple Garden: Empathic Intuitive Marcus"
-rating: 4.8
+rating: 4.4
 verdict: "Empathic Intuitive Marcus is a 4.8-star Purple Garden relationship reader whose value is structural: a man reading male behavior from the inside. Blending clairsentience with behavioral analysis across 2,800+ sessions, he translates the psychology behind avoidance and commitment ambiguity — and refuses to validate a fantasy, which is exactly why serious clients stay."
 affiliateUrl: /go/purple-garden-marcus/
 avatarUrl: /avatars/purple-garden/empathic-intuitive-marcus.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Empathic Intuitive Marcus on Purple Garden — a 4.8-star male relationship reader blending clairsentience with behavioral analysis, 2,800+ sessions, from $4.99/min. Why his refusal to validate fantasies is the selling point.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

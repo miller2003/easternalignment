@@ -3,7 +3,7 @@ title: "Jeanne Clock on Keen Review 2026: A Multi-Gifted Clairvoyant With 95,000
 seoTitle: "Jeanne Clock on Keen Review 2026: A Multi-Gifted"
 description: "An independent review of Jeanne Clock on Keen - 24,000 ratings, 95,000+ readings since 2007, and a rare clairvoyant-plus-medium skill set. What her track record and real client reviews reveal, and who gets the most from booking her."
 platformName: "Keen: Jeanne Clock"
-rating: 4.96
+rating: 4.7
 verdict: "Jeanne Clock combines clairvoyance, clairaudience, mediumship, and empathy into one of the broader skill sets on Keen, backed by 95,000+ readings since 2007 at 4.96 stars. She is a patient, compassionate reader who is especially strong on love, career, and family dynamics. Book her by voice for relationship and life-path questions; just know her gentle pace is a feature, not a bug."
 affiliateUrl: /go/keen-jeanne-clock/
 avatarUrl: /avatars/keen/jeanne-clock.jpg

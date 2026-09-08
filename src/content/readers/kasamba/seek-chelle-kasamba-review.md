@@ -4,7 +4,7 @@ description: An honest review of Seek Chelle on Kasamba — a 20-year intuitive 
 seoTitle: Seek Chelle Kasamba Review (2026)
 metaDescription: "Seek Chelle on Kasamba: a 20-year intuitive with triple-clair gifts, 55,000+ readings, and a 5.0 — she surfaces the real question behind yours. $9.98/min."
 platformName: 'Kasamba: Seek Chelle'
-rating: 5
+rating: 4.6
 verdict: Seek Chelle is one of the most methodologically specific readers on Kasamba — a 20-year advisor with triple-clair gifts and 55,000+ readings who hears what you leave unsaid.
 affiliateUrl: /go/kasamba-chelle/
 avatarUrl: /avatars/kasamba/seek-chelle-kasamba-review.jpg

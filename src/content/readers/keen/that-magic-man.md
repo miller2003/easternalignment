@@ -3,7 +3,7 @@ title: "That Magic Man (James) on Keen Review 2026: A Direct, No-Tools Male Read
 seoTitle: "That Magic Man (James) on Keen Review 2026: A Direct,"
 description: "An independent review of That Magic Man (James) on Keen - 14,000 ratings, 56,000+ readings since 2011, and a direct, no-tools style. What his track record and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: That Magic Man"
-rating: 4.93
+rating: 4.6
 verdict: "That Magic Man - James - is a direct, no-tools male reader on Keen with 14,000 ratings at 4.93 stars and 56,000+ readings since 2011. His reviews show a pattern of specific, sometimes dated predictions coming true, delivered with straight-talk reassurance. Book him by voice for love and relationship questions if you want a male perspective without tools or fluff."
 affiliateUrl: /go/keen-that-magic-man/
 avatarUrl: /avatars/keen/that-magic-man.jpg

@@ -2,7 +2,7 @@
 title: "Tarot Withh Love Purple Garden Review (2026): The Mystic Who Refuses to Answer Yes or No"
 description: "Review of Tarot Withh Love on Purple Garden — a 4.8-star Indian mystic and multi-clair reader with over 15,000 readings since 2019, from $3.99/min. Why her refusal to do yes/no questions is the trust signal, not the limitation."
 platformName: "Purple Garden: Tarot Withh Love"
-rating: 4.8
+rating: 4.3
 verdict: "Tarot Withh Love is a 4.8-star Purple Garden clairvoyant, clairsentient, and clairaudient Indian mystic whose over 15,000 readings since 2019 and plain no-sugar-coating stance make her a detailed, budget-friendly pick for clients who want depth instead of a quick verdict."
 affiliateUrl: /go/purple-garden-tarot-withh-love/
 avatarUrl: /avatars/purple-garden/tarot-withh-love.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Review of Tarot Withh Love on Purple Garden — a 4.8-star Indian mystic and multi-clair reader with over 15,000 readings since 2019, from $3.99/min. Why her refusal to do yes/no questions is a trust signal.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.3",
       "bestRating": "5",
       "worstRating": "1"
     },

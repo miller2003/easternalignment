@@ -3,7 +3,7 @@ title: "Andrew Angel Purple Garden Review 2026: 55,003 Readings at 5.0 — the P
 description: "An independent review of Andrew Angel on Purple Garden: a fourth-generation psychic with 55,003 readings since 2014 at a perfect 5.0 — and a profile that opens with rules: no general readings, one specific topic per session. We analyzed 150 recent reviews and found what the velvet rope protects. From $7.49/min, $30 free credit for new clients."
 platform: purple-garden
 platformName: "Purple Garden: Andrew Angel"
-rating: 5.0
+rating: 4.5
 verdict: "Andrew Angel is Purple Garden's most deliberately exclusive top advisor: a fourth-generation psychic with 55,003 readings since 2014, a perfect 5.0, 23,069 likes — and a published code at the top of his profile: no general readings, no health or pregnancy questions, one specific topic per session. The rules function as quality control, and the reviews prove it: clients report 'spot on' predictions with 'key details following through,' delivered fast and direct. His loyalty signature is breadth, not concentration — thirteen repeat reviewers, no single superfan, consistency across the board. At $7.49/min he's a premium booking; the $30 new-client credit covers your first four minutes. Bring one real question and follow the rules."
 affiliateUrl: /go/purple-garden-andrew-angel/
 avatarUrl: /avatars/purple-garden/andrew-angel.jpg

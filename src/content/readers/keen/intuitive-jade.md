@@ -3,7 +3,7 @@ title: "Intuitive Jade on Keen Review 2026: 27,000 Readings via 'Name Vibrations
 seoTitle: "Intuitive Jade on Keen Review 2026: 27,000 Readings via "
 description: "An independent review of Intuitive Jade on Keen - 8,151 ratings, 27,636 readings since 2006, and an $8.99/min rate. What her 'revealing truth through name vibrations' method and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Intuitive Jade"
-rating: 4.98
+rating: 4.8
 verdict: "Intuitive Jade is one of the highest-rated readers in her volume tier on Keen: 8,151 ratings at 4.98 stars and 27,636 readings since 2006. Her signature method - 'revealing truth through name vibrations' - is unusual and draws clients who want a read from little more than a name. At $8.99/min she is premium-priced. Book her if you want an elite-average intuitive who works from names and energy rather than long explanations."
 affiliateUrl: /go/keen-intuitive-jade/
 avatarUrl: /avatars/keen/intuitive-jade.jpg

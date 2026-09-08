@@ -3,7 +3,7 @@ title: "Sweet Spirit of Love Kasamba Review (2026): The 12-Year-Old Who Stopped 
 description: "Sweet Spirit of Love (Devi) on Kasamba: 69,177 readings since 2006, a 4.6, and an origin story that starts at age 12 with a train that derailed the same day. Chat & voice $5.49/min, 3 free minutes. We read the reviews — including the bad one — to find out who should book her."
 platform: kasamba
 platformName: "Kasamba: Sweet Spirit of Love"
-rating: 4.6
+rating: 4.3
 verdict: "Sweet Spirit of Love (Devi) is an Eastern-mysticism reader with 69,177 Kasamba readings since 2006 and a 4.6 earned in public — bad reviews and all. Her origin story (a 12-year-old premonition that may have saved a life) is the kind of thing you either believe or don't, but 69,000 readings say the work holds. $5.49/min flat, 3 free minutes. Book her for direct, spiritual guidance; skip her if you need a perfect 5.0."
 affiliateUrl: /go/kasamba-sweet-spirit-of-love/
 avatarUrl: /avatars/kasamba/sweet-spirit-of-love-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Sweet Spirit of Love (Devi) is an Eastern-mysticism reader with 69,177 Kasamba readings since 2006 and a 4.6 earned in public. Her 12-year-old train origin story, real reviews, and who should book. Standard rate $5.49/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.6",
+      "ratingValue": "4.3",
       "bestRating": "5",
       "worstRating": "1"
     },

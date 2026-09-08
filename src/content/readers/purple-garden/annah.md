@@ -3,7 +3,7 @@ title: "Annah Purple Garden Review 2026: 'Our Paths Will Cross' — the Sidewalk
 description: "An independent review of Annah on Purple Garden: 37,281 readings since 2015 at a perfect 5.0 with a 'highest rated' badge — and the freshest receipt we've ever logged: a client whose 'your paths will cross' prediction came true on her own street, hours before she wrote the review. 27 years of experience. Chat $7.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Annah"
-rating: 5.0
+rating: 4.7
 verdict: "Annah holds a perfect 5.0 across 37,281 Purple Garden readings since 2015, with 14,785 likes against 94 dislikes (99.4%) and a 'highest rated' badge — plus the most time-stamped receipt in our audit series: on August 26, a client wrote that Annah's 'our paths will cross' prediction had just come true on her own street, when her POI walked up and hugged her 'so hard I couldn't breathe.' A self-described 'honest, gentle, earth loving cat mom Capricorn' with 27 years of experience, she specializes in love, breakups, third-party situations, and twin flames. 40% of her feed is repeat clients. Chat $7.99/min with the $30 credit covering about four minutes; voice $9.99. Book her for love questions where you want gentle delivery with dated, verifiable calls."
 affiliateUrl: /go/purple-garden-annah/
 avatarUrl: /avatars/purple-garden/annah.jpg

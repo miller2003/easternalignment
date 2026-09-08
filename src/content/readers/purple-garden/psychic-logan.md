@@ -3,7 +3,7 @@ title: "Psychic Logan Purple Garden Review 2026: 64,955 Readings, a Perfect 5.0 
 seoTitle: "Psychic Logan Purple Garden Review 2026: 5.0, $4.99/min"
 description: "An independent review of Psychic Logan on Purple Garden — advisor #36, one of the platform's original readers, with 64,955 readings since 2015 at a perfect 5.0, $4.99/min. Third-generation spiritualist specializing in life path, love, and destiny. Real review themes, honest caveats, and who should book."
 platformName: "Purple Garden: Psychic Logan"
-rating: 5.0
+rating: 4.5
 pricing: "$4.99/min (verify on live profile)"
 bestFor: "Life path, destiny, and love questions where you want an empowering 'make good things happen' approach from one of Purple Garden's original advisors"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/psychic-logan/"
@@ -38,7 +38,7 @@ customSchema: |
     "reviewBody": "Psychic Logan is advisor #36 on Purple Garden — one of the platform's original readers — with 64,955 readings since 2015 at a perfect 5.0. A third-generation spiritualist combining tarot, numerology, and astrology for life path, love, and destiny questions at $4.99/min. Independently recommended by MysticMag's 2026 destiny roundup.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

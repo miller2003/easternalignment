@@ -2,7 +2,7 @@
 title: 'Elizabeth Kasamba Review (2026): Why She''s the #1 Rated Psychic on the Platform'
 description: A sixth-generation psychic, certified Reiki Master, and Kasamba's most experienced advisor — with 47,000+ readings since 2003 and a 4.8-star average.
 platformName: 'Kasamba: Elizabeth'
-rating: 4.8
+rating: 4.6
 verdict: Elizabeth is a sixth-generation psychic, certified Reiki Master, and one of Kasamba's most experienced advisors — with 47,000+ readings since 2003 and a 4.8-star average that pairs intuitive precision with genuine healing energy.
 affiliateUrl: /go/kasamba-elizabeth/
 avatarUrl: /avatars/kasamba/elizabeth-kasamba-review.jpg

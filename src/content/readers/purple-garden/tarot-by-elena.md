@@ -2,7 +2,7 @@
 title: "Tarot by Elena Purple Garden Review (2026): Why Written Chat Tarot Beats Video for People Who Audit"
 description: "Review of Tarot by Elena on Purple Garden — a Top Rated, card-by-card chat tarot reader whose permanent transcripts and fast cadence make her the platform's best argument for text over video. Who she's for, and the one limitation that's actually a feature."
 platformName: "Purple Garden: Tarot by Elena"
-rating: 4.8
+rating: 4.5
 verdict: "Tarot by Elena is a 4.8-star Purple Garden chat tarot reader whose card-by-card method and fast, text-first cadence produce a permanent transcript you can audit weeks later. Best for analytical clients who want a saved record and concrete interpretations, not a video performance."
 affiliateUrl: /go/purple-garden-elena/
 avatarUrl: /avatars/purple-garden/tarot-by-elena.jpg
@@ -21,7 +21,7 @@ customSchema: |
     "reviewBody": "Review of Tarot by Elena on Purple Garden — a Top Rated chat tarot reader whose card-by-card method and fast cadence produce a permanent, auditable transcript. From $3.99/min. Who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -3,7 +3,7 @@ title: "Lollie on Keen Review 2026: A 70,000-Reading 'No Fluff' Love Coach at $6
 seoTitle: "Lollie on Keen Review 2026: A 70,000-Reading "
 description: "An independent review of Lollie on Keen - 20,000 ratings, 70,182 readings since 2001, and a $6.99/min rate. What her direct, playing-card method and real client reviews actually reveal, and exactly who should book her."
 platformName: "Keen: Lollie"
-rating: 4.92
+rating: 4.6
 verdict: "Lollie is one of the most unambiguously direct readers on Keen. With 20,000 ratings at 4.92 stars and 70,000+ readings since 2001, she has built a following on a simple promise: no small talk, no sugarcoating, practical steps. At $6.99/min she is mid-priced, and her 'message FIRSTREAD for 3 free minutes' offer lets you test her style before spending. Book her if you want blunt truth about love and you are comfortable steering your own questions."
 affiliateUrl: /go/keen-lollie-ext-5555/
 avatarUrl: /avatars/keen/lollie-ext-5555.jpg

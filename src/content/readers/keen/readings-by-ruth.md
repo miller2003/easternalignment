@@ -3,7 +3,7 @@ title: "Readings by Ruth on Keen Review 2026: A 41,000-Reading 3rd-Gen Navigator
 seoTitle: "Readings by Ruth on Keen Review 2026: A 41,000-Reading"
 description: "An independent review of Readings by Ruth on Keen - 8,287 ratings, 41,119 readings since 2016, and a $5.99/min rate. What her 31-years 'Intuitive Navigator' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Readings by Ruth"
-rating: 4.91
+rating: 4.6
 verdict: "Readings by Ruth is a third-generation psychic who has built 41,000+ readings on Keen since 2016 at a steady 4.91 stars. She positions herself as an 'Intuitive Navigator' with 31 years of experience and a direct, no-sugarcoating style. At $5.99/min she is moderately priced for a reader with both lineage and a large sample. Book her if you want a direct, detail-rich love and relationship read with a compassionate edge."
 affiliateUrl: /go/keen-readings-by-ruth/
 avatarUrl: /avatars/keen/readings-by-ruth.jpg

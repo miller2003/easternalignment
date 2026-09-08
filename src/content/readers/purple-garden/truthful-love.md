@@ -3,7 +3,7 @@ title: "Truthful Love Purple Garden Review (2026): The Reader One Client Reviewe
 description: "Truthful Love is Purple Garden's #1 trending advisor — 28,199 readings since 2024, a 4.8, and one fan who left 8 reviews in 4 minutes. Chat $2.99/min, no sugar coating. We read the receipts to find out why her queue is the proof, and who should book her."
 platform: purple-garden
 platformName: "Purple Garden: Truthful Love"
-rating: 4.8
+rating: 4.3
 verdict: "Truthful Love is Purple Garden's #1 trending advisor with 28,199 readings since 2024 at a 4.8 — and one client who left 8 reviews in a single 4-minute span. Chat from $2.99/min with no sugar coating. Book her for affordable, high-volume love and breakup readings from a fast, blunt reader; skip her if you want gentle padding."
 affiliateUrl: /go/purple-garden-truthful-love/
 avatarUrl: /avatars/purple-garden/truthful-love.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Truthful Love is Purple Garden's #1 trending advisor with 28,199 readings since 2024 at a 4.8, and one client who left 8 reviews in 4 minutes. Chat from $2.99/min with no sugar coating. Real client stories and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.3",
       "bestRating": "5",
       "worstRating": "1"
     },

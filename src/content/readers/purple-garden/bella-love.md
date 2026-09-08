@@ -3,7 +3,7 @@ title: "Bella Love Purple Garden Review 2026: $24.99 a Minute — Is the Platfor
 description: "An independent review of Bella Love on Purple Garden: the most expensive reader we've ever reviewed at $24.99/min — and the most decorated, with a 'most accurate' badge, a platform-reported 91% accuracy score, a perfect 5.0 across 50,917 readings, and one negative review in her last 150. We did the math on what a premium reading actually buys. $30 free credit for new clients."
 platform: purple-garden
 platformName: "Purple Garden: Bella Love"
-rating: 5.0
+rating: 4.7
 verdict: "Bella Love is Purple Garden's premium outlier: $24.99/min — five to twelve times the rate of every other reader in our audit series — matched against credentials no one else in the series holds: a platform 'most accurate' badge, a platform-reported 91% accuracy score, a perfect 5.0 across 50,917 readings since 2019, and 17,000 likes against just 96 dislikes (99.4%, the cleanest ratio we've ever measured). A video-first, triple-clair reader specializing in twin-flame and soulmate questions, she's the answer to a specific client problem: when the question matters enough that being wrong costs more than the reading. The $30 credit covers your first minute-plus — use it to feel the connection, then decide with evidence in hand."
 affiliateUrl: /go/purple-garden-bella-love/
 avatarUrl: /avatars/purple-garden/bella-love.jpg

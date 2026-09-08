@@ -3,7 +3,7 @@ title: "Readings by Kelly777 on Keen Review 2026: Behind 159,000 Sessions  -  Wh
 seoTitle: "Readings by Kelly777 on Keen Review 2026: Behind 159,000"
 description: "An honest third-party review of readings by Kelly777 on Keen  -  covering her remote viewing skill, past life specialty, real method behind the 'master tarot' claim, and what 159K readings at 4.91 stars actually means for your session."
 platformName: "Keen: readings by kelly777"
-rating: 4.9
+rating: 4.5
 verdict: "One of the most battle-tested readers on Keen by sheer volume  -  159,000+ sessions at 4.91 stars is a track record that's hard to dismiss. Best for love and soulmate clarity, past life context, and remote viewing on specific people or situations. The promotional bio language and chat-only format are the only real friction points."
 affiliateUrl: "/go/keen-kelly/"
 avatarUrl: /avatars/keen/readings-by-kelly777.jpg

@@ -2,7 +2,7 @@
 title: "Lejla Kristal Purple Garden Review (2026): The Crystal-Ball Reader With a Toolbox Most Advisors Don't Have"
 description: "Honest review of Lejla Kristal on Purple Garden — a 5.0-star multi-tool reader with 12,058 readings since 2019, $4.99/min, working crystal ball, runes, tarot, and pendulum for love and money. Who she's for, and why her method list is the selling point."
 platformName: "Purple Garden: Lejla Kristal"
-rating: 5
+rating: 4.5
 verdict: "Lejla Kristal is a 5.0-star Purple Garden multi-tool reader whose 12,058 readings since 2019 and crystal-ball-plus-runes-plus-tarot method span love and money. A versatile, high-rated pick for clients who want more than one lens on a question."
 affiliateUrl: /go/purple-garden-lejla-kristal/
 avatarUrl: /avatars/purple-garden/lejla-kristal.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Lejla Kristal on Purple Garden — a 5.0-star multi-tool reader with 12,058 readings since 2019, $4.99/min, working crystal ball, runes, tarot, and pendulum for love and money. Who she is for, and why her method list is the selling point.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

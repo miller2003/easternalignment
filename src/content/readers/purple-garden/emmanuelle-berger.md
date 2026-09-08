@@ -3,7 +3,7 @@ title: "Emmanuelle Berger Purple Garden Review 2026: 76,154 Readings, a Perfect 
 seoTitle: "Emmanuelle Berger Purple Garden Review 2026: 5.0, $6.49/min"
 description: "An independent review of Emmanuelle Berger on Purple Garden — the platform's highest-volume soul-mate specialist with 76,154 readings since 2015 at a perfect 5.0, $6.49/min chat. Why clients compare her to a mother, what her 'no entertainment' policy means, and who should book."
 platformName: "Purple Garden: Emmanuelle Berger"
-rating: 5.0
+rating: 4.5
 pricing: "Chat $6.49/min · Voice $7.49/min · Video $8.49/min"
 bestFor: "Soulmate and love-connection questions where you want warmth AND honesty — especially clients who've been burned by readers who tell them what they want to hear"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/emmanuelle-berger/"
@@ -38,7 +38,7 @@ customSchema: |
     "reviewBody": "Emmanuelle Berger is Purple Garden's highest-volume soul-mate specialist — 76,154 readings since 2015 at a perfect 5.0 across ~29,000 written reviews. Clients describe detailed, quick, honest answers delivered with maternal warmth; her bio explicitly refuses to 'entertain you with news you are wishing to receive.' Chat $6.49/min, voice $7.49, video $8.49.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

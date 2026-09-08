@@ -3,7 +3,7 @@ title: "AllMyAngels on Keen Review 2026: A 50,000-Reading Intuitive at $6.99/Min
 seoTitle: "AllMyAngels on Keen Review 2026: A 50,000-Reading Intuitive"
 description: "An independent review of AllMyAngels on Keen - 13,000 ratings, 50,044 readings since 2002, and a $6.99/min rate. What her 'connecting minds, hearts, and spirits' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: AllMyAngels"
-rating: 4.88
+rating: 4.5
 verdict: "AllMyAngels has quietly built one of the more durable mid-volume profiles on Keen: 13,000 ratings at 4.88 stars and 50,000+ readings since 2002. She positions herself as an intuitive truth-teller who connects minds, hearts, and spirits - a warm, relationship-leaning style rather than a blunt one. At $6.99/min she is fairly priced for the sample size. Book her if you want a steady, compassionate-intuitive read on love and life-path questions."
 affiliateUrl: /go/keen-allmyangels/
 avatarUrl: /avatars/keen/allmyangels.jpg

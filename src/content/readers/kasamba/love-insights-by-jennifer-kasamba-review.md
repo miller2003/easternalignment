@@ -3,7 +3,7 @@ title: "Love Insights by Jennifer Kasamba Review 2026: 57,103 Readings and the C
 description: "An independent review of Love Insights by Jennifer on Kasamba: 57,103 readings since 2008, a 4.9 rating, and something rarer than either — a client base that measures its loyalty in years. We analyzed 150 recent reviews, mapped her repeat-client economics, and found the fifth-generation detail no competitor mentions. Chat $3.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Love Insights by Jennifer"
-rating: 4.9
+rating: 4.4
 verdict: "Love Insights by Jennifer is a fifth-generation psychic — the first woman in her family line to inherit the role — with 57,103 Kasamba readings since 2008, a 4.9 rating, and the strongest repeat-client signature we've measured: three clients alone account for over 60 reviews in her current feed, one of them spanning eight months. Her style is fast connection plus honest delivery, wrapped in unusually personal care (clients report messages and prayers between sessions, unprompted). Chat is a fair $3.99/min with 3 free minutes; voice runs $25.49/min, so chat is the smart booking. For love and relationship questions where you want a long-term advisor, not a one-night answer, she's a first-tier pick."
 affiliateUrl: /go/kasamba-love-insights-by-jennifer/
 avatarUrl: /avatars/kasamba/love-insights-by-jennifer-kasamba-review.jpg

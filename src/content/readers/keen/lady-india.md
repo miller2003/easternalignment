@@ -3,7 +3,7 @@ title: "Lady India on Keen Review 2026: Two Decades of 'Uncovering Truth' — Wh
 seoTitle: "Lady India on Keen Review 2026: Two Decades of Uncovering Truth"
 description: "An independent, evidence-based review of Lady India on Keen — a reader since 2001 at $8.99/min. Built from Keen's live client reviews, third-party coverage, and her own advisor profile, covering who she is, what real clients report, and who should book."
 platformName: "Keen: Lady India"
-rating: 4.9
+rating: 4.5
 verdict: "Lady India has read on Keen since 2001 at $8.99/min, and her live client reviews split clearly: repeat callers praise her 'straight to the point, gentle touch' accuracy on love and life questions, while a minority find the per-minute cost hard to justify. The long tenure is real; this review is now sourced from actual client ratings rather than aggregate inference alone."
 affiliateUrl: /go/keen-lady-india/
 avatarUrl: /avatars/keen/lady-india.jpg

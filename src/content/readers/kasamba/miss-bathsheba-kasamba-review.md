@@ -3,7 +3,7 @@ title: "Miss Bathsheba Kasamba Review (2026): 71,618 Readings, 4.9 Stars — and
 description: "Miss Bathsheba on Kasamba: 71,618 readings since 2006, 4.9 stars, and only 144 negative reviews out of 23,000+ — a 0.6% complaint rate. A second-generation clairvoyant tarot specialist whose clients come back daily. Real reviews, $4.99/min math, and who should book."
 platform: kasamba
 platformName: "Kasamba: Miss Bathsheba"
-rating: 4.9
+rating: 4.6
 verdict: "Miss Bathsheba pairs 71,618 readings since 2006 with the cleanest feedback ratio we've ever reviewed: 144 negative reviews against 23,229 positive — 0.6%. She's a second-generation clairvoyant whose tarot work clients describe in almost technical terms ('she was reading them right'), and her feed is full of daily regulars. At $4.99/min she's the best pure-tarot value in Kasamba's top tier. Book her for love and career questions where you want fast, honest, card-anchored answers."
 affiliateUrl: /go/kasamba-miss-bathsheba/
 avatarUrl: /avatars/kasamba/miss-bathsheba-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Miss Bathsheba is a second-generation clairvoyant tarot specialist with 71,618 Kasamba readings since 2006 at 4.9 stars — and a 0.6% negative rate across 23,229 written reviews. Clients describe instant situation pickup and technically excellent tarot interpretation at $4.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

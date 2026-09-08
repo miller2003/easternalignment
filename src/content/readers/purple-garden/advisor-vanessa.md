@@ -3,7 +3,7 @@ title: "Advisor Vanessa Purple Garden Review (2026): The Reader Who Told One Cli
 description: "Advisor Vanessa on Purple Garden: 20,578 readings since 2016, a 4.8, specializing in infidelity and love. Chat $2.99/min. One client thanked her for 'the opposite of what I wanted to hear.' We read the receipts — bad reviews included — to find out who should book her."
 platform: purple-garden
 platformName: "Purple Garden: Advisor Vanessa"
-rating: 4.8
+rating: 4.4
 verdict: "Advisor Vanessa is a 4.8-star Purple Garden reader with 20,578 readings since 2016, specializing in love, infidelity, and the hard truths that go with them. Chat $2.99/min. Book her if you need an unsweetened answer about a partner; skip her if you want comfort over truth."
 affiliateUrl: /go/purple-garden-advisor-vanessa/
 avatarUrl: /avatars/purple-garden/advisor-vanessa.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Advisor Vanessa is a 4.8-star Purple Garden reader with 20,578 readings since 2016, specializing in love, infidelity, and hard truths. Chat $2.99/min. Real client stories and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

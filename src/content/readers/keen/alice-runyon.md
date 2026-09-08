@@ -3,7 +3,7 @@ title: "Alice Runyon on Keen Review 2026: 44,000 Readings of 'Clear Visions' at 
 seoTitle: "Alice Runyon Keen Review 2026: 44,000 'Clear Visions' Readings"
 description: "An independent review of Alice Runyon on Keen - 9,120 ratings, 44,784 readings since 2016, and a $3.59/min rate. What her 'clear visions since childhood' approach and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Alice Runyon"
-rating: 4.95
+rating: 4.7
 verdict: "Alice Runyon is a standout value on Keen: 9,120 ratings at 4.95 stars, 44,000+ readings since 2016, and a $3.59/min rate that undercuts almost every reader in her volume tier. She frames herself as channeling 'ancient wisdom through clear visions since childhood.' Book her if you want a high-average, experienced clairvoyant-style reader at a genuinely low price."
 affiliateUrl: /go/keen-alice-runyon/
 avatarUrl: /avatars/keen/alice-runyon.jpg

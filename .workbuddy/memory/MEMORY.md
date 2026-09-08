@@ -31,6 +31,8 @@
 ## 构建部署
 - 构建必须沙箱外，先清 CODEBUDDY_SESSION_ID / CLAUDE_SESSION_ID；退出码非 0 ≠ 失败（日志有 `✓ Completed in` 即可）；收尾 `rm -rf dist/.prerender` + 核对 + 确认 `dist/sitemap-index.xml` 非 0 字节（仅中断时才用 gen_sitemap.py 补）。
 - 基线：529 index.html / 733 文件 / sitemap 275–276 条；构建前 `cp -r dist dist.bak.<日期>`。
+- 🔴 dist.bak 只保留最新 1 个（2026-09-08 清理定约：8 个备份 ~580MB 已删 7 个）；构建成功验证后可删上一代备份。
+- 🔴 **假成功构建事故（2026-09-08）**：`✓ Completed in 1.36s` ≠ 成功——Astro 清空输出后渲染 2 页即被手动停掉，dist 从 765 文件变 23 文件（只剩 reviews/terms index），日志无报错。构建后铁律：`find dist -name "*.html" | wc -l` ≥559 + 总数 765 + sitemap-index 非 0 字节；dist 顶层手工文件（_redirects/robots/sarah-avatar）时间戳旧而 html 消失 = 清空后部分重建事故。恢复：`cp -r dist.bak.<最新>/. dist/`（勿用删除，避开 safe-delete 钩子）。
 - YAML：含撇号的 frontmatter 值用双引号（报错指向上一行）；检测 `node scratch/yaml_check.mjs`。
 
 ## 移动端 fixed 元素
@@ -43,6 +45,12 @@
 - CTA 审计 `scratch/audit20260902_cta/audit_cta_aff_mapping.py`；TUNE 落地在 url= 参数（percent-decode 取 profile）；slug≠显示名，看页内 JSON 判同人；顾问流失信号 profile 变 58KB 空壳，**tarot-by-elena（PG 11714）待处理**；offer 209 = keen-intuitive-jade / keen-suzen，其余 keen 走 221；西语站 EsSpanishCTA 无埋点、EsLeftSidebar 两个 /go/ 未注册 404。
 - AI 爬虫：Cloudflare Bots = Block AI bots Off、Search/Agent/Training Allow、AI Labyrinth Off、Bot fight mode 关、不接管 robots.txt；改后 UA 矩阵实测。
 
+## 自测流量口径（2026-09-08 用户坦白，红线级，影响所有分析）
+- 用户自测指纹：**CN IP 全部 + GB/UK 桌面 Chrome（9 月前）**。8/21–8/27 站内点击主力（GB desktop Chrome 1–8 次/天、点遍各 CTA 位置）即其自测；8/28 停测，9 月后不用 UK IP。
+- 🔴 **推翻 2026-09-05 手册结论"GB/UK 不能当自测排除"**（当时实证的 UK 注册是自测产物）。去自测口径：排除 CN + (country=GB AND device=Desktop AND browser=Chrome)；GB mobile 零星点击可能真实，存疑保留。
+- 联盟后台 9 月前"转化很好"≈ 自测注册；9/4 后归零 = 停测露出真实基线（日均 25 会话 / 1–5 真实点击 / ~0 转化，3 天 0 转化概率 ≥74%，数学常态）。
+- 红线：自测注册在联盟属 self-referral fraud 信号，有封号/佣金没收风险。不协助、不建议继续自测制造转化。
+
 ## 数据分析分工（2026-09-07 校准）
 - 用户日常只看 PostHog（站内行为最全：会话/点击/转化/设备/国家）。但需守住边界：**GSC 管搜索引擎层（排名/展示/点击/查询词/AI 引用/收录），PostHog 完全看不到"展示没点击"这一层**。本次所有关键诊断（无惩罚判定、16 残句 seoTitle、哑弹页、AI 引用 45 倍放量）均依赖 GSC。
 - 约定：日常 PostHog 即可；每月 + 关键节点（内容改造后/算法更新后）必扫一次 GSC 三样——排名趋势、AI 引用、收录页数。Bing 数据次要（流量 99% 来自 Google），仅在做 Bing 索引/收录排查时看。
@@ -50,3 +58,9 @@
 ## 编码与数据
 - `platform` 字段定 CTA 平台归属 + guides review 卡；平台专文必须显式 platform+affiliateUrl。slug 化 `.replace(/\s+/g,'-')`。数字区间用 en dash。
 - 优惠事实源 `src/lib/offers.ts`：Kasamba 3 分钟免费+首单 5 折；PG $30 credit（purplegarden 无连字符）；Keen 5 分钟 $1。
+
+## 站点评分口径（2026-09-08 重校准，红线级）
+- `rating` 字段 = 本站独立分（非平台分），可低于平台 0.5~0.8（需正文解释，参考豁免 4 篇双数字框架）。
+- 校准方法：差评比（点踩/点赞，源 EA资料热度排名 xlsx）排序 → 正态 σ0.17 均值4.5 → 1 位小数 → 护栏 [平台−0.5, 平台+0.2]。分布目标：4.3–4.7 为主（~89%）、≥4.8 少数（≤10 页）、低尾 4.1–4.2。
+- Keen 无赞踩数据 → 以平台评分排序（不许编差评数）。正文/标题中的数字=平台公开数据陈述，不改；站内分只在 rating 字段+schema+数据驱动组件。
+- 豁免页（人工低分）改分前先问用户。

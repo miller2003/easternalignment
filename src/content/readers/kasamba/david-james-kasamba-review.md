@@ -3,7 +3,7 @@ title: "David James Kasamba Review (2026): The Blunt Glasgow Reader Who Won't Se
 description: "David James on Kasamba: 111,359 readings since 2004, a 4.7 earned the hard way, and a Scottish no-sugarcoating style at $6.99/min. We read the real reviews — including the bad one — to find out who should book him and who should run."
 platform: kasamba
 platformName: "Kasamba: David James"
-rating: 4.7
+rating: 4.4
 verdict: "David James is a 30-year Glasgow veteran with 111,359 Kasamba readings and a self-declared 'no sugarcoating' style. His 4.7 is earned in public, bad reviews included — which is exactly why it means something. Listed at $6.99/min with 3 free minutes (new-client promos have dropped it as low as $3.49). Book him if you want the truth straight; skip him if you need it sweetened."
 affiliateUrl: /go/kasamba-david-james/
 avatarUrl: /avatars/kasamba/david-james-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "David James is a 30-year Glasgow veteran with 111,359 Kasamba readings and a self-declared 'no sugarcoating' style. His 4.7 is earned in public, bad reviews included. Listed at $6.99/min with 3 free minutes. Who should book, who shouldn't.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.7",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

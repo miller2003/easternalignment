@@ -3,7 +3,7 @@ title: "Quantum Drew Purple Garden Review (2026): The Reader Who Knew a Client W
 description: "Quantum Drew on Purple Garden: a perfect 5.0 across 13,746 readings since 2017, an intuitive empath who reads energy first. Chat $3.99/min. One client wrote he 'got goosebumps' because Drew knew things he never said. We read the receipts to find out who should book him."
 platform: purple-garden
 platformName: "Purple Garden: Quantum Drew"
-rating: 5.0
+rating: 4.6
 verdict: "Quantum Drew is a 5.0-star intuitive empath with 13,746 Purple Garden readings since 2017, known for reading emotional energy first and landing details clients never told him. Chat $3.99/min. Book him if you want a calm, 'scary accurate' reader who makes you feel at ease; skip him if you want rigid yes/no formats."
 affiliateUrl: /go/purple-garden-quantum-drew/
 avatarUrl: /avatars/purple-garden/quantum-drew.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Quantum Drew is a 5.0-star intuitive empath with 13,746 Purple Garden readings since 2017, known for reading emotional energy first and landing details clients never told him. Chat $3.99/min. Real client stories and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

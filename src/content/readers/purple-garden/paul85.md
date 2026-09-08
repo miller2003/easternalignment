@@ -3,7 +3,7 @@ title: "Paul85 Purple Garden Review 2026: 43,000 Readings in Six Years — the 1
 description: "An independent review of Paul85 on Purple Garden: 43,000 readings since 2020 — roughly 20 a day — at 4.9 stars with a 'highest rated' badge, and zero negative reviews in his last 150. He's online every day, 07:00 to 21:00 Atlantic. We analyzed the feed, including a beauty-pageant prediction that came true. $12.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Paul85"
-rating: 4.9
+rating: 4.6
 verdict: "Paul85 built Purple Garden's fastest practice: 43,000 readings since 2020 — about 20 a day, six days a week worth of volume, seven days a week of availability (his posted schedule: every day, 07:00–21:00 Atlantic). Volume usually erodes quality; his current feed shows zero negative reviews in 150, with 65% coming from repeat clients (one holds 26 reviews, another 19). A card and intuitive reader specializing in love and career, his receipts include a beauty-pageant placement predicted a year out that 'came true.' The style, per clients: detailed, direct, and strikingly non-judgmental. $12.99/min flat for chat or voice; the $30 new-client credit covers your first two-plus minutes. For a reading tonight — not next Tuesday — he's the most available top-rated reader on the platform."
 affiliateUrl: /go/purple-garden-paul85/
 avatarUrl: /avatars/purple-garden/paul85.jpg

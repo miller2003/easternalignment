@@ -3,7 +3,7 @@ title: "Master Psychic Adam Stone on Keen Review 2026: 113,000 Readings at $3.99
 seoTitle: "Master Psychic Adam Stone on Keen Review 2026: 113,000"
 description: "An independent review of Master Psychic Adam Stone on Keen - 19,000 ratings, 113,000+ readings since 2012, and a low $3.99/min rate. Built from Keen's live client reviews and his advisor profile, covering who he is, his record, and whether the low price holds up."
 platformName: "Keen: Master Psychic Adam Stone"
-rating: 4.88
+rating: 4.5
 verdict: "Master Psychic Adam Stone pairs a remarkably low $3.99/min rate with 113,000+ readings since 2012 and 19,000 ratings at 4.88 stars. Real Keen clients describe him as direct, honest, and accurate — with predictions that, for many, came true — though a minority found him vague. Available by both Call and arranged Chat."
 affiliateUrl: /go/keen-master-psychic-adam-stone/
 avatarUrl: /avatars/keen/master-psychic-adam-stone.jpg

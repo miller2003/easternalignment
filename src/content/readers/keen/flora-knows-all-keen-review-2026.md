@@ -3,7 +3,7 @@ title: "Flora Knows All on Keen Review 2026: The Lowest Price in the Category, a
 seoTitle: "Flora Knows All Keen Review 2026: Lowest Rate - Worth the Risk?"
 description: "An honest third-party review of Flora Knows All on Keen — covering her $2.52/min rate, 6,400 readings built in months, angel reading specialty, real review patterns, and exactly when a newer reader at a budget price makes sense to book."
 platformName: "Keen: Flora Knows All"
-rating: 4.7
+rating: 4.4
 verdict: "Flora is the clearest value play in this review series — $2.52/min with a multi-tool skill set and a client engagement rate that outpaces readers with ten times her volume. The trade-off is track record depth: she's months into building something that may be exceptional, but you're betting earlier in that arc than with the veterans here. For the right client, that bet costs almost nothing to test."
 affiliateUrl: "/go/keen-flora/"
 avatarUrl: /avatars/keen/flora-knows-all-keen-review-2026.jpg

@@ -5,7 +5,7 @@ description: A third-party review of Arradaza on Keen  -  covering her five-tool
   method, 25-year track record, the '98% accuracy' claim, what real clients say, and
   who gets the most value at $5.99/min.
 platformName: 'Keen: arradaza'
-rating: 4.93
+rating: 4.6
 verdict: A 25-year veteran with the widest tool set of any reader I've assessed on
   Keen  -  Tarot, Cartomancy, Numerology, Western and Chinese Astrology combined with
   Clairvoyant and Otherworld Connection skills. Best for clients who want multi-layered

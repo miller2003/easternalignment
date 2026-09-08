@@ -3,7 +3,7 @@ title: "Psychic Jewels Purple Garden Review 2026: The Reader Who Tells You What 
 description: "An independent review of Psychic Jewels on Purple Garden: 47,273 readings since 2015 at 4.9 stars, a 'recommended' badge — and the most honest bio we've reviewed: no timelines, no cheating surveillance, no deciding for you. Her clients report full readings from just a name and date of birth, including one who waited days to verify a prediction before reviewing. $4.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Psychic Jewels"
-rating: 4.9
+rating: 4.7
 verdict: "Psychic Jewels does something no marketing department would allow: her bio opens with a list of what she cannot do — no timelines ('I have no way to see time'), no cheating surveillance ('I cannot see physical action of a person, only energetic feeling'), and no deciding whether you should move on. Twenty-seven years of practice, 47,273 readings since 2015 at 4.9 stars, 18,088 likes against 112 dislikes, and a platform 'recommended' badge say the honesty costs her nothing. The receipts are the anti-cold-reading kind: clients report full, specific readings from just a name and date of birth — including one who deliberately waited days to test a prediction before writing her review. A love-only specialist at $4.99/min flat with the $30 new-client credit covering about six minutes. Bring one person, one question, and their birthdate."
 affiliateUrl: /go/purple-garden-psychic-jewels/
 avatarUrl: /avatars/purple-garden/psychic-jewels.jpg

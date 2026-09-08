@@ -3,7 +3,7 @@ title: "LadyFontaine on Keen Review 2026: A Certified Master Psychic With 4.99 S
 seoTitle: "LadyFontaine on Keen Review 2026: A Certified Master"
 description: "An independent review of LadyFontaine on Keen - a Certified Master Psychic with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. What her track record and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: LadyFontaine"
-rating: 4.99
+rating: 4.9
 verdict: "LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. Her no-tools, energy-reading style and 'Love Doctor' reputation show up clearly in real reviews - clients praise insight, honesty, and accuracy over a decade plus. Book her by voice for love and relationship questions; at $8.97/min she sits in Keen's upper tier, so use the $1 intro to confirm fit first."
 affiliateUrl: /go/keen-ladyfontaine/
 avatarUrl: /avatars/keen/ladyfontaine.jpg

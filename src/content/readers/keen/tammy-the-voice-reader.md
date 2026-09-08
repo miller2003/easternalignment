@@ -3,7 +3,7 @@ title: "Tammy the Voice Reader on Keen Review 2026: Can a 4.98-Rating Reader Jus
 seoTitle: "Tammy the Voice Reader Keen Review: Can 4.98 Stars Justify $9.99/Min?"
 description: "An independent review of Tammy the Voice Reader on Keen - 26,000 ratings, 77,000+ readings since 2001, and a $9.99/min rate. What her Top Advisor track record, voice-energy method, and real client reviews reveal."
 platformName: "Keen: Tammy the Voice Reader"
-rating: 4.98
+rating: 4.7
 verdict: "Tammy the Voice Reader's 4.98 across 26,000 ratings is the highest average in this batch, and her 'voice energy' method is distinctive. At $9.99/min she is priced in the upper tier, but the near-5-star score at this volume is hard to dismiss. Use the $1 intro to test whether her voice-energy style connects for you before committing to a full session."
 affiliateUrl: /go/keen-tammy-the-voice-reader/
 avatarUrl: /avatars/keen/tammy-the-voice-reader.jpg

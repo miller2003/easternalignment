@@ -5,7 +5,7 @@ description: An independent review of Ask Fran on Keen  -  why the same reader g
   both absolute devotion and sharp frustration, what the documented negative pattern
   looks like, and the one move that changes everything in the first two minutes.
 platformName: 'Keen: Ask Fran'
-rating: 4.6
+rating: 4.3
 verdict: Ask Fran is one of the most genuinely useful readers on Keen  -  for the
   right kind of client. Her personality-led, conversational style creates real warmth
   and connection that prediction-first readers simply cannot replicate. But she is

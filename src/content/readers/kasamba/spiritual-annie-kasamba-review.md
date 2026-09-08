@@ -3,7 +3,7 @@ title: "Spiritual Annie Kasamba Review 2026: Top-10 in Love & Relationships — 
 description: "An independent review of Spiritual Annie on Kasamba: ranked among the platform's Top 10 advisors for love & relationships, 51,930 readings since 2014 at 4.9 stars — and the calmest review feed we've ever reviewed (clients say 'calm' twice as often as any other reader we've reviewed). Clairsentient readings at $3.99/min chat, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Spiritual Annie"
-rating: 4.9
+rating: 4.4
 verdict: "Spiritual Annie holds a platform-ranked Top 10 position in love & relationships, built on 51,930 readings since 2014 at 4.9 stars — 17,046 likes against 404 dislikes. Her specialty is clairsentience: reading the emotional currents under your situation, the things unspoken. Her review feed is the calmest we've ever measured — clients mention calm, kindness, and detail at rates no other reader in our audit series matched — and her client names span four continents. She reads slowly and thoroughly; voice runs $19.99/min, so book chat at $3.99. For anxious love questions at 1 a.m., she is exactly the reader her reputation describes."
 affiliateUrl: /go/kasamba-spiritual-annie/
 avatarUrl: /avatars/kasamba/spiritual-annie-kasamba-review.jpg

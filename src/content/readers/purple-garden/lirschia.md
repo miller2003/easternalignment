@@ -3,7 +3,7 @@ title: "Lirschia Purple Garden Review 2026: She Answers Every Part of Every Ques
 description: "An independent review of Lirschia on Purple Garden: 36,927 readings since 2020 at a perfect 5.0 with a 'highest rated' badge — a fourth-generation medium with 35+ years of experience whose clients single out a rare completeness: she answers everything you ask, unlike readers who cherry-pick. Zero negatives in her last 150. Chat $7.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Lirschia"
-rating: 5.0
+rating: 4.6
 verdict: "Lirschia is a fourth-generation psychic medium and empath with 35+ years of experience — 36,927 Purple Garden readings since 2020 at a perfect 5.0, 14,548 likes against 102 dislikes (99.3%), and zero negative reviews in her last 150. Her signature, per clients: completeness — 'she explains everything that you ask in your request unlike others who only answer some of it.' A medium who sees entities and communicates with those who've passed, she handles relationship, business, and career questions with equal fluency, and her regulars include a 38-review client. The session texture, per her feed: specific, calming, and thorough enough to quiet relationship anxiety on the spot. Chat $7.99/min with the $30 credit covering about four minutes; voice runs $17.99, so book text."
 affiliateUrl: /go/purple-garden-lirschia/
 avatarUrl: /avatars/purple-garden/lirschia.jpg

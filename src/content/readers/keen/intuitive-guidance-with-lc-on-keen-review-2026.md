@@ -3,7 +3,7 @@ title: "Intuitive Guidance with LC (Lori) on Keen Review 2026: 4.97 Stars Across
 seoTitle: "Intuitive Guidance with LC on Keen: 4.97 Stars Across 8,687 Sessions"
 description: "An independent review of Intuitive Guidance with LC on Keen — why 4.97 across 8,687 reviews is the most statistically robust rating in this series, what the fairytale reader concern actually means, and who Lori is specifically built for."
 platformName: "Keen: Intuitive Guidance with LC"
-rating: 4.8
+rating: 4.5
 verdict: "Lori is the reader in this series with the most statistically credible near-perfect rating — 4.97 across 8,687 sessions over 16 years produces a quality signal that is harder to dismiss than any other number in this lineup. The fairytale reader concern raised in independent forum discussion is real and worth understanding, but it is answered more directly by the evidence of 7-year repeat clients than by any counter-argument I could construct. She delivers something specific: accurate, compassionate, efficient guidance that genuinely calms the mind. For the right question and the right client, she is one of the most consistently reliable choices on Keen."
 affiliateUrl: "/go/keen-lc/"
 avatarUrl: /avatars/keen/intuitive-guidance-with-lc-on-keen-review-2026.jpg

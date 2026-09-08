@@ -4,7 +4,7 @@ seoTitle: "Gina Marie Keen Review 2026: 4.87 Stars, $6.99/min"
 metaDescription: "Gina Marie on Keen: 12,000 ratings across 20 years for a no-tools pure-channel clairvoyant. $6.99/min — what the record reveals and who gets value."
 description: "An independent review of Gina Marie on Keen - her no-tools clairvoyant approach, what 12,000 ratings across 20 years actually reveal, the real cost of a session, and exactly who gets value from booking her."
 platformName: 'Keen: Gina Marie'
-rating: 4.7
+rating: 4.4
 verdict: Gina Marie's 20-year track record on Keen is hard to dismiss  -  but at $6.99/min,
   she's priced for clients who arrive ready to receive, not process. Her no-tools
   approach is her strongest differentiator and makes her unusually easy to test. Book

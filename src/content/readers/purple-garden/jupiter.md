@@ -3,7 +3,7 @@ title: "Júpiter Purple Garden Review 2026: The Bilingual Reader — 41,582 Read
 description: "An independent review of Júpiter on Purple Garden: 41,582 readings since 2020 at a perfect 5.0 with a 'highest rated' badge — and a genuine rarity on the platform: a native-Spanish reader serving clients in two languages, with reviews in his feed written in both. 15 years of experience, no-sugar-coating style. Chat $3.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Júpiter"
-rating: 5.0
+rating: 4.6
 verdict: "Júpiter fills a gap most platforms don't know they have: he's a native-Spanish clairvoyant from Colombia reading fluently in two languages — and his review feed proves the clientele, with five-star reviews written in Spanish alongside English ones. The numbers are elite: 41,582 readings since 2020 at a perfect 5.0, 10,614 likes against 86 dislikes (99.2%), and a 'highest rated' badge. His style, per clients: spot on, no sugar-coating, quick and clear — a male reader in a female-dominated category, with 15 years of experience since discovering his gift at age 7. Chat runs $3.99/min with the $30 credit covering about seven minutes; voice $6.49. For Spanish-speaking clients — or anyone who wants directness without padding — he's the find."
 affiliateUrl: /go/purple-garden-jupiter/
 avatarUrl: /avatars/purple-garden/jupiter.jpg

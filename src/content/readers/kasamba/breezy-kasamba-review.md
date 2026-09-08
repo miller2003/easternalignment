@@ -3,7 +3,7 @@ title: "BreeZy Kasamba Review 2026: Brutally Honest, Kind, and Genuinely Funny �
 description: "An independent review of BreeZy on Kasamba: 38,832 readings since 2002 — twenty-four years — at a perfect 5.0. Her clients' formula is unique in our audit series: brutally honest, kind, and funny — a truth-teller who lifts your spirit while telling it straight. 60% of her feed is repeat clients. Chat $8.49/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: BreeZy"
-rating: 5.0
+rating: 4.6
 verdict: "BreeZy is Kasamba's twenty-four-year truth-teller with a twist nobody else in our audit series offers: she's funny. Her clients' recurring formula — 'brutally honest, kind, funny and insightful... she brings your spirit up every single time' — describes a reader who tells you the unvarnished truth and somehow leaves you lighter. The numbers: 38,832 readings since 2002 at a perfect 5.0, 9,270 likes against 60 dislikes (99.4%), with 60% of her current feed from repeat clients (one holds 17 reviews). An angel-card reader practicing the law of attraction, her feed's top words are 'help' (25) and 'honest' (21). Chat $8.49/min with 3 free minutes; voice $10.99. Book her when you need the truth and could also use a laugh — which is most hard nights."
 affiliateUrl: /go/kasamba-breezy/
 avatarUrl: /avatars/kasamba/breezy-kasamba-review.jpg

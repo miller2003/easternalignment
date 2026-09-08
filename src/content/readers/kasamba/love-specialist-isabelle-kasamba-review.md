@@ -3,7 +3,7 @@ title: "Love Specialist Isabelle Kasamba Review (2026): 99,057 Readings, a Perfe
 description: "Love Specialist Isabelle on Kasamba: 99,057 readings since 2005, a perfect 5.0, and something rarer than ratings — clients returning years later to confirm her predictions came true. Currently $14.99/min promo (reg. $29.99). Real reviews, honest caveats, and who should book."
 platform: kasamba
 platformName: "Kasamba: Love Specialist Isabelle"
-rating: 5.0
+rating: 4.8
 verdict: "Love Specialist Isabelle holds a perfect 5.0 across 99,057 readings since 2005 — but the real proof is in the long arc: clients returning two, four, six years later to confirm specific predictions came true, including ones they didn't believe at the time. At the current $14.99/min promo (reg. $29.99) she's premium-priced and worth it for high-stakes love questions where accuracy matters more than minutes. Book with a focused question and a stated budget, and she'll do the rest."
 affiliateUrl: /go/kasamba-love-specialist-isabelle/
 avatarUrl: /avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Love Specialist Isabelle holds a perfect 5.0 across 99,057 Kasamba readings since 2005. Her signature is long-arc accuracy — clients return years later confirming predictions about divorces, breakups, and reconciliations. Currently $14.99/min promo (reg. $29.99). Premium-priced and worth it for high-stakes love questions.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.8",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -3,7 +3,7 @@ title: "Psychic Yazmin Kasamba Review (2026): The 5.0 Reader Whose Clients Stay 
 description: "Psychic Yazmin on Kasamba: a perfect 5.0 across 119,836 readings since 2005, at $4.99/min for chat and voice. Her clients come back for months through the hardest seasons of their lives. We traced one client's story to see why — and who should book her."
 platform: kasamba
 platformName: "Kasamba: Psychic Yazmin"
-rating: 5.0
+rating: 4.7
 verdict: "Psychic Yazmin holds a perfect 5.0 across 119,836 Kasamba readings since 2005, and her reviews show why: she doesn't move her predictions to please you, and she stays with clients through months-long crises. At a flat $4.99/min with 3 free minutes, book her if you want a steady guide for a hard season — not a one-off fortune cookie."
 affiliateUrl: /go/kasamba-yazmin/
 avatarUrl: /avatars/kasamba/psychic-yazmin-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Psychic Yazmin holds a perfect 5.0 across 119,836 Kasamba readings since 2005. Her clients return for months through crises because she holds her predictions steady. $4.99/min flat with 3 free minutes. Who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.7",
       "bestRating": "5",
       "worstRating": "1"
     },

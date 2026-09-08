@@ -3,7 +3,7 @@ title: "Quietsound Kasamba Review (2026): The 'Relay' Reader Who Gives You Your 
 description: "Quietsound on Kasamba: 64,270 readings since 2002, a perfect 5.0, only 126 negative reviews out of 23,484. A board-certified tarot professional with a one-of-a-kind 'relay' method — her guides ask your guides, and she tells you their names. Real session details and who should book."
 platform: kasamba
 platformName: "Kasamba: Quietsound"
-rating: 5.0
+rating: 4.6
 verdict: "Quietsound practices something no other top advisor offers: 'relay' — her spirit guides consult yours, and she gives you the names of the guides who answered. Add Tarot Certification Board credentials, stated ethical limits (no health, legal, or pregnancy questions), and 64,270 readings since 2002 at a perfect 5.0 with a 0.5% negative rate. At $6.99/min she's the booking for anyone who wants mediumship-flavored answers with professional boundaries, delivered fast, raw, and unfiltered."
 affiliateUrl: /go/kasamba-quietsound/
 avatarUrl: /avatars/kasamba/quietsound-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Quietsound is a board-certified tarot professional and psychic medium with 64,270 Kasamba readings since 2002 at a perfect 5.0 and a 0.5% negative rate. Her unique 'relay' method — her guides consult the client's guides, and she names them — plus stated ethical limits make her the most distinctive mediumship option on the platform at $6.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

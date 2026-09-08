@@ -3,7 +3,7 @@ title: "Master Enigma Kasamba Review (2026): I Read 355,674 Sessions' Worth of R
 description: "Master Enigma on Kasamba: 355,674 readings since 2007, a perfect 5.0, and a promo rate of $5.99/min chat. We dug through the reviews, the numbers, and the real client stories — here's who should book him tonight, and who shouldn't."
 platform: kasamba
 platformName: "Kasamba: Master Enigma"
-rating: 5.0
+rating: 4.6
 verdict: "Master Enigma is Kasamba's 'Most Experienced Advisor' — 355,674 readings since 2007, a perfect 5.0, and a style clients describe as fast, sharp, and respectful of your time. At the $5.99/min new-client promo with 3 free minutes, he's the lowest-risk premium reader on the platform. Book him if you want the answer, not the ceremony."
 affiliateUrl: /go/kasamba-master-enigma/
 avatarUrl: /avatars/kasamba/master-enigma-kasamba-review.png
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Master Enigma is Kasamba's 'Most Experienced Advisor' — 355,674 readings since 2007, a perfect 5.0, and a style clients describe as fast, sharp, and respectful of your time. Real client stories, the promo math, and who should book. Standard rate $5.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

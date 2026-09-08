@@ -3,7 +3,7 @@ title: "Spiritual Anna Kasamba Review (2026): The $26.99/min Reader Whose Profil
 description: "Spiritual Anna on Kasamba: 58,479 readings since 2005, a perfect 5.0, $26.99/min — and a bio that urges you to 'take your time when choosing a psychic.' No fear-mongering, organic clients only, and a year-long client whose timelines 'have worked out so far.' The ethics-first premium reader, reviewed honestly."
 platform: kasamba
 platformName: "Kasamba: Spiritual Anna"
-rating: 5.0
+rating: 4.9
 verdict: "Spiritual Anna is Kasamba's ethics-first premium reader: 58,479 readings since 2005 at a perfect 5.0, charging $26.99/min while her own bio tells you to take your time choosing a psychic and warns against fear-based selling. Her practice is anti-urgency by design — 'organic clients,' no pressure, honest paths over fear. A year-long client reports her timelines 'have worked out so far.' If you're paying premium, this is what premium should behave like. Book with one real question and a stated budget."
 affiliateUrl: /go/kasamba-spiritual-anna/
 avatarUrl: /avatars/kasamba/powerful-visions-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Spiritual Anna is Kasamba's ethics-first premium reader — 58,479 readings since 2005 at a perfect 5.0, $26.99/min. Her bio rejects fear-mongering and pressure sales, urging clients to choose psychics slowly. A year-long client confirms her timelines have worked out.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.9",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -3,7 +3,7 @@ title: "Immense Spark Kasamba Review (2026): The Reader One Client Has Come Back
 description: "Immense Spark on Kasamba: 66,152 readings since 2007, a 4.8, inherited psychic gifts, and a client who's been returning for over ten years. Chat $10.99/min promo (reg. $21.99), voice $19.99 (reg. $39.99). We read the receipts — including the decade-long client — to find out who should book her."
 platform: kasamba
 platformName: "Kasamba: Immense Spark"
-rating: 4.8
+rating: 4.4
 verdict: "Immense Spark is a 4.8-star Kasamba reader with 66,152 readings since 2007 and inherited psychic gifts, whose standout credential is a client who's been returning for over a decade. At the $10.99/min chat promo with 3 free minutes, book her if you want a reader people stay with for years; skip her if you want a one-off cheap check."
 affiliateUrl: /go/kasamba-immense-spark/
 avatarUrl: /avatars/kasamba/immense-spark-n-au-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Immense Spark is a 4.8-star Kasamba reader with 66,152 readings since 2007 and inherited psychic gifts, whose standout credential is a client returning for over a decade. $10.99/min promo with 3 free minutes. Real stories and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

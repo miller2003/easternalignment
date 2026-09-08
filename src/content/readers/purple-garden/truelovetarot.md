@@ -3,7 +3,7 @@ title: "Truelovetarot Purple Garden Review 2026: 'He Texted 4 Days Later, Out of
 description: "An independent review of Truelovetarot (Sneha) on Purple Garden: 39,956 readings since 2017 at a perfect 5.0, 15,385 likes against 39 dislikes — and zero negative reviews in her last 150. A certified tarot reader, numerologist, and Akashic record reader from India whose dated receipts include a POI text-back predicted to the week. $6.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Truelovetarot"
-rating: 5.0
+rating: 4.8
 verdict: "Truelovetarot — Sneha, a certified tarot reader, numerologist, and Akashic record reader from India — holds a perfect 5.0 across 39,956 readings since 2017, with 15,385 likes against just 39 dislikes (99.7%) and zero negative reviews in her last 150. Her standout trait is consistency: clients describe a reader who gives the same prediction across sessions and stands by it — 'her consistency is what builds trustworthiness to me' — and the receipts land: 'she said she sees him reaching out this week. She's right! Just 4 days later out of the blue he texted!' 66% of her feed is repeat clients. Chat $6.99/min with the $30 credit covering about four minutes; voice $9.99. For love questions where you want one steady read you can trust, not five conflicting ones, Sneha is the specialist."
 affiliateUrl: /go/purple-garden-truelovetarot/
 avatarUrl: /avatars/purple-garden/truelovetarot.jpg

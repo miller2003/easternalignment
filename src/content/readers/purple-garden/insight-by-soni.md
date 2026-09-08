@@ -3,7 +3,7 @@ title: "Insight by Soni Purple Garden Review 2026: 10 Dislikes. Ever. — 37,140
 description: "An independent review of Insight by Soni on Purple Garden: 37,140 readings since 2019 at a perfect 5.0 — with 9,166 likes against just 10 dislikes, the cleanest approval ledger we have ever reviewed. One client holds 69 reviews; another verified her 20-day POI timeline to the day. UK-based, 25 years of experience. $11.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Insight by Soni"
-rating: 5.0
+rating: 4.9
 verdict: "Insight by Soni owns the cleanest approval ledger in our entire audit series: 9,166 likes against 10 dislikes — ten, ever — across 37,140 Purple Garden readings since 2019, at a perfect 5.0 with a 'highest rated' badge. Her retention is equally extreme: 80% of her current feed is repeat clients, led by a single client with 69 reviews. The receipts match the ledger: 'she told me I would hear from my POI within 20 days, and that timeline hit right on point when my POI reached out.' A UK-based, naturally gifted reader with 25 years of experience, she specializes in relationships and describes her method as honest answers without sugarcoating. $11.99/min with the $30 credit covering about two and a half minutes; voice $13.99. For the most statistically validated reader on Purple Garden, this is the booking."
 affiliateUrl: /go/purple-garden-insight-by-soni/
 avatarUrl: /avatars/purple-garden/insight-by-soni.jpg

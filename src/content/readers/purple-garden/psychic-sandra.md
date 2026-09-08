@@ -3,7 +3,7 @@ title: "Psychic Sandra Purple Garden Review 2026: Seventh Generation — and the
 description: "An independent review of Psychic Sandra on Purple Garden: 40,001 readings since 2015 at 4.9 stars, a 'recommended' badge — and a seventh-generation psychic whose feed is anchored by one client with 57 reviews. We analyzed 150 reviews to see what keeps 'Hopefully' coming back. Chat $5.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Psychic Sandra"
-rating: 4.9
+rating: 4.4
 verdict: "Psychic Sandra is a seventh-generation psychic with 40,001 Purple Garden readings since 2015 at 4.9 stars and a 'recommended' badge — and her review feed is anchored by one of the deepest single-client records we've reviewed: a client named Hopefully who has left 57 reviews, a running testimony that functions as her feed's backbone. Her style is clairvoyant sight plus tarot and crystal work, with a name-and-birthdate intake that keeps sessions focused. 11,778 likes against 247 dislikes (97.9%), with half her current feed coming from repeat clients. Chat $5.99/min with the $30 credit covering about five minutes; voice $10.99. For love questions where you want a hereditary-lineage reader with a documented long-term following, Sandra's practice is the definition of established."
 affiliateUrl: /go/purple-garden-psychic-sandra/
 avatarUrl: /avatars/purple-garden/psychic-sandra.jpg

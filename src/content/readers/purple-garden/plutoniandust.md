@@ -3,7 +3,7 @@ title: "PlutonianDust on Purple Garden Review (2026): Seven Years, Two Methods, 
 seoTitle: "PlutonianDust Purple Garden Review 2026: 11,254 Readings, Astrologer + Tarot, $3.99/min | EasternAlignment"
 description: "An independent review of PlutonianDust on Purple Garden — a 4.8-star astrologer-tarot reader with over 11,000 sessions since 2019, at $3.99/min. What the name signals about the reading style, why astrology-plus-tarot is a different product than either alone, and who should book."
 platformName: "Purple Garden: PlutonianDust"
-rating: 4.8
+rating: 4.4
 pricing: "$3.99/min"
 bestFor: "Clients who want astrological context layered under tarot interpretation — particularly for timing questions, life transitions, and situations where the 'why' matters as much as the 'what'"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/plutoniandust/"
@@ -40,7 +40,7 @@ customSchema: |
     "reviewBody": "PlutonianDust is a 4.8-star Purple Garden advisor combining astrology with tarot across 11,254 sessions since 2019, at $3.99/min. Seven years of platform presence and a dual-method approach that layers astrological timing awareness under tarot interpretation make him one of the more substantive advisors at this price point. The name deliberately signals a Plutonian style — depth, transformation, and honesty over comfort.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.4",
       "bestRating": "5",
       "worstRating": "1"
     },

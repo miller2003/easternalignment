@@ -3,7 +3,7 @@ title: "Cosmic Fusion Kasamba Review (2026): The 5.0 Reader With a $3.99 Chat �
 description: "Cosmic Fusion on Kasamba: a perfect 5.0 across 70,360 readings since 2011, chat at just $3.99/min — but voice at $39.99/min, a 10x gap. We read the reviews, the math, and the one rule that makes this reader either a steal or a rip-off."
 platform: kasamba
 platformName: "Kasamba: Cosmic Fusion"
-rating: 5.0
+rating: 4.6
 verdict: "Cosmic Fusion is a 5.0-star Kasamba reader with 70,360 readings since 2011 and a chat rate of just $3.99/min — one of the best value-per-star ratios on the platform. Voice, however, runs $39.99/min (10x more). Book chat for an affordable, empathic, accurate reading; never book voice without doing the math first."
 affiliateUrl: /go/kasamba-cosmic-fusion/
 avatarUrl: /avatars/kasamba/cosmic-fusion-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Cosmic Fusion is a 5.0-star Kasamba reader with 70,360 readings since 2011 and a chat rate of just $3.99/min — but voice at $39.99/min. The 10x price gap, real reviews, and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

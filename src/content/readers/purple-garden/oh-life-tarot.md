@@ -3,7 +3,7 @@ title: "Oh Life Tarot Purple Garden Review 2026: She Changed a Life Without a Si
 description: "An independent review of Oh Life Tarot on Purple Garden: 35,720 readings since 2018 at a perfect 5.0 with a platform 'most accurate' badge — and the most unusual receipt in our series: a client who calls the reading 'life changing' while noting she didn't predict anything. 10+ years of experience. Chat $6.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: Oh Life Tarot"
-rating: 5.0
+rating: 4.7
 verdict: "Oh Life Tarot holds Purple Garden's 'most accurate' badge across 35,720 readings since 2018 at a perfect 5.0 — 10,090 likes against 60 dislikes (99.4%). Her differentiator shows up in the most unusual five-star review in our audit series: a client who writes 'she changed my outlook to life without predicting anything... absolutely great, and life changing.' An empowerment-first reader with 10+ years of experience, her sessions trade fortune-telling for clarity — honest, direct feedback that clients use to make their own best choice. Her feed is broad rather than fan-clubbed (22% repeat), the signature of a reader people visit for the turning points. Chat $6.99/min with the $30 credit covering about four minutes; voice $7.99. Book her when the question isn't 'what will happen' but 'what should I do.'"
 affiliateUrl: /go/purple-garden-oh-life-tarot/
 avatarUrl: /avatars/purple-garden/oh-life-tarot.jpg

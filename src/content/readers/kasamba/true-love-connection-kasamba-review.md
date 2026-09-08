@@ -3,7 +3,7 @@ title: "True Love Connection Kasamba Review 2026: Her Clients Call Her 'Angel' �
 description: "An independent review of True Love Connection on Kasamba: 42,204 readings since 2012 at 4.9 stars, a Master's in Psychology behind the clairvoyance — and a client base that renamed her: they call her Angel. We analyzed 150 recent reviews and found the densest 'insight' vocabulary in our audit series. Chat $4.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: True Love Connection"
-rating: 4.9
+rating: 4.4
 verdict: "True Love Connection pairs a Master's in Psychology and certified astrology with natural clairvoyance — and her clients have long since stopped using her stage name: they call her Angel, unprompted, across years of reviews. The numbers: 42,204 readings since 2012 at 4.9 stars, 9,008 likes against 205 dislikes, with 52% of her current feed coming from repeat clients (one holds 20 reviews, two more hold 14 and 13). Her language signature is the densest 'insight' count we've measured — 24 mentions in 150 reviews — because her product is explanation, not just prediction: what your person is feeling, and the psychology of why. Chat $4.99/min with 3 free minutes; voice runs $20.99, so book text."
 affiliateUrl: /go/kasamba-true-love-connection/
 avatarUrl: /avatars/kasamba/true-love-connection-kasamba-review.jpg

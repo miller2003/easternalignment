@@ -2,7 +2,7 @@
 title: "Satie Readings Purple Garden Review (2026): The 40-Year Reader Who Refuses to Be Your Fortune Teller"
 description: "Honest review of Satie Readings on Purple Garden — a 4.9-star love-tarot reader with 40+ years experience, nearly 18,000 readings since 2020, and an accuracy rating in the high 80s, from $4.99/min. Who she is for, and the one catch that is actually a selling point."
 platformName: "Purple Garden: Satie Readings"
-rating: 4.9
+rating: 4.5
 verdict: "Satie Readings is a 4.9-star Purple Garden love-tarot reader with 40+ years of experience and nearly 18,000 readings since 2020, read live on camera. Best for clients who want seasoned, boundary-setting truth with no sugarcoating."
 affiliateUrl: /go/purple-garden-satie-readings/
 avatarUrl: /avatars/purple-garden/satie-readings.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Satie Readings on Purple Garden — a 4.9-star love-tarot reader with 40+ years experience, nearly 18,000 readings since 2020, and an accuracy rating in the high 80s, from $4.99/min. Who she is for, and the one catch that is actually a selling point.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

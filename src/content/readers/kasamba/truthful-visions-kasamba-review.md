@@ -2,7 +2,7 @@
 title: "Truthful Visions Kasamba Review (2026): Perfect-5.0 Love & Career Reader With 55,000+ Sessions"
 description: "Review of Truthful Visions on Kasamba — a 5.0-star intuitive psychic, 55,271 readings since 2015, love and career specialist at $4.99/min chat. Real quotes, method, and fit."
 platformName: "Kasamba: Truthful Visions"
-rating: 5
+rating: 4.5
 verdict: "Truthful Visions pairs a perfect 5.0-star rating with 55,271 readings since 2015, offering warm, down-to-earth love and career guidance that repeat clients describe as exceptionally in tune."
 affiliateUrl: /go/kasamba-truthful-visions/
 avatarUrl: /avatars/kasamba/truthful-visions-kasamba-review.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Review of Truthful Visions on Kasamba — a 5.0-star intuitive psychic, 55,271 readings since 2015, love and career specialist at $4.99/min chat. Real quotes, method, and fit.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

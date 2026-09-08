@@ -3,7 +3,7 @@ title: "Eli Casey on Keen Review 2026: Can a 200,000-Reading Empath Still Delive
 seoTitle: "Eli Casey on Keen Review 2026: Can a 200,000-Reading Empath"
 description: "An independent review of Eli Casey on Keen - 81,000 ratings, 200,000+ readings since 2001, and an $8.97/min rate. What his track record and real client reviews actually reveal, and exactly who should book him."
 platformName: "Keen: Eli Casey"
-rating: 4.96
+rating: 4.7
 verdict: "Eli Casey's numbers are difficult to argue with: 81,000 ratings and more than 200,000 completed readings on Keen since 2001. He is a call-first, compassionately styled empath who leads with reassurance rather than raw prediction. At $8.97/min he sits in the upper tier, so use the $1 intro to test whether his thorough, supportive style fits your question before committing to a full session."
 affiliateUrl: /go/keen-eli-casey/
 avatarUrl: /avatars/keen/eli-casey.jpg

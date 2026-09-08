@@ -3,7 +3,7 @@ title: "SYMONNE on Keen Review 2026: 59,082 Readings at $3.09/min — the Reader
 seoTitle: "SYMONNE Keen Review 2026: 4.64, $3.09/min"
 description: "An independent review of SYMONNE on Keen — 23 years, ~59,000 readings, clairvoyant/clairaudient/empath/clairsentient, $3.09/min. Clients say she reads their subconscious fears and dreams with unsettling accuracy. What her 'transformation not prediction' style means for your session, and who should book."
 platformName: "Keen: SYMONNE"
-rating: 4.64
+rating: 4.3
 pricing: "$3.09/min (per our audit data — verify on live profile)"
 bestFor: "Big-decision moments — relationships, life direction, commitment fear, grief, dreams — where you want the underlying truth read aloud, with spiritual depth and practical next steps, at a budget rate"
 canonicalUrl: "https://easternalignment.com/reviews/keen/symonne/"
@@ -38,7 +38,7 @@ customSchema: |
     "reviewBody": "SYMONNE is a 23-year Keen veteran with ~59,000 readings at $3.09/min. A clairvoyant, clairaudient, empath, and clairsentient who reads the subconscious layer — fears, dreams, hidden motives — and pairs spiritual depth with actionable steps. Strong but polarizing: her direct reads can overwhelm.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.64",
+      "ratingValue": "4.3",
       "bestRating": "5",
       "worstRating": "1"
     },

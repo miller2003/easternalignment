@@ -3,7 +3,7 @@ title: "Intuitive Counselor Kasamba Review (2026): 68,717 Readings, 4.9 Stars �
 description: "Intuitive Counselor on Kasamba: 68,717 readings since 2007, 4.9 stars, $4.99/min. A soulmate-tarot and emotional-healing specialist. We read the negative reviews as well as the positive — here's the full, honest picture and who should book."
 platform: kasamba
 platformName: "Kasamba: Intuitive Counselor"
-rating: 4.9
+rating: 4.5
 verdict: "Intuitive Counselor has 68,717 readings since 2007 at a 4.9 rating, with a distinctive specialty: soulmate-essence tarot plus healing work for what she calls the 'wounded soul' — clients carrying stress, distress, and trauma. Her 230 negative reviews against 19,637 positive (1.2%) are the statistical price of honest readings, not a pattern of harm. At $4.99/min she's a strong mid-tier pick for love questions where the wound matters as much as the answer."
 affiliateUrl: /go/kasamba-intuitive-counselor/
 avatarUrl: /avatars/kasamba/intuitive-counselor-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Intuitive Counselor has 68,717 Kasamba readings since 2007 at 4.9 stars, specializing in soulmate-essence tarot and healing work for the 'wounded soul' — stress, distress, and trauma. 230 negative reviews against 19,637 positive (1.2%). $4.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

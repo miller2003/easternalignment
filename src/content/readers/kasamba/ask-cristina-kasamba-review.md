@@ -4,7 +4,7 @@ description: "An independent review of Ask Cristina on Kasamba — a remote-view
 seoTitle: 'Ask Cristina Kasamba Review (2026): Telepathy & Remote Viewing'
 metaDescription: 'Ask Cristina on Kasamba: a telepathic remote-viewing reader with 36,000+ readings since 2002 and a 4.8-star average. We review her method, real quotes, and fit.'
 platformName: 'Kasamba: Ask Cristina'
-rating: 4.8
+rating: 4.5
 verdict: Ask Cristina is a rare Kasamba reader who claims to tune into what a third party is thinking and feeling — and with 36,000+ readings since 2002 and a 4.8-star average, her track record is long enough to take seriously.
 affiliateUrl: /go/kasamba-cristina/
 avatarUrl: /avatars/kasamba/ask-cristina-kasamba-review.jpg

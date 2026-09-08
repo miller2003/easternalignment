@@ -2,7 +2,7 @@
 title: "Adam Africa Purple Garden Review (2026): The Certified Coach Who Refuses to Hand You Fast-Food Guidance"
 description: "Honest review of Adam Africa on Purple Garden — a 5.0-star certified life coach and intuitive healer with roughly 9,500 readings since 2019, from $5.99/min. Why his slow, meticulous style is the selling point, and who should book."
 platformName: "Purple Garden: Adam Africa"
-rating: 5.0
+rating: 4.5
 verdict: "Adam Africa is a 5.0-star Purple Garden reader who leads with a certified life-coach credential and backs it with clairaudience, clairvoyance, clairsentience, and expert tarot. Roughly 9,500 readings since 2019 and a 94% accuracy / 38% returning-client record make him a grounded, talk-plus-insight alternative to card-only readers — best for people who want the truth structured into a next step, not a soothing script."
 affiliateUrl: /go/purple-garden-adam-africa/
 avatarUrl: /avatars/purple-garden/adam-africa.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Adam Africa on Purple Garden — a 5.0-star certified life coach and intuitive healer with roughly 9,500 readings since 2019, from $5.99/min. Why his slow, meticulous style is the selling point, and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -3,7 +3,7 @@ title: "Psychic Jane on Keen Review 2026: Top Advisor With 94,000 Readings - But
 seoTitle: "Psychic Jane on Keen Review 2026: Top Advisor With 94,000"
 description: "An independent review of Psychic Jane Just Knows on Keen - a Top Advisor with 21,000 ratings, 94,000+ readings since 2006, and a $17.99/min rate. What her track record and real client reviews reveal, and whether the premium is worth it."
 platformName: "Keen: Psychic Jane Just Knows"
-rating: 4.89
+rating: 4.5
 verdict: "Psychic Jane Just Knows is a genuine Top Advisor - 21,000 ratings, 94,000+ readings since 2006, and a track record of specific, timing-based hits in her reviews. But at $17.99/min she is one of the most expensive readers on Keen. Book her only if you have a concrete love or career question and want to use the $1 intro to confirm her style before paying the premium."
 affiliateUrl: /go/keen-psychic-jane-just-knows/
 avatarUrl: /avatars/keen/psychic-jane-just-knows.jpg

@@ -3,7 +3,7 @@ title: "Truth and Light Kasamba Review (2026): 87,202 Readings, a Perfect 5.0 �
 description: "Truth and Light on Kasamba: 87,202 readings since 2005, a perfect 5.0, tagged 'Highest Ranked Advisor' — with a CV that includes engineering, an MBA, Vedic astrology certification, and psychotherapy diplomas. Why clients call him a 'life saviour,' the $23.99/min question, and who should book."
 platform: kasamba
 platformName: "Kasamba: Truth and Light"
-rating: 5.0
+rating: 4.7
 verdict: "Truth and Light carries Kasamba's 'Highest Ranked Advisor' tagline, a perfect 5.0 across 87,202 readings since 2005, and the deepest professional credential stack we've seen — engineering degree, MBA, certified Vedic astrologer, and diplomas in psychotherapy, relationship counselling, and stress consultancy. Clients call him Vic, and they call him a 'life saviour.' At $23.99/min he's premium-priced; the case for booking is that you're hiring two professions — psychic and trained counsellor — in one session."
 affiliateUrl: /go/kasamba-truth-and-light/
 avatarUrl: /avatars/kasamba/truth-and-light-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Truth and Light is tagged Highest Ranked Advisor on Kasamba — 87,202 readings since 2005 at a perfect 5.0. His credential stack includes an engineering degree, MBA, certified Vedic astrology, and psychotherapy and relationship counselling diplomas. Clients call him a life saviour. Premium at $23.99/min; the dual psychic-plus-counsellor skill set is the case for the price.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.7",
       "bestRating": "5",
       "worstRating": "1"
     },

@@ -2,7 +2,7 @@
 title: "Jackies Tea Tarot Purple Garden Review (2026): The Cuban-Trained Tarot Reader Who Won't Sugarcoat You"
 description: "Honest review of Jackies Tea Tarot on Purple Garden — a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, $6.99/min, Cuban Santera lineage, and a pointedly honest style. Who she's for, and why her bluntness is the point."
 platformName: "Purple Garden: Jackies Tea Tarot"
-rating: 5
+rating: 4.6
 verdict: "Jackies Tea Tarot is a 5.0-star intuitive tarot reader on Purple Garden whose ~9,000 readings since 2017 and Cuban Santera lineage give her a decade-deep, no-fluff style. She tells you exactly what she sees rather than what you want to hear — the right pick for clients who'd rather be clear than comforted."
 affiliateUrl: /go/purple-garden-jackies-tea-tarot/
 avatarUrl: /avatars/purple-garden/jackies-tea-tarot.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Jackies Tea Tarot on Purple Garden — a 5.0-star intuitive tarot reader with ~9,000 readings since 2017, Cuban Santera lineage, and a pointedly honest style. Who she is for, and why her bluntness is the point. Standard rate $6.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5",
+      "ratingValue": "4.6",
       "bestRating": "5",
       "worstRating": "1"
     },

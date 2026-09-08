@@ -3,7 +3,7 @@ title: "Psychic SuZen on Keen Review 2026: When the Psychic Is Also a Life Coach
 seoTitle: "Psychic SuZen on Keen Review 2026: When the Psychic Is Also"
 description: "An honest third-party review of Psychic SuZen on Keen — covering her dual life coach and social worker background, multi-tradition spiritual framework, action-oriented reading style, and exactly who gets the most from her approach at $5.40/min."
 platformName: "Keen: Psychic SuZen"
-rating: 4.8
+rating: 4.4
 verdict: "Best for people who want more than a prediction — who want to understand what's happening, why it's happening, and what they can actually do about it. SuZen's dual background as a psychic and trained life coach and social worker produces a different kind of reading: one that ends with options, not just outcomes. Not the right fit for pure prediction-seekers or those wanting a structured tool-based session."
 affiliateUrl: "/go/keen-suzen/"
 avatarUrl: /avatars/keen/psychic-suzen-on-keen-review-2026.jpg

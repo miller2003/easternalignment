@@ -3,7 +3,7 @@ title: "Clairvoyant Nicky Power on Keen Review 2026: A Direct Tarot-Forward Read
 seoTitle: "Clairvoyant Nicky Power on Keen Review 2026: A Direct"
 description: "An independent review of Clairvoyant Nicky Power on Keen - 5,491 ratings, 19,000+ readings since 2001, and a $6.99/min rate. What his track record and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: Clairvoyant Nicky Power"
-rating: 4.86
+rating: 4.5
 verdict: "Clairvoyant Nicky Power is a direct, tarot-forward male reader on Keen with 5,491 ratings at 4.86 stars and 19,000+ readings since 2001. His reviews praise confidence, accuracy, and a genuine, supportive delivery. At $6.99/min he is moderately priced. Book him by voice for money, destiny, and breakup questions if you want a direct reader who still leaves you feeling supported."
 affiliateUrl: /go/keen-clairvoyant-nicky-power/
 avatarUrl: /avatars/keen/clairvoyant-nicky-power.jpg

@@ -3,7 +3,7 @@ title: "ChosenOne77 on Keen Review 2026: 28,000 Readings of Intuitive Wisdom at 
 seoTitle: "ChosenOne77 Keen Review 2026: 28,000 Intuitive Readings at $6.53/Min"
 description: "An independent review of ChosenOne77 on Keen - 5,832 ratings, 28,316 readings since 2006, and a $6.53/min rate. What his 'guiding souls through intuitive wisdom for two decades' approach and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: ChosenOne77"
-rating: 4.94
+rating: 4.6
 verdict: "ChosenOne77 is a high-average, long-tenured Keen reader - 5,832 ratings at 4.94 stars and 28,316 readings since 2006. He positions himself as guiding souls 'through intuitive wisdom for two decades.' At $6.53/min he is upper-mid priced. Book him if you want an elite-rated, experienced intuitive without dropping into the $10+ premium tier."
 affiliateUrl: /go/keen-chosenone77/
 avatarUrl: "/avatars/keen/chosenone77.png"

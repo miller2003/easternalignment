@@ -3,7 +3,7 @@ title: "Dr Lisa Powerful Insights on Keen Review 2026: 4.97 Stars Across 16,000 
 seoTitle: "Dr Lisa Powerful Insights on Keen Review 2026: 4.97 Stars"
 description: "An independent review of Dr Lisa Powerful Insights on Keen - 16,000 ratings, 79,000+ readings since 2010, and a no-tools, fast, compassionate style. What her track record and real client reviews reveal, and exactly who should book her."
 platformName: "Keen: Dr Lisa Powerful Insights"
-rating: 4.97
+rating: 4.7
 verdict: "Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Her 'very fast, compassionate, no tools' approach is a genuine differentiator - she leads with quick, accurate pickup rather than props. Book her by voice for love and relationship questions; at $14.99/min, start with the $1 intro to confirm fit before a full session."
 affiliateUrl: /go/keen-dr-lisa-powerful-insights/
 avatarUrl: /avatars/keen/dr-lisa-powerful-insights.jpg

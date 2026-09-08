@@ -3,7 +3,7 @@ title: "lorrie c on Keen Review 2026: 60,595 Readings at 4.98 — the Empath the
 seoTitle: "lorrie c Keen Review 2026: 4.98, $5.99/min"
 description: "An independent review of lorrie c on Keen — 60,595 readings at a 4.98 rating, $5.99/min. We traced her thread on the internet's toughest psychic review forum, where skeptics documented her predictions landing on contact, behavior, and reasoning. Who she reads best, and how to book."
 platformName: "Keen: lorrie c"
-rating: 4.98
+rating: 4.7
 pricing: "$5.99/min (per our audit data — verify on live profile)"
 bestFor: "Relationship questions about a specific person — what they're feeling, whether they'll reach out, how they'll behave — where empathic person-reading matters more than date-stamped fortune-telling"
 canonicalUrl: "https://easternalignment.com/reviews/keen/lorrie-c/"
@@ -38,7 +38,7 @@ customSchema: |
     "reviewBody": "lorrie c is Keen's highest-rated high-volume empath — 60,595 readings at 4.98, $5.99/min. Third-party forum users documented her predictions landing on contact, behavior, and emotional reasoning. Best for relationship person-reading; not a deadline vendor.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.98",
+      "ratingValue": "4.7",
       "bestRating": "5",
       "worstRating": "1"
     },

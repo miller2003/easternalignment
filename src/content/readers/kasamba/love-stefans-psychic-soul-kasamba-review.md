@@ -3,7 +3,7 @@ title: "Love Stefan Kasamba Review (2026): 138,003 Readings, Third-Generation Ps
 description: "Love Stefan on Kasamba: 138,003 readings since 2007, a 4.9, and Kasamba's 'Top 3 most experienced' tag. A third-generation psychic who answers the question you can't ask your friends. $5.49/min promo + 3 free minutes. Who should book — and who shouldn't."
 platform: kasamba
 platformName: "Kasamba: Love Stefan"
-rating: 4.9
+rating: 4.5
 verdict: "Love Stefan is a third-generation psychic with 138,003 Kasamba readings since 2007 and a 'Top 3 most experienced' tag, specializing in the exact questions people can't say out loud — is he cheating, will they come back, should I reach out. At the $5.49/min new-client promo with 3 free minutes, book him if you want a proven answer on love; skip him if you only want your hopes repeated back."
 affiliateUrl: /go/kasamba-stefan/
 avatarUrl: /avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg
@@ -42,7 +42,7 @@ customSchema: |
     "reviewBody": "Love Stefan is a third-generation psychic with 138,003 Kasamba readings since 2007 and a 'Top 3 most experienced' tag, specializing in love and relationship questions. $5.49/min promo with 3 free minutes. Real client stories and who should book.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

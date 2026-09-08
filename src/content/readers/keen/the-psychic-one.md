@@ -4,7 +4,7 @@ seoTitle: "The Psychic One on Keen: 2026 Review — 4.6★, $3.92/min, 183K Sess
 metaDescription: "The Psychic One on Keen: 183,000 sessions over 25 years and one bold promise — precise dates and details. Where her accuracy record holds, what she costs, and who should book her in 2026."
 description: "An independent review of the psychic one on Keen - her bold date-and-detail promise, what 40,000 ratings across 25 years actually reveal, where her track record holds and where it doesn't, and exactly who should book her."
 platformName: 'Keen: the psychic one'
-rating: 4.6
+rating: 4.2
 verdict: 'The psychic one is Keen''s longest-tenured high-volume advisor with a track
   record that speaks for itself  -  183,000 sessions since 2001 is simply not faked.
   Her date-and-detail promise is her defining claim and her biggest risk: when it

@@ -3,7 +3,7 @@ title: "Spiritual Divini Service Kasamba Review (2026): 95,681 Readings, 3rd-Gen
 description: "Spiritual Divini Service on Kasamba: 95,681 readings since 2007, 4.7 stars, chat at $1.99/min promo (reg. $3.99) — with a voice rate 10x higher. What the pricing structure really means, why her 4.7 is a badge of honesty, and who should book."
 platform: kasamba
 platformName: "Kasamba: Spiritual Divini Service"
-rating: 4.7
+rating: 4.2
 verdict: "Spiritual Divini Service is a third-generation psychic with 95,681 readings since 2007 whose clients describe one thing with unusual consistency: she will not sugarcoat. Her 4.7 — slightly below the platform's flatterers — is what radical honesty costs in ratings, and her regulars say so explicitly. At the $1.99/min chat promo she's one of the cheapest proven readers on Kasamba. Book the chat, skip the voice tier, and bring a real question."
 affiliateUrl: /go/kasamba-spiritual-divini-service/
 avatarUrl: /avatars/kasamba/spiritual-divini-service-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Spiritual Divini Service is a third-generation psychic with 95,681 Kasamba readings since 2007 at 4.7 stars. Clients consistently describe frank, no-sugarcoat readings with timeframes — her 4.7 reflects the honesty tax, not quality. Chat promo is $1.99/min (reg. $3.99); voice runs 10x higher, so book chat.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.7",
+      "ratingValue": "4.2",
       "bestRating": "5",
       "worstRating": "1"
     },

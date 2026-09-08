@@ -5,7 +5,7 @@ description: An independent review of Intuitive Azzy on Keen  -  her guidance-fi
   reading philosophy, what 3,100+ ratings across a decade actually reveal, the real
   value of $2.22/min, and exactly who gets the most from booking her.
 platformName: 'Keen: Intuitive Azzy'
-rating: 4.7
+rating: 4.4
 verdict: Intuitive Azzy is one of the most honest value propositions currently active
   on Keen  -  40 years of experience, a 4.9-star rating, and a $2.22/min rate that
   makes her accessible at any budget. Her guidance-first philosophy means she's not

@@ -2,7 +2,7 @@
 title: "Psychic Shirla Purple Garden Review (2026): The Relationship Coach Who Hands You the Map"
 description: "Honest review of Psychic Shirla on Purple Garden — a 4.8-star Master Love Specialist and relationship coach whose over 15,000 readings since 2020 blend tarot with coaching, from $4.49/min. Who she is for, and the one catch that is actually a selling point."
 platformName: "Purple Garden: Psychic Shirla"
-rating: 4.8
+rating: 4.5
 verdict: "Psychic Shirla is a 4.8-star Purple Garden Master Love Specialist and relationship coach whose over 15,000 readings since 2020 blend tarot with a coach's structure. Best for clients who want love insight plus actionable direction, not just a prediction."
 affiliateUrl: /go/purple-garden-psychic-shirla/
 avatarUrl: /avatars/purple-garden/psychic-shirla.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Psychic Shirla on Purple Garden — a 4.8-star Master Love Specialist and relationship coach whose over 15,000 readings since 2020 blend tarot with coaching, from $4.49/min. Who she is for, and the one catch that is actually a selling point.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.8",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

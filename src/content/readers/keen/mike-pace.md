@@ -3,7 +3,7 @@ title: "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader Worth $9.99/Mi
 seoTitle: "Mike Pace on Keen Review 2026: Is an 81,000-Rating Reader"
 description: "An independent review of Mike Pace on Keen - 81,000 ratings, 142,000+ readings since 2001, and a $9.99/min rate. What his track record, TV/radio background, and real client reviews reveal, and exactly who should book him."
 platformName: "Keen: Mike Pace"
-rating: 4.95
+rating: 4.6
 verdict: "Mike Pace's 4.95 across 81,000 ratings is the kind of number that survives scrutiny. He is a direct, psychology-trained reader who leads with hard impressions rather than comfort, and he sits at the very top of Keen's pricing at $9.99/min. Use the $1 intro to test whether his fast, no-fluff style fits before committing to a full session - at this rate, a few unfocused minutes cost real money."
 affiliateUrl: /go/keen-mike-pace/
 avatarUrl: /avatars/keen/mike-pace.jpg

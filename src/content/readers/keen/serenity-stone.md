@@ -3,7 +3,7 @@ title: "Serenity Stone on Keen Review 2026: Can a 4th-Generation Medium Hold 37,
 seoTitle: "Serenity Stone on Keen Review 2026: Can a 4th-Generation"
 description: "An independent review of Serenity Stone on Keen - 37,000 ratings, 122,000+ readings since 2001, and a $6.99/min rate. What her medium track record, real client reviews, and the slow-session complaints actually reveal."
 platformName: "Keen: Serenity Stone"
-rating: 4.66
+rating: 4.3
 verdict: "Serenity Stone's 4th-generation medium background and 122,000 readings since 2001 are genuinely impressive, and at $6.99/min she is priced fairly for that volume. But her rating sits lower than Keen's elite tier, and a real subset of reviews describe slow, vague sessions. Book her by voice, come with a specific question, and use the $1 intro to decide if her pace fits you."
 affiliateUrl: /go/keen-serenity-stone/
 avatarUrl: /avatars/keen/serenity-stone.jpg

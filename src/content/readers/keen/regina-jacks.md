@@ -4,7 +4,7 @@ seoTitle: "Regina Jacks Keen Review 2026: 4.8 Stars, $3.59/min"
 metaDescription: "Regina Jacks on Keen: 109,000 readings and 18,000 verified ratings. Her clairvoyant-first style, pricing breakdown, and exactly who gets the most value."
 description: "An independent review of Regina Jacks on Keen - covering her clairvoyant-first reading style, what 18,000 verified ratings actually reveal, pricing breakdown, and exactly who gets the most value from booking her."
 platformName: 'Keen: Regina Jacks'
-rating: 4.8
+rating: 4.4
 verdict: Best for relationship readings where you want a reader who leads without
   prompting. Her 13-year track record is unmatched on Keen  -  but her impatient edge
   means she works best for clients who arrive ready to receive, not process.

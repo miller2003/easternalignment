@@ -3,7 +3,7 @@ title: "A Divine Spirit Kasamba Review: A Perfect 5.0 Across 46,731 Readings —
 description: "An independent review of A Divine Spirit on Kasamba: 46,731 readings since 2007 at a perfect 5.0 stars, with 3,683 likes against just 18 dislikes — the cleanest record we've reviewed on the platform. One client has taken notes on Maura's predictions for five years and puts her accuracy at 95 percent. We read her feed, her bio, and her numbers to see what a flawless score at this scale actually means. Chat $12.99/min, 3 free minutes for new clients."
 platform: kasamba
 platformName: "Kasamba: A Divine Spirit"
-rating: 5.0
+rating: 4.7
 verdict: "A Divine Spirit holds the single cleanest record in our Kasamba audit series: 46,731 readings since 2007 at a perfect 5.0, with 3,683 likes against only 18 dislikes — a 99.5% satisfaction rate across nineteen years. The standout evidence isn't the score, it's the bookkeeping: one client has logged Maura's predictions in notes for five years and reports roughly 95 percent of them came true. Chat runs $12.99/min with 3 free minutes; voice is the same $12.99/min, so call format costs nothing extra here."
 affiliateUrl: /go/kasamba-divine-spirit/
 avatarUrl: /avatars/kasamba/divine-spirit-kasamba-review.jpg

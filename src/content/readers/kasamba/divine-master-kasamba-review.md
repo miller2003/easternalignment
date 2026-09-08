@@ -3,7 +3,7 @@ title: "Divine Master Kasamba Review (2026): 77,204 Readings, 4.9 Stars — the 
 description: "Divine Master on Kasamba: 77,204 readings since 2011, 4.9 stars, 35 years of experience, and the sharpest niche on the platform — love, breakup, and reunite guidance with timelines. Real review patterns, the $7.99/min math, and who should book."
 platform: kasamba
 platformName: "Kasamba: Divine Master"
-rating: 4.9
+rating: 4.5
 verdict: "Divine Master has the clearest niche among Kasamba's high-volume advisors: love, breakup, and reunite guidance, backed by 77,204 readings since 2011, a 4.9 rating, and 35 years of claimed practice across his local shop and the platform. His review feed is built on returning regulars — the clients who keep a reader honest. At $7.99/min (verify live) he's mid-priced, timeline-oriented, and solution-focused: the specialist for the exact moment after a breakup when you need to know what happens next."
 affiliateUrl: /go/kasamba-divine-master/
 avatarUrl: /avatars/kasamba/divine-master-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Divine Master is Kasamba's breakup and reunite specialist — 77,204 readings since 2011 at 4.9 stars, with 16,000+ written reviews and 35 years of claimed practice. Multi-method (tarot, Vedic astrology, numerology, palmistry), timeline-oriented, and solution-focused at $7.99/min.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

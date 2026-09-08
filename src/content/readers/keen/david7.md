@@ -4,7 +4,7 @@ seoTitle: "David7 Keen Review 2026: 4.9 Stars, $6.99/min"
 metaDescription: "David7 on Keen: 94,000 readings and a no-tools clairvoyant take on twin flames. $6.99/min — the male psychic perspective, real reviews, and who gets value."
 description: "An honest third-party review of David7 on Keen - covering his tool-free clairvoyant approach, twin flame specialization, dual profile pricing, and exactly who gets real value at $6.99/min."
 platformName: 'Keen: David7'
-rating: 4.9
+rating: 4.6
 verdict: Best for people navigating emotionally complex relationship situations  -  especially
   twin flame or person-of-interest dynamics  -  who want a male reader's unfiltered
   perspective. His tool-free intuitive style and 17-year track record are genuine

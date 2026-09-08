@@ -3,7 +3,7 @@ title: "Diana Shoshone Kasamba Review 2026: She Remembered a Client After 9 Year
 description: "An independent review of Diana Shoshone on Kasamba: 42,628 readings since 2006 at a perfect 5.0 — 17,921 likes against just 32 dislikes in twenty years. A client returned after nine years and Diana remembered her and her work; the same client credits her with predicting her husband's exact timing and exact initial. We analyzed 150 recent reviews. $8.99/min flat, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: Diana Shoshone"
-rating: 5.0
+rating: 4.7
 verdict: "Diana Shoshone holds the second-cleanest ledger we've ever reviewed: 17,921 likes against 32 dislikes across 42,628 readings since 2006, at a perfect 5.0. Her signature is specificity with follow-through: clients credit her with predicting a partner's exact initial and timing — and her memory is its own evidence, with one client returning after nine years to find Diana remembered her and exactly what she did for a living. A Reiki Master with 25 years of experience working past-life and soul-tie frameworks, her feed is 59% repeat clients, some spanning fourteen years. Pricing is a flat $8.99/min for chat or voice with 3 free minutes. Book her for love questions where you want a dated, initialed answer from a reader who'll still know your story in 2035."
 affiliateUrl: /go/kasamba-diana-shoshone/
 avatarUrl: /avatars/kasamba/diana-shoshone-kasamba-review.jpg

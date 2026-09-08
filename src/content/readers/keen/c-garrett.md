@@ -4,7 +4,7 @@ seoTitle: "C Garrett Keen Review 2026: 4.84 Stars, $4.89/min"
 metaDescription: "C Garrett on Keen: 54,000 readings since 2001 and a 4.84. Her 75% energy, 25% tarot hybrid method, dream readings, and honest timing limits at $4.89/min."
 description: "A third-party review of C Garrett on Keen - unpacking her 75% energy, 25% tarot hybrid method, dream reading specialty, self-declared timing limits, and exactly who gets real value at $4.89/min."
 platformName: 'Keen: C Garrett'
-rating: 4.84
+rating: 4.5
 verdict: Best for people who want intuition-led clarity on relationships or career  -  not
   a card-by-card walkthrough. Her hybrid method, 25-year track record, and unusually
   honest self-assessment make her one of the more reliable mid-tier reads on Keen.

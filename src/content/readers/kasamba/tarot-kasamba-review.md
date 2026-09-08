@@ -3,7 +3,7 @@ title: "tarot Kasamba Review 2026: The Reader Who Named Herself After the Tool �
 description: "An independent review of tarot on Kasamba: 47,813 readings since 2015 at 4.9 stars — under the boldest non-brand on the platform, the single word 'tarot.' Her clients don't use her like a fortune-teller; they use her like a counselor. We analyzed 150 reviews, including one client's documented one-week turnaround and another who has returned 82 times. Chat $1.99/min, 3 free minutes."
 platform: kasamba
 platformName: "Kasamba: tarot"
-rating: 4.9
+rating: 4.4
 verdict: "tarot — yes, that's the whole name — is Kasamba's quiet anomaly: 47,813 readings since 2015 at 4.9 stars, sold under the generic name of her own tool, with zero guru branding. Her review feed reveals what clients actually buy from her: not predictions but support — 'help,' 'insight,' and 'honest' dominate her language analysis while 'accurate' barely registers. The receipts are striking: one client documented a full one-week turnaround across eleven reviews ('I feel like something has changed in me'), and another has left 82 reviews in five weeks — the deepest ongoing client relationship we've ever recorded. At $1.99/min chat with 3 free minutes, she's the most affordable long-term advisor relationship on Kasamba. Voice runs $39.99/min, so book text."
 affiliateUrl: /go/kasamba-tarot/
 avatarUrl: /avatars/kasamba/tarot-kasamba-review.jpg

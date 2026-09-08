@@ -3,7 +3,7 @@ title: "BellasPsychic Purple Garden Review 2026: The Confidence Mechanic — 42,
 description: "An independent review of BellasPsychic on Purple Garden: 42,206 readings since 2017 at 4.9 stars, a 'recommended' badge — and a review feed that reads like a confidence clinic: clients describe losing their nerve between sessions and regaining it every time they talk to her. 25 years of experience, spirit-led readings. Chat $5.99/min, $30 free credit."
 platform: purple-garden
 platformName: "Purple Garden: BellasPsychic"
-rating: 4.9
+rating: 4.5
 verdict: "BellasPsychic runs what her own clients describe as a confidence practice: 42,206 readings since 2017 at 4.9 stars, 10,681 likes against 107 dislikes — and a review feed where the recurring transaction is emotional maintenance: 'I lose confidence and clarity every now and then and every time I speak to you, I gain my confidence back.' A spirit-led clairvoyant with 25 years of experience, her style is precise answers delivered without rushing, plus the steadiness that brings clients back whenever life shakes them. 46% of her current feed is repeat clients, led by a 16-review regular. Chat $5.99/min with the $30 new-client credit covering about five minutes; voice runs $13.99, so book text. For love questions that come with wobbling confidence, she's the reader her regulars recharge on."
 affiliateUrl: /go/purple-garden-bellaspsychic/
 avatarUrl: /avatars/purple-garden/bellaspsychic.jpg

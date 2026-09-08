@@ -3,7 +3,7 @@ title: "Accurate Love Readings Kasamba Review (2026): 95,479 Readings, a Perfect
 description: "Accurate Love Readings on Kasamba: 95,479 readings since 2007, a perfect 5.0, and the rarest thing in the industry — a bio that admits no psychic is 100% accurate and the future isn't fixed. Currently $5.49/min promo (reg. $10.99). Real reviews and who should book."
 platform: kasamba
 platformName: "Kasamba: Accurate Love Readings"
-rating: 5.0
+rating: 4.5
 verdict: "Accurate Love Readings holds a perfect 5.0 across 95,479 readings since 2007 — and earns trust the hard way, with a bio that openly says no psychic is 100% accurate and the future isn't set in stone. Her specialty is the question everyone actually asks: what is my partner feeling, thinking, and planning? At the current $5.49/min promo (reg. $10.99) with 3 free minutes, she's the strongest mid-price love specialist we've reviewed. She was marked BUSY when we checked — demand is the review."
 affiliateUrl: /go/kasamba-accurate-love-readings/
 avatarUrl: /avatars/kasamba/accurate-love-readings-kasamba-review.jpg
@@ -43,7 +43,7 @@ customSchema: |
     "reviewBody": "Accurate Love Readings has 95,479 Kasamba readings since 2007 at a perfect 5.0, with a specialty in reading a partner's emotions, thoughts, and intentions. Unusually honest bio admits no psychic is 100% accurate and the future is changeable. Currently $5.49/min promo (reg. $10.99).",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "5.0",
+      "ratingValue": "4.5",
       "bestRating": "5",
       "worstRating": "1"
     },

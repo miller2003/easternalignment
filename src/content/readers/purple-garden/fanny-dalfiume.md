@@ -2,7 +2,7 @@
 title: "Fanny Dalfiume Purple Garden Review (2026): Nearly 19,000 Readings of Metaphysics and Tarot at $1.99/min"
 description: "Honest review of Fanny Dalfiume on Purple Garden — a 4.6-star metaphysics and tarot reader with nearly 19,000 readings since 2021, from $1.99/min. Why her honest mid-tier rating is a feature, not a flaw, at this price."
 platformName: "Purple Garden: Fanny Dalfiume"
-rating: 4.6
+rating: 4.3
 verdict: "Fanny Dalfiume is a 4.6-star Purple Garden metaphysics and tarot reader whose nearly 19,000 readings since 2021 and $1.99/min start make her the platform's high-volume, budget-tier option. The honest rating is a signal of consistency, not failure — at this price, very good is extraordinary value."
 affiliateUrl: /go/purple-garden-fanny-dalfiume/
 avatarUrl: /avatars/purple-garden/fanny-dalfiume.jpg
@@ -20,7 +20,7 @@ customSchema: |
     "reviewBody": "Honest review of Fanny Dalfiume on Purple Garden — a 4.6-star metaphysics and tarot reader with nearly 19,000 readings since 2021, from $1.99/min. Why her honest mid-tier rating is a feature, not a flaw, at this price.",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": "4.6",
+      "ratingValue": "4.3",
       "bestRating": "5",
       "worstRating": "1"
     },
