@@ -16,7 +16,7 @@ cons:
 verdict: 'Love Stefans (Kasamba) delivers the ultimate, unvarnished clairvoyant truth, while Master Sher (Keen) uses Tarot to logically map the collapse or survival of your marriage.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $4.29/min to $19.99/min
+pricing: From $4.29/min to $10.99/min
 bestFor: Spouses dealing with infidelity, dead-end marital counseling, or the terrifying decision of whether to file for divorce.
 publishDate: '2026-05-05'
 updatedDate: '2026-05-05'
@@ -68,9 +68,9 @@ We audited both platforms to find the rarest commodity in the esoteric world: **
 If you are exhausted by false hope and you just want someone to rip the band-aid off, Love Stefans is the ultimate authority.
 
 - **Platform:** Kasamba
-- **Rating / Experience:** 5 Stars | 134,000+ Sessions (Top 3 on Kasamba)
+- **Rating / Experience:** 4.9 Stars | 138,000+ Readings
 - **Methodology:** Pure Vision-Based Clairvoyance (No Tools)
-- **Rate:** $19.99/min
+- **Rate:** $10.99/min
 - **The Brutal Truth:** Stefans does not use cards or astrology to soften the blow. He works purely through direct clairvoyant visions. He is notoriously blunt. If you are clinging to a marriage that died five years ago, he will cut the energetic cord immediately and tell you to contact a lawyer. He does not coddle his clients. At $19.99 a minute, you are paying a premium specifically *not* to be lied to. If he tells you the marriage can be saved, you can take it to the bank. If he tells you it is over, start packing.
 
 [Get the Unvarnished Truth from Love Stefans (3 Free Mins) →](/go/kasamba-stefan)

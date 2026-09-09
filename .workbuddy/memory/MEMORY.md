@@ -27,10 +27,16 @@
 - 旗舰文：倒金字塔（首段结论+首屏速览表），"We Tested" 口径 Kasamba 60+ / Keen 45+ / PG 40+ / 跨平台 150+，Kasamba 为主、Keen 最少；多批写完统一构建。
 - 范本页（不轻易改）：david7、ask-fran、c-garrett、master-sher、readings-by-kelly777、master-enigma-kasamba-review、how-to-spot-fake-psychic、brutally-honest-psychics-keen、psychic-prediction-didnt-come-true、karmic-relationships-signs-and-lessons、evidential-mediums-passed-spouse、reviews/keen。
 - 高风险主题（financial-motives-psychics、other-woman-psychic-readings）先由用户定调；用户定方向，AI 落地。
+- 🔴 **用户风险偏好（2026-09-09 实测）**：涉及**直接影响收入的链路**（点击/跳转/CTA）的代码改动，即使用户已同意，落地后仍可能因"我不懂、怕出问题"要求全部回退。→ 这类改动要先讲清"回退成本为零 + 保留回滚点"，或干脆默认不动，改给 Cloudflare 后台配置类方案（用户可自己点、不涉及代码发布）。纯内容/数据类改动不受此限。
 
 ## 构建部署
 - 构建必须沙箱外，先清 CODEBUDDY_SESSION_ID / CLAUDE_SESSION_ID；退出码非 0 ≠ 失败（日志有 `✓ Completed in` 即可）；收尾 `rm -rf dist/.prerender` + 核对 + 确认 `dist/sitemap-index.xml` 非 0 字节（仅中断时才用 gen_sitemap.py 补）。
-- 基线：529 index.html / 733 文件 / sitemap 275–276 条；构建前 `cp -r dist dist.bak.<日期>`。
+- 基线（2026-09-08 实测）：**563 html / 765 文件 / go 目录 177 / sitemap 299 条 / sitemap-index 191B / sitemap-0 118220B**；构建前 `cp -r dist dist.bak.<日期>`。
+- 🔴 **必须用 `node ./node_modules/astro/bin/astro.mjs build`，不要用 `npx astro build`**（2026-09-08 实测）：npx 版跑到 10 分钟无进展，dist 被清空后只重建了 346/765（`✓ Completed in 1.04s` 假成功）；同一份代码换正确入口后 16.44s 成功、563 页齐全。`node_modules/astro/astro.js` 是错入口（MODULE_NOT_FOUND），bin 在 `node_modules/astro/bin/astro.mjs`。
+- 🔴 **渲染完成后 astro 进程常不退出**（卡在 `astro:build:done` / sitemap 钩子，本次卡 13 分钟、sitemap 始终没生成）。判定：日志出现 `✓ Completed in` 且 html 数达标即视为渲染完成，直接 TaskStop，不要干等进程自己退出。
+- 🔴 **sitemap 缺失的补法优先级**：①先 `diff` 新 dist 与备份的 index.html 相对路径集合，若**完全一致**（本次改动只动组件、没增删页面就是一致）→ **直接 `cp` 备份的 sitemap-0.xml / sitemap-index.xml 覆盖**，这比脚本更权威；②只有在页面集合变了时才用 `scratch/audit20260830/gen_sitemap.py`，且要知悉它有偏差（2026-09-08 实测：多收 `/reviews/kasamba-psychics/`、`/reviews/keen-psychics/` 两条，且**丢失首页 `https://easternalignment.com/`**）。
+- 收尾 `rm -rf dist/.prerender`（本次 32 个残留文件，不清会让总数从 765 变 795）再核对总数。
+- 排查残留进程：本机常驻 4 个 `node.exe` 是 WorkBuddy 的 sheetagent / weixinpay MCP 服务（非构建残留），**不要杀**。
 - 🔴 dist.bak 只保留最新 1 个（2026-09-08 清理定约：8 个备份 ~580MB 已删 7 个）；构建成功验证后可删上一代备份。
 - 🔴 **假成功构建事故（2026-09-08）**：`✓ Completed in 1.36s` ≠ 成功——Astro 清空输出后渲染 2 页即被手动停掉，dist 从 765 文件变 23 文件（只剩 reviews/terms index），日志无报错。构建后铁律：`find dist -name "*.html" | wc -l` ≥559 + 总数 765 + sitemap-index 非 0 字节；dist 顶层手工文件（_redirects/robots/sarah-avatar）时间戳旧而 html 消失 = 清空后部分重建事故。恢复：`cp -r dist.bak.<最新>/. dist/`（勿用删除，避开 safe-delete 钩子）。
 - YAML：含撇号的 frontmatter 值用双引号（报错指向上一行）；检测 `node scratch/yaml_check.mjs`。

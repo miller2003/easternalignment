@@ -42,14 +42,14 @@ customSchema: |
   }
 metaDescription: "49K readings, 4.82 stars, $2.25/min. Krys Britton uses Egyptian Oracle Cards to deliver direct, outcome-focused answers. Full honest review."
 highlights:
-  - "49,000+ completed readings since 2010 — 20 years of documented platform practice"
+  - "49,000+ completed readings since 2010 — 16 years of documented platform practice"
   - "4.82 stars across 8,523 verified ratings — 93% five-star"
   - "Egyptian Oracle Cards: her signature tool, rare on any major psychic platform"
   - "$2.25/min — the best price-to-experience ratio in this entire review series"
   - "Keen reviews are un-deletable — her 8,523-rating ledger is publicly auditable"
 pros:
   - "Egyptian Oracle Cards deliver structured, concrete answers rather than open-ended impressions"
-  - "Best price-to-experience ratio in this series — 20 years of practice at $2.25/min"
+  - "Best price-to-experience ratio in this series — 16 years of practice at $2.25/min"
   - "Among the lowest full-session costs in the series: a complete 15–20 minute reading runs $34–$45"
   - "Direct, efficient sessions — she gets to the point and doesn't pad for time"
   - "Long-term repeat clients (\"KB\") spanning years confirm sustained consistency"
@@ -76,7 +76,7 @@ The instinct is to read this as a contradiction — ancient Egyptian symbolism o
 
 ## 20+ Years, 49,000 Sessions, and the Initials That Tell You Everything About Her Client Relationships
 
-Krys Britton has been reading on Keen since at least 2010 by the main profile count, with multiple sources placing her active practice as far back as 2001 — over two decades of continuous platform presence. At 49,000+ sessions, she sits in the upper volume tier of Keen's long-tenured readers, with a consistency record that independent sources have gone out of their way to verify.
+Krys Britton has been reading on Keen since at least 2010 by the main profile count — over a decade and a half of continuous platform presence. At 49,000+ sessions, she sits in the upper volume tier of Keen's long-tenured readers, with a consistency record that independent sources have gone out of their way to verify.
 
 ### Why Long-Term Clients Call Her "KB" — and What That Informality Signals About Her Style
 

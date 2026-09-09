@@ -227,7 +227,7 @@ His style is the product: fast, sharp, and structurally respectful of your money
 
 ### #2 Love Stefans — Best for Love and Relationship Questions
 
-Love Stefans is a third-generation psychic with 138,003 readings since 2007 and a "Top 3 Most Experienced Reader" tag across Kasamba's entire 25-year history. His lane is the questions people cannot say out loud: is he cheating, will they come back, should I reach out.
+Love Stefans is a third-generation psychic with 138,003 readings since 2007 and a "Top 3 Most Experienced Reader" tag across Kasamba's entire 27-year history. His lane is the questions people cannot say out loud: is he cheating, will they come back, should I reach out.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />

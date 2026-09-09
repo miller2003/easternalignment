@@ -77,7 +77,7 @@ The open marketplace produces decision paralysis. With thousands of advisors, a 
 
 The chat interface, while fully functional, is a secondary citizen. Keen is a voice company, and its chat lacks the permanent-transcript elegance of Kasamba's system, which auto-saves every session for later auditing. If written records are your priority, [Kasamba](/reviews/kasamba/) is the better tool, and I break that decision down in my [head-to-head comparison](/comparisons/kasamba-vs-keen/).
 
-Finally, the satisfaction guarantee is real but limited: it issues account credits, capped at $25. That is protection against a single bad session, not a safety net for systemic disappointment. Set your expectations accordingly.
+Finally, the satisfaction guarantee is real but limited: it issues account credits rather than refunds to your card, and the applicable caps and windows change with Keen's published terms. It is protection against a single bad session, not a safety net for systemic disappointment — check the current policy before you book.
 
 ## Where Keen Dominates
 

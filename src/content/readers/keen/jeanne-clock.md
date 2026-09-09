@@ -97,7 +97,7 @@ Jeanne is tagged **Compassionate** and the written reviews back that up hard. Cl
 A few of Jeanne's reviews name the reviewer and source outright, which is useful when you want to verify a reader beyond the aggregated score:
 
 > "Jeanne is the real deal. So kind and so accurate. She's helped me through a complicated relationship." — *sugarsugar (California), Keen profile listing*
-> "Jeanne is always so helpful and eases my mind about any issue. She is the best, hands down!" — *FlyGirl5 (5 stars), via Economic Times feature on Jeanne Clock*
+> "Jeanne is always so helpful and eases my mind about any issue. She is the best, hands down!" — *FlyGirl5 (5 stars), from her public Keen reviews*
 > "She's always so patient with me! One of my favorites on Keen!!" — *verified Keen client review*
 
 The pattern: clients lead with emotion ("flabbergasted," "patient," "knew everything"), not with timelines. That tells you Jeanne's strength is *accurate recognition of your situation*, not tight date predictions. If you want "he will text on Tuesday," she may frustrate you. If you want "here is what is actually going on and why," she is excellent.

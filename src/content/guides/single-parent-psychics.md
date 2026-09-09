@@ -16,7 +16,7 @@ cons:
 verdict: "Seek Chelle (Kasamba) expertly taps into the unexpressed fears of your children, while David7 (Keen) provides brutal honesty on a man's capacity to be a stepfather."
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $4.75/min to $9.98/min
+pricing: From $4.75/min to $5.99/min
 bestFor: Single mothers and fathers who are serious about a new partner but are terrified of disrupting their children's peace and emotional safety.
 publishDate: '2026-05-07'
 updatedDate: '2026-05-07'
@@ -95,7 +95,7 @@ If your children are acting out, throwing tantrums, or completely withdrawing si
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -103,7 +103,7 @@ If your children are acting out, throwing tantrums, or completely withdrawing si
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

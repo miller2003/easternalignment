@@ -18,7 +18,7 @@ cons:
 verdict: 'Master Sher (Keen) provides logical, boardroom-style Tarot audits, while Love Stefans (Kasamba) offers premium, no-nonsense clairvoyance for clients who value their time.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $4.29/min to $19.99/min
+pricing: From $4.29/min to $10.99/min
 bestFor: Ambitious singles deciding if they have the bandwidth for love, or power couples trying to figure out if their dual ambitions are destroying their marriage.
 publishDate: '2026-04-30'
 updatedDate: '2026-04-30'
@@ -154,7 +154,7 @@ At the highest echelons of business, time is significantly more valuable than mo
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions (Top 3 on Kasamba)</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -162,7 +162,7 @@ At the highest echelons of business, time is significantly more valuable than mo
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

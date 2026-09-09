@@ -38,7 +38,7 @@ customSchema: |
   }
 ---
 
-When your relationship is in a critical moment — a breakup you didn't choose, a silence that won't end, a decision with real consequences — the impulse to reach for external clarity is human and understandable. Keen is one of the oldest and most established psychic platforms on the internet, with a 25-year track record and a roster of thousands of advisors. It is also one of the most misused.
+When your relationship is in a critical moment — a breakup you didn't choose, a silence that won't end, a decision with real consequences — the impulse to reach for external clarity is human and understandable. Keen is one of the oldest and most established psychic platforms on the internet, with a 27-year track record and a roster of thousands of advisors. It is also one of the most misused.
 
 **This is the platform mechanics guide, not the ranking.** If you already know you want a Keen love reading and just need the right advisor, go to [Top 10 Love Psychics on Keen](/guides/top-love-psychics-keen/) — the full tested shortlist, with pricing and track records. This page covers how the machine works before you spend.
 
@@ -82,9 +82,9 @@ Keen's defense against this is the voice-control protocol: control your tone. Be
 
 ## 3. How to Vet a Keen Love Reader Using Review Forensics
 
-Keen's review system is the most comprehensive accountability database in the psychic industry. Every review is permanent and cannot be deleted or edited. High-volume practitioners carry review histories spanning thousands or tens of thousands of entries over years.
+Keen's review system is the most comprehensive public accountability archive in the psychic industry. Every review is permanent and cannot be deleted or edited. High-volume practitioners carry review histories spanning thousands or tens of thousands of entries over years.
 
-Most clients read this database incorrectly — they look at star averages and select the highest-rated reader without examining the content. Here is how to read it correctly for a love question:
+Most clients read this archive incorrectly — they look at star averages and select the highest-rated reader without examining the content. Here is how to read it correctly for a love question:
 
 ### Session Volume Over Time (The Primary Filter)
 
@@ -92,7 +92,7 @@ The most important number on any Keen reader's profile is not their star rating 
 
 A reader with 50,000 sessions across 12 years has sustained repeat business for over a decade. Repeat business at scale is the strongest available evidence that their readings produce genuine value — because clients who feel misled do not return, and a practitioner cannot sustain high volume on a one-time-use basis without genuinely satisfying the majority of clients who return.
 
-The benchmark: 10,000+ sessions over 5+ years is a verified practitioner. 40,000+ sessions over 10+ years is an established veteran. 80,000+ sessions over 15+ years (David7, Arradaza) represents the highest tier of documented performance.
+The benchmark: 10,000+ sessions over 5+ years is a verified practitioner. 40,000+ sessions over 10+ years is an established veteran. 86,000+ and 94,000+ sessions respectively (Arradaza, David7) represent the highest tier of documented performance.
 
 ### The Written Review Ratio
 

@@ -125,11 +125,11 @@ When a relationship is failing, the stated problem is rarely the actual problem.
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating</span>
-        <span class="reader-summary__value">5 Stars</span>
+        <span class="reader-summary__value">4.9 Stars</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Sessions/Reviews</span>
-        <span class="reader-summary__value">10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -137,7 +137,7 @@ When a relationship is failing, the stated problem is rarely the actual problem.
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -174,11 +174,11 @@ If your situation involves a high-stakes separation, a decades-long twin flame d
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating</span>
-        <span class="reader-summary__value">5 Stars</span>
+        <span class="reader-summary__value">4.9 Stars</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Sessions Completed</span>
-        <span class="reader-summary__value">134,000+</span>
+        <span class="reader-summary__value">138,000+</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -186,7 +186,7 @@ If your situation involves a high-stakes separation, a decades-long twin flame d
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -200,7 +200,7 @@ If your situation involves a high-stakes separation, a decades-long twin flame d
   </div>
 </div>
 
-With eighteen years on Kasamba and over 134,000 completed sessions, Stefans' data profile is staggering. He does not use tarot cards or astrology; he works entirely through direct visions provided by his guides. He is notoriously blunt. He will not sugarcoat a dead end. If you want comfort, look elsewhere. If you are prepared to hear exactly what is happening behind the scenes of your breakup, his accuracy is verified by tens of thousands of returning clients. 
+With eighteen years on Kasamba and over 138,000 completed readings, Stefans' data profile is staggering. He does not use tarot cards or astrology; he works entirely through direct visions provided by his guides. He is notoriously blunt. He will not sugarcoat a dead end. If you want comfort, look elsewhere. If you are prepared to hear exactly what is happening behind the scenes of your breakup, his accuracy is verified by tens of thousands of returning clients. 
 
 **Pros:**
 - Platform-verified as one of the most experienced readers globally.
@@ -208,7 +208,7 @@ With eighteen years on Kasamba and over 134,000 completed sessions, Stefans' dat
 - Frequently cited by clients for insight into avoidant-withdrawal patterns.
 
 **Cons:**
-- $19.99/min rate makes extended exploratory sessions prohibitively expensive.
+- $10.99/min rate makes extended exploratory sessions prohibitively expensive.
 - His direct delivery can be jarring if you are emotionally fragile.
 
 [Get high-level clarity with Love Stefans (3 free mins + 50% off) →](/go/kasamba-stefan)
@@ -370,8 +370,8 @@ We highly recommend using the Chat feature rather than Phone for relationship fo
 ### Can a Kasamba psychic really tell me if my ex is coming back?
 Yes, a skilled clairvoyant can read the current trajectory of the relationship and the internal state of your ex. However, they cannot override free will. They will tell you the *highest probability* based on current energy, but if your ex fundamentally chooses to walk away, a legitimate psychic will tell you the uncomfortable truth rather than selling you a false reunion fantasy.
 
-### Why do readers like Love Stefans charge $20 a minute?
-Online psychic platforms operate on a free-market pricing model. Readers set their own rates based on demand. A reader with 134,000 sessions has a massive base of returning clients willing to pay that premium. High rates typically indicate extreme consistency and demand, allowing the reader to take fewer, higher-quality sessions.
+### Why do readers like Love Stefans charge $10.99 a minute?
+Online psychic platforms operate on a free-market pricing model. Readers set their own rates based on demand. A reader with 138,000 readings has a massive base of returning clients willing to pay that premium. High rates typically indicate extreme consistency and demand, allowing the reader to take fewer, higher-quality sessions.
 
 ### Is Tarot or pure Clairvoyance better for love readings?
 Neither is inherently better; it depends on your preference. Pure clairvoyance (like Seek Chelle or Love Stefans) is faster and more direct, as the reader receives visions immediately. Tarot (like Cosmic Fusion) provides a structural framework that some clients find easier to follow and understand visually.

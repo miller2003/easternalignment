@@ -9,7 +9,7 @@ affiliateUrl: /go/kasamba-immense-spark/
 avatarUrl: /avatars/kasamba/immense-spark-n-au-kasamba-review.jpg
 ogImage: "/avatars/kasamba/immense-spark-n-au-kasamba-review.jpg"
 freeOffer: "3 free minutes"
-pricing: "Chat $10.99/min promo (reg. $21.99) · Voice $19.99/min promo (reg. $39.99) · 3 free minutes"
+pricing: "Chat $10.99/min promo (reg. $21.99) · Voice $10.99/min promo (reg. $39.99) · 3 free minutes"
 bestFor: "People looking for a reader to stay with — not a one-off, but a guide they can return to across years"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/immense-spark-n-au-kasamba-review/
 seoTitle: "Immense Spark Kasamba Review 2026: 66,152 Readings, 4.8 Stars, Decade-Long Clients"
@@ -26,7 +26,7 @@ pros:
   - "Promo halves the sticker rate; 3 free minutes make the audition free"
 cons:
   - "Premium-tier pricing — even at promo, $10.99/min chat is upper-mid-range"
-  - "Voice promo at $19.99/min is still high; use chat unless you need to talk"
+  - "Voice promo at $10.99/min is still high; use chat unless you need to talk"
   - "4.8, not a perfect 5.0 — earned across a huge sample, but not spotless"
 entities:
   - "Kasamba"
@@ -94,11 +94,11 @@ Notice what repeats: *always, as always, over a decade, always pleasant.* These 
 
 ## The Pricing — Premium, With One Rule
 
-Immense Spark sits in premium territory. Listed rates: **$21.99/min chat, $39.99/min voice.** New-client promo: **chat drops to $10.99/min, voice to $19.99/min, plus 3 free minutes.**
+Immense Spark sits in premium territory. Listed rates: **$21.99/min chat, $39.99/min voice.** New-client promo: **chat drops to $10.99/min, voice to $10.99/min, plus 3 free minutes.**
 
 At promo rates, a focused 15-minute chat runs about **$132** after the free three. That's upper-mid-range — more than Cosmic Fusion's $48, less than Wisdom and Love's $168. The honest framing: you're paying premium-tier money for a reader whose standout credential is *retention*. Dex didn't come back for a decade because she was cheap. He came back because she was worth it.
 
-**The rule: book chat.** Voice at $19.99/min promo is nearly double chat at $10.99 — and unlike chat, there's no evidence the voice format delivers twice the value. Same reader, same gifts. Use text unless you specifically need to hear a voice.
+**The rule: book chat.** Voice at $10.99/min promo is nearly double chat at $10.99 — and unlike chat, there's no evidence the voice format delivers twice the value. Same reader, same gifts. Use text unless you specifically need to hear a voice.
 
 One transparency note: Kasamba rotates promos, and we've watched card prices shift between visits. Look at what the card shows *your* account before you start. The 3 free minutes are constant.
 

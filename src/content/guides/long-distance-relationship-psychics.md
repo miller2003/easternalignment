@@ -16,7 +16,7 @@ cons:
 verdict: 'Readings by Kelly777 (Keen) is unparalleled for Remote Viewing his physical environment, while Ask Cristina (Kasamba) excels at reading his thoughts via Remote Telepathy.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $2.10/min to $9.98/min
+pricing: From $2.10/min to $5.99/min
 bestFor: Women in Long Distance Relationships suffering from texting anxiety, silence, and intense paranoia about cheating.
 publishDate: '2026-04-25'
 updatedDate: '2026-04-25'
@@ -306,7 +306,7 @@ If the psychic confirms he is *not* cheating, but the distance is still killing 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -314,7 +314,7 @@ If the psychic confirms he is *not* cheating, but the distance is still killing 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

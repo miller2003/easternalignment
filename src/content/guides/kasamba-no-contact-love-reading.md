@@ -18,7 +18,7 @@ cons:
 verdict: "Ask Cristina is the best budget option for weekly no-contact thought-field checks; Seek Chelle for the deepest psychological read on why the silence is happening; Love Stefans for a direct assessment of whether contact will resume."
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new advisor + 50% off first session
-pricing: From $2.10/min to $19.99/min
+pricing: From $2.10/min to $10.99/min
 bestFor: People in no-contact who want a specific-person energetic read during the silence —to understand what the other person is experiencing rather than waiting blindly.
 publishDate: '2026-08-09'
 updatedDate: '2026-08-09'
@@ -149,7 +149,7 @@ Her accessible rate makes her the most financially sustainable option for period
 
 ---
 
-### Seek Chelle ($9.98/min) —Best for Understanding Why the Silence Is Happening
+### Seek Chelle ($5.99/min) —Best for Understanding Why the Silence Is Happening
 
 Seek Chelle's Triple Clair methodology (cross-referenced clairvoyance, clairaudience, clairsentience) is best suited to the "why" question of no-contact: not what the person is thinking, but what the specific psychological driver of the silence is. For avoidant attachment dynamics, complex emotional situations, or cases where the stated reason for the separation doesn't match the other person's subsequent behavior, her depth of psychological diagnosis is exceptional.
 
@@ -159,7 +159,7 @@ Seek Chelle's Triple Clair methodology (cross-referenced clairvoyance, clairaudi
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -181,7 +181,7 @@ Seek Chelle's Triple Clair methodology (cross-referenced clairvoyance, clairaudi
 
 ---
 
-### Love Stefans ($19.99/min) —Best for Direct "Will Contact Resume" Assessment
+### Love Stefans ($10.99/min) —Best for Direct "Will Contact Resume" Assessment
 
 Love Stefans' vision-only clairvoyance applies to the most concrete no-contact question: is contact coming, and when? His sessions produce the most direct possible answer to the trajectory question —what the energetic momentum looks like and whether it is building toward a communication event. His bluntness is a specific advantage here: he will tell you if the momentum is not building, which is information you need even if it is not the information you want.
 
@@ -191,7 +191,7 @@ Love Stefans' vision-only clairvoyance applies to the most concrete no-contact q
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>

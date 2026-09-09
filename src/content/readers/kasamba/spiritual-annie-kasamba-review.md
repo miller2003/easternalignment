@@ -4,12 +4,12 @@ description: "An independent review of Spiritual Annie on Kasamba: ranked among 
 platform: kasamba
 platformName: "Kasamba: Spiritual Annie"
 rating: 4.4
-verdict: "Spiritual Annie holds a platform-ranked Top 10 position in love & relationships, built on 51,930 readings since 2014 at 4.9 stars — 17,046 likes against 404 dislikes. Her specialty is clairsentience: reading the emotional currents under your situation, the things unspoken. Her review feed is the calmest we've ever measured — clients mention calm, kindness, and detail at rates no other reader in our audit series matched — and her client names span four continents. She reads slowly and thoroughly; voice runs $19.99/min, so book chat at $3.99. For anxious love questions at 1 a.m., she is exactly the reader her reputation describes."
+verdict: "Spiritual Annie holds a platform-ranked Top 10 position in love & relationships, built on 51,930 readings since 2014 at 4.9 stars — 17,046 likes against 404 dislikes. Her specialty is clairsentience: reading the emotional currents under your situation, the things unspoken. Her review feed is the calmest we've ever measured — clients mention calm, kindness, and detail at rates no other reader in our audit series matched — and her client names span four continents. She reads slowly and thoroughly; voice runs $10.99/min, so book chat at $3.99. For anxious love questions at 1 a.m., she is exactly the reader her reputation describes."
 affiliateUrl: /go/kasamba-spiritual-annie/
 avatarUrl: /avatars/kasamba/spiritual-annie-kasamba-review.jpg
 ogImage: "/avatars/kasamba/spiritual-annie-kasamba-review.jpg"
 freeOffer: "3 free minutes"
-pricing: "Chat $3.99/min · Voice $19.99/min · 3 free minutes for new clients"
+pricing: "Chat $3.99/min · Voice $10.99/min · 3 free minutes for new clients"
 bestFor: "Love and relationship anxiety — situations where you need someone to read what's unspoken, slow your pulse, and explain it all in detail"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/spiritual-annie-kasamba-review/
 seoTitle: "Spiritual Annie Kasamba Review 2026: Top-10 Love Advisor"
@@ -27,7 +27,7 @@ pros:
 cons:
   - "She takes her time — thorough, unhurried answers rather than rapid-fire lines"
   - "Fast typing produces the occasional typo — human and spontaneous, not scripted"
-  - "Voice runs $19.99/min — her regulars overwhelmingly book chat at $3.99"
+  - "Voice runs $10.99/min — her regulars overwhelmingly book chat at $3.99"
 entities:
   - "Kasamba"
   - "Spiritual Annie"
@@ -119,7 +119,7 @@ Why does that matter to you? Because love problems are culturally loaded. A read
 
 ## How to Book Her Smart
 
-Annie's **chat rate is $3.99/min** with **3 free minutes**; voice runs $19.99/min, and her regulars' behavior says chat is the format — her detailed, layered style actually benefits from text, because the additional details she sends land in a transcript you can keep.
+Annie's **chat rate is $3.99/min** with **3 free minutes**; voice runs $10.99/min, and her regulars' behavior says chat is the format — her detailed, layered style actually benefits from text, because the additional details she sends land in a transcript you can keep.
 
 The session to book: one relationship, one emotional knot — *"What is he actually feeling, and what am I not seeing?"* That's a clairsentient's home question. Budget ten unhurried minutes (about $40 after the free minutes, often less). Do not book her in a hurry between meetings — the detail is the product, and detail takes minutes. Book her at the hour when your thoughts are loudest; the 12× "calm" in her feed suggests that's when her value peaks.
 

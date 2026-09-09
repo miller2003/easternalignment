@@ -16,7 +16,7 @@ cons:
 verdict: 'Psychic Yazmin (Kasamba) is the ultimate investigator for uncovering hidden affairs, while David7 (Keen) expertly dissects why men refuse to set boundaries with their mothers or exes.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $6.99/min to $19.99/min
+pricing: From $5.99/min to $10.99/min
 bestFor: Anyone trapped in a toxic love triangle, suspecting infidelity, or fighting a losing battle against manipulative in-laws and lingering ex-partners.
 publishDate: '2026-05-01'
 updatedDate: '2026-05-01'
@@ -181,7 +181,7 @@ If his ex is constantly hovering—using the kids, the dog, or manufactured cris
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -189,7 +189,7 @@ If his ex is constantly hovering—using the kids, the dog, or manufactured cris
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -259,7 +259,7 @@ If you are currently trapped in a full-blown love triangle and you just need to 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions (Top 3 on Kasamba)</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -267,7 +267,7 @@ If you are currently trapped in a full-blown love triangle and you just need to 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

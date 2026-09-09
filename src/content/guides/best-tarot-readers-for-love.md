@@ -15,10 +15,10 @@ pros:
 cons:
 - "Strict card-by-card interpretations can sometimes take longer, consuming more paid minutes"
 - "Premium multi-tool readers often charge higher per-minute rates"
-verdict: 'Tarot With Meg (Keen) is unparalleled for deep contextual understanding, while Psychic Yazmin (Kasamba) excels at using Tarot to uncover hidden emotional dynamics in love.'
+verdict: 'Tarot With Meg (Keen) stands out for deep contextual understanding, while Psychic Yazmin (Kasamba) is strong at using Tarot to surface hidden emotional dynamics in love.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $2.40/min to $9.99/min
+pricing: From $4.99/min to $9.99/min
 bestFor: Clients who want structured, visual confirmation of their romantic trajectories rather than purely vision-based clairvoyant guesses.
 publishDate: '2026-03-22'
 updatedDate: '2026-03-22'
@@ -81,7 +81,7 @@ However, the psychic industry is flooded with amateurs who bought a deck of card
 
 **Looking for one platform in depth?** We keep a separate, deeper Kasamba-only ranking — [Best Tarot Readers on Kasamba](/guides/best-tarot-readers-on-kasamba/) — covering love, career and timing questions. This page compares Keen and Kasamba head to head for love work specifically. 
 
-To find the actual Tarot masters, we audited the databases of the two largest online psychic networks: **Keen** and **Kasamba**. We filtered for readers with decades of practice, specific deck literacy (Thoth, Hellenistic, Queer Tarot), and methodologies that prove they understand the deep esoteric architecture of the cards.
+To find the actual Tarot masters, we reviewed the public rosters of the two largest online psychic networks: **Keen** and **Kasamba**. We filtered for readers with decades of practice, specific deck literacy (Thoth, Hellenistic, Queer Tarot), and methodologies that prove they understand the deep esoteric architecture of the cards.
 
 Here are the 7 best Tarot readers for love in 2026.
 
@@ -162,7 +162,7 @@ Yazmin doesn't operate like a traditional Tarot reader who methodically narrates
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">Mid-Tier</span>
+        <span class="reader-summary__value">$4.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -201,7 +201,7 @@ If you want a reader who is completely unbothered by spiritual fluff and will de
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$4.49/min</span>
+        <span class="reader-summary__value">$4.29/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -215,7 +215,7 @@ If you want a reader who is completely unbothered by spiritual fluff and will de
   </div>
 </div>
 
-Master Sher does not do toxic positivity. He lays out the cards and reads the architecture of your relationship exactly as it stands. If the cards indicate that your ex is manipulating you, he will tell you. His readings are incredibly fast and dense with information, making his $4.49/minute rate one of the best ROI (Return on Investment) options on Keen for clients who want rapid clarity.
+Master Sher does not do toxic positivity. He lays out the cards and reads the architecture of your relationship exactly as it stands. If the cards indicate that your ex is manipulating you, he will tell you. His readings are incredibly fast and dense with information, making his $4.29/minute rate one of the best ROI (Return on Investment) options on Keen for clients who want rapid clarity.
 
 [Get the Hard Facts with Master Sher (5 mins for $1) →](/go/keen-master-sher)
 
@@ -240,7 +240,7 @@ Safina is a third-generation psychic who doesn't just read Tarot—she publishes
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">Premium Tier</span>
+        <span class="reader-summary__value">$7.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -310,7 +310,7 @@ As Kasamba's #1 ranked advisor, Elizabeth offers an incredibly rare combination:
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 17,000+ Reviews (Kasamba #1 Ranked)</span>
+        <span class="reader-summary__value">4.8 Stars | 48,800+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -318,7 +318,7 @@ As Kasamba's #1 ranked advisor, Elizabeth offers an incredibly rare combination:
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.40/min</span>
+        <span class="reader-summary__value">$4.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

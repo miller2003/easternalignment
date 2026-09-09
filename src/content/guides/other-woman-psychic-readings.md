@@ -16,7 +16,7 @@ cons:
 verdict: 'David7 (Keen) will explain exactly why the man is stalling, while Love Stefans (Kasamba) provides the ultimate, unvarnished verdict on whether he will actually leave.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $6.99/min to $19.99/min
+pricing: From $5.99/min to $10.99/min
 bestFor: Women who are deeply in love with an attached man and need to know if the "I'm going to leave her soon" promise is real or a manipulation tactic.
 publishDate: '2026-05-04'
 updatedDate: '2026-05-04'
@@ -130,7 +130,7 @@ If you have wasted three years waiting in the shadows and you cannot take the an
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions (Top 3 on Kasamba)</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -138,11 +138,11 @@ If you have wasted three years waiting in the shadows and you cannot take the an
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">The Brutal Truth</span>
-        <span class="reader-summary__value">Stefans is expensive because he is the final stop. He does not ask questions, and he does not deliver moral lectures. He only delivers visions. If the man is never going to leave his wife, Stefans will tell you instantly and command you to reclaim your life. If the man is genuinely finalizing his exit plan, Stefans will confirm it and give you the timeline. You are paying $20 a minute for absolute, unvarnished certainty.</span>
+        <span class="reader-summary__value">Stefans is expensive because he is the final stop. He does not ask questions, and he does not deliver moral lectures. He only delivers visions. If the man is never going to leave his wife, Stefans will tell you instantly and command you to reclaim your life. If the man is genuinely finalizing his exit plan, Stefans will confirm it and give you the timeline. You are paying $10.99 a minute for absolute, unvarnished certainty.</span>
       </div>
     </div>
   </div>

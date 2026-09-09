@@ -9,7 +9,7 @@ rating: 4.8
 platformName: "Kasamba"
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new psychic + 50% off first session
-pricing: From $2.10/min to $19.99/min
+pricing: From $2.10/min to $10.99/min
 publishDate: '2026-04-18'
 updatedDate: '2026-08-24'
 canonicalUrl: https://easternalignment.com/guides/kasamba-love-readings-review/
@@ -110,9 +110,9 @@ This assumption is wrong. The rate is a function of multiple factors, only one o
 
 This bracket contains newer advisors building session volume, readers who have chosen accessible pricing as a deliberate practice philosophy, and — honestly — some practitioners who are still refining their methodology.
 
-The hidden gems in this tier are readers like Elizabeth ($2.40/min) and Ask Cristina ($2.10/min), both of whom have maintained accessible pricing despite track records that could justify higher rates. Elizabeth is Kasamba's highest-ranked advisor by some metrics and charges a third of what her competitors with less impressive records charge. The accessible rate is a philosophical choice, not an indicator of lower quality.
+The hidden gems in this tier are readers like Elizabeth ($4.99/min) and Ask Cristina ($2.10/min), both of whom have maintained accessible pricing despite track records that could justify higher rates. Elizabeth is Kasamba's highest-ranked advisor by some metrics and charges a third of what her competitors with less impressive records charge. The accessible rate is a philosophical choice, not an indicator of lower quality.
 
-**Best use:** Extended sessions where you want to fully unpack a complex relationship dynamic without the financial pressure of a premium rate. At $2.40/min, a 25-minute deep-dive costs $60 — a fraction of what the same session costs at $10/min.
+**Best use:** Extended sessions where you want to fully unpack a complex relationship dynamic without the financial pressure of a premium rate. At $4.99/min, a 25-minute deep-dive costs $60 — a fraction of what the same session costs at $10/min.
 
 ### Professional Tier ($5.00–$12.99/min)
 
@@ -120,9 +120,9 @@ This bracket holds the core of Kasamba's professional class: readers who have bu
 
 **Best use:** Your first substantive paid session after the stress test. You have verified connection in the free window; now you want enough session depth (15–20 minutes) to get a complete picture of the situation. At $7–10/min, this costs $105–$200 — a meaningful investment that is justified by the prior verification.
 
-### Elite Tier ($13.00–$19.99/min+)
+### Elite Tier ($13.00–$10.99/min+)
 
-Love Stefans ($19.99/min) and Seek Chelle ($9.98/min, high end of professional) represent the platform's veterans. At the elite tier, the premium is not for higher accuracy per se — it is for immediate access to practitioners who have the highest documented consistency over the longest timeframes.
+Love Stefans ($10.99/min) and Seek Chelle ($5.99/min, high end of professional) represent the platform's veterans. At the elite tier, the premium is not for higher accuracy per se — it is for immediate access to practitioners who have the highest documented consistency over the longest timeframes.
 
 **Best use:** Surgical, hyper-specific questions where you want the platform's most verified practitioner to answer one precise question. A 5-minute session at $20/min is $100 — the same cost as a 20-minute session at $5/min. The question is whether the depth of verification in the short session justifies the concentrated cost.
 
@@ -223,7 +223,7 @@ Yes. Kasamba is a legitimate platform that has operated since 1999. The platform
 
 ### How much does a Kasamba love reading cost?
 
-Entry-tier readers start at $2.10/min (Ask Cristina). Professional-tier readers run $5–$13/min. Elite-tier readers like Love Stefans charge $19.99/min. A complete diagnostic love reading at professional tier ($7–10/min) for 15 minutes costs $105–$150. The first session comes with 50% off after the free vetting minutes.
+Entry-tier readers start at $2.10/min (Ask Cristina). Professional-tier readers run $5–$13/min. Elite-tier readers like Love Stefans charge $10.99/min. A complete diagnostic love reading at professional tier ($7–10/min) for 15 minutes costs $105–$150. The first session comes with 50% off after the free vetting minutes.
 
 ### How do I know if a Kasamba reader is accurate before paying?
 

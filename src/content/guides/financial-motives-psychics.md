@@ -16,7 +16,7 @@ cons:
 verdict: 'Master Sher (Keen) uses Tarot like a forensic accountant, while David7 (Keen) explains exactly why men become comfortable using women as a financial safety net.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $2.10/min to $19.99/min
+pricing: From $2.10/min to $10.99/min
 bestFor: Anyone who suspects their partner is a "hobo-sexual," is hiding massive debt, or is only staying in the relationship because they cannot afford to move out.
 publishDate: '2026-04-15'
 updatedDate: '2026-04-15'
@@ -261,7 +261,7 @@ If you are exhausted, financially drained, and just need a premium clairvoyant t
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions (Top 3 on Kasamba)</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -269,7 +269,7 @@ If you are exhausted, financially drained, and just need a premium clairvoyant t
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

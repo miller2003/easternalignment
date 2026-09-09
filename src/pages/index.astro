@@ -258,7 +258,7 @@ const orgSchema = {
         <div class="hero-meta">
           <span class="hero-meta-item">Written by <a href="/about/">Sarah</a></span>
           <span class="hero-meta-dot" aria-hidden="true">·</span>
-          <span class="hero-meta-item">Last updated: September 2026</span>
+          <span class="hero-meta-item">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
           <span class="hero-meta-dot" aria-hidden="true">·</span>
           <span class="hero-meta-item">{totalGuides} guides &amp; comparisons on site</span>
         </div>
@@ -516,12 +516,6 @@ const orgSchema = {
           <h3 class="guide-card-title">Zodiac Compatibility Hub</h3>
           <p class="guide-card-desc text-muted text-sm">Personality profiles for all 12 signs and love compatibility ratings for every zodiac pairing.</p>
           <span class="guide-card-link text-primary text-sm">Explore the Zodiac →</span>
-        </a>
-        <a href="/tools/" class="guide-card card card--elevated">
-          <span class="badge badge--primary">Free Tools</span>
-          <h3 class="guide-card-title">Free Psychic & Zodiac Tools</h3>
-          <p class="guide-card-desc text-muted text-sm">Yes/no tarot, angel number calculator, life path number, love compatibility, moon phase tracker, and dream meanings — all free.</p>
-          <span class="guide-card-link text-primary text-sm">Explore the Tools →</span>
         </a>
       </div>
     </div>

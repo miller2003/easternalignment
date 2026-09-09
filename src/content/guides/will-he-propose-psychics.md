@@ -16,7 +16,7 @@ cons:
 verdict: 'Arradaza (Keen) provides flawless mathematical marriage timelines using astrology, while Seek Chelle (Kasamba) excels at uncovering the psychological trauma blocking his commitment.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $4.75/min to $19.99/min
+pricing: From $4.75/min to $10.99/min
 bestFor: Women who have been in long-term relationships and need to know whether to keep investing their time or walk away.
 publishDate: '2026-05-09'
 updatedDate: '2026-05-09'
@@ -142,7 +142,7 @@ If you know he loves you, but every time the word "marriage" is mentioned he shu
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -150,7 +150,7 @@ If you know he loves you, but every time the word "marriage" is mentioned he shu
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -259,7 +259,7 @@ If you have been waiting five years for a ring and you are finally ready to walk
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions (Top 3 on Kasamba)</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -267,7 +267,7 @@ If you have been waiting five years for a ring and you are finally ready to walk
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

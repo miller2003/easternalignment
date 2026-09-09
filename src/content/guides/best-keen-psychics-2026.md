@@ -1,7 +1,7 @@
 ---
 title: "Best Keen Psychics of 2026: 10 Top-Rated Advisors, Tested and Ranked by Specialty"
 seoTitle: 'Best Keen Psychics of 2026: 10 Readers Ranked by Specialty'
-metaDescription: 'The 10 best Keen psychics of 2026, ranked by specialty. Verified session counts from 60,000 to 200,000 readings, real pricing, honest limits.'
+metaDescription: 'The 10 best Keen psychics of 2026, ranked by specialty. Verified session counts from 16,000 to 200,000 readings, real pricing, honest limits.'
 description: "A specialty-ranked audit of the ten best Keen psychics in 2026, selected from all published advisor reviews on this site. Ranked by lane using session-volume forensics, repeat-client behavior, and negative-review analysis — from the 200,000-reading veteran to the $2.25 undervalued specialist, with honest limitations for every pick."
 category: Roundup
 entities:
@@ -17,14 +17,14 @@ avatarUrl: "/avatars/keen/advisor-suzan.png"
 pros:
   - "Ranked by specialty from dozens of full advisor audits — one page that matches the right verified reader to your question type"
   - "Every pick backed by a published review with verified session counts"
-  - "Covers the complete rate spectrum from $2.25/min to $17.99/min"
+  - "Covers the complete rate spectrum from $2.25/min to $14.99/min"
 cons:
   - "Keen's top advisors are phone-first — chat availability varies by reader"
-  - "Premium tiers run $9.99–$17.99/min after the $1 intro session"
+  - "Premium tiers run $9.99–$14.99/min after the $1 intro session"
 verdict: "Advisor Suzan is the strongest all-context booking on Keen in 2026 — 136,000+ readings at a 4.98 average since 2005. Below her by lane: Eli Casey for depth of experience, lorrie c for POI reads, David7 for twin flames, Tammy the Voice Reader for phone sessions, Krys Britton for budget."
 affiliateUrl: /go/keen
 freeOffer: 5 minutes for $1 for new clients
-pricing: From $2.25/min to $17.99/min
+pricing: From $2.25/min to $14.99/min
 bestFor: Anyone who wants the definitive Keen shortlist for 2026 — one page that matches the right verified advisor to your question type before you spend.
 publishDate: '2026-09-02'
 updatedDate: '2026-09-06'
@@ -120,7 +120,7 @@ customSchema: |
             "name": "How much does a good Keen reading cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The 5-minutes-for-$1 intro covers the audition. Thereafter: $2.25–$5.99/min at the value tier (Krys Britton, That Magic Man, lorrie c), $6.99–$9.99 mid-tier (Suzan, David7, Kelly777, LadyFontaine, Eli Casey, Tammy), up to $14.99–$17.99 at the premium tier. A focused 15-minute session runs $34–$225 depending on tier — let the question's stakes set the budget."
+              "text": "The 5-minutes-for-$1 intro covers the audition. Thereafter: $2.25–$5.99/min at the value tier (Krys Britton, That Magic Man, lorrie c), $6.99–$9.99 mid-tier (Suzan, David7, Kelly777, LadyFontaine, Eli Casey, Tammy), up to $14.99 at the premium tier. A focused 15-minute session runs $34–$225 depending on tier — let the question's stakes set the budget."
             }
           },
           {
@@ -659,7 +659,7 @@ Advisor Suzan, by the strongest volume-rating combination on the platform: 136,0
 
 ### How much does a good Keen reading cost?
 
-The 5-minutes-for-$1 intro covers the audition. Thereafter: $2.25–$5.99/min at the value tier (Krys Britton, That Magic Man, lorrie c), $6.99–$9.99 mid-tier (Suzan, David7, Kelly777, LadyFontaine, Eli Casey, Tammy), up to $14.99–$17.99 at the premium tier. A focused 15-minute session runs $34–$225 depending on tier — let the question's stakes set the budget.
+The 5-minutes-for-$1 intro covers the audition. Thereafter: $2.25–$5.99/min at the value tier (Krys Britton, That Magic Man, lorrie c), $6.99–$9.99 mid-tier (Suzan, David7, Kelly777, LadyFontaine, Eli Casey, Tammy), up to $14.99 at the premium tier. A focused 15-minute session runs $34–$225 depending on tier — let the question's stakes set the budget.
 
 ### Is Keen better than Kasamba or Purple Garden?
 

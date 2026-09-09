@@ -7,13 +7,13 @@ rating: 4.9
 platformName: "Keen"
 avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
-- "Guarantees you will not waste money on 'toxic positivity' or false hope"
+- "Cuts through 'toxic positivity' and false hope so you stop paying for the wrong readers"
 - "Explains the economic algorithm that forces most psychics to lie to clients"
 - "Highlights readers who survive purely on the accuracy of their blunt predictions"
 cons:
 - "You must be emotionally prepared to hear that your relationship is permanently over"
 - "Blunt readers can sometimes come across as cold or unsympathetic"
-verdict: 'Master Sher provides cold, undeniable Tarot logic, while David7 delivers the absolute most brutal translations of male psychology on the platform.'
+verdict: 'Master Sher delivers cold, structure-first Tarot logic, while David7 gives the most direct, unsentimental readings of male psychology we found on the platform.'
 affiliateUrl: /go/keen
 freeOffer: 5 minutes for $1
 pricing: From $4.29/min to $6.99/min

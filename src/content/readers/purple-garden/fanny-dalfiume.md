@@ -86,7 +86,7 @@ That split is the tool to use before you book anyone, and it's especially useful
 
 Fanny's metaphysics framing won't suit everyone. Clients who want strict, literal predictions can find the spiritual layer too soft, and her 2021 start makes her newer than the decade veterans. Both are limitations, and both are reasons budget-minded explorers should start with her: at $1.99/min the downside of a mismatch is a few credits, not a premium bill. The low price turns her "not for everyone" rating into a feature — you get to find out cheaply whether her metaphysics-and-tarot voice is yours.
 
-Purple Garden's design supports the experiment: new clients get $30 in credit on a first purchase, and the first session is backed by a satisfaction guarantee up to $50 in credit. There's no blanket promise that any single reading lands, so the platform's own safeguard is to start small and read the reviews.
+Purple Garden's design supports the experiment: new clients get $30 in credit on a first purchase. There's no blanket promise that any single reading lands, so the platform's own safeguard is to start small and read the reviews.
 
 ## Booking Fanny on a budget
 

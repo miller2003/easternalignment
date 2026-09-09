@@ -16,7 +16,7 @@ cons:
 verdict: 'Psychic Safina uses astrology to explain the attraction in detail, while Seek Chelle is unparalleled at translating the energetic "Soul Age" dynamic between both partners.'
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new psychic
-pricing: From $2.40/min to $19.99/min
+pricing: From $4.99/min to $10.99/min
 bestFor: Couples with a 10+ year age difference who are exhausted by societal judgment and need an unbiased, purely energetic assessment of their bond.
 publishDate: '2026-03-01'
 updatedDate: '2026-03-01'
@@ -142,7 +142,7 @@ If the age gap is causing communication issues because you are at different stag
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -150,7 +150,7 @@ If the age gap is causing communication issues because you are at different stag
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -181,7 +181,7 @@ Sometimes the biggest enemy of an age-gap relationship isn't society; it is your
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 17,000+ Reviews (Kasamba #1 Ranked)</span>
+        <span class="reader-summary__value">4.8 Stars | 48,800+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -189,7 +189,7 @@ Sometimes the biggest enemy of an age-gap relationship isn't society; it is your
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.40/min</span>
+        <span class="reader-summary__value">$4.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -220,7 +220,7 @@ If you secretly suspect that your older/younger partner might actually be using 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -228,7 +228,7 @@ If you secretly suspect that your older/younger partner might actually be using 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

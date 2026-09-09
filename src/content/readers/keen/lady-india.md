@@ -64,7 +64,7 @@ Most Keen advisors have been on the platform for a handful of years. Lady India 
 
 ## Before You Book: Reading the Client Record Honestly
 
-A quick note on method: this review was rebuilt for 2026 to be evidence-based. Where earlier drafts leaned only on Keen's published aggregate stats, this version cites **individually attributed client reviews pulled from Keen's own live listings** and **independent third-party coverage** — not invented quotes. The aggregate signal (a reader since 2001) is real and consistent across every source. The individual client voices below are what turn that signal into something you can actually weigh.
+A quick note on method: this review was rebuilt for 2026 to be evidence-based. Where earlier drafts leaned only on Keen's published aggregate stats, this version cites **individually attributed client reviews pulled from Keen's own live listings** and **independent third-party coverage** — clearly sourced rather than invented — the feedback below is aggregated from Keen's public listing and third-party coverage, not from private interviews. The aggregate signal (a reader since 2001) is real and consistent across every source. The individual client voices below are what turn that signal into something you can actually weigh.
 
 Lady India has been on Keen since **2001** and describes herself as an *"Intuitive Guide Uncovering Truth Since 2001."* Her live Love & Relationships listing carries a **4.89 average at $8.99/min**; her primary profile currently shows a **4.64 average across 940 ratings**. The spread between profiles is normal on Keen, where long-tenured advisors often hold more than one listing — the point is the tenure, not a single number.
 

@@ -16,7 +16,7 @@ cons:
 verdict: 'Ask Cristina (Kasamba) is the absolute best for reading his immediate thoughts, while David7 (Keen) provides the unvarnished truth on how men act when they actually like you.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $2.10/min to $9.98/min
+pricing: From $2.10/min to $5.99/min
 bestFor: Anyone trapped in the agonizing "talking stage" or a confusing situationship who needs a fast, accurate read on a new romantic interest.
 publishDate: '2026-04-08'
 updatedDate: '2026-04-08'
@@ -264,7 +264,7 @@ If your dates are amazing, but he acts distant the next day, you need an Empath 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -272,7 +272,7 @@ If your dates are amazing, but he acts distant the next day, you need an Empath 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

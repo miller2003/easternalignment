@@ -144,7 +144,7 @@ Both platforms start at $1.99/min at the entry tier, making the starting rates c
 | Trial offer | 3 min free/reader (unlimited) | 5 min for $1 (once) |
 | First-session discount | 50% off first paid session | N/A (trial is the offer) |
 
-**Key observation:** Kasamba's ceiling is higher ($30+/min vs. Keen's $20+/min). For the platform's most experienced practitioners — Love Stefans at $19.99/min, for instance — Kasamba's elite tier is competitive with Keen's. But Kasamba's 50% off first paid session meaningfully reduces the cost of a first substantive session with a professional-tier reader, which Keen does not match.
+**Key observation:** Kasamba's ceiling is higher ($30+/min vs. Keen's $20+/min). For the platform's most experienced practitioners — Love Stefans at $10.99/min, for instance — Kasamba's elite tier is competitive with Keen's. But Kasamba's 50% off first paid session meaningfully reduces the cost of a first substantive session with a professional-tier reader, which Keen does not match.
 
 The practical budget difference for a first session: if you use the Kasamba free minutes protocol correctly and then apply the 50% discount to a 15-minute session with a $7/min professional-tier reader, your first substantive session costs approximately $52.50 for 15 paid minutes. On Keen, after the $1 trial, a 15-minute session with a $7/min reader costs $105. Kasamba's combined trial-plus-discount structure is significantly more cost-effective for first-time users.
 

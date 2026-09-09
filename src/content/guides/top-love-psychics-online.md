@@ -209,7 +209,7 @@ Three evidence rules governed every pick, applied identically across platforms:
 
 ### #1 Love Stefans (Kasamba) — The Best Love Psychic Online, Full Stop
 
-Love Stefans is a third-generation psychic with 138,003 readings since 2007 and a "Top 3 Most Experienced Reader" tag across Kasamba's 25-year history. His lane is the questions people cannot say out loud: is he cheating, will they come back, should I reach out.
+Love Stefans is a third-generation psychic with 138,003 readings since 2007 and a "Top 3 Most Experienced Reader" tag across Kasamba's 27-year history. His lane is the questions people cannot say out loud: is he cheating, will they come back, should I reach out.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Kasamba" class="reader-summary__avatar" />

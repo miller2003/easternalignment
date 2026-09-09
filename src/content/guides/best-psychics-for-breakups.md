@@ -16,7 +16,7 @@ cons:
 verdict: 'Seek Chelle (Kasamba) and David7 (Keen) are the industry leaders for uncovering unspoken truths and establishing clear reunion timelines, respectively.'
 affiliateUrl: /go/kasamba
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $2.10/min to $19.99/min
+pricing: From $2.10/min to $10.99/min
 bestFor: Clients needing high-level diagnostic insight into complex breakups, no-contact situations, and twin flame separations.
 publishDate: '2026-03-15'
 updatedDate: '2026-03-15'
@@ -107,7 +107,7 @@ In the aftermath of a breakup, the reasons given for the split are rarely the co
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Reviews | 20 Years Experience</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews | 20 Years Experience</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -115,7 +115,7 @@ In the aftermath of a breakup, the reasons given for the split are rarely the co
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -187,7 +187,7 @@ When a breakup involves decades of shared history, third-party interference, or 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions (Kasamba Top 3 Most Experienced)</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings (Kasamba Top 3)</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -195,7 +195,7 @@ When a breakup involves decades of shared history, third-party interference, or 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

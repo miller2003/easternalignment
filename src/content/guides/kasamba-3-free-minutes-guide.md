@@ -111,7 +111,7 @@ The first question skeptics ask is: how can Kasamba afford to give away unlimite
 
 ### Why the Math Works for Kasamba
 
-Kasamba's business model is a percentage-based commission on every paid session. When a reader charges $9.98/min (like Seek Chelle), Kasamba takes a platform fee; the rest goes to the advisor. This means Kasamba's revenue is entirely derived from paid sessions —not from the free minutes.
+Kasamba's business model is a percentage-based commission on every paid session. When a reader charges $5.99/min (like Seek Chelle), Kasamba takes a platform fee; the rest goes to the advisor. This means Kasamba's revenue is entirely derived from paid sessions —not from the free minutes.
 
 The free minutes are a customer acquisition cost. Every aborted free session that does not convert to a paid session costs Kasamba nothing in direct revenue (the advisors are also not paid for free minutes). What the free structure does is dramatically reduce the barrier to trying the platform, which increases the total number of users who eventually book a paid session.
 
@@ -125,7 +125,7 @@ This is what most guides will not tell you: the 3-free-minutes structure creates
 
 The trap is called "free minute inflation." Here is how it works:
 
-You enter a session. The free minutes start. You feel the social pressure to use the time well, so you introduce yourself, explain your situation briefly, and ask a general question. The free minutes expire. You are now on the clock at $9.98/min, but you have not actually tested whether the reader connected to your situation —you have only confirmed that the reader politely received your introduction.
+You enter a session. The free minutes start. You feel the social pressure to use the time well, so you introduce yourself, explain your situation briefly, and ask a general question. The free minutes expire. You are now on the clock at $5.99/min, but you have not actually tested whether the reader connected to your situation —you have only confirmed that the reader politely received your introduction.
 
 Three weeks and $400 later, you realize you have paid for extended sessions with readers who never demonstrated connection in the free window. You just assumed connection because they responded intelligently to the context you provided.
 
@@ -181,7 +181,7 @@ Kasamba's pricing runs from $1.99/min to $30+/min, and the rate is not always co
 
 This bracket holds newer advisors building their session count, occasional hidden gems who have chosen to keep rates accessible, and —with honest admission —some readers who are still finding their methodology.
 
-**When to test here first:** If you have a narrow, specific question and a tight budget. Ask Cristina ($2.10/min) and Elizabeth ($2.40/min) sit in this range and consistently outperform their pricing. Elizabeth has maintained her accessible rate deliberately; her Reiki and Tarot combination is among the most efficient on the platform for the price.
+**When to test here first:** If you have a narrow, specific question and a tight budget. Ask Cristina ($2.10/min) and Elizabeth ($4.99/min) sit in this range and consistently outperform their pricing. Elizabeth has maintained her accessible rate deliberately; her Reiki and Tarot combination is among the most efficient on the platform for the price.
 
 **The risk:** Higher variance. You may connect immediately with a practitioner who is gifted and modest about pricing. You may also encounter readers who are skilled at sounding specific without delivering verifiable detail. Apply the silence test rigorously at this tier.
 
@@ -195,7 +195,7 @@ This is where I recommend starting for most seekers. Readers in this bracket hav
 
 ### The Elite Tier ($15.00—30.00+/min)
 
-Love Stefans ($19.99/min) and Seek Chelle ($9.98/min, edge of professional) represent the platform's veterans with decades of verified performance. At these rates, a single minute of paid session time costs more than a full mid-tier reading somewhere else.
+Love Stefans ($10.99/min) and Seek Chelle ($5.99/min, edge of professional) represent the platform's veterans with decades of verified performance. At these rates, a single minute of paid session time costs more than a full mid-tier reading somewhere else.
 
 **When to test here:** Only when you have a surgical, hyper-specific question that requires the platform's most verified practitioner. "Is this connection energetically over, and what specific condition would need to change for the trajectory to shift?" is a good elite-tier question. "Is he coming back?" is not —because the answer to that question does not require the level of depth an elite reader provides, and at $20/min you are paying for precision that a $6/min reader can often deliver equally well.
 

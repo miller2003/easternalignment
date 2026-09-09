@@ -15,7 +15,7 @@ rating: 4.8
 platformName: "Keen"
 avatarUrl: "/avatars/keen/advisor-suzan.png"
 pros:
-  - "10 advisors ranked by love-question type — from 60,000 to 200,000 verified readings each"
+  - "10 advisors ranked by love-question type — from 16,000 to 200,000 verified readings"
   - "Every pick backed by a full published review with negative-review forensics"
   - "First answer in the first paragraph, full ranking table in the first screen"
 cons:
@@ -559,7 +559,7 @@ The 5-minutes-for-$1 intro covers nearly two minutes of his rate — but at $2.9
 
 ### #9 Lollie — The "No Fluff" Love Coach Since 2001
 
-Lollie is one of the most unambiguously direct readers on Keen: 20,000 ratings at 4.92 stars and 70,000+ readings since 2001, built on a simple promise — no small talk, no sugarcoating, practical steps. She also runs a rare standing offer: message FIRSTREAD for 3 free minutes to test her style before spending.
+Lollie is one of the most unambiguously direct readers on Keen: 20,000 ratings at 4.92 stars and 70,000+ readings since 2001, built on a simple promise — no small talk, no sugarcoating, practical steps. She is covered by Keen's standard new-client deal — 5 minutes for $1.
 
 <div class="reader-summary">
   <img src="/avatars/keen/lollie-ext-5555.jpg" alt="Lollie Keen" class="reader-summary__avatar" />

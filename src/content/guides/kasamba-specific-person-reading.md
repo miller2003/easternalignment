@@ -42,7 +42,7 @@ customSchema: |
         "name": "How much does a specific person reading on Kasamba cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Specific-person reader rates on Kasamba range from $2.10/min (Ask Cristina, budget remote telepathy specialist) to $9.98/min (Seek Chelle, Triple Clair) to $19.99/min (Love Stefans, vision-only clairvoyance). The 3-free-minutes-per-reader offer applies to all of them, allowing you to verify connection before any paid time."
+          "text": "Specific-person reader rates on Kasamba range from $2.10/min (Ask Cristina, budget remote telepathy specialist) to $5.99/min (Seek Chelle, Triple Clair) to $10.99/min (Love Stefans, vision-only clairvoyance). The 3-free-minutes-per-reader offer applies to all of them, allowing you to verify connection before any paid time."
         }
       }
     ]
@@ -142,13 +142,13 @@ Not all Kasamba readers work with specific-person questions with equal skill. Th
 ### Ask Cristina ($2.10/min) —Remote Telepathy Specialist
 The most targeted specific-person reader on the platform at the most accessible price. Her remote telepathy methodology is specifically designed to tune into the thought-field of a named individual and report what is actively present —including thoughts not verbalized to anyone. The chat format's absence of auditory cues makes her methodology particularly verifiable. **Best for:** "What is he thinking right now?" questions. [Full review →](/reviews/kasamba/ask-cristina-kasamba-review/)
 
-### Seek Chelle ($9.98/min) —Triple Clair Cross-Referenced Reads
+### Seek Chelle ($5.99/min) —Triple Clair Cross-Referenced Reads
 Her simultaneous three-channel methodology (clairvoyance, clairaudience, clairsentience) produces the most psychologically complete specific-person picture on the platform. The cross-referencing of three independent channels means impressions are verified against each other before delivery, which reduces the rate of single-channel misinterpretation. **Best for:** "Why is he behaving this way and what does the connection's energy actually look like?" [Full review →](/reviews/kasamba/seek-chelle-kasamba-review/)
 
 ### Golden Eye ($4.99/min) —Rapid Specific-Person Description
 Delivers person-specific information within the first 60—0 seconds of a session, from a name alone. Her multi-tool approach covers multiple dimensions of the specific-person question efficiently. **Best for:** Fast, direct specific-person reads when you want to verify connection immediately and need the answer quickly. [Full review →](/reviews/kasamba/golden-eye-kasamba-review/)
 
-### Love Stefans ($19.99/min) —Specific-Person Trajectory Assessment
+### Love Stefans ($10.99/min) —Specific-Person Trajectory Assessment
 His vision-only clairvoyance applies to specific people as well as to trajectories: he can describe the specific emotional state of a person of interest in relation to a connection, including the dominant energy they are carrying and the likely behavioral expression of that energy. **Best for:** High-stakes situations where you need the most verified practitioner on the platform for a specific-person assessment. [Full review →](/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/)
 
 ### Cosmic Fusion ($3.99/min) —Empathic Partner-State Reads

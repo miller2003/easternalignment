@@ -1,6 +1,6 @@
 ---
 title: 'the psychic one on Keen Review 2026: 183,000 Sessions, 25 Years, and One Very Specific Promise - Do "the Precise Dates and Details" Actually Land?'
-seoTitle: "The Psychic One on Keen: 2026 Review — 4.6★, $3.92/min, 183K Sessions"
+seoTitle: "The Psychic One on Keen: 2026 Review — 4.5★, $3.92/min, 183K Sessions"
 metaDescription: "The Psychic One on Keen: 183,000 sessions over 25 years and one bold promise — precise dates and details. Where her accuracy record holds, what she costs, and who should book her in 2026."
 description: "An independent review of the psychic one on Keen - her bold date-and-detail promise, what 40,000 ratings across 25 years actually reveal, where her track record holds and where it doesn't, and exactly who should book her."
 platformName: 'Keen: the psychic one'

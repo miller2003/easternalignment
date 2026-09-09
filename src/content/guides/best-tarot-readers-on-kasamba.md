@@ -190,7 +190,7 @@ The daily-regulars pattern is the tell. A tarot reader cannot retain daily clien
 
 ### #2 A Divine Spirit — Documented Accuracy Across a Five-Year Client Log
 
-A Divine Spirit holds the single cleanest record in our Kasamba audit series: 46,731 readings since 2007 at a perfect 5.0, with 3,683 likes against only 18 dislikes — 99.5% satisfaction across nineteen years. But the score is not the headline. The headline is the bookkeeping: **one client has logged Maura's predictions in notes for five years and reports roughly 95% of them came true.**
+A Divine Spirit holds the single cleanest record in our Kasamba audit series: 46,731 readings since 2007 at a perfect 5.0, with 3,683 likes against only 18 dislikes — 99.5% satisfaction across nineteen years. But the score is not the headline. The headline is the bookkeeping: **one long-term client has logged her predictions in notes for five years and reports roughly 95% of them came true.**
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/divine-spirit-kasamba-review.jpg" alt="A Divine Spirit Kasamba" class="reader-summary__avatar" />
@@ -236,7 +236,7 @@ Understand what the five-year log represents. Clients do not maintain prediction
 
 ### #3 Andi — The Insider Kasamba Itself Hired to Write Its Horoscopes
 
-Andi carries a credential no other reader on the platform can claim: **Kasamba itself once hired her to write its Birthday and Weekend Love Horoscopes.** When a platform with 500+ advisors chooses one of its own readers as the public voice of its astrology content, that is an institutional endorsement worth more than any badge.
+Andi carries a credential no other reader on the platform can claim: **her published bio states that Kasamba commissioned her to write its Birthday and Weekend Love Horoscopes.** When a platform with 500+ advisors chooses one of its own readers as the public voice of its astrology content, that is an institutional endorsement worth more than any badge.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/andi-kasamba-review.jpg" alt="Andi Kasamba" class="reader-summary__avatar" />
@@ -328,7 +328,7 @@ Her entry on a "best tarot readers" list needs one sentence of justification, be
 
 ### #5 Elizabeth — Tarot Grounded in Live Energy Work
 
-Elizabeth is a sixth-generation psychic, certified Reiki Master, and one of Kasamba's most experienced advisors — 47,000+ readings since 2003 at 4.8 stars. Her tarot work has a second layer most readers lack: she reads the spread and simultaneously works the client's live energy, which means the session does double duty as diagnosis and clearing.
+Elizabeth is a sixth-generation psychic, certified Reiki Master, and one of Kasamba's most experienced advisors — 48,800+ readings since 2003 at 4.8 stars. Her tarot work has a second layer most readers lack: she reads the spread and simultaneously works the client's live energy, which means the session does double duty as diagnosis and clearing.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth Kasamba" class="reader-summary__avatar" />
@@ -336,7 +336,7 @@ Elizabeth is a sixth-generation psychic, certified Reiki Master, and one of Kasa
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Sessions</span>
-        <span class="reader-summary__value">47,000+ since 2003</span>
+        <span class="reader-summary__value">48,800+ since 2003</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating</span>
@@ -348,7 +348,7 @@ Elizabeth is a sixth-generation psychic, certified Reiki Master, and one of Kasa
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$4.99/min (intro $2.49)</span>
+        <span class="reader-summary__value">$4.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Tarot Strength</span>
@@ -420,7 +420,7 @@ Her pricing inverts the usual logic: voice costs half her chat rate, which makes
 
 ## Which Kasamba Tarot Reader Matches Your Question?
 
-| Your Situation | Book | Why | Session Cost (10 min) |
+| Your Situation | Book | Why | Session Cost (10 min, standard rate — first-time clients pay less after the new-client discount and free minutes) |
 |---|---|---|---|
 | Fast, auditable answers on love or career | Miss Bathsheba | Card-anchored speed, 0.6% negative | ~$50 |
 | A long-arc question you will check in a year | A Divine Spirit | Five-year verified prediction log | ~$130 |

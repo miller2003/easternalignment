@@ -26,7 +26,7 @@ customSchema: |
       },
       {
         "@type": "Question",
-        "name": "Can I get a free psychic reading with no credit card required?",
+        "name": "Do I need a credit card to get a free psychic reading?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Kasamba offers 3 free minutes with every new reader, though you will need to create an account. For readings with absolutely no payment information, free community tarot readings on Reddit, Discord, and social media platforms are available -- but quality varies enormously and there is no vetting process for the readers. Be extremely cautious of any site promising a full free reading that asks for personal details like your email, phone number, or birth data without being an established platform."
@@ -106,7 +106,7 @@ These sites promise "completely free full psychic readings" -- no catch, no limi
 
 They then deliver a generic reading -- if they deliver anything at all -- and your data enters a pipeline. Your email gets sold to marketing lists. Your phone number gets sold to telemarketers. Your personal details get cross-referenced and packaged.
 
-I tested one of these sites with a burner email address. Within 48 hours, that address had received 23 emails from psychic services, astrology sites, and "spiritual healing" operations I had never heard of. Within two weeks, the count was over 200.
+I tested one of these sites with a burner email address. Within two days, that address was already receiving promotional emails from psychic services, astrology sites, and "spiritual healing" operations I had never heard of. Within two weeks the volume had climbed into the hundreds. Treat the exact numbers as anecdotal — the pattern is the point.
 
 If a site is offering a full-length reading with zero monetization mechanism visible, you are the product.
 
@@ -124,13 +124,13 @@ Kasamba has hundreds of active readers.
 
 The arithmetic is straightforward. If you try 5 readers, you get 15 free minutes. Try 10 readers, you get 30 free minutes. Try 15 readers, you get 45 free minutes.
 
-Forty-five minutes of free psychic reading time with established, reviewed, vetted practitioners. No credit card charge. No obligation.
+In theory, up to forty-five minutes of free reading time if you test fifteen different advisors at three minutes each — a ceiling, not a typical outcome. Account signup is required, and some offers need a payment method on file; check the current terms.
 
 I am not aware of any other platform in the industry that offers anything close to this on a cumulative basis.
 
 ### Keen: 5 Minutes for $1
 
-[Keen's offer](/go/keen) is not free -- it is a dollar. But for a single focused question, 5 minutes with a good reader is enough to get a substantive answer. The per-minute rates on Keen range from $1.99 to $30+ after the introductory period, so that dollar is buying you anywhere from $10 to $150 worth of reading time at standard rates.
+[Keen's offer](/go/keen) is not free -- it is a dollar. But for a single focused question, 5 minutes with a good reader is enough to get a substantive answer. The per-minute rates on Keen range from $1.99 to $20+ after the introductory period, so that dollar is buying you anywhere from $10 to $150 worth of reading time at standard rates.
 
 The limitation: it is a one-time offer. You get 5 minutes for $1 once, with one reader. After that, you are at full price.
 

@@ -16,7 +16,7 @@ cons:
 verdict: 'Arradaza (Keen) provides unmatched mathematical compatibility mapping, while Seek Chelle (Kasamba) excels at uncovering the emotional blockages keeping soulmates apart.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $4.99/min to $19.99/min
+pricing: From $4.99/min to $10.99/min
 bestFor: Clients who need to know if a connection is a genuine soulmate, a twin flame mirror, or just a temporary karmic lesson.
 publishDate: '2026-03-18'
 updatedDate: '2026-03-18'
@@ -153,7 +153,7 @@ Sometimes you know they are your soulmate, but the relationship is entirely bloc
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -161,7 +161,7 @@ Sometimes you know they are your soulmate, but the relationship is entirely bloc
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -231,7 +231,7 @@ When a soulmate connection is highly complex—involving third-party marriages, 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 134,000+ Sessions (Top 3 on Kasamba)</span>
+        <span class="reader-summary__value">4.9 Stars | 138,000+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -239,7 +239,7 @@ When a soulmate connection is highly complex—involving third-party marriages, 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

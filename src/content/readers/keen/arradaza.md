@@ -50,7 +50,7 @@ metaDescription: "Arradaza on Keen: a 4.93 across 26K ratings and a five-tool me
 metaTitle: Arradaza on Keen Review 2026 | 86K Readings, 5 Tools, Direct Style Assessed
 canonicalUrl: https://easternalignment.com/reviews/keen/arradaza/
 highlights:
-- 86,000+ readings on Keen since 2000  -  25 continuous years on the platform
+- 86,000+ readings on Keen since 2000  -  26 continuous years on the platform
 - 4.93-star rating across 26,000 verified reviews
 - 'Five divination tools: Tarot, Cartomancy, Numerology, Western Astrology, Chinese
   Astrology'

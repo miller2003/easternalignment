@@ -91,7 +91,7 @@ Purple Garden lets you read by live video, voice, or chat, and for Ayla the vide
 
 ## One honesty note about the platform
 
-Purple Garden now backs your first session with a given advisor with a satisfaction guarantee (up to $50 in credit), but it does not warrant that a reading will land. The smart play is to open the green/red review split on her profile before you connect: you see exactly how many clients left a happy face versus a frustrated one, and Ayla's green side is decisively the heavy one. Treat the rating as a signal about consistency, not a promise about your specific outcome, and you'll use her well.
+New clients get $30 in credit on their first purchase, but Purple Garden does not warrant that a reading will land. The smart play is to open the green/red review split on her profile before you connect: you see exactly how many clients left a happy face versus a frustrated one, and Ayla's green side is decisively the heavy one. Treat the rating as a signal about consistency, not a promise about your specific outcome, and you'll use her well.
 
 ## Is Ayla right for you?
 

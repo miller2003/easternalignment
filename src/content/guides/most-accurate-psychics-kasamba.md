@@ -16,7 +16,7 @@ platformName: "Kasamba"
 avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
 pros:
   - "Ranked by session volume and review pattern analysis, not marketing claims"
-  - "Covers the full price spectrum from $2.10/min to $19.99/min"
+  - "Covers the full price spectrum from $2.10/min to $10.99/min"
   - "Includes methodology breakdown so you know what type of accuracy each reader delivers"
 cons:
   - "High-accuracy readers at the top of this list command premium rates"
@@ -24,7 +24,7 @@ cons:
 verdict: "Love Stefans and Seek Chelle hold the strongest documented track records on Kasamba for relationship questions; Elizabeth holds the strongest consistency-to-cost ratio on the entire platform."
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new advisor + 50% off first session
-pricing: From $2.10/min to $19.99/min
+pricing: From $2.10/min to $10.99/min
 bestFor: Seekers who have been burned by inaccurate readings and want to identify Kasamba's most verifiably precise advisors before spending.
 publishDate: '2026-08-01'
 updatedDate: '2026-08-01'
@@ -104,9 +104,9 @@ Specific-person accuracy is the ability to describe the characteristics, thought
 
 ### The Three Metrics We Used Instead of Star Rating
 
-**1. Negative Review Forensics.** We analyzed the qualitative content of 1–2 star reviews for each reader. Reviews that complain "she told me he wasn't coming back and she was wrong" indicate temporal prediction failure. Reviews that say "she told me things I didn't want to hear and I was angry" often indicate the opposite — that the uncomfortable diagnosis proved accurate. The type of complaint in negative reviews is more informative than the star count itself.
+**1. Negative Review Forensics.** We compared each reader's public review profile, including their low-star feedback. Reviews that complain "she told me he wasn't coming back and she was wrong" indicate temporal prediction failure. Reviews that say "she told me things I didn't want to hear and I was angry" often indicate the opposite — that the uncomfortable diagnosis proved accurate. The type of complaint in negative reviews is more informative than the star count itself.
 
-**2. Session Volume Trajectory.** A reader with 130,000+ sessions has survived entirely on repeat business. A psychic cannot sustain 130,000 sessions on the strength of one lucky initial reading. High volume at sustained high ratings is the only metric in the psychic industry that is difficult to fake.
+**2. Session Volume Trajectory.** A reader with 130,000+ sessions has survived entirely on repeat business. A psychic cannot sustain 130,000 sessions on the strength of one lucky initial reading. High volume at sustained high ratings is one of the few metrics in the psychic industry that is difficult to fake.
 
 **3. Methodological Transparency.** Readers who describe precisely what they are doing — "I am tuning into the specific emotional frequency of this person," "the Three of Swords in the near-future position indicates..." — create auditable claims. Readers who operate from vague "I see positive energy" framing are not producing anything verifiable.
 
@@ -116,7 +116,7 @@ Specific-person accuracy is the ability to describe the characteristics, thought
 
 ### #1 Love Stefans Psychic Soul — Most Accurate for Reunion Trajectory Assessment
 
-Love Stefans holds the most specific type of accuracy on Kasamba: pure vision-based clairvoyance on relationship trajectories, delivered without any tool to interpret, at a session volume of 134,000+. No platform designation is more significant than "Top 3 Most Experienced Reader" across Kasamba's entire 25-year history, and Stefans holds it.
+Love Stefans holds the most specific type of accuracy on Kasamba: pure vision-based clairvoyance on relationship trajectories, delivered without any tool to interpret, at a session volume of 138,000+. No platform designation is more significant than "Top 3 Most Experienced Reader" across Kasamba's entire 27-year history, and Stefans holds it.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
@@ -124,11 +124,11 @@ Love Stefans holds the most specific type of accuracy on Kasamba: pure vision-ba
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Sessions</span>
-        <span class="reader-summary__value">134,000+</span>
+        <span class="reader-summary__value">138,000+</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating</span>
-        <span class="reader-summary__value">5 Stars</span>
+        <span class="reader-summary__value">4.9 Stars</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -136,7 +136,7 @@ Love Stefans holds the most specific type of accuracy on Kasamba: pure vision-ba
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Accuracy Signature</span>
@@ -154,7 +154,7 @@ The accuracy signal that distinguishes Stefans from other high-volume readers is
 
 **Accuracy category:** Temporal and specific-person, high specificity.
 **Use case:** High-stakes relationship trajectory assessment where you need a high-confidence answer from the platform's most verified practitioner.
-**Limitation:** $19.99/min requires strict session discipline — precise questions only, no open-ended exploration.
+**Limitation:** $10.99/min requires strict session discipline — precise questions only, no open-ended exploration.
 
 [Get the most precise reading on the platform from Love Stefans →](/go/kasamba-stefan)
 
@@ -182,7 +182,7 @@ Seek Chelle's accuracy is different in kind from Stefans'. Where Stefans deliver
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Accuracy Signature</span>
@@ -250,7 +250,7 @@ Golden Eye's accuracy is self-verifying in a particularly useful way: because sh
 
 ### #4 Elizabeth — Best Accuracy-to-Cost Ratio on the Platform
 
-Elizabeth is the strategic pick for seekers who need high accuracy at a price point that does not compound the financial pressure of a relationship crisis. At $2.40/min — a rate she has deliberately maintained despite being Kasamba's top-ranked advisor by some metrics — she represents an extraordinary efficiency in the relationship between documented consistency and session cost.
+Elizabeth is the strategic pick for seekers who need high accuracy at a price point that does not compound the financial pressure of a relationship crisis. At $4.99/min — a rate she has described as 'morally fair' by some metrics — she represents an extraordinary efficiency in the relationship between documented consistency and session cost.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth Kasamba" class="reader-summary__avatar" />
@@ -266,7 +266,7 @@ Elizabeth is the strategic pick for seekers who need high accuracy at a price po
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.40/min</span>
+        <span class="reader-summary__value">$4.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Accuracy Signature</span>
@@ -283,7 +283,7 @@ Elizabeth is the strategic pick for seekers who need high accuracy at a price po
 Elizabeth's Tarot-based methodology creates a specific type of accountability that pure clairvoyance lacks: every statement is anchored in a card draw. The Three of Swords in the relationship position is not an interpretation that can be softened into optimism; it is a card with a documented meaning that the reader must interpret within the framework of the spread. This structural transparency makes her readings easier to evaluate for accuracy — and the Kasamba chat transcript means you have a permanent written record of both the card and its interpretation.
 
 **Accuracy category:** Tarot-grounded diagnostics with live energy verification.
-**Use case:** Extended relationship sessions where you need a complete situational picture rather than a single-question answer — her $2.40/min rate makes longer sessions financially viable.
+**Use case:** Extended relationship sessions where you need a complete situational picture rather than a single-question answer — her $4.99/min rate makes longer sessions financially viable.
 **Advantage:** Best accuracy-to-cost ratio on the platform; deliberate accessible pricing by a verified top-performer.
 
 [Get Tarot accuracy at an accessible rate with Elizabeth →](/go/kasamba-elizabeth)

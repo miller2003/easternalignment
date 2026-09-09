@@ -10,7 +10,7 @@ platformName: "Kasamba: Best for Ex-Recovery"
 avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
 pros:
   - "All picks have sustained 5-star records across high volume specifically for breakup and ex questions"
-  - "Includes readers across price tiers from $2.10/min to $19.99/min"
+  - "Includes readers across price tiers from $2.10/min to $10.99/min"
   - "Covers remote telepathy, empathic resonance, and tarot-based reconciliation readings"
 cons:
   - "No psychic on any platform can override another person's free will or guarantee a reunion"
@@ -18,7 +18,7 @@ cons:
 verdict: "Seek Chelle delivers the most psychologically precise ex-energy reads on the platform; Love Stefans offers the most direct reunion trajectory assessment; Ask Cristina provides the best budget option for tactical 'what are they thinking right now' questions."
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new advisor + 50% off first session
-pricing: From $2.10/min to $19.99/min
+pricing: From $2.10/min to $10.99/min
 bestFor: People in no-contact, post-breakup uncertainty, or reconciliation situations who want a grounded assessment of whether a reconnection is energetically viable.
 publishDate: '2026-08-09'
 updatedDate: '2026-08-09'
@@ -119,7 +119,7 @@ When the most important question is *why* the ex withdrew —the true psychologi
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -159,7 +159,7 @@ Love Stefans answers a specific question that most readers avoid: *"Is this reun
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Completed Sessions</span>
-        <span class="reader-summary__value">134,000+</span>
+        <span class="reader-summary__value">138,000+</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -167,7 +167,7 @@ Love Stefans answers a specific question that most readers avoid: *"Is this reun
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -181,13 +181,13 @@ Love Stefans answers a specific question that most readers avoid: *"Is this reun
   </div>
 </div>
 
-At 134,000+ completed sessions and 18 years on the platform, Stefans' data profile eliminates every luck-based explanation for sustained high ratings. His review record contains an extraordinary number of entries where clients returned after initially dismissing his assessment —specifically on reconciliation questions —to confirm the accuracy of a prediction they had refused to accept.
+At 138,000+ completed readings and 18 years on the platform, Stefans' data profile eliminates every luck-based explanation for sustained high ratings. His review record contains an extraordinary number of entries where clients returned after initially dismissing his assessment —specifically on reconciliation questions —to confirm the accuracy of a prediction they had refused to accept.
 
 His bluntness is the point, not a limitation: *"He told me the relationship had been energetically over for months before the breakup, that my ex had not been fully present for the last phase of it, and that the reunion I was hoping for was not the right outcome even if it were possible. I did not want to hear any of it. It was all true."*
 
 **Best use:** Long-term relationship separations, twin flame situations where the intensity of the connection is creating unrealistic reunion expectations, and cases where you need a high-confidence assessment of whether reconciliation is energetically realistic under the current conditions.
 
-**Honest financial note:** $19.99/min is a serious commitment. A 5-minute surgical session focused on one specific question about reconciliation trajectory costs $100. This is appropriate when the question is high-stakes and you need a definitive assessment from the platform's most verified practitioner. It is not appropriate for exploratory emotional processing.
+**Honest financial note:** $10.99/min is a serious commitment. A 5-minute surgical session focused on one specific question about reconciliation trajectory costs $100. This is appropriate when the question is high-stakes and you need a definitive assessment from the platform's most verified practitioner. It is not appropriate for exploratory emotional processing.
 
 [Get the direct reconciliation assessment from Love Stefans →](/go/kasamba-stefan)
 

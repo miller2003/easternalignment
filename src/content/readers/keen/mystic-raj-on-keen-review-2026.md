@@ -1,7 +1,7 @@
 ---
-title: "Mystic Raj on Keen Review 2026: The Only Male Reader in This Series — and the Only One Who Brings Feng Shui Into a Psychic Reading"
-seoTitle: "Mystic Raj on Keen: The Only Male Reader, Feng Shui Included"
-description: "An independent review of Mystic Raj on Keen — why Kind ranking above Accurate in 270 endorsements is his strongest credential, what Feng Shui actually adds to a psychic reading, and who gets the most from the series' only warmth-first male advisor."
+title: "Mystic Raj on Keen Review 2026: The Only Reader in This Series Who Brings Feng Shui Into a Psychic Reading"
+seoTitle: "Mystic Raj on Keen: Feng Shui in a Psychic Reading"
+description: "An independent review of Mystic Raj on Keen — why Kind ranking above Accurate in 270 endorsements is his strongest credential, what Feng Shui actually adds to a psychic reading, and who gets the most from a warmth-first male advisor."
 platformName: "Keen: Mystic Raj"
 rating: 4.3
 verdict: "Mystic Raj is the most distinctly positioned reader in this series — not because of volume or price, but because of what his clients consistently reach for first. When 270 people independently choose 'Kind' as their top descriptor for a psychic advisor, that is a specific product being delivered with consistency. Combined with a toolkit that includes Feng Shui — a tool no other reader in this series offers — and a fourth-generation Asian lineage that makes his Hindi-language capability culturally grounded rather than merely translational, he fills a genuine gap in the Keen advisor landscape. At $2.25/min, the barrier to finding out whether his style works for you is about as low as it gets."
@@ -18,8 +18,8 @@ customSchema: |
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Mystic Raj on Keen Review 2026: The Only Male Reader in This Series — and the Only One Who Brings Feng Shui Into a Psychic Reading",
-    "description": "An independent review of Mystic Raj on Keen — why Kind ranking above Accurate in 270 endorsements is his strongest credential, what Feng Shui actually adds to a psychic reading, and who gets the most from the series' only warmth-first male advisor.",
+    "headline": "Mystic Raj on Keen Review 2026: The Only Reader in This Series Who Brings Feng Shui Into a Psychic Reading",
+    "description": "An independent review of Mystic Raj on Keen — why Kind ranking above Accurate in 270 endorsements is his strongest credential, what Feng Shui actually adds to a psychic reading, and who gets the most from a warmth-first male advisor.",
     "datePublished": "2026-04-30",
     "dateModified": "2026-04-30",
     "author": {
@@ -40,10 +40,10 @@ customSchema: |
       {"@type": "Thing", "name": "Psychic reading"}
     ]
   }
-metaDescription: "4.93 stars, $2.25/min, Feng Shui on Keen. Mystic Raj is the series' only male advisor — and his clients reach for Kind before Accurate. Full honest review."
+metaDescription: "4.93 stars, $2.25/min, Feng Shui on Keen. Mystic Raj is a male advisor whose clients reach for Kind before Accurate. Full honest review."
 highlights:
   - "4.93 stars across 1,500+ verified ratings — one of Keen's highest-rated active advisors"
-  - "Only male reader in this review series — a meaningful differentiator for specific client needs"
+  - "The only Feng Shui specialist in this review series — a meaningful differentiator for specific client needs"
   - "Feng Shui: the only reader in eight reviews to offer this tool, rooted in Asian metaphysical tradition"
   - "$2.25/min — tied for best price-to-experience ratio in the series alongside Krys Britton"
   - "Fourth-generation Asian psychic reading in both English and Hindi"

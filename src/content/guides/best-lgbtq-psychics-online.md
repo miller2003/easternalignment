@@ -16,7 +16,7 @@ cons:
 verdict: 'Tarot With Meg (Keen) is unparalleled for her use of inclusive Tarot tools, while Elizabeth (Kasamba) provides unmatched Reiki healing for deep-seated identity trauma.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $2.40/min to $9.98/min
+pricing: From $4.99/min to $5.99/min
 bestFor: LGBTQ+ individuals and couples who want a reading that perfectly reflects their reality without having to explain or translate their dynamic to the psychic.
 publishDate: '2026-03-05'
 updatedDate: '2026-03-05'
@@ -147,7 +147,7 @@ If your relationship blocks are deeply tied to religious guilt, familial rejecti
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 17,000+ Reviews (Kasamba #1 Ranked)</span>
+        <span class="reader-summary__value">4.8 Stars | 48,800+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -155,7 +155,7 @@ If your relationship blocks are deeply tied to religious guilt, familial rejecti
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.40/min</span>
+        <span class="reader-summary__value">$4.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -169,7 +169,7 @@ If your relationship blocks are deeply tied to religious guilt, familial rejecti
   </div>
 </div>
 
-As Kasamba's top-ranked advisor, Elizabeth operates at a shockingly low price point ($2.40/min). She combines Tarot reading with active Reiki healing. If a past trauma is currently sabotaging your queer relationship, she won't just predict the outcome; she will actively send Reiki energy to clear the block. She provides an incredibly safe, loving container for clients who have been spiritually abused by traditional religion.
+As Kasamba's top-ranked advisor, Elizabeth operates at a shockingly low price point ($4.99/min). She combines Tarot reading with active Reiki healing. If a past trauma is currently sabotaging your queer relationship, she won't just predict the outcome; she will actively send Reiki energy to clear the block. She provides an incredibly safe, loving container for clients who have been spiritually abused by traditional religion.
 
 [Get Spiritual Healing with Elizabeth (3 Free Mins) →](/go/kasamba-elizabeth)
 
@@ -186,7 +186,7 @@ If you are in a highly volatile, intense queer relationship and cannot figure ou
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -194,7 +194,7 @@ If you are in a highly volatile, intense queer relationship and cannot figure ou
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

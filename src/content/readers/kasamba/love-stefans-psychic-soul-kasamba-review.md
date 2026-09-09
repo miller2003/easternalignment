@@ -61,8 +61,8 @@ customSchema: |
       {"@type": "Thing", "name": "Love Psychic"},
       {"@type": "Thing", "name": "Relationship Advice"}
     ],
-    "datePublished": "2026-08-14",
-    "dateModified": "2026-08-14"
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24"
   }
 ---
 

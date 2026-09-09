@@ -67,7 +67,7 @@ When you are navigating the fallout of a separation, your cognitive bandwidth na
 
 That is not what we are doing here. 
 
-We approach psychic readings with the exact same structural rigor we apply to evaluating any professional service. A reading is a transaction. You are paying for a specialist's time, perception, and track record. To identify the readers who actually deliver value in ex-recovery scenarios, we audited the Keen platform's database. We bypassed the promotional bios and looked exclusively at the numbers that matter: long-term session volume, verified user review patterns, and specific expertise in reconciliation dynamics. No psychic can guarantee outcomes — treat any timeline prediction as guidance, not absolute certainty — but the readers highlighted below possess the verified experience to offer genuine clarity when you are too close to the situation to see it objectively.
+We approach psychic readings with the exact same structural rigor we apply to evaluating any professional service. A reading is a transaction. You are paying for a specialist's time, perception, and track record. To identify the readers who actually deliver value in ex-recovery scenarios, we reviewed Keen's public advisor directory. We set the promotional bios aside and looked at the numbers that are actually observable: long-term session volume, published review patterns, and specific expertise in reconciliation dynamics. No psychic can guarantee outcomes — treat any timeline prediction as guidance, not absolute certainty — but the readers highlighted below possess the verified experience to offer genuine clarity when you are too close to the situation to see it objectively.
 
 ---
 
@@ -336,7 +336,7 @@ When an ex-recovery situation involves financial entanglements, third-party inte
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating</span>
-        <span class="reader-summary__value">4.93 / 5</span>
+        <span class="reader-summary__value">4.9 / 5</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Sessions Completed</span>

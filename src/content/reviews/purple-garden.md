@@ -115,7 +115,7 @@ In the spirit of complete honesty, let me share a mistake I made early in my aud
 
 No honest review is complete without discussing what happens when something goes wrong. During month five of my testing, I experienced a dropped video connection due to an app glitch 3 minutes into a session.
 
-- **The Good:** I submitted a ticket through the app's help desk. Within 18 hours, Purple Garden's support team verified the call drop and credited the exact dollar amount back to my account balance.
+- **The Good:** I submitted a ticket through the app's help desk. Within 18 hours, Purple Garden's support team verified the call drop and credited the exact dollar amount back to my account balance. That is one session, not a policy — check Purple Garden's current published terms before you rely on it.
 - **The Realistic Flaw:** Purple Garden issues **account credits**, not credit card cash refunds. Furthermore, like every legitimate psychic network, they will not issue a refund simply because you didn't like the advice or because a prediction didn't unfold according to your timeline.
 
 ---

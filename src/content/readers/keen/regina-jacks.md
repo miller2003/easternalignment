@@ -6,7 +6,7 @@ description: "An independent review of Regina Jacks on Keen - covering her clair
 platformName: 'Keen: Regina Jacks'
 rating: 4.4
 verdict: Best for relationship readings where you want a reader who leads without
-  prompting. Her 13-year track record is unmatched on Keen  -  but her impatient edge
+  prompting. Her 14-year track record is unmatched on Keen  -  but her impatient edge
   means she works best for clients who arrive ready to receive, not process.
 affiliateUrl: /go/keen-regina/
 avatarUrl: /avatars/keen/regina-jacks.jpg
@@ -51,7 +51,7 @@ highlights:
 - Leads with impressions before you explain  -  minimal cold reading risk
 - 'Multiple profiles: Love & Relationships, Tarot, Life Path, Spiritual'
 pros:
-- Exceptional volume and consistency  -  13 years on platform is rare
+- Exceptional volume and consistency  -  14 years on platform is rare
 - Clairvoyant-first approach makes her easy to test for genuine ability
 - 'Covers wide toolkit: tarot, pendulum, numerology, astrology....'
 - One of Keen's more affordable high-volume readers at $3.59/min
@@ -121,7 +121,7 @@ Regina is explicit: *"Please be prepared for the TRUTH!"* and *"no sugar coating
 
 ### The Gap Between Her Rate and a Useful Session
 
-Regina's Love & Relationships profile charges **$3.59/min**, with a **$1 for 5 minutes** offer for new Keen users. Her Tarot profile runs slightly higher at **$3.49/min** depending on where you book. A meaningful session  -  enough time for her to deliver initial impressions, cover your core question, and allow a follow-up  -  typically runs **15 - 20 minutes**, putting the real cost at **$54 - $72** at standard rate.
+Regina's Love & Relationships profile charges **$3.59/min**, with a **$1 for 5 minutes** offer for new Keen users. Her Tarot profile runs slightly lower at **$3.49/min** depending on where you book. A meaningful session  -  enough time for her to deliver initial impressions, cover your core question, and allow a follow-up  -  typically runs **15 - 20 minutes**, putting the real cost at **$54 - $72** at standard rate.
 
 One practical advantage of her style: because she leads rather than asks, sessions tend to be more time-efficient than readers who need extensive context-setting. You're not spending the first 5 minutes explaining your situation at $3.59/min  -  she's already talking.
 
@@ -135,7 +135,7 @@ The $1 for 5 minutes is your diagnostic window. With Regina specifically, use it
 
 - You have a relationship question and want a reader who leads without prompting
 - You've been burned by readers who reflected your own words back at you and called it a reading
-- You want high-volume, proven consistency  -  13 years on Keen and 109K sessions is a track record few readers anywhere can match
+- You want high-volume, proven consistency  -  14 years on Keen and 109K sessions is a track record few readers anywhere can match
 - You're testing clairvoyant ability and want a clean diagnostic session with minimal input from you
 
 ### When I'd Choose a Different Reader

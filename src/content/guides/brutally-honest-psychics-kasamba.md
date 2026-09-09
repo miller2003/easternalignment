@@ -18,7 +18,7 @@ cons:
 verdict: "Seek Chelle and Love Stefans lead the platform for uncomfortable precision —readers who will tell you the psychological truth your partner cannot, even when that truth costs them a five-star review."
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new advisor + 50% off first session
-pricing: From $3.99/min to $19.99/min
+pricing: From $3.99/min to $10.99/min
 bestFor: Clients who have wasted money on reassurance and are ready for clarity that actually moves the needle.
 publishDate: '2026-08-14'
 updatedDate: '2026-08-14'
@@ -131,7 +131,7 @@ Most psychic readings fail at the most critical juncture: the moment you disagre
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Signature Style</span>
@@ -151,7 +151,7 @@ That pattern —emotional confrontation followed by correct action —is the gol
 
 **Why she makes this list:** Seek Chelle's negative reviews consistently describe clients who disagreed with her findings and returned weeks later to confirm she had been right. Accuracy that requires time to verify is the hardest kind to fake.
 
-**Honest limitation:** At $9.98/min, you need to arrive with a focused question, not an emotional debrief. Her Triple Clair approach is fast, but unfocused sessions at this price become expensive quickly.
+**Honest limitation:** At $5.99/min, you need to arrive with a focused question, not an emotional debrief. Her Triple Clair approach is fast, but unfocused sessions at this price become expensive quickly.
 
 **Recommended approach:** Use your 3 free minutes to give her the names of both parties and ask one specific, hard question. If she delivers specific unprompted detail, stay. If she asks more than two clarifying questions, reassess.
 
@@ -173,7 +173,7 @@ Love Stefans is the platform's closest equivalent to an oracle who will tell you
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Completed Sessions</span>
-        <span class="reader-summary__value">134,000+</span>
+        <span class="reader-summary__value">138,000+</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -181,7 +181,7 @@ Love Stefans is the platform's closest equivalent to an oracle who will tell you
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Signature Style</span>
@@ -197,11 +197,11 @@ Love Stefans is the platform's closest equivalent to an oracle who will tell you
 
 Stefans is not a therapeutic presence. He does not ask how you are feeling, he does not offer spiritual comfort after difficult information, and his review record is studded with entries from clients who were initially furious with his assessment and later confirmed it was accurate. *"He told me my ex had moved on emotionally months before the breakup and I didn't want to hear it. Six months later everything he said was exactly right."*
 
-At 134,000+ completed sessions across 18 years on Kasamba, his data profile is the most compelling on the platform. That volume of returning clients does not exist for a reader who tells people what they want to hear; his roster is built on people who came back because his uncomfortable predictions proved accurate.
+At 138,000+ completed readings across 18 years on Kasamba, his data profile is the most compelling on the platform. That volume of returning clients does not exist for a reader who tells people what they want to hear; his roster is built on people who came back because his uncomfortable predictions proved accurate.
 
 **Why he makes this list:** His tool-free methodology produces no hedging mechanism. There are no card positions to reinterpret, no chart transits to blame. He states what he sees and stands by it.
 
-**Honest limitation:** $19.99/min is a significant financial commitment, and his direct delivery can be destabilizing when you are already emotionally fragile. Do not book this reader during an acute crisis. Book him when you want a precise diagnostic and are prepared to act on uncomfortable information.
+**Honest limitation:** $10.99/min is a significant financial commitment, and his direct delivery can be destabilizing when you are already emotionally fragile. Do not book this reader during an acute crisis. Book him when you want a precise diagnostic and are prepared to act on uncomfortable information.
 
 **Recommended approach:** Come with one or two surgical questions. *"What is the actual reason this person has withdrawn, and is the connection recoverable under the current trajectory?"* Use the free minutes as a cold-read verification —if he delivers unprompted specifics about the situation without you providing context, you are in the right session.
 
@@ -257,7 +257,7 @@ Her multi-tool approach —switching between clairvoyance, numerology, and energ
 
 ### #4 Elizabeth —Best Budget Honest Reader for Clarity Under Financial Pressure
 
-Elizabeth is the anomaly on this list: she is one of Kasamba's most highly-rated readers by volume, she charges $2.40/min —one of the lowest rates on the entire platform —and she has kept that rate deliberately accessible for clients in emotional crisis. That pricing decision is itself an honesty signal: a reader motivated primarily by revenue would have raised their rate long ago.
+Elizabeth is the anomaly on this list: she is one of Kasamba's most highly-rated readers by volume, she charges $4.99/min —one of the lowest rates on the entire platform —and she has kept that rate deliberately accessible for clients in emotional crisis. That pricing decision is itself an honesty signal: a reader motivated primarily by revenue would have raised their rate long ago.
 
 <div class="reader-summary">
   <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth Kasamba Review" class="reader-summary__avatar" />
@@ -273,7 +273,7 @@ Elizabeth is the anomaly on this list: she is one of Kasamba's most highly-rated
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.40/min (maintained deliberately)</span>
+        <span class="reader-summary__value">$4.99/min (maintained deliberately)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Signature Style</span>

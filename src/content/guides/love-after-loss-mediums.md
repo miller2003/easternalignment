@@ -16,7 +16,7 @@ cons:
 verdict: 'Readings by Kelly777 (Keen) specializes in finalizing past soul contracts, while Seek Chelle (Kasamba) can confirm if your deceased spouse actively sent your new partner.'
 affiliateUrl: /go/keen
 freeOffer: Up to 3-5 free minutes depending on platform
-pricing: From $2.40/min to $9.98/min
+pricing: From $4.99/min to $5.99/min
 bestFor: Widows and widowers who feel paralyzed by grief and need explicit spiritual permission from the other side before they can open their hearts to a new relationship.
 publishDate: '2026-04-28'
 updatedDate: '2026-04-28'
@@ -132,7 +132,7 @@ If you want to date, but you feel completely emotionally numb and energetically 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 17,000+ Reviews (Kasamba #1 Ranked)</span>
+        <span class="reader-summary__value">4.8 Stars | 48,800+ Readings</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -140,7 +140,7 @@ If you want to date, but you feel completely emotionally numb and energetically 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.40/min</span>
+        <span class="reader-summary__value">$4.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>
@@ -171,7 +171,7 @@ If you recently met someone who feels incredibly familiar and safe, and you wond
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rating / Experience</span>
-        <span class="reader-summary__value">5 Stars | 10,000+ Five-Star Reviews</span>
+        <span class="reader-summary__value">4.9 Stars | 12,700+ Positive Reviews</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -179,7 +179,7 @@ If you recently met someone who feels incredibly familiar and safe, and you wond
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Best For</span>

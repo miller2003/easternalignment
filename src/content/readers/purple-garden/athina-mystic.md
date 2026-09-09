@@ -91,7 +91,7 @@ Purple Garden shows this split on every profile, and for a reader as boundary-dr
 
 ## Booking Athina without the risk
 
-Athina starts at $5.99/min, mid-tier for Purple Garden. The $30 new-client credit covers about five minutes — enough for one focused twin-flame or soulmate question and a read on her direct tone. As always, Purple Garden backs your first session with a satisfaction guarantee up to $50 in credit and makes no blanket accuracy promise, so start small and let the review split guide you.
+Athina starts at $5.99/min, mid-tier for Purple Garden. The $30 new-client credit covers about five minutes — enough for one focused twin-flame or soulmate question and a read on her direct tone. As always, Purple Garden makes no blanket accuracy promise, so start small and let the review split guide you.
 
 Because her sessions run deep and reflective, set a budget and a timer before you connect. Five minutes tests the fit; a longer session is for when you know her voice is yours. If you're unsure whether her blunt style will suit you, watch her intro video first — Purple Garden shows one on every profile, and for a reader this boundary-driven it's the fastest way to learn whether you want the truth she's known for before you spend a cent. Saved transcripts mean you can replay the read later, when the emotions have cooled and the actual guidance is easier to see.
 

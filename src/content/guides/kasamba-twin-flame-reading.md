@@ -24,7 +24,7 @@ cons:
 verdict: "Seek Chelle is the platform's strongest twin flame reader for psychological depth on the chaser-runner dynamic; Love Stefans for direct trajectory assessment on reunion timelines; Cosmic Fusion for the empathic partner-state read during separation."
 affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new advisor + 50% off first session
-pricing: From $3.99/min to $19.99/min
+pricing: From $3.99/min to $10.99/min
 bestFor: People in active twin flame separation who need clarity on the chaser-runner dynamic, the timeline of the current phase, and what work the current separation is designed to produce.
 publishDate: '2026-08-11'
 updatedDate: '2026-08-11'
@@ -149,7 +149,7 @@ Twin flame chaser-runner dynamics are, at their root, psychological mechanisms: 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.98/min</span>
+        <span class="reader-summary__value">$5.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">TF Specialty</span>
@@ -181,7 +181,7 @@ Love Stefans is the reader for a specific, painful TF question: *Is this connect
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
         <span class="reader-summary__label">Sessions</span>
-        <span class="reader-summary__value">134,000+</span>
+        <span class="reader-summary__value">138,000+</span>
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Methodology</span>
@@ -189,7 +189,7 @@ Love Stefans is the reader for a specific, painful TF question: *Is this connect
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$19.99/min</span>
+        <span class="reader-summary__value">$10.99/min</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">TF Specialty</span>

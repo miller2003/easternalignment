@@ -9,7 +9,7 @@ affiliateUrl: /go/kasamba-spiritual-divini-service/
 avatarUrl: /avatars/kasamba/spiritual-divini-service-kasamba-review.jpg
 ogImage: "/avatars/kasamba/spiritual-divini-service-kasamba-review.jpg"
 freeOffer: "3 free minutes + 50% off"
-pricing: "Chat $1.99/min promo (reg. $3.99) · Voice $19.99/min promo (reg. $39.99) · 3 free minutes"
+pricing: "Chat $1.99/min promo (reg. $3.99) · Voice $10.99/min promo (reg. $39.99) · 3 free minutes"
 bestFor: "Clients who suspect other readers have been telling them what they want to hear — and want a direct, frank answer on love or life at entry-level chat pricing"
 canonicalUrl: https://easternalignment.com/reviews/kasamba/spiritual-divini-service-kasamba-review/
 seoTitle: "Spiritual Divini Service Kasamba Review 2026: 4.7, $1.99/min"
@@ -25,7 +25,7 @@ pros:
   - "Gives timeframes — the concrete detail most readers avoid committing to"
   - "$1.99/min chat promo makes a no-risk test session genuinely cheap"
 cons:
-  - "Voice pricing runs 10x the chat rate ($19.99/min promo) — the value case is chat-only"
+  - "Voice pricing runs 10x the chat rate ($10.99/min promo) — the value case is chat-only"
   - "Frank delivery can land hard if you arrive hoping to be validated"
   - "4.7 is a notch below the platform's 5.0 crowd — the tax honest readers pay on bruised expectations"
 entities:
@@ -91,7 +91,7 @@ One more detail that matters: she **gives timeframes** — *"I will give you tim
 Here's the most useful thing in this review. Her rate card has a quirk:
 
 - **Chat: $3.99/min regular, currently $1.99/min promo**
-- **Voice: $39.99/min regular, currently $19.99/min promo**
+- **Voice: $39.99/min regular, currently $10.99/min promo**
 
 The voice rate is **ten times** the chat rate. That's not a typo, and it's not greed — it's a deliberate price fence. A voice call is open-ended, meandering, and impossible to time-box; a chat session with a fast, concise typist is dense and efficient. She's pricing the *format*, not the minutes.
 
@@ -103,7 +103,7 @@ What it means for you is simple: **the entire value case is chat.** At the $1.99
 
 **Frank is not gentle.** "Brutally honest" appears in her praise, not her complaints — but it's the same trait. Arrive hoping to have your version of events validated, and the session will sting. Arrive with "tell me what's actually true," and it's exactly what you paid for.
 
-**Voice is a trap at this rate.** We said it above; it bears repeating. The $19.99/min voice promo is a luxury tier. Chat is the product.
+**Voice is a trap at this rate.** We said it above; it bears repeating. The $10.99/min voice promo is a luxury tier. Chat is the product.
 
 ## Should You Book Spiritual Divini Service?
 

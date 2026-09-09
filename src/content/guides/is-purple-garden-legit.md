@@ -34,7 +34,7 @@ I spent an extended period and my own money testing Purple Garden: multiple advi
 
 ## Who Actually Owns and Operates the Platform
 
-The first red flag in scam psychic apps is anonymous ownership. A platform that cannot tell you who runs it is a platform you cannot hold accountable. Purple Garden passes this test cleanly: it is operated by BargainMatch Inc. / Purple Ocean, the same engineering team behind BitWine and Purple Ocean, with a decade of operating history across multiple consumer platforms. Anonymous shell companies do not run decade-old digital services firms. This is a corporate entity with a track record that can be examined.
+The first red flag in scam psychic apps is anonymous ownership. A platform that cannot tell you who runs it is a platform you cannot hold accountable. Purple Garden passes this test cleanly: it is operated by the veteran team behind Purple Ocean and BitWine, with a decade of operating history across multiple consumer platforms. Anonymous shell companies do not run decade-old digital services firms. This is a corporate entity with a track record that can be examined.
 
 Payment security follows the same logic. Transactions flow through Apple App Store billing, Google Play billing, or encrypted credit card gateways. Advisors never see your banking details, and the app store billing layer gives you an additional dispute channel that pure web platforms do not. Throughout my testing, I never encountered a payment irregularity, and the platform's billing structure makes one structurally difficult to produce.
 

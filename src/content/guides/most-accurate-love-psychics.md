@@ -24,7 +24,7 @@ cons:
 verdict: "Love Specialist Isabelle (Kasamba) is the most verifiably accurate love psychic in 2026 — a perfect 5.0 across 99,057 readings with clients returning years later to confirm predictions they did not believe. Annah (Purple Garden) for publicly ledgered dated calls; A Divine Spirit (Kasamba) for a client-maintained five-year prediction log at ~95% confirmed."
 affiliateUrl: /go/kasamba
 freeOffer: Kasamba 3 free minutes + 50% off · Keen 5 minutes for $1 · Purple Garden $30 credit
-pricing: From $4.99/min to $17.99/min
+pricing: From $4.99/min to $14.99/min
 bestFor: Anyone who has been burned by inaccurate love readings and wants the readers whose predictions have been verified — by clients, by public ledgers, and by third parties.
 publishDate: '2026-08-16'
 updatedDate: '2026-09-06'

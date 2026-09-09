@@ -100,7 +100,7 @@ A pure clairvoyant gives you nothing to hold onto except what they tell you. The
 
 Intuitive readers without tools tend to perform best on **energetic and emotional undercurrents**  -  what someone is really feeling, what's blocking a situation from moving forward, what the underlying dynamic between two people actually is. They can also be strong on directional guidance: where is this heading, what's the likely next move.
 
-Client reviews back this up. One describes getting "a timeline of events over 90 days  -  what to expect, so I can prepare my responses and be emotionally ready." Another notes he correctly predicted a specific workplace change before it happened. These are outputs consistent with strong clairaudient perception, not cold reading.
+Client reviews back this up. One describes getting "a timeline of events over 90 days  -  what to expect, so I can prepare my responses and be emotionally ready." Several public reviews describe him naming specific workplace changes before they happened — a recurring pattern in his feedback, not something we can independently verify. These are outputs consistent with strong clairaudient perception, not cold reading.
 
 ### Where a Pure Intuitive Reader Has Less to Work With
 
