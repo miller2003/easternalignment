@@ -5,7 +5,6 @@ category: Roundup
 platform: kasamba
 rating: 4.8
 platformName: "Kasamba"
-avatarUrl: "/avatars/guides/age-gap-psychics.jpg"
 pros:
 - "Focuses strictly on Kasamba psychics known for creating judgment-free, safe containers"
 - "Experienced with how esoteric traditions frame 'Soul Age' versus biological age"
@@ -94,7 +93,7 @@ While a good psychic won't judge the age gap, they *will* judge the power dynami
 If you want an astrologer who takes age-gap synastry seriously — and walks you through the Saturn dynamics in your charts in detail — Safina is unmatched.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-safina-kasamba-review.jpg" alt="Psychic Safina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-safina-kasamba-review.webp" alt="Psychic Safina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -133,7 +132,7 @@ Safina operates with clinical precision. By pulling both of your natal charts, s
 If the age gap is causing communication issues because you are at different stages of life, you need an Empath to translate the emotional disconnect.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -172,7 +171,7 @@ Seek Chelle is profoundly non-judgmental. She taps directly into the "Soul Age" 
 Sometimes the biggest enemy of an age-gap relationship isn't society; it is your own internalized guilt and shame. Elizabeth doubles as a supreme spiritual healer.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -211,7 +210,7 @@ As Kasamba's top-ranked advisor, Elizabeth provides a sanctuary. She combines Ta
 If you secretly suspect that your older/younger partner might actually be using you, but you are afraid to ask because you don't want a lecture, call Stefans.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +249,7 @@ Stefans is famously brutal, but his brutality is entirely unbiased. He does not 
 If your older partner acts younger than their age, or your younger partner acts older, there is usually unresolved childhood trauma driving the dynamic. 
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

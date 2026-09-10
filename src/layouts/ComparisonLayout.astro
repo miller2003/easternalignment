@@ -21,6 +21,8 @@ interface Props {
   metaDescription?: string;
   canonicalUrl?: string;
   customSchema?: string;
+  /** Absolute or root-relative social/hero image for this page. */
+  ogImage?: string;
 }
 
 const {
@@ -34,7 +36,13 @@ const {
   metaDescription,
   canonicalUrl,
   customSchema,
+  ogImage,
 } = Astro.props;
+
+const SITE_URL = 'https://easternalignment.com';
+const articleImage = ogImage
+  ? new URL(ogImage, SITE_URL).href
+  : `${SITE_URL}/og-default.jpg`;
 
 const displayDate = updatedDate || publishDate;
 
@@ -80,8 +88,13 @@ const articleSchema = {
     "@type": "Person",
     "name": "Sarah",
   },
+  "publisher": { "@id": `${SITE_URL}/#organization` },
   "datePublished": publishDate,
   ...(updatedDate ? { "dateModified": updatedDate } : {}),
+  // Google's Article rich result requires `image`; without it every comparison
+  // page reported "missing field" and lost eligibility. og-default.jpg is the
+  // same asset BaseLayout falls back to for og:image, so the two never diverge.
+  "image": articleImage,
 };
 
 // ── Editorial scores are UI-only (ScorePanels) ─────────────────────────────
@@ -90,8 +103,6 @@ const articleSchema = {
 // Review-snippet policy (self-serving reviews) and risks spam classification.
 // SERP rating markup stays limited to Review.reviewRating on single-entity
 // pages. The comparison schema below carries ItemList + entity links only.
-const SITE_URL = 'https://easternalignment.com';
-
 const comparisonItemList = {
   "@type": "ItemList",
   "name": title,
@@ -101,8 +112,17 @@ const comparisonItemList = {
     return {
       "@type": "ListItem",
       "position": i + 1,
+      // ── @type: WebPage, not Product ──────────────────────────────────────
+      // These entries point at OUR review page for the platform, so the item
+      // really is a page. It used to be `Product`, but a Product node with no
+      // `offers` / `aggregateRating` / `review` is invalid for Google's Product
+      // rich result — it produced a "missing field" warning on every comparison
+      // page while returning nothing. We deliberately do NOT add offers or
+      // ratings here: the editorial score is an expert opinion, and dressing it
+      // up as a user-review aggregate is the exact thing the comment above warns
+      // about. WebPage carries no required fields, so the ItemList stays valid.
       "item": {
-        "@type": "Product",
+        "@type": "WebPage",
         "name": p,
         ...(key ? { "url": `${SITE_URL}/reviews/${key}/` } : {}),
       },

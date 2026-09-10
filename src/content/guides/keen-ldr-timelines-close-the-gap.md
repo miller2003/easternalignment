@@ -5,7 +5,6 @@ category: Roundup
 platform: keen
 rating: 4.8
 platformName: "Keen"
-avatarUrl: "/avatars/guides/close-the-gap.jpg"
 pros:
 - "Focuses purely on the logistics and timelines of relocation, bypassing vague romantic fluff"
 - "Highlights astrologers who can map 4th House (Relocation) transits"
@@ -86,7 +85,7 @@ Many men will not close the gap until they feel they have "secured their kingdom
 If you want to know the exact year the move will happen, Meg's mastery of ancient astrological timing is completely unmatched on the platform.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.jpg" alt="Tarot With Meg" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.webp" alt="Tarot With Meg" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -125,7 +124,7 @@ Meg is one of the only readers on Keen who actively uses Hellenistic Astrology a
 If he keeps promising to move but constantly pushes the date back, you need to understand the hidden masculine panic driving his delays.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -164,7 +163,7 @@ David7 maps masculine energy with clinical precision. He is unparalleled at expl
 Closing the gap requires two lives to perfectly align. Arradaza is the ultimate architect for checking if both of your timelines are mathematically compatible for a move.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

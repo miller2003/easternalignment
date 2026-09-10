@@ -13,7 +13,6 @@ entities:
 platform: keen
 rating: 4.9
 platformName: "Keen"
-avatarUrl: "/avatars/keen/best-love-psychics.jpg"
 pros:
   - "Ranked by session volume and review pattern analysis, not star ratings alone"
   - "Covers the full price spectrum and reading format spectrum"

@@ -5,8 +5,6 @@ platformName: "Purple Garden: Enchantress Ragini"
 rating: 4.1
 verdict: "Enchantress Ragini is a Purple Garden psychic and tarot reader who joined the platform in 2024 and has completed 6,826 readings at a 4.6 platform rating. Her genuine differentiators — a Western-plus-Vedic dual interpretive system, an Angel-insights specialty, chat from $2.99/min, and plainly stated free-will boundaries — make her a reasonable budget-tier choice for clients who want a soul-connection or love read and are comfortable with a reader still building her track record. Our independent rating of 4.1 sits below her 4.6 platform score because the tenure is short, the volume is an order of magnitude below the platform's veterans, the bio leans heavily on marketing language, and there is no Top Rated or recommended badge to anchor the claim. She is promising and fairly priced; she is not yet proven."
 affiliateUrl: /go/purple-garden-enchantress-ragini/
-avatarUrl: /avatars/purple-garden/enchantress-ragini.jpg
-ogImage: "/avatars/purple-garden/enchantress-ragini.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $2.99/min · Voice $4.99/min · Video $11.99/min"
 bestFor: "Budget-conscious clients who want a Western-plus-Vedic dual-system love or soul-connection reading over chat, and are comfortable with a reader in her second platform year"

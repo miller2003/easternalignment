@@ -6,8 +6,8 @@ platformName: "Purple Garden: Insight by Soni"
 rating: 4.9
 verdict: "Insight by Soni owns the cleanest approval ledger in our entire audit series: 9,166 likes against 10 dislikes — ten, ever — across 37,140 Purple Garden readings since 2019, at a perfect 5.0 with a 'highest rated' badge. Her retention is equally extreme: 80% of her current feed is repeat clients, led by a single client with 69 reviews. The receipts match the ledger: 'she told me I would hear from my POI within 20 days, and that timeline hit right on point when my POI reached out.' A UK-based, naturally gifted reader with 25 years of experience, she specializes in relationships and describes her method as honest answers without sugarcoating. $11.99/min with the $30 credit covering about two and a half minutes; voice $13.99. For the most statistically validated reader on Purple Garden, this is the booking."
 affiliateUrl: /go/purple-garden-insight-by-soni/
-avatarUrl: /avatars/purple-garden/insight-by-soni.jpg
-ogImage: "/avatars/purple-garden/insight-by-soni.jpg"
+avatarUrl: /avatars/purple-garden/insight-by-soni.webp
+ogImage: "/avatars/purple-garden/insight-by-soni-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $11.99/min · Voice $13.99/min · $30 free credit on your first purchase"
 bestFor: "Clients who want the most statistically validated reader on the platform — cleanest ledger ever reviewed — for relationship questions with dated, checkable answers"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Insight by Soni Purple Garden Review 2026: 5.0, 10 Dislikes",
     "description": "Insight by Soni on Purple Garden: 37,140 readings at 5.0 — 9,166 likes vs 10 dislikes, the cleanest ledger ever. One client holds 69 reviews — $11.99/min.",
-    "image": "https://easternalignment.com/avatars/purple-garden/insight-by-soni.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/insight-by-soni-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

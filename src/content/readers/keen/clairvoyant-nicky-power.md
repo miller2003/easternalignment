@@ -6,8 +6,8 @@ platformName: "Keen: Clairvoyant Nicky Power"
 rating: 4.5
 verdict: "Clairvoyant Nicky Power is a direct, tarot-forward male reader on Keen with 5,491 ratings at 4.86 stars and 19,000+ readings since 2001. His reviews praise confidence, accuracy, and a genuine, supportive delivery. At $6.99/min he is moderately priced. Book him by voice for money, destiny, and breakup questions if you want a direct reader who still leaves you feeling supported."
 affiliateUrl: /go/keen-clairvoyant-nicky-power/
-avatarUrl: /avatars/keen/clairvoyant-nicky-power.jpg
-ogImage: "/avatars/keen/clairvoyant-nicky-power.jpg"
+avatarUrl: /avatars/keen/clairvoyant-nicky-power.webp
+ogImage: "/avatars/keen/clairvoyant-nicky-power-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "Clients who want a direct, tarot-forward male reader for money, destiny, and breakup questions - and who value confidence with kindness"
@@ -17,19 +17,19 @@ updatedDate: '2026-07-09'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/clairvoyant-nicky-power-og.jpg",
     "headline": "Clairvoyant Nicky Power on Keen Review 2026: A Direct Tarot-Forward Reader With 19,000 Readings",
     "description": "An independent review of Clairvoyant Nicky Power on Keen - 5,491 ratings, 19,000+ readings since 2001, and a $6.99/min rate. What his track record and real client reviews reveal, and exactly who should book him.",
     "datePublished": "2026-07-09",
     "dateModified": "2026-07-09",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/ldr-psychics.jpg"
 pros:
 - "Focuses strictly on 'Remote Viewers' and 'Telepaths' who can bypass physical distance"
 - "Highlights readers specializing in Third-Party detection and infidelity"
@@ -102,7 +101,7 @@ LDRs often trigger "Anxious Attachment" styles. If you constantly accuse him of 
 If you suspect he is lying about his physical whereabouts, Kelly777 possesses the exact specific skill set required to verify his environment.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -141,7 +140,7 @@ With nearly 160,000 sessions, Kelly777 is one of the most prolific Remote Viewer
 When you cannot look into his eyes to see if he is lying, you need a psychic who can listen to his thoughts. 
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -180,7 +179,7 @@ Ask Cristina specializes in tuning into the mental frequencies of a specific tar
 Physical distance often breeds emotional infidelity. He may not be sleeping with a coworker, but he might be giving her the emotional intimacy that belongs to you.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.jpg" alt="Psychic Yazmin" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.webp" alt="Psychic Yazmin" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -219,7 +218,7 @@ Yazmin uses the Tarot to cut straight to the hidden emotional truth. She is bril
 When a man in an LDR goes silent, the female brain assumes infidelity. David7 provides the brutal, logical male perspective on why men actually pull away.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -258,7 +257,7 @@ David7 maps masculine energy with clinical precision. He is unparalleled at expl
 When panic strikes at 2 AM because he didn't answer his phone, you do not need a deep 30-minute psychological breakdown. You need a fast, binary answer.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -297,7 +296,7 @@ Golden Eye's 21 years of experience means she operates with extreme speed. Provi
 If the psychic confirms he is *not* cheating, but the distance is still killing the relationship, you need an Empath to help you rebuild the bridge.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -336,7 +335,7 @@ Seek Chelle bypasses physical silence and taps directly into the energetic state
 Is he naturally loyal, but currently entering a window of extreme temptation? Astrology can answer this mathematically.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

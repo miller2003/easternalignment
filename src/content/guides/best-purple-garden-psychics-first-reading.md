@@ -12,7 +12,7 @@ entities:
 platform: purple-garden
 rating: 4.88
 platformName: "Purple Garden"
-avatarUrl: "/avatars/purple-garden/psychic-norell.jpg"
+avatarUrl: "/avatars/purple-garden/psychic-norell.webp"
 pros:
   - "Ranked by verified minutes per credit dollar — the metric that decides a first session's value"
   - "Every pick backed by a full published review with verified session counts"
@@ -162,7 +162,7 @@ The five picks below are ordered by first-timer fit, not by star average. The pa
 Psychic Norell holds a perfect 5.0 across 39,794 readings since 2016, with a "highest rated" badge and 16,357 likes against 111 dislikes (99.3%). Her most instructive review comes from a client read for years across the industry: **"I've never had someone who was so on point... you need to talk to this person first."**
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-norell.jpg" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-norell.webp" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -208,7 +208,7 @@ Her session architecture is engineered for first-timers: instant connection ("pi
 Psychic Logan is Purple Garden royalty: **advisor #36** — one of the platform's original readers, eleven years in — with 64,955 readings at a perfect 5.0. For a first-timer, the case is simple: start where the record is longest.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-logan.jpg" alt="Psychic Logan Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-logan.webp" alt="Psychic Logan Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -254,7 +254,7 @@ His style is the correct first exposure to what a good reading feels like: direc
 Namrata is the value anomaly of Purple Garden: **a decade of experience, a 4.9 rating, and a $2.49/min rate** that most advisors five years newer charge. For a first-timer, the math is decisive — the $30 credit buys a 12-minute session, the deepest free reading available on this list.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/namrata.jpg" alt="Namrata Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/namrata.webp" alt="Namrata Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -300,7 +300,7 @@ First readings fail on the clock more than on the reader: the context takes five
 Truthful Love is Purple Garden's #1 trending advisor — 28,199 readings since 2024 at 4.8, with a defining receipt: one client who left 8 reviews in a single 4-minute span. At $2.99/min chat, the $30 credit covers ten minutes of the platform's fastest current practice.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/truthful-love.jpg" alt="Truthful Love Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/truthful-love.webp" alt="Truthful Love Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -346,7 +346,7 @@ The trending badge measures booking velocity — the platform's current clients 
 Tarot Instincts is the budget floor of this list: $1.99/min, which stretches the $30 credit to roughly 15 minutes. The honest part: her rating is 4.2, and we are putting her on a "best for first-timers" list anyway — because of what the 4.2 actually measures.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/tarot-instincts.jpg" alt="Tarot Instincts Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/tarot-instincts.webp" alt="Tarot Instincts Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

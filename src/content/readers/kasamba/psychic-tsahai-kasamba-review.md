@@ -5,8 +5,6 @@ platformName: "Kasamba: PSYCHIC TSAHAI"
 rating: 3.7
 verdict: "PSYCHIC TSAHAI is a Kasamba Spiritual Counselor who joined in 2014 and has completed 6,437 readings at a 4.8 platform rating across roughly 1,049 reviews. The gap between her platform score and our independent 3.7 is the largest in this series, and it is not because her readings are bad — it is because the 4.8 rests on a thin and low-activity sample: twelve years on the platform at roughly 536 readings per year, an order of magnitude below the platform's anchors. Her bio carries nine cross-domain titles of varying verifiability, a claim to 'accurate timelines' that is structured to be unfalsifiable, and three genuine differentiators — an I-Ching specialty, a named self-published book, and a Mysticmag citation — that are real but narrow. She is a capable reader for the right question. For a stranger weighing her cold, the confidence the 4.8 should buy you is lower than it looks."
 affiliateUrl: /go/kasamba-psychic-tsahai/
-avatarUrl: /avatars/kasamba/psychic-tsahai-kasamba-review.jpg
-ogImage: "/avatars/kasamba/psychic-tsahai-kasamba-review.jpg"
 freeOffer: "3 free minutes for new clients"
 pricing: "Chat $3.99/min · Voice $4.99/min · Video $3.99/min"
 bestFor: "Clients who specifically want an I-Ching reading or a reader who claims to give accurate timelines, and who understand they are booking a low-activity, small-sample reader"

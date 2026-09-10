@@ -13,7 +13,7 @@ entities:
 platform: purple-garden
 rating: 4.88
 platformName: "Purple Garden"
-avatarUrl: "/avatars/purple-garden/satie-readings.jpg"
+avatarUrl: "/avatars/purple-garden/satie-readings.webp"
 pros:
   - "Ranked by on-camera verification value — the only format where the reading cannot be edited or scripted"
   - "Every pick backed by a full published review with verified session counts"
@@ -151,7 +151,7 @@ If you are not committed to video, our [complete Purple Garden ranking](/guides/
 Satie Readings is a 4.9-star love-tarot reader with 40+ years of experience and nearly 18,000 readings since 2020 — read live on camera. She is the clearest example on the platform of what video is for: you see her hands, you see the deck, you see the draw. Nothing about the session asks for your faith.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/satie-readings.jpg" alt="Satie Readings Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/satie-readings.webp" alt="Satie Readings Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -200,7 +200,7 @@ Video rates sit on top of each reader's base price and vary widely. Our [Purple 
 Niki Medium is a fourth-generation psychic with 12,994 readings since 2018 at a perfect 5.0, specializing in soulmate readings delivered with a style clients describe as validating without flattering — she tells you the hard part, and she tells it to your face.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/niki-medium.jpg" alt="Niki Medium Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/niki-medium.webp" alt="Niki Medium Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -246,7 +246,7 @@ The honest math first: at $11.49/min video versus $5.49 chat, you pay double for
 Psychic Jeanne is a fifth-generation, licensed psychic with 25,083 readings since 2016 at 4.8 stars — the reader clients book not for a question but for a season: the divorce year, the family crisis, the stretch where everything happens at once.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-jeanne.jpg" alt="Psychic Jeanne Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-jeanne.webp" alt="Psychic Jeanne Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -292,7 +292,7 @@ Her boundaries are explicit and relevant here: she will not run an endless quest
 Quantum Drew is a 5.0-star intuitive empath with 13,746 readings since 2017, known for reading emotional energy first and landing details clients never told him — including knowing a client was military before the client said a word. His on-camera manner is the anti-performance: calm, unhurried, "scary accurate" without the theater.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/quantum-drew.jpg" alt="Quantum Drew Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/quantum-drew.webp" alt="Quantum Drew Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -338,7 +338,7 @@ Drew is also the answer to a question we hear constantly: where are the male rea
 Truthful Love is Purple Garden's #1 trending advisor — 28,199 readings since 2024 at 4.8 — with a video rate of $4.99/min: the price most readers charge for chat. Her defining receipt is the client who left 8 reviews in a single 4-minute span, which tells you two things at once: the sessions are fast, and the clients are moved.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/truthful-love.jpg" alt="Truthful Love Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/truthful-love.webp" alt="Truthful Love Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

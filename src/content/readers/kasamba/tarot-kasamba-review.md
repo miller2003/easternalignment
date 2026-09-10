@@ -6,8 +6,8 @@ platformName: "Kasamba: tarot"
 rating: 4.4
 verdict: "tarot — yes, that's the whole name — is Kasamba's quiet anomaly: 47,813 readings since 2015 at 4.9 stars, sold under the generic name of her own tool, with zero guru branding. Her review feed reveals what clients actually buy from her: not predictions but support — 'help,' 'insight,' and 'honest' dominate her language analysis while 'accurate' barely registers. The receipts are striking: one client documented a full one-week turnaround across eleven reviews ('I feel like something has changed in me'), and another has left 82 reviews in five weeks — the deepest ongoing client relationship we've ever recorded. At $1.99/min chat with 3 free minutes, she's the most affordable long-term advisor relationship on Kasamba. Voice runs $39.99/min, so book text."
 affiliateUrl: /go/kasamba-tarot/
-avatarUrl: /avatars/kasamba/tarot-kasamba-review.jpg
-ogImage: "/avatars/kasamba/tarot-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/tarot-kasamba-review.webp
+ogImage: "/avatars/kasamba/tarot-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $1.99/min · Voice $39.99/min · 3 free minutes for new clients"
 bestFor: "Ongoing guidance through a hard stretch — clients who want a counselor's continuity at a tarot reader's price, not a one-off fortune"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "tarot Kasamba Review 2026: 4.9 Stars, $1.99/min",
     "description": "tarot on Kasamba: 47,813 readings at 4.9 — the reader clients use like a counselor. One client returned 82 times — chat $1.99/min, 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/tarot-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/tarot-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

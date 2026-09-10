@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/twin-flame-psychics.jpg"
 pros:
 - "Strictly filters out general love psychics who don't understand karmic dynamics"
 - "Includes practitioners specializing in remote viewing and past-life regressions"
@@ -98,7 +97,7 @@ For twin flame separation phases, standard tarot can sometimes fall short. Becau
 If your connection defies logic and feels like a gravitational pull you cannot escape, you are dealing with karmic ties that span beyond this lifetime. Kelly777 has spent twenty years mapping exactly these patterns.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -138,7 +137,7 @@ With an astonishing 159,000 completed sessions, Kelly777 is a giant on the Keen 
 When a twin flame separation involves decades of shared history, third-party marriages, or severe soul shock, a single intuitive approach can miss crucial details. Love Stefans is officially designated by Kasamba as a "Top 3 Most Experienced Reader" on the entire platform.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -178,7 +177,7 @@ He works entirely through direct visions and is notoriously blunt. He understand
 Twin flame dynamics are often plagued by confusing masculine/feminine energy imbalances. If you are dealing with a male twin flame who has emotionally withdrawn or walled off communication, David7 provides indispensable insight.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -218,7 +217,7 @@ David7 maps the dynamics of twin flame and high-intensity relationships with cli
 In a twin flame dynamic, the "runner" often doesn't even consciously understand why they are running. Seek Chelle's methodology is designed to unearth the psychological realities and core wounds that trigger the flight response.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -258,7 +257,7 @@ Seek Chelle operates with a "Triple Clair" capacity, receiving visual, auditory,
 Twin flame journeys are exhausting. Sometimes, you don't just need clinical accuracy; you need someone who can deliver heavy spiritual truths with warmth, humor, and deep compassion. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/psychicreader19622-raymond-keen-review-2026.jpg" alt="psychicreader19622 [Raymond]" class="reader-summary__avatar" />
+  <img src="/avatars/keen/psychicreader19622-raymond-keen-review-2026.webp" alt="psychicreader19622 [Raymond]" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -298,7 +297,7 @@ Do not let the generic username fool you. Raymond holds a Keen Top Advisor badge
 The moment of separation in a twin flame dynamic often induces "soul shock"—a profound, visceral grief that standard breakups do not trigger. Cosmic Fusion excels at stepping into that pain and providing deep empathic healing.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

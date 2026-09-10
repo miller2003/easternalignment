@@ -6,8 +6,8 @@ platformName: "Keen: Intuitive Jade"
 rating: 4.8
 verdict: "Intuitive Jade is one of the highest-rated readers in her volume tier on Keen: 8,151 ratings at 4.98 stars and 27,636 readings since 2006. Her signature method - 'revealing truth through name vibrations' - is unusual and draws clients who want a read from little more than a name. At $8.99/min she is premium-priced. Book her if you want an elite-average intuitive who works from names and energy rather than long explanations."
 affiliateUrl: /go/keen-intuitive-jade/
-avatarUrl: /avatars/keen/intuitive-jade.jpg
-ogImage: "/avatars/keen/intuitive-jade.jpg"
+avatarUrl: /avatars/keen/intuitive-jade.webp
+ogImage: "/avatars/keen/intuitive-jade-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "People who want an elite-rated (4.98) intuitive read and are curious about a name-vibration method - and who are willing to pay a premium rate for a top-tier average"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-11'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/intuitive-jade-og.jpg",
     "headline": "Intuitive Jade on Keen Review 2026: 27,000 Readings via 'Name Vibrations' at $8.99/Min",
     "description": "An independent review of Intuitive Jade on Keen - 8,151 ratings, 27,636 readings since 2006, and an $8.99/min rate. What her 'revealing truth through name vibrations' method and real client reviews reveal, and exactly who should book her.",
     "datePublished": "2026-06-11",
     "dateModified": "2026-06-11",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

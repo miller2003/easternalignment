@@ -13,7 +13,7 @@ entities:
 platform: keen
 rating: 4.8
 platformName: "Keen"
-avatarUrl: "/avatars/keen/advisor-suzan.png"
+avatarUrl: "/avatars/keen/advisor-suzan.webp"
 pros:
   - "Ranked by specialty from dozens of full advisor audits — one page that matches the right verified reader to your question type"
   - "Every pick backed by a published review with verified session counts"
@@ -186,7 +186,7 @@ Three evidence rules governed every pick:
 Advisor Suzan is a Keen institution: 136,000+ readings since 2005 at a 4.98 average — a score that, across that volume, is statistically indistinguishable from two decades of sustained excellence. A Clairvoyant Empath specializing in Love & Relationships, her style is fast connection plus empowerment: she reads the situation and pushes you toward the highest-potential outcome.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/advisor-suzan.png" alt="Advisor Suzan Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/advisor-suzan.webp" alt="Advisor Suzan Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -230,7 +230,7 @@ Advisor Suzan is a Keen institution: 136,000+ readings since 2005 at a 4.98 aver
 Eli Casey's numbers are the largest we have ever audited: 81,000 ratings and **more than 200,000 completed readings since 2001** at 4.96. He is a call-first, compassionately styled empath who talks you through a situation step by step — the reader for the situation you cannot untangle alone.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/eli-casey.jpg" alt="Eli Casey Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/eli-casey.webp" alt="Eli Casey Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -274,7 +274,7 @@ Eli Casey's numbers are the largest we have ever audited: 81,000 ratings and **m
 lorrie c holds a 4.98 across 60,595 readings — and a credential unique in our audit series: the toughest independent psychic-review forum on the internet tracked her predictions in real time and watched them land on the specifics that matter — contact, behavior, reasoning.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/lorrie-c.png" alt="lorrie c Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/lorrie-c.webp" alt="lorrie c Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -318,7 +318,7 @@ lorrie c holds a 4.98 across 60,595 readings — and a credential unique in our 
 David7 is Keen's authority on the most contested category in love readings: twin flames. 94,000 readings at 4.9, tool-free and direct, with a male intuitive's perspective — the reader our accuracy audit ranked #1 on this platform for timeline and pattern work.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7 Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7 Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -362,7 +362,7 @@ David7 is Keen's authority on the most contested category in love readings: twin
 LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007 — a no-tools, energy-reading specialist whose "Love Doctor" reputation shows up consistently across a decade-plus of client reviews.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/ladyfontaine.jpg" alt="LadyFontaine Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/ladyfontaine.webp" alt="LadyFontaine Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -406,7 +406,7 @@ LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 st
 Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Her stated differentiator is her method: very fast, compassionate, no tools — quick, accurate pickup rather than props.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/dr-lisa-powerful-insights.jpg" alt="Dr Lisa Powerful Insights Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/dr-lisa-powerful-insights.webp" alt="Dr Lisa Powerful Insights Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -450,7 +450,7 @@ Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 1
 Readings by Kelly777 is one of the most battle-tested readers on Keen by sheer volume: 159,000+ sessions at 4.91 stars, specializing in love and soulmate clarity, past-life context, and remote viewing — delivered chat-only, which means every session produces a transcript.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777 Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777 Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -494,7 +494,7 @@ Readings by Kelly777 is one of the most battle-tested readers on Keen by sheer v
 Tammy the Voice Reader's 4.98 across 26,000 ratings is the highest average in her tier — and her "voice energy" method is the only one on this list engineered specifically for the phone format that is Keen's home turf.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tammy-the-voice-reader.jpg" alt="Tammy the Voice Reader Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tammy-the-voice-reader.webp" alt="Tammy the Voice Reader Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -538,7 +538,7 @@ Tammy the Voice Reader's 4.98 across 26,000 ratings is the highest average in he
 That Magic Man — James — is a direct, no-tools male reader with 14,000 ratings at 4.93 stars and 56,000+ readings since 2011. His reviews show a pattern of specific, sometimes dated predictions coming true — at $2.99/min, the best value in the top tier.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/that-magic-man.jpg" alt="That Magic Man Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/that-magic-man.webp" alt="That Magic Man Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -582,7 +582,7 @@ That Magic Man — James — is a direct, no-tools male reader with 14,000 ratin
 Krys Britton is the value anomaly of our entire Keen audit: twenty years of practice, a 93% five-star rate, independently verified prediction accuracy, and a $2.25/min rate that belongs on a much newer advisor's profile. Her Ancient Egyptian Oracle Cards approach is genuinely distinctive — grounded, direct, built around concrete answers.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/krys-britton-on-keen-review-2026.jpg" alt="Krys Britton Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/krys-britton-on-keen-review-2026.webp" alt="Krys Britton Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

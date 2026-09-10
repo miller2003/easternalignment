@@ -6,8 +6,8 @@ platformName: "Kasamba: Seek Love Clarity~RYAN"
 rating: 4.6
 verdict: "Seek Love Clarity~RYAN offers something no other reader in our audit series does: proof you can test in the first minute. Across his last 150 reviews, client after client independently reports the same phenomenon — Ryan names the colors they're wearing, describes the room they're sitting in, even guesses a number they're thinking of, while refusing to accept photos ('he asks to not share pics so he can do his work'). His accuracy vocabulary is the densest we've measured: 'accurate' appears 49 times in 150 reviews. The receipts include an exact-words prediction — a client told for months that her POI's distance was shyness heard him confess precisely that. 42,653 readings since 2007 at 4.9, 13,265 likes against 69 dislikes (99.5%). Chat $10.99/min with 3 free minutes; voice runs $33.99, so book text — and use your first minute to test him."
 affiliateUrl: /go/kasamba-seek-love-clarity-ryan/
-avatarUrl: /avatars/kasamba/seek-love-clarity-ryan-kasamba-review.jpg
-ogImage: "/avatars/kasamba/seek-love-clarity-ryan-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/seek-love-clarity-ryan-kasamba-review.webp
+ogImage: "/avatars/kasamba/seek-love-clarity-ryan-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $10.99/min · Voice $33.99/min · 3 free minutes for new clients · email readings $70–100"
 bestFor: "Skeptics who want a live, testable demonstration — and love/POI questions where you want the hard truth with an approach plan attached"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "RYAN Kasamba Review 2026: 4.9 Stars, 42,653 Readings",
     "description": "Seek Love Clarity~RYAN on Kasamba: 42,653 readings at 4.9. He names the colors clients are wearing — no photos — chat $10.99/min.",
-    "image": "https://easternalignment.com/avatars/kasamba/seek-love-clarity-ryan-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/seek-love-clarity-ryan-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

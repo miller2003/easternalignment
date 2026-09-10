@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/cheap-psychics.jpg"
 pros:
 - "Lower per-minute rates allow for longer, unhurried therapeutic sessions"
 - "Filters out 'cheap' psychics who stall to keep you on the clock"
@@ -105,7 +104,7 @@ When testing budget readers, watch out for the stall. If a reader charges $2/min
 If your primary agonizing question is simply *"What is he thinking right now?"*, Ask Cristina offers a highly specialized skill at an incredibly accessible price point.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -140,7 +139,7 @@ If your primary agonizing question is simply *"What is he thinking right now?"*,
 At $2.22/minute, Azzy operates one of the most cost-effective profiles on the entire Keen platform.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/intuitive-azzy.jpg" alt="Intuitive Azzy" class="reader-summary__avatar" />
+  <img src="/avatars/keen/intuitive-azzy.webp" alt="Intuitive Azzy" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -175,7 +174,7 @@ At $2.22/minute, Azzy operates one of the most cost-effective profiles on the en
 This is the anomaly of the psychic industry. Elizabeth is Kasamba's **#1 Ranked Advisor globally**, with over 17,000 five-star reviews. By all market logic, she could charge $15/minute. She chooses to charge $2.40.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -210,7 +209,7 @@ This is the anomaly of the psychic industry. Elizabeth is Kasamba's **#1 Ranked 
 Flora is the clearest value play for clients willing to bet on a rising star. She has amassed over 6,400 readings in just a few months.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/flora-knows-all-keen-review-2026.jpg" alt="Flora Knows All" class="reader-summary__avatar" />
+  <img src="/avatars/keen/flora-knows-all-keen-review-2026.webp" alt="Flora Knows All" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -245,7 +244,7 @@ Flora is the clearest value play for clients willing to bet on a rising star. Sh
 Fran operates just under the $3 mark, providing incredibly stable, reliable readings without the dramatic flair.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/ask-fran.jpg" alt="Ask Fran" class="reader-summary__avatar" />
+  <img src="/avatars/keen/ask-fran.webp" alt="Ask Fran" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -280,7 +279,7 @@ Fran operates just under the $3 mark, providing incredibly stable, reliable read
 Cosmic Fusion sits slightly higher in the budget tier but offers an incredibly specific skill: deep empathic resonance.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -315,7 +314,7 @@ Cosmic Fusion sits slightly higher in the budget tier but offers an incredibly s
 Master Sher touches the upper limit of our $5 budget, but his Return on Investment (ROI) is staggering because he wastes exactly zero seconds.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

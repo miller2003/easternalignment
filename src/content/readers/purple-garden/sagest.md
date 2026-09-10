@@ -8,8 +8,8 @@ pricing: "$5.99/min (verify on live profile)"
 bestFor: "Clients who want maximum accuracy per minute and are willing to follow a strict session protocol — two well-chosen questions, first names only — for love, dream analysis, or past-life insight"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/sagest/"
 affiliateUrl: /go/purple-garden-sagest/
-avatarUrl: /avatars/purple-garden/sagest.jpg
-ogImage: "/avatars/purple-garden/sagest.jpg"
+avatarUrl: /avatars/purple-garden/sagest.webp
+ogImage: "/avatars/purple-garden/sagest-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
 updatedDate: '2026-08-18'

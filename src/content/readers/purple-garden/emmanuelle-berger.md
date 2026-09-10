@@ -8,8 +8,8 @@ pricing: "Chat $6.49/min · Voice $7.49/min · Video $8.49/min"
 bestFor: "Soulmate and love-connection questions where you want warmth AND honesty — especially clients who've been burned by readers who tell them what they want to hear"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/emmanuelle-berger/"
 affiliateUrl: /go/purple-garden-emmanuelle-berger/
-avatarUrl: /avatars/purple-garden/emmanuelle-berger.jpg
-ogImage: "/avatars/purple-garden/emmanuelle-berger.jpg"
+avatarUrl: /avatars/purple-garden/emmanuelle-berger.webp
+ogImage: "/avatars/purple-garden/emmanuelle-berger-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
 updatedDate: '2026-08-18'

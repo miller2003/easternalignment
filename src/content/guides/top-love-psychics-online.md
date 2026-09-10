@@ -14,9 +14,9 @@ entities:
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba, Purple Garden & Keen"
-avatarUrl: "/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp"
 pros:
-  - "The only cross-platform love ranking built from 158 individual reader reviews on one site"
+  - "The only cross-platform love ranking built from 162 individual reader reviews on one site"
   - "Platform-selection framework included — choose the platform first, then the reader"
   - "Every pick backed by a full published review with verified session counts"
 cons:
@@ -32,7 +32,7 @@ updatedDate: '2026-09-06'
 highlights:
   - "The answer comes first: #1 pick in the opening paragraph, full 10-reader cross-platform table in the first screen."
   - "The platform-selection framework: Kasamba for auditioning, Keen for phone depth, Purple Garden for public verification."
-  - "158 reader reviews behind the ranking — every pick links to its full published review."
+  - "162 reader reviews behind the ranking — every pick links to its full published review."
 customSchema: |
   {
     "@context": "https://schema.org",
@@ -212,7 +212,7 @@ Three evidence rules governed every pick, applied identically across platforms:
 Love Stefans is a third-generation psychic with 138,003 readings since 2007 and a "Top 3 Most Experienced Reader" tag across Kasamba's 27-year history. His lane is the questions people cannot say out loud: is he cheating, will they come back, should I reach out.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -243,7 +243,7 @@ Love Stefans is a third-generation psychic with 138,003 readings since 2007 and 
   </div>
 </div>
 
-Across 158 reviewed readers on three platforms, no other love reader combines this volume, this verification pattern, and this price accessibility. The promo math — 3 free minutes plus 50% off — means the audition costs nothing and the verification session about $27.
+Across 162 reviewed readers on three platforms, no other love reader combines this volume, this verification pattern, and this price accessibility. The promo math — 3 free minutes plus 50% off — means the audition costs nothing and the verification session about $27.
 
 **Honest limitation:** Chat-first platform and a no-tools style — if you need voice or a card spread to audit, this is the wrong booking.
 
@@ -258,7 +258,7 @@ Across 158 reviewed readers on three platforms, no other love reader combines th
 Advisor Suzan is a Keen institution: 136,000+ readings since 2005 at a 4.98 average — the highest sustained rating at that volume on any platform we audit. A Clairvoyant Empath specializing in love, her style is fast connection plus empowerment: the read, then the push toward the highest-potential outcome.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/advisor-suzan.png" alt="Advisor Suzan Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/advisor-suzan.webp" alt="Advisor Suzan Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -302,7 +302,7 @@ Advisor Suzan is a Keen institution: 136,000+ readings since 2005 at a 4.98 aver
 Annah holds a perfect 5.0 across 37,281 readings since 2015, with the most time-stamped receipt in our entire audit: a client who wrote that Annah's "our paths will cross" prediction had just come true on her own street, when her POI walked up and hugged her "so hard I couldn't breathe" — documented in the public Journeys ledger.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/annah.jpg" alt="Annah Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/annah.webp" alt="Annah Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -346,7 +346,7 @@ Annah holds a perfect 5.0 across 37,281 readings since 2015, with the most time-
 Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic platform-wide: 102,414 readings since 2004, a perfect 5.0, and 31,000+ five-star reviews — the most battle-tested premium reader in online love readings.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/wisdom-and-love-kasamba-review.jpg" alt="Wisdom and Love Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/wisdom-and-love-kasamba-review.webp" alt="Wisdom and Love Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -390,7 +390,7 @@ Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic platform-wide: 102,414
 lorrie c holds a 4.98 across 60,595 readings — and a credential unique in our entire audit: the toughest independent psychic-review forum on the internet tracked her predictions in real time and watched them land on the specifics that matter — contact, behavior, reasoning.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/lorrie-c.png" alt="lorrie c Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/lorrie-c.webp" alt="lorrie c Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -434,7 +434,7 @@ lorrie c holds a 4.98 across 60,595 readings — and a credential unique in our 
 Truelovetarot — Sneha, certified tarot reader, numerologist, and Akashic record reader — holds a perfect 5.0 across 39,956 readings with 15,385 likes against just 39 dislikes (99.7%) and zero negative reviews in her last 150. Her defining trait: the same prediction, held steady across sessions.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/truelovetarot.jpg" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/truelovetarot.webp" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -478,7 +478,7 @@ Truelovetarot — Sneha, certified tarot reader, numerologist, and Akashic recor
 Love Specialist Isabelle holds a perfect 5.0 across 99,057 readings since 2005, with the rarest evidence pattern in the industry: clients returning two, four, and six years later to confirm specific predictions — including ones they did not believe at the time.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.webp" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -522,7 +522,7 @@ Love Specialist Isabelle holds a perfect 5.0 across 99,057 readings since 2005, 
 Eli Casey's numbers are the largest in our audit series: 81,000 ratings and **more than 200,000 completed readings since 2001** at 4.96. A call-first empath who leads with reassurance and walks you through a situation step by step.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/eli-casey.jpg" alt="Eli Casey Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/eli-casey.webp" alt="Eli Casey Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -566,7 +566,7 @@ Eli Casey's numbers are the largest in our audit series: 81,000 ratings and **mo
 Psychic Norell holds a perfect 5.0 across 39,794 readings since 2016, with the review that titles her entry — from a client read for years across the industry: "I've never had someone who was so on point... you need to talk to this person first."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-norell.jpg" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-norell.webp" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -610,7 +610,7 @@ Psychic Norell holds a perfect 5.0 across 39,794 readings since 2016, with the r
 Sparks Of Insight closes this list as the budget answer that does not behave like one: a perfect 5.0 across 54,146 readings since 2016 — zero negative reviews in their last 150 — at the lowest rate among high-volume love advisors on any platform.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.jpg" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.webp" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

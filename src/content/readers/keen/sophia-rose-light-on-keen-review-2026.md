@@ -6,8 +6,8 @@ platformName: "Keen: Sophia Rose Light"
 rating: 4.4
 verdict: "Sophia Rose Light is the most spiritually dense reader in this series — Shamanic Healer, Tantrik Yogini, Natural Oracle, Akashic Records channeler, and Kundalini activator, all in one profile that has built 4.95 stars across 8,125 sessions in four years. Her $4.44 price is an angel number embedded as a brand statement, her Perth timezone makes her available when every North American reader is asleep, and her explicit commitment to truth over fantasy positions her as the right reader for clients who have had enough of comfortable answers. For the right client — one with an active spiritual practice, a serious question, and the capacity to receive transformation rather than just prediction — she is unlike anything else in this series."
 affiliateUrl: "/go/keen-sophia/"
-avatarUrl: /avatars/keen/sophia-rose-light-on-keen-review-2026.jpg
-ogImage: "/avatars/keen/sophia-rose-light-on-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/sophia-rose-light-on-keen-review-2026.webp
+ogImage: "/avatars/keen/sophia-rose-light-on-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$4.44/min (Life Path & Advice profile)"
 bestFor: "Clients with an active spiritual practice seeking soul-level guidance — Akashic Records, Kundalini, past lives, karmic patterns — plus North American night-owl and early-morning clients who need a reader when others are unavailable"
@@ -17,19 +17,19 @@ updatedDate: "2026-04-28"
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/sophia-rose-light-on-keen-review-2026-og.jpg",
     "headline": "Sophia Rose Light on Keen Review 2026: $4.44/Min Is Not a Coincidence — and the Perth, Australia Reader Who's Available When Every Other Advisor Is Asleep",
     "description": "An independent review of Sophia Rose Light on Keen — why $4.44 is the most intentional price point in this series, what a Shamanic Healer and Tantrik Yogini brings to a psychic session that clairvoyance alone cannot, and why her Perth timezone is a feature for North American clients in crisis.",
     "datePublished": "2026-04-28",
     "dateModified": "2026-04-28",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

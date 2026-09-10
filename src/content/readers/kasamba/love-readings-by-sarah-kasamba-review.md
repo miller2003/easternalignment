@@ -6,8 +6,8 @@ platformName: "Kasamba: Love Readings By Sarah"
 rating: 4.3
 verdict: "Love Readings By Sarah is the budget love specialist of our Kasamba audit: 43,454 readings since 2011 with 13,366 likes against 539 dislikes — a 96.1% like ratio — at $1.99/min chat. A self-described born psychic with an MBA and fifteen years of practice, she focuses on exactly the questions her name promises, and her regulars call her accurate and very on point, re-booking across months. One hard rule: book chat, not voice — her phone line runs $24.99/min, twelve times her chat rate. Stay in text, use the 3 free minutes, and the value math is hard to beat."
 affiliateUrl: /go/kasamba-love-readings-by-sarah/
-avatarUrl: /avatars/kasamba/love-readings-by-sarah-kasamba-review.jpg
-ogImage: "/avatars/kasamba/love-readings-by-sarah-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/love-readings-by-sarah-kasamba-review.webp
+ogImage: "/avatars/kasamba/love-readings-by-sarah-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $1.99/min · Voice $24.99/min · 3 free minutes for new clients"
 bestFor: "Love-and-relationship questioners on a budget who want a fifteen-year veteran at $1.99/min — especially first-timers who want a low-stakes, high-experience first reading"
@@ -40,7 +40,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Love Readings By Sarah Kasamba: 15 Years at $1.99/Min",
     "description": "Love Readings By Sarah on Kasamba: 43,454 readings since 2011, $1.99/min chat — a born psychic with an MBA. Her regulars call her very on point.",
-    "image": "https://easternalignment.com/avatars/kasamba/love-readings-by-sarah-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/love-readings-by-sarah-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

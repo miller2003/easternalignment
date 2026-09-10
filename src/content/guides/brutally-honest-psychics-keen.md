@@ -5,7 +5,6 @@ category: Roundup
 platform: keen
 rating: 4.9
 platformName: "Keen"
-avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
 - "Cuts through 'toxic positivity' and false hope so you stop paying for the wrong readers"
 - "Explains the economic algorithm that forces most psychics to lie to clients"
@@ -88,7 +87,7 @@ You will notice that the most honest psychics often rely heavily on structured t
 When your life is in chaos, you do not need an emotional cheerleader. You need cold, structural logic. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -125,7 +124,7 @@ When your life is in chaos, you do not need an emotional cheerleader. You need c
 Women often pay psychics to find a deep, spiritual reason for why a man is treating them terribly. David7 will destroy that illusion in under three minutes.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -162,7 +161,7 @@ Women often pay psychics to find a deep, spiritual reason for why a man is treat
 If you are clinging to a 1% chance of reconciliation, Arradaza will calculate the actual cosmic probability and force you to look at the math.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -199,7 +198,7 @@ If you are clinging to a 1% chance of reconciliation, Arradaza will calculate th
 If you have wasted five years believing someone is your "Soulmate" because a fake psychic told you so, Kelly777 will rip off the band-aid.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

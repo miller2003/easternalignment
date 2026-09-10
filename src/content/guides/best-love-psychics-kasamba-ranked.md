@@ -7,7 +7,6 @@ category: Roundup
 platform: kasamba
 rating: 4.8
 platformName: "Kasamba: Best Love Psychics"
-avatarUrl: "/avatars/kasamba/best-love-psychics.jpg"
 pros:
 - "Features readers with decades of verified session history"
 - "Includes specialists in remote telepathy and complex soulmate connections"
@@ -120,7 +119,7 @@ We actively sought out readers whose negative reviews occasionally complain abou
 When a relationship is failing, the stated problem is rarely the actual problem. Seek Chelle is our top overall pick because her specific methodology is designed to bypass surface-level arguments and unearth the psychological realities you—or your partner—cannot articulate.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -169,7 +168,7 @@ Seek Chelle operates with a "Triple Clair" capacity. While many readers only see
 If your situation involves a high-stakes separation, a decades-long twin flame dynamic, or severe romantic confusion, you need a heavy hitter. Love Stefans is officially designated by Kasamba as a "Top 3 Most Experienced Reader" on the entire platform.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -218,7 +217,7 @@ With eighteen years on Kasamba and over 138,000 completed readings, Stefans' dat
 Breakups do not just break relationships; they break your internal compass. Cosmic Fusion excels not just at predicting what the other person will do, but at repairing your shattered emotional state in the process.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -263,7 +262,7 @@ Cosmic Fusion offers a highly accessible chat rate, making her an excellent choi
 When you don't want to spend five minutes explaining the backstory, you need a reader who leads the session. Golden Eye is known for rapid connection speeds, dropping you straight into the core of the issue.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -308,7 +307,7 @@ Golden Eye is highly proficient at cutting through the noise. Her review record 
 If your primary agonizing question is *"What is he thinking right now?"*, Ask Cristina offers a highly specialized skill—remote telepathy—at an incredibly accessible price point.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

@@ -7,7 +7,7 @@ category: Roundup
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba: Best for Ex-Recovery"
-avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.webp"
 pros:
   - "All picks have sustained 5-star records across high volume specifically for breakup and ex questions"
   - "Includes readers across price tiers from $2.10/min to $10.99/min"
@@ -102,7 +102,7 @@ These five readers were selected based on three criteria: sustained 5-star ratin
 When the most important question is *why* the ex withdrew —the true psychological driver beneath whatever story the breakup narrative presented —Seek Chelle is in a category of her own. Her Triple Clair methodology (simultaneous clairvoyance, clairaudience, and clairsentience) allows her to cross-reference three independent channels of information, which means she can distinguish between a temporary energetic withdrawal and a closed connection with remarkable specificity.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -150,7 +150,7 @@ Her review record for ex-recovery questions is notable for a specific pattern: c
 Love Stefans answers a specific question that most readers avoid: *"Is this reunion energetically viable, and if so, what is the actual timeline?"* His tool-free methodology —pure vision-based clairvoyance with no tarot cards, no astrology charts, no numerology to interpret —makes the reading fast and the predictions specific. It also removes all the hedging mechanisms that tool-using readers rely on. When the three of swords shows up in a tarot spread, an evasive reader can explain it away. Stefans cannot explain away a vision he has described in writing.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -198,7 +198,7 @@ His bluntness is the point, not a limitation: *"He told me the relationship had 
 Golden Eye operates at the intersection of speed and specificity: she delivers rapid, specific information about a person of interest from a name alone, which makes her both the most efficient reader on this list for verifying connection and one of the most cost-effective for the depth of insight delivered per minute.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -240,7 +240,7 @@ Her multi-tool approach also covers multiple dimensions of the ex-recovery quest
 Breakups do not just end relationships; they shatter your ability to think clearly about the question you are actually asking. Cosmic Fusion is the specialist for clients who need both: the energetic read on the ex-recovery trajectory, and the emotional stabilization that makes that information usable.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -284,7 +284,7 @@ Her Tarot component adds a structural framework that clients processing acute gr
 The most torturous aspect of no-contact is not the silence itself; it is not knowing whether the silence is indifference or processing. Ask Cristina specializes in the specific-person mind-read —tuning into the current thought-field of your ex and reporting what is actually present, including thoughts and feelings they have not verbalized to anyone, at the most accessible price point on this list.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

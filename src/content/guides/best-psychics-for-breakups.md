@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/breakup-psychics.jpg"
 pros:
 - "Cross-platform analysis ensures only the absolute elite are featured"
 - "Includes specialists in remote telepathy, karmic cycles, and timeline prediction"
@@ -98,7 +97,7 @@ Before selecting a reader, it helps to understand the structural advantages of t
 In the aftermath of a breakup, the reasons given for the split are rarely the complete truth. Seek Chelle is our #1 cross-platform pick because her methodology is specifically designed to bypass what your ex *said* and uncover what they are actually *feeling*.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -138,7 +137,7 @@ Seek Chelle operates with a "Triple Clair" capacity, meaning she receives visual
 If you are dealing with a male partner who has emotionally withdrawn, walled off communication, or gone entirely cold, you need someone who understands that specific psychological architecture. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -178,7 +177,7 @@ David7 is arguably the most commanding presence on Keen for ex-recovery timeline
 When a breakup involves decades of shared history, third-party interference, or a severe twin-flame separation, you cannot rely on an amateur. You need a heavy hitter with an unimpeachable track record.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -218,7 +217,7 @@ Kasamba explicitly designates Stefans as one of their Top 3 Most Experienced Rea
 When a breakup is abrupt and leaves you entirely destabilized, a raw prediction is rarely enough. You need triage. You need someone who can stop the emotional bleeding while providing intuitive insight.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/psychic-suzen-on-keen-review-2026.jpg" alt="Psychic SuZen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/psychic-suzen-on-keen-review-2026.webp" alt="Psychic SuZen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -258,7 +257,7 @@ SuZen brings a credential that fundamentally changes the architecture of a readi
 If your relationship defies logic—if you keep breaking up and returning to each other in a dynamic that feels heavier than a standard romance—you are likely dealing with a karmic connection. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -298,7 +297,7 @@ Kelly777's most critical asset for ex-recovery is Remote Viewing. If your ex has
 Breakups with avoidant partners leave a specific type of damage, characterized by silence and unanswered questions. Cosmic Fusion excels at stepping into that silence.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -338,7 +337,7 @@ Cosmic Fusion operates as a deep empath, meaning she can step into your partner'
 If your primary agonizing question is simply *"What is he thinking right now?"*, Ask Cristina offers a highly specialized skill at an incredibly accessible price point.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

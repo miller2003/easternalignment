@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/online-dating.jpg"
 pros:
 - "Highlights Remote Viewers who can visually detect if a person is lying about their identity"
 - "Explains the esoteric concept of 'Phantom Energy' used by scammers"
@@ -94,7 +93,7 @@ Scammers use "Love Bombing" (overwhelming you with affection) to lower your defe
 If you suspect the man you are talking to is not who he claims to be, Kelly777 has the exact military-grade esoteric skill required to verify it.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -133,7 +132,7 @@ With over 150,000 sessions, Kelly777 specializes in Remote Viewing. If he says h
 If he is real, but you want to know if his intentions are pure or predatory, Cristina can read his mind directly.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -172,7 +171,7 @@ At just $2.10 a minute, Cristina is the most cost-effective "background check" a
 If you are deeply in love with a potential scammer, you do not need an emotional reading. You need a brutal, logical Tarot audit to snap you out of it.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -211,7 +210,7 @@ Master Sher does not care about your feelings; he cares about the facts. He is a
 If the man you met on Hinge is amazing, but he only texts you during work hours and never on weekends, Yazmin will find out why.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.jpg" alt="Psychic Yazmin" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.webp" alt="Psychic Yazmin" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +249,7 @@ Yazmin is a master at exposing hidden dynamics. She uses the Tarot to cut straig
 If you are actively swiping and just want a fast intuition check on a guy before you agree to meet him in person, Golden Eye provides instant clarity.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

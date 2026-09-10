@@ -6,8 +6,8 @@ platformName: "Keen: AllMyAngels"
 rating: 4.5
 verdict: "AllMyAngels has quietly built one of the more durable mid-volume profiles on Keen: 13,000 ratings at 4.88 stars and 50,000+ readings since 2002. She positions herself as an intuitive truth-teller who connects minds, hearts, and spirits - a warm, relationship-leaning style rather than a blunt one. At $6.99/min she is fairly priced for the sample size. Book her if you want a steady, compassionate-intuitive read on love and life-path questions."
 affiliateUrl: /go/keen-allmyangels/
-avatarUrl: /avatars/keen/allmyangels.jpg
-ogImage: "/avatars/keen/allmyangels.jpg"
+avatarUrl: /avatars/keen/allmyangels.webp
+ogImage: "/avatars/keen/allmyangels-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a warm, intuitive read on love, relationships, and life-path questions - and who value a long-tenured advisor with a calm, connecting style"
@@ -17,19 +17,19 @@ updatedDate: '2026-07-07'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/allmyangels-og.jpg",
     "headline": "AllMyAngels on Keen Review 2026: A 50,000-Reading Intuitive at $6.99/Min",
     "description": "An independent review of AllMyAngels on Keen - 13,000 ratings, 50,044 readings since 2002, and a $6.99/min rate. What her 'connecting minds, hearts, and spirits' approach and real client reviews reveal, and exactly who should book her.",
     "datePublished": "2026-07-07",
     "dateModified": "2026-07-07",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

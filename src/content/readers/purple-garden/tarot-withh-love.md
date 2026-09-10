@@ -5,8 +5,8 @@ platformName: "Purple Garden: Tarot Withh Love"
 rating: 4.3
 verdict: "Tarot Withh Love is a 4.8-star Purple Garden clairvoyant, clairsentient, and clairaudient Indian mystic whose over 15,000 readings since 2019 and plain no-sugar-coating stance make her a detailed, budget-friendly pick for clients who want depth instead of a quick verdict."
 affiliateUrl: /go/purple-garden-tarot-withh-love/
-avatarUrl: /avatars/purple-garden/tarot-withh-love.jpg
-ogImage: "/avatars/purple-garden/tarot-withh-love.jpg"
+avatarUrl: /avatars/purple-garden/tarot-withh-love.webp
+ogImage: "/avatars/purple-garden/tarot-withh-love-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $3.99/min"
 bestFor: "Detailed, multi-clair insight from a mystic who will not soften the truth"

@@ -6,8 +6,8 @@ platformName: "Kasamba: Master Enigma"
 rating: 4.6
 verdict: "Master Enigma is Kasamba's 'Most Experienced Advisor' — 355,674 readings since 2007, a perfect 5.0, and a style clients describe as fast, sharp, and respectful of your time. At the $5.99/min new-client promo with 3 free minutes, he's the lowest-risk premium reader on the platform. Book him if you want the answer, not the ceremony."
 affiliateUrl: /go/kasamba-master-enigma/
-avatarUrl: /avatars/kasamba/master-enigma-kasamba-review.png
-ogImage: "/avatars/kasamba/master-enigma-kasamba-review.png"
+avatarUrl: /avatars/kasamba/master-enigma-kasamba-review.webp
+ogImage: "/avatars/kasamba/master-enigma-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "Chat $5.99/min promo (reg. $11.99) · Voice $6.99/min promo (reg. $13.99) · 3 free minutes"
 bestFor: "People who can't sleep until they get a straight answer — love, career, dreams, and the question you're afraid to ask out loud"

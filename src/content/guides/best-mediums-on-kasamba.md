@@ -13,7 +13,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/spirit-amy-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/spirit-amy-kasamba-review.webp"
 pros:
   - "Ranked by evidential standards — repeat-client behavior and checkable specificity, not how the reading felt"
   - "Every pick backed by a full published review with verified session counts and negative-review forensics"
@@ -155,7 +155,7 @@ One structural note in Kasamba's favor: the chat format removes cold-reading's r
 Spirit Amy owns the cleanest record we have ever audited, in any specialty: 17,297 likes against 25 dislikes across 49,727 readings since 2008 — a 99.9% approval ratio at a perfect 5.0, sustained over eighteen years. A clairvoyant and clairaudient medium, she describes seeing symbols and pictures and hearing what she identifies as Spirit's words. Third-party directories credit her with volunteer work on missing-person cases — the kind of claim directories do not bother making about readers who cannot produce.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/spirit-amy-kasamba-review.jpg" alt="Spirit Amy Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/spirit-amy-kasamba-review.webp" alt="Spirit Amy Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -201,7 +201,7 @@ The repeat-client figure is the number that matters most for a medium. First-tim
 Quietsound practices a method no other top advisor offers: "relay" — her spirit guides consult yours, and she reports back with the names of the guides who answered. That specificity is paired with the strongest ethics signal on this list: published refusals. No health questions. No legal questions. No pregnancy predictions. Those belong to licensed professionals, and she says so on her profile.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/quietsound-kasamba-review.jpg" alt="Quietsound Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/quietsound-kasamba-review.webp" alt="Quietsound Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -247,7 +247,7 @@ The refusal list deserves emphasis, because it is the exact opposite of the indu
 Ambers Light is one of Kasamba's longest-serving advisors — 74,229 readings since 2004 — with a specialty almost nobody else claims outright: closure. Her profile leads with grief work ("needing closure or wanting to make sure they are in a safe place?"), and her bio contains what we consider the most honest sentence on the platform: **"If you are looking for precise timing then I am NOT the one for you."**
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ambers-light-kasamba-review.jpg" alt="Ambers Light Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ambers-light-kasamba-review.webp" alt="Ambers Light Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -293,7 +293,7 @@ Understand what that sentence costs her. The single most common upsell in grief 
 Psychic Satire is the entry we verified with our own session before writing a word: a 4.7-star medium and spiritual healer with 20,000+ reviews, and an emotional accuracy that is the most striking feature of her readings. At $2.99/min — dropping to $1.49/min on promo — she is the budget booking in this ranking.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-satire-kasamba-review.jpg" alt="Psychic Satire Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-satire-kasamba-review.webp" alt="Psychic Satire Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -339,7 +339,7 @@ The case for a budget medium is narrower than for a budget love reader, and we w
 Inspired Within — Charmaine to her regulars — is a certified medium and Reiki Master with 25 years of experience and 42,038 Kasamba readings since 2008 at 4.9 stars. Her feed contains the single most instructive receipt in our medium audit: a client whose loan application was declined, whom Charmaine told "you would get it" — and who, acting on that confidence, demanded reassessment and was approved.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/inspired-within-kasamba-review.jpg" alt="Inspired Within Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/inspired-within-kasamba-review.webp" alt="Inspired Within Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -385,7 +385,7 @@ Her lane is the closed file: the declined application, the ended relationship, t
 Raven Franks is a 23-year Kasamba original — 67,179 readings since 2003 at a perfect 5.0 — and a genuine remote viewer who works from just names and birthdates, offering physical descriptions when shown photographs. Her defining trait, per two decades of clients: where other readers give up on difficult situations, Raven stays and works.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/raven-franks-kasamba-review.jpg" alt="Raven Franks Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/raven-franks-kasamba-review.webp" alt="Raven Franks Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -431,7 +431,7 @@ Complex cases — the estrangement that has run for years, the loss with unfinis
 Truth and Light carries Kasamba's "Highest Ranked Advisor" tagline, a perfect 5.0 across 87,202 readings since 2005, and the deepest credential stack we have encountered: an engineering degree, an MBA, certified Vedic astrologer, and diplomas in psychotherapy, relationship counselling, and stress consultancy. Clients call him Vic — and, in a pattern repeated across years of reviews, a "life saviour."
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/truth-and-light-kasamba-review.jpg" alt="Truth and Light Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/truth-and-light-kasamba-review.webp" alt="Truth and Light Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

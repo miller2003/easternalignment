@@ -10,8 +10,8 @@ verdict: Best for people who want intuition-led clarity on relationships or care
   honest self-assessment make her one of the more reliable mid-tier reads on Keen.
   Not suited for tight timelines or general open-ended sessions.
 affiliateUrl: /go/keen-garrett/
-avatarUrl: /avatars/keen/c-garrett.jpg
-ogImage: "/avatars/keen/c-garrett.jpg"
+avatarUrl: /avatars/keen/c-garrett.webp
+ogImage: "/avatars/keen/c-garrett-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $4.89/min
 bestFor: Relationship and career readings where you want empathic depth over structural
@@ -22,19 +22,19 @@ updatedDate: '2026-04-21'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/c-garrett-og.jpg",
     "headline": "C Garrett on Keen Review 2026: What 54,000 Readings From a Four-Generation Psychic Actually Looks Like - An Honest Third-Party Assessment",
     "description": "A third-party review of C Garrett on Keen - unpacking her 75% energy, 25% tarot hybrid method, dream reading specialty, self-declared timing limits, and exactly who gets real value at $4.89/min.",
     "datePublished": "2026-04-21",
     "dateModified": "2026-04-21",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

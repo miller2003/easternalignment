@@ -13,8 +13,8 @@ verdict: 'The psychic one is Keen''s longest-tenured high-volume advisor with a 
   question, use the $1 intro deliberately, and let her first five minutes tell you
   which version you''re dealing with.'
 affiliateUrl: /go/keen-the-psychic-one/
-avatarUrl: /avatars/keen/the-psychic-one.jpg
-ogImage: "/avatars/keen/the-psychic-one.jpg"
+avatarUrl: /avatars/keen/the-psychic-one.webp
+ogImage: "/avatars/keen/the-psychic-one-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $3.92/min (Love & Relationships profile)
 bestFor: Clients who want specific timeline predictions on love and relationship questions  -  and
@@ -26,19 +26,19 @@ updatedDate: '2026-04-25'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/the-psychic-one-og.jpg",
     "headline": "the psychic one on Keen Review 2026: 183,000 Sessions, 25 Years, and One Very Specific Promise - Do 'the Precise Dates and Details' Actually Land?",
     "description": "An independent review of the psychic one on Keen - her bold date-and-detail promise, what 40,000 ratings across 25 years actually reveal, where her track record holds and where it doesn't, and exactly who should book her.",
     "datePublished": "2026-04-25",
     "dateModified": "2026-04-25",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

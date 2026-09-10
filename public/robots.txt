@@ -7,15 +7,27 @@
 # so that only real human clicks trigger the affiliate navigation.
 # The slug -> destination map lives in src/data/affiliateLinks.ts.
 
-# 1. Content is OPEN to all crawlers (including AI scrapers) for discovery.
+# ⚠️ IMPORTANT — this file is NOT the whole story.
+# Cloudflare injects a "# BEGIN Cloudflare Managed content" block ABOVE this
+# file at the edge (AI crawler policy / Content Signals). Any decision about AI
+# crawler access has to be made in the Cloudflare dashboard — editing this file
+# will NOT override it. Always verify what is actually served with:
+#     curl -s https://easternalignment.com/robots.txt
+#
+# 2026-09-10: /privacy/ and /terms/ (and their /es/ twins) are no longer
+# Disallowed here. Blocking them stopped Google from ever reading the
+# `noindex` tag on the page, which is the only reliable way to keep a URL out
+# of the index — and the pages are linked site-wide from the footer, so they
+# could still surface as bare URLs with no snippet. Correct pattern is:
+# crawlable + noindex + absent from the sitemap.
+
+# 1. Content is open to crawlers for discovery.
 User-agent: *
 
 # Utility / redirect paths that should never be indexed or crawled
 Disallow: /go/
 Disallow: /out/
 Disallow: /refer/
-Disallow: /privacy/
-Disallow: /terms/
 Disallow: *?aff=*
 Disallow: *?rid=*
 Disallow: *?tracking_id=*

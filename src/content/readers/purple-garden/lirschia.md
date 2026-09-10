@@ -6,8 +6,8 @@ platformName: "Purple Garden: Lirschia"
 rating: 4.6
 verdict: "Lirschia is a fourth-generation psychic medium and empath with 35+ years of experience — 36,927 Purple Garden readings since 2020 at a perfect 5.0, 14,548 likes against 102 dislikes (99.3%), and zero negative reviews in her last 150. Her signature, per clients: completeness — 'she explains everything that you ask in your request unlike others who only answer some of it.' A medium who sees entities and communicates with those who've passed, she handles relationship, business, and career questions with equal fluency, and her regulars include a 38-review client. The session texture, per her feed: specific, calming, and thorough enough to quiet relationship anxiety on the spot. Chat $7.99/min with the $30 credit covering about four minutes; voice runs $17.99, so book text."
 affiliateUrl: /go/purple-garden-lirschia/
-avatarUrl: /avatars/purple-garden/lirschia.jpg
-ogImage: "/avatars/purple-garden/lirschia.jpg"
+avatarUrl: /avatars/purple-garden/lirschia.webp
+ogImage: "/avatars/purple-garden/lirschia-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $7.99/min · Voice $17.99/min · $30 free credit on your first purchase"
 bestFor: "Multi-part questions — relationship plus career plus the thing you're afraid to ask — where you want every part answered, from a 35-year fourth-generation medium"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Lirschia Purple Garden Review 2026: 5.0, 36,927 Readings",
     "description": "Lirschia on Purple Garden: 36,927 readings at 5.0, 'highest rated' badge. Fourth-generation medium who answers everything — $7.99/min.",
-    "image": "https://easternalignment.com/avatars/purple-garden/lirschia.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/lirschia-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

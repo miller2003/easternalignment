@@ -6,8 +6,8 @@ platformName: "Purple Garden: Tattooed Psychic"
 rating: 4.4
 verdict: "Tattooed Psychic — Jon Moss, 30 years of practice, attuned at Stonehenge — is Purple Garden's anti-stereotype reader: tattooed, direct, and bound by the most telling rule we've found on any profile: NO BACK STORY. He refuses your context, which means the specifics he produces can't have come from you — the strongest structural proof of gift a client can ask for. The receipts match: a client told she'd get a new job 'saw me in training — I started training Monday.' 51,404 readings since 2017 at 4.9, 18,722 likes, plus a rare paranormal-services specialty. From $7.99/min with $30 free credit. Book him when you want answers that didn't come from your own hints."
 affiliateUrl: /go/purple-garden-tattooed-psychic/
-avatarUrl: /avatars/purple-garden/tattooed-psychic.jpg
-ogImage: "/avatars/purple-garden/tattooed-psychic.jpg"
+avatarUrl: /avatars/purple-garden/tattooed-psychic.webp
+ogImage: "/avatars/purple-garden/tattooed-psychic-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $7.99/min · Voice $8.99/min · $30 free credit on your first purchase"
 bestFor: "Skeptics who want a reading that can't be explained by cold-reading — plus anyone needing mediumship or paranormal insight from a 30-year practitioner"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Tattooed Psychic Purple Garden Review 2026: 4.9",
     "description": "Tattooed Psychic (Jon Moss) on Purple Garden: 30 years, 51,404 readings at 4.9. The reader who refuses your backstory — from $7.99/min, $30 free credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/tattooed-psychic.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/tattooed-psychic-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

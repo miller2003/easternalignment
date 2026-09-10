@@ -13,7 +13,7 @@ entities:
 platform: purple-garden
 rating: 4.88
 platformName: "Purple Garden"
-avatarUrl: "/avatars/purple-garden/psychic-advisor-serena.jpg"
+avatarUrl: "/avatars/purple-garden/psychic-advisor-serena.webp"
 pros:
   - "Ranked by evidential structure — blind-test protocols, Journeys public verification, and repeat-client behavior in grief contexts"
   - "Every pick backed by a full published review with verified session counts"
@@ -158,7 +158,7 @@ Mediumship is priced and categorised differently from general readings on this p
 Psychic Advisor Serena is an internationally known psychic medium whose practice uses no tools at all — claircognizance and clairvoyance direct, plus aura reading — delivered with a straight-talking style her clients describe as "tells it like it is" rather than tells it like you hoped.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-advisor-serena.jpg" alt="Psychic Advisor Serena Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-advisor-serena.webp" alt="Psychic Advisor Serena Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -204,7 +204,7 @@ The no-tools architecture matters more in mediumship than anywhere else. A card 
 Tattooed Psychic — Jon Moss, 30 years of practice, attuned at Stonehenge — operates under the most instructive rule we have found on any psychic profile anywhere: **NO BACK STORY.** He refuses your context before the session begins. Which means every specific he produces has exactly one possible source, and it is not you.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/tattooed-psychic.jpg" alt="Tattooed Psychic Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/tattooed-psychic.webp" alt="Tattooed Psychic Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +250,7 @@ For a skeptic approaching mediumship, this is the only experimental design that 
 Chloe Psychic UK is a 4.8-star reader based in England — psychic, clairsentient, energy, and tarot work blended with a blunt, no-fairytales honesty — with 8,900+ readings since 2016, a top-accuracy badge, and the strongest Journeys verification record for specific-detail accuracy in our PG audit series.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-medium-chloe.jpg" alt="Psychic Medium Chloe Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-medium-chloe.webp" alt="Psychic Medium Chloe Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -296,7 +296,7 @@ Two practical notes that make Chloe unusually bookable. First, the UK base: for 
 Niki Medium is a fourth-generation psychic with 12,994 readings since 2018 at a perfect 5.0, specializing in soulmate readings — the specialty where psychic work and mediumship overlap most: reading a bond that operates below the level of behavior.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/niki-medium.jpg" alt="Niki Medium Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/niki-medium.webp" alt="Niki Medium Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -342,7 +342,7 @@ Her lane needs a precise description, because "soulmate readings" attracts the w
 Psychic Sandra is a seventh-generation psychic with 40,001 readings since 2015 at 4.9 stars — and a review feed anchored by one of the deepest single-client records we have ever audited: a client named Hopefully who has left **57 reviews**, a running testimony that functions as her feed's backbone.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-sandra.jpg" alt="Psychic Sandra Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-sandra.webp" alt="Psychic Sandra Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -388,7 +388,7 @@ Her intake protocol — name and birthdate — keeps sessions focused and produc
 nuwatarot is a 5.0-star oculomancer and psychic medium — she reads eyes — working without tools across 6,229 readings since 2025. She is the newest practice on this list, and the flawless rating across a distinctive method earns her the slot with one honest caveat below.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/nuwatarot.jpg" alt="nuwatarot Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/nuwatarot.webp" alt="nuwatarot Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -434,7 +434,7 @@ The candid caveat: 6,229 readings since 2025 is a young practice by this list's 
 Psychic Jeanne is a fifth-generation, licensed psychic with 25,083 readings since 2016 at 4.8 stars. Her lane on this list is specific: not the single mediumship session, but the hard season — grief that does not resolve in one conversation, and should not be asked to.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-jeanne.jpg" alt="Psychic Jeanne Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-jeanne.webp" alt="Psychic Jeanne Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

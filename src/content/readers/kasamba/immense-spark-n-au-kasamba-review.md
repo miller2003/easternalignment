@@ -6,8 +6,8 @@ platformName: "Kasamba: Immense Spark"
 rating: 4.4
 verdict: "Immense Spark is a 4.8-star Kasamba reader with 66,152 readings since 2007 and inherited psychic gifts, whose standout credential is a client who's been returning for over a decade. At the $10.99/min chat promo with 3 free minutes, book her if you want a reader people stay with for years; skip her if you want a one-off cheap check."
 affiliateUrl: /go/kasamba-immense-spark/
-avatarUrl: /avatars/kasamba/immense-spark-n-au-kasamba-review.jpg
-ogImage: "/avatars/kasamba/immense-spark-n-au-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/immense-spark-n-au-kasamba-review.webp
+ogImage: "/avatars/kasamba/immense-spark-n-au-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $10.99/min promo (reg. $21.99) · Voice $10.99/min promo (reg. $39.99) · 3 free minutes"
 bestFor: "People looking for a reader to stay with — not a one-off, but a guide they can return to across years"

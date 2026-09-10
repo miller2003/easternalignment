@@ -14,7 +14,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/master-enigma-kasamba-review.png"
+avatarUrl: "/avatars/kasamba/master-enigma-kasamba-review.webp"
 pros:
   - "Ranked by specialty, not by a single flattened score — you pick the lane, we name the winner"
   - "Every pick backed by a full published review with verified session counts and review-feed analysis"
@@ -184,7 +184,7 @@ Four signals, in order of how hard they are to fake.
 Master Enigma holds Kasamba's official "Most Experienced Advisor" designation: 355,674 readings since 2007 at a perfect 5.0. That number deserves a second look. It works out to roughly 50 strangers a day, every day, for nineteen years — a sample size so large that sustained inaccuracy is statistically impossible. A reader can fake a good month. Nobody fakes 355,674 sessions of rebookings.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/master-enigma-kasamba-review.png" alt="Master Enigma Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/master-enigma-kasamba-review.webp" alt="Master Enigma Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -230,7 +230,7 @@ His style is the product: fast, sharp, and structurally respectful of your money
 Love Stefans is a third-generation psychic with 138,003 readings since 2007 and a "Top 3 Most Experienced Reader" tag across Kasamba's entire 27-year history. His lane is the questions people cannot say out loud: is he cheating, will they come back, should I reach out.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -276,7 +276,7 @@ The accuracy signal that separates Stefans from other high-volume love readers i
 Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic platform-wide: 102,414 readings since 2004, a perfect 5.0, and 31,000+ five-star reviews. He is also the most expensive reader on this site at $13.99/min promo — and the review feed explains, in detail, why people keep paying it.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/wisdom-and-love-kasamba-review.jpg" alt="Wisdom and Love Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/wisdom-and-love-kasamba-review.webp" alt="Wisdom and Love Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -322,7 +322,7 @@ The economics here are counterintuitive and worth understanding. Premium pricing
 Love Specialist Isabelle holds a perfect 5.0 across 99,057 readings since 2005. The distinguishing evidence is not the score — it is the arc. Her review feed contains a pattern we have not seen matched anywhere else on the platform: clients returning two, four, and six years later to confirm that specific predictions came true, including predictions they did not believe at the time.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.webp" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -368,7 +368,7 @@ Most psychic reviews are written within hours of a session, which means they mea
 The Fruno has the most improbable résumé we have ever reviewed: former Price Waterhouse tax specialist, corporate CFO, published atlas co-author, and Louisiana Board of Tax Appeals administrative law judge — who is simultaneously a New Orleans mystic with 66,996 readings since 2002 at a perfect 5.0.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/the-fruno-kasamba-review.jpg" alt="The Fruno Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/the-fruno-kasamba-review.webp" alt="The Fruno Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -414,7 +414,7 @@ Here is why the résumé matters beyond novelty. A career reading is not only an
 Psychic Safina is a third-generation psychic — her great-grandmother read a ragged tarot deck with what family history describes as staggering accuracy — with 59,565 readings since 2007 at 4.9. She blends tarot, astrology, and direct intuition, and her review feed's defining phrase is "guiding light," attached specifically to career transitions.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-safina-kasamba-review.png" alt="Psychic Safina Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-safina-kasamba-review.webp" alt="Psychic Safina Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -460,7 +460,7 @@ A crossroads question — stay or leave, take the offer or hold — is different
 Spirit Amy owns the cleanest ledger we have ever audited: 17,297 likes against 25 dislikes across 49,727 readings since 2008 — a 99.9% approval ratio at a perfect 5.0. She is a clairvoyant and clairaudient medium, and third-party directories credit her with volunteer work on missing-person cases.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/spirit-amy-kasamba-review.jpg" alt="Spirit Amy Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/spirit-amy-kasamba-review.webp" alt="Spirit Amy Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -506,7 +506,7 @@ Mediumship is the easiest specialty to fake and the hardest to verify, which is 
 Quietsound practices something no other top advisor offers: "relay" — her spirit guides consult yours, and she gives you the names of the guides who answered. She pairs this with Tarot Certification Board credentials and stated ethical limits: no health, legal, or pregnancy questions, because those belong to professionals.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/quietsound-kasamba-review.jpg" alt="Quietsound Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/quietsound-kasamba-review.webp" alt="Quietsound Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -552,7 +552,7 @@ The refusal list is the tell. Psychic platforms have a well-documented dark patt
 Miss Bathsheba pairs 71,618 readings since 2006 with the cleanest feedback ratio in our audit series: 144 negative reviews against 23,229 positive — 0.6%. She is a second-generation clairvoyant whose tarot work clients describe in almost technical terms, and her feed is full of daily regulars who treat her readings as standing appointments.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/miss-bathsheba-kasamba-review.jpg" alt="Miss Bathsheba Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/miss-bathsheba-kasamba-review.webp" alt="Miss Bathsheba Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -598,7 +598,7 @@ There is a structural reason tarot readers dominate the "verifiable" end of this
 Sparks Of Insight holds a perfect 5.0 across 54,146 readings since 2016 — 18,334 likes against 129 dislikes — while charging $1.99/min, the lowest rate among Kasamba's high-volume advisors. We found zero negative reviews in their 150 most recent.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.jpg" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.webp" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

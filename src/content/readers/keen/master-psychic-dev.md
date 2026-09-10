@@ -6,8 +6,8 @@ platformName: "Keen: Master Psychic Dev"
 rating: 4.6
 verdict: "Master Psychic Dev is a third-generation intuitive with 34,512 readings on Keen since 2011 and a steady 4.92 stars. He positions himself as guiding decisions 'with clarity and purpose' - a decision-focused reader rather than a passive predictor. At $7.39/min he is upper-mid priced. Book him if you want an experienced, lineage-backed reader who helps you act, not just wonder."
 affiliateUrl: /go/keen-master-psychic-dev/
-avatarUrl: /avatars/keen/master-psychic-dev.jpg
-ogImage: "/avatars/keen/master-psychic-dev.jpg"
+avatarUrl: /avatars/keen/master-psychic-dev.webp
+ogImage: "/avatars/keen/master-psychic-dev-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$7.39/min"
 bestFor: "People who want an experienced, third-generation intuitive who helps them make decisions with clarity and purpose - and who want a decision-focused read over passive prediction"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-26'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/master-psychic-dev-og.jpg",
     "headline": "Master Psychic Dev on Keen Review 2026: 34,000 Readings of 'Clarity and Purpose' at $7.39/Min",
     "description": "An independent review of Master Psychic Dev on Keen - 7,543 ratings, 34,512 readings since 2011, and a $7.39/min rate. What his third-generation 'guiding decisions with clarity and purpose' approach and real client reviews reveal, and exactly who should book him.",
     "datePublished": "2026-06-26",
     "dateModified": "2026-06-26",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

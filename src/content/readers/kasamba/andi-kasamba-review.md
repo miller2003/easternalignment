@@ -6,8 +6,8 @@ platformName: "Kasamba: Andi"
 rating: 4.5
 verdict: "Andi is the insider's insider: a reader Kasamba itself once hired to write its Birthday and Weekend Love Horoscopes — with 43,151 readings on the platform since 2002 at a perfect 5.0 (12,166 likes against 174 dislikes). Her résumé reads like the field's syllabus: Reiki Master trained with Diane Stein, ordained minister since 1997, American Tarot Association and Tarosophy member. Her review feed is 59% repeat clients, whose verdict is unusually blunt — 'she is the truth... She is never wrong' — delivered fast ('does not waste your money'). At $2.99/min chat with 3 free minutes, she is the cheapest 24-year veteran we've reviewed. Book her for love, tarot, or astrology questions where you want a credentialed reader at a budget rate."
 affiliateUrl: /go/kasamba-andi/
-avatarUrl: /avatars/kasamba/andi-kasamba-review.jpg
-ogImage: "/avatars/kasamba/andi-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/andi-kasamba-review.webp
+ogImage: "/avatars/kasamba/andi-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $2.99/min · Voice $3.99/min · 3 free minutes for new clients"
 bestFor: "Clients who want a formally credentialed reader — Reiki, tarot, astrology — at a budget price, with the speed of a 24-year platform veteran"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Andi Kasamba Review 2026: 5.0 Stars, 24 Years on Kasamba",
     "description": "Andi on Kasamba: 43,151 readings since 2002 at 5.0. Kasamba's former horoscope writer, Reiki Master, ordained minister — chat $2.99/min, 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/andi-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/andi-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

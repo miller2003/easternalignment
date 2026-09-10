@@ -30,6 +30,17 @@
 # Referrer-Policy 也必须是 strict-origin-when-cross-origin：
 # /go 的门禁要用 Referer 判来源，同源导航必须能看到完整 URL。
 # 千万不要改成 no-referrer。
+#
+# 注意：下面 `/` 与 `/*` 两条是**故意重复**的。
+# 实测两条都会匹配首页。Cloudflare 会把同名头合并成逗号分隔的单条，所以首页看到的
+# 不是"两个 Link 头"，而是**四个头各自出现两次**（2026-09-10 实测）：
+#   Cache-Control: public, max-age=0, must-revalidate, public, max-age=0, must-revalidate
+#   Referrer-Policy / X-Content-Type-Options / Link 同样各重复一次
+# 四处的值逐字相同，因此重复是无害的（幂等）。之前这里只写了 Link 会重复，
+# 与实际不符 —— 记录以实测为准。
+# 之所以保留两条：万一以后 Cloudflare 的路径匹配行为变化、`/*` 不再覆盖 `/`，
+# 首页就会丢掉这些头，而官方扫描器恰好只检查首页。
+# 用一次无害的重复换首页的确定性覆盖，是划算的。**不要"顺手清理"掉其中一条。**
 /
   Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff

@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/marriage-psychics.jpg"
 pros:
 - "Features readers who prioritize truth over securing a 5-star review"
 - "Filters out 'toxic positivity' and false hope regarding dead marriages"

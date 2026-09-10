@@ -7,7 +7,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/love-or-career.jpg"
 pros:
 - "Tailored specifically for Type-A personalities, executives, and entrepreneurs"
 - "Highlights astrologers who can map the conflict between the 7th House (Love) and 10th House (Career)"
@@ -106,7 +105,7 @@ Sometimes a relationship isn't just failing emotionally; it is failing financial
 If you want your relationship analyzed with the same cold, structural logic as a quarterly earnings report, Master Sher is your ultimate asset.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -145,7 +144,7 @@ Master Sher lays out his Tarot cards like an engineering blueprint. He does not 
 At the highest echelons of business, time is significantly more valuable than money. Love Stefans provides premium, instant clarity.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -184,7 +183,7 @@ Stefans charges $19.99 a minute because his client base—which includes high-ne
 If you want to know if you can truly "have it all" (the corner office and the marriage), Meg uses ancient math to find out.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.jpg" alt="Tarot With Meg" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.webp" alt="Tarot With Meg" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -223,7 +222,7 @@ Using Hellenistic Astrology and "Annual Profections," Meg can mathematically map
 If you are dating a highly successful man who is emotionally unavailable, or if *you* are that man, David7 translates the masculine ambition burden perfectly.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -262,7 +261,7 @@ David7 is unparalleled at explaining the psychology of the "Provider." High-earn
 If you and your partner are trying to build a business or an empire together, you need to make sure your natal charts are financially compatible.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-safina-kasamba-review.jpg" alt="Psychic Safina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-safina-kasamba-review.webp" alt="Psychic Safina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -301,7 +300,7 @@ Safina specializes in deep, house-by-house natal chart breakdowns. By looking at
 If you treat your life as an investment portfolio, Arradaza uses three different ancient mathematical systems to calculate your relationship's ROI.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -340,7 +339,7 @@ Arradaza cross-references Western Astrology, Chinese Astrology, and Numerology. 
 If you are between Zoom meetings and suddenly have a panic attack about a fight you had with your spouse, Golden Eye provides instant relief.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

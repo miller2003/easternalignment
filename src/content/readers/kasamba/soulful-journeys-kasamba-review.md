@@ -6,8 +6,8 @@ platformName: "Kasamba: SOULFUL JOURNEYS"
 rating: 4.3
 verdict: "SOULFUL JOURNEYS is the value anomaly of our Kasamba audit: 44,859 readings since 2009 at 4.8 stars — 14,311 likes against 405 dislikes — at $1.99/min chat, a price most people assume means rookie risk. He's no rookie: a third-generation reader, sixteen-plus years on-platform, with clients who describe step-by-step readings that 'eventually come true.' The bio even pairs its spiritual pitch with a blunt candor-first disclaimer, which we read as an honesty tell. Voice runs $3.99/min, so stay in chat at $1.99/min where the value case is strongest."
 affiliateUrl: /go/kasamba-soulful-journeys/
-avatarUrl: /avatars/kasamba/soulful-journeys-kasamba-review.jpg
-ogImage: "/avatars/kasamba/soulful-journeys-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/soulful-journeys-kasamba-review.webp
+ogImage: "/avatars/kasamba/soulful-journeys-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $1.99/min · Voice $3.99/min · 3 free minutes for new clients"
 bestFor: "First-timers and budget-conscious clients who want a high-volume veteran instead of a rookie — and anyone who wants a structured, step-by-step reading they can afford to extend past the ten-minute mark"
@@ -40,7 +40,7 @@ customSchema: |
     "@type": "Article",
     "headline": "SOULFUL JOURNEYS Kasamba: 44,859 Readings at $1.99/Min",
     "description": "SOULFUL JOURNEYS on Kasamba: 44,859 readings since 2009 at 4.8 stars — for $1.99/min. The budget tier shouldn't look like this. Chat with 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/soulful-journeys-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/soulful-journeys-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

@@ -6,8 +6,8 @@ platformName: "Kasamba: light4you"
 rating: 4.5
 verdict: "light4you — real name Jodee Lynn — has read on Kasamba since 2002: 56,253 readings, a 4.9 rating, and 15,276 likes against 242 dislikes. A certified life coach who learned tarot kitchen-table style from a friend's mother, her documented specialty is timing — clients report dated predictions landing, including a proposal called within its window. Her longest regular has left 39 reviews, the deepest client diary we've reviewed. She works slowly and asks for ten-minute sessions; unusually, her voice rate ($4.99/min) is cheaper than chat ($5.99/min), so take the call. Book her for love and timing questions you can give room to breathe."
 affiliateUrl: /go/kasamba-light4you/
-avatarUrl: /avatars/kasamba/light4you-kasamba-review.jpg
-ogImage: "/avatars/kasamba/light4you-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/light4you-kasamba-review.webp
+ogImage: "/avatars/kasamba/light4you-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Voice $4.99/min · Chat $5.99/min · 3 free minutes for new clients · email readings from $10/question"
 bestFor: "'Will he propose, and when' — love and timing questions where you want a 24-year veteran's dated prediction and can give the session ten unhurried minutes"
@@ -42,7 +42,7 @@ customSchema: |
     "@type": "Article",
     "headline": "light4you Kasamba Review 2026: 56,253 Readings, 4.9",
     "description": "light4you (Jodee Lynn) on Kasamba: reading since 2002, 56,253 readings at 4.9. Certified life coach, timing specialist — voice $4.99/min, 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/light4you-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/light4you-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

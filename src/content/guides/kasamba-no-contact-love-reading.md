@@ -7,7 +7,7 @@ category: 'Love & Relationships'
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.webp"
 pros:
   - "Explains exactly what psychic information can be accessed during no-contact periods"
   - "Covers the structural reason Kasamba's chat format is best for no-contact reading accuracy"
@@ -26,17 +26,6 @@ highlights:
   - "Explains what psychic access to a person in no-contact actually looks like."
   - "Addresses the most expensive behavioral trap in the no-contact reading category."
   - "Profiles 4 readers with methodology-specific track records for silence-period readings."
-customSchema: |
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Kasamba Love Readings No Contact (2026): What a Psychic Can Tell You During Silence",
-    "description": "What Kasamba's remote telepathy and empathic readers can tell you during no-contact periods —what they can access, what they cannot guarantee, and which readers specialize in no-contact energetic reads.",
-    "author": {
-      "@type": "Organization",
-      "name": "Eastern Alignment"
-    }
-  }
 canonicalUrl: https://easternalignment.com/guides/kasamba-no-contact-love-reading/
 ---
 
@@ -120,7 +109,7 @@ The permanent transcript adds the second layer: every claim the reader makes dur
 Ask Cristina's remote telepathy methodology is purpose-built for the no-contact situation: she tunes directly into the current thought-field of a named individual and reports what is actively present, including thoughts that have not been verbalized to anyone. During no-contact —when you have no incoming information —this is exactly the access you are trying to verify.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -154,7 +143,7 @@ Her accessible rate makes her the most financially sustainable option for period
 Seek Chelle's Triple Clair methodology (cross-referenced clairvoyance, clairaudience, clairsentience) is best suited to the "why" question of no-contact: not what the person is thinking, but what the specific psychological driver of the silence is. For avoidant attachment dynamics, complex emotional situations, or cases where the stated reason for the separation doesn't match the other person's subsequent behavior, her depth of psychological diagnosis is exceptional.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -186,7 +175,7 @@ Seek Chelle's Triple Clair methodology (cross-referenced clairvoyance, clairaudi
 Love Stefans' vision-only clairvoyance applies to the most concrete no-contact question: is contact coming, and when? His sessions produce the most direct possible answer to the trajectory question —what the energetic momentum looks like and whether it is building toward a communication event. His bluntness is a specific advantage here: he will tell you if the momentum is not building, which is information you need even if it is not the information you want.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -218,7 +207,7 @@ Love Stefans' vision-only clairvoyance applies to the most concrete no-contact q
 Cosmic Fusion's deep empathic methodology steps into the emotional experience of the person of interest —not their thoughts, but their felt-state. For someone who wants to understand what the other person is actually experiencing emotionally during the silence (not just what they are thinking), she is the specialist.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

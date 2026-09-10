@@ -13,7 +13,7 @@ entities:
 platform: purple-garden
 rating: 4.88
 platformName: "Purple Garden"
-avatarUrl: "/avatars/purple-garden/annah.jpg"
+avatarUrl: "/avatars/purple-garden/annah.webp"
 pros:
   - "10 readers ranked by love-question type, verified through the public Journeys prediction ledger"
   - "Every pick backed by a full published review with verified session counts"
@@ -197,7 +197,7 @@ The Journeys ledger and the $30 credit are the two mechanics that shape every pi
 Annah holds a perfect 5.0 across 37,281 readings since 2015 — 14,785 likes against 94 dislikes (99.4%), a "highest rated" badge, and the most time-stamped receipt in our PG audit: on August 26, a client wrote that Annah's "our paths will cross" prediction had just come true on her own street, when her POI walked up and hugged her "so hard I couldn't breathe."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/annah.jpg" alt="Annah Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/annah.webp" alt="Annah Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -243,7 +243,7 @@ A self-described "honest, gentle, earth loving cat mom Capricorn" with 27 years 
 Truelovetarot — Sneha, a certified tarot reader, numerologist, and Akashic record reader from India — holds a perfect 5.0 across 39,956 readings, with 15,385 likes against just 39 dislikes (99.7%) and zero negative reviews in her last 150. Her defining trait: she gives the same prediction across sessions and stands by it.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/truelovetarot.jpg" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/truelovetarot.webp" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -289,7 +289,7 @@ Most people in a relationship crisis consult multiple readers — and collect fi
 Athena Love is Purple Garden's truth-with-a-plan specialist: 54,032 readings since 2019 at 4.8, delivered by a Christian reader working from Holy Spirit guidance. Her bio tells confirmation-seekers to book someone else — and her review feed is the only one we have audited where even the negative reviews read as accuracy endorsements: "I am deeply hurt but I know this is probably very accurate."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/athena-love.jpg" alt="Athena Love Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/athena-love.webp" alt="Athena Love Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -335,7 +335,7 @@ Her intake rewards preparation: arrive with names, birthdates, and your real que
 Psychic Norell holds a perfect 5.0 across 39,794 readings since 2016, with a "highest rated" badge and the most instructive review in our PG audit — from a client read for years across the industry: "I've never had someone who was so on point... you need to talk to this person first."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-norell.jpg" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-norell.webp" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -381,7 +381,7 @@ Her session architecture is built for first-timers: instant connection first, su
 Psychic Jewels does something no marketing department would allow: her bio opens with what she cannot do — no timelines ("I have no way to see time"), no cheating surveillance ("I cannot see physical action of a person, only energetic feeling"), no deciding whether you should move on. 47,273 readings since 2015 at 4.9, 27 years of practice, and a platform "recommended" badge say the honesty costs her nothing.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-jewels.jpg" alt="Psychic Jewels Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-jewels.webp" alt="Psychic Jewels Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -427,7 +427,7 @@ Her intake protocol is the skeptic's test: one person, one question, one birthda
 Advisor Vanessa is a 4.8-star reader with 20,578 readings since 2016, specializing in love, infidelity, and the hard truths that go with them — including the client receipt that titles her review: "the opposite of what I wanted to hear."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/advisor-vanessa.jpg" alt="Advisor Vanessa Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/advisor-vanessa.webp" alt="Advisor Vanessa Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -473,7 +473,7 @@ Suspicion questions are the most dangerous in love readings, because a comfort-s
 Niki Medium is a fourth-generation psychic with 12,994 readings since 2018 at a perfect 5.0, specializing in soulmate readings — the bond you cannot classify, read by someone whose family has done the work for four generations.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/niki-medium.jpg" alt="Niki Medium Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/niki-medium.webp" alt="Niki Medium Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -519,7 +519,7 @@ The soulmate category is the most abused in online readings — reunion-selling 
 Psychic Sandra is a seventh-generation psychic with 40,001 readings since 2015 at 4.9 — and a review feed anchored by one of the deepest single-client records we have audited: a client named Hopefully who has left 57 reviews, a running testimony that functions as her feed's backbone.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-sandra.jpg" alt="Psychic Sandra Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-sandra.webp" alt="Psychic Sandra Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -565,7 +565,7 @@ Her intake — name and birthdate — produces the anti-cold-reading structure s
 Truthful Love is Purple Garden's #1 trending advisor — 28,199 readings since 2024 at 4.8, with the defining receipt of one client leaving 8 reviews in a single 4-minute span. At $2.99/min chat, the $30 credit covers ten full minutes.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/truthful-love.jpg" alt="Truthful Love Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/truthful-love.webp" alt="Truthful Love Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -611,7 +611,7 @@ Fast and blunt is a taste, and it is exactly the taste some love questions need 
 Oh Life Tarot holds Purple Garden's "most accurate" badge across 35,720 readings since 2018 at a perfect 5.0 — with the most unusual five-star review in our audit series: "she changed my outlook to life without predicting anything... absolutely great, and life changing."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/oh-life-tarot.jpg" alt="Oh Life Tarot Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/oh-life-tarot.webp" alt="Oh Life Tarot Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

@@ -5,7 +5,6 @@ category: Roundup
 platform: keen
 rating: 4.8
 platformName: "Keen: Best Love Psychics"
-avatarUrl: "/avatars/keen/best-love-psychics.jpg"
 pros:
 - "Features only readers with 40,000+ verified sessions"
 - "Focuses specifically on reconciliation and post-breakup dynamics"
@@ -127,7 +126,7 @@ A 4.9-star career psychic is useless to you right now. We strictly selected read
 When you need an unfiltered, highly structured assessment of where a broken relationship is actually heading, David7 is arguably the most commanding presence on the platform. Operating as a pure, tool-free clairvoyant, he does not rely on tarot spreads to build a narrative.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -178,7 +177,7 @@ For a deeper dive into his timeline accuracy, [read our full David7 review](/rev
 When a breakup is abrupt and leaves you entirely destabilized, a raw prediction is rarely enough. You need someone who can stop the emotional bleeding. Psychic SuZen brings a credential that fundamentally changes the architecture of a reading: she is a trained life coach and social worker.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/psychic-suzen-on-keen-review-2026.jpg" alt="Psychic SuZen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/psychic-suzen-on-keen-review-2026.webp" alt="Psychic SuZen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -229,7 +228,7 @@ To understand her life coach methodology better, [read our full Psychic SuZen re
 If your relationship defies logic—if you keep breaking up and returning to each other in a dynamic that feels heavier than a standard romance—you are likely dealing with a karmic connection. Readings by Kelly777 has spent twenty years on Keen mapping exactly these types of inescapable patterns. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -280,7 +279,7 @@ Curious about her remote viewing? [Read our full Readings by Kelly777 review](/r
 Accuracy should not be entirely walled behind a premium price tag. For clients who need immediate, high-volume consistency without spending $150 a session, Regina Jacks is the platform's most formidable mid-tier option.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/regina-jacks.jpg" alt="Regina Jacks" class="reader-summary__avatar" />
+  <img src="/avatars/keen/regina-jacks.webp" alt="Regina Jacks" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -331,7 +330,7 @@ Learn more about her direct style in our [full Regina Jacks review](/reviews/kee
 When an ex-recovery situation involves financial entanglements, third-party interference, or decades of shared history, a single intuitive approach can miss crucial details. Arradaza brings the widest investigative toolkit on the entire platform. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

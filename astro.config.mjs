@@ -1,6 +1,67 @@
 import { defineConfig } from 'astro/config';
+import fs from 'node:fs';
+import path from 'node:path';
 import sitemap from '@astrojs/sitemap';
 import rehypeAffiliateLinks from './src/plugins/rehype-affiliate-links.mjs';
+
+// ── <lastmod> ────────────────────────────────────────────────────────────────
+// Astro's sitemap integration cannot know when a page's content last changed, so
+// it emits no <lastmod> at all (2026-09-10 audit: 0 of 299 entries had one). That
+// removes the single strongest recrawl signal we have, on a site whose value
+// depends on content freshness. The dates already exist in the content
+// frontmatter, so read them once at config load.
+//
+// Deliberately NOT falling back to "now": stamping every URL with the build date
+// makes lastmod meaningless the moment you rebuild without changing content, and
+// Google learns to discount it. Pages with no known date simply omit lastmod.
+const SITE = 'https://easternalignment.com';
+
+function buildLastmodMap() {
+  const map = new Map();
+  const contentDir = path.resolve('./src/content');
+  const roots = {
+    guides: (_p, slug) => `/guides/${slug}/`,
+    comparisons: (_p, slug) => `/comparisons/${slug}/`,
+    reviews: (_p, slug) => `/reviews/${slug}/`,
+    readers: (platform, slug) => `/reviews/${platform}/${slug}/`,
+    'es-readers': (platform, slug) => `/es/resenas/${platform}/${slug}/`,
+  };
+  const walk = (dir) => {
+    let out = [];
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) out = out.concat(walk(p));
+      else if (e.name.endsWith('.md') && !e.name.startsWith('_')) out.push(p);
+    }
+    return out;
+  };
+  for (const [collection, toUrl] of Object.entries(roots)) {
+    const dir = path.join(contentDir, collection);
+    if (!fs.existsSync(dir)) continue;
+    for (const file of walk(dir)) {
+      const block = fs.readFileSync(file, 'utf8').split(/^---\s*$/m)[1] || '';
+      const pick = (k) => {
+        const m = block.match(new RegExp(`^${k}:\\s*["']?(\\d{4}-\\d{2}-\\d{2})`, 'm'));
+        return m ? m[1] : null;
+      };
+      const date = pick('updatedDate') || pick('publishDate');
+      if (!date) continue;
+      const rel = path.relative(dir, file).replace(/\\/g, '/').replace(/\.md$/, '');
+      const segs = rel.split('/');
+      const slug = segs.pop();
+      map.set(SITE + toUrl(segs[0], slug), date);
+    }
+  }
+  return map;
+}
+
+let LASTMOD = new Map();
+try {
+  LASTMOD = buildLastmodMap();
+} catch (err) {
+  // Never let a metadata nicety break the build.
+  console.warn('[sitemap] lastmod map unavailable:', err && err.message);
+}
 
 export default defineConfig({
     site: 'https://easternalignment.com',
@@ -27,6 +88,12 @@ export default defineConfig({
             // hreflang), so it MUST stay in the sitemap to keep the cluster valid.
             !page.includes('/es/privacidad/') &&
             !page.includes('/es/terminos/') &&
+            // /red-flags/ is a noindex placeholder — a noindex page in the
+            // sitemap is a contradiction Google reports as an error.
+            !page.includes('/red-flags/') &&
+            // 404 pages are never sitemap material. /es/404/ was slipping in
+            // (the integration only special-cases the English 404).
+            !/\/404\/?$/.test(page) &&
             // Template files should never generate pages, but be safe
             !page.includes('_plantilla'),
         serialize(item) {
@@ -42,12 +109,15 @@ export default defineConfig({
                 item.priority = 0.7;
             }
 
-            // ── hreflang links ─────────────────────────────────────────────────
+            // Real content date where we have one (see buildLastmodMap above).
+            const lm = LASTMOD.get(item.url);
+            if (lm) item.lastmod = lm;
+
+            // hreflang links ─────────────────────────────────────────────────
             // Manual routing (no Astro i18n), so we inject a fully reciprocal
             // hreflang cluster. Every page in a language set must list all others
             // or Google ignores the whole set. An explicit 1:1 map keeps
             // Spanish-only reader pages from pointing at non-existent English URLs.
-            const SITE = 'https://easternalignment.com';
             const esToEn = {
                 [`${SITE}/es/`]: `${SITE}/`,
                 [`${SITE}/es/acerca-de/`]: `${SITE}/about/`,

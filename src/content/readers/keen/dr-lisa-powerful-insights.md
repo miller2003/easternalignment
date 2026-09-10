@@ -6,8 +6,8 @@ platformName: "Keen: Dr Lisa Powerful Insights"
 rating: 4.7
 verdict: "Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Her 'very fast, compassionate, no tools' approach is a genuine differentiator - she leads with quick, accurate pickup rather than props. Book her by voice for love and relationship questions; at $14.99/min, start with the $1 intro to confirm fit before a full session."
 affiliateUrl: /go/keen-dr-lisa-powerful-insights/
-avatarUrl: /avatars/keen/dr-lisa-powerful-insights.jpg
-ogImage: "/avatars/keen/dr-lisa-powerful-insights.jpg"
+avatarUrl: /avatars/keen/dr-lisa-powerful-insights.webp
+ogImage: "/avatars/keen/dr-lisa-powerful-insights-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$14.99/min (new clients: 5 min for $1)"
 bestFor: "Clients who want a fast, no-tools, compassionate reader for love and relationship questions - and who value quick, accurate pickup over slow build-up"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-14'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/dr-lisa-powerful-insights-og.jpg",
     "headline": "Dr Lisa Powerful Insights on Keen Review 2026: 4.97 Stars Across 16,000 Ratings - Does She Live Up to It?",
     "description": "An independent review of Dr Lisa Powerful Insights on Keen - 16,000 ratings, 79,000+ readings since 2010, and a no-tools, fast, compassionate style. What her track record and real client reviews reveal, and exactly who should book her.",
     "datePublished": "2026-06-14",
     "dateModified": "2026-06-14",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

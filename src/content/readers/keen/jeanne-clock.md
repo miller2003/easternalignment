@@ -6,8 +6,8 @@ platformName: "Keen: Jeanne Clock"
 rating: 4.7
 verdict: "Jeanne Clock combines clairvoyance, clairaudience, mediumship, and empathy into one of the broader skill sets on Keen, backed by 95,000+ readings since 2007 at 4.96 stars. She is a patient, compassionate reader who is especially strong on love, career, and family dynamics. Book her by voice for relationship and life-path questions; just know her gentle pace is a feature, not a bug."
 affiliateUrl: /go/keen-jeanne-clock/
-avatarUrl: /avatars/keen/jeanne-clock.jpg
-ogImage: "/avatars/keen/jeanne-clock.jpg"
+avatarUrl: /avatars/keen/jeanne-clock.webp
+ogImage: "/avatars/keen/jeanne-clock-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$15.99/min"
 bestFor: "Clients who want a patient, multi-gifted reader for love, family, and life-path questions - and who value being truly listened to"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-16'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/jeanne-clock-og.jpg",
     "headline": "Jeanne Clock on Keen Review 2026: A Multi-Gifted Clairvoyant With 95,000 Readings Worth Booking",
     "description": "An independent review of Jeanne Clock on Keen - 24,000 ratings, 95,000+ readings since 2007, and a rare clairvoyant-plus-medium skill set. What her track record and real client reviews reveal, and who gets the most from booking her.",
     "datePublished": "2026-06-16",
     "dateModified": "2026-06-16",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

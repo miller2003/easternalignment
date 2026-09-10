@@ -5,8 +5,8 @@ platformName: "Purple Garden: Athina Mystic"
 rating: 4.4
 verdict: "Athina Mystic is a 4.9-star Purple Garden twin-flame and soulmate healer whose more than 15,000 readings since 2020 and near-95% happy review split reflect a blunt, boundary-driven style. She won't give timelines, won't do mediumship, and won't comfort your ego — which is exactly why serious twin-flame clients trust her."
 affiliateUrl: /go/purple-garden-athina-mystic/
-avatarUrl: /avatars/purple-garden/athina-mystic.jpg
-ogImage: "/avatars/purple-garden/athina-mystic.jpg"
+avatarUrl: /avatars/purple-garden/athina-mystic.webp
+ogImage: "/avatars/purple-garden/athina-mystic-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $5.99/min"
 bestFor: "Twin-flame and soulmate journeys from a healer who trades sweetness for truth"

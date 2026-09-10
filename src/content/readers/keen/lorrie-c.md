@@ -8,8 +8,8 @@ pricing: "$5.99/min (per our audit data — verify on live profile)"
 bestFor: "Relationship questions about a specific person — what they're feeling, whether they'll reach out, how they'll behave — where empathic person-reading matters more than date-stamped fortune-telling"
 canonicalUrl: "https://easternalignment.com/reviews/keen/lorrie-c/"
 affiliateUrl: /go/keen-lorrie-c/
-avatarUrl: /avatars/keen/lorrie-c.png
-ogImage: "/avatars/keen/lorrie-c.png"
+avatarUrl: /avatars/keen/lorrie-c.webp
+ogImage: "/avatars/keen/lorrie-c-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 publishDate: '2026-08-18'
 updatedDate: '2026-08-18'

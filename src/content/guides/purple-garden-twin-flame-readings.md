@@ -13,7 +13,6 @@ entities:
 platform: purple-garden
 rating: 4.8
 platformName: "Purple Garden"
-avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
   - "Purple Garden's video bios let you assess TF methodology authenticity before booking"
   - "Journeys ledger provides verifiable evidence of prediction accuracy on separation timelines"

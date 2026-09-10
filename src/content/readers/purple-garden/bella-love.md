@@ -6,8 +6,8 @@ platformName: "Purple Garden: Bella Love"
 rating: 4.7
 verdict: "Bella Love is Purple Garden's premium outlier: $24.99/min — five to twelve times the rate of every other reader in our audit series — matched against credentials no one else in the series holds: a platform 'most accurate' badge, a platform-reported 91% accuracy score, a perfect 5.0 across 50,917 readings since 2019, and 17,000 likes against just 96 dislikes (99.4%, the cleanest ratio we've ever measured). A video-first, triple-clair reader specializing in twin-flame and soulmate questions, she's the answer to a specific client problem: when the question matters enough that being wrong costs more than the reading. The $30 credit covers your first minute-plus — use it to feel the connection, then decide with evidence in hand."
 affiliateUrl: /go/purple-garden-bella-love/
-avatarUrl: /avatars/purple-garden/bella-love.jpg
-ogImage: "/avatars/purple-garden/bella-love.jpg"
+avatarUrl: /avatars/purple-garden/bella-love.webp
+ogImage: "/avatars/purple-garden/bella-love-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat & Voice $24.99/min · $30 free credit on your first purchase"
 bestFor: "High-stakes questions — twin flame, soulmate, the relationship you can't afford to misread — where accuracy matters more than the per-minute rate"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Bella Love Purple Garden Review 2026: $24.99/min, 5.0",
     "description": "Bella Love on Purple Garden: $24.99/min — 'most accurate' badge, platform-reported 91% accuracy, 5.0 across 50,917 readings, 99.4% approval.",
-    "image": "https://easternalignment.com/avatars/purple-garden/bella-love.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/bella-love-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

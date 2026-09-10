@@ -6,8 +6,8 @@ platformName: "Kasamba: Golden Eye"
 rating: 4.5
 verdict: "Golden Eye is a 4.9-star Kasamba veteran with 113,722 readings since 2004 who covers nearly every method — tarot, astrology, dream analysis, mediumship, numerology, love advice — so you build one relationship instead of vetting five readers. Chat at $4.99/min with 3 free minutes is the smart entry. Book if you want one trusted guide for whatever life throws next."
 affiliateUrl: /go/kasamba-golden-eye/
-avatarUrl: /avatars/kasamba/golden-eye-kasamba-review.jpg
-ogImage: "/avatars/kasamba/golden-eye-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/golden-eye-kasamba-review.webp
+ogImage: "/avatars/kasamba/golden-eye-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $4.99/min · Voice $10.99/min · 3 free minutes"
 bestFor: "People whose questions don't fit in one box — love today, career next month, a dream that won't leave — who want one reader for all of it"

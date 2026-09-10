@@ -6,8 +6,8 @@ platformName: "Purple Garden: Niki Medium"
 rating: 4.6
 verdict: "Niki Medium is a fourth-generation psychic with 12,994 Purple Garden readings since 2018 and a perfect 5.0, specializing in soulmate readings and honest, practical answers. Chat $5.49/min. Book her if you want a reader who validates you without flattering you; skip her if you want the truth left unsaid."
 affiliateUrl: /go/purple-garden-niki-medium/
-avatarUrl: /avatars/purple-garden/niki-medium.jpg
-ogImage: "/avatars/purple-garden/niki-medium.jpg"
+avatarUrl: /avatars/purple-garden/niki-medium.webp
+ogImage: "/avatars/purple-garden/niki-medium-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $5.49/min · Voice $5.99/min · Video $11.49/min"
 bestFor: "People who want a soulmate or life-direction reading from a fourth-generation reader — honest, practical, no nonsense"

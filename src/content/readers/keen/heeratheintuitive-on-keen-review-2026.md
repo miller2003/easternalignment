@@ -6,8 +6,8 @@ platformName: "Keen: HeeratheIntuitive"
 rating: 4.3
 verdict: "HeeratheIntuitive is not selling a single impressive session. She is selling a long-term advisory relationship — and at $7.99/min, she is explicitly pricing out the casual tester and pricing in the committed repeat client. Her 94% five-star rate across 13 years is the most concentrated quality signal in this series. If you have a high-stakes ongoing situation — infidelity, a long-stalled relationship, a major career crossroads — and you want a reader who will grow with your situation over time, she is one of the most credible options on Keen. If you want a one-session clairvoyant test, book someone else first."
 affiliateUrl: "/go/keen-heera/"
-avatarUrl: /avatars/keen/heeratheintuitive-on-keen-review-2026.jpg
-ogImage: "/avatars/keen/heeratheintuitive-on-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/heeratheintuitive-on-keen-review-2026.webp
+ogImage: "/avatars/keen/heeratheintuitive-on-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$7.99/min (Love & Relationships profile)"
 bestFor: "Clients with high-stakes ongoing situations — infidelity, long-term relationship decisions, major career crossroads — who want a consistent long-term advisor rather than a single-session reading"
@@ -17,19 +17,19 @@ updatedDate: "2026-04-27"
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/heeratheintuitive-on-keen-review-2026-og.jpg",
     "headline": "HeeratheIntuitive on Keen Review 2026: $7.99/Min, No Cold Readings, and a 94% Five-Star Rate — What Is She Actually Selling?",
     "description": "An independent review of HeeratheIntuitive on Keen — why the most expensive reader in this series explicitly refuses cold readings, what two-year repeat clients reveal about her actual value, and exactly who should book her first session.",
     "datePublished": "2026-04-27",
     "dateModified": "2026-04-27",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

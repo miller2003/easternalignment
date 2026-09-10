@@ -6,8 +6,8 @@ platformName: "Kasamba: A Divine Spirit"
 rating: 4.7
 verdict: "A Divine Spirit holds the single cleanest record in our Kasamba audit series: 46,731 readings since 2007 at a perfect 5.0, with 3,683 likes against only 18 dislikes — a 99.5% satisfaction rate across nineteen years. The standout evidence isn't the score, it's the bookkeeping: one client has logged Maura's predictions in notes for five years and reports roughly 95 percent of them came true. Chat runs $12.99/min with 3 free minutes; voice is the same $12.99/min, so call format costs nothing extra here."
 affiliateUrl: /go/kasamba-divine-spirit/
-avatarUrl: /avatars/kasamba/divine-spirit-kasamba-review.jpg
-ogImage: "/avatars/kasamba/divine-spirit-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/divine-spirit-kasamba-review.webp
+ogImage: "/avatars/kasamba/divine-spirit-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $12.99/min · Voice $12.99/min · 3 free minutes for new clients"
 bestFor: "Anyone who wants the steadiest track record on Kasamba — a 19-year veteran with a documented five-year track record — especially for love, life-direction, and tarot-based questions where you want the answer in writing"
@@ -40,7 +40,7 @@ customSchema: |
     "@type": "Article",
     "headline": "A Divine Spirit Kasamba Review: 5.0 Stars, 46,731 Readings",
     "description": "A Divine Spirit on Kasamba: 46,731 readings since 2007 at a perfect 5.0 — one client kept five years of notes and says 95% came true. Chat $12.99/min.",
-    "image": "https://easternalignment.com/avatars/kasamba/divine-spirit-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/divine-spirit-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

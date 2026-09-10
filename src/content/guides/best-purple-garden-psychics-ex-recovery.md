@@ -7,7 +7,6 @@ category: Roundup
 platform: purple-garden
 rating: 4.8
 platformName: "Purple Garden: Best for Ex-Recovery"
-avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
   - "Video bios let you screen for genuine empathic presence before booking"
   - "Journeys ledger provides verifiable track record of reconciliation prediction accuracy"

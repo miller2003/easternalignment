@@ -6,8 +6,8 @@ platformName: "Purple Garden: Psychic Norell"
 rating: 4.6
 verdict: "Psychic Norell holds a perfect 5.0 across 39,794 Purple Garden readings since 2016, with 16,357 likes against 111 dislikes (99.3%) and a 'highest rated' badge. Her most instructive review comes from a client who's been read for years across the industry: 'I've never had someone who was so on point... you need to talk to this person first.' Her style is instant connection plus lengthy, compassionate responses — 'picked up on the situation instantly,' 'no time wasted in responding' — at $3.99/min chat, one of the lowest rates among the platform's elite. 58% of her current feed is repeat clients, led by a 26-review regular. She's recently added live video calls for clients who want face-to-face connection. For a first reading on Purple Garden — or the one that finally sticks — Norell is the reader the veterans recommend."
 affiliateUrl: /go/purple-garden-psychic-norell/
-avatarUrl: /avatars/purple-garden/psychic-norell.jpg
-ogImage: "/avatars/purple-garden/psychic-norell.jpg"
+avatarUrl: /avatars/purple-garden/psychic-norell.webp
+ogImage: "/avatars/purple-garden/psychic-norell-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $3.99/min · Voice $4.49/min · Live video available · $30 free credit on your first purchase"
 bestFor: "First-timers who want the safest elite-rated starting point on Purple Garden — instant connection, lengthy compassionate answers, budget pricing"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Psychic Norell Purple Garden Review 2026: 5.0 Stars",
     "description": "Psychic Norell on Purple Garden: 39,794 readings at 5.0, 'highest rated' badge. Veterans say 'talk to this person first' — chat $3.99/min, $30 credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/psychic-norell.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/psychic-norell-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

@@ -6,8 +6,8 @@ platformName: "Keen: Krys Britton"
 rating: 4.4
 verdict: "Krys Britton is the most undervalued reader in this entire series. Twenty years of practice, a 93% five-star rate, independently verified prediction accuracy, and a $2.25/min rate that belongs on a much newer advisor's profile. Her Egyptian Oracle Cards approach is genuinely distinctive — grounded, direct, and built around concrete answers rather than energetic impressions. If you want a reader who gives you something specific to act on and doesn't charge you a premium to do it, KB is the most straightforward recommendation I can make."
 affiliateUrl: "/go/keen-krys/"
-avatarUrl: /avatars/keen/krys-britton-on-keen-review-2026.jpg
-ogImage: "/avatars/keen/krys-britton-on-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/krys-britton-on-keen-review-2026.webp
+ogImage: "/avatars/keen/krys-britton-on-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$2.25/min (Tarot Card Readings profile)"
 bestFor: "Clients who want concrete, actionable answers from a structured oracle-based reading — without the premium pricing of clairvoyant-first advisors"
@@ -17,19 +17,19 @@ updatedDate: "2026-05-01"
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/krys-britton-on-keen-review-2026-og.jpg",
     "headline": "Krys Britton on Keen Review 2026: The Reader Who Uses Ancient Egyptian Oracle Cards to Give \"Common Sense\" Answers — And Has the Verified Predictions to Back It Up",
     "description": "An independent review of Krys Britton on Keen — what Egyptian Oracle Cards actually are, why her outcome-focused review record stands out in a crowded field, and why $2.25/min for a 20-year veteran is the best value in this series.",
     "datePublished": "2026-05-01",
     "dateModified": "2026-05-01",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

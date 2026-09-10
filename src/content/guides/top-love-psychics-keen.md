@@ -13,7 +13,7 @@ entities:
 platform: keen
 rating: 4.8
 platformName: "Keen"
-avatarUrl: "/avatars/keen/advisor-suzan.png"
+avatarUrl: "/avatars/keen/advisor-suzan.webp"
 pros:
   - "10 advisors ranked by love-question type — from 16,000 to 200,000 verified readings"
   - "Every pick backed by a full published review with negative-review forensics"
@@ -194,7 +194,7 @@ Three evidence rules governed every pick:
 Advisor Suzan is a Keen institution: 136,000+ readings since 2005 at a 4.98 average — a score that across that volume is statistically indistinguishable from perfection sustained over two decades. A Clairvoyant Empath specializing in Love & Relationships, her style is fast connection plus empowerment: she reads your situation and pushes you toward the highest-potential outcome.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/advisor-suzan.png" alt="Advisor Suzan Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/advisor-suzan.webp" alt="Advisor Suzan Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -240,7 +240,7 @@ Her specialty is the confused client — the one whose partner sends mixed signa
 lorrie c holds a 4.98 across 60,595 readings — and her case is unique in our entire audit series: **the toughest independent psychic-review forum on the internet tracked her predictions in real time and watched them land** on the specifics that matter — contact, behavior, reasoning.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/lorrie-c.png" alt="lorrie c Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/lorrie-c.webp" alt="lorrie c Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -286,7 +286,7 @@ Understand what the forum verification means. That community exists to debunk re
 David7 is Keen's authority on the most contested category in love readings: twin flames. 94,000 readings at 4.9, tool-free and direct, with a male intuitive's perspective on emotionally complex relationship situations — the reader our accuracy audit ranked #1 on this platform for timeline and pattern work.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7 Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7 Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -332,7 +332,7 @@ Twin-flame questions attract the industry's worst answers because the client wan
 LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007 — a no-tools, energy-reading specialist whose "Love Doctor" reputation shows up consistently across a decade-plus of client reviews.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/ladyfontaine.jpg" alt="LadyFontaine Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/ladyfontaine.webp" alt="LadyFontaine Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -378,7 +378,7 @@ Her no-tools style is the authenticity signal: nothing between you and the read.
 Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 16,000 ratings at 4.97 stars and 79,000+ readings since 2010. Her differentiator is stated in her own positioning: very fast, compassionate, no tools — she leads with quick, accurate pickup rather than props.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/dr-lisa-powerful-insights.jpg" alt="Dr Lisa Powerful Insights Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/dr-lisa-powerful-insights.webp" alt="Dr Lisa Powerful Insights Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -424,7 +424,7 @@ At $14.99/min the arithmetic matters, and her speed is the arithmetic: a reader 
 Eli Casey's numbers are difficult to argue with: 81,000 ratings and **more than 200,000 completed readings since 2001** — the largest completed-session count in our entire audit series. He is a call-first, compassionately styled empath who leads with reassurance and talks you through a situation step by step.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/eli-casey.jpg" alt="Eli Casey Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/eli-casey.webp" alt="Eli Casey Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -470,7 +470,7 @@ His lane is the client who needs process, not just answers: the breakup you cann
 Readings by Kelly777 is one of the most battle-tested readers on Keen by sheer volume: 159,000+ sessions at 4.91 stars, specializing in love and soulmate clarity, past-life context, and remote viewing on specific people — delivered chat-only.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777 Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777 Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -516,7 +516,7 @@ The chat-only format is the underrated feature here. On a phone-first platform, 
 That Magic Man — James — is a direct, no-tools male reader with 14,000 ratings at 4.93 stars and 56,000+ readings since 2011. His reviews show a pattern of specific, sometimes dated predictions coming true, delivered with straight-talk reassurance — at $2.99/min, the best value on this list.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/that-magic-man.jpg" alt="That Magic Man Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/that-magic-man.webp" alt="That Magic Man Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -562,7 +562,7 @@ The 5-minutes-for-$1 intro covers nearly two minutes of his rate — but at $2.9
 Lollie is one of the most unambiguously direct readers on Keen: 20,000 ratings at 4.92 stars and 70,000+ readings since 2001, built on a simple promise — no small talk, no sugarcoating, practical steps. She is covered by Keen's standard new-client deal — 5 minutes for $1.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/lollie-ext-5555.jpg" alt="Lollie Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/lollie-ext-5555.webp" alt="Lollie Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -608,7 +608,7 @@ Her session style rewards preparation: arrive with tight, ordered questions and 
 Readings by Ruth is a third-generation psychic with 41,000+ readings since 2016 at 4.91 — an "Intuitive Navigator" with 31 years of experience and a direct, no-sugarcoating style that somehow keeps a compassionate edge.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-ruth.jpg" alt="Readings by Ruth Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-ruth.webp" alt="Readings by Ruth Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

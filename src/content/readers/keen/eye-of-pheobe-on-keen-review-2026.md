@@ -6,8 +6,8 @@ platformName: "Keen: Eye of Pheobe"
 rating: 4.3
 verdict: "Eye of Pheobe occupies a category none of the other eight readers in this series can enter. If your question involves connecting with someone who has passed — grief, unresolved communication, wanting to know they are okay — she is not one option among many. She is the only option in this entire review series. Her 4.69 rating across 241 sessions, evaluated against the hardest success condition in psychic practice, tells a different story than the same number would for a love or career reader. If you are not looking for mediumship, she is not your reader. If you are, she has been doing this work for 24 years."
 affiliateUrl: "/go/keen-pheobe/"
-avatarUrl: /avatars/keen/eye-of-pheobe-on-keen-review-2026.jpg
-ogImage: "/avatars/keen/eye-of-pheobe-on-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/eye-of-pheobe-on-keen-review-2026.webp
+ogImage: "/avatars/keen/eye-of-pheobe-on-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$5.99/min (Psychic Mediums profile)"
 bestFor: "Clients who want to connect with a deceased loved one, process grief through spirit communication, or seek messages from the other side — the specific need that no other reader in this series can serve"
@@ -17,19 +17,19 @@ updatedDate: "2026-04-28"
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/eye-of-pheobe-on-keen-review-2026-og.jpg",
     "headline": "Eye of Pheobe on Keen Review 2026: The Only Psychic Medium in This Series — and Why Her Numbers Tell a Completely Different Story Than Any Other Reader's",
     "description": "An independent review of Eye of Pheobe on Keen — why 24 years with 2,680 sessions is a professional signal not a weakness, what 4.69 stars actually means for a dedicated medium, and who she is the only right choice for in this entire series.",
     "datePublished": "2026-04-28",
     "dateModified": "2026-04-28",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

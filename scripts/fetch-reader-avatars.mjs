@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { writeAvatarPair } from "./_avatar-image.mjs";
 
 const ROOT = path.resolve(process.cwd());
 const READERS_DIR = path.join(ROOT, "src", "content", "readers");
@@ -312,21 +313,26 @@ async function main() {
       const imgUrl = pickImageFromHtml(html, targetUrl);
       if (!imgUrl) {
         console.log(`[no-image] ${rel}`);
-        const updated = setFrontmatterLine(md, "avatarUrl", '""');
+        const updated = setFrontmatterLine(
+          setFrontmatterLine(md, "avatarUrl", '""'),
+          "ogImage",
+          '"/og-default.jpg"'
+        );
         await fs.writeFile(file, updated, "utf8");
         continue;
       }
 
-      const { buf, contentType } = await fetchBinary(imgUrl);
-      const ext = extFromContentType(contentType) || path.extname(new URL(imgUrl).pathname) || ".jpg";
+      const { buf } = await fetchBinary(imgUrl);
 
       const outDir = path.join(OUT_DIR, platform);
       await ensureDir(outDir);
-      const outFile = path.join(outDir, `${slug}${ext}`);
-      await fs.writeFile(outFile, buf);
+      // One download in, two correctly-sized assets out (see _avatar-image.mjs).
+      await writeAvatarPair(buf, path.join(outDir, `${slug}.webp`), path.join(outDir, `${slug}-og.jpg`));
 
-      const publicPath = `/avatars/${platform}/${slug}${ext}`;
-      const updated = setFrontmatterLine(md, "avatarUrl", publicPath);
+      const publicPath = `/avatars/${platform}/${slug}.webp`;
+      const ogPath = `/avatars/${platform}/${slug}-og.jpg`;
+      let updated = setFrontmatterLine(md, "avatarUrl", publicPath);
+      updated = setFrontmatterLine(updated, "ogImage", ogPath);
       await fs.writeFile(file, updated, "utf8");
 
       ok++;

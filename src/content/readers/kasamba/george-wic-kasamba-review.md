@@ -6,8 +6,8 @@ platformName: "Kasamba: George Wic"
 rating: 4.3
 verdict: "George Wic is the budget entry with the emphatic fans: 37,231 readings since 2009 at 4.8 stars, charging $1.99/min — and drawing reviews like 'Predictions COME TRUE... one of the FEW REAL PSYCHICs on this site' from clients who watched his calls land months later. His feed also documents a rare service-recovery moment: after a technical glitch, he apologized and made it right — then delivered a reading the client called 'super on point.' A numerology-carrying reader whose top feed words are insight, help, honest, fast, and patient, his loyalty core runs deep (one client holds 24 reviews). Chat $1.99/min with 3 free minutes; voice $2.99. For a first reading that risks almost nothing, George is the cheapest serious audition in this batch."
 affiliateUrl: /go/kasamba-george-wic/
-avatarUrl: /avatars/kasamba/george-wic-kasamba-review.jpg
-ogImage: "/avatars/kasamba/george-wic-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/george-wic-kasamba-review.webp
+ogImage: "/avatars/kasamba/george-wic-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $1.99/min · Voice $2.99/min · 3 free minutes for new clients"
 bestFor: "First-timers and budget-conscious clients who want a patient, honest, fast-connecting reader — with predictions clients verify months later"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "George Wic Kasamba Review 2026: 4.8 Stars, $1.99/min",
     "description": "George Wic on Kasamba: 37,231 readings at 4.8, $1.99/min. 'One of the few REAL psychics on this site' — predictions verified months later. 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/george-wic-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/george-wic-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

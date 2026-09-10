@@ -6,8 +6,8 @@ platformName: "Kasamba: Quietsound"
 rating: 4.6
 verdict: "Quietsound practices something no other top advisor offers: 'relay' — her spirit guides consult yours, and she gives you the names of the guides who answered. Add Tarot Certification Board credentials, stated ethical limits (no health, legal, or pregnancy questions), and 64,270 readings since 2002 at a perfect 5.0 with a 0.5% negative rate. At $6.99/min she's the booking for anyone who wants mediumship-flavored answers with professional boundaries, delivered fast, raw, and unfiltered."
 affiliateUrl: /go/kasamba-quietsound/
-avatarUrl: /avatars/kasamba/quietsound-kasamba-review.jpg
-ogImage: "/avatars/kasamba/quietsound-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/quietsound-kasamba-review.webp
+ogImage: "/avatars/kasamba/quietsound-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$6.99/min (verify on live profile) · 3 free minutes + 50% off for new clients"
 bestFor: "Ex-relationship questions and life-mess 'unscrambling' where you want guide-level mediumship detail (including names) with certified tarot craft and hard ethical boundaries"

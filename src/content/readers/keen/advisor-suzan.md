@@ -6,8 +6,8 @@ platformName: "Keen: Advisor Suzan"
 rating: 4.8
 verdict: "Advisor Suzan is a Keen institution with over 136,000 readings and a 4.98-star average since 2005. She is a Clairvoyant Empath who specializes in Love & Relationships, focusing heavily on empowerment and positive outcomes. She is the perfect fit if you want a highly supportive, fast-connecting empath to guide you toward the highest potential outcome."
 affiliateUrl: /go/keen-advisor-suzan/
-avatarUrl: /avatars/keen/advisor-suzan.png
-ogImage: "/avatars/keen/advisor-suzan.png"
+avatarUrl: /avatars/keen/advisor-suzan.webp
+ogImage: "/avatars/keen/advisor-suzan-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$9.99/min"
 bestFor: "People who are confused by a partner's mixed signals and want an incredibly fast-connecting, supportive empath to uncover hidden feelings."
@@ -26,19 +26,19 @@ updatedDate: '2026-08-13'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/advisor-suzan-og.jpg",
     "headline": "Advisor Suzan on Keen Review 2026: The Truth About Her 136,000 Readings",
     "description": "With over 136,000 readings and a 4.98 rating on Keen, Advisor Suzan is a legend. But is she right for you? We break down her empathic style and who she helps best.",
     "datePublished": "2026-08-13",
     "dateModified": "2026-08-13",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

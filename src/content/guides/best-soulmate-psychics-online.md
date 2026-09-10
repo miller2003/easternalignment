@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/soulmate-psychics.jpg"
 pros:
 - "Filters out fake psychics who tell every client they've met their soulmate"
 - "Includes specialists in Astrological Synastry, Past Life Cartomancy, and Karmic Ties"
@@ -105,7 +104,7 @@ Not all intense relationships are the same. A master psychic will categorize the
 If you want undeniable proof rather than vague feelings, Arradaza is the most methodologically diverse reader we found across both platforms.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -144,7 +143,7 @@ Arradaza does not just rely on vague intuition; she operates a five-tool method.
 Sometimes you know they are your soulmate, but the relationship is entirely blocked. Seek Chelle specializes in finding out exactly *why* the energy is stuck.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -183,7 +182,7 @@ Operating with a "Triple Clair" capacity, Seek Chelle bypasses the physical worl
 If your relationship defies logic—if you felt like you had known them for a thousand years the moment you met—you are dealing with past-life karma.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -222,7 +221,7 @@ With over 150,000 sessions, Kelly777 has seen every iteration of the soul contra
 When a soulmate connection is highly complex—involving third-party marriages, extreme distance, or decades of separation—you need the highest level of expertise available.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -261,7 +260,7 @@ Stefans is famously direct. He uses no tools, receiving visions directly from hi
 Soulmate anxiety is exhausting. If you are terrified you have lost the one person meant for you, you need a reader who balances immense accuracy with profound warmth.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/psychicreader19622-raymond-keen-review-2026.jpg" alt="psychicreader19622 [Raymond]" class="reader-summary__avatar" />
+  <img src="/avatars/keen/psychicreader19622-raymond-keen-review-2026.webp" alt="psychicreader19622 [Raymond]" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -300,7 +299,7 @@ Behind the generic username is a 19-year Keen veteran who uses a standard deck o
 Sometimes you do not want a deep astrological chart reading; you just want to know, *"Is this person my soulmate, yes or no?"*
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -339,7 +338,7 @@ Golden Eye is highly proficient at cutting through the noise. Her connection spe
 When your male soulmate inexplicably pulls away and goes silent, trying to understand his actions through a feminine lens will drive you insane. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

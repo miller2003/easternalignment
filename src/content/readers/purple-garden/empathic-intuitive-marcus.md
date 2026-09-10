@@ -5,8 +5,8 @@ platformName: "Purple Garden: Empathic Intuitive Marcus"
 rating: 4.4
 verdict: "Empathic Intuitive Marcus is a 4.8-star Purple Garden relationship reader whose value is structural: a man reading male behavior from the inside. Blending clairsentience with behavioral analysis across 2,800+ sessions, he translates the psychology behind avoidance and commitment ambiguity — and refuses to validate a fantasy, which is exactly why serious clients stay."
 affiliateUrl: /go/purple-garden-marcus/
-avatarUrl: /avatars/purple-garden/empathic-intuitive-marcus.jpg
-ogImage: "/avatars/purple-garden/empathic-intuitive-marcus.jpg"
+avatarUrl: /avatars/purple-garden/empathic-intuitive-marcus.webp
+ogImage: "/avatars/purple-garden/empathic-intuitive-marcus-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "Women analyzing an avoidant or commitment-ambiguous male partner, from a male perspective"

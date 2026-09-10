@@ -6,8 +6,8 @@ platformName: "Purple Garden: Athena Love"
 rating: 4.4
 verdict: "Athena Love is Purple Garden's truth-with-a-plan specialist: 54,032 readings since 2019 at 4.8 stars and a 'trending' badge, delivered by a Christian reader working from Holy Spirit guidance. Her bio famously tells confirmation-seekers to book someone else — and her review feed is the only one we've reviewed where even the negative reviews read as accuracy endorsements ('I am deeply hurt but I know this is probably very accurate'). Her readings map your situation, the people in it, and what you can change — insight plus a growth step. Come prepared (names, birthdates, your real question) and she'll give you the most honest six minutes on the platform."
 affiliateUrl: /go/purple-garden-athena-love/
-avatarUrl: /avatars/purple-garden/athena-love.jpg
-ogImage: "/avatars/purple-garden/athena-love.jpg"
+avatarUrl: /avatars/purple-garden/athena-love.webp
+ogImage: "/avatars/purple-garden/athena-love-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "From $4.99/min · $30 free credit on your first purchase"
 bestFor: "Clients at a real crossroads — love, relationship, or life direction — who suspect they need honesty more than comfort, and who are ready to act on what they hear"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Athena Love Purple Garden Review 2026: 4.8 Stars",
     "description": "Athena Love on Purple Garden: 54,032 readings at 4.8. The reader whose one-star reviews endorse her — $4.99/min, $30 credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/athena-love.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/athena-love-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

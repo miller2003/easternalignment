@@ -5,8 +5,8 @@ platformName: "Purple Garden: Psychic Advisor Serena"
 rating: 4.7
 verdict: "Psychic Advisor Serena is an internationally known psychic medium on Purple Garden whose tools-free claircognizance and clairvoyance, plus aura reading, make her a straight-talking, high-clarity pick for clients who'd rather be told the truth than a fairy tale."
 affiliateUrl: /go/purple-garden-serena/
-avatarUrl: /avatars/purple-garden/psychic-advisor-serena.jpg
-ogImage: "/avatars/purple-garden/psychic-advisor-serena.jpg"
+avatarUrl: /avatars/purple-garden/psychic-advisor-serena.webp
+ogImage: "/avatars/purple-garden/psychic-advisor-serena-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "Clients wanting an internationally known, no-tools medium who gives clear, honest answers"

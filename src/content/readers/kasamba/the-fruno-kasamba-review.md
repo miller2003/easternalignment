@@ -6,8 +6,8 @@ platformName: "Kasamba: The Fruno"
 rating: 4.7
 verdict: "The Fruno has the most improbable resume we've ever reviewed: a former Price Waterhouse tax specialist, corporate CFO, published atlas co-author, and Louisiana Board of Tax Appeals administrative law judge — who is simultaneously a New Orleans mystic with 66,996 Kasamba readings since 2002 at a perfect 5.0. At $6.99/min he's the obvious pick for career, business, and money questions: the only psychic on the platform who has actually sat in the boardroom he's reading about."
 affiliateUrl: /go/kasamba-the-fruno/
-avatarUrl: /avatars/kasamba/the-fruno-kasamba-review.jpg
-ogImage: "/avatars/kasamba/the-fruno-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/the-fruno-kasamba-review.webp
+ogImage: "/avatars/kasamba/the-fruno-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$6.99/min chat & voice · 3 free minutes + 50% off for new clients"
 bestFor: "Career, business, and financial questions — job moves, deals, workplace politics — where a reader who's actually been a CFO and tax judge brings pattern recognition no pure mystic can"

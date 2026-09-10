@@ -6,8 +6,8 @@ platformName: "Purple Garden: Truelovetarot"
 rating: 4.8
 verdict: "Truelovetarot — Sneha, a certified tarot reader, numerologist, and Akashic record reader from India — holds a perfect 5.0 across 40,061 readings since 2017, with 15,416 likes against just 39 dislikes (99.7%) and a near-spotless recent review feed. Her standout trait is consistency: clients describe a reader who gives the same prediction across sessions and stands by it — 'her consistency is what builds trustworthiness to me' — and the receipts land: 'she said she sees him reaching out this week. She's right! Just 4 days later out of the blue he texted!' 66% of her feed is repeat clients. Chat $6.99/min with the $30 credit covering about four minutes; voice $9.99. For love questions where you want one steady read you can trust, not five conflicting ones, Sneha is the specialist."
 affiliateUrl: /go/purple-garden-truelovetarot/
-avatarUrl: /avatars/purple-garden/truelovetarot.jpg
-ogImage: "/avatars/purple-garden/truelovetarot.jpg"
+avatarUrl: /avatars/purple-garden/truelovetarot.webp
+ogImage: "/avatars/purple-garden/truelovetarot-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $6.99/min · Voice $9.99/min · $30 free credit on your first purchase"
 bestFor: "Love and POI questions where you want one consistent reader whose predictions hold steady across sessions — backed by dated receipts"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Truelovetarot Purple Garden Review 2026: 5.0, 99.7% Approval",
     "description": "Truelovetarot on Purple Garden: 40,061 readings at 5.0, 99.7% approval. The 4-day text-back prediction — chat $6.99/min, $30 free credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/truelovetarot.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/truelovetarot-og.jpg",
     "author": {
       "@type": "Organization",
       "name": "Eastern Alignment",

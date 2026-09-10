@@ -6,8 +6,8 @@ platformName: "Keen: LadyFontaine"
 rating: 4.9
 verdict: "LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. Her no-tools, energy-reading style and 'Love Doctor' reputation show up clearly in real reviews - clients praise insight, honesty, and accuracy over a decade plus. Book her by voice for love and relationship questions; at $8.97/min she sits in Keen's upper tier, so use the $1 intro to confirm fit first."
 affiliateUrl: /go/keen-ladyfontaine/
-avatarUrl: /avatars/keen/ladyfontaine.jpg
-ogImage: "/avatars/keen/ladyfontaine.jpg"
+avatarUrl: /avatars/keen/ladyfontaine.webp
+ogImage: "/avatars/keen/ladyfontaine-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.97/min"
 bestFor: "Clients who want a certified, no-tools master psychic for love and relationship clarity - and who value insight and honesty over gentle softening"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-10'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/ladyfontaine-og.jpg",
     "headline": "LadyFontaine on Keen Review 2026: A Certified Master Psychic With 4.99 Stars - The 'Love Doctor' Reviewed",
     "description": "An independent review of LadyFontaine on Keen - a Certified Master Psychic with 5,098 ratings at 4.99 stars and 16,000+ readings since 2007. What her track record and real client reviews reveal, and exactly who should book her.",
     "datePublished": "2026-06-10",
     "dateModified": "2026-06-10",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

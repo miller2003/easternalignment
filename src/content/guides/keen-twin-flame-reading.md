@@ -13,7 +13,6 @@ entities:
 platform: keen
 rating: 4.8
 platformName: "Keen"
-avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
   - "Keen's phone-native clairvoyants are optimized for TF trajectory and timeline readings"
   - "David7's documented accuracy on TF runner psychology is the most verifiable on the platform"

@@ -13,7 +13,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp"
 pros:
   - "12 readers ranked by love-question type — ex recovery, new love, commitment, truth-telling, budget"
   - "Every pick backed by a full published review with verified session counts and prediction receipts"
@@ -210,7 +210,7 @@ Three evidence rules governed every pick:
 Love Stefans is a third-generation psychic with 138,003 readings since 2007 and a "Top 3 Most Experienced Reader" tag across Kasamba's 1999 founding — 27 years of history. His lane is the questions people cannot say out loud: is he cheating, will they come back, should I reach out.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -256,7 +256,7 @@ He reads with pure vision-based clairvoyance — no tarot, no tools, nothing to 
 Wisdom and Love (Andrew) is Kasamba's No.2 ranked psychic platform-wide: 102,414 readings since 2004, a perfect 5.0, and 31,000+ five-star reviews. He is the most expensive reader on this list — and 102,414 clients made the case for the price.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/wisdom-and-love-kasamba-review.jpg" alt="Wisdom and Love Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/wisdom-and-love-kasamba-review.webp" alt="Wisdom and Love Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -302,7 +302,7 @@ The booking calculus: he is not a weekly-check-in reader. He is the single-decis
 Love Specialist Isabelle holds a perfect 5.0 across 99,057 readings since 2005. The distinguishing evidence is the arc: her feed contains a pattern we have not seen matched elsewhere — clients returning two, four, and six years later to confirm specific predictions, including ones they did not believe at the time.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.webp" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -348,7 +348,7 @@ Her intake advice, repeated across her feed: come with a focused question and a 
 Accurate Love Readings pairs 95,479 readings with a perfect 5.0 — and a profile that contains the sentence we weight most heavily in any audit: an open admission that no psychic is 100% accurate. Readers who state the limits of their own art are the ones whose hits you can trust.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/accurate-love-readings-kasamba-review.jpg" alt="Accurate Love Readings Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/accurate-love-readings-kasamba-review.webp" alt="Accurate Love Readings Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -394,7 +394,7 @@ Her lane is reading the other person — what your partner is actually feeling o
 Seek Chelle operates through three simultaneous channels — clairvoyance, clairaudience, and clairsentience — producing "Triple Clair" readings that triangulate visual, auditory, and emotional data into one diagnostic picture. 20 years, 10,000+ five-star reviews, and the strongest record on this list for complex, layered situations.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -440,7 +440,7 @@ Her signature is hearing what you leave unsaid — the hesitation behind the que
 Divine Master has built 77,204 readings at 4.9 stars on the most specific lane in love readings: post-breakup and will-we-reunite questions, plus marriage and commitment crossroads. When the category is that narrow and the volume is that large, the specialization itself is the credential.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/divine-master-kasamba-review.jpg" alt="Divine Master Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/divine-master-kasamba-review.webp" alt="Divine Master Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -486,7 +486,7 @@ The value of a specialist is pattern depth. A generalist has seen your breakup a
 Love Psychic Indi pairs 102,522 readings with a credentialed astrological practice — a gold-medal astrologer whose style clients describe as direct and timeline-specific. For love questions where you want dates with structure behind them, she is the credentialed alternative to pure intuition.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-psychic-indi-kasamba-review.jpg" alt="Love Psychic Indi Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-psychic-indi-kasamba-review.webp" alt="Love Psychic Indi Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -532,7 +532,7 @@ The "does not sugarcoat" descriptor in her feed is consistent across years — c
 Intuitive Counselor holds 68,717 readings at 4.9 stars, with a lane almost nobody else claims: soulmate questions and relationship pain where the primary need is healing-oriented guidance, not just prediction. We checked the 1-star reviews too — they describe the same style as the 5-stars, experienced differently.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/intuitive-counselor-kasamba-review.jpg" alt="Intuitive Counselor Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/intuitive-counselor-kasamba-review.webp" alt="Intuitive Counselor Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -578,7 +578,7 @@ There is a version of this session that is a waste of money: when what you need 
 Spiritual Annie holds a Top-10 position in Kasamba's Love & Relationships category, and her review language is the most distinctive on this list: clients describe pulse-slowing calm, unhurried detail, and the ability to read what is unspoken. For love anxiety — the 3 a.m. spiral — she is the specialist.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/spiritual-annie-kasamba-review.jpg" alt="Spiritual Annie Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/spiritual-annie-kasamba-review.webp" alt="Spiritual Annie Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -624,7 +624,7 @@ Anxious clients make expensive mistakes with fast readers: the speed reads as co
 True Love Connection's clients call her "Angel" — 42,204 readings at 4.9 — and her signature is answering the question behind your question: not just what they feel, but why they act that way, and what you should do next.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/true-love-connection-kasamba-review.jpg" alt="True Love Connection Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/true-love-connection-kasamba-review.webp" alt="True Love Connection Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -670,7 +670,7 @@ A prediction without the psychology behind it decays fast — you know what they
 Sparks Of Insight holds a perfect 5.0 across 54,146 readings since 2016 — 18,334 likes against 129 dislikes, zero negative reviews in their last 150 — at the lowest rate among Kasamba's high-volume love advisors. For a first love reading on a budget, this is the lowest-risk audition on the platform.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.jpg" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.webp" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -716,7 +716,7 @@ At $1.99/min, a focused 10-minute first session costs about $10 after the new-cl
 A Psychic Friend closes this list for a specific reader: the first-timer. On the platform since 2003, 47,090 readings at 4.9 — and her most frequent reviewer is a user named Skeptic100001, who has left six five-star reviews across nine months. A self-declared skeptic who keeps coming back is the strongest first-booking endorsement available.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/a-psychic-friend-kasamba-review.jpg" alt="A Psychic Friend Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/a-psychic-friend-kasamba-review.webp" alt="A Psychic Friend Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

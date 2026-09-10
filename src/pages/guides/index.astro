@@ -41,7 +41,7 @@ sections.sort((a, b) => DISPLAY_ORDER.indexOf(a.id) - DISPLAY_ORDER.indexOf(b.id
     <!-- LEFT SIDEBAR -->
     <LeftSidebar />
 
-    <main class="main-col">
+    <div class="main-col">
       <div class="guides-hub">
         <Breadcrumb items={[{ label: 'Guides' }]} />
 
@@ -71,7 +71,7 @@ sections.sort((a, b) => DISPLAY_ORDER.indexOf(a.id) - DISPLAY_ORDER.indexOf(b.id
           ))}
         </div>
       </div>
-    </main>
+    </div>
     <!-- RIGHT SIDEBAR (Removed for Hub pages) -->
   </div>
 </BaseLayout>

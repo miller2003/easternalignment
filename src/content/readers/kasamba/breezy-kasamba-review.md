@@ -6,8 +6,8 @@ platformName: "Kasamba: BreeZy"
 rating: 4.6
 verdict: "BreeZy is Kasamba's twenty-four-year truth-teller with a twist nobody else in our audit series offers: she's funny. Her clients' recurring formula — 'brutally honest, kind, funny and insightful... she brings your spirit up every single time' — describes a reader who tells you the unvarnished truth and somehow leaves you lighter. The numbers: 38,832 readings since 2002 at a perfect 5.0, 9,270 likes against 60 dislikes (99.4%), with 60% of her current feed from repeat clients (one holds 17 reviews). An angel-card reader practicing the law of attraction, her feed's top words are 'help' (25) and 'honest' (21). Chat $8.49/min with 3 free minutes; voice $10.99. Book her when you need the truth and could also use a laugh — which is most hard nights."
 affiliateUrl: /go/kasamba-breezy/
-avatarUrl: /avatars/kasamba/breezy-kasamba-review.jpg
-ogImage: "/avatars/kasamba/breezy-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/breezy-kasamba-review.webp
+ogImage: "/avatars/kasamba/breezy-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $8.49/min · Voice $10.99/min · 3 free minutes for new clients"
 bestFor: "Clients who need honest answers but dread the bruise — truth delivered with humor and warmth, from a 24-year veteran"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "BreeZy Kasamba Review 2026: 5.0 Stars, 38,832 Readings",
     "description": "BreeZy on Kasamba: 38,832 readings since 2002 at 5.0. Brutally honest, kind, funny — truth that lifts your spirit — chat $8.49/min, 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/breezy-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/breezy-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

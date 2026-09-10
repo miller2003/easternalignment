@@ -6,8 +6,8 @@ platformName: "Purple Garden: JoJoEmpowers"
 rating: 4.6
 verdict: "JoJoEmpowers holds Purple Garden's 'most accurate' badge across 38,252 readings since 2019 at a perfect 5.0 — 11,542 likes against 88 dislikes — with zero negative reviews in her last 150. Intuition runs in her family: her father and brother share the gift, and she's practiced for 25 years. Her lane is empowerment — love, career, finances, abundance — delivered with a strict no-general-readings protocol and a trademark blend clients describe as honest without sugarcoating, kind without judgment. At $13.99/min she's a premium booking; the $30 credit covers your first two minutes. Book her for decisions where you need the truth and the confidence to act on it — that's literally the product her name promises."
 affiliateUrl: /go/purple-garden-jojoempowers/
-avatarUrl: /avatars/purple-garden/jojoempowers.jpg
-ogImage: "/avatars/purple-garden/jojoempowers.jpg"
+avatarUrl: /avatars/purple-garden/jojoempowers.webp
+ogImage: "/avatars/purple-garden/jojoempowers-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $13.99/min · Voice $16.99/min · $30 free credit on your first purchase"
 bestFor: "Decisions with stakes — love, career, money — where you want the platform's accuracy-badged reader plus the empowerment to act on what you hear"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "JoJoEmpowers Purple Garden Review 2026: 5.0, Most Accurate",
     "description": "JoJoEmpowers on Purple Garden: 38,252 readings at 5.0, 'most accurate' badge, zero negatives. 25 years of intuition — $13.99/min, $30 credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/jojoempowers.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/jojoempowers-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

@@ -13,7 +13,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/the-fruno-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/the-fruno-kasamba-review.webp"
 pros:
   - "Ranked by real-world professional credentials — the criterion that actually predicts career-read quality"
   - "Every pick backed by a full published review with verified session counts"
@@ -145,7 +145,7 @@ Most career situations contain all three, but one is always the real question. N
 The Fruno's résumé reads like a fabrication, and we checked it the way you would: former Price Waterhouse tax specialist, corporate CFO, published atlas co-author, and administrative law judge on the Louisiana Board of Tax Appeals. Also: a New Orleans mystic with 66,996 Kasamba readings since 2002 at a perfect 5.0.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/the-fruno-kasamba-review.jpg" alt="The Fruno Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/the-fruno-kasamba-review.webp" alt="The Fruno Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -191,7 +191,7 @@ The value of the CFO background is not decoration — it changes what the readin
 Master Enigma is Kasamba's "Most Experienced Advisor": 355,674 readings since 2007 at a perfect 5.0 — roughly 50 clients a day for nineteen years. Career questions are not his exclusive lane, but his people-reading speed makes him the strongest Type-3 booking on the platform.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/master-enigma-kasamba-review.png" alt="Master Enigma Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/master-enigma-kasamba-review.webp" alt="Master Enigma Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -237,7 +237,7 @@ For people questions — what is the hiring manager actually deciding, why did t
 Zara Insights brings an engineer's toolkit to a mystical practice: a Master's in Computer Applications, nine years of professional reading, and a method that runs three independent astrological systems — Chinese, Indian, and Western — and only reports where they converge. 37,844 readings at a perfect 5.0, with 59% repeat clients.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/zara-insights-kasamba-review.jpg" alt="Zara Insights Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/zara-insights-kasamba-review.webp" alt="Zara Insights Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -283,7 +283,7 @@ Timing questions are where vague intuition does the most damage, because "soon" 
 Psychic Safina is a third-generation psychic whose great-grandmother read a ragged tarot deck with, by family account, staggering accuracy. On Kasamba since 2007: 59,565 readings at 4.9, blending tarot, astrology, and direct intuition — and a review feed where the recurring phrase, attached specifically to career transitions, is "guiding light."
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-safina-kasamba-review.png" alt="Psychic Safina Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-safina-kasamba-review.webp" alt="Psychic Safina Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -329,7 +329,7 @@ A career transition is not one question — it is a months-long sequence of deci
 Spiritual Shiwa requires the most honest entry on this list. The profile: 44,530 readings since 2015, an Honors commerce degree, an MBA in Marketing and Finance, and a family astrology tradition — at voice rates of $2.49/min, the cheapest credentialed career read on the platform. The caveat: her displayed rating is 4.4, and we are going to tell you why it does not mean what it appears to.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/spiritual-shiwa-kasamba-review.jpg" alt="Spiritual Shiwa Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/spiritual-shiwa-kasamba-review.webp" alt="Spiritual Shiwa Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

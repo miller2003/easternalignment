@@ -12,7 +12,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/a-psychic-friend-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/a-psychic-friend-kasamba-review.webp"
 pros:
   - "Ranked by free-minute information density — what each reader proves before you pay a cent"
   - "Every pick backed by a full published review with verified session counts"
@@ -158,7 +158,7 @@ For the complete strategy — including the silence test and how to chain multip
 A Psychic Friend is Kasamba's founding-era survivor: on the platform since 2003, twenty-three years and 47,090 readings at 4.9 stars. Her most instructive credential is not a number — it is a person. Her most frequent reviewer is a user named **Skeptic100001**, who has left six five-star reviews across nine months. A self-declared skeptic who keeps coming back is the strongest first-timer endorsement on the platform.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/a-psychic-friend-kasamba-review.jpg" alt="A Psychic Friend Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/a-psychic-friend-kasamba-review.webp" alt="A Psychic Friend Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -204,7 +204,7 @@ For a first reading, the published spec matters more than any rating. You know b
 Golden Eye is the audition reader perfected: a 4.9-star veteran with 113,722 readings since 2004 whose signature is delivering specific-person reads within the first 60–90 seconds of a session. For the protocol above, she is the ideal test case — her accuracy is designed to demonstrate itself inside your 3 free minutes.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +250,7 @@ The second reason she ranks this high for first-timers: range. Tarot, astrology,
 Best Psychic Readings is the most counterintuitive value on Kasamba: the platform's highest-volume advisor — 153,514 readings since 2003 — charging its entry-level rate, $1.99/min. A 4.9 across 40,000+ written reviews means the quality has been stress-tested more times than almost any reader alive.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/best-psychic-readings-kasamba-review.jpg" alt="Best Psychic Readings Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/best-psychic-readings-kasamba-review.webp" alt="Best Psychic Readings Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -296,7 +296,7 @@ Here is the logic for a first-timer, stated as arithmetic. A reader's per-minute
 Sparks Of Insight holds a perfect 5.0 across 54,146 readings since 2016 — 18,334 likes against 129 dislikes — while charging $1.99/min. We found zero negative reviews in their 150 most recent. For first-timers whose question is about love, this is the lowest-risk audition on Kasamba, full stop.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.jpg" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/sparks-of-insight-kasamba-review.webp" alt="Sparks Of Insight Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -342,7 +342,7 @@ First readings fail in two directions: the reader is wrong, or the reader is rig
 Advisor Rainbow's defining receipt is one sentence from a client: "my advisor send me a message afterwards to complete my reading even though the credit had expired." For a first-timer, this addresses the fear nobody names: what happens when my money runs out mid-answer?
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/advisor-rainbow-kasamba-review.jpg" alt="Advisor Rainbow Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/advisor-rainbow-kasamba-review.webp" alt="Advisor Rainbow Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -388,7 +388,7 @@ The economics of that aftercare message deserve a moment. Per-minute billing cre
 George Wic is the budget entry with the emphatic fans: 37,231 readings since 2009 at 4.8 stars, charging $1.99/min, and drawing reviews like "Predictions COME TRUE... one of the FEW REAL PSYCHICs on this site" — from clients who watched his calls land months later.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/george-wic-kasamba-review.jpg" alt="George Wic Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/george-wic-kasamba-review.webp" alt="George Wic Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -434,7 +434,7 @@ The months-later verification pattern in his reviews is what earns the slot. Fir
 SOULFUL JOURNEYS is the value anomaly of our Kasamba audit: 44,859 readings since 2009 at 4.8 stars at $1.99/min chat — a price most people assume means rookie risk. He is no rookie: a third-generation reader with sixteen-plus years on-platform, whose clients describe step-by-step readings that "eventually come true."
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/soulful-journeys-kasamba-review.jpg" alt="Soulful Journeys Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/soulful-journeys-kasamba-review.webp" alt="Soulful Journeys Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

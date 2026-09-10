@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/win-her-back.jpg"
 pros:
 - "Focuses strictly on psychics who use strategic, action-oriented advice rather than emotional fluff"
 - "Highlights male psychics who understand the masculine ego and perspective"
@@ -91,7 +90,7 @@ You cannot force communication. Astrology and Tarot are exceptional at identifyi
 If you want to treat the breakup like an engineering problem that needs solving, Master Sher is the ultimate tactician. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -130,7 +129,7 @@ Master Sher does not do toxic positivity. He is a male Tarot reader who lays out
 If you simply cannot understand why she left or what she is feeling, you need an Empath to translate her emotions into actionable data.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -169,7 +168,7 @@ Seek Chelle acts as an emotional wiretap. Provide her with your ex-girlfriend's 
 If you need a "locker room" truth bomb about your own toxic behavior that caused the breakup, David7 is the ultimate authority.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -208,7 +207,7 @@ David7 is one of the most prolific male psychics on the internet. He understands
 Men appreciate efficiency. If you have been chasing your ex for a year and you just want to know if you are wasting your time, call Stefans.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

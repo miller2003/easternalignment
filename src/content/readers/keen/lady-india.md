@@ -6,8 +6,8 @@ platformName: "Keen: Lady India"
 rating: 4.5
 verdict: "Lady India has read on Keen since 2001 at $8.99/min, and her live client reviews split clearly: repeat callers praise her 'straight to the point, gentle touch' accuracy on love and life questions, while a minority find the per-minute cost hard to justify. The long tenure is real; this review is now sourced from actual client ratings rather than aggregate inference alone."
 affiliateUrl: /go/keen-lady-india/
-avatarUrl: /avatars/keen/lady-india.jpg
-ogImage: "/avatars/keen/lady-india.jpg"
+avatarUrl: /avatars/keen/lady-india.webp
+ogImage: "/avatars/keen/lady-india-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "Clients who want a long-tenured, direct intuitive guide for love and life questions and value repeat-caller loyalty over a low rate"
@@ -17,19 +17,19 @@ updatedDate: '2026-08-13'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/lady-india-og.jpg",
     "headline": "Lady India on Keen Review 2026: Two Decades of 'Uncovering Truth' - What the Client Record Shows",
     "description": "An independent, evidence-based review of Lady India on Keen - a reader since 2001 at $8.99/min. Built from Keen's live client reviews, third-party coverage, and her own advisor profile.",
     "datePublished": "2026-07-02",
     "dateModified": "2026-08-13",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Tarot Instincts Purple Garden Review 2026: 12,135 Readings at $1.99/Min — What a 4.2 Rating Really Tells You"
-seoTitle: "Tarot Instincts Purple Garden Review 2026: $1.99/Min Tarot + Numerology, 12,135 Readings, Honest 4.2 Rating | EasternAlignment"
+seoTitle: "Tarot Instincts Purple Garden Review 2026: $1.99/Min Tarot"
 description: "An independent review of Tarot Instincts on Purple Garden — a 4.2-star tarot and numerology reader with over 12,000 sessions since 2019 at the platform's lowest viable price point. Why the 4.2 rating is the most honest signal on this profile, and the specific session rules that determine whether you are the right client."
 platformName: "Purple Garden: Tarot Instincts"
 rating: 4.2
@@ -8,8 +8,8 @@ pricing: "$1.99/min"
 bestFor: "Budget-first clients who want tarot-plus-numerology combination readings and are willing to follow specific session rules — names provided upfront, focused questions, no legal/health/mediumship topics"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/tarot-instincts/"
 affiliateUrl: /go/purple-garden-tarot-instincts/
-avatarUrl: /avatars/purple-garden/tarot-instincts.jpg
-ogImage: "/avatars/purple-garden/tarot-instincts.jpg"
+avatarUrl: /avatars/purple-garden/tarot-instincts.webp
+ogImage: "/avatars/purple-garden/tarot-instincts-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-02'
 updatedDate: '2026-07-02'

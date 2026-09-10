@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/does-he-like-me.jpg"
 pros:
 - "Focuses on psychics who can differentiate between genuine romantic interest and physical lust"
 - "Highlights fast, budget-friendly readers perfect for quick 'check-in' questions"
@@ -99,7 +98,7 @@ Why do guys pull away right after a great date? Often, it is an Avoidant Attachm
 When you are overanalyzing a cryptic text message, you don't need a Tarot spread. You need to know exactly what is going through his head right now.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -138,7 +137,7 @@ At just $2.10 a minute, Cristina is the ultimate "check-in" psychic. She special
 If he treats you like a girlfriend but refuses to commit, you need the unvarnished male perspective on why men keep women in the "talking stage."
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -177,7 +176,7 @@ David7 maps male behavior with clinical, often brutal precision. He is unparalle
 Sometimes you don't want a deep psychological breakdown. You just want a direct answer so you can decide whether to text him or delete his number.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -216,7 +215,7 @@ Golden Eye's 21 years of experience means she operates like an energetic machine
 The "talking stage" isn't usually worth a $150 premium reading. Azzy provides high-level clairvoyance at one of the most accessible rates on Keen.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/intuitive-azzy.jpg" alt="Intuitive Azzy" class="reader-summary__avatar" />
+  <img src="/avatars/keen/intuitive-azzy.webp" alt="Intuitive Azzy" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -255,7 +254,7 @@ Azzy does not require five minutes of backstory. If you have a crush on a cowork
 If your dates are amazing, but he acts distant the next day, you need an Empath to diagnose the emotional blockage causing his inconsistency.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -294,7 +293,7 @@ Seek Chelle is an empathic master. She taps directly into his subconscious. She 
 If you suspect you are part of a roster and he is dating multiple women, you need a reader who will lay out the facts with zero emotional coddling.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

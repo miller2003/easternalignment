@@ -5,30 +5,52 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Partial Negative Case Study Gallery (Incomplete)",
-  "description": "A collection of documented red flags and manipulative practices encountered during our psychic platform testing.",
+  "name": "Red Flags Gallery",
+  "description": "Documented patterns of manipulative practice observed in the psychic reading market.",
   "url": "https://easternalignment.com/red-flags/"
 };
 ---
 
 <BaseLayout
-  title="Partial Negative Case Study Gallery (Incomplete) — Eastern Alignment"
-  description="A collection of documented red flags and manipulative practices encountered during our psychic platform testing."
+  title="Red Flags Gallery — Eastern Alignment"
+  description="Documented patterns of manipulative practice observed in the psychic reading market."
   jsonLd={pageSchema}
+  noindex={true}
 >
   <div class="red-flags-page section">
     <div class="container container--narrow">
       <Breadcrumb items={[{ label: 'Red Flags Gallery' }]} />
 
       <header class="page-hero">
-        <h1>Partial Negative Case Study Gallery (Incomplete)</h1>
+        <h1>Red Flags Gallery</h1>
         <p class="text-muted">
-          This page is currently under construction. Content will be added here to document specific examples of manipulative practices, scare tactics, and misleading policies we've encountered during testing.
+          A working index of the manipulative patterns we screen for when reviewing readers and
+          platforms. Individual case write-ups are added here as they are cleared for publication;
+          until then this page lists the categories themselves, each with the guide that explains
+          how to spot it and what to do instead.
         </p>
       </header>
-      
+
       <div class="prose">
-        <p><em>Check back later for updates.</em></p>
+        <h2>What gets documented here</h2>
+        <ul>
+          <li><strong>Fear-based urgency.</strong> A reader who needs you to act tonight, or who introduces a threat that only another session can remove.</li>
+          <li><strong>Manufactured emergencies.</strong> Crisis framing used to justify a longer or more expensive session than you asked for.</li>
+          <li><strong>Billing traps.</strong> Free-minute offers that convert silently, auto-recharge settings, and per-minute meters that keep running after you have your answer.</li>
+          <li><strong>Guarantees and outcome-selling.</strong> Anyone promising a specific result — a reunion, a job, a diagnosis — is describing a product, not a reading.</li>
+          <li><strong>Question harvesting.</strong> Sessions that collect your details without giving anything back, then resell the same vagueness next week.</li>
+          <li><strong>Off-platform moves.</strong> Requests to pay or continue outside the platform, which removes every refund and dispute mechanism you have.</li>
+        </ul>
+
+        <p>
+          The full screening protocol — twelve specific red flags plus the cold-reading mechanism
+          behind most of them — lives in
+          <a href="/guides/how-to-spot-fake-psychic/">how to spot a fake psychic</a>. For the
+          consumer-protection standard we hold platforms to, see
+          <a href="/guides/how-to-tell-if-an-online-psychic-is-legitimate/">how to tell if an online psychic is legitimate</a>.
+        </p>
+
+        <p><em>This page is deliberately narrow: we publish named examples only where the evidence is defensible, which is rarer than the market implies.</em></p>
       </div>
     </div>
   </div>

@@ -6,8 +6,8 @@ platformName: "Kasamba: Ambers Light"
 rating: 4.8
 verdict: "Ambers Light is one of Kasamba's longest-serving advisors — 74,229 readings since 2004, a 4.9 rating — with a rare specialty: closure. Her profile leads with grief work ('needing closure or wanting to make sure they are in a safe place?'), and her bio contains the most honest sentence on the platform: 'If you are looking for precise timing then I am NOT the one for you.' At $6.99/min chat she's the booking for grief, closure, and life-path questions where compassion and honesty matter more than date stamps."
 affiliateUrl: /go/kasamba-ambers-light/
-avatarUrl: /avatars/kasamba/ambers-light-kasamba-review.jpg
-ogImage: "/avatars/kasamba/ambers-light-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/ambers-light-kasamba-review.webp
+ogImage: "/avatars/kasamba/ambers-light-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "Chat $6.99/min · Voice $8.49/min · 3 free minutes + 50% off for new clients"
 bestFor: "Grief and closure questions (connecting with or checking on someone lost), life-path reassurance, and clients who value compassionate honesty over precise timelines"

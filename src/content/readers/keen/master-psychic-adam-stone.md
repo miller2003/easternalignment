@@ -6,8 +6,8 @@ platformName: "Keen: Master Psychic Adam Stone"
 rating: 4.5
 verdict: "Master Psychic Adam Stone pairs a remarkably low $3.99/min rate with 113,000+ readings since 2012 and 19,000 ratings at 4.88 stars. Real Keen clients describe him as direct, honest, and accurate — with predictions that, for many, came true — though a minority found him vague. Available by both Call and arranged Chat."
 affiliateUrl: /go/keen-master-psychic-adam-stone/
-avatarUrl: /avatars/keen/master-psychic-adam-stone.jpg
-ogImage: "/avatars/keen/master-psychic-adam-stone.jpg"
+avatarUrl: /avatars/keen/master-psychic-adam-stone.webp
+ogImage: "/avatars/keen/master-psychic-adam-stone-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$3.99/min"
 bestFor: "Budget-conscious clients who want a high-volume, experienced advisor and are comfortable with a direct, no-fluff style"
@@ -16,19 +16,19 @@ updatedDate: '2026-08-13'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/master-psychic-adam-stone-og.jpg",
     "headline": "Master Psychic Adam Stone on Keen Review 2026: 113,000 Readings at $3.99/Min - Too Good to Be True?",
     "description": "An independent review of Master Psychic Adam Stone on Keen - 19,000 ratings, 113,000+ readings since 2012, and a low $3.99/min rate. Built from Keen's live client reviews and his advisor profile.",
     "datePublished": "2026-07-08",
     "dateModified": "2026-08-13",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

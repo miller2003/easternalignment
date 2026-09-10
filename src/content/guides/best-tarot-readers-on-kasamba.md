@@ -13,7 +13,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/miss-bathsheba-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/miss-bathsheba-kasamba-review.webp"
 pros:
   - "Ranked by tarot's unique advantage — auditable, card-anchored claims you can verify months later"
   - "Every pick backed by a full published review with verified session counts"
@@ -147,7 +147,7 @@ It is not a vending machine for lottery numbers, exact dates, or other people's 
 Miss Bathsheba pairs 71,618 readings since 2006 with the cleanest feedback ratio in our audit series: 144 negative reviews against 23,229 positive — 0.6%. She is a second-generation clairvoyant, but it is her tarot work that clients describe in almost technical terms: "she was reading them right" is the kind of sentence that only appears in feeds where clients know the deck themselves.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/miss-bathsheba-kasamba-review.jpg" alt="Miss Bathsheba Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/miss-bathsheba-kasamba-review.webp" alt="Miss Bathsheba Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -193,7 +193,7 @@ The daily-regulars pattern is the tell. A tarot reader cannot retain daily clien
 A Divine Spirit holds the single cleanest record in our Kasamba audit series: 46,731 readings since 2007 at a perfect 5.0, with 3,683 likes against only 18 dislikes — 99.5% satisfaction across nineteen years. But the score is not the headline. The headline is the bookkeeping: **one long-term client has logged her predictions in notes for five years and reports roughly 95% of them came true.**
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/divine-spirit-kasamba-review.jpg" alt="A Divine Spirit Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/divine-spirit-kasamba-review.webp" alt="A Divine Spirit Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -239,7 +239,7 @@ Understand what the five-year log represents. Clients do not maintain prediction
 Andi carries a credential no other reader on the platform can claim: **her published bio states that Kasamba commissioned her to write its Birthday and Weekend Love Horoscopes.** When a platform with 500+ advisors chooses one of its own readers as the public voice of its astrology content, that is an institutional endorsement worth more than any badge.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/andi-kasamba-review.jpg" alt="Andi Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/andi-kasamba-review.webp" alt="Andi Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -285,7 +285,7 @@ Her résumé reads like the field's syllabus — Reiki Master trained in the Dia
 tarot — yes, that is the whole name — is Kasamba's quiet anomaly: 47,813 readings since 2015 at 4.9 stars, sold under the generic name of her own tool, with zero guru branding. Her review feed reveals what clients actually buy from her: not predictions but continuity. "Help," "insight," and "honest" dominate her language analysis while "accurate" barely registers — and one client has left 82 reviews in five weeks, the deepest ongoing client relationship we have ever recorded.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/tarot-kasamba-review.jpg" alt="tarot Kasamba reader" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/tarot-kasamba-review.webp" alt="tarot Kasamba reader" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -331,7 +331,7 @@ Her entry on a "best tarot readers" list needs one sentence of justification, be
 Elizabeth is a sixth-generation psychic, certified Reiki Master, and one of Kasamba's most experienced advisors — 48,800+ readings since 2003 at 4.8 stars. Her tarot work has a second layer most readers lack: she reads the spread and simultaneously works the client's live energy, which means the session does double duty as diagnosis and clearing.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -377,7 +377,7 @@ The dual method suits a specific moment: when the situation is mapped but you ar
 Tomorrow By Tabitha is Kasamba's speed specialist: 48,592 readings since 2007 at a perfect 5.0, with "quick" and "fast" appearing 27 times across her last 150 reviews. Speed usually signals shallow; her feed disproves it with the highest repeat-client concentration we have ever measured — 66% of her reviews come from clients with 3+ sessions.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/tomorrow-by-tabitha-kasamba-review.jpg" alt="Tomorrow By Tabitha Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/tomorrow-by-tabitha-kasamba-review.webp" alt="Tomorrow By Tabitha Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

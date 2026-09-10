@@ -6,8 +6,8 @@ platformName: "Purple Garden: Andrew Angel"
 rating: 4.5
 verdict: "Andrew Angel is Purple Garden's most deliberately exclusive top advisor: a fourth-generation psychic with 55,003 readings since 2014, a perfect 5.0, 23,069 likes — and a published code at the top of his profile: no general readings, no health or pregnancy questions, one specific topic per session. The rules function as quality control, and the reviews prove it: clients report 'spot on' predictions with 'key details following through,' delivered fast and direct. His loyalty signature is breadth, not concentration — thirteen repeat reviewers, no single superfan, consistency across the board. At $7.49/min he's a premium booking; the $30 new-client credit covers your first four minutes. Bring one real question and follow the rules."
 affiliateUrl: /go/purple-garden-andrew-angel/
-avatarUrl: /avatars/purple-garden/andrew-angel.jpg
-ogImage: "/avatars/purple-garden/andrew-angel.jpg"
+avatarUrl: /avatars/purple-garden/andrew-angel.webp
+ogImage: "/avatars/purple-garden/andrew-angel-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "From $7.49/min · $30 free credit on your first purchase"
 bestFor: "Clients with one specific, focused question — love, career, or a decision — who want a direct, detailed answer from a fourth-generation psychic, delivered without a wasted minute"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Andrew Angel Purple Garden Review 2026: 5.0 Stars",
     "description": "Andrew Angel on Purple Garden: 55,003 readings since 2014 at a perfect 5.0. Fourth-generation psychic behind a velvet rope of house rules — from $7.49/min.",
-    "image": "https://easternalignment.com/avatars/purple-garden/andrew-angel.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/andrew-angel-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

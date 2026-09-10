@@ -13,8 +13,8 @@ verdict: Intuitive Azzy is one of the most honest value propositions currently a
   But for anyone who wants clarity, direction, and genuine energetic support from
   a reader who won't oversell what the cards can do  -  she's exceptional.
 affiliateUrl: /go/keen-azzy/
-avatarUrl: /avatars/keen/intuitive-azzy.jpg
-ogImage: "/avatars/keen/intuitive-azzy.jpg"
+avatarUrl: /avatars/keen/intuitive-azzy.webp
+ogImage: "/avatars/keen/intuitive-azzy-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $2.22/min (Spiritual Readings profile)
 bestFor: Clients who want guidance-oriented readings with genuine energetic support  -  especially
@@ -26,19 +26,19 @@ updatedDate: '2026-04-09'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/intuitive-azzy-og.jpg",
     "headline": "Intuitive Azzy on Keen Review 2026: The $2.22/Min Reader Who Openly Admits Tarot Can't Predict Your Future - And Why That's Her Strongest Credential",
     "description": "An independent review of Intuitive Azzy on Keen - her guidance-first reading philosophy, what 3,100+ ratings across a decade actually reveal, the real value of $2.22/min, and exactly who gets the most from booking her.",
     "datePublished": "2026-04-09",
     "dateModified": "2026-04-09",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

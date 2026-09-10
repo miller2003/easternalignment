@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/love-after-loss.jpg"
 pros:
 - "Focuses strictly on Mediums and healers, not standard romance psychics"
 - "Addresses the crushing subconscious guilt of 'cheating' on a deceased spouse"
@@ -84,7 +83,7 @@ In esoteric tradition, a deceased soulmate does not abandon their surviving part
 If you are paralyzed by the feeling that you are "cheating" on your deceased spouse, Kelly777 specializes in the mechanics of the soul.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -123,7 +122,7 @@ With over 150,000 sessions, Kelly777 is a master of soul contracts. She understa
 If you want to date, but you feel completely emotionally numb and energetically exhausted, you must heal your aura before downloading dating apps.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -162,7 +161,7 @@ As Kasamba's top-ranked advisor, Elizabeth provides an incredibly safe, maternal
 If you recently met someone who feels incredibly familiar and safe, and you wonder if your late spouse had a hand in it, Chelle will find out.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

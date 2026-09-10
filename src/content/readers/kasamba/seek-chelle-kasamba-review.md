@@ -7,8 +7,8 @@ platformName: 'Kasamba: Seek Chelle'
 rating: 4.6
 verdict: Seek Chelle is one of the most methodologically specific readers on Kasamba — a 20-year advisor with triple-clair gifts and 57,500+ readings who hears what you leave unsaid.
 affiliateUrl: /go/kasamba-chelle/
-avatarUrl: /avatars/kasamba/seek-chelle-kasamba-review.jpg
-ogImage: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/seek-chelle-kasamba-review.webp
+ogImage: "/avatars/kasamba/seek-chelle-kasamba-review-og.jpg"
 freeOffer: 3 free minutes + 50% off
 pricing: $5.99/min chat (voice rates higher)
 bestFor: Love and relationships, spiritual crossroads, career direction, clients who struggle to name the real question

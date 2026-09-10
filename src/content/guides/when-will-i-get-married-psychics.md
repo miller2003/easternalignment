@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/when-will-i-marry.jpg"
 pros:
 - "Focuses specifically on psychics who use structured timeline tools (Astrology & Numerology)"
 - "Explains the difference between an 'energetic window' and a fixed destiny"
@@ -94,7 +93,7 @@ Ancient Hellenistic Astrology uses a technique called "Annual Profections." This
 If you want to know the exact year your marriage window opens, Meg's mastery of ancient astrological timing is unmatched.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.jpg" alt="Tarot With Meg" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.webp" alt="Tarot With Meg" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -133,7 +132,7 @@ Most astrologers use modern psychological astrology. Meg specifically uses Helle
 Safina is a third-generation psychic and a published Tarot Boot Camp author who specializes in deep, multi-tool analysis of your life path.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-safina-kasamba-review.jpg" alt="Psychic Safina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-safina-kasamba-review.webp" alt="Psychic Safina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -172,7 +171,7 @@ Safina does not guess. She pulls your natal chart and looks at the long-term pla
 Arradaza boasts a 25-year track record and uses a massive five-tool method to cross-reference her predictions, ensuring the highest level of accuracy.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -211,7 +210,7 @@ If Arradaza's Western Astrology chart says you will meet someone in 2027, she wi
 If you don't want a deep psychological breakdown and just want rapid-fire, multi-tool timeline predictions, Golden Eye is a machine of pure insight.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +249,7 @@ Golden Eye's 21 years of experience means she operates with extreme speed. She s
 Sometimes the reason you are not married has nothing to do with this current life. If your timeline has been inexplicably delayed, you need to check your past-life karma.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/psychicreader19622-raymond-keen-review-2026.jpg" alt="psychicreader19622 [Raymond]" class="reader-summary__avatar" />
+  <img src="/avatars/keen/psychicreader19622-raymond-keen-review-2026.webp" alt="psychicreader19622 [Raymond]" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

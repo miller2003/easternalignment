@@ -6,8 +6,8 @@ platformName: "Keen: Love Psychic Victoria Sands"
 rating: 4.5
 verdict: "Victoria Sands is one of the most verified readers on Keen by sheer ratings volume — 60,000 data points at 4.84 stars across 24 years. Her Inspirational style, deep mediumship, and remote viewing make her genuinely exceptional for specific needs. But $10.99/min is a categorically different financial commitment, and most clients asking love and relationship questions will get equivalent or better value from readers at a third of her rate. Know exactly what you're paying for before you connect."
 affiliateUrl: "/go/keen-victoria/"
-avatarUrl: /avatars/keen/love-psychic-victoria-sands-keen-review-2026.jpg
-ogImage: "/avatars/keen/love-psychic-victoria-sands-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/love-psychic-victoria-sands-keen-review-2026.webp
+ogImage: "/avatars/keen/love-psychic-victoria-sands-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$10.99/min"
 bestFor: "Clients seeking deep mediumship work, grief and closure readings, or remote viewing on a specific person — situations where experience depth and spiritual connection matter more than price"
@@ -15,7 +15,6 @@ publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
 metaDescription: "Honest review of Victoria Sands on Keen — $10.99/min, 4.84★ across 60K ratings, medium and remote viewing specialist. Exactly who should and shouldn't."
 metaTitle: "Love Psychic Victoria Sands on Keen Review 2026 | $10.99/min, 60K Ratings, Worth It?"
-canonicalUrl: "https://easternalignment.com/reviews/love-psychic-victoria-sands-keen-review"
 highlights:
   - "127,000+ readings on Keen since 2001 — 24 years of continuous presence"
   - "4.84-star rating across 60,000 verified reviews — largest ratings dataset in this review series"
@@ -39,19 +38,19 @@ cons:
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/love-psychic-victoria-sands-keen-review-2026-og.jpg",
     "headline": "Love Psychic Victoria Sands on Keen Review 2026: $19.99 Per Minute, 24 Years, 127,000 Readings — Is She Worth It? An Honest Assessment",
     "description": "An honest third-party review of Love Psychic Victoria Sands on Keen — confronting the $10.99/min rate directly, examining her 9/11 origin story, Inspirational communication style, medium and remote viewing specialties, and exactly who should and shouldn't book her.",
     "datePublished": "2026-04-25",
     "dateModified": "2026-04-25",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

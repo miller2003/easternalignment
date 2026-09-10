@@ -7,7 +7,7 @@ category: Roundup
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.webp"
 pros:
   - "Explains why honest readers are a rare minority on any psychic platform"
   - "Profiles 5 Kasamba readers with documented track records of uncomfortable truths"
@@ -114,7 +114,7 @@ If they spend the three minutes asking you for more context and telling you *"th
 Most psychic readings fail at the most critical juncture: the moment you disagree with the answer. A comfort-first reader immediately softens their position when they sense your resistance. Seek Chelle does not. Her reading style is structured around what she describes as "Triple Clair" —simultaneous clairvoyance (visual data), clairaudience (heard guidance), and clairsentience (emotional impressions). The convergence of three independent channels means she arrives at conclusions she is willing to defend.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -164,7 +164,7 @@ That pattern —emotional confrontation followed by correct action —is the gol
 Love Stefans is the platform's closest equivalent to an oracle who will tell you the end of the story without softening the journey. Kasamba has officially designated him as one of the three most experienced readers on the entire platform, and his methodology —pure vision-based clairvoyance, no tools, no cards, no astrology calculations —makes his sessions extraordinarily fast and his predictions extraordinarily testable.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -214,7 +214,7 @@ At 138,000+ completed readings across 18 years on Kasamba, his data profile is t
 The expensive readers on Kasamba charge high rates partly because of demand management: they cannot serve everyone, so price is the filter. Golden Eye occupies a different position —mid-tier pricing that has not increased despite a massive verified session volume, and a reading style that prioritizes velocity and directness over emotional curation.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -260,7 +260,7 @@ Her multi-tool approach —switching between clairvoyance, numerology, and energ
 Elizabeth is the anomaly on this list: she is one of Kasamba's most highly-rated readers by volume, she charges $4.99/min —one of the lowest rates on the entire platform —and she has kept that rate deliberately accessible for clients in emotional crisis. That pricing decision is itself an honesty signal: a reader motivated primarily by revenue would have raised their rate long ago.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -304,7 +304,7 @@ Her Reiki component is the platform's most accessible live energy-work offering 
 Ask Cristina occupies the rarest position in the honest reader category: she delivers specific, person-targeted information —what a particular individual is currently thinking or feeling about you —at a price point that does not punish clients who are already financially stretched by the aftermath of a relationship crisis.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina Kasamba Review" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina Kasamba Review" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

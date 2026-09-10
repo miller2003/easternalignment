@@ -6,8 +6,8 @@ platformName: "Kasamba: Best Psychic Readings"
 rating: 4.5
 verdict: "Best Psychic Readings is the most counterintuitive value on Kasamba: the platform's highest-volume advisor (153,514 readings since 2003) charging its entry-level rate ($1.99/min). A 4.9 across 40,000+ written reviews means the quality has been stress-tested more than almost any reader alive. If you've never had a reading and don't know where to start, the math says start here."
 affiliateUrl: /go/kasamba-best-psychic-readings/
-avatarUrl: /avatars/kasamba/best-psychic-readings-kasamba-review.jpg
-ogImage: "/avatars/kasamba/best-psychic-readings-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/best-psychic-readings-kasamba-review.webp
+ogImage: "/avatars/kasamba/best-psychic-readings-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$1.99/min (verify on live profile) · 3 free minutes + 50% off for new clients"
 bestFor: "First-time clients and budget-conscious regulars who want a proven, high-volume generalist for love, career, or family questions without premium-tier pricing"

@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/single-parents.jpg"
 pros:
 - "Focuses strictly on psychics who understand family dynamics, not just romance"
 - "Highlights empaths who can read the unspoken fears of children"
@@ -86,7 +85,7 @@ In Astrology, the 5th House rules Children, and the 4th House rules the Home. A 
 If your children are acting out, throwing tantrums, or completely withdrawing since you started dating, you need an Empath to translate their unexpressed terror.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -125,7 +124,7 @@ Seek Chelle operates with a "Triple Clair" capacity, but her mastery of Clairsen
 A man can be an amazing boyfriend to you while simultaneously possessing zero capacity to be a stepfather. David7 will expose the difference.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -164,7 +163,7 @@ David7 provides the absolute most honest male perspective on the internet. He un
 If you want to know if this man is actually destined to become a permanent pillar in your family's life, Meg uses ancient math to find out.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.jpg" alt="Tarot With Meg" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.webp" alt="Tarot With Meg" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

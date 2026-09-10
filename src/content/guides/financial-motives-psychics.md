@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/financial-motives.jpg"
 pros:
 - "Focuses strictly on psychics who can separate romantic feelings from financial parasitism"
 - "Explains how to check Astrological charts for '8th House' (Other People's Money) exploitation"
@@ -96,7 +95,7 @@ The Tarot is notoriously blunt about money. If your partner is hiding secret cre
 When dealing with money, you need cold, hard facts. Master Sher is a Tarot reader who operates like a forensic accountant.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -135,7 +134,7 @@ Master Sher does not care about your partner's romantic excuses. He lays out the
 If you want to know exactly what he is thinking when you pay the rent, Cristina uses remote telepathy to read his mind.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -174,7 +173,7 @@ At just $2.10 a minute, Cristina is a hyper-efficient tool. Give her his first n
 Many women struggle to understand how a man could be comfortable letting a woman pay for everything. David7 provides the unvarnished male explanation.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -213,7 +212,7 @@ David7 maps male psychology flawlessly. He will brutally dissect the "hobo-sexua
 If you are planning to marry this person or buy a house with them, you must check the astrological math to ensure they aren't a karmic liability.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-safina-kasamba-review.jpg" alt="Psychic Safina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-safina-kasamba-review.webp" alt="Psychic Safina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -252,7 +251,7 @@ Safina does not guess. She pulls your natal chart and his natal chart to check y
 If you are exhausted, financially drained, and just need a premium clairvoyant to tell you to finally pack his bags, Stefans is the executioner.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

@@ -6,8 +6,8 @@ platformName: "Keen: Eli Casey"
 rating: 4.7
 verdict: "Eli Casey's numbers are difficult to argue with: 81,000 ratings and more than 200,000 completed readings on Keen since 2001. He is a call-first, compassionately styled empath who leads with reassurance rather than raw prediction. At $8.97/min he sits in the upper tier, so use the $1 intro to test whether his thorough, supportive style fits your question before committing to a full session."
 affiliateUrl: /go/keen-eli-casey/
-avatarUrl: /avatars/keen/eli-casey.jpg
-ogImage: "/avatars/keen/eli-casey.jpg"
+avatarUrl: /avatars/keen/eli-casey.webp
+ogImage: "/avatars/keen/eli-casey-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.97/min"
 bestFor: "People who want a warm, thorough, reassuring empath for love, breakup, and commitment questions - and who value being talked through a situation step by step"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-15'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/eli-casey-og.jpg",
     "headline": "Eli Casey on Keen Review 2026: Can a 200,000-Reading Empath Still Deliver at $8.97/Min?",
     "description": "An independent review of Eli Casey on Keen - 81,000 ratings, 200,000+ readings since 2001, and an $8.97/min rate. What his track record and real client reviews actually reveal, and exactly who should book him.",
     "datePublished": "2026-06-15",
     "dateModified": "2026-06-15",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

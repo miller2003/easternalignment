@@ -12,8 +12,8 @@ verdict: A 25-year veteran with the widest tool set of any reader I've assessed 
   readings on love, career, or past life patterns. Her 'Direct' style and 98% accuracy
   claim deserve an honest look before you book.
 affiliateUrl: /go/keen-arradaza/
-avatarUrl: /avatars/keen/arradaza.jpg
-ogImage: "/avatars/keen/arradaza.jpg"
+avatarUrl: /avatars/keen/arradaza.webp
+ogImage: "/avatars/keen/arradaza-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $5.99/min
 bestFor: Multi-layered readings combining intuition and multiple divination tools  -  love,
@@ -23,19 +23,19 @@ updatedDate: '2026-03-18'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/arradaza-og.jpg",
     "headline": "Arradaza on Keen Review 2026: 25 Years, 86,000 Readings, and the Most Diverse Tool Set I've Seen on This Platform - An Honest Assessment",
     "description": "A third-party review of Arradaza on Keen - covering her five-tool reading method, 25-year track record, the '98% accuracy' claim, what real clients say, and who gets the most value at $5.99/min.",
     "datePublished": "2026-03-18",
     "dateModified": "2026-03-18",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

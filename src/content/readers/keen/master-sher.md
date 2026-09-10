@@ -9,8 +9,8 @@ verdict: Best for seekers who want direct, tarot-grounded clarity on relationshi
   or life decisions  -  not emotional reassurance. His honesty is his strongest asset;
   his slower chat pace is the only real trade-off.
 affiliateUrl: /go/keen-master-sher/
-avatarUrl: /avatars/keen/master-sher.jpg
-ogImage: "/avatars/keen/master-sher.jpg"
+avatarUrl: /avatars/keen/master-sher.webp
+ogImage: "/avatars/keen/master-sher-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $4.29/min
 bestFor: People who want honest, structured tarot readings without sugar-coating
@@ -20,19 +20,19 @@ updatedDate: '2026-04-22'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/master-sher-og.jpg",
     "headline": "Master Sher on Keen Review 2026: An Honest Assessment From Someone Who's Reviewed Dozens of Readers",
     "description": "An in-depth third-party review of Master Sher on Keen - covering tarot reading style, real accuracy standards, pricing breakdown, and exactly who gets the most value from booking him.",
     "datePublished": "2026-04-22",
     "dateModified": "2026-04-22",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

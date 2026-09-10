@@ -6,8 +6,8 @@ platformName: "Keen: Gabriel the Messenger"
 rating: 4.6
 verdict: "Gabriel the Messenger's 4.94 across 23,000 ratings and 138,000+ readings since 2008 is a heavyweight track record, and his no-tools approach is a genuine authenticity signal. At $8.99/min he is priced in the upper tier, but the volume and score are hard to argue with. Use the $1 intro to test his no-tools pickup before a full session."
 affiliateUrl: /go/keen-gabriel-the-messenger/
-avatarUrl: /avatars/keen/gabriel-the-messenger.jpg
-ogImage: "/avatars/keen/gabriel-the-messenger.jpg"
+avatarUrl: /avatars/keen/gabriel-the-messenger.webp
+ogImage: "/avatars/keen/gabriel-the-messenger-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$8.99/min"
 bestFor: "People who want a no-tools, relationship-focused reader with a massive track record - and who can absorb a premium rate"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-23'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/gabriel-the-messenger-og.jpg",
     "headline": "Gabriel the Messenger on Keen Review 2026: A No-Tools Reader Holding 23,000 Ratings at $8.99/Min",
     "description": "An independent review of Gabriel the Messenger on Keen - 23,000 ratings, 138,000+ readings since 2008, and a $8.99/min rate. A no-tools love specialist's track record, real client reviews, and what the premium buys.",
     "datePublished": "2026-06-23",
     "dateModified": "2026-06-23",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

@@ -6,8 +6,8 @@ platformName: "Kasamba: Spirit Amy"
 rating: 4.8
 verdict: "Spirit Amy owns the cleanest ledger we have ever reviewed: 17,297 likes against 25 dislikes across 49,727 readings since 2008 — a 99.9% approval ratio at a perfect 5.0. A clairvoyant and clairaudient medium (she sees symbols and pictures, and hears what she describes as Spirit's words), she's also the reader third-party directories credit with volunteering on missing-person cases. Her review feed is 64% repeat clients, her single 'negative' review in the last 150 reads 'amazing as always the absolute best,' and her dated receipts include a meeting predicted with a date and a description that 'happened exactly.' Chat runs $12.99/min with 3 free minutes; voice is $25.49, so book text. For love, loss, and the questions in between, this is the steadiest premium booking on Kasamba."
 affiliateUrl: /go/kasamba-spirit-amy/
-avatarUrl: /avatars/kasamba/spirit-amy-kasamba-review.jpg
-ogImage: "/avatars/kasamba/spirit-amy-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/spirit-amy-kasamba-review.webp
+ogImage: "/avatars/kasamba/spirit-amy-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $12.99/min · Voice $25.49/min · 3 free minutes for new clients"
 bestFor: "Love and relationship questions, mediumship and closure — for clients who want the most statistically validated reader on the platform and are willing to pay a premium for her"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Spirit Amy Kasamba Review 2026: 5.0 Stars, 25 Dislikes",
     "description": "Spirit Amy on Kasamba: 49,727 readings since 2008 at a perfect 5.0 — 17,297 likes vs 25 dislikes. Clairvoyant medium — chat $12.99/min, 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/spirit-amy-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/spirit-amy-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

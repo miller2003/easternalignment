@@ -2,7 +2,7 @@
 title: "Top 10 Most Accurate Love Psychics (2026): We Tracked Their Predictions — These 10 Have the Receipts"
 seoTitle: 'Most Accurate Love Psychics (2026): 10 With Verified Records'
 metaDescription: 'The 10 most accurate love psychics of 2026, ranked by verified prediction records: multi-year confirmations, public ledger receipts, tracked hits.'
-description: "The definitive accuracy ranking of love psychics in 2026. We tracked prediction outcomes across 158 reviewed readers on Kasamba, Keen, and Purple Garden, and ranked the 10 with the strongest verified records — from a client who kept a five-year prediction log to a reader whose calls were confirmed on a public street."
+description: "The definitive accuracy ranking of love psychics in 2026. We tracked prediction outcomes across 162 reviewed readers on Kasamba, Keen, and Purple Garden, and ranked the 10 with the strongest verified records — from a client who kept a five-year prediction log to a reader whose calls were confirmed on a public street."
 category: Roundup
 entities:
   - "Love Psychic"
@@ -13,7 +13,7 @@ entities:
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba, Purple Garden & Keen"
-avatarUrl: "/avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/love-specialist-isabelle-kasamba-review.webp"
 pros:
   - "Ranked by verified prediction outcomes — not star ratings, not session feelings"
   - "Five verification types defined and applied, so you can audit any reader yourself"
@@ -175,7 +175,7 @@ The full ranking first — then the verification framework, then the receipt beh
 
 ## The Five Verification Types (So You Can Audit Anyone)
 
-"Accurate" is the most abused word in this industry. Every profile claims it; almost none can prove it. After tracking prediction outcomes across 158 reviewed readers on three platforms, we can tell you that real accuracy evidence comes in exactly five forms — ranked here from strongest to weakest. Use this taxonomy on any reader, on or off this list.
+"Accurate" is the most abused word in this industry. Every profile claims it; almost none can prove it. After tracking prediction outcomes across 162 reviewed readers on three platforms, we can tell you that real accuracy evidence comes in exactly five forms — ranked here from strongest to weakest. Use this taxonomy on any reader, on or off this list.
 
 **Type 1 — Third-party hostile verification.** An independent, skeptical audience tracks the predictions and confirms them. The strongest evidence that exists, because the verifier has no incentive to be kind. One reader on this list has it.
 
@@ -201,7 +201,7 @@ Verification works differently on each platform: Kasamba's review feeds, Keen's 
 Love Specialist Isabelle holds a perfect 5.0 across 99,057 readings since 2005. Most psychic reviews are written within hours of a session — they measure how the reading felt. Isabelle's feed breaks that pattern: a documented stream of clients returning two, four, and six years later specifically to confirm that predictions came true.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-specialist-isabelle-kasamba-review.webp" alt="Love Specialist Isabelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -245,7 +245,7 @@ Her lane is the long-arc love question: will-they-come-back, marriage crossroads
 Annah holds a perfect 5.0 across 37,281 readings since 2015, with the single most time-stamped receipt in our audit series: on August 26, a client documented in the public Journeys ledger that Annah's "our paths will cross" prediction had just come true on her own street — her POI walked up and hugged her "so hard I couldn't breathe."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/annah.jpg" alt="Annah Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/annah.webp" alt="Annah Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -287,7 +287,7 @@ Annah holds a perfect 5.0 across 37,281 readings since 2015, with the single mos
 A Divine Spirit holds the cleanest record in our Kasamba audit series — 46,731 readings since 2007 at a perfect 5.0, with 3,683 likes against only 18 dislikes. But the headline is the bookkeeping: **one client has logged Maura's predictions in notes for five years and reports roughly 95% of them came true.**
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/divine-spirit-kasamba-review.jpg" alt="A Divine Spirit Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/divine-spirit-kasamba-review.webp" alt="A Divine Spirit Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -329,7 +329,7 @@ A Divine Spirit holds the cleanest record in our Kasamba audit series — 46,731
 Truelovetarot holds a perfect 5.0 across 39,956 readings with 15,385 likes against 39 dislikes (99.7%) — and a defining accuracy trait: she gives the same prediction across sessions and stands by it, including "she said she sees him reaching out this week. She's right! Just 4 days later out of the blue he texted!"
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/truelovetarot.jpg" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/truelovetarot.webp" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -371,7 +371,7 @@ Truelovetarot holds a perfect 5.0 across 39,956 readings with 15,385 likes again
 Love Stefans is a third-generation psychic with 138,003 readings since 2007. His accuracy signature is the delayed-verification pattern: clients who left sessions convinced he was wrong — who were actively angry — returning weeks later to confirm that what he described proved true.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -413,7 +413,7 @@ Love Stefans is a third-generation psychic with 138,003 readings since 2007. His
 lorrie c holds a 4.98 across 60,595 readings — and the strongest single verification credential in our entire audit: the toughest independent psychic-review forum on the internet tracked her predictions in real time and watched them land on the specifics that matter — contact, behavior, reasoning.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/lorrie-c.png" alt="lorrie c Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/lorrie-c.webp" alt="lorrie c Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -455,7 +455,7 @@ lorrie c holds a 4.98 across 60,595 readings — and the strongest single verifi
 Psychic Jewels' bio opens with what she cannot do — no timelines, no surveillance, no deciding for you. 47,273 readings since 2015 at 4.9, 27 years of practice, and a client base with a unique verification habit: deliberately waiting days after a prediction before writing the review, to test it first.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-jewels.jpg" alt="Psychic Jewels Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-jewels.webp" alt="Psychic Jewels Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -497,7 +497,7 @@ Psychic Jewels' bio opens with what she cannot do — no timelines, no surveilla
 Inspired Within — Charmaine to her regulars — is a certified medium and Reiki Master with 42,038 readings since 2008 at 4.9. Her feed's centerpiece: a client whose loan application was declined, whom Charmaine told "you would get it" — and who, acting on that confidence, demanded reassessment and was approved.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/inspired-within-kasamba-review.jpg" alt="Inspired Within Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/inspired-within-kasamba-review.webp" alt="Inspired Within Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -539,7 +539,7 @@ Inspired Within — Charmaine to her regulars — is a certified medium and Reik
 Psychic Jane Just Knows is a genuine Top Advisor — 21,000 ratings and 94,000+ readings since 2006 — with a review record of specific, timing-based hits that sustains one of the highest rates in the industry at $17.99/min.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/psychic-jane-just-knows.jpg" alt="Psychic Jane Just Knows Keen" class="reader-summary__avatar" />
+  <img src="/avatars/keen/psychic-jane-just-knows.webp" alt="Psychic Jane Just Knows Keen" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -581,7 +581,7 @@ Psychic Jane Just Knows is a genuine Top Advisor — 21,000 ratings and 94,000+ 
 light4you — Jodee Lynn, 24 years on Kasamba — closes this list with the most romantic receipt in our audit: a client whose proposal she predicted, with the timing, and the engagement arrived **in the week she called it.**
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/light4you-kasamba-review.jpg" alt="light4you Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/light4you-kasamba-review.webp" alt="light4you Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

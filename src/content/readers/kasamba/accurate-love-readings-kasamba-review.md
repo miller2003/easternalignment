@@ -6,8 +6,8 @@ platformName: "Kasamba: Accurate Love Readings"
 rating: 4.5
 verdict: "Accurate Love Readings holds a perfect 5.0 across 95,479 readings since 2007 — and earns trust the hard way, with a bio that openly says no psychic is 100% accurate and the future isn't set in stone. Her specialty is the question everyone actually asks: what is my partner feeling, thinking, and planning? At the current $5.49/min promo (reg. $10.99) with 3 free minutes, she's the strongest mid-price love specialist we've reviewed. She was marked BUSY when we checked — demand is the review."
 affiliateUrl: /go/kasamba-accurate-love-readings/
-avatarUrl: /avatars/kasamba/accurate-love-readings-kasamba-review.jpg
-ogImage: "/avatars/kasamba/accurate-love-readings-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/accurate-love-readings-kasamba-review.webp
+ogImage: "/avatars/kasamba/accurate-love-readings-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$5.49/min promo (reg. $10.99) chat & voice · 3 free minutes for new clients"
 bestFor: "Anyone stuck on 'what is my partner actually feeling or planning?' — reunion, commitment, and trust questions where reading the other person matters more than generic fortune-telling"

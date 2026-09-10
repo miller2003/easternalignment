@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/love-triangles.jpg"
 pros:
 - "Redefines 'third-party interference' to include toxic family members and emotional vampires"
 - "Highlights readers who can uncover hidden affairs without feeding your paranoia"
@@ -94,7 +93,7 @@ Sometimes, your partner is entangled with a third party because they have a mass
 If your intuition is screaming that he is cheating, but you have no physical proof, you need a psychic who acts as an esoteric polygraph test.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.jpg" alt="Psychic Yazmin" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.webp" alt="Psychic Yazmin" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -133,7 +132,7 @@ Yazmin uses the Tarot as a forensic tool. Give her the name of your partner (and
 If you are dealing with a Mama's Boy or a man who refuses to cut contact with a toxic ex, trying to understand his motives through a female lens will fail. 
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -172,7 +171,7 @@ David7 maps masculine behavior with brutal precision. He is unparalleled at expl
 If his ex is constantly hovering—using the kids, the dog, or manufactured crises to stay in contact—you need to know if he is secretly keeping her on the hook.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -211,7 +210,7 @@ Seek Chelle is a master Empath. She can tap directly into your partner's subcons
 If you need physical, visual confirmation of a third party's interference, Kelly777 possesses the exact specific skill set required.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +249,7 @@ Remote Viewing allows a psychic to perceive physical locations and environments 
 If you are currently trapped in a full-blown love triangle and you just need to know who he is going to choose in the end, you need a brutal verdict.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

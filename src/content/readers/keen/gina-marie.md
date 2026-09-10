@@ -11,8 +11,8 @@ verdict: Gina Marie's 20-year track record on Keen is hard to dismiss  -  but at
   her by voice call for love and relationship questions; manage your session time
   deliberately.
 affiliateUrl: /go/keen-gina-marie/
-avatarUrl: /avatars/keen/gina-marie.jpg
-ogImage: "/avatars/keen/gina-marie.jpg"
+avatarUrl: /avatars/keen/gina-marie.webp
+ogImage: "/avatars/keen/gina-marie-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $6.99/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships
@@ -23,19 +23,19 @@ updatedDate: '2026-04-24'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/gina-marie-og.jpg",
     "headline": "Gina Marie on Keen Review 2026: Can a No-Tools Pure-Channel Clairvoyant Justify $6.99/Min?",
     "description": "An independent review of Gina Marie on Keen - her no-tools clairvoyant approach, what 12,000 ratings across 20 years actually reveal, the real cost of a session, and exactly who gets value from booking her.",
     "datePublished": "2026-04-24",
     "dateModified": "2026-04-24",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

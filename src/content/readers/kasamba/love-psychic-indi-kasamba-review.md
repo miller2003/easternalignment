@@ -6,8 +6,8 @@ platformName: "Kasamba: Love Psychic Indi"
 rating: 4.4
 verdict: "Love Psychic Indi pairs 18 years and 102,522 readings of platform proof with the most credentialed background we've reviewed — Gold Medal Vedic astrologer, MBA, certified energy healer, NLP practitioner. Clients who've read with him for years report predictions with specific timelines that came to pass, delivered without sugarcoating. At $7.99/min he sits in the value mid-tier: the right pick if you want a direct, structured, timeline-driven answer to a love or career question."
 affiliateUrl: /go/kasamba-love-psychic-indi/
-avatarUrl: /avatars/kasamba/love-psychic-indi-kasamba-review.jpg
-ogImage: "/avatars/kasamba/love-psychic-indi-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/love-psychic-indi-kasamba-review.webp
+ogImage: "/avatars/kasamba/love-psychic-indi-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$7.99/min (verify on live profile) · 3 free minutes + 50% off for new clients"
 bestFor: "Clients who want direct, timeline-specific answers on love (reunions, soulmates, complicated situations) or career — and prefer credentialed structure over mystical theater"

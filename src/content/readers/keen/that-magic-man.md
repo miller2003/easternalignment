@@ -6,8 +6,8 @@ platformName: "Keen: That Magic Man"
 rating: 4.6
 verdict: "That Magic Man - James - is a direct, no-tools male reader on Keen with 14,000 ratings at 4.93 stars and 56,000+ readings since 2011. His reviews show a pattern of specific, sometimes dated predictions coming true, delivered with straight-talk reassurance. Book him by voice for love and relationship questions if you want a male perspective without tools or fluff."
 affiliateUrl: /go/keen-that-magic-man/
-avatarUrl: /avatars/keen/that-magic-man.jpg
-ogImage: "/avatars/keen/that-magic-man.jpg"
+avatarUrl: /avatars/keen/that-magic-man.webp
+ogImage: "/avatars/keen/that-magic-man-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$2.99/min"
 bestFor: "Clients who want a direct, no-tools male reader for love and relationship questions - and who value straight-talk reassurance over gentle hand-holding"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-24'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/that-magic-man-og.jpg",
     "headline": "That Magic Man (James) on Keen Review 2026: A Direct, No-Tools Male Reader With 56,000 Readings",
     "description": "An independent review of That Magic Man (James) on Keen - 14,000 ratings, 56,000+ readings since 2011, and a direct, no-tools style. What his track record and real client reviews reveal, and exactly who should book him.",
     "datePublished": "2026-06-24",
     "dateModified": "2026-06-24",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

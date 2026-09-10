@@ -5,8 +5,6 @@ platformName: "Purple Garden: Sister Michelle"
 rating: 3.8
 verdict: "Sister Michelle is a Purple Garden Spiritual Advisor with 17,737 readings since 2018 at a 4.8 platform rating and $8.99/min across chat, voice, and video. The platform score is real and reflects genuine client satisfaction. Our independent rating of 3.8 reflects a different question: how confidently we can recommend her to a reader who has not met her yet. Two lines in her own bio — that all negative reviews come from people 'not ready for the truth,' and a request to not ask for timeframes — shape that gap. She is a capable, direct, focused reader for the right client. For most readers weighing her cold, the case for booking is thinner than the 4.8 implies."
 affiliateUrl: /go/purple-garden-sister-michelle/
-avatarUrl: /avatars/purple-garden/sister-michelle.jpg
-ogImage: "/avatars/purple-garden/sister-michelle.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $8.99/min (Chat / Voice / Video)"
 bestFor: "Clients who want a direct, no-coddling love or career reading, do not need timeframes, and are comfortable with a reader whose accountability language warrants caution"

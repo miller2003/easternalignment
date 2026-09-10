@@ -13,7 +13,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.webp"
 pros:
   - "Ranked by session volume and review pattern analysis, not marketing claims"
   - "Covers the full price spectrum from $2.10/min to $10.99/min"
@@ -119,7 +119,7 @@ Specific-person accuracy is the ability to describe the characteristics, thought
 Love Stefans holds the most specific type of accuracy on Kasamba: pure vision-based clairvoyance on relationship trajectories, delivered without any tool to interpret, at a session volume of 138,000+. No platform designation is more significant than "Top 3 Most Experienced Reader" across Kasamba's entire 27-year history, and Stefans holds it.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Psychic Soul" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -165,7 +165,7 @@ The accuracy signal that distinguishes Stefans from other high-volume readers is
 Seek Chelle's accuracy is different in kind from Stefans'. Where Stefans delivers trajectory and temporal assessments with vision-only clairvoyance, Seek Chelle operates through the convergence of three simultaneous information channels — clairvoyance, clairaudience, and clairsentience — producing what she describes as "Triple Clair" readings that triangulate visual, auditory, and emotional data into a single diagnostic picture.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -211,7 +211,7 @@ What the Triple Clair architecture does for accuracy is reduce the error rate th
 Golden Eye occupies a unique accuracy niche: she delivers specific-person reads within the first 60–90 seconds of a session at a rate that makes her both verifiable and accessible. Her multi-tool approach — switching between clairvoyance, numerology, and energy reading — enables her to cover multiple dimensions of a question quickly without the deliberate slowness that some methodologies require.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -253,7 +253,7 @@ Golden Eye's accuracy is self-verifying in a particularly useful way: because sh
 Elizabeth is the strategic pick for seekers who need high accuracy at a price point that does not compound the financial pressure of a relationship crisis. At $4.99/min — a rate she has described as 'morally fair' by some metrics — she represents an extraordinary efficiency in the relationship between documented consistency and session cost.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -295,7 +295,7 @@ Elizabeth's Tarot-based methodology creates a specific type of accountability th
 Ask Cristina holds the most specific accuracy niche on this list: she tunes directly into the current thought-field of a named individual and reports what is present — the specific thoughts, feelings, and intentions of that person right now — at the most accessible price point for this level of specialization.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -337,7 +337,7 @@ Remote telepathy in chat format is one of the most skepticism-resistant skills i
 Cosmic Fusion's accuracy is empathic rather than clairvoyant: she steps into the emotional experience of your person of interest and reports what it actually feels like to be them in relation to this connection right now. This is categorically different from temporal prediction or specific-person telepathy — it is a felt-state report from inside another person's emotional reality.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

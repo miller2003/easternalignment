@@ -13,7 +13,7 @@ entities:
 platform: purple-garden
 rating: 4.88
 platformName: "Purple Garden"
-avatarUrl: "/avatars/purple-garden/psychic-logan.jpg"
+avatarUrl: "/avatars/purple-garden/psychic-logan.webp"
 pros:
   - "Ranked using Purple Garden's Journeys public ledger — the only platform-native accuracy verification in the industry"
   - "Every pick backed by a full published review with verified session counts"
@@ -176,7 +176,7 @@ For the platform mechanics behind these picks — pricing tiers, how the Journey
 Psychic Logan is Purple Garden royalty: **advisor #36** — one of the platform's original readers, eleven years in — with 64,955 readings at a perfect 5.0. His empowerment-first style ("I help you make good things happen") makes him the strongest life-path and destiny reader on the platform, with love, career, and family work close behind.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-logan.jpg" alt="Psychic Logan Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-logan.webp" alt="Psychic Logan Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -222,7 +222,7 @@ The advisor number matters more than it looks. #36 means Logan joined when the p
 Andrew Angel is Purple Garden's most deliberately exclusive top advisor: a fourth-generation psychic with 55,003 readings since 2014 at a perfect 5.0 — and a published code at the top of his profile: **no general readings, no health or pregnancy questions, one specific topic per session.** The rules function as quality control, and 23,069 likes say they work.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/andrew-angel.jpg" alt="Andrew Angel Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/andrew-angel.webp" alt="Andrew Angel Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -268,7 +268,7 @@ His loyalty signature is unusual: breadth, not concentration — thirteen repeat
 Annah holds a perfect 5.0 across 37,281 readings since 2015 — 14,785 likes against 94 dislikes (99.4%), a "highest rated" badge, and the most time-stamped receipt in our audit series: a client who wrote that Annah's "our paths will cross" prediction had just come true on her own street, when her POI walked up and hugged her "so hard I couldn't breathe."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/annah.jpg" alt="Annah Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/annah.webp" alt="Annah Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -314,7 +314,7 @@ The combination that earns her this slot is gentleness plus dateability — the 
 Truelovetarot — Sneha, a certified tarot reader, numerologist, and Akashic record reader from India — holds a perfect 5.0 across 39,956 readings since 2017, with 15,385 likes against just 39 dislikes (99.7%) and zero negative reviews in her last 150. Her defining trait, per her regulars: she gives the same prediction across sessions and stands by it.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/truelovetarot.jpg" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/truelovetarot.webp" alt="Truelovetarot Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -360,7 +360,7 @@ Here is why consistency outranks individual accuracy. Most people in a relations
 Athena Love is Purple Garden's truth-with-a-plan specialist: 54,032 readings since 2019 at 4.8 stars, delivered by a Christian reader working from Holy Spirit guidance. Her bio famously tells confirmation-seekers to book someone else — and her review feed is the only one we have audited where **even the one-star reviews read as accuracy endorsements**: "I am deeply hurt but I know this is probably very accurate."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/athena-love.jpg" alt="Athena Love Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/athena-love.webp" alt="Athena Love Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -406,7 +406,7 @@ Her intake protocol rewards preparation: arrive with names, birthdates, and your
 Tattooed Psychic — Jon Moss, 30 years of practice, attuned at Stonehenge — is Purple Garden's anti-stereotype reader, and he holds the most telling rule we have found on any profile: **NO BACK STORY.** He refuses your context, which means the specifics he produces cannot have come from you — the strongest structural proof of gift a client can ask for.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/tattooed-psychic.jpg" alt="Tattooed Psychic Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/tattooed-psychic.webp" alt="Tattooed Psychic Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -452,7 +452,7 @@ Cold reading feeds on what you tell the reader. Moss's protocol eliminates the f
 Satie Readings is a 4.9-star love-tarot reader with 40+ years of experience and nearly 18,000 readings since 2020, read live on camera. In a format where anyone can claim anything, she shuffles and draws where you can see her hands.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/satie-readings.jpg" alt="Satie Readings Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/satie-readings.webp" alt="Satie Readings Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -498,7 +498,7 @@ The camera changes the epistemics of a tarot session. In chat, "the cards say" r
 Oh Life Tarot holds Purple Garden's "most accurate" badge across 35,720 readings since 2018 at a perfect 5.0 — and her differentiator shows up in the most unusual five-star review in our audit series: **"she changed my outlook to life without predicting anything... absolutely great, and life changing."**
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/oh-life-tarot.jpg" alt="Oh Life Tarot Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/oh-life-tarot.webp" alt="Oh Life Tarot Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -544,7 +544,7 @@ A low repeat rate is usually a warning sign; here it is the product description.
 Psychic Norell holds a perfect 5.0 across 39,794 readings since 2016, with a "highest rated" badge and the most instructive review in our PG audit — from a client read for years across the industry: **"I've never had someone who was so on point... you need to talk to this person first."**
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-norell.jpg" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-norell.webp" alt="Psychic Norell Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -590,7 +590,7 @@ The $30-credit math is what seals the first-timer case. At $3.99/min, the credit
 Namrata is one of the most quietly compelling value propositions on Purple Garden: **a decade of experience, a 4.9 rating, and a $2.49/min rate** that most five-year-newer advisors charge. The selective session volume is the tell — she has prioritized quality over throughput.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/namrata.jpg" alt="Namrata Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/namrata.webp" alt="Namrata Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

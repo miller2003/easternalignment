@@ -6,8 +6,8 @@ platformName: "Kasamba: Raven Franks"
 rating: 4.7
 verdict: "Raven Franks is a 23-year Kasamba original — 67,179 readings since 2003 at a perfect 5.0 — and a genuine remote viewer who works from just names and birthdates, offering physical descriptions when shown. Her defining trait, per two decades of clients: where other readers give up on difficult situations, Raven stays and works. At the current $9.49/min promo (reg. $18.99) she's premium but accessible — the booking for complex, emotionally heavy situations that have defeated simpler readings."
 affiliateUrl: /go/kasamba-raven-franks/
-avatarUrl: /avatars/kasamba/raven-franks-kasamba-review.jpg
-ogImage: "/avatars/kasamba/raven-franks-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/raven-franks-kasamba-review.webp
+ogImage: "/avatars/kasamba/raven-franks-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$9.49/min promo (reg. $18.99) chat & voice · 3 free minutes for new clients"
 bestFor: "Complex, long-running situations — difficult relationships, stalled lives, cases where other readers gave up — where empathic depth and remote-viewing detail justify a premium rate"

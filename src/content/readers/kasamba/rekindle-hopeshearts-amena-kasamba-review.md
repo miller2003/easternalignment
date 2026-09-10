@@ -6,8 +6,8 @@ platformName: "Kasamba: Rekindle HopesHearts Amena"
 rating: 4.5
 verdict: "Rekindle HopesHearts Amena has the most concentrated client loyalty we've ever reviewed: 81% of her 150 most recent reviews come from repeat clients — one holds 52, another 36. And her regulars are unusually articulate about the deal they're making: 'even though timing is off I rather have prediction coming to pass not timing' — outcome accuracy over date precision, traded knowingly, for years. A natural-born psychic with 15 years of professional experience, her feed runs on long arcs: clients report predictions unfolding correctly across years, not weeks. 41,065 readings at 4.8 stars, 10,606 likes against 165 dislikes (98.5%). Chat $5.99/min with 3 free minutes; voice $15.99. Book her for the long game — the relationship that unfolds over seasons — not for deadline questions."
 affiliateUrl: /go/kasamba-rekindle-hopeshearts-amena/
-avatarUrl: /avatars/kasamba/rekindle-hopeshearts-amena-kasamba-review.jpg
-ogImage: "/avatars/kasamba/rekindle-hopeshearts-amena-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/rekindle-hopeshearts-amena-kasamba-review.webp
+ogImage: "/avatars/kasamba/rekindle-hopeshearts-amena-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $5.99/min · Voice $15.99/min · 3 free minutes for new clients · email readings from $21"
 bestFor: "Long-arc love situations — reunions, slow-burn relationships — where you want the outcome called correctly and can let the timing breathe"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Rekindle Amena Kasamba Review 2026: 4.8, 81% Repeat",
     "description": "Amena on Kasamba: 41,065 readings at 4.8. 81% repeat clients — one holds 52 reviews. Outcomes over timing, per her regulars — chat $5.99/min, 3 free min.",
-    "image": "https://easternalignment.com/avatars/kasamba/rekindle-hopeshearts-amena-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/rekindle-hopeshearts-amena-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

@@ -5,8 +5,8 @@ platformName: "Purple Garden: Fanny Dalfiume"
 rating: 4.3
 verdict: "Fanny Dalfiume is a 4.6-star Purple Garden metaphysics and tarot reader whose nearly 19,000 readings since 2021 and $1.99/min start make her the platform's high-volume, budget-tier option. The honest rating is a signal of consistency, not failure — at this price, very good is extraordinary value."
 affiliateUrl: /go/purple-garden-fanny-dalfiume/
-avatarUrl: /avatars/purple-garden/fanny-dalfiume.jpg
-ogImage: "/avatars/purple-garden/fanny-dalfiume.jpg"
+avatarUrl: /avatars/purple-garden/fanny-dalfiume.webp
+ogImage: "/avatars/purple-garden/fanny-dalfiume-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $1.99/min"
 bestFor: "Budget metaphysics and tarot readings from a high-volume reader you can test risk-free"

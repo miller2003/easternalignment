@@ -70,3 +70,31 @@
 - 校准方法：差评比（点踩/点赞，源 EA资料热度排名 xlsx）排序 → 正态 σ0.17 均值4.5 → 1 位小数 → 护栏 [平台−0.5, 平台+0.2]。分布目标：4.3–4.7 为主（~89%）、≥4.8 少数（≤10 页）、低尾 4.1–4.2。
 - Keen 无赞踩数据 → 以平台评分排序（不许编差评数）。正文/标题中的数字=平台公开数据陈述，不改；站内分只在 rating 字段+schema+数据驱动组件。
 - 豁免页（人工低分）改分前先问用户。
+
+## 全站技术审计基线（2026-09-10）
+- 报告：`技术审计报告_2026-09-10.md`；脚本：`scratch/audit_20260910/{audit,live_audit,followup}.py`（线上抓取缓存 315 页在 `cache/`）。可复跑。
+- 🔴 **线上 robots.txt 已被 Cloudflare 接管**（顶部 `# BEGIN Cloudflare Managed content`），`Disallow: /` 覆盖
+  GPTBot/ClaudeBot/Google-Extended/CCBot/Applebot-Extended/Bytespider/Amazonbot/meta-externalagent。
+  OAI-SearchBot / ChatGPT-User / Claude-User / PerplexityBot / Googlebot 未被列入，仍通畅。**UA 实测均 200 → 限制来自 robots 非 WAF。**
+  与仓库 `public/robots.txt` 的 "OPEN to all crawlers" 注释矛盾；是否有意开启待用户确认。
+- 🔴 **人数真值 = Kasamba 64 / Keen 49 / PG 49 = 162**（源文件计数，与 `siteStats.ts` 一致）。
+  硬编码/过期点：`llms.txt`（63/49/46）、`before-you-pay-for-a-psychic-reading.md`（158, 63/49/46）、
+  `top-love-psychics-online.md`（158）、**`most-accurate-love-psychics.md:5` 的 meta description（158）—— 被 RelatedContent 复用到 35+ 页**。
+  根因：`siteStats.ts` 触达不到 Markdown 正文与 `public/`。
+- 🔴 **`public/` 是 2026-09-08「实测口径降风险」改造的盲区**：`llms.txt` 仍含具体人数与 "first-hand testing"、"actually spent"。
+  下次同类全站替换必须同时 grep `public/`。
+- 🔴 **4 个 Keen 页 canonical/hreflang 指向 404**（漏 `-2026` 后缀）：flora-knows-all、love-psychic-victoria-sands、
+  psychic-suzen-on、psychicreader19622-raymond。修法＝删 frontmatter 的 `canonicalUrl` 行。
+- 🔴 **`/go/*` 被 Cloudflare Managed Challenge 拦（403）**，内容页正常。变现路径多一层质询；
+  `_headers` 给 `/go/*` 的规则在质询响应上无法生效。量化看 PostHog `aff_go_hit`/`aff_go_blocked`/`click_to_go_ms`。
+- **214 个 Product 节点 100% 缺 offers/aggregateRating/review**（comparison 页 ItemList 内层）→ 建议改 `@type: Thing`。
+- **sitemap 299 条零个 lastmod**；`/es/404/` 既在 sitemap 又 noindex；`/terms/`+`/es/terminos/` meta=index 但 robots=Disallow 且不在 sitemap。
+- **图片 174 文件 39.4MB 全 JPG**，最大 `avatars/keen/regina-jacks.jpg` 7,059KB；`<img>` 缺 width+height 34.5%。
+- **`/coupons/` HTML 539KB**（171 图）、`/reviews/kasamba/` 300KB；每页 3–7 个渲染阻塞样式表 → 这 4 页超过 middleware 150KB 阈值，AI 拿到的是 HTML。
+- **全站仅 2 条外链**：`/methodology/`→Wikipedia（有 rel）、`/reviews/kasamba/`→kasamba.com（**无 rel=sponsored**，唯一绕开 /go 门禁的出口）。
+
+### 构建踩坑补充（2026-09-10 实测）
+- 🔴 **不要并发启动构建**。前一次挂死的构建进程没退干净时起第二个，会导致新构建**永久挂死在 `Collecting build info` 之后**（CPU 归零、0 文件写入）。
+  解法：`rm -rf .astro node_modules/.astro` 后单独重跑。判定挂死：PowerShell 采样 node 进程 CPU 写文件再读，`delta=0`。
+- sitemap 缺失时的补法：先 `diff` 新 dist 与备份的 `*.html` 相对路径集合；**完全一致就直接 cp 备份 sitemap**（比 gen_sitemap.py 权威）。
+- 构建后基线：**563 html / 767 文件 / go 177 / sitemap 299 条 / index 191B / sitemap-0 118,220B**（767＝765+2，多出 `_headers` 与 `_routes.json`）。

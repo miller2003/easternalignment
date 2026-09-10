@@ -1,6 +1,6 @@
 ---
 title: "Nicholas Knight Purple Garden Review 2026: 4th-Generation Psychic or Just Another Love Coach?"
-seoTitle: "Nicholas Knight Purple Garden Review 2026: Love Specialist & Life Coach, 9 Years, $4.49/min | EasternAlignment"
+seoTitle: "Nicholas Knight Purple Garden Review 2026: $4.49/min"
 description: "An independent review of Nicholas Knight on Purple Garden — a 4.9-star self-described 4th-generation natural-born psychic and love specialist with 6,040 readings since 2017, $4.49/min. What the lineage claim means in practice, what real clients say, and who should book."
 platformName: "Purple Garden: Nicholas Knight"
 rating: 4.5
@@ -8,8 +8,8 @@ pricing: "$4.49/min"
 bestFor: "Clients navigating complex love situations who want both psychic insight and concrete coaching direction — particularly those dealing with reunion, communication blocks, or pattern-breaking in relationships"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/nicholas-knight/"
 affiliateUrl: /go/purple-garden-nicholas-knight/
-avatarUrl: /avatars/purple-garden/nicholas-knight.jpg
-ogImage: "/avatars/purple-garden/nicholas-knight.jpg"
+avatarUrl: /avatars/purple-garden/nicholas-knight.webp
+ogImage: "/avatars/purple-garden/nicholas-knight-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-07'
 updatedDate: '2026-07-07'

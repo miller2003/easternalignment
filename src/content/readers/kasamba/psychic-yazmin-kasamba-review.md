@@ -6,8 +6,8 @@ platformName: "Kasamba: Psychic Yazmin"
 rating: 4.7
 verdict: "Psychic Yazmin holds a perfect 5.0 across 119,836 Kasamba readings since 2005, and her reviews show why: she doesn't move her predictions to please you, and she stays with clients through months-long crises. At a flat $4.99/min with 3 free minutes, book her if you want a steady guide for a hard season — not a one-off fortune cookie."
 affiliateUrl: /go/kasamba-yazmin/
-avatarUrl: /avatars/kasamba/psychic-yazmin-kasamba-review.jpg
-ogImage: "/avatars/kasamba/psychic-yazmin-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/psychic-yazmin-kasamba-review.webp
+ogImage: "/avatars/kasamba/psychic-yazmin-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $4.99/min · Voice $4.99/min · 3 free minutes"
 bestFor: "People in a long, hard stretch — a situationship, a health scare, a family crisis — who need one consistent voice, not a different opinion every week"

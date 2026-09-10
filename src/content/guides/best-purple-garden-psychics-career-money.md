@@ -13,7 +13,7 @@ entities:
 platform: purple-garden
 rating: 4.88
 platformName: "Purple Garden"
-avatarUrl: "/avatars/purple-garden/andrew-angel.jpg"
+avatarUrl: "/avatars/purple-garden/andrew-angel.webp"
 pros:
   - "Ranked by decision-read quality — coaching credentials plus Journeys-verified career outcomes"
   - "Every pick backed by a full published review with verified session counts"
@@ -158,7 +158,7 @@ Every rate on this page assumes a standard booking. The [Purple Garden review](/
 Andrew Angel's published protocol — no general readings, one specific topic per session — reads as arrogance until you understand what it actually is: **decision hygiene enforced at the door.** A reader who refuses to let your session sprawl is protecting the quality of the one read you came for. 55,003 readings since 2014 at a perfect 5.0 says the market agrees.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/andrew-angel.jpg" alt="Andrew Angel Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/andrew-angel.webp" alt="Andrew Angel Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -204,7 +204,7 @@ For a single high-stakes decision — the offer on the table, the partnership on
 Sagest is the most disciplined reader we have reviewed on any platform: a Top Accuracy badge, 62,205 readings at a perfect 5.0, and a published session protocol — first names only, two questions, one clarification — that treats your minutes like a precision instrument. She is also a trained life coach for fears, self-worth, and abuse, which makes her the rare career reader for both "what happens next" and "why do I keep sabotaging this."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/sagest.jpg" alt="Sagest Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/sagest.webp" alt="Sagest Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +250,7 @@ The coaching credential changes what a career session can reach. Most career sta
 Psychic Logan — advisor #36, eleven years, 64,955 readings at a perfect 5.0 — is the career booking for questions bigger than a single decision: not "should I take this job" but "is this even the right field." His empowerment-first frame ("I help you make good things happen") is built for direction, not verdicts.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/psychic-logan.jpg" alt="Psychic Logan Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/psychic-logan.webp" alt="Psychic Logan Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -296,7 +296,7 @@ Life-path career questions fail with prediction-style readers because the answer
 Paul85 built Purple Garden's fastest practice: 43,000 readings since 2020 — roughly 20 a day — with a posted schedule of **every day, 07:00–21:00 Atlantic.** Volume usually erodes quality; his current feed shows zero negative reviews in 150, with 65% repeat clients. For the decision with a 48-hour deadline, he is the most available top-rated reader on the platform.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/paul85.jpg" alt="Paul85 Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/paul85.webp" alt="Paul85 Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -342,7 +342,7 @@ The honest math: $12.99/min is premium, and the $30 credit buys only about two m
 Adam Africa is a 5.0-star reader who leads with a certified life-coach credential and backs it with clairaudience, clairvoyance, clairsentience, and expert tarot — roughly 9,500 readings since 2019 with a 94% accuracy self-report and 38% returning clients. His positioning is explicit: he refuses to hand you "fast-food guidance."
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/adam-africa.jpg" alt="Adam Africa Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/adam-africa.webp" alt="Adam Africa Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -388,7 +388,7 @@ A career transition is a sequence of decisions spread over months — and what m
 PlutonianDust is a seven-year veteran who runs one of the platform's more credible dual-method practices — astrology layered under tarot — at $3.99/min, below most comparable readers. The name is the methodology: Pluto's astrological domain is transformation and the exposure of what is hidden.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/plutoniandust.jpg" alt="PlutonianDust Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/plutoniandust.webp" alt="PlutonianDust Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -434,7 +434,7 @@ Career timing is the category where vague intuition does the most damage — "so
 Namrata closes this list the way she closes most value comparisons on the platform: a decade of experience, a 4.9 rating, and a $2.49/min rate that makes a 12-minute session cost what four minutes costs elsewhere. For career questions — which tend to need context, unpacking, and a second follow-up question — the rate structure is a genuine strategic asset.
 
 <div class="reader-summary">
-  <img src="/avatars/purple-garden/namrata.jpg" alt="Namrata Purple Garden" class="reader-summary__avatar" />
+  <img src="/avatars/purple-garden/namrata.webp" alt="Namrata Purple Garden" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

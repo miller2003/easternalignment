@@ -6,8 +6,8 @@ platformName: "Keen: Psychic SuZen"
 rating: 4.4
 verdict: "Best for people who want more than a prediction — who want to understand what's happening, why it's happening, and what they can actually do about it. SuZen's dual background as a psychic and trained life coach and social worker produces a different kind of reading: one that ends with options, not just outcomes. Not the right fit for pure prediction-seekers or those wanting a structured tool-based session."
 affiliateUrl: "/go/keen-suzen/"
-avatarUrl: /avatars/keen/psychic-suzen-on-keen-review-2026.jpg
-ogImage: "/avatars/keen/psychic-suzen-on-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/psychic-suzen-on-keen-review-2026.webp
+ogImage: "/avatars/keen/psychic-suzen-on-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$5.40/min"
 bestFor: "Sensitive, intuitive people seeking clarity on relationships or life direction — especially those who want actionable guidance alongside the reading itself"
@@ -15,7 +15,6 @@ publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
 metaDescription: "Psychic SuZen on Keen: life coach, social worker, and empath — 4.84★ across 8K ratings. Her action-oriented style, Women's Issues focus, and honest fit."
 metaTitle: "Psychic SuZen on Keen Review 2026 | Life Coach Psychic, PBS Featured, $5.40/min"
-canonicalUrl: "https://easternalignment.com/reviews/psychic-suzen-keen-review"
 highlights:
   - "40,627 readings on Keen since 2018 — strong volume for a 7-year tenure"
   - "4.84-star rating across 8,132 verified reviews"
@@ -38,19 +37,19 @@ cons:
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/psychic-suzen-on-keen-review-2026-og.jpg",
     "headline": "Psychic SuZen on Keen Review 2026: When the Psychic Is Also a Life Coach and Social Worker — What That Changes About a Reading",
     "description": "An honest third-party review of Psychic SuZen on Keen — covering her dual life coach and social worker background, multi-tradition spiritual framework, action-oriented reading style, and exactly who gets the most from her approach at $5.40/min.",
     "datePublished": "2026-04-25",
     "dateModified": "2026-04-25",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

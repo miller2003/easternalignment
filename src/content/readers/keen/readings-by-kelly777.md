@@ -6,8 +6,8 @@ platformName: "Keen: readings by kelly777"
 rating: 4.5
 verdict: "One of the most battle-tested readers on Keen by sheer volume  -  159,000+ sessions at 4.91 stars is a track record that's hard to dismiss. Best for love and soulmate clarity, past life context, and remote viewing on specific people or situations. The promotional bio language and chat-only format are the only real friction points."
 affiliateUrl: "/go/keen-kelly/"
-avatarUrl: /avatars/keen/readings-by-kelly777.jpg
-ogImage: "/avatars/keen/readings-by-kelly777.jpg"
+avatarUrl: /avatars/keen/readings-by-kelly777.webp
+ogImage: "/avatars/keen/readings-by-kelly777-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "Love, soulmate, and past life readings with a high-volume reader whose track record speaks louder than her bio"
@@ -16,19 +16,19 @@ updatedDate: "2026-04-01"
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/readings-by-kelly777-og.jpg",
     "headline": "Readings by Kelly777 on Keen Review 2026: Behind 159,000 Sessions - What One of the Platform's Highest-Volume Readers Actually Delivers",
     "description": "An honest third-party review of readings by Kelly777 on Keen - covering her remote viewing skill, past life specialty, real method behind the 'master tarot' claim, and what 159K readings at 4.91 stars actually means for your session.",
     "datePublished": "2026-04-01",
     "dateModified": "2026-04-01",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

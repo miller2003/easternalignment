@@ -6,8 +6,8 @@ platformName: "Purple Garden: Psychic Jeanne"
 rating: 4.5
 verdict: "Psychic Jeanne is a fifth-generation, licensed psychic with 25,083 Purple Garden readings since 2016 and a 4.8, specializing in love with clear boundaries and no sugarcoating. Chat $5.99/min. Book her for a steady, honest read through a hard season; skip her if you want a reader to answer an endless list of questions."
 affiliateUrl: /go/purple-garden-psychic-jeanne/
-avatarUrl: /avatars/purple-garden/psychic-jeanne.jpg
-ogImage: "/avatars/purple-garden/psychic-jeanne.jpg"
+avatarUrl: /avatars/purple-garden/psychic-jeanne.webp
+ogImage: "/avatars/purple-garden/psychic-jeanne-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $5.99/min · Voice $8.99/min · Video $13.49/min"
 bestFor: "People in a hard season who want a steady, honest, no-judgment read from a fifth-generation licensed reader"

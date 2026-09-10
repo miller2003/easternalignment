@@ -7,8 +7,8 @@ platformName: 'Kasamba: Psychic Simmi'
 rating: 4.6
 verdict: "An independent review of Psychic Simmi on Kasamba. She's a quiet, detail-oriented 4.9-star oracle-card reader whose grounded interpretations avoid theatrical cold-reading tactics."
 affiliateUrl: /go/kasamba-simmi/
-avatarUrl: /avatars/kasamba/psychic-simmi-kasamba-review.png
-ogImage: "/avatars/kasamba/psychic-simmi-kasamba-review.png"
+avatarUrl: /avatars/kasamba/psychic-simmi-kasamba-review.webp
+ogImage: "/avatars/kasamba/psychic-simmi-kasamba-review-og.jpg"
 publishDate: '2026-05-08'
 updatedDate: '2026-08-13'
 customSchema: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Review\",\n  \"name\": \"Psychic Simmi Kasamba Review (2026)\",\n  \"reviewBody\": \"Psychic Simmi is a detail-oriented oracle card reader on Kasamba with a 4.9-star rating. She specializes in love and relationship readings, offering grounded, intuitive interpretations without theatrical cold-reading tactics. Her slower typing pace is a minor drawback on per-minute billing, but the depth of her readings consistently justifies the time. Standard rate $3.99/min.\",\n  \"reviewRating\": {\n    \"@type\": \"Rating\",\n    \"ratingValue\": \"4.6\",\n    \"bestRating\": \"5\",\n    \"worstRating\": \"1\"\n  },\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\"\n  },\n  \"itemReviewed\": {\n    \"@type\": \"Service\",\n    \"name\": \"Psychic Simmi\",\n    \"url\": \"https://www.kasamba.com/psychic-reading/readers/psychic-simmi/\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Kasamba\",\n      \"url\": \"https://www.kasamba.com\"\n    },\n    \"serviceType\": \"Psychic Reading\",\n    \"description\": \"Oracle card-based psychic reading service specializing in love, relationships, and emotional clarity\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Eastern Alignment\",\n    \"url\": \"https://easternalignment.com\"\n  },\n  \"datePublished\": \"2026-05-08\",\n  \"dateModified\": \"2026-05-08\"\n}"

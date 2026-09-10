@@ -72,7 +72,7 @@ const ordered = platform
           {featured && platform && <span class="deal-card__tag">On this page</span>}
           <a href={card.reviewPath} class="deal-card__logo-link" title={`Read ${offer.name} Review`}>
             <div class="deal-card__logo-wrapper">
-              <img src={platformLogo(card.key)} alt={`${offer.name} icon`} class="deal-card__icon" loading="lazy" />
+              <img src={platformLogo(card.key)} alt={`${offer.name} icon`} class="deal-card__icon" width="24" height="24" loading="lazy" />
               <span class="deal-card__logotype" style={card.logotypeStyle}>{card.logotype}</span>
             </div>
           </a>

@@ -10,8 +10,8 @@ verdict: Best for people navigating emotionally complex relationship situations 
   perspective. His tool-free intuitive style and 17-year track record are genuine
   assets; his premium price point demands you come prepared.
 affiliateUrl: /go/keen-david7/
-avatarUrl: /avatars/keen/david7.jpg
-ogImage: "/avatars/keen/david7.jpg"
+avatarUrl: /avatars/keen/david7.webp
+ogImage: "/avatars/keen/david7-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $6.99/min
 bestFor: Twin flame and relationship readings from a direct, tool-free male intuitive
@@ -22,19 +22,19 @@ updatedDate: '2026-03-29'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/david7-og.jpg",
     "headline": "David7 on Keen Review 2026: The Male Psychic Perspective on Twin Flames - What 94,000 Readings Actually Tell You",
     "description": "An honest third-party review of David7 on Keen - covering his tool-free clairvoyant approach, twin flame specialization, dual profile pricing, and exactly who gets real value at $6.99/min.",
     "datePublished": "2026-03-29",
     "dateModified": "2026-03-29",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

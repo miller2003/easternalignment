@@ -13,7 +13,7 @@ entities:
 platform: kasamba
 rating: 4.9
 platformName: "Kasamba"
-avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.jpg"
+avatarUrl: "/avatars/kasamba/seek-chelle-kasamba-review.webp"
 pros:
   - "Explains the structural reason twin flame questions are the most exploited category in psychic services"
   - "Profiles 5 readers whose TF methodology is specific enough to produce verifiable, actionable readings"
@@ -132,7 +132,7 @@ These are the specific behaviors that identify a TF reader who is generating rev
 Twin flame chaser-runner dynamics are, at their root, psychological mechanisms: the runner's avoidance is driven by fear of the connection's intensity; the chaser's pursuit is driven by the same intensity expressed as yearning rather than flight. Seek Chelle's Triple Clair methodology — cross-referenced clairvoyance, clairaudience, and clairsentience — is uniquely suited to the psychological depth that this dynamic requires.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -176,7 +176,7 @@ For a TF reading, this methodology produces a specific type of output that is ra
 Love Stefans is the reader for a specific, painful TF question: *Is this connection actually moving toward reunion, or is it energetically over?* His tool-free clairvoyance cuts directly to the trajectory without the philosophical frame that makes some TF readings feel spiritually resonant but practically useless. He will tell you what he sees, including when what he sees is that the reunion timeline is longer than you want or that the specific conditions required are ones you are not yet meeting.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -214,7 +214,7 @@ Love Stefans is the reader for a specific, painful TF question: *Is this connect
 The most agonizing part of a TF separation for the chaser is not the distance itself — it is not knowing what the runner is actually experiencing. The runner's behavior (silence, avoidance, sometimes hostility) contradicts the TF framework's claim that both parties feel the connection's intensity equally. Cosmic Fusion's deep empathic methodology is specifically designed to step into the runner's emotional experience and report what is actually present there.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.jpg" alt="Cosmic Fusion Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/cosmic-fusion-kasamba-review.webp" alt="Cosmic Fusion Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -254,7 +254,7 @@ Her Tarot component also provides the structural advantage of named card positio
 Golden Eye's rapid-connection methodology makes her uniquely efficient for TF phase assessments: she can deliver a clear picture of where the connection currently sits in its arc within minutes, without the extended warm-up that some TF-specialized readers require. Her multi-tool approach — switching between clairvoyance, numerology, and energy reading — covers the multiple dimensions of a TF reading efficiently.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -292,7 +292,7 @@ Golden Eye's rapid-connection methodology makes her uniquely efficient for TF ph
 Ask Cristina's remote telepathy specialty is narrow but directly useful for one of the most common TF questions: *Is the runner still thinking about this connection, or have they moved on energetically?* Her ability to tune into the specific thought-field of a named individual makes her the most targeted reader for this question at the most accessible price point.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/ask-cristina-kasamba-review.jpg" alt="Ask Cristina Kasamba" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/ask-cristina-kasamba-review.webp" alt="Ask Cristina Kasamba" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

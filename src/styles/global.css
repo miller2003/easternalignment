@@ -1,5 +1,5 @@
 /* ============================================================
-   EasternAlignment — Design System
+   Eastern Alignment — Design System
    A warm, grounded, trustworthy aesthetic for spiritual guidance
    ============================================================ */
 
@@ -866,6 +866,29 @@ h5, h6 {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
+}
+
+/* Skip link — first focusable element on every page. Parked off-screen until it
+   receives keyboard focus, so it never affects the visual layout; keyboard and
+   screen-reader users get a one-tab jump past the header, nav and offer bars
+   straight to <main id="main-content">. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-primary-dark, #6B5438);
+  color: #FFFFFF;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+  outline: 2px solid #FFFFFF;
+  outline-offset: -4px;
 }
 
 /* Reduced motion preference */

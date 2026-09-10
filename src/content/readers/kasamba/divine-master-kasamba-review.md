@@ -6,8 +6,8 @@ platformName: "Kasamba: Divine Master"
 rating: 4.5
 verdict: "Divine Master has the clearest niche among Kasamba's high-volume advisors: love, breakup, and reunite guidance, backed by 77,204 readings since 2011, a 4.9 rating, and 35 years of claimed practice across his local shop and the platform. His review feed is built on returning regulars — the clients who keep a reader honest. At $7.99/min (verify live) he's mid-priced, timeline-oriented, and solution-focused: the specialist for the exact moment after a breakup when you need to know what happens next."
 affiliateUrl: /go/kasamba-divine-master/
-avatarUrl: /avatars/kasamba/divine-master-kasamba-review.jpg
-ogImage: "/avatars/kasamba/divine-master-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/divine-master-kasamba-review.webp
+ogImage: "/avatars/kasamba/divine-master-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$7.99/min (verify on live profile) · 3 free minutes + 50% off for new clients"
 bestFor: "Post-breakup and will-we-reunite questions, marriage and commitment crossroads, and career-growth decisions where you want timelines and solutions rather than open exploration"

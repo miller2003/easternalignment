@@ -6,8 +6,8 @@ platformName: "Keen: Chloe Has Your Love Insights"
 rating: 4.1
 verdict: "Chloe Has Your Love Insights is a budget-priced Keen reader - 7,370 ratings, 35,997 readings since 2015, at just $2.58/min. She is a direct, tarot-and-Lenormand reader who promises truth 'with compassion' after 25 years. Her 4.56 average is solid but below the elite tier, and some clients note impatience. Book her if you want an affordable, straight-talking love read and can handle a blunt delivery."
 affiliateUrl: /go/keen-chloe-has-your-love-insights/
-avatarUrl: /avatars/keen/chloe-has-your-love-insights.jpg
-ogImage: "/avatars/keen/chloe-has-your-love-insights.jpg"
+avatarUrl: /avatars/keen/chloe-has-your-love-insights.webp
+ogImage: "/avatars/keen/chloe-has-your-love-insights-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$2.58/min"
 bestFor: "People who want an affordable, direct love-and-relationship read from an experienced tarot reader - and who can handle blunt honesty without needing reassurance"
@@ -17,19 +17,19 @@ updatedDate: '2026-08-10'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/chloe-has-your-love-insights-og.jpg",
     "headline": "Chloe Has Your Love Insights on Keen Review 2026: 36,000 Readings at $2.58/Min",
     "description": "An independent review of Chloe Has Your Love Insights on Keen - 7,370 ratings, 35,997 readings since 2015, and a $2.58/min rate. What her 'delivering truth with compassion' approach and real client reviews reveal, and exactly who should book her.",
     "datePublished": "2026-08-10",
     "dateModified": "2026-08-10",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

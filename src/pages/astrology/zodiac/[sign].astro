@@ -37,7 +37,7 @@ const personSchema = {
 
 <BaseLayout title={pageTitle} description={pageDesc} jsonLd={personSchema} noindex={true}>
   <div class="page-with-sidebars">
-    <main class="main-col">
+    <div class="main-col">
       <div class="sign-page">
         <Breadcrumb items={[{ label: 'Astrology', href: '/astrology/' }, { label: sign.name }]} />
 
@@ -153,7 +153,7 @@ const personSchema = {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   </div>
 </BaseLayout>
 

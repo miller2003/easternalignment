@@ -7,7 +7,6 @@ category: Roundup
 platform: purple-garden
 rating: 4.9
 platformName: "Purple Garden"
-avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
   - "Explains how to use Purple Garden's video bios and Journeys feed to identify genuinely honest readers before spending"
   - "Profiles 5 readers whose public prediction record shows willingness to deliver uncomfortable truths"

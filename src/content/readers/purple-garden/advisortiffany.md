@@ -5,8 +5,6 @@ platformName: "Purple Garden: AdvisorTiffany"
 rating: 3.9
 verdict: "AdvisorTiffany is a Purple Garden Spiritual Clarity reader with 5,405 readings since 2018 at a 4.2 platform rating and chat from $2.49/min. The platform score is itself an honest mid-tier — lower than the 4.8–5.0 average that dominates Purple Garden — so our independent rating of 3.9 sits only 0.3 below it. The gap is shaped less by the score than by the evidence the bio itself supplies before you pay: an unpunctuated run of self-conferred titles, four separate Master claims, a published spelling error, a request that clients not 'negative project' because it lowers her 'vibrational level,' and an eight-year tenure that has produced fewer readings than established peers complete in a quarter. She is a real, affordable, focused-enough reader for the right client. The bio is the first reading she gives you — read it carefully."
 affiliateUrl: /go/purple-garden-advisortiffany/
-avatarUrl: /avatars/purple-garden/advisortiffany.jpg
-ogImage: "/avatars/purple-garden/advisortiffany.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $2.49/min · Voice $1.99/min · Video $1.99/min"
 bestFor: "Budget-conscious clients who want an empathic, non-judgmental listener over chat or voice, and are comfortable reading a bio that signals style over structure"

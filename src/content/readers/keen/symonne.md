@@ -8,8 +8,8 @@ pricing: "$3.09/min (per our audit data — verify on live profile)"
 bestFor: "Big-decision moments — relationships, life direction, commitment fear, grief, dreams — where you want the underlying truth read aloud, with spiritual depth and practical next steps, at a budget rate"
 canonicalUrl: "https://easternalignment.com/reviews/keen/symonne/"
 affiliateUrl: /go/keen-symonne/
-avatarUrl: /avatars/keen/symonne.png
-ogImage: "/avatars/keen/symonne.png"
+avatarUrl: /avatars/keen/symonne.webp
+ogImage: "/avatars/keen/symonne-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 publishDate: '2026-08-18'
 updatedDate: '2026-08-18'

@@ -6,8 +6,8 @@ platformName: "Kasamba: Cosmic Fusion"
 rating: 4.6
 verdict: "Cosmic Fusion is a 5.0-star Kasamba reader with 70,360 readings since 2011 and a chat rate of just $3.99/min — one of the best value-per-star ratios on the platform. Voice, however, runs $39.99/min (10x more). Book chat for an affordable, empathic, accurate reading; never book voice without doing the math first."
 affiliateUrl: /go/kasamba-cosmic-fusion/
-avatarUrl: /avatars/kasamba/cosmic-fusion-kasamba-review.jpg
-ogImage: "/avatars/kasamba/cosmic-fusion-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/cosmic-fusion-kasamba-review.webp
+ogImage: "/avatars/kasamba/cosmic-fusion-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $3.99/min · Voice $39.99/min (10x gap) · 3 free minutes"
 bestFor: "People who want a warm, empathic, 5.0-accurate reading at the cheapest chat rate on this site — and who know to use text, not voice"

@@ -6,8 +6,8 @@ platformName: "Keen: Lollie"
 rating: 4.6
 verdict: "Lollie is one of the most unambiguously direct readers on Keen. With 20,000 ratings at 4.92 stars and 70,000+ readings since 2001, she has built a following on a simple promise: no small talk, no sugarcoating, practical steps. At $6.99/min she is mid-priced, and her 'message FIRSTREAD for 3 free minutes' offer lets you test her style before spending. Book her if you want blunt truth about love and you are comfortable steering your own questions."
 affiliateUrl: /go/keen-lollie-ext-5555/
-avatarUrl: /avatars/keen/lollie-ext-5555.jpg
-ogImage: "/avatars/keen/lollie-ext-5555.jpg"
+avatarUrl: /avatars/keen/lollie-ext-5555.webp
+ogImage: "/avatars/keen/lollie-ext-5555-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "People who want a blunt, practical love coach who skips reassurance and gets straight to what they see - and who are happy to arrive with tight, ordered questions"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-25'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/lollie-ext-5555-og.jpg",
     "headline": "Lollie on Keen Review 2026: A 70,000-Reading 'No Fluff' Love Coach at $6.99/Min?",
     "description": "An independent review of Lollie on Keen - 20,000 ratings, 70,182 readings since 2001, and a $6.99/min rate. What her direct, playing-card method and real client reviews actually reveal, and exactly who should book her.",
     "datePublished": "2026-06-25",
     "dateModified": "2026-06-25",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

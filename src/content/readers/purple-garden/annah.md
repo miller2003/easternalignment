@@ -6,8 +6,8 @@ platformName: "Purple Garden: Annah"
 rating: 4.7
 verdict: "Annah holds a perfect 5.0 across 37,281 Purple Garden readings since 2015, with 14,785 likes against 94 dislikes (99.4%) and a 'highest rated' badge — plus the most time-stamped receipt in our audit series: on August 26, a client wrote that Annah's 'our paths will cross' prediction had just come true on her own street, when her POI walked up and hugged her 'so hard I couldn't breathe.' A self-described 'honest, gentle, earth loving cat mom Capricorn' with 27 years of experience, she specializes in love, breakups, third-party situations, and twin flames. 40% of her feed is repeat clients. Chat $7.99/min with the $30 credit covering about four minutes; voice $9.99. Book her for love questions where you want gentle delivery with dated, verifiable calls."
 affiliateUrl: /go/purple-garden-annah/
-avatarUrl: /avatars/purple-garden/annah.jpg
-ogImage: "/avatars/purple-garden/annah.jpg"
+avatarUrl: /avatars/purple-garden/annah.webp
+ogImage: "/avatars/purple-garden/annah-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $7.99/min · Voice $9.99/min · $30 free credit on your first purchase"
 bestFor: "Love, breakup, and twin-flame questions where you want a gentle 27-year veteran whose predictions arrive with dates you can check"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Annah Purple Garden Review 2026: 5.0 Stars, 37,281 Readings",
     "description": "Annah on Purple Garden: 37,281 readings at 5.0, 'highest rated' badge. The sidewalk prophecy that came true — chat $7.99/min, $30 free credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/annah.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/annah-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

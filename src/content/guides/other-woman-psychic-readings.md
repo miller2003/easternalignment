@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/other-woman.jpg"
 pros:
 - "Provides a strictly judgment-free zone for women involved with married or attached men"
 - "Filters out 'moral policing' psychics who project their own biases onto the reading"
@@ -84,7 +83,7 @@ Divorce is not just an emotional event; it is a financial and legal massacre. A 
 If he keeps promising that he will file the divorce papers "next month," but next month never comes, you need a male translator to explain his stalling.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -121,7 +120,7 @@ If he keeps promising that he will file the divorce papers "next month," but nex
 If you have wasted three years waiting in the shadows and you cannot take the anxiety for one more day, Love Stefans provides the ultimate premium verdict.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -158,7 +157,7 @@ If you have wasted three years waiting in the shadows and you cannot take the an
 If you suspect that his marriage isn't actually as "dead" as he claims it is, Yazmin uses the Tarot to spy on the true dynamic inside his home.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.jpg" alt="Psychic Yazmin" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.webp" alt="Psychic Yazmin" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

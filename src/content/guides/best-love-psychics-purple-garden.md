@@ -7,7 +7,6 @@ category: "Love & Relationships"
 platform: "purple-garden"
 rating: 4.8
 platformName: "Purple Garden"
-avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
   - "Purple Garden's video bios let you screen advisor style before spending on a full session"
   - "Journeys ledger gives verifiable prediction track records unavailable on most platforms"

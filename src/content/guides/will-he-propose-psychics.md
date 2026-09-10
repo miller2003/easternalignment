@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.8
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/marriage-psychics.jpg"
 pros:
 - "Focuses strictly on psychics with proven timeline accuracy (predicting the 'When')"
 - "Filters out fake psychics who promise a wedding just to keep you paying"
@@ -94,7 +93,7 @@ If a psychic tells you the proposal window is six months away, and you decide to
 If you want undeniable proof of a timeline rather than vague intuition, Arradaza is the most methodologically diverse reader we found.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -133,7 +132,7 @@ Arradaza is the ultimate timeline architect. By cross-referencing Western and Ch
 If you know he loves you, but every time the word "marriage" is mentioned he shuts down, you need to understand the hidden trauma blocking his action.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -172,7 +171,7 @@ Operating with a "Triple Clair" capacity, Seek Chelle bypasses his words and tap
 Trying to understand male commitment logic through a feminine lens will drive you insane. You need someone who understands the masculine architecture of providing and protecting.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -211,7 +210,7 @@ David7 maps the dynamics of men with clinical precision. He is unparalleled at e
 If you are tired of generic predictions and want a deep, contextual understanding of the stalling pattern in your relationship, Meg is a profound resource.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.jpg" alt="Tarot With Meg" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.webp" alt="Tarot With Meg" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -250,7 +249,7 @@ Meg uses Hellenistic Astrology, which is an ancient system specifically designed
 If you have been waiting five years for a ring and you are finally ready to walk away, you do not need a deep astrological chart reading. You need a brutal, definitive answer.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

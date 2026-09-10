@@ -6,8 +6,8 @@ platformName: "Keen: Intuitive Guidance with LC"
 rating: 4.5
 verdict: "Lori is the reader in this series with the most statistically credible near-perfect rating — 4.97 across 8,687 sessions over 16 years produces a quality signal that is harder to dismiss than any other number in this lineup. The fairytale reader concern raised in independent forum discussion is real and worth understanding, but it is answered more directly by the evidence of 7-year repeat clients than by any counter-argument I could construct. She delivers something specific: accurate, compassionate, efficient guidance that genuinely calms the mind. For the right question and the right client, she is one of the most consistently reliable choices on Keen."
 affiliateUrl: "/go/keen-lc/"
-avatarUrl: /avatars/keen/intuitive-guidance-with-lc-on-keen-review-2026.jpg
-ogImage: "/avatars/keen/intuitive-guidance-with-lc-on-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/intuitive-guidance-with-lc-on-keen-review-2026.webp
+ogImage: "/avatars/keen/intuitive-guidance-with-lc-on-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$10.88/min (Tarot Card Readings profile)"
 bestFor: "Clients who want warmth and accuracy in the same session without having to choose between them — particularly those in emotionally turbulent situations who need both honest guidance and genuine calm"
@@ -18,19 +18,19 @@ metaDescription: "4.97 stars, 8,687 reviews, $10.88/min. Lori (LC) on Keen has t
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/intuitive-guidance-with-lc-on-keen-review-2026-og.jpg",
     "headline": "Intuitive Guidance with LC (Lori) on Keen Review 2026: 4.97 Stars Across 8,687 Sessions — and the \"Fairytale Reader\" Question That Needs a Direct Answer",
     "description": "An independent review of Intuitive Guidance with LC on Keen — why 4.97 across 8,687 reviews is the most statistically robust rating in this series, what the fairytale reader concern actually means, and who Lori is specifically built for.",
     "datePublished": "2026-04-26",
     "dateModified": "2026-04-26",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/evidential-mediums.jpg"
 pros:
 - "Differentiates between 'emotional comfort' psychics and true 'Evidential Mediums'"
 - "Explains why souls sometimes cannot be contacted immediately after death"
@@ -86,7 +85,7 @@ If your spouse died three days ago, a true medium might tell you, *"I cannot rea
 If you want concrete, physical-level signals that the medium has connected to your specific spouse, Chelle's clairsentient style is the strongest fit on Kasamba.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -125,7 +124,7 @@ Seek Chelle is a master of Clairsentience (clear feeling). When she calls upon t
 If your spouse passed away suddenly, and you are consumed by guilt because you were not at the hospital, Kelly777 is the strongest fit for working toward that closure.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -164,7 +163,7 @@ With over 150,000 sessions, Kelly777 is an elite bridge between realms. Sudden d
 If you do not want to use Tarot cards, birth charts, or tools, Stefans is a pure visionary who sees spirits as clearly as he sees the living.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

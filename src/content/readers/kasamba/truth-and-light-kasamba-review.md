@@ -6,8 +6,8 @@ platformName: "Kasamba: Truth and Light"
 rating: 4.7
 verdict: "Truth and Light carries Kasamba's 'Highest Ranked Advisor' tagline, a perfect 5.0 across 87,202 readings since 2005, and the deepest professional credential stack we've seen — engineering degree, MBA, certified Vedic astrologer, and diplomas in psychotherapy, relationship counselling, and stress consultancy. Clients call him Vic, and they call him a 'life saviour.' At $23.99/min he's premium-priced; the case for booking is that you're hiring two professions — psychic and trained counsellor — in one session."
 affiliateUrl: /go/kasamba-truth-and-light/
-avatarUrl: /avatars/kasamba/truth-and-light-kasamba-review.jpg
-ogImage: "/avatars/kasamba/truth-and-light-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/truth-and-light-kasamba-review.webp
+ogImage: "/avatars/kasamba/truth-and-light-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$23.99/min (verify on live profile) · 3 free minutes + 50% off for new clients"
 bestFor: "Clients who want psychic insight delivered with counsellor-level emotional skill — life-direction, relationship, and meaning questions where the delivery matters as much as the answer"

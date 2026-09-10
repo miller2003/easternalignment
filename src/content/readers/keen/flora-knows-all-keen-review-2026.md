@@ -6,8 +6,8 @@ platformName: "Keen: Flora Knows All"
 rating: 4.4
 verdict: "Flora is the clearest value play in this review series — $2.52/min with a multi-tool skill set and a client engagement rate that outpaces readers with ten times her volume. The trade-off is track record depth: she's months into building something that may be exceptional, but you're betting earlier in that arc than with the veterans here. For the right client, that bet costs almost nothing to test."
 affiliateUrl: "/go/keen-flora/"
-avatarUrl: /avatars/keen/flora-knows-all-keen-review-2026.jpg
-ogImage: "/avatars/keen/flora-knows-all-keen-review-2026.jpg"
+avatarUrl: /avatars/keen/flora-knows-all-keen-review-2026.webp
+ogImage: "/avatars/keen/flora-knows-all-keen-review-2026-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$2.52/min"
 bestFor: "Love and relationship readings for clients who want accessible pricing, multi-tool guidance, and compassionate support — especially those open to working with an emerging reader building a strong early track record"
@@ -15,7 +15,6 @@ publishDate: "2026-04-25"
 updatedDate: "2026-04-25"
 metaDescription: "Honest review of Flora Knows All on Keen — $2.52/min, 4.73★, 42% written review rate. When a newer reader at budget pricing is worth the risk — and when."
 metaTitle: "Flora Knows All on Keen Review 2026 | $2.52/min, Angel Readings, New Reader Assessed"
-canonicalUrl: "https://easternalignment.com/reviews/flora-knows-all-keen-review"
 highlights:
   - "6,400+ readings in months — one of the fastest early-growth trajectories on Keen"
   - "4.73-star rating across 1,175 verified reviews"
@@ -38,19 +37,19 @@ cons:
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/flora-knows-all-keen-review-2026-og.jpg",
     "headline": "Flora Knows All on Keen Review 2026: The Lowest Price in the Category, a Fast-Rising Track Record, and the Honest Question of Whether New Readers Are Worth the Risk",
     "description": "An honest third-party review of Flora Knows All on Keen — covering her $2.52/min rate, 6,400 readings built in months, angel reading specialty, real review patterns, and exactly when a newer reader at a budget price makes sense to book.",
     "datePublished": "2026-04-25",
     "dateModified": "2026-04-25",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/lgbtq-psychics.jpg"
 pros:
 - "Highlights readers who use specifically inclusive tools (like Queer Tarot decks)"
 - "Differentiates between psychics who are merely 'tolerant' versus genuinely 'fluent' in queer dynamics"
@@ -99,7 +98,7 @@ In esoteric theory, Twin Flames are often described as holding "Divine Masculine
 Meg is the gold standard for LGBTQ+ readings on Keen because she has actively solved the "Tool Bias" problem.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.jpg" alt="Tarot With Meg" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.webp" alt="Tarot With Meg" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -138,7 +137,7 @@ Meg is one of the only advisors on Keen who explicitly lists **Queer Tarot** in 
 If your relationship blocks are deeply tied to religious guilt, familial rejection, or the trauma of coming out, you need a psychic who can double as a healer.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -177,7 +176,7 @@ As Kasamba's top-ranked advisor, Elizabeth operates at a shockingly low price po
 If you are in a highly volatile, intense queer relationship and cannot figure out who is the "Runner" and who is the "Chaser," Seek Chelle is an empathic master.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -216,7 +215,7 @@ Seek Chelle bypasses physical tools entirely. She uses her "Triple Clair" abilit
 If you feel an inexplicably deep bond with your queer friends or chosen family, Kelly777 can explain the past-life origins of those connections.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -255,7 +254,7 @@ With over 150,000 sessions, Kelly777 specializes in past lives. The LGBTQ+ commu
 If your relationship is non-traditional—polyamorous, open, or undefined—you need a reader who doesn't panic when you break the "standard relationship rules."
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.jpg" alt="Psychic Yazmin" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.webp" alt="Psychic Yazmin" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -294,7 +293,7 @@ Yazmin uses Tarot as a fluid entry point rather than a rigid rulebook. Where oth
 Sometimes, you do not want to talk about your identity at all. You just want a psychic to tell you if your partner is cheating, without turning the session into a sociology lesson.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

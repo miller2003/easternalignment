@@ -6,8 +6,8 @@ platformName: "Kasamba: Divinely Spiritual"
 rating: 4.4
 verdict: "Divinely Spiritual holds the strangest résumé we've reviewed: a Master of Science and extensive psychological education, alongside an inherited ancestral gift — science and spirit in one reader. The combination produces a distinctive session: clinically structured, emotionally precise, and direct. The standout receipt in his feed: a client whose divorce finalization date he predicted years in advance — 'the only one who got that right.' 50,022 readings since 2016 at 4.9 stars, 11,171 likes against 208 dislikes, with a fiercely loyal core (one regular holds 17 reviews and 'doesn't bother' with anyone else). Chat $3.99/min with 3 free minutes; voice runs $39.99/min, so book chat."
 affiliateUrl: /go/kasamba-divinely-spiritual/
-avatarUrl: /avatars/kasamba/divinely-spiritual-kasamba-review.jpg
-ogImage: "/avatars/kasamba/divinely-spiritual-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/divinely-spiritual-kasamba-review.webp
+ogImage: "/avatars/kasamba/divinely-spiritual-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $3.99/min · Voice $39.99/min · 3 free minutes for new clients"
 bestFor: "Analytical minds who want a psychic reading with clinical structure — and anyone who wants a long-range prediction from a reader with documented outlier accuracy"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Divinely Spiritual Kasamba Review 2026: MSc Psychic",
     "description": "Divinely Spiritual on Kasamba: Master of Science + inherited gift, 50,022 readings at 4.9. He predicted a client's divorce date years out — chat $3.99/min.",
-    "image": "https://easternalignment.com/avatars/kasamba/divinely-spiritual-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/divinely-spiritual-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

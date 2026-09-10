@@ -6,8 +6,8 @@ platformName: "Kasamba: Love Soulmate"
 rating: 4.5
 verdict: "Love Soulmate — Alex to her regulars — holds a perfect 5.0 across 39,789 Kasamba readings since 2007, with 9,960 likes against 205 dislikes (98.0%). Her differentiator is a certified Level II counseling credential fused with the reading: clients describe leaving with a strategy, not just a prediction — 'think from head and not heart is like a home run for me.' Her repeat structure is strong (62% of her current feed, with regulars at 26, 22, and 17 reviews), and her fans are emphatic: 'she's not here to waste time or take money. she's here to genuinely help and predictions are always correct.' Chat $4.99/min with 3 free minutes; voice runs $39.99, so book text. For love questions where your heart needs a head, she's the specialist."
 affiliateUrl: /go/kasamba-love-soulmate/
-avatarUrl: /avatars/kasamba/love-soulmate-kasamba-review.jpg
-ogImage: "/avatars/kasamba/love-soulmate-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/love-soulmate-kasamba-review.webp
+ogImage: "/avatars/kasamba/love-soulmate-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $4.99/min · Voice $39.99/min · 3 free minutes for new clients"
 bestFor: "Love and relationship decisions where emotion is drowning strategy — clients who want the reading plus a clear-headed plan for what to do next"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Love Soulmate Kasamba Review 2026: 5.0 Stars",
     "description": "Love Soulmate on Kasamba: 39,789 readings since 2007 at 5.0. Certified counselor — 'think from head, not heart' — chat $4.99/min, 3 free minutes.",
-    "image": "https://easternalignment.com/avatars/kasamba/love-soulmate-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/love-soulmate-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

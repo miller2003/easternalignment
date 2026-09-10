@@ -5,7 +5,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/divorce-psychics.jpg"
 pros:
 - "Focuses on psychics who deliver strict timelines rather than vague emotional comfort"
 - "Highlights readers who can differentiate between a temporary separation and a permanent divorce"
@@ -104,7 +103,7 @@ If any psychic tells you that your ex is under a black magic spell, or that they
 If your male partner has suddenly gone cold, filed for divorce, or initiated a no-contact period, trying to understand his motives through a feminine lens will drive you insane.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/david7.jpg" alt="David7" class="reader-summary__avatar" />
+  <img src="/avatars/keen/david7.webp" alt="David7" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -143,7 +142,7 @@ David7 maps the dynamics of breakups with clinical precision. He is unparalleled
 When a separation involves infidelity, legal battles, or decades of shared history, you need the highest level of premium expertise available. 
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.jpg" alt="Love Stefans" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/love-stefans-psychic-soul-kasamba-review.webp" alt="Love Stefans" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -182,7 +181,7 @@ Stefans is famously direct. He uses no tools, receiving visions directly from hi
 Divorces are messy, chaotic, and loud. If you want a reader who is completely unbothered by the drama and will deliver the hard facts via traditional Tarot structure, Master Sher is unmatched.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -221,7 +220,7 @@ Master Sher lays out the cards and reads the situation exactly as it stands. If 
 If the breakup was sudden and you are left paralyzed by a lack of closure, you need a deep empath who can step into your ex's mind and pull out the answers they refused to give you.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/seek-chelle-kasamba-review.jpg" alt="Seek Chelle" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/seek-chelle-kasamba-review.webp" alt="Seek Chelle" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -260,7 +259,7 @@ Seek Chelle bypasses the physical silence and taps directly into the energetic s
 Sometimes a divorce seems to happen out of nowhere. If you suspect infidelity, interference from in-laws, or hidden financial motives, Yazmin is the investigator you need.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.jpg" alt="Psychic Yazmin" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.webp" alt="Psychic Yazmin" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -299,7 +298,7 @@ Yazmin uses the Tarot as a sharp emotional scalpel. Provide her with the name of
 If you have broken up and gotten back together five times, you need to know if this current separation is just another cycle, or if the karmic contract is officially permanently closed.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -338,7 +337,7 @@ Arradaza cross-references Western and Chinese Astrology with Tarot. If you provi
 Some divorces feel so cosmically unfair that they destroy your faith. Kelly777 specializes in tracing the current trauma back to its origin.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/readings-by-kelly777.jpg" alt="Readings by Kelly777" class="reader-summary__avatar" />
+  <img src="/avatars/keen/readings-by-kelly777.webp" alt="Readings by Kelly777" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

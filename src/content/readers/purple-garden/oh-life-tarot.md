@@ -6,8 +6,8 @@ platformName: "Purple Garden: Oh Life Tarot"
 rating: 4.7
 verdict: "Oh Life Tarot holds Purple Garden's 'most accurate' badge across 35,720 readings since 2018 at a perfect 5.0 — 10,090 likes against 60 dislikes (99.4%). Her differentiator shows up in the most unusual five-star review in our audit series: a client who writes 'she changed my outlook to life without predicting anything... absolutely great, and life changing.' An empowerment-first reader with 10+ years of experience, her sessions trade fortune-telling for clarity — honest, direct feedback that clients use to make their own best choice. Her feed is broad rather than fan-clubbed (22% repeat), the signature of a reader people visit for the turning points. Chat $6.99/min with the $30 credit covering about four minutes; voice $7.99. Book her when the question isn't 'what will happen' but 'what should I do.'"
 affiliateUrl: /go/purple-garden-oh-life-tarot/
-avatarUrl: /avatars/purple-garden/oh-life-tarot.jpg
-ogImage: "/avatars/purple-garden/oh-life-tarot.jpg"
+avatarUrl: /avatars/purple-garden/oh-life-tarot.webp
+ogImage: "/avatars/purple-garden/oh-life-tarot-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $6.99/min · Voice $7.99/min · $30 free credit on your first purchase"
 bestFor: "Crossroads moments where you need clarity more than prophecy — honest, empowering reads that change how you see your own situation"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Oh Life Tarot Purple Garden Review 2026: 5.0, Most Accurate",
     "description": "Oh Life Tarot on Purple Garden: 35,720 readings at 5.0, 'most accurate' badge. Life-changing without a prediction — $6.99/min.",
-    "image": "https://easternalignment.com/avatars/purple-garden/oh-life-tarot.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/oh-life-tarot-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

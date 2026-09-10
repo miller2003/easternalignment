@@ -6,8 +6,8 @@ platformName: "Kasamba: Magical Aura"
 rating: 4.5
 verdict: "Magical Aura — Lisa to her regulars — pairs a fifth-generation psychic lineage with credentials you can actually check: a Bachelor of Science in Psychology and a certification in clinical and metaphysical hypnotherapy. 38,516 Kasamba readings since 2016 at a perfect 5.0, 10,282 likes against 88 dislikes (99.2%). Her feed's signature is microscopic detail — 'very microscopically detailed and not just a broad outlook' — plus dated receipts that convert doubters: 'I literally met someone in the timeline she told me,' and from a self-described questioner, 'prediction came true, exactly the way she said it would.' $5.99/min flat for chat or voice with 3 free minutes. Book her for love questions where you want fine-grained detail from a reader trained in how minds actually work."
 affiliateUrl: /go/kasamba-magical-aura/
-avatarUrl: /avatars/kasamba/magical-aura-kasamba-review.jpg
-ogImage: "/avatars/kasamba/magical-aura-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/magical-aura-kasamba-review.webp
+ogImage: "/avatars/kasamba/magical-aura-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat & Voice $5.99/min · 3 free minutes for new clients"
 bestFor: "Detail-hungry clients who want microscopic reads — timelines, specifics, dynamics — from a psychology- and hypnotherapy-trained psychic"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Magical Aura Kasamba Review 2026: 5.0, 38,516 Readings",
     "description": "Magical Aura on Kasamba: 38,516 readings at 5.0. Psychology BSc + clinical hypnotherapy — microscopic detail, exact predictions — $5.99/min, 3 free min.",
-    "image": "https://easternalignment.com/avatars/kasamba/magical-aura-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/magical-aura-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

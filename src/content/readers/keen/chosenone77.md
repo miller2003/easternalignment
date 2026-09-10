@@ -6,8 +6,8 @@ platformName: "Keen: ChosenOne77"
 rating: 4.6
 verdict: "ChosenOne77 is a high-average, long-tenured Keen reader - 5,832 ratings at 4.94 stars and 28,316 readings since 2006. He positions himself as guiding souls 'through intuitive wisdom for two decades.' At $6.53/min he is upper-mid priced. Book him if you want an elite-rated, experienced intuitive without dropping into the $10+ premium tier."
 affiliateUrl: /go/keen-chosenone77/
-avatarUrl: "/avatars/keen/chosenone77.png"
-ogImage: "/avatars/keen/chosenone77.png"
+avatarUrl: "/avatars/keen/chosenone77.webp"
+ogImage: "/avatars/keen/chosenone77-og.jpg"
 freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$6.53/min"
 bestFor: "People who want an elite-rated (4.94), two-decade Keen reader for love and life questions - and who want to avoid the highest premium rates"
@@ -17,19 +17,19 @@ updatedDate: '2026-06-21'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/chosenone77-og.jpg",
     "headline": "ChosenOne77 on Keen Review 2026: 28,000 Readings of Intuitive Wisdom at $6.53/Min",
     "description": "An independent review of ChosenOne77 on Keen - 5,832 ratings, 28,316 readings since 2006, and a $6.53/min rate. What his 'guiding souls through intuitive wisdom for two decades' approach and real client reviews reveal, and exactly who should book him.",
     "datePublished": "2026-06-21",
     "dateModified": "2026-06-21",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

@@ -8,8 +8,8 @@ pricing: "$4.99/min (verify on live profile)"
 bestFor: "Life path, destiny, and love questions where you want an empowering 'make good things happen' approach from one of Purple Garden's original advisors"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/psychic-logan/"
 affiliateUrl: /go/purple-garden-psychic-logan/
-avatarUrl: /avatars/purple-garden/psychic-logan.jpg
-ogImage: "/avatars/purple-garden/psychic-logan.jpg"
+avatarUrl: /avatars/purple-garden/psychic-logan.webp
+ogImage: "/avatars/purple-garden/psychic-logan-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
 updatedDate: '2026-08-18'

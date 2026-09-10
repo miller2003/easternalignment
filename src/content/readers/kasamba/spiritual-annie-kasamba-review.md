@@ -6,8 +6,8 @@ platformName: "Kasamba: Spiritual Annie"
 rating: 4.4
 verdict: "Spiritual Annie holds a platform-ranked Top 10 position in love & relationships, built on 51,930 readings since 2014 at 4.9 stars — 17,046 likes against 404 dislikes. Her specialty is clairsentience: reading the emotional currents under your situation, the things unspoken. Her review feed is the calmest we've ever measured — clients mention calm, kindness, and detail at rates no other reader in our audit series matched — and her client names span four continents. She reads slowly and thoroughly; voice runs $10.99/min, so book chat at $3.99. For anxious love questions at 1 a.m., she is exactly the reader her reputation describes."
 affiliateUrl: /go/kasamba-spiritual-annie/
-avatarUrl: /avatars/kasamba/spiritual-annie-kasamba-review.jpg
-ogImage: "/avatars/kasamba/spiritual-annie-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/spiritual-annie-kasamba-review.webp
+ogImage: "/avatars/kasamba/spiritual-annie-kasamba-review-og.jpg"
 freeOffer: "3 free minutes"
 pricing: "Chat $3.99/min · Voice $10.99/min · 3 free minutes for new clients"
 bestFor: "Love and relationship anxiety — situations where you need someone to read what's unspoken, slow your pulse, and explain it all in detail"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Spiritual Annie Kasamba Review 2026: Top-10 Love Advisor",
     "description": "Spiritual Annie on Kasamba: Top-10 in love & relationships, 51,930 readings at 4.9. The calmest feed we've measured — $3.99/min.",
-    "image": "https://easternalignment.com/avatars/kasamba/spiritual-annie-kasamba-review.jpg",
+    "image": "https://easternalignment.com/avatars/kasamba/spiritual-annie-kasamba-review-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

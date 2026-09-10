@@ -6,8 +6,8 @@ platformName: "Kasamba: Love Specialist Isabelle"
 rating: 4.8
 verdict: "Love Specialist Isabelle holds a perfect 5.0 across 99,057 readings since 2005 — but the real proof is in the long arc: clients returning two, four, six years later to confirm specific predictions came true, including ones they didn't believe at the time. At the current $14.99/min promo (reg. $29.99) she's premium-priced and worth it for high-stakes love questions where accuracy matters more than minutes. Book with a focused question and a stated budget, and she'll do the rest."
 affiliateUrl: /go/kasamba-love-specialist-isabelle/
-avatarUrl: /avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg
-ogImage: "/avatars/kasamba/love-specialist-isabelle-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/love-specialist-isabelle-kasamba-review.webp
+ogImage: "/avatars/kasamba/love-specialist-isabelle-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$14.99/min promo (reg. $29.99) chat & voice · 3 free minutes for new clients"
 bestFor: "High-stakes love situations — will-they-come-back questions, marriage and divorce crossroads, complicated third-party dynamics — where long-arc accuracy justifies a premium rate"

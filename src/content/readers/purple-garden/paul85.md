@@ -6,8 +6,8 @@ platformName: "Purple Garden: Paul85"
 rating: 4.6
 verdict: "Paul85 built Purple Garden's fastest practice: 43,000 readings since 2020 — about 20 a day, six days a week worth of volume, seven days a week of availability (his posted schedule: every day, 07:00–21:00 Atlantic). Volume usually erodes quality; his current feed shows zero negative reviews in 150, with 65% coming from repeat clients (one holds 26 reviews, another 19). A card and intuitive reader specializing in love and career, his receipts include a beauty-pageant placement predicted a year out that 'came true.' The style, per clients: detailed, direct, and strikingly non-judgmental. $12.99/min flat for chat or voice; the $30 new-client credit covers your first two-plus minutes. For a reading tonight — not next Tuesday — he's the most available top-rated reader on the platform."
 affiliateUrl: /go/purple-garden-paul85/
-avatarUrl: /avatars/purple-garden/paul85.jpg
-ogImage: "/avatars/purple-garden/paul85.jpg"
+avatarUrl: /avatars/purple-garden/paul85.webp
+ogImage: "/avatars/purple-garden/paul85-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat & Voice $12.99/min · $30 free credit on your first purchase · online daily 07:00–21:00 Atlantic"
 bestFor: "Clients who need a top-rated reader now — tonight, this weekend, during your lunch break — plus love and career questions where you want direct answers without judgment"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Paul85 Purple Garden Review 2026: 43,000 Readings, 4.9",
     "description": "Paul85 on Purple Garden: 43,000 readings in six years at 4.9, 'highest rated' badge, zero negatives. Online daily — $12.99/min, $30 credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/paul85.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/paul85-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

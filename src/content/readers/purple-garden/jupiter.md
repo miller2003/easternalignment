@@ -6,8 +6,8 @@ platformName: "Purple Garden: Júpiter"
 rating: 4.6
 verdict: "Júpiter fills a gap most platforms don't know they have: he's a native-Spanish clairvoyant from Colombia reading fluently in two languages — and his review feed proves the clientele, with five-star reviews written in Spanish alongside English ones. The numbers are elite: 41,582 readings since 2020 at a perfect 5.0, 10,614 likes against 86 dislikes (99.2%), and a 'highest rated' badge. His style, per clients: spot on, no sugar-coating, quick and clear — a male reader in a female-dominated category, with 15 years of experience since discovering his gift at age 7. Chat runs $3.99/min with the $30 credit covering about seven minutes; voice $6.49. For Spanish-speaking clients — or anyone who wants directness without padding — he's the find."
 affiliateUrl: /go/purple-garden-jupiter/
-avatarUrl: /avatars/purple-garden/jupiter.jpg
-ogImage: "/avatars/purple-garden/jupiter.jpg"
+avatarUrl: /avatars/purple-garden/jupiter.webp
+ogImage: "/avatars/purple-garden/jupiter-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $3.99/min · Voice $6.49/min · $30 free credit on your first purchase"
 bestFor: "Spanish-speaking clients who want to be read in their native language — and any client who wants a direct, no-sugar-coating read at a budget rate"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Júpiter Purple Garden Review 2026: 5.0, Bilingual",
     "description": "Júpiter on Purple Garden: 41,582 readings at 5.0, 'highest rated' badge. Native-Spanish reader, no sugar-coating — chat $3.99/min, $30 free credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/jupiter.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/jupiter-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

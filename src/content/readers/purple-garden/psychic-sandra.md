@@ -6,8 +6,8 @@ platformName: "Purple Garden: Psychic Sandra"
 rating: 4.4
 verdict: "Psychic Sandra is a seventh-generation psychic with 40,001 Purple Garden readings since 2015 at 4.9 stars and a 'recommended' badge — and her review feed is anchored by one of the deepest single-client records we've reviewed: a client named Hopefully who has left 57 reviews, a running testimony that functions as her feed's backbone. Her style is clairvoyant sight plus tarot and crystal work, with a name-and-birthdate intake that keeps sessions focused. 11,778 likes against 247 dislikes (97.9%), with half her current feed coming from repeat clients. Chat $5.99/min with the $30 credit covering about five minutes; voice $10.99. For love questions where you want a hereditary-lineage reader with a documented long-term following, Sandra's practice is the definition of established."
 affiliateUrl: /go/purple-garden-psychic-sandra/
-avatarUrl: /avatars/purple-garden/psychic-sandra.jpg
-ogImage: "/avatars/purple-garden/psychic-sandra.jpg"
+avatarUrl: /avatars/purple-garden/psychic-sandra.webp
+ogImage: "/avatars/purple-garden/psychic-sandra-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $5.99/min · Voice $10.99/min · $30 free credit on your first purchase"
 bestFor: "Love and life-direction questions where you want a seventh-generation reader with a calm, clear style — and a 57-review track record with long-term clients"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Psychic Sandra Purple Garden Review 2026: 4.9 Stars",
     "description": "Psychic Sandra on Purple Garden: 40,001 readings at 4.9, seventh-generation psychic. One client left 57 reviews — chat $5.99/min, $30 free credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/psychic-sandra.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/psychic-sandra-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

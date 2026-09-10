@@ -9,8 +9,8 @@ verdict: Best for relationship readings where you want a reader who leads withou
   prompting. Her 14-year track record is unmatched on Keen  -  but her impatient edge
   means she works best for clients who arrive ready to receive, not process.
 affiliateUrl: /go/keen-regina/
-avatarUrl: /avatars/keen/regina-jacks.jpg
-ogImage: "/avatars/keen/regina-jacks.jpg"
+avatarUrl: /avatars/keen/regina-jacks.webp
+ogImage: "/avatars/keen/regina-jacks-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $3.59/min (Love & Relationships profile)
 bestFor: People who want direct clairvoyant impressions on love and relationships
@@ -21,19 +21,19 @@ updatedDate: '2026-04-22'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/regina-jacks-og.jpg",
     "headline": "Regina Jacks on Keen Review 2026: 109,000 Readings Later - Is She Still Worth It?",
     "description": "An independent review of Regina Jacks on Keen - covering her clairvoyant-first reading style, what 18,000 verified ratings actually reveal, pricing breakdown, and exactly who gets the most value from booking her.",
     "datePublished": "2026-04-22",
     "dateModified": "2026-04-22",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

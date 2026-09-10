@@ -6,8 +6,8 @@ platformName: "Kasamba: Intuitive Counselor"
 rating: 4.5
 verdict: "Intuitive Counselor has 68,717 readings since 2007 at a 4.9 rating, with a distinctive specialty: soulmate-essence tarot plus healing work for what she calls the 'wounded soul' — clients carrying stress, distress, and trauma. Her 230 negative reviews against 19,637 positive (1.2%) are the statistical price of honest readings, not a pattern of harm. At $4.99/min she's a strong mid-tier pick for love questions where the wound matters as much as the answer."
 affiliateUrl: /go/kasamba-intuitive-counselor/
-avatarUrl: /avatars/kasamba/intuitive-counselor-kasamba-review.jpg
-ogImage: "/avatars/kasamba/intuitive-counselor-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/intuitive-counselor-kasamba-review.webp
+ogImage: "/avatars/kasamba/intuitive-counselor-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$4.99/min (verify on live profile) · 3 free minutes + 50% off for new clients"
 bestFor: "Soulmate questions and relationship pain where you need healing-oriented guidance, not just prediction — especially after breakups, betrayal, or emotional exhaustion"

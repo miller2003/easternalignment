@@ -7,7 +7,6 @@ category: Roundup
 platform: cross-platform
 rating: 4.9
 platformName: "Kasamba & Keen"
-avatarUrl: "/avatars/guides/tarot-readers-love.jpg"
 pros:
 - "Features readers who use Tarot as a structured psychological map, not just for cold reading"
 - "Highlights specific deck usages (e.g., Queer Tarot, Thoth, traditional Rider-Waite)"
@@ -106,7 +105,7 @@ The imagery on the cards fundamentally limits or expands the reading. If you are
 If you are tired of generic predictions and want to know *why* a relationship pattern keeps repeating, Meg is arguably the most profoundly equipped Tarot reader on Keen.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.jpg" alt="Tarot With Meg" class="reader-summary__avatar" />
+  <img src="/avatars/keen/tarot-with-meg-on-keen-review-2026.webp" alt="Tarot With Meg" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -145,7 +144,7 @@ Meg is the reader in this series who has most clearly decided what she is not tr
 Yazmin doesn't operate like a traditional Tarot reader who methodically narrates each card. She uses the cards as entry points to uncover exactly what your partner is hiding.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.jpg" alt="Psychic Yazmin" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-yazmin-kasamba-review.webp" alt="Psychic Yazmin" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -184,7 +183,7 @@ Yazmin's profile centers on love and relationships as a genuine area of focused 
 If you want a reader who is completely unbothered by spiritual fluff and will deliver the hard facts of your relationship via traditional Tarot structure, Master Sher is unmatched.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/master-sher.jpg" alt="Master Sher" class="reader-summary__avatar" />
+  <img src="/avatars/keen/master-sher.webp" alt="Master Sher" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -223,7 +222,7 @@ Master Sher does not do toxic positivity. He lays out the cards and reads the ar
 Safina is a third-generation psychic who doesn't just read Tarot—she publishes independent Tarot forecasts ("Tarot Boot Camp"), proving a level of academic and esoteric mastery most platform psychics lack.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/psychic-safina-kasamba-review.jpg" alt="Psychic Safina" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/psychic-safina-kasamba-review.webp" alt="Psychic Safina" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -262,7 +261,7 @@ Safina's approach is integrative. She brings Tarot, Astrology, and Dream Decodin
 Arradaza boasts a 25-year track record and the most diverse toolset on Keen. She is the ultimate choice for clients who want to cross-reference their Tarot reading with mathematical astrology.
 
 <div class="reader-summary">
-  <img src="/avatars/keen/arradaza.jpg" alt="Arradaza" class="reader-summary__avatar" />
+  <img src="/avatars/keen/arradaza.webp" alt="Arradaza" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -301,7 +300,7 @@ When Arradaza pulls a Tarot spread for your relationship, she cross-references i
 As Kasamba's #1 ranked advisor, Elizabeth offers an incredibly rare combination: she uses Tarot to diagnose the relationship issue, and Reiki energy to help you heal from it.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/elizabeth-kasamba-review.jpg" alt="Elizabeth" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/elizabeth-kasamba-review.webp" alt="Elizabeth" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">
@@ -340,7 +339,7 @@ At $2.40 per minute, Elizabeth represents one of the strongest value proposition
 With over 111,000 completed sessions, Golden Eye does not force you to decide what kind of reading you need. She seamlessly blends Tarot with 8 other specialties.
 
 <div class="reader-summary">
-  <img src="/avatars/kasamba/golden-eye-kasamba-review.jpg" alt="Golden Eye" class="reader-summary__avatar" />
+  <img src="/avatars/kasamba/golden-eye-kasamba-review.webp" alt="Golden Eye" class="reader-summary__avatar" width="110" height="110" />
   <div class="reader-summary__details">
     <div class="reader-summary__grid">
       <div class="reader-summary__item">

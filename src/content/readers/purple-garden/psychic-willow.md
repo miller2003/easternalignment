@@ -8,8 +8,8 @@ pricing: "$5.99/min (verify on live profile)"
 bestFor: "Love questions where you want nearly five decades of pattern recognition delivered fast and unvarnished — including LGBT clients, whom she explicitly welcomes — with Egyptian tarot as the instrument"
 canonicalUrl: "https://easternalignment.com/reviews/purple-garden/psychic-willow/"
 affiliateUrl: /go/purple-garden-psychic-willow/
-avatarUrl: /avatars/purple-garden/psychic-willow.jpg
-ogImage: "/avatars/purple-garden/psychic-willow.jpg"
+avatarUrl: /avatars/purple-garden/psychic-willow.webp
+ogImage: "/avatars/purple-garden/psychic-willow-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
 updatedDate: '2026-08-18'

@@ -6,8 +6,8 @@ platformName: "Purple Garden: Psychic Jewels"
 rating: 4.7
 verdict: "Psychic Jewels does something no marketing department would allow: her bio opens with a list of what she cannot do — no timelines ('I have no way to see time'), no cheating surveillance ('I cannot see physical action of a person, only energetic feeling'), and no deciding whether you should move on. Twenty-seven years of practice, 47,273 readings since 2015 at 4.9 stars, 18,088 likes against 112 dislikes, and a platform 'recommended' badge say the honesty costs her nothing. The receipts are the anti-cold-reading kind: clients report full, specific readings from just a name and date of birth — including one who deliberately waited days to test a prediction before writing her review. A love-only specialist at $4.99/min flat with the $30 new-client credit covering about six minutes. Bring one person, one question, and their birthdate."
 affiliateUrl: /go/purple-garden-psychic-jewels/
-avatarUrl: /avatars/purple-garden/psychic-jewels.jpg
-ogImage: "/avatars/purple-garden/psychic-jewels.jpg"
+avatarUrl: /avatars/purple-garden/psychic-jewels.webp
+ogImage: "/avatars/purple-garden/psychic-jewels-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat & Voice $4.99/min · $30 free credit on your first purchase"
 bestFor: "Love questions where you want the honest energetic read — not surveillance, not false precision — from a 27-year specialist who reads from just a name and birthdate"
@@ -41,7 +41,7 @@ customSchema: |
     "@type": "Article",
     "headline": "Psychic Jewels Purple Garden Review 2026: 4.9 Stars",
     "description": "Psychic Jewels on Purple Garden: 47,273 readings at 4.9. No timelines, no surveillance — honest love readings from a name + DOB — $4.99/min, $30 credit.",
-    "image": "https://easternalignment.com/avatars/purple-garden/psychic-jewels.jpg",
+    "image": "https://easternalignment.com/avatars/purple-garden/psychic-jewels-og.jpg",
     "author": {
       "@type": "Person",
       "name": "Sarah",

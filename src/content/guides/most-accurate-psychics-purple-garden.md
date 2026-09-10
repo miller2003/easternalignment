@@ -13,7 +13,6 @@ entities:
 platform: purple-garden
 rating: 4.9
 platformName: "Purple Garden"
-avatarUrl: "/avatars/guides/brutally-honest.jpg"
 pros:
   - "Uses the Journeys public ledger as a verification tool — not just star ratings"
   - "Explains how video bios signal accuracy before you spend a dollar"

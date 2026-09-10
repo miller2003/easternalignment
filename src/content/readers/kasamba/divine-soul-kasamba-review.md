@@ -6,8 +6,8 @@ platformName: "Kasamba: Divine Soul"
 rating: 4.5
 verdict: "Divine Soul is a third-generation clairvoyant and ordained spiritual pastor with 69,218 readings since 2014 — and one of the only top-volume advisors on Kasamba whose profile explicitly serves same-sex relationships. Her 4.7 sits below the platform's flatterers for the usual reason: she states upfront that she'll tell you what she sees, not what you want. At $2.99/min she's the budget pick with a pastoral heart. Clients don't call her gifted; they call her sister."
 affiliateUrl: /go/kasamba-divine-soul/
-avatarUrl: /avatars/kasamba/divine-soul-kasamba-review.jpg
-ogImage: "/avatars/kasamba/divine-soul-kasamba-review.jpg"
+avatarUrl: /avatars/kasamba/divine-soul-kasamba-review.webp
+ogImage: "/avatars/kasamba/divine-soul-kasamba-review-og.jpg"
 freeOffer: "3 free minutes + 50% off"
 pricing: "$2.99/min (verify on live profile) · 3 free minutes + 50% off for new clients"
 bestFor: "LGBTQ+ love questions, complicated relationship pain, and clients who want pastoral warmth with clairvoyant detail — at a budget-friendly rate"

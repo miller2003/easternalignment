@@ -23,7 +23,7 @@ customSchema: |
     },
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment"
+      "name": "Eastern Alignment"
     }
   }
 ---

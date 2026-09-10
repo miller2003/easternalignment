@@ -35,7 +35,7 @@ entities:
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/og-default.jpg",
     "inLanguage": "es",
     "headline": "Reseña de [Nombre del Lector] en Psíquicos Web 2026",
     "description": "Análisis independiente de [Nombre del Lector] en Psíquicos Web — datos verificados, opiniones reales, precio y para quién es ideal.",

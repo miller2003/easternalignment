@@ -14,8 +14,8 @@ verdict: Ask Fran is one of the most genuinely useful readers on Keen  -  for th
   entirely within your control, and this review tells you exactly how to make sure
   you land on the right side of it.
 affiliateUrl: /go/keen-fran/
-avatarUrl: /avatars/keen/ask-fran.jpg
-ogImage: "/avatars/keen/ask-fran.jpg"
+avatarUrl: /avatars/keen/ask-fran.webp
+ogImage: "/avatars/keen/ask-fran-og.jpg"
 freeOffer: $1 for the first 5 minutes (new Keen users only)
 pricing: $2.99/min (Love & Relationships profile)
 bestFor: Clients who want warmth, genuine connection, and honest conversational guidance
@@ -27,19 +27,19 @@ updatedDate: '2026-04-16'
 customSchema: |
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "Article", "image": "https://easternalignment.com/avatars/keen/ask-fran-og.jpg",
     "headline": "Ask Fran on Keen Review 2026: 150,000 Sessions and the Most Polarized Reviews on the Platform - What Actually Separates the Fans From the Frustrated",
     "description": "An independent review of Ask Fran on Keen - why the same reader generates both absolute devotion and sharp frustration, what the documented negative pattern looks like, and the one move that changes everything in the first two minutes.",
     "datePublished": "2026-04-16",
     "dateModified": "2026-04-16",
     "author": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "url": "https://easternalignment.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "EasternAlignment",
+      "name": "Eastern Alignment",
       "logo": {
         "@type": "ImageObject",
         "url": "https://easternalignment.com/logo.jpg"

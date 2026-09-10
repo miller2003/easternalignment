@@ -2,7 +2,7 @@
  * relatedReaders.ts — Fair, topically-aware cross-linking for reader-review pages.
  *
  * Why this exists (the "44 articles added at once" regression):
- *   With ~158 reader reviews whose ratings cluster between 4.4 and 5.0, a naive
+ *   With ~162 reader reviews whose ratings cluster between 4.4 and 5.0, a naive
  *   "top N by rating" selector collapses — the same 3–4 highest-rated readers
  *   hoard nearly all internal link equity while 90%+ of pages (every newly-added
  *   batch included) receive ZERO links from the cross-link section. Purple

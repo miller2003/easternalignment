@@ -5,8 +5,8 @@ platformName: "Purple Garden: Adam Africa"
 rating: 4.5
 verdict: "Adam Africa is a 5.0-star Purple Garden reader who leads with a certified life-coach credential and backs it with clairaudience, clairvoyance, clairsentience, and expert tarot. Roughly 9,500 readings since 2019 and a 94% accuracy / 38% returning-client record make him a grounded, talk-plus-insight alternative to card-only readers — best for people who want the truth structured into a next step, not a soothing script."
 affiliateUrl: /go/purple-garden-adam-africa/
-avatarUrl: /avatars/purple-garden/adam-africa.jpg
-ogImage: "/avatars/purple-garden/adam-africa.jpg"
+avatarUrl: /avatars/purple-garden/adam-africa.webp
+ogImage: "/avatars/purple-garden/adam-africa-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 pricing: "from $5.99/min"
 bestFor: "Relationship and life clarity from a certified coach fused with genuine psychic insight"
