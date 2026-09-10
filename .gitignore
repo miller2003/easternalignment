@@ -34,9 +34,12 @@ pnpm-debug.log*
 # directory is ignored. Keep valuable artifacts here locally only.
 scratch/
 
-# scripts/ — only these two dev tools are tracked; everything else is a
+# scripts/ — only these dev tools are tracked; everything else is a
 # run-once content-fix script kept locally only.
+# audit-cta-source.mjs 是长期维护工具（每次加 CTA 都要跑），必须入库。
 scripts/*
+!scripts/audit-cta-source.mjs
+!scripts/test-markdown-for-agents.mjs
 !scripts/fetch-reader-avatars.mjs
 !scripts/validate-reviews.mjs
 

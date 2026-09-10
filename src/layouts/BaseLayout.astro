@@ -5,7 +5,24 @@ import TopDisclosureBar from '../components/TopDisclosureBar.astro';
 import TopOfferBar from '../components/TopOfferBar.astro';
 import PostHog from '../components/PostHog.astro';
 import SideOfferTab from '../components/SideOfferTab.astro';
+import { affiliateLinks } from '../data/affiliateLinks';
 import '../styles/global.css';
+
+// 预连接目标：联盟跳转的落地主机（从 affiliateLinks 自动推导，不写死）。
+// 用户点击 CTA 后要经历「本站 → /go 中转页 → 联盟主机」两次跳转，
+// 而联盟主机是跨域的，DNS + TLS 握手通常要 150–400ms（移动端更久）。
+// 在内容页就把连接预热好，点击时可直接复用，省掉这段握手时间。
+const affiliateOrigins = Array.from(
+  new Set(
+    Object.values(affiliateLinks)
+      .map((u) => {
+        try { return new URL(u).origin; } catch { return null; }
+      })
+      .filter(Boolean) as string[]
+  )
+).slice(0, 3); // 预连接超过 3 个会互相抢占，反而变慢
+
+const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
 
 interface Props {
   title: string;
@@ -173,6 +190,18 @@ const personSchema = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- 联盟跳转主机预热：点击 CTA 时省掉 DNS + TLS 握手（2026-09-10） -->
+    {affiliateOrigins.map((origin) => (
+      <>
+        <link rel="dns-prefetch" href={origin} />
+        <link rel="preconnect" href={origin} crossorigin />
+      </>
+    ))}
+
+    <!-- PostHog 事件上报主机预热：让点击事件与 /go 到达事件更快发出 -->
+    <link rel="dns-prefetch" href={posthogHost} />
+    <link rel="preconnect" href={posthogHost} crossorigin />
 
     <!-- Open Graph -->
     <meta property="og:title" content={fullTitle} />

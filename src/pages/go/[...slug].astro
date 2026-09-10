@@ -2,19 +2,31 @@
 /**
  * Affiliate Redirect Page — /go/[...slug]/
  *
- * Instant, unconditional-looking redirect for REAL human clicks, but a hard
- * no-op for bots / direct hits / prefetchers — so the affiliate network never
- * counts fake clicks.
+ * 对真人点击即时跳转，对机器人／直连／预取则是硬性空操作——联盟后台因此
+ * 永远不会计入假点击。
  *
- * How a genuine click is detected (any one is enough):
- *   1. same-origin referrer  -> the visitor came from easternalignment.com
- *   2. sessionStorage flag    -> set by the click handler (src/components/PostHog.astro)
- *   3. ?ea_sub=<id> param     -> ONLY our click handler emits this (with a real
- *                                PostHog distinct_id). Bare bot hits to /go/<slug>/
- *                                carry none of these, so they never redirect.
+ * 真人判定（满足任一即可）：
+ *   1. 同源 referrer        -> 访客来自 easternalignment.com
+ *   2. sessionStorage 标记  -> 由点击处理器写入（src/components/PostHog.astro）
+ *   3. ?ea_sub=<id> 参数    -> 只有我们自己的点击处理器才会带上真实 distinct_id
+ * 机器人直接访问 /go/<slug>/ 三个都不满足，因此永远不会跳转。
  *
- * The slug -> URL map is the single source of truth in src/data/affiliateLinks.ts.
- * TUNE macros (e.g. {transaction_id}) are substituted server-side by TUNE as before.
+ * slug -> URL 的唯一真源是 src/data/affiliateLinks.ts。
+ * TUNE 宏（如 {transaction_id}）仍由 TUNE 服务端替换。
+ *
+ * ── 2026-09-10 侦测增强 ──────────────────────────────────────────────────
+ * 这一页过去完全没有埋点，导致「点击了 CTA」和「真的跳到了联盟站」之间
+ * 是一个纯黑箱：门禁误杀、JS 报错、跳转失败，在数据上都看不出来。现在补两个事件：
+ *
+ *   aff_go_hit      —— 到达本页（无论最终是否跳转）
+ *   aff_go_blocked  —— 到达本页但被门禁判定为非真人（这是「误杀」的报警信号）
+ *
+ * 于是可以得到两个新的可监控比率：
+ *   点击→到达率   = aff_go_hit   / affiliate_link_click     （掉说明事件丢失或点击被吞）
+ *   到达→放行率   = (hit-blocked)/ aff_go_hit               （掉说明门禁太严，在漏钱）
+ *
+ * 用 navigator.sendBeacon 发送，不阻塞、不等待响应，不会拖慢跳转。
+ * ────────────────────────────────────────────────────────────────────────
  */
 import { affiliateLinks } from '../../data/affiliateLinks';
 
@@ -26,6 +38,12 @@ export async function getStaticPaths() {
 }
 
 const { url } = Astro.props;
+const POSTHOG_KEY = import.meta.env.PUBLIC_POSTHOG_KEY || 'REPLACE_ME_POSTHOG_KEY';
+const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
+// 只上报目标域名，不上报完整 URL（避免把带参数的联盟链接全文写进分析库）
+const destHost = (() => {
+  try { return new URL(url).host; } catch { return 'unknown'; }
+})();
 ---
 
 <!DOCTYPE html>
@@ -36,31 +54,103 @@ const { url } = Astro.props;
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Runs before first paint: real users never see a flash, bots get nothing. -->
-    <script define:vars={{ url }}>
+    <script define:vars={{ url, POSTHOG_KEY, POSTHOG_HOST, destHost }}>
       (function () {
+        // ══ 第一步：判定真伪 + 拼出跳转目标 ══════════════════════════════
+        // 这一段完全不碰埋点。跳转与否只由下面三个信号决定，与埋点代码零耦合。
+        var referrerOk = false, ssOk = false, sub = null;
         try {
-          var isReal = false;
-          try {
-            var ref = document.referrer || '';
-            if (ref && new URL(ref).origin === window.location.origin) isReal = true;
-          } catch (e) {}
-          try {
-            if (sessionStorage.getItem('ea_aff_click') !== null) isReal = true;
-          } catch (e) {}
-          var params = new URLSearchParams(window.location.search);
-          var sub = params.get('ea_sub');
-          if (sub) isReal = true; // only our own click handler attaches a real id
-          if (!isReal) return;    // bot / direct hit -> no affiliate navigation
+          var ref = document.referrer || '';
+          if (ref && new URL(ref).origin === window.location.origin) referrerOk = true;
+        } catch (e) {}
+        try {
+          if (sessionStorage.getItem('ea_aff_click') !== null) ssOk = true;
+        } catch (e) {}
+        try { sub = new URLSearchParams(window.location.search).get('ea_sub'); } catch (e) {}
 
-          var dest = url;
+        var path = '';
+        try { path = window.location.pathname; } catch (e) {}
+        var slug = path.replace(/^\/go\//, '').replace(/\/+$/, '');
+
+        var isReal = referrerOk || ssOk || !!sub;
+        var dest = url;
+        if (isReal && sub) {
           try {
-            if (sub) {
-              var u = new URL(dest);
-              u.searchParams.set('aff_sub2', sub);
-              dest = u.toString();
-            }
+            var u = new URL(dest);
+            // sub 形如 <人ID>.<点击令牌>，原样透传，联盟回调会带回来
+            u.searchParams.set('aff_sub2', sub);
+            dest = u.toString();
           } catch (e) {}
-          window.location.replace(dest);
+        }
+
+        // ══ 第二步：组装埋点数据（纯计算，不发任何请求）═══════════════════
+        // 这一步只做字符串拼接，耗时微秒级，放在跳转之前也不会造成可感知延迟。
+        var t0 = Date.now();
+        var beaconBody = null;
+        try {
+          // ── 速度诊断：用来定位"那一两秒"到底花在哪一环 ──
+          //   click_to_go_ms  = 点击 CTA → 本页脚本开始执行（含本站到 /go 的整段）
+          //   nav_ttfb_ms     = 本页首个字节耗时。若这里就一两千毫秒，
+          //                     说明是 Cloudflare 质询在拦截，不是代码慢。
+          //   nav_duration_ms = 本页整体加载耗时
+          //   nav_type        = navigate（真点击）/ reload（自己刷新，多为测试）
+          var clickT = 0;
+          try { clickT = parseInt(sessionStorage.getItem('ea_click_t') || '0', 10) || 0; } catch (e) {}
+          var nav = null;
+          try { nav = performance.getEntriesByType('navigation')[0] || null; } catch (e) {}
+
+          beaconBody = JSON.stringify({
+            api_key: POSTHOG_KEY,
+            event: isReal ? 'aff_go_hit' : 'aff_go_blocked',
+            distinct_id: (sub ? sub.split('.')[0] : 'ea-go-anon-' + slug + '-' + t0),
+            properties: {
+              slug: slug,
+              ea_sub: sub,
+              click_token: sub && sub.indexOf('.') > -1 ? sub.split('.')[1] : null,
+              dest_host: destHost,
+              gate_by_referrer: referrerOk,
+              gate_by_session: ssOk,
+              gate_by_sub: !!sub,
+              gate_reason: referrerOk ? 'referrer' : (ssOk ? 'session' : (sub ? 'sub' : 'none')),
+              has_referrer: !!document.referrer,
+              referrer_host: (function () {
+                try { return document.referrer ? new URL(document.referrer).host : ''; } catch (e) { return ''; }
+              })(),
+              click_to_go_ms: clickT ? (t0 - clickT) : null,
+              nav_duration_ms: nav ? Math.round(nav.duration) : null,
+              nav_ttfb_ms: nav ? Math.round(nav.responseStart - nav.requestStart) : null,
+              nav_type: nav ? nav.type : null,
+              ea_source: 'go_redirect',
+              $insert_id: 'ea-go-' + (sub || 'anon') + '-' + slug + '-' + t0
+            },
+            timestamp: new Date().toISOString()
+          });
+        } catch (e) {}
+
+        // ══ 第三步：跳转优先 ═════════════════════════════════════════════
+        // 体验优先：先把跳转发出去。机器人 / 直连则原地返回，不做跳转。
+        if (isReal) {
+          try {
+            window.location.replace(dest);
+          } catch (e) {
+            try { window.location.href = dest; } catch (e2) {}
+          }
+        }
+
+        // ══ 第四步：跳转已发起，此时才发埋点 ═════════════════════════════
+        // sendBeacon 由浏览器负责送达，页面卸载后也会继续发送，
+        // 所以放在跳转之后既不会丢，也**彻底不占用跳转前的时间**。
+        try {
+          if (beaconBody && POSTHOG_KEY !== 'REPLACE_ME_POSTHOG_KEY') {
+            if (navigator.sendBeacon) {
+              navigator.sendBeacon(POSTHOG_HOST + '/capture/', new Blob([beaconBody], { type: 'application/json' }));
+            } else {
+              fetch(POSTHOG_HOST + '/capture/', {
+                method: 'POST', body: beaconBody, keepalive: true,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            }
+          }
         } catch (e) {}
       })();
     </script>

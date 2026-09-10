@@ -8,64 +8,213 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId setPersonProperties".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init(POSTHOG_KEY, {
       api_host: POSTHOG_HOST,
-      person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+      person_profiles: 'identified_only',
       autocapture: true,
       capture_pageview: true
     });
 
-    // ── Affiliate click gating + per-page attribution ──────────────────────
-    // We ONLY treat a click as a real affiliate click when:
-    //   1. it is a trusted, human-initiated event (e.isTrusted === true)
-    //   2. the link points at one of our /go/ affiliate slugs
-    // Bots, prefetches, and scripted clicks never reach the affiliate URL,
-    // so the affiliate network stops counting fake clicks. We then navigate
-    // to /go/<slug>/ which performs the actual (TUNE) redirect for real users.
+    // ── 联盟点击：门禁 + 归因 + 落点侦测 ───────────────────────────────────
+    // 只有「真人发起的、指向 /go/ 的」点击才算联盟点击。机器人/预取/脚本点击
+    // 永远不会到达联盟地址，联盟后台因此不再计入假点击。
+    //
+    // 2026-09-10 侦测增强（每一项都为了消掉一个盲区）：
+    //   1. ctaSource 三级推断 —— 显式属性 → 祖先 class/id 关键词 → 视口位置。
+    //      同时上报 ctaSourceMethod，用来反查哪些组件仍缺 data-cta-source。
+    //   2. is_first_click / click_seq —— 区分「试探性点击」与「决策性点击」。
+    //      实测有用户在 2 分钟内连点 3 个不同顾问的 CTA，最终由第 3 次成交；
+    //      不区分会把归因完全带偏。
+    //   3. href / page_type / time_on_page_ms / pages_before_click —— 补齐点击前上下文。
+    //   4. $insert_id 幂等 + sendBeacon 兜底 —— posthog.capture 后立刻跳转有丢包风险，
+    //      双通道发送用同一个 $insert_id，PostHog 侧自动去重，不会重复计数。
     document.addEventListener('DOMContentLoaded', () => {
+      const SEQ_KEY = 'ea_aff_seq';
+      const FIRST_KEY = 'ea_aff_first_done';
+      const CLICK_KEY = 'ea_aff_click';
+      const PV_KEY = 'ea_pv_count';
+      const T_PAGE = Date.now();
+
+      // 本会话已浏览页数（点击前看了几页）
+      let pvCount = 0;
+      try {
+        pvCount = parseInt(sessionStorage.getItem(PV_KEY) || '0', 10) || 0;
+        pvCount += 1;
+        sessionStorage.setItem(PV_KEY, String(pvCount));
+      } catch (_) {}
+
+      function pageType(p) {
+        if (p === '/' || p === '') return 'home';
+        if (p.indexOf('/guides/') === 0) return 'guide';
+        if (p.indexOf('/reviews/') === 0) return 'review';
+        if (p.indexOf('/comparisons') === 0) return 'comparison';
+        if (p.indexOf('/astrology') === 0) return 'astrology';
+        if (p.indexOf('/coupons') === 0) return 'coupons';
+        if (p.indexOf('/blog') === 0) return 'blog';
+        return 'other';
+      }
+
+      function classSig(node) {
+        try {
+          if (node.className && typeof node.className.baseVal === 'string') return node.className.baseVal;
+          if (typeof node.className === 'string') return node.className;
+        } catch (_) {}
+        return '';
+      }
+
+      // 三级推断：显式属性 → DOM 关键词 → 视口位置
+      // 关键词用「分词后精确匹配」而不是子串匹配：否则 legend 会被判成 end、
+      // table-of-contents 会被判成 tab，产生看似合理但完全错误的归因。
+      const KEYMAP = [
+        ['hero', 'hero'], ['end', 'end'], ['inline', 'inline'],
+        ['sidebar', 'sidebar'], ['sticky', 'sticky'], ['topbar', 'topbar'],
+        ['score', 'score-panel'], ['deal', 'sidebar-deal'], ['tab', 'tab'],
+        ['footer', 'footer'], ['coupon', 'coupons-platform'], ['comparison', 'comparison']
+      ];
+      const FALLBACK_KEY = ['cta', 'cta-block'];
+
+      function tokensOf(node) {
+        const raw = ((node.id || '') + ' ' + classSig(node)).toLowerCase();
+        const arr = raw.split(/[^a-z0-9]+/);
+        const set = {};
+        for (let i = 0; i < arr.length; i++) if (arr[i]) set[arr[i]] = 1;
+        return set;
+      }
+
+      function resolveCtaSource(link) {
+        const own = link.getAttribute('data-cta-source');
+        if (own) return [own, 'attr-self'];
+        const anc = link.closest('[data-cta-source]');
+        if (anc) {
+          const v = anc.getAttribute('data-cta-source');
+          if (v) return [v, 'attr-ancestor'];
+        }
+        let node = link, depth = 0, sawFallback = false;
+        while (node && depth < 8) {
+          const tk = tokensOf(node);
+          for (let i = 0; i < KEYMAP.length; i++) {
+            if (tk[KEYMAP[i][0]]) return [KEYMAP[i][1], 'class:' + KEYMAP[i][0]];
+          }
+          if (tk[FALLBACK_KEY[0]]) sawFallback = true;
+          node = node.parentElement;
+          depth++;
+        }
+        if (sawFallback) return [FALLBACK_KEY[1], 'class:cta'];
+        try {
+          const r = link.getBoundingClientRect();
+          if (r.top >= 0 && r.top < window.innerHeight) return ['above-fold', 'viewpos'];
+        } catch (_) {}
+        return ['unknown', 'none'];
+      }
+
       document.body.addEventListener('click', (e) => {
-        if (!e.isTrusted) return;                 // ignore non-human / synthetic clicks
+        if (!e.isTrusted) return;
         const link = e.target.closest('a');
         if (!link) return;
         const href = link.getAttribute('href') || '';
         const m = href.match(/\/go\/([^/?#]+)/);
-        if (!m) return;                           // not an affiliate link -> let it behave normally
+        if (!m) return;
         const slug = m[1];
 
-        e.preventDefault();                        // take over navigation (bot-proof)
+        e.preventDefault();
 
-        // Mark this session so the /go/ page knows it's a genuine click.
-        try { sessionStorage.setItem('ea_aff_click', slug); } catch (_) {}
+        try { sessionStorage.setItem(CLICK_KEY, slug); } catch (_) {}
 
         const distinctId = (window.posthog && typeof posthog.get_distinct_id === 'function')
           ? posthog.get_distinct_id()
           : '';
 
-        // CTA placement attribution: where on the page the click originated
-        // (hero | end | sticky | sidebar | inline). Falls back to 'unknown'.
-        const ctaSource = link.getAttribute('data-cta-source')
-          || (link.closest('[data-cta-source]') && link.closest('[data-cta-source]').getAttribute('data-cta-source'))
-          || 'unknown';
+        let clickSeq = 0, isFirst = false;
+        try {
+          clickSeq = (parseInt(sessionStorage.getItem(SEQ_KEY) || '0', 10) || 0) + 1;
+          sessionStorage.setItem(SEQ_KEY, String(clickSeq));
+          isFirst = sessionStorage.getItem(FIRST_KEY) === null;
+          if (isFirst) sessionStorage.setItem(FIRST_KEY, slug);
+        } catch (_) { clickSeq = 1; isFirst = true; }
 
-        // Per-page attribution: location = the page the click came FROM.
-        if (window.posthog) {
-          posthog.capture('affiliate_link_click', {
-            slug: slug,
-            location: window.location.pathname,
-            ctaSource: ctaSource,
-            target_blank: link.target === '_blank',
-            text: (link.innerText || '').trim().slice(0, 80),
-            click_id: distinctId || null
-          });
-        }
+        const cs = resolveCtaSource(link);
 
-        // Route through /go/<slug>/ (which does the real TUNE redirect).
-        // The ?ea_sub=<id> token proves this is a genuine click; the /go/ page
-        // also accepts a same-origin referrer, so we keep it (no `noreferrer`).
-        const dest = '/go/' + slug + '/' + (distinctId ? ('?ea_sub=' + encodeURIComponent(distinctId)) : '');
+        // ── 每次点击一个唯一令牌 ────────────────────────────────────────
+        // 为什么需要它：click_id 取自 posthog.get_distinct_id()，是「按人」的，
+        // 同一个人点 3 个 CTA 会得到 3 个完全相同的 click_id。实测 178 次点击里
+        // 76% 来自点过 >=2 次的人，于是回调只说得清"是哪个人转化的"，
+        // 说不清"是他哪一次点击转化的"。
+        // 现在把 <人ID>.<点击令牌> 一起作为 aff_sub2 传给联盟，回调原样带回，
+        // 就能精确定位到那一次点击。令牌丢了也不会更糟，代码会退回到按人归因。
+        const clickToken = Math.random().toString(36).slice(2, 8);
+
+        // ⚠️ ea_sub 必须**永远存在**——它是"真人点击"的唯一凭证，
+        // 也是 Cloudflare `/go/` 规则放行的依据（详见部署指南）。
+        // 此前 SDK 未就绪时 distinctId 为空 → ea_sub 整个缺失 →
+        // 这类真实用户会被 CF 按"无 Referer 无凭证"质询。
+        // 实测 9/9 的 3 次点击里就有 1 次 click_id 为空 —— 那是真实存在的漏网。
+        // 兜底用 anon-<随机>，形状保持一致（仍是 <人ID>.<令牌>）；
+        // postback 侧识别 anon- 前缀，不会为它建垃圾人物档案。
+        const personId = distinctId || ('anon-' + Math.random().toString(36).slice(2, 10));
+        const subId = personId + '.' + clickToken;
+
+        const props = {
+          slug: slug,
+          location: window.location.pathname,
+          page_type: pageType(window.location.pathname),
+          ctaSource: cs[0],
+          ctaSourceMethod: cs[1],
+          target_blank: link.target === '_blank',
+          text: (link.innerText || '').trim().slice(0, 80),
+          href: href,
+          click_id: distinctId || null,
+          person_id: personId,
+          click_token: clickToken,
+          sub_id: subId,
+          is_first_click: isFirst,
+          click_seq: clickSeq,
+          pages_before_click: pvCount,
+          time_on_page_ms: Date.now() - T_PAGE,
+          viewport: window.innerWidth + 'x' + window.innerHeight,
+          $insert_id: 'ea-clk-' + (distinctId || 'anon') + '-' + slug + '-' + Date.now()
+        };
+
+        // 跳转目标：带上 <人ID>.<点击令牌> 作为 ea_sub，/go 会把它透传成 aff_sub2，
+        // 联盟回调再原样带回来 —— 于是"哪一次点击成交的"可以被精确回答。
+        const dest = '/go/' + slug + '/' + (subId ? ('?ea_sub=' + encodeURIComponent(subId)) : '');
+
+        // 记下点击时刻，供 /go 页测量「点击 → 到达中转页」的真实耗时
+        try { sessionStorage.setItem('ea_click_t', String(Date.now())); } catch (_) {}
+
+        // ⚡ 2026-09-10 顺序调整：先跳转，后埋点。
+        // 导航是异步排队的 —— 赋值 location.href / 调用 window.open 之后，当前这段
+        // 同步代码依然会执行完。所以把两个发送通道挪到跳转之后，可以保证
+        // 埋点**一毫秒都不占用跳转前的关键路径**。
+        // sendBeacon 由浏览器负责在页面卸载后继续送达，放后面不会丢。
         if (link.target === '_blank') {
           window.open(dest, '_blank', 'noopener');
         } else {
           window.location.href = dest;
         }
+
+        // 通道 A：PostHog SDK
+        try {
+          if (window.posthog) posthog.capture('affiliate_link_click', props, { send_instantly: true });
+        } catch (_) {}
+
+        // 通道 B：sendBeacon 兜底（跳转会中断普通 XHR，beacon 不会）。
+        // 与通道 A 共用 $insert_id，重复的会被 PostHog 自动去重。
+        try {
+          const body = JSON.stringify({
+            api_key: POSTHOG_KEY,
+            event: 'affiliate_link_click',
+            distinct_id: personId,
+            properties: props,
+            timestamp: new Date().toISOString()
+          });
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(POSTHOG_HOST + '/capture/', new Blob([body], { type: 'application/json' }));
+          } else {
+            fetch(POSTHOG_HOST + '/capture/', {
+              method: 'POST', body: body, keepalive: true,
+              headers: { 'Content-Type': 'application/json' }
+            });
+          }
+        } catch (_) {}
+
       });
     });
   } else {

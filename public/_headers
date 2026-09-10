@@ -1,0 +1,64 @@
+# Cloudflare Pages 响应头
+# ============================================================
+# 原则（2026-09-10 修订）：只做两类事，绝不影响访客所见与体验
+#
+#   A. 原样重申线上已有的值 —— 不做任何改变，只是把它写下来固化
+#   B. 新增对访客完全不可见的头（Link、/go 的 no-store）
+#
+# ⚠️ 曾经写错的规则（已删除，留档避免重犯）：
+#   上一版把 /avatars /logos /images 设为 max-age=604800（7 天）。
+#   但实测线上这些资源的真实基线是 max-age=14400（4 小时）+ ETag ——
+#   改成 7 天会让「换图后旧图最多滞留 7 天」，这是**引入回归**。
+#   现已删除这些规则，让它们回到平台默认（4 小时 + ETag），与改造前完全一致。
+#   （站点 avatars 目录有 40MB，由 scripts/fetch-reader-avatars.mjs 原地更新，
+#     文件名不变，所以缓存新鲜度是真实存在的风险。）
+#
+# 实测基线（2026-09-10，curl 线上未部署版本）：
+#   HTML           : cache-control: public, max-age=0, must-revalidate
+#                    x-content-type-options: nosniff
+#                    referrer-policy: strict-origin-when-cross-origin
+#   /avatars /logos: cache-control: public, max-age=14400, must-revalidate + ETag
+#   /go/*          : referrer-policy: same-origin（不向联盟泄露来源，保留不动）
+#
+# 注释一律写在规则块外面。缩进写 # 有被解析器当成畸形 header 而整条失效的风险。
+# ============================================================
+
+# --- HTML 页面 ---
+# 与线上实测值逐字一致；Link 是新加的、对访客不可见。
+# Cache-Control 必须是 max-age=0, must-revalidate：这样部署后访客立刻看到新版本，
+# 不需要手动清缓存；304 回源校验很便宜，不会拖慢。
+# Referrer-Policy 也必须是 strict-origin-when-cross-origin：
+# /go 的门禁要用 Referer 判来源，同源导航必须能看到完整 URL。
+# 千万不要改成 no-referrer。
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Link: </llms.txt>; rel="describedby"
+
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Link: </llms.txt>; rel="describedby"
+
+# --- 带内容哈希的构建产物 ---
+# 实测文件名形如 BaseLayout.fkzBzsa_.css、CTABox.15nxe0-6.css ——
+# 内容一变文件名就变，所以"缓存 1 年"在数学上不可能显示旧版本。
+# 这是本次唯一一处真正的缓存加强，且不可能造成任何陈旧问题。
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# --- 联盟中转页 ---
+# 访客在这一页停留不到 1 秒（立即跳转），所以这些头对体验无影响。
+# no-store：既不能被缓存（否则会跳到过期目标、门禁也形同虚设），
+#           也避免被从缓存里读到页面中的联盟链接。
+# X-Robots-Tag 与页面里已有的 <meta name="robots" content="noindex, nofollow"> 一致。
+/go/*
+  Cache-Control: no-store, no-cache, must-revalidate
+  X-Robots-Tag: noindex, nofollow
+
+# --- 面向 AI 智能体的站点摘要 ---
+# 只是把真实类型写清楚（本来就是 markdown）。不加 Cache-Control，用平台默认。
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
