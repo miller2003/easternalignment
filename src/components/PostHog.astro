@@ -24,8 +24,12 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
     //      实测有用户在 2 分钟内连点 3 个不同顾问的 CTA，最终由第 3 次成交；
     //      不区分会把归因完全带偏。
     //   3. href / page_type / time_on_page_ms / pages_before_click —— 补齐点击前上下文。
-    //   4. $insert_id 幂等 + sendBeacon 兜底 —— posthog.capture 后立刻跳转有丢包风险，
-    //      双通道发送用同一个 $insert_id，PostHog 侧自动去重，不会重复计数。
+    //   4. $insert_id 幂等 + sendBeacon 传输 —— 单通道上报，不重复计数。
+    //      ⚠️ 2026-09-10 修复：初版用「SDK + 手写 sendBeacon」双通道，并假设共用
+    //      $insert_id 会被 PostHog 去重。**该假设已被实测推翻**（PostHog 的
+    //      $insert_id 去重只在同一批次内生效，两次独立 HTTP 请求各存一条），
+    //      导致点击量翻倍、并让「点击→/go 到达率」分母翻倍触发虚假报警。
+    //      现改为单通道：SDK 一次上报 + `transport: 'sendBeacon'`（见文末发送处）。
     document.addEventListener('DOMContentLoaded', () => {
       const SEQ_KEY = 'ea_aff_seq';
       const FIRST_KEY = 'ea_aff_first_done';
@@ -181,37 +185,55 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
 
         // ⚡ 2026-09-10 顺序调整：先跳转，后埋点。
         // 导航是异步排队的 —— 赋值 location.href / 调用 window.open 之后，当前这段
-        // 同步代码依然会执行完。所以把两个发送通道挪到跳转之后，可以保证
+        // 同步代码依然会执行完。所以把上报挪到跳转之后，可以保证
         // 埋点**一毫秒都不占用跳转前的关键路径**。
-        // sendBeacon 由浏览器负责在页面卸载后继续送达，放后面不会丢。
+        // 使用 sendBeacon 传输时由浏览器负责在页面卸载后继续送达，放后面不会丢。
         if (link.target === '_blank') {
           window.open(dest, '_blank', 'noopener');
         } else {
           window.location.href = dest;
         }
 
-        // 通道 A：PostHog SDK
+        // ══ 上报：单通道，绝不允许发第二条 ═══════════════════════════════
+        //
+        // 🐞 2026-09-10 修复「点击量翻倍」：
+        //    原实现发两条 — 通道 A 走 posthog.capture()（$lib=web），通道 B 手写
+        //    POST /capture/ 走 navigator.sendBeacon（无 $lib）。两条共用同一个
+        //    $insert_id，原以为 PostHog 会去重。**实测不会**：两条的 event /
+        //    distinct_id / $insert_id 三者完全相同，ClickHouse 里依然存了两条
+        //    （18:21:32.268 与 18:21:33.437）。原因是 $insert_id 去重只作用于
+        //    **同一批次**，跨 HTTP 请求不生效。
+        //    后果：当日点击 6 条 / 实际 5 次；「点击→/go 到达率」分母翻倍 → 虚假报警。
+        //
+        // ✅ 现方案：只发一条，但用 SDK 的 `transport: 'sendBeacon'`。
+        //    posthog-js 原生支持该传输方式（v1.429.2 已确认 `transport` 选项存在），
+        //    因此能同时满足两个目标，不再需要第二条通道：
+        //      · 完整 SDK 上下文 —— $session_id / $device_type / $lib / 自动捕获链齐全
+        //      · 页面卸载后仍能送达 —— sendBeacon 由浏览器保证，跳转不会中断它
+        //    sendBeacon 不可用时退回 SDK 默认传输（XHR/fetch），而不是自己再发一次，
+        //    否则又会回到重复上报。
+        //    $insert_id 仍然保留 —— 作为幂等标记，供事后排查用（如需查询侧去重，
+        //    用 count(DISTINCT properties.$insert_id)）。
         try {
-          if (window.posthog) posthog.capture('affiliate_link_click', props, { send_instantly: true });
-        } catch (_) {}
-
-        // 通道 B：sendBeacon 兜底（跳转会中断普通 XHR，beacon 不会）。
-        // 与通道 A 共用 $insert_id，重复的会被 PostHog 自动去重。
-        try {
-          const body = JSON.stringify({
-            api_key: POSTHOG_KEY,
-            event: 'affiliate_link_click',
-            distinct_id: personId,
-            properties: props,
-            timestamp: new Date().toISOString()
-          });
-          if (navigator.sendBeacon) {
-            navigator.sendBeacon(POSTHOG_HOST + '/capture/', new Blob([body], { type: 'application/json' }));
+          if (window.posthog) {
+            const captureOpts = { send_instantly: true };
+            try {
+              if (navigator.sendBeacon) captureOpts.transport = 'sendBeacon';
+            } catch (_) {}
+            posthog.capture('affiliate_link_click', props, captureOpts);
           } else {
-            fetch(POSTHOG_HOST + '/capture/', {
-              method: 'POST', body: body, keepalive: true,
-              headers: { 'Content-Type': 'application/json' }
-            });
+            // SDK 未就绪（脚本被拦/未初始化）时的唯一兜底：发一条，且只发这一条。
+            // 这里必须保留最小实现，否则会彻底丢点击；但要保证不会与上面的
+            // SDK 通道同时生效 —— 所以放在 else 分支里，二者互斥。
+            if (navigator.sendBeacon) {
+              navigator.sendBeacon(POSTHOG_HOST + '/capture/', new Blob([JSON.stringify({
+                api_key: POSTHOG_KEY,
+                event: 'affiliate_link_click',
+                distinct_id: personId,
+                properties: props,
+                timestamp: new Date().toISOString()
+              })], { type: 'application/json' }));
+            }
           }
         } catch (_) {}
 
