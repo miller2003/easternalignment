@@ -156,9 +156,15 @@ const websiteSchema = {
     )}
 
     <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Google renders the favicon at ~16px. Declare the 96px and 192px PNGs first
+         (both multiples of 48, per Google's guidance) so the high-quality source is
+         picked instead of an upscaled 16px ICO. The .ico keeps multi-size frames as
+         a legacy fallback. Note: no sizes="any" - that hint is for SVG and can make
+         a raster ICO look like the preferred source. -->
+    <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 
     <!-- Google Fonts: same as main site -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
