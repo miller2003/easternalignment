@@ -1,0 +1,8 @@
+{
+  "resource": "https://easternalignment.com",
+  "authorization_servers": ["https://easternalignment.com"],
+  "scopes_supported": ["public"],
+  "bearer_methods_supported": [],
+  "resource_documentation": "https://easternalignment.com/auth.md",
+  "_note": "All content on this site is publicly accessible. No bearer tokens or authentication required."
+}

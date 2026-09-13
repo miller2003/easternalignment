@@ -237,6 +237,62 @@ const personSchema = {
     {customSchema && customSchema.trim() && (
       <script type="application/ld+json" set:html={customSchema} />
     )}
+    <!-- Agent Discovery link tags (2026-09-13) -->
+    <link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
+    <link rel="service-desc" type="application/linkset+json" href="/.well-known/api-catalog" />
+    <link rel="webmcp" href="/.well-known/webmcp.json" />
+
+    <!-- WebMCP: expose site tools to AI browser agents via navigator.modelContext -->
+    <script is:inline>
+    (function() {
+      if (typeof navigator === 'undefined' || !navigator.modelContext) return;
+      navigator.modelContext.provideContext({
+        tools: [
+          {
+            name: "get_page_content",
+            description: "Get the full text content of the current Eastern Alignment page (review, guide, or comparison)",
+            inputSchema: { type: "object", properties: {}, required: [] },
+            execute: async function() {
+              var el = document.querySelector('main, article, [role="main"]');
+              return { content: (el || document.body).innerText };
+            }
+          },
+          {
+            name: "get_site_index",
+            description: "Get the complete index of all Eastern Alignment reviews, guides, and comparisons",
+            inputSchema: { type: "object", properties: {}, required: [] },
+            execute: async function() {
+              var r = await fetch('/llms.txt');
+              return { content: await r.text() };
+            }
+          },
+          {
+            name: "get_introductory_offers",
+            description: "Get verified 2026 introductory promos and free minutes/credits for Kasamba, Keen, and Purple Garden",
+            inputSchema: {
+              type: "object",
+              properties: {
+                platform: {
+                  type: "string",
+                  enum: ["kasamba", "keen", "purple-garden"],
+                  description: "Psychic platform name"
+                }
+              },
+              required: ["platform"]
+            },
+            execute: async function(params) {
+              var offers = {
+                kasamba: { headline: "3 Free Minutes + 50% Off", terms: "3 free chat minutes with each new advisor + 50% off up to $50 on first paid session.", url: "https://easternalignment.com/reviews/kasamba/" },
+                keen: { headline: "5 Minutes for $1", terms: "First 5 minutes for $1, then roughly $1.99-$20/min.", url: "https://easternalignment.com/reviews/keen/" },
+                "purple-garden": { headline: "$30 Free Credit", terms: "$30 free credit for new clients. Per-minute rates run $0.99-$15+.", url: "https://easternalignment.com/reviews/purple-garden/" }
+              };
+              return offers[params.platform] || { error: "Unknown platform. Use: kasamba, keen, or purple-garden" };
+            }
+          }
+        ]
+      });
+    })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>

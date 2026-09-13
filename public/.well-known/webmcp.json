@@ -1,0 +1,19 @@
+{
+  "$schema": "https://webmachinelearning.github.io/webmcp/schema/v1.json",
+  "name": "Eastern Alignment WebMCP",
+  "description": "Browser-level tool exposure for Eastern Alignment psychic platform reviews, reader searches, and introductory offer verification.",
+  "tools": [
+    {
+      "name": "get_page_content",
+      "description": "Get the full text content of the current Eastern Alignment page (review, guide, or comparison)"
+    },
+    {
+      "name": "get_site_index",
+      "description": "Get the complete index of all Eastern Alignment reviews, guides, and comparisons from llms.txt"
+    },
+    {
+      "name": "get_introductory_offers",
+      "description": "Get verified 2026 introductory promos and free minutes/credits for Kasamba, Keen, and Purple Garden"
+    }
+  ]
+}

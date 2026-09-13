@@ -1,0 +1,13 @@
+{
+  "issuer": "https://easternalignment.com",
+  "authorization_endpoint": "https://easternalignment.com",
+  "token_endpoint": "https://easternalignment.com",
+  "jwks_uri": "https://easternalignment.com/.well-known/jwks.json",
+  "response_types_supported": [],
+  "grant_types_supported": [],
+  "scopes_supported": ["public"],
+  "service_documentation": "https://easternalignment.com/auth.md",
+  "op_policy_uri": "https://easternalignment.com/privacy/",
+  "op_tos_uri": "https://easternalignment.com/terms/",
+  "_note": "Eastern Alignment is a public content site. All reviews, guides, and comparisons are freely accessible without authentication. This metadata exists for agent discovery compliance."
+}

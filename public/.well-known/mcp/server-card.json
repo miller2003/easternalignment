@@ -1,0 +1,50 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.json",
+  "serverInfo": {
+    "name": "eastern-alignment-reviews",
+    "title": "Eastern Alignment Psychic Platform Reviews",
+    "version": "1.0.0",
+    "description": "Independent reviews, rankings, and buyer guidance for online psychic reading platforms. 162+ advisor profiles reviewed across Kasamba, Keen, and Purple Garden with verifiable session counts and prediction records."
+  },
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://easternalignment.com/llms.txt"
+  },
+  "capabilities": {
+    "tools": false,
+    "resources": true,
+    "prompts": false
+  },
+  "resources": [
+    {
+      "name": "site-content-index",
+      "description": "Complete index of all platform reviews, comparisons, best-of guides, cost breakdowns, and methodology — structured for LLM consumption",
+      "mimeType": "text/markdown",
+      "uri": "https://easternalignment.com/llms.txt"
+    },
+    {
+      "name": "kasamba-review",
+      "description": "Full Kasamba platform review: 64 advisor profiles examined, 3 free minutes + 50% off offer details, scoring methodology",
+      "mimeType": "text/html",
+      "uri": "https://easternalignment.com/reviews/kasamba/"
+    },
+    {
+      "name": "keen-review",
+      "description": "Full Keen platform review: 49 advisor profiles examined, 5 minutes for $1 offer, rating and accountability analysis",
+      "mimeType": "text/html",
+      "uri": "https://easternalignment.com/reviews/keen/"
+    },
+    {
+      "name": "purple-garden-review",
+      "description": "Full Purple Garden platform review: 49 advisor profiles examined, $30 free credit offer, Journeys prediction ledger analysis",
+      "mimeType": "text/html",
+      "uri": "https://easternalignment.com/reviews/purple-garden/"
+    },
+    {
+      "name": "methodology",
+      "description": "Complete testing methodology: 7-step protocol, weighted scoring framework, evidence classification system (A/B/C/D), editorial independence policy",
+      "mimeType": "text/html",
+      "uri": "https://easternalignment.com/methodology/"
+    }
+  ]
+}

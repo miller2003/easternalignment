@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://easternalignment.com",
+      "service-desc": [
+        {
+          "href": "https://easternalignment.com/llms.txt",
+          "type": "text/markdown"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://easternalignment.com/methodology/",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://easternalignment.com/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

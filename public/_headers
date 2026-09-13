@@ -73,3 +73,65 @@
 # 只是把真实类型写清楚（本来就是 markdown）。不加 Cache-Control，用平台默认。
 /llms.txt
   Content-Type: text/markdown; charset=utf-8
+
+# --- Agent Discovery & Capability Endpoints (2026-09-13) ---
+# 这些文件让 AI 智能体通过标准协议（ARD / RFC 9727 / OAuth / MCP / Agent Skills）
+# 自动发现站点的内容和能力。对普通访客完全不可见。
+# 全部设为 24 小时缓存 + CORS（智能体从各种来源请求）。
+# 没有扩展名的文件必须显式声明 Content-Type，否则会被当作 octet-stream。
+#
+# ⚠️ _routes.json 已把 /.well-known/* 和 /auth.md 排除在 Functions 管道外，
+# 所以中间件不会碰这些文件。如果将来新增 .well-known 路径需要动态处理，
+# 需要去 _routes.json 里把它从 exclude 列表移走。
+
+# ARD — Agentic Resource Discovery manifest（总入口）
+/.well-known/ai-catalog.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+# API Catalog — RFC 9727 linkset（无扩展名，必须手动 Content-Type）
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+# OAuth/OIDC Discovery — 声明性公开访问（无扩展名）
+/.well-known/openid-configuration
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+# OAuth Protected Resource Metadata — RFC 9728（无扩展名）
+/.well-known/oauth-protected-resource
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+# MCP Server Card — Model Context Protocol 发现卡
+/.well-known/mcp/server-card.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+# Agent Skills Discovery Index + SKILL.md
+/.well-known/agent-skills/index.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+/.well-known/agent-skills/site-content/SKILL.md
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+# WebMCP manifest
+/.well-known/webmcp.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+# Auth.md — WorkOS 规范的智能体认证说明
+/auth.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400

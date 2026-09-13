@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agentskills.io/schemas/v0.2.0/skills-index.json",
+  "version": "0.2.0",
+  "skills": [
+    {
+      "name": "site-content-access",
+      "type": "documentation",
+      "description": "Access Eastern Alignment's 162+ psychic platform reviews, head-to-head comparisons, ranked guides, and cost breakdowns. Supports markdown content negotiation via Accept: text/markdown header on any page URL.",
+      "url": "https://easternalignment.com/.well-known/agent-skills/site-content/SKILL.md",
+      "digest": "sha256:dbcb8cc6f505cef7c3b672d98d1a451d8c4ceb065bfa9966b2f6da37827d55ad",
+      "tags": ["reviews", "psychics", "comparisons", "markdown", "content"]
+    },
+    {
+      "name": "mcp-resources",
+      "type": "mcp",
+      "description": "MCP server card declaring available review resources for Kasamba, Keen, and Purple Garden platform reviews and methodology.",
+      "url": "https://easternalignment.com/.well-known/mcp/server-card.json",
+      "digest": "sha256:f09c8e20305fb32c0f2489d48fab4f48c18aa30515146a576350b6a0c6aa042c",
+      "tags": ["mcp", "resources", "reviews"]
+    },
+    {
+      "name": "api-catalog",
+      "type": "openapi",
+      "description": "RFC 9727 API catalog linkset pointing to service description, documentation, and status endpoints.",
+      "url": "https://easternalignment.com/.well-known/api-catalog",
+      "digest": "sha256:66a2a40a175ceea9837981dc2e91c97c1525769e62b87e1e6c1ca773cbdea884",
+      "tags": ["api", "catalog", "linkset"]
+    },
+    {
+      "name": "ai-catalog",
+      "type": "agent-card",
+      "description": "Agentic Resource Discovery (ARD) manifest with semantic representative queries for registry embedding.",
+      "url": "https://easternalignment.com/.well-known/ai-catalog.json",
+      "digest": "sha256:2934e6a781298aa59f8406eebaa5c6b89dbf8b2f140bc0aaccd5b46b919dc76b",
+      "tags": ["ard", "discovery", "agent-card"]
+    }
+  ]
+}

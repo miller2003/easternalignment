@@ -1,0 +1,79 @@
+{
+  "specVersion": "1.0.0",
+  "host": {
+    "name": "Eastern Alignment",
+    "domain": "easternalignment.com",
+    "description": "Independent testing, price auditing, and buyer guidance for online psychic reading platforms (Kasamba, Keen, Purple Garden). 162+ advisor profiles reviewed with verifiable session counts and prediction records.",
+    "contact": "mailto:contact@easternalignment.com"
+  },
+  "entries": [
+    {
+      "id": "urn:air:easternalignment.com:doc:llms-txt",
+      "displayName": "Site Content Summary for LLMs",
+      "description": "Curated markdown index of all platform reviews, head-to-head comparisons, ranked best-of guides, cost breakdowns, and testing methodology — structured for large language model consumption.",
+      "type": "text/markdown",
+      "url": "https://easternalignment.com/llms.txt",
+      "representativeQueries": [
+        "What psychic platforms does Eastern Alignment review?",
+        "Best psychics on Kasamba 2026",
+        "How much does a psychic reading cost?",
+        "Kasamba vs Keen vs Purple Garden comparison"
+      ]
+    },
+    {
+      "id": "urn:air:easternalignment.com:content:sitemap",
+      "displayName": "XML Sitemap Index",
+      "description": "Complete sitemap index with lastmod dates for all 300+ content pages across reviews, guides, and comparisons.",
+      "type": "application/xml",
+      "url": "https://easternalignment.com/sitemap-index.xml",
+      "representativeQueries": [
+        "List all pages on Eastern Alignment",
+        "Eastern Alignment site structure and URLs"
+      ]
+    },
+    {
+      "id": "urn:air:easternalignment.com:discovery:api-catalog",
+      "displayName": "API Catalog (RFC 9727)",
+      "description": "RFC 9727 linkset for programmatic access to site content, methodology documentation, and health status.",
+      "type": "application/linkset+json",
+      "url": "https://easternalignment.com/.well-known/api-catalog",
+      "representativeQueries": [
+        "Eastern Alignment API endpoints",
+        "psychic platform review data API"
+      ]
+    },
+    {
+      "id": "urn:air:easternalignment.com:discovery:agent-skills",
+      "displayName": "Agent Skills Discovery Index",
+      "description": "Cloudflare Agent Skills Discovery index listing all machine-consumable capabilities of the site.",
+      "type": "application/json",
+      "url": "https://easternalignment.com/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "What agent skills does Eastern Alignment provide?",
+        "How can an AI agent interact with Eastern Alignment?"
+      ]
+    },
+    {
+      "id": "urn:air:easternalignment.com:discovery:mcp-server",
+      "displayName": "MCP Server Card",
+      "description": "Model Context Protocol server card describing available resources for querying psychic platform reviews and reader data.",
+      "type": "application/json",
+      "url": "https://easternalignment.com/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "Does Eastern Alignment have an MCP server?",
+        "How to connect to Eastern Alignment via MCP?"
+      ]
+    },
+    {
+      "id": "urn:air:easternalignment.com:auth:auth-md",
+      "displayName": "Agent Authentication Guide",
+      "description": "Auth.md compliant access instructions for autonomous AI agents. All content is publicly accessible without authentication.",
+      "type": "text/markdown",
+      "url": "https://easternalignment.com/auth.md",
+      "representativeQueries": [
+        "How to access Eastern Alignment as an AI agent",
+        "Eastern Alignment agent authentication policy"
+      ]
+    }
+  ]
+}
