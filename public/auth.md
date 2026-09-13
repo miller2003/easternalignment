@@ -1,4 +1,4 @@
-# Eastern Alignment — Agent Authentication
+# Auth.md — Eastern Alignment Agent Authentication
 
 > Access and registration guide for autonomous AI agents interacting with Eastern Alignment's psychic platform review data.
 

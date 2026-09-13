@@ -8,7 +8,7 @@
   },
   "entries": [
     {
-      "id": "urn:air:easternalignment.com:doc:llms-txt",
+      "identifier": "urn:air:easternalignment.com:doc:llms-txt",
       "displayName": "Site Content Summary for LLMs",
       "description": "Curated markdown index of all platform reviews, head-to-head comparisons, ranked best-of guides, cost breakdowns, and testing methodology — structured for large language model consumption.",
       "type": "text/markdown",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "id": "urn:air:easternalignment.com:content:sitemap",
+      "identifier": "urn:air:easternalignment.com:content:sitemap",
       "displayName": "XML Sitemap Index",
       "description": "Complete sitemap index with lastmod dates for all 300+ content pages across reviews, guides, and comparisons.",
       "type": "application/xml",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "id": "urn:air:easternalignment.com:discovery:api-catalog",
+      "identifier": "urn:air:easternalignment.com:discovery:api-catalog",
       "displayName": "API Catalog (RFC 9727)",
       "description": "RFC 9727 linkset for programmatic access to site content, methodology documentation, and health status.",
       "type": "application/linkset+json",
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "id": "urn:air:easternalignment.com:discovery:agent-skills",
+      "identifier": "urn:air:easternalignment.com:discovery:agent-skills",
       "displayName": "Agent Skills Discovery Index",
       "description": "Cloudflare Agent Skills Discovery index listing all machine-consumable capabilities of the site.",
       "type": "application/json",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "id": "urn:air:easternalignment.com:discovery:mcp-server",
+      "identifier": "urn:air:easternalignment.com:discovery:mcp-server",
       "displayName": "MCP Server Card",
       "description": "Model Context Protocol server card describing available resources for querying psychic platform reviews and reader data.",
       "type": "application/json",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "id": "urn:air:easternalignment.com:auth:auth-md",
+      "identifier": "urn:air:easternalignment.com:auth:auth-md",
       "displayName": "Agent Authentication Guide",
       "description": "Auth.md compliant access instructions for autonomous AI agents. All content is publicly accessible without authentication.",
       "type": "text/markdown",

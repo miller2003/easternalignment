@@ -10,6 +10,7 @@
 - **自测流量**：用户自测指纹＝CN IP 全 + GB 桌面 Chrome（9 月前）；分析须排除。联盟自测属 fraud，不协助。
 - **收入链路（点击/跳转/CTA）代码改动＝高风险**，用户可能事后要求回退；默认不动或改 Cloudflare 后台方案；必须动则说明零回退成本+留回滚点。
 - 高风险主题（financial-motives-psychics、other-woman-psychic-readings）先由用户定调。
+- 🔴 **仓库外泄（2026-09-13 发现）**：`.gitignore` **未忽略 `.workbuddy/`**，且 GitHub 仓库 `miller2003/easternalignment` 为 **public** → 本项目全部内部记忆（含本节红线、运营策略、CPA 目标）自 2026-08-11（743515e）起已匿名可读，横跨 39 个提交。实测 `raw.githubusercontent.com/.../.workbuddy/memory/MEMORY.md` = 200。**任何写入本目录的内容都默认视为对外公开**，勿记凭证、勿记可被联盟平台利用的自述。处置待用户定调（建议先转 private）。
 
 ## 内容与生产
 - 要诊断不要共情（描述"类型"非"你"）。
