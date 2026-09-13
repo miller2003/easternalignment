@@ -9,7 +9,7 @@
   "op_policy_uri": "https://easternalignment.com/privacy/",
   "op_tos_uri": "https://easternalignment.com/terms/",
   "agent_auth": {
-    "skill": "https://easternalignment.com/.well-known/agent-skills/site-content/SKILL.md",
+    "skill": "https://easternalignment.com/auth.md",
     "register_uri": "https://easternalignment.com/auth.md",
     "identity_types_supported": ["anonymous"],
     "anonymous": {
