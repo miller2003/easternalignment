@@ -11,6 +11,10 @@
   "agent_auth": {
     "skill": "https://easternalignment.com/auth.md",
     "register_uri": "https://easternalignment.com/auth.md",
+    "claim_uri": "https://easternalignment.com/auth.md",
+    "identity_endpoint": "https://easternalignment.com/auth.md",
+    "claim_endpoint": "https://easternalignment.com/auth.md",
+    "events_endpoint": "https://easternalignment.com/auth.md",
     "identity_types_supported": ["anonymous"],
     "anonymous": {
       "credential_types_supported": ["none"],
