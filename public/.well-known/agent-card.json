@@ -1,0 +1,46 @@
+{
+  "name": "Eastern Alignment",
+  "description": "Independent psychic platform reviews and head-to-head comparisons covering Kasamba, Keen, and Purple Garden. Content is served over HTTPS with Markdown content negotiation (Accept: text/markdown) on every page.",
+  "url": "https://easternalignment.com/",
+  "version": "1.0.0",
+  "protocolVersion": "0.3.0",
+  "preferredTransport": "HTTPJSON",
+  "additionalInterfaces": [
+    {
+      "transport": "HTTPJSON",
+      "url": "https://easternalignment.com/"
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "transport": "HTTPJSON",
+      "url": "https://easternalignment.com/",
+      "protocol": "HTTPS"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/markdown", "text/html"],
+  "skills": [
+    {
+      "id": "site-content",
+      "name": "Psychic Platform Reviews",
+      "description": "Access 160+ psychic platform reviews, reader profiles, comparisons, and buyer guides. Any page URL returns clean Markdown when requested with Accept: text/markdown.",
+      "tags": ["reviews", "psychics", "comparisons", "guides"]
+    },
+    {
+      "id": "llms-index",
+      "name": "LLM Content Index",
+      "description": "Curated site-wide content summary for LLMs at https://easternalignment.com/llms.txt.",
+      "tags": ["llms", "index"]
+    }
+  ],
+  "provider": {
+    "organization": "Eastern Alignment",
+    "url": "https://easternalignment.com/about/"
+  }
+}

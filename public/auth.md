@@ -14,8 +14,14 @@ Eastern Alignment is a **public content site**. All reviews, rankings, compariso
 | API Catalog | [/.well-known/api-catalog](https://easternalignment.com/.well-known/api-catalog) |
 | OAuth Discovery | [/.well-known/openid-configuration](https://easternalignment.com/.well-known/openid-configuration) |
 | Protected Resource | [/.well-known/oauth-protected-resource](https://easternalignment.com/.well-known/oauth-protected-resource) |
+| Authorization Server | [/.well-known/oauth-authorization-server](https://easternalignment.com/.well-known/oauth-authorization-server) |
 | MCP Server Card | [/.well-known/mcp/server-card.json](https://easternalignment.com/.well-known/mcp/server-card.json) |
+| A2A Agent Card | [/.well-known/agent-card.json](https://easternalignment.com/.well-known/agent-card.json) |
 | Agent Skills | [/.well-known/agent-skills/index.json](https://easternalignment.com/.well-known/agent-skills/index.json) |
+
+## Registration
+
+This site supports the **anonymous** registration method only — and it is trivial: there is nothing to register. No accounts, API keys, OAuth tokens, or credentials of any kind are required. The `agent_auth` block in the [Authorization Server metadata](https://easternalignment.com/.well-known/oauth-authorization-server) declares `identity_types_supported: ["anonymous"]` with `credential_types_supported: ["none"]`. Fetch any URL directly and you are fully provisioned.
 
 ## For AI Agents
 
