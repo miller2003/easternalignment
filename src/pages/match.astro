@@ -60,7 +60,7 @@ const readerDataJson = JSON.stringify(allRawReaders);
 </BaseLayout>
 
 <script id="match-reader-data" type="application/json" set:html={readerDataJson}></script>
-<style>
+<style is:global>
   .match-root {
     min-height: 100vh;
     background-color: var(--color-bg);
