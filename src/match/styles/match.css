@@ -16,6 +16,8 @@
   padding: var(--space-10) var(--space-4) var(--space-16);
   display: flex;
   justify-content: center;
+  /* 必须不透明：转场/手势中双屏同场，透明底会让两屏文字互相穿透重叠 */
+  background-color: var(--color-bg);
 }
 
 .m-screen--center {
@@ -293,17 +295,17 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-2);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-5);
 }
 
 .m-steps {
   list-style: none;
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--space-5);
   padding: 0;
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-3);
   border-top: 1px solid var(--color-border-light);
-  padding-top: var(--space-6);
+  padding-top: var(--space-4);
 }
 
 .m-steps__item {
@@ -339,8 +341,8 @@
   border: 1px solid var(--color-border);
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
-  padding: var(--space-5);
-  margin-bottom: var(--space-8);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-5);
 }
 .m-resume__label {
   margin: 0 0 var(--space-1);
@@ -365,7 +367,7 @@
 
 /* ── 测验 ─────────────────────────────────────────────────────────── */
 
-.m-progress { margin-bottom: var(--space-8); }
+.m-progress { margin-bottom: var(--space-5); }
 
 .m-progress__track { display: flex; gap: 4px; margin-bottom: var(--space-3); }
 
@@ -410,7 +412,7 @@
 }
 .m-hint--warn { color: var(--color-error); }
 
-.m-options { display: grid; gap: var(--space-3); margin-bottom: var(--space-8); }
+.m-options { display: grid; gap: 0.6rem; margin-bottom: var(--space-5); }
 
 .m-option {
   display: flex;
@@ -1110,13 +1112,13 @@
 /* ── 断点：小屏（≤640px）──────────────────────────────────────────── */
 
 @media (max-width: 640px) {
-  /* 骨架：安全区内缩 + 更紧凑的纵向节奏。
+  /* 骨架：安全区内缩 + 紧凑的纵向节奏。
      底部留白必须含 safe-area，否则 iPhone 上最后一段内容会被 Home
      指示条压住；横屏刘海机还要躲左右两侧的圆角。 */
   .m-screen {
     padding:
-      calc(var(--space-8) + var(--m-safe-t)) calc(var(--space-4) + var(--m-safe-x))
-      calc(var(--space-16) + var(--m-safe-b)) calc(var(--space-4) + var(--m-safe-xr));
+      calc(var(--space-5) + var(--m-safe-t)) calc(var(--space-4) + var(--m-safe-x))
+      calc(var(--space-10) + var(--m-safe-b)) calc(var(--space-4) + var(--m-safe-xr));
   }
 
   /* 过渡屏 / 兜底空屏：用 dvh 而不是 vh，避免被 Safari 工具栏遮住 */
@@ -1134,11 +1136,11 @@
   .m-h1--ask { font-size: 1.6rem; }
 
   /* 题面是「一屏一决策」的核心，需要在首屏内完整可见 */
-  .m-q { font-size: 1.5rem; line-height: 1.28; margin-bottom: var(--space-2); }
-  .m-q__sub { font-size: 1rem; margin-bottom: var(--space-5); }
+  .m-q { font-size: 1.42rem; line-height: 1.26; margin-bottom: var(--space-2); }
+  .m-q__sub { font-size: 1rem; margin-bottom: var(--space-4); }
 
   .m-h2 { font-size: 1.3rem; line-height: 1.3; }
-  .m-lede { font-size: 1.05rem; margin-bottom: var(--space-6); }
+  .m-lede { font-size: 1.05rem; margin-bottom: var(--space-4); }
   .m-p--lead { font-size: 1.05rem; }
 
   /* ── 触控目标：全部提到 44px 以上 ────────────────────────────── */
@@ -1154,10 +1156,10 @@
     justify-content: flex-start;
   }
 
-  /* 选项是整张卡可点，高度天然够；但内边距加一点，指腹更容错 */
+  /* 选项是整张卡可点，高度天然够；内边距收紧但保持 ≥52px 的指腹容错 */
   .m-option {
-    min-height: 56px;
-    padding: 1.05rem 1.1rem;
+    min-height: 52px;
+    padding: 0.8rem 1rem;
     gap: var(--space-3);
   }
   .m-option__mark { width: 20px; height: 20px; }
@@ -1312,8 +1314,8 @@
 
   /* ── 结果页 ─────────────────────────────────────────────────── */
 
-  .m-block { margin-bottom: var(--space-10); }
-  .m-result__head { margin-bottom: var(--space-6); }
+  .m-block { margin-bottom: var(--space-7); }
+  .m-result__head { margin-bottom: var(--space-5); }
 
   /* 锚定框在窄屏要收内边距，否则正文列只剩 ~260px */
   .m-anchor { padding: var(--space-4) var(--space-5); }
@@ -1328,7 +1330,7 @@
      比竖排头部省掉两行高度（竖排是给桌面三列窄卡的折中方案）。
      文字列（.m-reader__id）内部保持左对齐，不再居中。 */
   .m-readers { gap: var(--space-3); }
-  .m-reader { padding: var(--space-5); gap: var(--space-4); }
+  .m-reader { padding: var(--space-4); gap: var(--space-3); }
   .m-reader .m-reader__top {
     flex-direction: row;
     align-items: flex-start;
@@ -1799,6 +1801,109 @@
   @keyframes m-sheen {
     to { transform: translateX(130%); }
   }
+}
+
+/* ── 沉浸模式：答题屏是全屏应用，不是网页 ───────────────────────────
+   用户判断一个产品是不是「App」的潜意识标准：界面还会不会像网页一样
+   被整页拖动。沉浸模式做三件事：
+     1. 隐藏站点框架（header / footer）—— 可见范围内没有「网站」
+     2. 锁死页面级滚动 —— 橡皮筋效应拖不出网页形态
+     3. 选项区改为内部滚动 —— 题目再长，进度条与底栏都钉在原位
+
+   .m-immersive 由 render() 在答题屏挂载、其余屏摘除；
+   .m-immersive-lock（页面滚动静锁）只加在非自由文本题 ——
+   软键盘弹起时 iOS 必须能把 textarea 推进可视区，锁死会让输入被键盘盖住。
+
+   :has() 在目标设备（iOS 15.4+）全量可用；不支持的老浏览器退化为
+   普通网页布局，功能无损。 */
+#match-root.m-immersive { min-height: 100dvh; }
+
+#match-root.m-immersive-lock {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body:has(#match-root.m-immersive-lock) {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body:has(#match-root.m-immersive) .site-header,
+body:has(#match-root.m-immersive) .m-footer {
+  display: none;
+}
+
+/* 答题屏骨架：进度在顶、题面跟随、选项弹性区、底栏贴底 */
+#match-root.m-immersive .m-screen--quiz {
+  min-height: 100dvh;
+  padding-top: calc(var(--space-4) + var(--m-safe-t));
+  padding-bottom: 0;
+}
+#match-root.m-immersive-lock .m-screen--quiz {
+  height: 100%;
+  min-height: 0;
+}
+
+#match-root.m-immersive .m-quiz {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+#match-root.m-immersive .m-progress,
+#match-root.m-immersive .m-q,
+#match-root.m-immersive .m-q__sub,
+#match-root.m-immersive .m-hint {
+  flex: 0 0 auto;
+}
+
+/* 选项区是唯一允许滚动的区域；滚动条隐藏保持应用感 */
+#match-root.m-immersive .m-options {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-bottom: var(--space-2);
+}
+#match-root.m-immersive .m-options::-webkit-scrollbar { display: none; }
+
+/* 自由文本题同样吃满弹性区，让底栏贴底 */
+#match-root.m-immersive .m-freetext {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+#match-root.m-immersive .m-freetext .m-textarea { flex: 0 0 auto; }
+
+/* 底栏（锁滚题）：悬浮覆盖在选项区之上，选项从磨砂玻璃下滚过 ——
+   这正是 iOS 底栏的景深观感。选项区底部预留等高的空缺，
+   保证最后一个选项能完整滚到玻璃上方。 */
+#match-root.m-immersive .m-quiz { position: relative; }
+#match-root.m-immersive-lock .m-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 0;
+}
+#match-root.m-immersive-lock .m-options {
+  padding-bottom: calc(76px + var(--m-safe-b));
+}
+
+/* 自由文本题（不锁滚）：底栏回到静态流内，磨砂撤掉 ——
+   软键盘弹起后它必须随内容一起被推动 */
+#match-root.m-immersive .m-quiz:has(.m-freetext) .m-nav {
+  position: static;
+  margin-top: auto;
+  flex: 0 0 auto;
+  box-shadow: none;
+  background-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 /* ── 动效层的 reduced-motion 出口（与文件顶部的全局兜底并存）────── */

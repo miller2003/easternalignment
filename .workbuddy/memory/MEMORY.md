@@ -26,11 +26,12 @@
 - 遗留：`noindex:true`；邮件 provider:'local'（不发信，文案=保存）。
 
 ### /match 动效层（2026-09-15 交互重构）
-- `render(t)` 四种转场：push/pop（iOS 式横滑+26% 视差，380/340ms）/fade/none；WAAPI 只动 transform/opacity；is-transitioning 锁点击；双通道收尾（finished+超时兜底）防容器卡死。
+- `render(t)` 四种转场：push/pop（iOS 式横滑+26% 视差，380/340ms）/fade/none；WAAPI 只动 transform/opacity；is-transitioning 锁点击；双通道收尾（finished+超时兜底）防容器卡死。**`.m-screen` 必须不透明底**（`background-color: var(--color-bg)`），否则双屏文字互透重叠；push 退出屏只视差不降透明度。
 - 选项**静默点选**：`selectOption(..., {quiet:true})` 不重渲染，assessment 原地改 class/计数/禁用态 + `.is-just-picked` 动画钩子；自动前进定时器模块级可取消（防跳题竞态）。
-- `ui/swipeBack.ts` 边缘右滑返回：左缘 30px 起滑、水平优势裁决、跟手 transform、peek 静默渲染上一屏（`renderAssessment(..., silent)` 跳焦点/播报）、距离 28%/速度 0.45px/ms 双阈值、吞捕获期 click（once 会残留，用定时自毁）、commit 走 `back({viaSwipe:true})` → `render('none')`。
+- `ui/swipeBack.ts` 边缘右滑返回：左缘 30px 起滑、水平优势裁决、跟手 transform、peek 静默渲染上一屏（`renderAssessment(..., silent)` 跳焦点/播报）、距离 28%/速度 0.45px/ms 双阈值、吞捕获期 click（once 会残留，用定时自毁）、commit 走 `back({viaSwipe:true})` → `render('none')`。不做触屏预判、全员挂载（桌面成本为零）。
+- **沉浸模式**（答题屏＝全屏应用）：`render()` 按屏切 `m-immersive`（`:has()` 隐藏 .site-header/.m-footer）与 `m-immersive-lock`（100dvh+overflow 锁滚+橡皮筋锁）；**freetext 题豁免锁滚**（键盘要把 textarea 推进可视区）。锁滚题底栏 absolute 悬浮 + 选项区 padding-bottom 预留 + 内部滚动隐藏滚动条；freetext 底栏回静态。
 - 同屏内容更新（邮件回显）用 `render('none')` → afterRender 'skip'，不动焦点/滚动；结果页 `revealOnScroll` 渐显只在跨屏进入时播；pop 用 savedScroll 还原滚动位置。
-- 底栏磨砂：color-mix 82% + backdrop-filter（freetext 题撤掉）；动效全走 no-preference 守卫 + 末尾独立 reduce 出口块（首个 reduce 块是 71 断言锚点，勿动）。
+- 底栏磨砂：color-mix 82% + backdrop-filter；动效全走 no-preference 守卫 + 末尾独立 reduce 出口块（首个 reduce 块是 71 断言锚点，勿动）。紧凑化基线：选项 52px/gap 0.6rem、m-q 1.42rem（m640）。
 
 ## 移动端标准（Apple HIG）
 触控 ≥44px；input ≥16px；`100dvh`+safe-area（`/go/*` 刻意未补 viewport-fit）。`.m-card` 用 `width:min(260px,78vw,36dvh)` 不用 max-height；`.m-quote__*` 覆盖带 `!important`。移动端规则集中在 match.css 末尾章节，删章即回退。回归 `mobile_css_check.mjs` + `scratch/mobile_audit/audit.js`。

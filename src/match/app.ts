@@ -188,6 +188,17 @@ function render(transition: Transition = 'fade'): void {
     !prefersReducedMotion() &&
     typeof node.animate === 'function';
 
+  // 沉浸模式：答题屏是全屏应用（无站点框架、锁页面滚动、选项区内滚），
+  // 其余屏是正常网页。class 必须在动画开始前就位，否则新屏会以错误布局入场。
+  // 自由文本题豁免滚动静锁：软键盘弹起时 iOS 需要能把 textarea 推进可视区。
+  const root = document.getElementById('match-root');
+  if (root) {
+    const immersive = state.screen === 'assessment';
+    const lockScroll = immersive && currentQuestion()?.type !== 'freetext';
+    root.classList.toggle('m-immersive', immersive);
+    root.classList.toggle('m-immersive-lock', lockScroll);
+  }
+
   // 结果页的滚动渐显只在「从别的屏进入」时播一次；
   // 同屏重渲染（如邮件提交回显）重播整页入场动画是一种视觉事故。
   const enteringResult = state.screen === 'result' && lastScreen !== 'result';
@@ -217,8 +228,10 @@ function render(transition: Transition = 'fade'): void {
   let anims: Animation[];
   if (transition === 'push') {
     anims = [
+      // 退出屏只做视差、不降透明度 —— 双屏都是不透明底，
+      // 降透明度只会透出同色的页面底色，还会让文字显得发灰重叠
       prev!.animate(
-        [{ transform: 'translateX(0)', opacity: '1' }, { transform: 'translateX(-26%)', opacity: '0.85' }],
+        [{ transform: 'translateX(0)' }, { transform: 'translateX(-26%)' }],
         { duration: 380, easing: TRANSITION_EASE, fill: 'forwards' },
       ),
       node.animate(
@@ -233,7 +246,7 @@ function render(transition: Transition = 'fade'): void {
         { duration: 340, easing: TRANSITION_EASE, fill: 'forwards' },
       ),
       node.animate(
-        [{ transform: 'translateX(-26%)', opacity: '0.85' }, { transform: 'translateX(0)', opacity: '1' }],
+        [{ transform: 'translateX(-26%)' }, { transform: 'translateX(0)' }],
         { duration: 340, easing: TRANSITION_EASE, fill: 'forwards' },
       ),
     ];
