@@ -17,7 +17,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about the spiritual weight of unfinished connections',
       'Reflect on what you would do if the answer never came - and what that tells you'
     ],
-    explicitAnchorField: 'relationship_state'
   },
   {
     key: 'love__recently_separated',
@@ -34,7 +33,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about what spiritual traditions say about loss and what it opens',
       'Notice which memories surface most - they often point to what you are truly processing'
     ],
-    explicitAnchorField: 'relationship_state'
   },
   {
     key: 'love__thinking_about_someone',
@@ -51,7 +49,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Reflect on what you would want them to know, even if you never say it',
       'Journaling what you imagine can clarify what you actually want'
     ],
-    explicitAnchorField: 'relationship_state'
   },
   {
     key: 'love__complicated',
@@ -68,7 +65,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about navigating relationship uncertainty without losing yourself',
       'Notice whether the ambiguity is coming from them, from you, or from both'
     ],
-    explicitAnchorField: 'relationship_state'
   },
   {
     key: 'love__single',
@@ -85,7 +81,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about the spiritual significance of this particular chapter of being alone',
       'Reflect on what changed the last time you opened yourself to something new'
     ],
-    explicitAnchorField: 'relationship_state'
   },
   {
     key: 'love__relationship',
@@ -102,7 +97,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about how relationships evolve through periods of uncertainty',
       'Consider what you would need to feel secure again, and what that would require'
     ],
-    explicitAnchorField: 'relationship_state'
   },
   {
     key: 'love__talking',
@@ -119,7 +113,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about navigating the early stages of connection with clarity',
       'Clarify what you want this to become, so you have a direction to move toward'
     ],
-    explicitAnchorField: 'relationship_state'
   },
   {
     key: 'love',
@@ -136,7 +129,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about the spiritual dimensions of love and connection',
       'Notice what comes up when you imagine the best possible outcome'
     ],
-    explicitAnchorField: 'primary_domain'
   },
   {
     key: 'career__fear',
@@ -153,7 +145,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about navigating major career transitions with clarity',
       'Write out both paths - what each one costs and what each one genuinely offers'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'career__confusion',
@@ -170,7 +161,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about the spiritual significance of career crossroads',
       'Make a list of what you are moving toward, not just what you are moving away from'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'career__frustration',
@@ -187,7 +177,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about the difference between persistence and the wisdom of redirection',
       'Notice what would need to change for the work to feel meaningful again'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'money__anxiety',
@@ -204,7 +193,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about the psychological and spiritual relationship to financial fear',
       'Identify one small area of agency - even a small sense of control can shift the energy'
     ],
-    explicitAnchorField: 'primary_domain'
   },
   {
     key: 'career',
@@ -221,7 +209,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about navigating career transitions and important decisions',
       'Give yourself permission to want what you actually want'
     ],
-    explicitAnchorField: 'primary_domain'
   },
   {
     key: 'spirituality__curiosity',
@@ -238,7 +225,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about how symbolic experiences often coincide with internal shifts',
       'Ask yourself what message would make the most sense given what is happening in your life'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'spirituality__anxiety',
@@ -255,7 +241,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about protection, clearing, and energetic maintenance',
       'Ground yourself through consistent routine - structure can help when energy feels scattered'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'spirituality',
@@ -272,7 +257,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about spiritual awakening and the different ways it presents',
       'Consider keeping a record of your dreams, signs, and intuitions over the next few weeks'
     ],
-    explicitAnchorField: 'primary_domain'
   },
   {
     key: 'future__confusion',
@@ -289,7 +273,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about navigating major life transitions with intention',
       'Give yourself permission to not know - sometimes the path only becomes visible once you begin walking'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'future__fear',
@@ -306,7 +289,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about how to navigate uncertainty without being controlled by it',
       'Identify what you can genuinely influence and what you need to release'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'future__anticipation',
@@ -323,7 +305,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about how periods of transition often carry the seeds of what comes next',
       'Notice what small step forward is available to you right now'
     ],
-    explicitAnchorField: 'emotional_states'
   },
   {
     key: 'future',
@@ -340,7 +321,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about what spiritual practice says about trust and navigating uncertainty',
       'Focus on what is in motion now - futures are built from present choices'
     ],
-    explicitAnchorField: 'primary_domain'
   },
   {
     key: 'self_growth',
@@ -357,7 +337,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about how identity shifts often look like confusion before they look like clarity',
       'Trust that the discomfort of growth is not the same as going in the wrong direction'
     ],
-    explicitAnchorField: 'primary_domain'
   },
   {
     key: 'family',
@@ -374,7 +353,6 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about the spiritual weight of family bonds and how they shape us',
       'Identify what you need from this situation, not just what the situation needs from you'
     ],
-    explicitAnchorField: 'primary_domain'
   },
   {
     key: 'protection',
@@ -391,7 +369,73 @@ export const NARRATIVE_BLOCKS: NarrativeBlock[] = [
       'Read about energetic clearing and how to maintain your own field',
       'Begin simple grounding practices - they are consistently more powerful than they appear'
     ],
-    explicitAnchorField: 'primary_domain'
+  },
+
+  /* ── 2026-09-14 补齐：以下 4 个键此前缺失，导致对应画像只能落到通用兜底 ── */
+
+  {
+    key: 'love__dating',
+    theme: 'The Stage With No Name',
+    summary: [
+      'Early dating is a strange kind of exposure: you are investing attention and hope into something that has not agreed to be anything yet.',
+      'When you cannot tell where it is going, the uncertainty usually is not a signal that something is wrong. It more often means the two of you are moving at genuinely different speeds - and that you have not yet said out loud what you are actually hoping for.',
+      'The discomfort here tends to come from reading someone else’s signals instead of holding your own position. What you want is information you can get without asking them to define everything.',
+    ],
+    deeperQuestion: 'Are you waiting to find out how they feel - or avoiding saying what you want in case the answer costs you the connection?',
+    whatNext: [
+      'Name what you would want in three months, without editing it to sound reasonable',
+      'Notice whether you are gathering information or looking for permission',
+      'A reader can help you sort your own read on the dynamic from your hopes about it',
+      'Read about how undefined stages tend to resolve - usually by whoever states a position first'
+    ],
+  },
+  {
+    key: 'breakup',
+    theme: 'After the Ending',
+    summary: [
+      'The period after a relationship ends is not one emotion, it is a rotation. Relief, then grief, then anger, then a sudden afternoon of missing them for no reason at all. None of that is a setback.',
+      'What makes it disorienting is that the ending of a relationship also ends a version of your own future. You are not only grieving a person - you are grieving the life you had already half-imagined with them.',
+      'Most of the urgency you feel right now is not really about whether they come back. It is about whether you can stand inside the not-knowing without the ground moving.',
+    ],
+    deeperQuestion: 'Are you mourning them - or mourning the future you had already started planning?',
+    whatNext: [
+      'Give the rotation permission to rotate. Judging each feeling as it arrives just adds a second layer to it',
+      'Separate the questions you can answer yourself from the ones only they could answer',
+      'A reader who works with separation can help you tell the difference between intuition and protest',
+      'Read about what actually shortens this period, and what quietly lengthens it'
+    ],
+  },
+  {
+    key: 'relationships',
+    theme: 'The Space Between People',
+    summary: [
+      'Whatever is difficult with the people around you tends to sit close to something older - a pattern you learned about what closeness requires, and what it costs.',
+      'It is rarely the single incident that wears people down. It is the feeling of repeating the same conversation with different wording, and the quiet suspicion that nobody is going to say the thing that would actually change it.',
+      'This is territory where perspective usually comes from outside your own frame - not because you are wrong, but because you are inside it.',
+    ],
+    deeperQuestion: 'Are you trying to change how this relationship works - or trying to decide how much of it you can carry?',
+    whatNext: [
+      'Write down the sentence you have never actually said to them',
+      'Notice which relationships restore you and which ones only take, and be honest about the ratio',
+      'A reader can offer a read on the dynamic without already being invested in it',
+      'Read about how repeated patterns in relationships tend to resolve'
+    ],
+  },
+  {
+    key: 'money',
+    theme: 'What You Are Actually Counting',
+    summary: [
+      'Money worry is rarely only about money. It is about what you believe the number says about your safety, your standing, or your future - and those are different questions with different answers.',
+      'Financial stress also crowds out the ability to think long-term, which is exactly the mode the problem needs. The tighter things feel, the shorter your planning horizon gets.',
+      'The most useful move here is to separate what is a resource problem from what is a decision problem. They feel identical from the inside and require opposite responses.',
+    ],
+    deeperQuestion: 'Are you short of resources - or short of a decision you have been refusing to make?',
+    whatNext: [
+      'Write down the actual number you are worried about. Vagueness is where this kind of anxiety lives',
+      'Separate the parts that respond to action from the parts that only respond to time',
+      'A reader who works with money questions can help you find the decision you have been circling',
+      'Read about how people in this position usually regain their footing'
+    ],
   },
 ];
 
@@ -411,6 +455,5 @@ export function getFallbackNarrative(profile: UserProfile): NarrativeBlock {
       'Browse the guides that speak to what you are currently navigating',
       'Notice what you are drawn to - the attraction itself often carries information'
     ],
-    explicitAnchorField: 'primary_domain'
   };
 }

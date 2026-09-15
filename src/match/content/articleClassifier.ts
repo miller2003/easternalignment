@@ -1,115 +1,197 @@
-import type { Domain, EmotionalState, RelationshipState, DesiredOutcome, TemporalOrientation, CommercialIntent, ArticleMetadata } from '../types';
+/**
+ * content/articleClassifier.ts — 文章标签推断（构建期运行）
+ *
+ * 保留原有的标签规则（它在 112 篇 guides 上的分布是合理的），
+ * 但改了两件事：
+ *   1. 不再拿 slugToTitle() 当标题 —— slug 转标题会把撇号吃掉
+ *      （"Why Can't I Stop..." → "Why Cant I Stop..."），
+ *      现在标题直接取 guides frontmatter 里的真实 title
+ *   2. 不再维护一份硬编码的 GUIDE_SLUGS 清单 —— 它和实际目录会漂移。
+ *      改为构建期扫目录，任何新增文章自动进入推荐池。
+ */
 
-export const GUIDE_SLUGS: string[] = [
-  'age-gap-relationship-psychics', 'ai-psychic-readings-vs-human', 'am-i-psychic-signs-and-tests',
-  'angel-numbers-1111-222-333-meaning-guide', 'are-psychics-real', 'aura-reading-meaning-colors',
-  'avoidant-attachment-psychic-readings', 'before-you-pay-for-a-psychic-reading', 'best-kasamba-psychics-2026',
-  'best-kasamba-psychics-career-money', 'best-kasamba-psychics-ex-recovery', 'best-kasamba-psychics-first-reading',
-  'best-keen-psychics-2026', 'best-lgbtq-psychics-online', 'best-love-psychics-kasamba-ranked',
-  'best-love-psychics-keen-ex-recovery', 'best-love-psychics-purple-garden', 'best-mediums-on-kasamba',
-  'best-mediums-on-purple-garden', 'best-psychic-hotlines-2026', 'best-psychics-for-breakups',
-  'best-purple-garden-psychics-2026', 'best-purple-garden-psychics-career-money', 'best-purple-garden-psychics-ex-recovery',
-  'best-purple-garden-psychics-first-reading', 'best-soulmate-psychics-online', 'best-tarot-readers-for-love',
-  'best-tarot-readers-on-kasamba', 'best-twin-flame-psychics-online', 'best-video-psychics-purple-garden',
-  'brutally-honest-psychics-kasamba', 'brutally-honest-psychics-keen', 'brutally-honest-psychics-purple-garden',
-  'can-psychic-predict-marriage', 'career-and-money-psychic-readings', 'chat-vs-phone-vs-video-psychic-reading',
-  'cheap-love-psychics-online', 'choose-the-right-psychic-reader-for-you', 'clairs-the-four-psychic-abilities-guide',
-  'divorce-breakup-psychics-online', 'does-he-like-me-psychics', 'dreaming-about-ex-psychic-meaning',
-  'evidential-mediums-passed-spouse', 'financial-motives-psychics', 'first-psychic-reading-guide',
-  'free-psychic-readings-online-truth', 'healing-after-heartbreak-spiritual-guide', 'how-much-does-a-psychic-reading-cost',
-  'how-often-psychic-reading', 'how-to-choose-a-psychic-reader', 'how-to-pick-a-psychic-reader',
-  'how-to-prepare-for-psychic-reading', 'how-to-spot-fake-psychic', 'how-to-tell-if-an-online-psychic-is-legitimate',
-  'is-he-the-one-psychic-indicators', 'is-purple-garden-legit', 'karmic-relationships-signs-and-lessons',
-  'kasamba-3-free-minutes-guide', 'kasamba-love-readings-review', 'kasamba-no-contact-love-reading',
-  'kasamba-specific-person-reading', 'kasamba-twin-flame-reading', 'keen-ldr-timelines-close-the-gap',
-  'keen-love-psychics-review', 'keen-twin-flame-reading', 'long-distance-relationship-psychics',
-  'love-after-loss-mediums', 'love-or-career-psychics', 'love-triangles-psychics', 'most-accurate-love-psychics',
-  'most-accurate-psychics-kasamba', 'most-accurate-psychics-keen', 'most-accurate-psychics-purple-garden',
-  'no-contact-psychic-readings-guide', 'online-dating-psychics', 'other-woman-psychic-readings',
-  'palm-reading-beginners-guide', 'past-life-connections-psychic-readings', 'pet-psychic-readings-online',
-  'pregnancy-psychic-readings-guide', 'psychic-prediction-didnt-come-true', 'psychic-reading-prices',
-  'psychic-reading-vs-therapy', 'psychic-readings-for-anxiety', 'psychic-vs-medium-vs-tarot-reader',
-  'psychic-vs-tarot-vs-astrology', 'purple-garden-30-credit-guide', 'purple-garden-journeys-guide',
-  'purple-garden-love-readings-review', 'purple-garden-twin-flame-readings', 'questions-to-ask-a-psychic',
-  'real-marriage-psychics', 'should-you-pay-for-a-psychic-reading', 'signs-spiritual-connection-with-someone',
-  'signs-your-ex-is-coming-back', 'single-parent-psychics', 'situationship-psychic-readings',
-  'spiritual-awakening-signs-guide', 'tarot-card-meanings-beginners-guide', 'tarot-for-love-practical-guide',
-  'third-party-psychic-readings-jealousy', 'top-love-psychics-kasamba', 'top-love-psychics-keen',
-  'top-love-psychics-online', 'top-love-psychics-purple-garden', 'twin-flame-vs-soulmate-difference',
-  'what-is-psychic-reading', 'what-to-expect-from-your-first-psychic-reading', 'when-will-i-get-married-psychics',
-  'will-he-propose-psychics', 'win-her-back-psychics', 'zodiac-compatibility-psychic-readings'
+import type {
+  ArticleMetadata, CommercialIntent, DesiredOutcome, Domain,
+  EmotionalState, RelationshipState, Situation, TemporalOrientation,
+} from '../types';
+
+/**
+ * 情境规则。顺序无关 —— 一篇文章可以同时属于多个情境
+ * （例如「离婚后的异地恋」）。
+ */
+const SITUATION_RULES: Array<[Situation, RegExp]> = [
+  ['pregnancy', /pregnan|conceiv|baby|miscarriage|fertility/],
+  ['marriage', /marriage|married|propose|proposal|wedding|husband|wife/],
+  ['parenting', /parenting|single-parent|children|kids|step-?child/],
+  ['caregiving', /caregiv|elderly|unwell|terminal|hospice/],
+  ['estrangement', /estrang|cut-off|cutting-off|no-longer-speaking/],
+  ['career_money', /career|\bjob\b|work|money|financial|salary|debt|abundance|wealth|interview|promotion|employ/],
+  ['business', /business|entrepreneur|startup|self-employ/],
+  ['pet', /pet-|pets-|animal|\bdog\b|\bcat\b/],
+  ['mediumship', /medium|mediumship|passed-away|deceased|evidential|afterlife/],
+  ['past_life', /past-life|reincarnat/],
+  ['dream', /dream/],
+  ['signs', /angel-number|1111|222|333|444|synchronicit|repeating-number|-signs|signs-|seeing-signs/],
+  ['awakening', /awakening/],
+  ['purpose', /life-purpose|purpose|-direction|finding-direction|self-growth|personal-growth/],
+  ['healing', /healing|heal-|move-on|closure|recovery/],
+  ['toxic_relationship', /toxic|narciss|manipulat|boundar|drain/],
+  ['third_party', /third-party|other-woman|jealous|rival|affair|infidelity|cheating/],
+  ['ldr', /\bldr\b|long-distance|close-the-gap/],
+  ['age_gap', /age-gap/],
+  ['lgbtq', /lgbtq|gay|lesbian|queer|same-sex/],
+  ['mental_health', /anxiety|therapy|depress|mental-health/],
+  ['first_timer', /first-psychic|first-reading|beginner|what-to-expect|questions-to-ask|how-to-prepare/],
+  ['cost', /\bcost\b|prices|price|cheap|how-much|afford|free-psychic/],
+  ['legitimacy', /legit|scam|fake|are-psychics-real|spot-fake|refund/],
+  ['breakup_recovery', /breakup|heartbreak|divorce|separation/],
+  ['no_contact', /no-contact/],
+  ['reconciliation', /reconcil|coming-back|win-her-back|win-him-back/],
+  ['single', /i-?m-single|\bsingle\b|soulmate|find-love|dating-prospects/],
+  ['dating', /dating|date-|situationship|talking-stage|crush|does-he-like/],
 ];
 
-function slugToTitle(slug: string): string {
-  return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+export function classifySituations(slug: string): Situation[] {
+  const s = slug.toLowerCase();
+  const out: Situation[] = [];
+  for (const [tag, re] of SITUATION_RULES) if (re.test(s)) out.push(tag);
+  return out;
 }
 
-export function classifyArticle(slug: string): ArticleMetadata {
+export interface ArticleTags {
+  primary_domain: Domain;
+  secondary_topics: Domain[];
+  emotional_states: EmotionalState[];
+  relationship_states: RelationshipState[];
+  desired_outcomes: DesiredOutcome[];
+  temporal_orientation: TemporalOrientation[];
+  commercial_intent: CommercialIntent;
+  /**
+   * 有没有「话题证据」。
+   *
+   * 旧版把没有任何话题词的 slug 一律默认成 love。后果实测很具体：
+   * 「Is Purple Garden Legit or a Scam?」这类平台信任类内容会因为
+   * reassurance 标签 + 高商业意图排到恋爱用户的第一位 —— 在一个问
+   * 「我单身，想知道未来会怎样」的人面前，旗舰文章变成一篇平台测评。
+   *
+   * 现在：没有任何话题证据的文章被显式标记，推荐时拿不到领域加权，
+   * 也不会占旗舰位。
+   */
+  topic_agnostic: boolean;
+  /** 这篇文章具体讲的是哪些情境 */
+  situations: Situation[];
+}
+
+/* 话题证据表：顺序即优先级。数组靠前的先匹配 */
+const DOMAIN_EVIDENCE: Array<[Domain, RegExp]> = [
+  ['breakup', /breakup|break-?up|divorce|separation|separated|\bex-|heartbreak|win-her-back|win-him-back|signs-your-ex|no-contact|reconcil|come-back/],
+  ['family', /single-parent|pregnan|marriage|married|propose|when-will-i-get-married|real-marriage|family|children|kids|parents?/],
+  ['career', /career|job|work|business|money|financial|abundance|salary|debt|wealth/],
+  ['protection', /third-party|other-woman|jealous|protection|negative-energy|cleans|hex|curse|red-flag/],
+  ['self_growth', /self-growth|personal-growth|life-purpose|purpose|awakening|confidence|anxiety|therapy|healing-after/],
+  ['future', /future|timeline|when-will|predict|coming-months|what-happens-next/],
+  ['spirituality', /spiritual|angel|aura|clairs|palm|past-life|tarot|medium|evidential|astrology|zodiac|numerolog|chakra|dream/],
+  ['love', /love|romance|romantic|relationship|soulmate|twin-?flame|dating|date-|crush|does-he|does-she|is-he-the-one|situationship|ldr|long-distance/],
+];
+
+export function classifyArticleTags(slug: string): ArticleTags {
   const s = slug.toLowerCase();
 
-  // Primary domain
-  let primary_domain: Domain = 'love';
-  if (/career|money|financial|abundance/.test(s)) primary_domain = 'career';
-  else if (/money|financial/.test(s)) primary_domain = 'money';
-  else if (/single-parent|pregnancy/.test(s)) primary_domain = 'family';
-  else if (/third-party|jealousy/.test(s)) primary_domain = 'protection';
-  else if (/self-growth|personal-growth|life-purpose/.test(s)) primary_domain = 'self_growth';
-  else if (/future|timeline|when-will|predict/.test(s)) primary_domain = 'future';
-  else if (/spiritual|angel|aura|clairs|palm|past-life/.test(s) && !/love|relationship|breakup/.test(s)) primary_domain = 'spirituality';
+  // ── 领域：只有命中证据才认领；全都没命中则标记为无话题 ──
+  const matched = DOMAIN_EVIDENCE.find(([, re]) => re.test(s));
+  const topic_agnostic = !matched;
+  const primary_domain: Domain = matched ? matched[0] : 'love';
 
-  // Secondary topics
   const secondary_topics: Domain[] = [];
   if (/tarot/.test(s)) secondary_topics.push('spirituality');
-  if (/medium|passed|deceased/.test(s)) secondary_topics.push('spirituality');
-  if (/career|money/.test(s) && primary_domain === 'love') secondary_topics.push('career');
-  if (/love|relationship/.test(s) && primary_domain !== 'love') secondary_topics.push('love');
-  if (/breakup|ex-|divorce|separation/.test(s)) { if (!secondary_topics.includes('breakup' as Domain)) secondary_topics.push('breakup'); }
+  if (/medium|passed|deceased|evidential/.test(s)) secondary_topics.push('spirituality');
+  if (/career|money/.test(s) && primary_domain !== 'career') secondary_topics.push('career');
+  if (/love|relationship|romance/.test(s) && primary_domain !== 'love') secondary_topics.push('love');
+  if (/breakup|ex-|divorce|separation/.test(s) && primary_domain !== 'breakup') secondary_topics.push('breakup');
+  if (/no-contact/.test(s) && primary_domain !== 'breakup') secondary_topics.push('breakup');
 
-  // Emotional states
   const emotional_states: EmotionalState[] = [];
-  if (/anxiety|worry|anxious/.test(s)) emotional_states.push('anxiety');
-  if (/healing|heartbreak/.test(s)) emotional_states.push('grief');
+  if (/anxiety|anxious|worry/.test(s)) emotional_states.push('anxiety');
+  if (/healing|heartbreak|grief|loss|love-after/.test(s)) emotional_states.push('grief');
   if (/confusion|uncertain/.test(s)) emotional_states.push('confusion');
-  if (/hope|coming-back|signs-your-ex/.test(s)) emotional_states.push('hope');
-  if (/fear/.test(s)) emotional_states.push('fear');
+  if (/hope|coming-back|signs-your-ex|reconcil/.test(s)) emotional_states.push('hope');
+  if (/fear|scared/.test(s)) emotional_states.push('fear');
+  if (/lonely|alone|single/.test(s)) emotional_states.push('loneliness');
+  if (/not-come-true|fake|red-flag|scam/.test(s)) emotional_states.push('frustration');
+  if (/anticipat|waiting|timeline/.test(s)) emotional_states.push('anticipation');
 
-  // Relationship states
   const relationship_states: RelationshipState[] = [];
   if (/no-contact/.test(s)) relationship_states.push('no_contact');
   if (/breakup|divorce|ex-|separation|heartbreak|win-her-back|signs-your-ex/.test(s)) relationship_states.push('recently_separated');
-  if (/does-he|is-he|specific-person/.test(s)) relationship_states.push('thinking_about_someone');
+  if (/does-he|is-he|specific-person|does-she/.test(s)) relationship_states.push('thinking_about_someone');
   if (/situationship|complicated|love-triangle|third-party|other-woman/.test(s)) relationship_states.push('complicated');
-  if (/marriage|propose|when-will-i-get-married|real-marriage|can-psychic-predict-marriage/.test(s)) relationship_states.push('relationship');
-  if (/soulmate/.test(s) && !relationship_states.length) relationship_states.push('thinking_about_someone');
+  if (/marriage|propose|when-will-i-get-married|real-marriage/.test(s)) relationship_states.push('relationship');
+  if (/online-dating|age-gap/.test(s)) relationship_states.push('dating');
+  if (/soulmate|twin-flame/.test(s) && !relationship_states.length) relationship_states.push('thinking_about_someone');
 
-  // Desired outcomes
   const desired_outcomes: DesiredOutcome[] = [];
   if (/win-her-back|coming-back|reconcil|signs-your-ex/.test(s)) desired_outcomes.push('action');
-  if (/healing|closure/.test(s)) desired_outcomes.push('closure');
-  if (/clarity|choose|how-to-pick|choose-the-right/.test(s)) desired_outcomes.push('clarity');
-  if (/predict|when-will|future|timeline/.test(s)) desired_outcomes.push('prediction');
-  if (/reassur|legit|are-psychics-real|is-purple-garden/.test(s)) desired_outcomes.push('reassurance');
+  if (/healing|closure|move-on|let-go/.test(s)) desired_outcomes.push('closure');
+  if (/clarity|choose|how-to-pick|choose-the-right|prepare/.test(s)) desired_outcomes.push('clarity');
+  if (/predict|when-will|future|timeline|how-often/.test(s)) desired_outcomes.push('prediction');
+  if (/reassur|legit|are-psychics-real|is-psychics|spot-fake|scam|refund/.test(s)) desired_outcomes.push('reassurance');
+  if (/anxiety|vs-therapy|skeptic/.test(s)) desired_outcomes.push('reassurance');
+  if (/how-to-|guide|first-psychic-reading|questions-to-ask|cost|prices/.test(s)) desired_outcomes.push('action');
+  if (/does-he-like-me|is-he-the-one|twin-flame-vs-soulmate/.test(s)) desired_outcomes.push('validation');
+  if (/soulmate|connection|evidential-mediums|love-after-loss|signs-spiritual/.test(s)) desired_outcomes.push('connection');
 
-  // Temporal orientation
   const temporal_orientation: TemporalOrientation[] = ['present'];
-  if (/future|when-will|predict|timeline/.test(s)) temporal_orientation.push('future');
-  if (/past-life|ex-|coming-back|signs-your-ex|dreaming-about-ex/.test(s)) temporal_orientation.push('past');
+  if (/future|when-will|predict|timeline|coming-back/.test(s)) temporal_orientation.push('future');
+  if (/past-life|ex-|signs-your-ex|dreaming-about-ex|healing-after/.test(s)) temporal_orientation.push('past');
 
-  // Commercial intent
   let commercial_intent: CommercialIntent = 'low';
-  if (/best-|top-|kasamba|keen|purple-garden|credit|minutes|^most-accurate/.test(s)) commercial_intent = 'high';
-  else if (/guide|review|how-to|first-psychic|before-you-pay|should-you-pay|cheap/.test(s)) commercial_intent = 'medium';
+  if (/^(best|top)-|kasamba|keen|purple-garden|credit|minutes|most-accurate|cheap/.test(s)) commercial_intent = 'high';
+  else if (/guide|review|how-to|first-psychic|before-you-pay|should-you-pay|cost|prices|legit/.test(s)) commercial_intent = 'medium';
 
   return {
-    slug,
-    title: slugToTitle(slug),
-    url: '/guides/' + slug + '/',
     primary_domain,
-    secondary_topics,
-    emotional_states,
-    relationship_states,
-    desired_outcomes,
+    secondary_topics: Array.from(new Set(secondary_topics)),
+    emotional_states: Array.from(new Set(emotional_states)),
+    relationship_states: Array.from(new Set(relationship_states)),
+    desired_outcomes: Array.from(new Set(desired_outcomes)),
     temporal_orientation,
     commercial_intent,
+    topic_agnostic,
+    situations: classifySituations(slug),
   };
+}
+
+export function buildArticle(slug: string, title: string): ArticleMetadata {
+  return {
+    slug,
+    title,
+    url: `/guides/${slug}/`,
+    ...classifyArticleTags(slug),
+  };
+}
+
+/**
+ * 标题近似度（用于去重）。
+ *
+ * 语料里真实存在成对的同题文章，例如
+ *   how-to-choose-a-psychic-reader
+ *   how-to-pick-a-psychic-reader
+ * 旧版会把两篇一起推荐给同一个用户，看起来像内容池没整理过。
+ */
+const STOP = new Set(['a', 'an', 'the', 'to', 'of', 'for', 'and', 'or', 'in', 'on', 'your', 'you', 'is', 'are', 'my', 'it', 'that', 'this', 'with', 'how', 'what', 'why', 'should', 'do', 'does', 'guide', '2026', 'vs']);
+
+export function titleTokens(title: string): Set<string> {
+  return new Set(
+    title.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter((w) => w.length > 2 && !STOP.has(w)),
+  );
+}
+
+export function jaccard(a: Set<string>, b: Set<string>): number {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  a.forEach((x) => { if (b.has(x)) inter++; });
+  return inter / (a.size + b.size - inter);
 }
