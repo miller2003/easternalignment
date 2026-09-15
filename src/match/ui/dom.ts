@@ -144,3 +144,40 @@ export function scrollToSection(id: string): void {
   const node = document.getElementById(id);
   if (node) node.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+/**
+ * 结果页区块的滚动渐显。
+ *
+ * 预置态（.m-reveal：透明 + 下沉 16px）只由本函数添加 —— 不用 JS
+ * 的访客、不支持 IO 的老浏览器、reduced-motion 用户都直接看到成品，
+ * 不存在「JS 没跑起来整页空白」的死角。
+ *
+ * 首屏内的前几个区块给递增 transitionDelay，形成 Apple 式的错落入场；
+ * 更深的区块滚动到时各自单独浮现，不再延迟。
+ */
+export function revealOnScroll(container: HTMLElement, reducedMotion: boolean): void {
+  const blocks = Array.from(container.querySelectorAll<HTMLElement>('.m-block'));
+  if (!blocks.length) return;
+
+  if (reducedMotion || typeof IntersectionObserver === 'undefined') {
+    blocks.forEach((b) => b.classList.add('is-revealed'));
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        (e.target as HTMLElement).classList.add('is-revealed');
+        io.unobserve(e.target);
+      }
+    },
+    { threshold: 0.08, rootMargin: '0px 0px -4% 0px' },
+  );
+
+  blocks.forEach((b, i) => {
+    b.classList.add('m-reveal');
+    if (i < 4) b.style.transitionDelay = `${i * 70}ms`;
+    io.observe(b);
+  });
+}

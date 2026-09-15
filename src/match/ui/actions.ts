@@ -44,10 +44,20 @@ export interface MatchActions {
   backToResult: () => void;
 
   /* 测验 */
-  selectOption: (questionId: string, optionId: string) => void;
+  /**
+   * quiet：只更新状态与埋点，不触发整屏重渲染。
+   * 用于触屏点选 —— UI 已经在原地改好 class（对勾、计数、禁用态），
+   * 整屏重建会把刚按下去的那一帧动画连同焦点一起冲掉。
+   */
+  selectOption: (questionId: string, optionId: string, opts?: { quiet?: boolean }) => void;
   setFreeText: (value: string) => void;
   next: () => void;
-  back: () => void;
+  /**
+   * viaSwipe：由边缘右滑手势完成时调用。此时上一屏已经以跟手动画
+   * 到达最终位置，控制器必须无转场地换 DOM（'none'），否则会看到
+   * 同一屏内容再播一次推入动画。
+   */
+  back: (opts?: { viaSwipe?: boolean }) => void;
   skipFreeText: () => void;
 
   /* 结果页 */

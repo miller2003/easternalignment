@@ -6,7 +6,7 @@
  * 改推荐效果不需要碰 UI，也不需要重新理解渲染代码。
  */
 
-import type { Domain, Platform, Situation } from './types';
+import type { Domain, InternalKey, Platform, Situation } from './types';
 import { PLATFORM_PRIORITY } from '../lib/offers';
 
 /* ── 权重键命名空间 ──────────────────────────────────────────────────
@@ -23,6 +23,11 @@ export const NS = {
   temporal: 't:',
   urgency: 'u:',
   orientation: 's:',
+  /**
+   * 底层机制轴（内部代号，永不外显）。
+   * 单独一个命名空间，物理上不可能与上面任何一个撞键。
+   */
+  internal: 'i:',
 } as const;
 
 export const key = {
@@ -33,7 +38,9 @@ export const key = {
   temporal: (t: string) => `${NS.temporal}${t}`,
   urgency: (u: string) => `${NS.urgency}${u}`,
   orientation: (s: string) => `${NS.orientation}${s}`,
+  internal: (k: InternalKey) => `${NS.internal}${k}`,
 };
+
 
 /* ── 画像阈值 ──────────────────────────────────────────────────────── */
 
@@ -192,10 +199,21 @@ export const HIGH_INTENT_OUTCOMES = ['prediction', 'action', 'reassurance'] as c
  */
 export const LOW_INTENT_OUTCOMES = ['clarity', 'connection', 'control'] as const;
 
+/**
+ * 结果页区块顺序（规格 §27 + §28）。
+ *
+ * `mechanism` 是底层机制解读区块，紧跟 `narrative`。
+ * 为什么位置固定在三档都是第 2 位：它属于「解读层」而不是「转化层」——
+ * 它不含任何 CTA，不推荐读者，只是一个「被说中」的时刻。
+ * 放在 narrative 之后是叙事上的必然（先讲发生了什么，再讲为什么卡住），
+ * 放在所有转化区块之前，则保证它不会因为意图分级而被推到页面底部 ——
+ * 那会让本页最好的一个留存钩子失效。它同时也是低意图用户唯一会读进去的内容，
+ * 因此对低意图尤其重要。
+ */
 export const SECTION_ORDER: Record<'high' | 'medium' | 'low', string[]> = {
-  high: ['narrative', 'deeperQuestion', 'readers', 'article', 'whatNext', 'tool', 'email'],
-  medium: ['narrative', 'deeperQuestion', 'whatNext', 'readers', 'article', 'tool', 'email'],
-  low: ['narrative', 'deeperQuestion', 'whatNext', 'article', 'tool', 'email', 'readers'],
+  high: ['narrative', 'mechanism', 'deeperQuestion', 'readers', 'article', 'whatNext', 'tool', 'email'],
+  medium: ['narrative', 'mechanism', 'deeperQuestion', 'whatNext', 'readers', 'article', 'tool', 'email'],
+  low: ['narrative', 'mechanism', 'deeperQuestion', 'whatNext', 'article', 'tool', 'email', 'readers'],
 };
 
 /**
@@ -212,6 +230,69 @@ export const SECTION_ORDER: Record<'high' | 'medium' | 'low', string[]> = {
  * 结果页不会对一个只是好奇的人立刻开价。要回到旧行为改这一个布尔即可。
  */
 export const READERS_GATE_FOR_LOW_INTENT = true;
+
+/* ── 底层机制轴（内部代号，规格 §28） ──────────────────────────────── */
+
+/**
+ * 机制轴入选阈值。
+ *
+ * 为什么用「不设默认值」的严格策略：机制解读的说服力全部来自「他确实说中了」。
+ * 一旦在信号不足时退回一个泛泛的默认机制，这段文字立刻退化为 Barnum 套话，
+ * 反而会把本来可信的结果页拉低。所以宁可不渲染这一整个区块。
+ */
+export const INTERNAL_RULES = {
+  /** 最高分机制必须达到这个分数才认（专设题命中即 30 分） */
+  minScore: 18,
+  /**
+   * 冠军机制的领先幅度：必须比第二名高这么多。
+   * 低于这个差距说明用户的选择同时指向两种机制，硬选一个会显得武断。
+   */
+  minLead: 6,
+  /** 结果页展示的反思问题条数 */
+  reflectionCount: 2,
+} as const;
+
+/**
+ * 🔒 机制自带的「解决方法」是否渲染。
+ *
+ * 2026-09-15 产品决策：**不提供**（用户明确指示）。
+ * 机制区块只渲染解读与反思问题，让用户自己得出结论；
+ * 直接给动作会把它从「被理解的时刻」变成「任务清单」，
+ * 也会让这一段读起来像治疗建议 —— 而本站不做治疗。
+ *
+ * 数据层原文保留在 `content/internalMechanismActions.ARCHIVE.ts`，
+ * **该文件刻意不被任何客户端代码 import** —— 这是唯一能保证它
+ * 不进入 bundle 的方式（作为对象属性放在 internalMechanisms.ts 里，
+ * 打包器会因「无法证明属性永不被读」而把整表保留）。
+ *
+ * 因此这个开关目前是**守卫标记**而非功能开关：没有任何渲染路径读它。
+ * 若将来真要启用，必须先把 actions 移回客户端可达的模块，
+ * 并重新过一遍文案纪律与合规审查（engine_suite §16 会拦住违规）。
+ */
+export const MECHANISM_ACTIONS_ENABLED = false;
+
+/**
+ * 机制轴 → 情境轴的桥接。
+ *
+ * 机制比情境更细：两个人可能都是 no_contact，但一个是真的失去了
+ * （sudden_loss），一个是对象根本不可得（illusion_fixation）。
+ * 把机制映射回情境，可以让推荐引擎用上这层新信息，
+ * 而不必改动文章池的标注体系。
+ */
+export const INTERNAL_TO_SITUATIONS: Partial<Record<InternalKey, readonly Situation[]>> = {
+  choice_friction: [],
+  scarcity_panic: ['career_money'],
+  boundary_invasion: ['toxic_relationship'],
+  stagnation_void: ['purpose'],
+  identity_crisis: ['purpose'],
+  toxic_loop: ['toxic_relationship'],
+  sudden_loss: ['breakup_recovery'],
+  // illusion_fixation 刻意留空：它是「对象根本不可得」，
+  // 但文章池里没有对应标签 —— no_contact 讲的是断联，意思不对；
+  // thinking_about_someone 属于关系状态轴而非情境轴，不能放这里。
+  // 空数组是诚实的：没有标签比硬塞一个错标签好。
+  illusion_fixation: [],
+};
 
 /* ── 平台优先级（复用全站基线，不另立一套） ────────────────────────── */
 

@@ -13,9 +13,23 @@ import { h, announce, pct } from './dom';
 import { QUIZ_QUESTIONS, optionsFor } from '../engine/questions';
 import type { QuizOption, QuizQuestion } from '../types';
 
-const AUTO_ADVANCE_MS = 260;
+const AUTO_ADVANCE_MS = 300;
 
-export function renderAssessment(state: ScreenState, act: MatchActions): HTMLElement {
+/**
+ * 单选自动前进的定时器句柄。必须模块级持有：
+ * 用户在 300ms 窗口内改选另一项、或右滑返回上一题时，旧定时器若不取消，
+ * 会在错误的题目上触发 next() —— 表现为「跳题」。
+ * 每次渲染新题（含手势返回后的重渲染）都先清掉它。
+ */
+let advanceTimer = 0;
+
+/**
+ * silent：右滑返回手势渲染「上一屏预览」时使用。
+ * 预览层只负责看，不负责播报 —— 跳过焦点转移与 aria-live，
+ * 否则用户手指还停在半空，屏幕阅读器就开始念另一道题。
+ */
+export function renderAssessment(state: ScreenState, act: MatchActions, silent = false): HTMLElement {
+  window.clearTimeout(advanceTimer);
   const q = QUIZ_QUESTIONS[state.questionIndex];
   if (!q) return h('section', { class: 'm-screen' });
 
@@ -66,12 +80,14 @@ export function renderAssessment(state: ScreenState, act: MatchActions): HTMLEle
 
   section.appendChild(inner);
 
-  // 切屏后把焦点交给题面，并播报进度
-  window.requestAnimationFrame(() => {
-    heading.setAttribute('tabindex', '-1');
-    heading.focus({ preventScroll: true });
-    announce(`Question ${state.questionIndex + 1} of ${QUIZ_QUESTIONS.length}. ${q.text}`);
-  });
+  // 切屏后把焦点交给题面，并播报进度（手势预览层跳过，见 silent 说明）
+  if (!silent) {
+    window.requestAnimationFrame(() => {
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({ preventScroll: true });
+      announce(`Question ${state.questionIndex + 1} of ${QUIZ_QUESTIONS.length}. ${q.text}`);
+    });
+  }
 
   return section;
 }
@@ -118,15 +134,60 @@ function buildOptions(
       'data-option': opt.id,
       on: {
         click: () => {
-          if (blocked) {
+          // 是否被「已达上限」拦截，必须读当前 DOM 而不是渲染期的闭包值 ——
+          // 静默更新会改变各选项的 blocked 状态，闭包里的早已过期。
+          if (btn.classList.contains('is-blocked')) {
             announce(`You can choose up to ${max}. Deselect one first.`);
             return;
           }
-          act.selectOption(q.id, opt.id);
+
+          // quiet：状态与埋点照常，但不整屏重建。下面的 DOM 局部更新
+          // 与 renderAssessment 的输出规则保持同一份映射（is-selected /
+          // is-blocked / 计数文案），两者必须一起改。
+          act.selectOption(q.id, opt.id, { quiet: true });
+
+          const ids = Array.isArray(state.answers[q.id]) ? (state.answers[q.id] as string[]) : [];
+          const all = Array.from(wrap.querySelectorAll<HTMLButtonElement>('.m-option'));
+
+          if (isMulti) {
+            const atCap = ids.length >= max;
+            all.forEach((b) => {
+              const oid = b.getAttribute('data-option') ?? '';
+              const sel = ids.includes(oid);
+              const blk = atCap && !sel;
+              b.classList.toggle('is-selected', sel);
+              b.classList.toggle('is-blocked', blk);
+              b.setAttribute('aria-checked', String(sel));
+              b.setAttribute('aria-disabled', String(blk));
+            });
+            const hint = wrap.querySelector('#m-multi-hint');
+            if (hint) hint.textContent = `Choose up to ${max}. ${ids.length} selected.`;
+            const nextBtn = document.getElementById('m-next') as HTMLButtonElement | null;
+            if (nextBtn) nextBtn.disabled = ids.length === 0;
+            announce(`${opt.label} ${ids.includes(opt.id) ? 'selected' : 'deselected'}. ${ids.length} of ${max} selected.`);
+          } else {
+            all.forEach((b) => {
+              const sel = b === btn;
+              b.classList.toggle('is-selected', sel);
+              b.setAttribute('aria-checked', String(sel));
+            });
+            const nextBtn = document.getElementById('m-next') as HTMLButtonElement | null;
+            if (nextBtn) nextBtn.disabled = false;
+          }
+
+          // 「刚刚点的那一项」的动画钩子。整列重放动画（旧实现对所有
+          // is-selected 都播）在多选连点时会让已选项反复弹跳，很廉价。
+          // 先移除再强制回流，同一项被反复点也能重新触发。
+          btn.classList.remove('is-just-picked');
+          void btn.offsetWidth;
+          btn.classList.add('is-just-picked');
+
           // 单选即时前进：这是完成率最高的交互（Typeform 模式）。
           // 多选题必须显式确认，否则「最多选 2」无法表达完选意图。
+          // 定时器模块级持有，改选/返回时取消，杜绝跳题竞态。
           if (!isMulti && !isLast) {
-            window.setTimeout(() => act.next(), AUTO_ADVANCE_MS);
+            window.clearTimeout(advanceTimer);
+            advanceTimer = window.setTimeout(() => act.next(), AUTO_ADVANCE_MS);
           }
         },
       },

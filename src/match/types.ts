@@ -60,6 +60,26 @@ export type RelationshipState = (typeof RELATIONSHIP_STATES)[number];
 export const URGENCIES = ['low', 'medium', 'high'] as const;
 export type Urgency = (typeof URGENCIES)[number];
 
+/**
+ * 底层机制轴（内部专用）。
+ *
+ * ⚠️ 这些值是**后台内部代号**，不得出现在任何面向用户的地方：
+ * 页面文案、URL 参数、埋点属性、结构化数据、邮件主题 —— 全都不行。
+ * 用户只看得到由它选出的解读段落与反思问题，看不到它的名字。
+ *
+ * 它回答的是「为什么会卡住」，与 primary_domain（卡在什么事上）、
+ * situations（具体情境）、emotional_states（表面情绪）三者都正交。
+ * 举例：同样是 love + no_contact + uncertainty，
+ * 一个人可能卡在 sudden_loss（真的失去了），
+ * 另一个人可能卡在 illusion_fixation（对象其实不可得）。
+ * 这个区别决定了解读该说什么，但用 domain 和 emotion 都推不出来。
+ */
+export const INTERNAL_KEYS = [
+  'choice_friction', 'scarcity_panic', 'boundary_invasion', 'stagnation_void',
+  'identity_crisis', 'toxic_loop', 'sudden_loss', 'illusion_fixation',
+] as const;
+export type InternalKey = (typeof INTERNAL_KEYS)[number];
+
 export const ORIENTATIONS = ['curious', 'open', 'spiritual', 'experienced', 'skeptical'] as const;
 export type SpiritualOrientation = (typeof ORIENTATIONS)[number];
 
@@ -119,6 +139,14 @@ export interface UserProfile {
   spiritual_orientation: SpiritualOrientation;
   /** 由作答推出的具体情境，供推荐引擎做情境匹配/冲突判定 */
   situations: Situation[];
+  /**
+   * 底层机制（内部代号，见 INTERNAL_KEYS）。
+   * 找不到足够信号时不存在 —— 此时结果页不渲染机制区块，
+   * 绝不退回一个泛泛的默认机制（那会让解读变成 Barnum 式套话）。
+   */
+  internal_key?: InternalKey;
+  /** 机制识别所依据的原始分，便于回归测试与埋点分布分析 */
+  internalScores: WeightMap;
   /** 依据 q7 自由文本推断的变更/丧失类事件，仅当能识别时存在 */
   loss_or_change?: string;
   freeTextAnswer?: string;
@@ -144,6 +172,20 @@ export interface Narrative {
   anchor: string;
   /** 依据 urgency / orientation 追加的一句语气调整 */
   toneLine?: string;
+  /**
+   * 底层机制解读（可选）。仅当画像识别出 internal_key 时存在。
+   * 这是「为什么会卡住」那一层，与 block（「发生了什么」）互补。
+   */
+  mechanism?: MechanismNarrative;
+}
+
+export interface MechanismNarrative {
+  /** 内部代号。⚠️ UI 层不得把它渲染成任何可见文本 */
+  key: InternalKey;
+  /** 解读段落，按序渲染 */
+  paragraphs: string[];
+  /** 反思问题，渲染前 MECHANISM_REFLECTION_COUNT 条 */
+  reflections: string[];
 }
 
 /* ── 内容元数据 ───────────────────────────────────────────────────── */
@@ -212,7 +254,7 @@ export interface RecommendationResult {
 }
 
 export type ResultSection =
-  | 'narrative' | 'deeperQuestion' | 'whatNext'
+  | 'narrative' | 'mechanism' | 'deeperQuestion' | 'whatNext'
   | 'readers' | 'article' | 'tool' | 'email';
 
 /* ── 免费工具 ─────────────────────────────────────────────────────── */

@@ -178,7 +178,12 @@ function profileFrom(c: Classification, question: string): UserProfile {
       : c.desired_outcomes.includes('closure') ? 'past' : 'present',
     urgency: c.emotional_states.includes('anxiety') || c.emotional_states.includes('fear') ? 'high' : 'medium',
     spiritual_orientation: 'open',
-    situations: deriveSituations({ q7: question }, relationship_state, question),
+    // Ask 路径不做机制识别：一句话的自由提问没有足够信号去判断
+    // 「为什么会卡住」这一层。强行猜一个机制会把这里的诚实降级成编造，
+    // 因此 internal_key 显式为 undefined，结果页不渲染机制区块。
+    internal_key: undefined,
+    internalScores: {},
+    situations: deriveSituations({ q8: question }, relationship_state, question),
     freeTextAnswer: question,
     rawScores: {},
     normalizedScores: {},

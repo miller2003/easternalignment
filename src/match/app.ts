@@ -10,7 +10,8 @@ import { renderLanding, renderComputing } from './ui/landing';
 import { renderAssessment } from './ui/assessment';
 import { renderResult } from './ui/result';
 import { renderCard, renderAsk } from './ui/tools';
-import { focusScreen } from './ui/dom';
+import { focusScreen, revealOnScroll } from './ui/dom';
+import { attachSwipeBack } from './ui/swipeBack';
 
 import { QUIZ_QUESTIONS } from './engine/questions';
 import { buildProfile, toSnapshot, type StoredProfile } from './engine/scoring';
@@ -110,12 +111,41 @@ function pushUrl(params: Record<string, string>, mode: 'push' | 'replace' = 'pus
   else window.history.pushState(stateObj, '', url);
 }
 
-/* ── 渲染 ──────────────────────────────────────────────────────────── */
+/* ── 渲染与屏级转场 ────────────────────────────────────────────────── */
 
-function render(): void {
+type Transition = 'push' | 'pop' | 'fade' | 'none';
+
+/** iOS 系统级「快起缓落」曲线，所有屏级转场共用同一物理感 */
+const TRANSITION_EASE = 'cubic-bezier(0.32, 0.72, 0, 1)';
+
+function prefersReducedMotion(): boolean {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+let detachSwipe: (() => void) | null = null;
+
+/* 各屏离开时的滚动位置。pop 返回时还原 —— iOS 的 pop 从不丢滚动位置。 */
+let lastScreen: ScreenState['screen'] | null = null;
+const savedScroll: Partial<Record<ScreenState['screen'], number>> = {};
+
+/**
+ * 屏级转场编排。
+ *
+ * 结构约定：旧屏加 .m-exit 变 absolute 脱离文档流，新屏留在流内决定
+ * 容器高度。push 时新屏从右缘滑入（在上层）、旧屏 26% 视差左移渐隐；
+ * pop 镜像（旧屏在上层滑出右缘）；fade 用于非层级导航（工具页、结果页）。
+ *
+ * 全部走 WAAPI 且只动 transform / opacity —— 合成器线程，不触排版。
+ * reduced-motion 与缺失 WAAPI 的环境退回瞬时切换，功能零差异。
+ */
+function render(transition: Transition = 'fade'): void {
   const host = document.getElementById('match-app');
   if (!host) return;
-  host.textContent = '';
+
+  if (detachSwipe) { detachSwipe(); detachSwipe = null; }
+
+  // 旧屏的滚动位置先存下，再按新屏语义决定还原还是归零
+  if (lastScreen && lastScreen !== state.screen) savedScroll[lastScreen] = window.scrollY;
 
   let node: HTMLElement;
   switch (state.screen) {
@@ -126,15 +156,141 @@ function render(): void {
     case 'ask': node = renderAsk(state, actions); break;
     default: node = renderLanding(state, actions);
   }
-  host.appendChild(node);
 
-  // 结果页与工具页在渲染后把焦点交给标题；答题页自己管（它要播报进度）
-  if (state.screen !== 'assessment') {
-    window.requestAnimationFrame(() => {
-      focusScreen(document.getElementById('m-screen-title'));
+  /** 答题屏挂载边缘右滑返回手势；其余屏不需要（它们的返回走显式按钮）。
+      不做「设备有没有触屏」的预判：监听器只在真实 TouchEvent 序列上
+      激活，桌面环境挂载四个监听的成本为零，而触屏二合一设备、
+      触控板手势模拟等边缘环境都能因此覆盖到。 */
+  const armSwipe = () => {
+    if (state.screen !== 'assessment') return;
+    detachSwipe = attachSwipeBack({
+      host,
+      screen: () => host.querySelector<HTMLElement>('.m-screen'),
+      canSwipe: () =>
+        state.screen === 'assessment' &&
+        !host.classList.contains('is-transitioning') &&
+        !host.classList.contains('is-swiping'),
+      peek: () => {
+        // 上一屏的静默预览：可能是上一道题，也可能是首屏（第 1 题再往回）
+        if (state.questionIndex > 0) {
+          return renderAssessment({ ...state, questionIndex: state.questionIndex - 1 }, actions, true);
+        }
+        return renderLanding(state, actions);
+      },
+      commit: () => actions.back({ viaSwipe: true }),
     });
+  };
+
+  const prev = host.firstElementChild as HTMLElement | null;
+  const canAnimate =
+    !!prev &&
+    transition !== 'none' &&
+    !prefersReducedMotion() &&
+    typeof node.animate === 'function';
+
+  // 结果页的滚动渐显只在「从别的屏进入」时播一次；
+  // 同屏重渲染（如邮件提交回显）重播整页入场动画是一种视觉事故。
+  const enteringResult = state.screen === 'result' && lastScreen !== 'result';
+
+  if (!canAnimate) {
+    host.textContent = '';
+    host.appendChild(node);
+    lastScreen = state.screen;
+    // 'none' 意味着内容原地更新（邮件回显 / 手势落地）：焦点与滚动都不该动
+    afterRender(transition === 'none' ? 'skip' : 'top', enteringResult);
+    armSwipe();
+    return;
   }
 
+  // 滚动语义：push/pop 展示的一定是新屏顶部；唯独 pop 返回已读过的屏
+  // 时还原原位（从每日牌退回结果页，不该把用户弹回页首）。
+  const restoreY = transition === 'pop' ? savedScroll[state.screen] ?? 0 : 0;
+  window.scrollTo({ top: restoreY, behavior: 'auto' });
+
+  const prevHeight = prev!.getBoundingClientRect().height;
+  host.classList.add('is-transitioning', `is-${transition}`);
+  host.style.minHeight = `${prevHeight}px`;
+  prev!.classList.add('m-exit');
+  node.classList.add('m-enter');
+  host.appendChild(node);
+
+  let anims: Animation[];
+  if (transition === 'push') {
+    anims = [
+      prev!.animate(
+        [{ transform: 'translateX(0)', opacity: '1' }, { transform: 'translateX(-26%)', opacity: '0.85' }],
+        { duration: 380, easing: TRANSITION_EASE, fill: 'forwards' },
+      ),
+      node.animate(
+        [{ transform: 'translateX(100%)' }, { transform: 'translateX(0)' }],
+        { duration: 380, easing: TRANSITION_EASE, fill: 'forwards' },
+      ),
+    ];
+  } else if (transition === 'pop') {
+    anims = [
+      prev!.animate(
+        [{ transform: 'translateX(0)' }, { transform: 'translateX(100%)' }],
+        { duration: 340, easing: TRANSITION_EASE, fill: 'forwards' },
+      ),
+      node.animate(
+        [{ transform: 'translateX(-26%)', opacity: '0.85' }, { transform: 'translateX(0)', opacity: '1' }],
+        { duration: 340, easing: TRANSITION_EASE, fill: 'forwards' },
+      ),
+    ];
+  } else {
+    anims = [
+      prev!.animate(
+        [{ opacity: '1' }, { opacity: '0' }],
+        { duration: 170, easing: 'ease-out', fill: 'forwards' },
+      ),
+      node.animate(
+        [{ opacity: '0', transform: 'translateY(10px)' }, { opacity: '1', transform: 'translateY(0)' }],
+        { duration: 340, easing: TRANSITION_EASE, fill: 'forwards', delay: 70 },
+      ),
+    ];
+  }
+
+  // 双通道收尾：finished 在动画被中断时会 reject；超时兜底确保容器绝不
+  // 卡在 is-transitioning（那会一直锁死 pointer-events，等于整页变砖）。
+  let settled = false;
+  const done = () => {
+    if (settled) return;
+    settled = true;
+    host.classList.remove('is-transitioning', 'is-push', 'is-pop', 'is-fade');
+    host.style.minHeight = '';
+    prev!.remove();
+    node.classList.remove('m-enter');
+    armSwipe();
+  };
+  Promise.all(anims.map((a) => a.finished.catch(() => undefined))).then(done);
+  window.setTimeout(done, (transition === 'fade' ? 420 : 400) + 160);
+
+  lastScreen = state.screen;
+  afterRender(restoreY > 0 ? 'keep' : 'top', enteringResult);
+}
+
+function afterRender(mode: 'top' | 'keep' | 'skip', revealResult: boolean): void {
+  // 结果页与工具页在渲染后把焦点交给标题；答题页自己管（它要播报进度）。
+  // 'keep' 时不能用 focusScreen（它会把页面滚回顶部，吃掉刚还原的位置）；
+  // 'skip' 用于同屏内容更新（邮件回显），焦点留在用户正在操作的地方，
+  // 状态变化由 role="status" 的节点向屏幕阅读器播报。
+  if (state.screen !== 'assessment' && mode !== 'skip') {
+    window.requestAnimationFrame(() => {
+      if (mode === 'keep') {
+        const heading = document.getElementById('m-screen-title');
+        if (heading) {
+          heading.setAttribute('tabindex', '-1');
+          heading.focus({ preventScroll: true });
+        }
+      } else {
+        focusScreen(document.getElementById('m-screen-title'));
+      }
+    });
+  }
+  if (revealResult) {
+    const host = document.getElementById('match-app');
+    if (host) revealOnScroll(host, prefersReducedMotion());
+  }
   syncTitle();
 }
 
@@ -168,11 +324,11 @@ function currentQuestion() {
   return QUIZ_QUESTIONS[state.questionIndex];
 }
 
-function goToQuestion(index: number, mode: 'push' | 'replace' = 'replace'): void {
+function goToQuestion(index: number, mode: 'push' | 'replace' = 'replace', transition: Transition = 'push'): void {
   state.screen = 'assessment';
   state.questionIndex = Math.max(0, Math.min(index, QUIZ_QUESTIONS.length - 1));
   questionShownAt = Date.now();
-  render();
+  render(transition);
   pushUrl({ step: String(state.questionIndex + 1) }, mode);
 }
 
@@ -207,7 +363,7 @@ function finishQuiz(): void {
   viewedSections = new Set();
   resultShownAt = Date.now();
 
-  const skippedFreeText = !state.answers.q7 || String(state.answers.q7).trim() === '';
+  const skippedFreeText = !state.answers.q8 || String(state.answers.q8).trim() === '';
   track.quizCompleted({
     profile: toSnapshot(profile),
     durationMs: Date.now() - quizStartedAt,
@@ -256,18 +412,19 @@ const actions: MatchActions = {
 
   goToCard(source) {
     track.dailyCardStarted(state.profile ? toSnapshot(state.profile) : undefined);
-    state.screen = 'card';
     actions.drawCard();
     pushUrl({ tool: 'card' });
     void source;
   },
 
   goToAsk() {
+    // 同屏重置（「再问一个」）用 fade；从别的屏进入才是下钻（push）
+    const t: Transition = state.screen === 'ask' ? 'fade' : 'push';
     state.askResult = undefined;
     state.askCaution = undefined;
     state.screen = 'ask';
     track.askStarted(state.profile ? toSnapshot(state.profile) : undefined);
-    render();
+    render(t);
     pushUrl({ tool: 'ask' });
   },
 
@@ -301,19 +458,20 @@ const actions: MatchActions = {
     state.screen = 'assessment';
     quizStartedAt = Date.now();
     questionShownAt = Date.now();
-    render();
+    // 「重新开始」在导航语义上是回到起点，用 pop 而不是 push
+    render('pop');
     pushUrl({ step: '1' });
   },
 
   backToResult() {
     if (!state.recs) { actions.goToCard('fallback'); return; }
     state.screen = 'result';
-    render();
+    render('pop');
     pushUrl({ [RESULT_PARAM]: state.resultToken ?? '' }, 'replace');
   },
 
   /* ── 答题 ── */
-  selectOption(questionId, optionId) {
+  selectOption(questionId, optionId, opts) {
     const q = currentQuestion();
     if (!q) return;
     const previous = state.answers[questionId];
@@ -342,7 +500,8 @@ const actions: MatchActions = {
       changedAnswer: before !== JSON.stringify(state.answers[questionId]) && previous !== undefined,
     });
 
-    render();
+    // quiet（触屏点选）：UI 已原地更新完毕，重渲染只会冲掉按下动画。
+    if (!opts?.quiet) render();
   },
 
   setFreeText(value) {
@@ -367,10 +526,12 @@ const actions: MatchActions = {
     }
   },
 
-  back() {
+  back(opts) {
+    // 手势完成的返回：屏已经在最终位置，换 DOM 必须无转场
+    const t: Transition = opts?.viaSwipe ? 'none' : 'pop';
     if (state.questionIndex === 0) {
       state.screen = 'landing';
-      render();
+      render(t);
       pushUrl({});
       return;
     }
@@ -379,12 +540,12 @@ const actions: MatchActions = {
       toQuestion: QUIZ_QUESTIONS[state.questionIndex - 1]?.id ?? '',
       fromIndex: state.questionIndex,
     });
-    goToQuestion(state.questionIndex - 1);
+    goToQuestion(state.questionIndex - 1, 'replace', t);
   },
 
   skipFreeText() {
-    track.questionSkipped({ questionId: 'q7', stepIndex: state.questionIndex });
-    state.answers.q7 = '';
+    track.questionSkipped({ questionId: 'q8', stepIndex: state.questionIndex });
+    state.answers.q8 = '';
     actions.next();
   },
 
@@ -452,7 +613,8 @@ const actions: MatchActions = {
   async submitEmail(email, consent) {
     state.emailState = 'sending';
     state.emailMessage = undefined;
-    render();
+    // 同屏内容更新：无转场、不动焦点与滚动（afterRender 的 'skip' 分支）
+    render('none');
 
     const result = await submitEmail({
       email,
@@ -478,11 +640,13 @@ const actions: MatchActions = {
       state.emailMessage = result.message;
       track.emailFailed({ provider: result.provider, reason: result.reason ?? 'unknown' });
     }
-    render();
+    render('none');
   },
 
   /* ── 工具 ── */
   drawCard() {
+    // 转场语义：从别的屏进入是下钻（push）；同屏重抽是内容刷新（fade）
+    const t: Transition = state.screen === 'card' ? 'fade' : 'push';
     // 幂等：同一天已经抽过就直接回放那一张。
     //
     // 为什么必须这么做：本文件的契约是「同一天同一台设备抽到的永远是同一张」。
@@ -499,7 +663,7 @@ const actions: MatchActions = {
         };
         state.activeCard = { card, interpretation: interp, streak: cardStreak() };
         state.screen = 'card';
-        render();
+        render(t);
         track.dailyCardCompleted({
           cardName: card.name,
           cardId: card.id,
@@ -527,7 +691,7 @@ const actions: MatchActions = {
 
     state.activeCard = { card, interpretation: interp, streak };
     state.screen = 'card';
-    render();
+    render(t);
     track.dailyCardCompleted({
       cardName: card.name,
       cardId: card.id,
@@ -691,7 +855,7 @@ function boot(): void {
   render();
 }
 
-/* 浏览器后退/前进 */
+/* 浏览器后退/前进：题与题之间按目标方向放转场，其余用中性 fade */
 window.addEventListener('popstate', () => {
   const params = currentParams();
   const shared = params.get(RESULT_PARAM);
@@ -704,21 +868,25 @@ window.addEventListener('popstate', () => {
       state.recs = getRecommendations({ profile: decoded.profile, readers: READERS, articles: ARTICLES, narrative });
       state.resultToken = shared;
       state.screen = 'result';
-      render();
+      render('fade');
       return;
     }
   }
-  if (params.get('tool') === 'ask') { state.screen = 'ask'; render(); return; }
-  if (params.get('tool') === 'card') { state.screen = 'card'; render(); return; }
+  if (params.get('tool') === 'ask') { state.screen = 'ask'; render('fade'); return; }
+  if (params.get('tool') === 'card') { state.screen = 'card'; render('fade'); return; }
   const step = parseInt(params.get('step') ?? '', 10);
   if (step >= 1 && step <= QUIZ_QUESTIONS.length) {
+    const target = step - 1;
+    const dir: Transition = state.screen !== 'assessment'
+      ? 'fade'
+      : target > state.questionIndex ? 'push' : target < state.questionIndex ? 'pop' : 'none';
     state.screen = 'assessment';
-    state.questionIndex = step - 1;
-    render();
+    state.questionIndex = target;
+    render(dir);
     return;
   }
   state.screen = 'landing';
-  render();
+  render('pop');
 });
 
 /* 中途离开：这是算完成率的分母所必需的（规格 §30） */

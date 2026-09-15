@@ -8,9 +8,11 @@
  */
 
 import type {
-  Narrative, NarrativeBlock, SessionAnswers, UserProfile,
+  Narrative, NarrativeBlock, SessionAnswers, UserProfile, MechanismNarrative,
 } from '../types';
 import { NARRATIVE_BLOCKS, getFallbackNarrative } from '../content/narrativeBlocks';
+import { getMechanismContent } from '../content/internalMechanisms';
+import { INTERNAL_RULES } from '../config';
 import { QUIZ_QUESTIONS, optionsFor } from './questions';
 
 /* ── 1. 主题块选取 ─────────────────────────────────────────────────── */
@@ -54,6 +56,10 @@ function snippet(text: string, max = 160): string {
 /**
  * 生成明确引用用户自己答案的一段话。
  * 每一句都来自他勾过的选项，没有任何推测。
+ *
+ * ⚠️ 刻意跳过 q4（机制题）：机制轴是幕后解释，如果在这里复述它，
+ * 用户会看到「原来我被归到了这一类」—— 那正是我们要避免的。
+ * 机制只以解读段落的形式出现（见 buildMechanismNarrative）。
  */
 export function buildAnchor(answers: SessionAnswers): string {
   const parts: string[] = [];
@@ -61,16 +67,16 @@ export function buildAnchor(answers: SessionAnswers): string {
   const q2 = pickedOptions('q2', answers).find((o) => o.anchorPhrase);
   if (q2?.anchorPhrase) parts.push(`You told us that ${q2.anchorPhrase}.`);
 
-  const q5 = pickedOptions('q5', answers).find((o) => o.anchorPhrase);
-  if (q5?.anchorPhrase) parts.push(`You said it’s been on your mind ${q5.anchorPhrase}.`);
+  const q6 = pickedOptions('q6', answers).find((o) => o.anchorPhrase);
+  if (q6?.anchorPhrase) parts.push(`You said it’s been on your mind ${q6.anchorPhrase}.`);
 
   const q3 = pickedOptions('q3', answers)[0];
   if (q3?.anchorPhrase) parts.push(`What you’re hoping to find is ${q3.anchorPhrase}.`);
 
-  const q4 = pickedOptions('q4', answers)[0];
-  if (q4?.anchorPhrase) parts.push(`Right now the loudest feeling is ${q4.anchorPhrase}.`);
+  const q5 = pickedOptions('q5', answers)[0];
+  if (q5?.anchorPhrase) parts.push(`Right now the loudest feeling is ${q5.anchorPhrase}.`);
 
-  const free = typeof answers.q7 === 'string' ? (answers.q7 as string).trim() : '';
+  const free = typeof answers.q8 === 'string' ? (answers.q8 as string).trim() : '';
   if (free.length >= 12) parts.push(`And in your own words: “${snippet(free)}”`);
 
   return parts.join(' ');
@@ -91,12 +97,41 @@ export function buildToneLine(profile: UserProfile): string | undefined {
   return undefined;
 }
 
-/* ── 4. 组装 ───────────────────────────────────────────────────────── */
+/* ── 4. 底层机制解读 ───────────────────────────────────────────────── */
+
+/**
+ * 把命中的机制渲染成可展示的解读（规格 §28）。
+ *
+ * 纪律：
+ *   · UI 层拿不到 key —— 这里只返回 paragraphs / reflections，
+ *     key 仅用于埋点分布分析与回归测试
+ *   · 绝不渲染 actions（用户明确指示不提供解决方法，见
+ *     config.ts 的 MECHANISM_ACTIONS_ENABLED）
+ *   · 没有命中机制时返回 undefined，结果页不渲染该区块，
+ *     不退回任何默认机制（那会让解读变成套话）
+ */
+export function buildMechanismNarrative(profile: UserProfile): MechanismNarrative | undefined {
+  const key = profile.internal_key;
+  if (!key) return undefined;
+
+  const content = getMechanismContent(key);
+  if (!content) return undefined;
+
+  return {
+    key,
+    paragraphs: content.narrative,
+    // 只取前 N 条：结果页已有 7 个区块，再多没人读完
+    reflections: content.reflections.slice(0, INTERNAL_RULES.reflectionCount),
+  };
+}
+
+/* ── 5. 组装 ───────────────────────────────────────────────────────── */
 
 export function buildNarrative(profile: UserProfile, answers: SessionAnswers): Narrative {
   return {
     block: selectNarrative(profile),
     anchor: buildAnchor(answers),
     toneLine: buildToneLine(profile),
+    mechanism: buildMechanismNarrative(profile),
   };
 }

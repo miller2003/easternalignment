@@ -221,8 +221,12 @@
   border-radius: var(--radius-full);
   cursor: pointer;
   text-decoration: none;
+  /* 快速连点时不允许选中按钮文字（iOS 长按会触发文本选择，打断节奏） */
+  -webkit-user-select: none;
+  user-select: none;
   transition: background-color var(--transition-fast), border-color var(--transition-fast),
-              color var(--transition-fast), opacity var(--transition-fast);
+              color var(--transition-fast), opacity var(--transition-fast),
+              box-shadow var(--transition-fast);
 }
 
 .m-btn--lg { font-size: var(--text-base); padding: 1rem 1.9rem; }
@@ -232,8 +236,11 @@
 .m-btn--primary {
   background-color: var(--color-primary);
   color: #fff;
+  /* 实体感：极浅的投影 + 顶缘高光，按下时投影消失（见 :active） */
+  box-shadow: 0 1px 2px rgba(107, 84, 56, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 .m-btn--primary:hover { background-color: var(--color-primary-dark); }
+.m-btn--primary:active { box-shadow: 0 0 0 rgba(107, 84, 56, 0), inset 0 1px 0 rgba(255, 255, 255, 0); }
 
 .m-btn--ghost {
   background-color: transparent;
@@ -270,6 +277,13 @@
   text-decoration: underline;
   text-underline-offset: 3px;
   cursor: pointer;
+}
+
+/* 选项卡与 chips 同按钮：快速点按序列里文本选中是一种视觉噪音 */
+.m-option,
+.m-chip {
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* ── 首屏 ─────────────────────────────────────────────────────────── */
@@ -605,6 +619,36 @@
   color: var(--color-text);
 }
 
+/* ── 底层机制解读区块 ────────────────────────────────────────────────
+ * 反思问题列表。刻意与 .m-list（「接下来做什么」的任务清单）区分开：
+ * 不用序号（ol）而用无标记的引述式排版 —— 这一段的重点是「想一想」，
+ * 不是「去做」。给反思问题编号会让它读起来像待办事项。
+ */
+.m-list--reflect {
+  list-style: none;
+  padding-left: 0;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 0;
+}
+.m-list--reflect li {
+  position: relative;
+  padding-left: var(--space-6);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+}
+.m-list--reflect li::before {
+  content: '“';
+  position: absolute;
+  left: 0;
+  top: -0.15em;
+  font-family: var(--font-heading);
+  font-size: 1.6em;
+  line-height: 1;
+  color: var(--color-accent-light);
+}
+
 .m-caution {
   margin: var(--space-5) 0 0;
   padding: var(--space-4) var(--space-5);
@@ -889,11 +933,14 @@
   aspect-ratio: 5 / 8;
   margin-bottom: var(--space-8);
   perspective: 900px;
-  animation: m-deal 620ms cubic-bezier(0.22, 0.8, 0.3, 1);
+  transform-style: preserve-3d;
+  /* 3D 翻牌入场：从右后方翻过来，像一张牌被放到桌上 */
+  animation: m-deal 780ms cubic-bezier(0.22, 0.8, 0.3, 1);
 }
 @keyframes m-deal {
-  from { opacity: 0; transform: translateY(14px) rotate(-2deg); }
-  to { opacity: 1; transform: none; }
+  0% { opacity: 0; transform: translateY(30px) rotateY(-38deg) rotateX(6deg) scale(0.95); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0) rotateY(0) rotateX(0) scale(1); }
 }
 
 .m-card__frame {
@@ -910,6 +957,8 @@
   gap: var(--space-2);
   padding: var(--space-6);
   position: relative;
+  /* 光泽扫过（::before）必须被圆角裁掉 */
+  overflow: hidden;
 }
 .m-card__frame::after {
   content: '';
@@ -1234,7 +1283,12 @@
     z-index: 5;
     margin-top: var(--space-6);
     padding: var(--space-3) 0 calc(var(--space-3) + var(--m-safe-b));
+    /* 磨砂玻璃：iOS 原生底栏的半透明模糊观感。
+       color-mix 不支持的旧浏览器回退到上一行声明的实色。 */
     background-color: var(--color-bg);
+    background-color: color-mix(in srgb, var(--color-bg) 82%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    backdrop-filter: saturate(180%) blur(18px);
     /* 上缘一条细线 + 极淡的投射阴影，让按钮从滚动内容里浮出来 */
     box-shadow: 0 -1px 0 var(--color-border-light),
                 0 -12px 20px -12px rgba(45, 42, 38, 0.18);
@@ -1246,8 +1300,15 @@
 
   .m-nav__right { gap: var(--space-2); }
   /* 自由文本题：软键盘弹起后可视高度只剩一半，粘底栏会跟键盘争夺空间，
-     把「Continue」推到键盘后面。这一题退回静态导航，由页面自然滚动。 */
-  .m-quiz:has(.m-freetext) .m-nav { position: static; box-shadow: none; }
+     把「Continue」推到键盘后面。这一题退回静态导航，由页面自然滚动。
+     磨砂底也一并撤掉 —— 静态条浮在内容中间，半透明模糊会很突兀。 */
+  .m-quiz:has(.m-freetext) .m-nav {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 
   /* ── 结果页 ─────────────────────────────────────────────────── */
 
@@ -1384,8 +1445,10 @@
     from { opacity: 0; transform: translateY(6px); }
     to { opacity: 1; transform: none; }
   }
-  /* 多选项被选中时的微回弹，模拟「咔哒」定位感 */
-  .m-option.is-selected {
+  /* 多选项被选中时的微回弹，模拟「咔哒」定位感。
+     只挂在「刚刚点的那一项」上（JS 加的 .is-just-picked）——
+     若挂在所有 is-selected 上，多选连点时旧选项会跟着反复弹跳。 */
+  .m-option.is-just-picked {
     animation: m-pick 220ms var(--m-ease-out);
   }
   @keyframes m-pick {
@@ -1397,6 +1460,154 @@
 
 /* reduced-motion 下上述动画一律不生效（由文件顶部的全局规则兜底） */
 
+/* ── /match 专用精简页脚（CompactFooter.astro）─────────────────────── */
+/*
+   样式刻意不写在组件里：Astro 会把 layout 层组件的 scoped CSS
+   打进全站共享的 BaseLayout.<hash>.css，那样 564 个页面都要
+   白背这段只有 /match 用得到的规则（实测 +336 bytes gzip）。
+   放在本文件里，只有 /match 会加载。
+   若将来 CompactFooter 要跨页复用，请把这段搬回组件。
+*/
+
+/* 深色底 + 大留白。
+   变量全部来自 global.css（本站页脚色系），不新增自定义属性。
+   本区块样式放这里而不是组件内 scoped <style>，是为了不让全站
+   564 个页面都下载它 —— 详见 CompactFooter.astro 头部注释。 */.m-footer {
+  background: var(--color-text);
+  color: var(--color-celestial-light);
+  margin-top: var(--space-12);
+}
+
+.m-footer__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 4.5rem) var(--space-6) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ── 品牌 ── */
+.m-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+
+.m-footer__logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  /* 与全站页脚一致：白底 logo 在深底上做屏幕混合 */
+  mix-blend-mode: screen;
+}
+
+.m-footer__wordmark {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  color: var(--color-surface);
+}
+
+/* ── 一句话定位（比全站页脚更短，只留最有信息量的一句）── */
+.m-footer__tagline {
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-celestial);
+  max-width: 34rem;
+  margin: 0 0 2rem;
+}
+
+/* ── 必要链接 ── */
+.m-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 2rem;
+  margin-bottom: 2.25rem;
+}
+
+.m-footer__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px; /* 触控目标：Apple HIG 下限 */
+  padding: 0 0.25rem;
+  font-size: var(--text-sm);
+  color: var(--color-celestial-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.m-footer__link:hover {
+  color: var(--color-accent-light);
+}
+
+/* ── 细线分隔：用一条极淡的线代替整块色差，避免页脚显得"重" ── */
+.m-footer__rule {
+  width: 100%;
+  max-width: 18rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+/* ── 法务行 ── */
+.m-footer__base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.m-footer__copy,
+.m-footer__legal,
+.m-footer__note {
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.m-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 0.6rem;
+}
+
+.m-footer__legal a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.m-footer__legal a:hover {
+  color: var(--color-accent-light);
+}
+
+.m-footer__sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.m-footer__note {
+  font-style: italic;
+  color: var(--color-celestial);
+}
+
+/* 手机端：链接两两一行更稳，避免 4 个挤成一条被截断 */
+@media (max-width: 480px) {
+  .m-footer__nav {
+    gap: 0.25rem 1.5rem;
+  }
+}
+
 /* ── 打印 ─────────────────────────────────────────────────────────── */
 
 @media print {
@@ -1406,4 +1617,206 @@
 @media (prefers-reduced-motion: reduce) {
   .m-orb, .m-card { animation: none !important; }
   * { transition-duration: 0.01ms !important; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Apple 级动效层（2026-09-15 交互重构）
+
+   本章节支撑 JS 侧的三套机制：
+     · app.ts render() 的屏级转场（push / pop / fade）
+     · ui/swipeBack.ts 的边缘右滑返回手势
+     · assessment.ts 静默点选（.is-just-picked 动画钩子）
+
+   设计纪律：
+     · 一切位移动画只动 transform / opacity —— 合成器线程，不触排版
+     · 所有持续性动画（光晕、填充、入场）都必须有 reduced-motion 出口，
+       出口集中在本章末尾的 reduce 守卫块
+     · JS 不可用 / WAAPI 缺失 / 减少动态效果 三种环境下，界面必须是
+       完整可用的静态版，动画只能是增量，绝不能是前提
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── 屏级转场宿主 ────────────────────────────────────────────────────
+   旧屏（.m-exit）absolute 脱离文档流，新屏（.m-enter）留在流内决定
+   容器高度。push：新屏在上层从右滑入；pop：旧屏在上层向右滑出。
+   转场期间锁死 pointer-events，防止 380ms 内的双击穿越两层屏。 */
+#match-app.is-transitioning {
+  position: relative;
+  overflow-x: clip;
+  pointer-events: none;
+}
+#match-app.is-transitioning > .m-exit {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+}
+#match-app.is-transitioning > .m-enter { position: relative; }
+#match-app.is-push > .m-enter { z-index: 2; }
+#match-app.is-pop > .m-exit { z-index: 2; }
+
+/* ── 边缘右滑返回手势 ────────────────────────────────────────────────
+   peek（上一屏预览）垫在当前屏下面，以 26% 视差跟手滑入。 */
+#match-app.is-swiping {
+  position: relative;
+  overflow-x: clip;
+  /* 捕获期间只允许垂直滚动意图，水平方向归手势 */
+  touch-action: pan-y;
+}
+#match-app.is-swiping > .m-screen {
+  position: relative;
+  z-index: 2;
+  will-change: transform;
+}
+#match-app .m-swipe-peek {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── 点选即时反馈：对勾描绘 + 圆点回弹 ──────────────────────────────
+   对勾的「画出来」必须用 animation 而不是 transition：
+   静默更新是直接给新状态加 class，没有可供过渡的旧帧。 */
+.m-option__mark {
+  transition: background-color 180ms var(--m-ease-out), border-color 180ms var(--m-ease-out);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .m-option.is-just-picked .m-option__mark {
+    animation: m-mark-pop 260ms var(--m-ease-out);
+  }
+  .m-option.is-just-picked .m-option__mark::after {
+    animation: m-check-draw 240ms var(--m-ease-out) 40ms both;
+  }
+  @keyframes m-mark-pop {
+    0% { transform: scale(0.6); }
+    55% { transform: scale(1.12); }
+    100% { transform: scale(1); }
+  }
+  @keyframes m-check-draw {
+    0% { opacity: 0; transform: rotate(45deg) scale(0.3); }
+    100% { opacity: 1; transform: rotate(45deg) scale(1); }
+  }
+}
+
+/* ── 进度段：当前段的流体填充 ───────────────────────────────────────
+   基础色保留为实心（reduced-motion 用户看到的就是它）；
+   动效环境下底色退回轨道色，由 ::after 从左向右填满。 */
+.m-progress__seg { position: relative; overflow: hidden; }
+@media (prefers-reduced-motion: no-preference) {
+  .m-progress__seg.is-current { background-color: var(--color-border); }
+  .m-progress__seg.is-current::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: m-seg-fill 480ms var(--m-ease-out) 140ms forwards;
+  }
+  @keyframes m-seg-fill {
+    to { transform: scaleX(1); }
+  }
+}
+
+/* ── 首屏错落入场（Apple 式 cascade）────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .m-screen--landing .m-landing > * {
+    animation: m-rise-in 560ms var(--m-ease-out) both;
+  }
+  .m-screen--landing .m-landing > *:nth-child(2) { animation-delay: 60ms; }
+  .m-screen--landing .m-landing > *:nth-child(3) { animation-delay: 120ms; }
+  .m-screen--landing .m-landing > *:nth-child(4) { animation-delay: 180ms; }
+  .m-screen--landing .m-landing > *:nth-child(5) { animation-delay: 240ms; }
+  .m-screen--landing .m-landing > *:nth-child(6) { animation-delay: 300ms; }
+  .m-screen--landing .m-landing > *:nth-child(7) { animation-delay: 360ms; }
+  .m-screen--landing .m-landing > *:nth-child(8) { animation-delay: 420ms; }
+  @keyframes m-rise-in {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+/* ── Ask 示例问题 chips：跟随表单之后的轻错落 ───────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .m-ask__examples .m-chip { animation: m-rise-in 420ms var(--m-ease-out) both; }
+  .m-ask__examples .m-chip:nth-child(2) { animation-delay: 60ms; }
+  .m-ask__examples .m-chip:nth-child(3) { animation-delay: 110ms; }
+  .m-ask__examples .m-chip:nth-child(4) { animation-delay: 160ms; }
+}
+
+/* ── 结果页区块：滚动渐显 ───────────────────────────────────────────
+   预置态（.m-reveal）只由 JS 添加 —— 无 JS / 无 IO / reduced-motion
+   的环境下内容永远直接可见，本规则不会成为阅读的前提。 */
+.m-block.m-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 520ms var(--m-ease-out), transform 520ms var(--m-ease-out);
+}
+.m-block.m-reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── 计算屏：光晕呼吸（主 orb 的脉冲之上叠两层扩散环）────────────── */
+.m-orb { position: relative; }
+@media (prefers-reduced-motion: no-preference) {
+  .m-orb::before,
+  .m-orb::after {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    border: 1px solid var(--color-accent-light);
+    opacity: 0;
+    animation: m-halo 2.4s var(--m-ease-out) infinite;
+  }
+  .m-orb::after { animation-delay: 1.2s; }
+  @keyframes m-halo {
+    0% { transform: scale(0.72); opacity: 0; }
+    30% { opacity: 0.75; }
+    100% { transform: scale(1.55); opacity: 0; }
+  }
+}
+
+/* ── 每日牌：落牌后的一次性光泽扫过 ─────────────────────────────────
+   静态态停在 -130%（被 overflow 裁掉，不可见）；动画只播一次，
+   不做循环 —— 循环闪光是赌场语言，一次性光泽是纸品语言。 */
+.m-card__frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.55) 48%, transparent 64%);
+  transform: translateX(-130%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .m-card__frame::before {
+    animation: m-sheen 1000ms var(--m-ease-out) 420ms both;
+  }
+  @keyframes m-sheen {
+    to { transform: translateX(130%); }
+  }
+}
+
+/* ── 动效层的 reduced-motion 出口（与文件顶部的全局兜底并存）────── */
+@media (prefers-reduced-motion: reduce) {
+  .m-screen--landing .m-landing > *,
+  .m-ask__examples .m-chip,
+  .m-orb::before,
+  .m-orb::after,
+  .m-card__frame::before,
+  .m-progress__seg.is-current::after,
+  .m-option.is-just-picked,
+  .m-option.is-just-picked .m-option__mark,
+  .m-option.is-just-picked .m-option__mark::after {
+    animation: none !important;
+  }
+  .m-block.m-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

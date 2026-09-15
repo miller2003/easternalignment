@@ -1,15 +1,31 @@
 /**
  * engine/questions.ts — 测验定义
  *
- * 7 题（规格 §3：6–8 题），逐屏一题，第 2 / 6 题的选项由第 1 题动态决定。
+ * 8 题（规格 §3：6–8 题），逐屏一题，第 2 / 7 题的选项由第 1 题动态决定。
  * 所有打分权重走 config.ts 的命名空间键，不存在跨维度撞键的可能。
+ *
+ * 题目顺序（2026-09-15 起）：
+ *   q1 主题          —— 卡在哪件事上        → domain
+ *   q2 具体困境      —— 那件事长什么样      → relationship / domain / emotion
+ *   q3 诉求          —— 想要什么            → outcome
+ *   q4 机制          —— 你是怎么卡住的      → internal（内部代号，永不外显）
+ *   q5 情绪          —— 最强的感觉是什么    → emotion
+ *   q6 时长          —— 持续多久            → urgency / temporal
+ *   q7 期望支持方式  —— 想从人那里得到什么  → orientation
+ *   q8 自由文本      —— 自己的一句话        → 危机检测 / 情境补强 / 锚定句
  *
  * 每个选项都可带 anchorPhrase：用户勾了它，结果页就必须用第二人称
  * 明确引用他的这个选择（规格 §8 的硬要求）。写作时按各自句槽的口吻来写：
  *   q2 → "You told us that ___ ."        (从句)
- *   q5 → "on your mind ___ ."            (时间状语)
+ *   q4 → (不生成锚定句 —— 机制题必须消失在文案里，见下)
+ *   q5 → "the loudest feeling is ___ ."  (名词/形容词短语)
+ *   q6 → "on your mind ___ ."            (时间状语)
  *   q3 → "what you're hoping to find is ___ ."  (名词短语)
- *   q4 → "the loudest feeling is ___ ."  (名词/形容词短语)
+ *
+ * ⚠️ q4 的 anchorPhrase 是**刻意保留但不在锚定句里使用**的：
+ * 机制轴的定位是「幕后解释」，一旦在锚定句里复述它，
+ * 用户会看到自己被贴了一个分类标签，体验立刻变差。
+ * buildAnchor() 因此只读 q2 / q3 / q5 / q6，跳过 q4。
  */
 
 import type { QuizQuestion } from '../types';
@@ -22,6 +38,7 @@ const o = key.outcome;
 const t = key.temporal;
 const u = key.urgency;
 const s = key.orientation;
+const i = key.internal;
 
 export const getBranchedOptions = (
   optionSets: Record<string, import('../types').QuizOption[]>,
@@ -70,32 +87,32 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         { id: 'dating', label: 'I’m seeing someone and don’t know where it’s going', anchorPhrase: 'you’re seeing someone and can’t tell where it’s going', weights: { [r('dating')]: 20, [e('anticipation')]: 12, [t('future')]: 12 } },
         { id: 'talking', label: 'We’re talking, but nothing is defined', anchorPhrase: 'you’re talking to someone but nothing is defined', weights: { [r('talking')]: 20, [e('confusion')]: 12, [e('anticipation')]: 8 } },
         { id: 'relationship', label: 'I’m in a relationship and something feels off', anchorPhrase: 'you’re in a relationship and something feels off', weights: { [r('relationship')]: 20, [e('anxiety')]: 12 } },
-        { id: 'breakup', label: 'We recently broke up', anchorPhrase: 'you recently went through a breakup', weights: { [r('recently_separated')]: 22, [d('breakup')]: 20, [e('grief')]: 14, [e('sadness')]: 12, [t('past')]: 14 } },
-        { id: 'no_contact', label: 'We’re not talking at all', anchorPhrase: 'communication has stopped completely', weights: { [r('no_contact')]: 22, [d('breakup')]: 12, [e('uncertainty')]: 14, [o('closure')]: 12 } },
-        { id: 'thinking', label: 'I can’t stop thinking about someone', anchorPhrase: 'you can’t stop thinking about someone', weights: { [r('thinking_about_someone')]: 20, [e('confusion')]: 12, [e('loneliness')]: 10 } },
-        { id: 'complicated', label: 'It’s complicated and I can’t explain it', anchorPhrase: 'the situation is complicated and hard to put into words', weights: { [r('complicated')]: 20, [e('confusion')]: 14, [e('frustration')]: 10 } },
+        { id: 'breakup', label: 'We recently broke up', anchorPhrase: 'you recently went through a breakup', weights: { [r('recently_separated')]: 22, [d('breakup')]: 20, [e('grief')]: 14, [e('sadness')]: 12, [t('past')]: 14, [i('sudden_loss')]: 14 } },
+        { id: 'no_contact', label: 'We’re not talking at all', anchorPhrase: 'communication has stopped completely', weights: { [r('no_contact')]: 22, [d('breakup')]: 12, [e('uncertainty')]: 14, [o('closure')]: 12, [i('sudden_loss')]: 10 } },
+        { id: 'thinking', label: 'I can’t stop thinking about someone', anchorPhrase: 'you can’t stop thinking about someone', weights: { [r('thinking_about_someone')]: 20, [e('confusion')]: 12, [e('loneliness')]: 10, [i('illusion_fixation')]: 14 } },
+        { id: 'complicated', label: 'It’s complicated and I can’t explain it', anchorPhrase: 'the situation is complicated and hard to put into words', weights: { [r('complicated')]: 20, [e('confusion')]: 14, [e('frustration')]: 10, [i('illusion_fixation')]: 8 } },
       ],
       money: [
         { id: 'job_search', label: 'I’m looking for work', anchorPhrase: 'you’re looking for work', weights: { [d('career')]: 20, [e('anticipation')]: 12, [t('future')]: 12 } },
-        { id: 'lost_job', label: 'I lost my job', anchorPhrase: 'you lost your job recently', weights: { [d('career')]: 22, [e('anxiety')]: 18, [e('grief')]: 10, [t('past')]: 12 } },
-        { id: 'debt', label: 'I’m carrying money pressure', anchorPhrase: 'money pressure has been building', weights: { [d('money')]: 22, [e('anxiety')]: 18, [e('fear')]: 12 } },
-        { id: 'stuck', label: 'My work feels like a dead end', anchorPhrase: 'your work feels like a dead end', weights: { [d('career')]: 20, [e('frustration')]: 18 } },
+        { id: 'lost_job', label: 'I lost my job', anchorPhrase: 'you lost your job recently', weights: { [d('career')]: 22, [e('anxiety')]: 18, [e('grief')]: 10, [t('past')]: 12, [i('sudden_loss')]: 12 } },
+        { id: 'debt', label: 'I’m carrying money pressure', anchorPhrase: 'money pressure has been building', weights: { [d('money')]: 22, [e('anxiety')]: 18, [e('fear')]: 12, [i('scarcity_panic')]: 14 } },
+        { id: 'stuck', label: 'My work feels like a dead end', anchorPhrase: 'your work feels like a dead end', weights: { [d('career')]: 20, [e('frustration')]: 18, [i('stagnation_void')]: 12 } },
         { id: 'business', label: 'I’m building something of my own', anchorPhrase: 'you’re building something of your own', weights: { [d('career')]: 20, [e('excitement')]: 12, [e('hope')]: 10, [t('future')]: 12 } },
-        { id: 'direction', label: 'I don’t know what I want to do next', anchorPhrase: 'you don’t know what you want to do next', weights: { [d('self_growth')]: 16, [d('career')]: 10, [e('confusion')]: 16 } },
+        { id: 'direction', label: 'I don’t know what I want to do next', anchorPhrase: 'you don’t know what you want to do next', weights: { [d('self_growth')]: 16, [d('career')]: 10, [e('confusion')]: 16, [i('stagnation_void')]: 12 } },
       ],
       future: [
-        { id: 'feeling_stuck', label: 'I feel stuck', anchorPhrase: 'you feel stuck', weights: { [e('frustration')]: 20, [t('present')]: 18 } },
-        { id: 'big_choice', label: 'I have a big decision to make', anchorPhrase: 'you have a big decision in front of you', weights: { [e('confusion')]: 18, [e('anxiety')]: 12, [o('action')]: 12, [t('future')]: 12 } },
-        { id: 'need_change', label: 'I need a change but don’t know what', anchorPhrase: 'you need a change but can’t name it yet', weights: { [d('self_growth')]: 16, [e('curiosity')]: 14, [e('frustration')]: 10 } },
-        { id: 'worry', label: 'I’m carrying a low-lying worry', anchorPhrase: 'a low-lying worry has been sitting with you', weights: { [e('anxiety')]: 22, [e('fear')]: 12 } },
+        { id: 'feeling_stuck', label: 'I feel stuck', anchorPhrase: 'you feel stuck', weights: { [e('frustration')]: 20, [t('present')]: 18, [i('stagnation_void')]: 14 } },
+        { id: 'big_choice', label: 'I have a big decision to make', anchorPhrase: 'you have a big decision in front of you', weights: { [e('confusion')]: 18, [e('anxiety')]: 12, [o('action')]: 12, [t('future')]: 12, [i('choice_friction')]: 20 } },
+        { id: 'need_change', label: 'I need a change but don’t know what', anchorPhrase: 'you need a change but can’t name it yet', weights: { [d('self_growth')]: 16, [e('curiosity')]: 14, [e('frustration')]: 10, [i('stagnation_void')]: 10 } },
+        { id: 'worry', label: 'I’m carrying a low-lying worry', anchorPhrase: 'a low-lying worry has been sitting with you', weights: { [e('anxiety')]: 22, [e('fear')]: 12, [i('scarcity_panic')]: 16 } },
         { id: 'shift', label: 'I can feel a shift coming', anchorPhrase: 'you can feel a shift coming', weights: { [e('anticipation')]: 20, [e('hope')]: 12, [t('future')]: 14 } },
         { id: 'timing', label: 'I want to know when something will happen', anchorPhrase: 'you want to know when something will happen', weights: { [o('prediction')]: 20, [t('future')]: 16, [e('anticipation')]: 12 } },
       ],
       direction: [
-        { id: 'lost_purpose', label: 'I don’t know my purpose anymore', anchorPhrase: 'you’ve lost your sense of purpose', weights: { [d('self_growth')]: 20, [e('confusion')]: 18, [e('sadness')]: 10 } },
+        { id: 'lost_purpose', label: 'I don’t know my purpose anymore', anchorPhrase: 'you’ve lost your sense of purpose', weights: { [d('self_growth')]: 20, [e('confusion')]: 18, [e('sadness')]: 10, [i('stagnation_void')]: 12 } },
         { id: 'new_chapter', label: 'I’m starting a new chapter', anchorPhrase: 'you’re starting a new chapter', weights: { [d('self_growth')]: 20, [e('anticipation')]: 16, [e('excitement')]: 10 } },
-        { id: 'bored', label: 'I feel flat and disconnected from my life', anchorPhrase: 'you feel flat and disconnected', weights: { [d('self_growth')]: 16, [e('frustration')]: 16 } },
-        { id: 'healing', label: 'I’m trying to heal something', anchorPhrase: 'you’re trying to heal something', weights: { [d('self_growth')]: 20, [e('hope')]: 12, [t('past')]: 12 } },
+        { id: 'bored', label: 'I feel flat and disconnected from my life', anchorPhrase: 'you feel flat and disconnected', weights: { [d('self_growth')]: 16, [e('frustration')]: 16, [i('stagnation_void')]: 14 } },
+        { id: 'healing', label: 'I’m trying to heal something', anchorPhrase: 'you’re trying to heal something', weights: { [d('self_growth')]: 20, [e('hope')]: 12, [t('past')]: 12, [i('sudden_loss')]: 8 } },
         { id: 'creative', label: 'I want to create again', anchorPhrase: 'you want to create again', weights: { [d('self_growth')]: 16, [e('curiosity')]: 14 } },
         { id: 'deeper_path', label: 'I want to go deeper spiritually', anchorPhrase: 'you want to go deeper spiritually', weights: { [d('spirituality')]: 20, [d('self_growth')]: 10 } },
       ],
@@ -109,26 +126,26 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       ],
       family: [
         { id: 'conflict', label: 'There’s ongoing conflict at home', anchorPhrase: 'there’s ongoing conflict at home', weights: { [d('family')]: 22, [e('anxiety')]: 18, [e('frustration')]: 12 } },
-        { id: 'boundaries', label: 'I need to set boundaries with family', anchorPhrase: 'you need to set boundaries with family', weights: { [d('family')]: 20, [d('self_growth')]: 12, [o('action')]: 12 } },
+        { id: 'boundaries', label: 'I need to set boundaries with family', anchorPhrase: 'you need to set boundaries with family', weights: { [d('family')]: 20, [d('self_growth')]: 12, [o('action')]: 12, [i('boundary_invasion')]: 16 } },
         { id: 'conceive', label: 'We’re trying to conceive', anchorPhrase: 'you’re hoping to conceive', weights: { [d('family')]: 22, [e('anticipation')]: 18, [e('hope')]: 14 } },
-        { id: 'parenting', label: 'Parenting is wearing me down', anchorPhrase: 'parenting is wearing you down', weights: { [d('family')]: 20, [e('frustration')]: 16, [e('anxiety')]: 10 } },
-        { id: 'estranged', label: 'I’m distanced from someone in my family', anchorPhrase: 'you’re distanced from someone in your family', weights: { [d('family')]: 22, [e('grief')]: 18, [e('sadness')]: 12, [t('past')]: 10 } },
-        { id: 'caregiving', label: 'I’m caring for someone who is unwell', anchorPhrase: 'you’re caring for someone who is unwell', weights: { [d('family')]: 22, [e('anxiety')]: 14, [e('sadness')]: 12 } },
+        { id: 'parenting', label: 'Parenting is wearing me down', anchorPhrase: 'parenting is wearing you down', weights: { [d('family')]: 20, [e('frustration')]: 16, [e('anxiety')]: 10, [i('boundary_invasion')]: 8 } },
+        { id: 'estranged', label: 'I’m distanced from someone in my family', anchorPhrase: 'you’re distanced from someone in your family', weights: { [d('family')]: 22, [e('grief')]: 18, [e('sadness')]: 12, [t('past')]: 10, [i('sudden_loss')]: 8 } },
+        { id: 'caregiving', label: 'I’m caring for someone who is unwell', anchorPhrase: 'you’re caring for someone who is unwell', weights: { [d('family')]: 22, [e('anxiety')]: 14, [e('sadness')]: 12, [i('boundary_invasion')]: 10 } },
       ],
       protection: [
         { id: 'bad_luck', label: 'I feel like something is working against me', anchorPhrase: 'it feels like something is working against you', weights: { [d('protection')]: 22, [e('fear')]: 16, [e('anxiety')]: 12 } },
-        { id: 'toxic_person', label: 'There’s someone in my life who drains me', anchorPhrase: 'someone in your life is draining you', weights: { [d('protection')]: 20, [e('frustration')]: 16 } },
-        { id: 'heaviness', label: 'I’ve been feeling heavy and drained', anchorPhrase: 'you’ve been feeling heavy and drained', weights: { [d('protection')]: 20, [e('sadness')]: 14 } },
+        { id: 'toxic_person', label: 'There’s someone in my life who drains me', anchorPhrase: 'someone in your life is draining you', weights: { [d('protection')]: 20, [e('frustration')]: 16, [i('boundary_invasion')]: 12 } },
+        { id: 'heaviness', label: 'I’ve been feeling heavy and drained', anchorPhrase: 'you’ve been feeling heavy and drained', weights: { [d('protection')]: 20, [e('sadness')]: 14, [i('boundary_invasion')]: 10 } },
         { id: 'presence', label: 'I keep sensing something I can’t explain', anchorPhrase: 'you keep sensing something you can’t explain', weights: { [d('protection')]: 18, [d('spirituality')]: 14, [e('fear')]: 16 } },
         { id: 'cleansing', label: 'I want to clear my space and my head', anchorPhrase: 'you want to clear your space and your head', weights: { [d('protection')]: 18, [o('action')]: 12, [e('curiosity')]: 12 } },
-        { id: 'boundaries_energy', label: 'I give too much of myself away', anchorPhrase: 'you give too much of yourself away', weights: { [d('protection')]: 16, [d('self_growth')]: 16, [e('frustration')]: 12 } },
+        { id: 'boundaries_energy', label: 'I give too much of myself away', anchorPhrase: 'you give too much of yourself away', weights: { [d('protection')]: 16, [d('self_growth')]: 16, [e('frustration')]: 12, [i('boundary_invasion')]: 18 } },
       ],
       unsure: [
         { id: 'just_curious', label: 'I’m mostly curious', anchorPhrase: 'you’re mostly curious', weights: { [e('curiosity')]: 20 } },
         { id: 'need_help', label: 'I need help and I don’t know where to start', anchorPhrase: 'you need help and don’t know where to start', weights: { [d('self_growth')]: 16, [e('sadness')]: 14, [e('confusion')]: 12 } },
-        { id: 'overwhelmed', label: 'Too much is happening to explain', anchorPhrase: 'too much is happening to explain', weights: { [d('self_growth')]: 16, [e('anxiety')]: 20, [e('confusion')]: 16 } },
+        { id: 'overwhelmed', label: 'Too much is happening to explain', anchorPhrase: 'too much is happening to explain', weights: { [d('self_growth')]: 16, [e('anxiety')]: 20, [e('confusion')]: 16, [i('scarcity_panic')]: 10 } },
         { id: 'drawn_here', label: 'I felt drawn here', anchorPhrase: 'you felt drawn here', weights: { [d('spirituality')]: 16, [e('curiosity')]: 14 } },
-        { id: 'flat', label: 'I just feel flat', anchorPhrase: 'you’ve been feeling flat', weights: { [d('self_growth')]: 14, [e('frustration')]: 14, [e('sadness')]: 12 } },
+        { id: 'flat', label: 'I just feel flat', anchorPhrase: 'you’ve been feeling flat', weights: { [d('self_growth')]: 14, [e('frustration')]: 14, [e('sadness')]: 12, [i('stagnation_void')]: 12 } },
         { id: 'other', label: 'Something else entirely', anchorPhrase: 'something else is going on', weights: { [e('curiosity')]: 10 } },
       ],
     },
@@ -154,8 +171,89 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
 
   /* ── Q4 ────────────────────────────────────────────────────────── */
+  /*
+   * 机制识别题（第 4 题）。
+   *
+   * 设计纪律：题干与选项全部用**用户自己的语言**描述「卡住的样子」，
+   * 绝不能出现机制代号、进化论词汇或任何后台分类名 ——
+   * 用户看到的必须是一个正常的人在描述自己的处境，
+   * 而不是一份心理量表。
+   *
+   * 为什么单独设一题而不是复用 q2 / q4：
+   *   机制轴与「具体困境」（q2）、「表面情绪」（q4）三者正交。
+   *   同样是 no_contact，一个人是真失去了（sudden_loss），
+   *   一个是对象不可得（illusion_fixation）。用 q2 推不出来。
+   *   硬塞进现有题目会让识别精度退化到不可用。
+   *
+   * 选项顺序刻意打散：按 (关系类 / 选择类 / 消耗类 / 停摆类) 交错排列，
+   * 避免同类集中让用户看出「这是在给我分类」。
+   *
+   * 每题 30 分的专设题权重，远高于辅助路径（12–22 分），
+   * 因此本题的作答几乎总是决定性的 —— 这是刻意的：
+   * 辅助权重只负责在用户没答本题时兜底，以及在多选题里做细微区分。
+   */
   {
     id: 'q4',
+    shortLabel: 'How it holds you',
+    text: 'Which of these sounds most like what’s actually going on?',
+    subtext: 'Not what you think you should say — the one that makes you wince a little.',
+    type: 'single',
+    options: [
+      {
+        id: 'churning',
+        label: 'I keep going over the same thing and getting nowhere',
+        anchorPhrase: 'you keep going over the same thing without getting anywhere',
+        weights: { [i('illusion_fixation')]: 30, [e('uncertainty')]: 10 },
+      },
+      {
+        id: 'two_roads',
+        label: 'I have a decision to make and I keep not making it',
+        anchorPhrase: 'you have a decision you keep not making',
+        weights: { [i('choice_friction')]: 30, [e('confusion')]: 10, [o('action')]: 8 },
+      },
+      {
+        id: 'drained_giving',
+        label: 'I give a lot to people and get very little back',
+        anchorPhrase: 'you give a lot and get little back',
+        weights: { [i('boundary_invasion')]: 30, [e('frustration')]: 10 },
+      },
+      {
+        id: 'cant_start',
+        label: 'I know what I should do, I just can’t make myself start',
+        anchorPhrase: 'you know what to do but can’t make yourself start',
+        weights: { [i('stagnation_void')]: 30, [e('frustration')]: 10 },
+      },
+      {
+        id: 'holding_grief',
+        label: 'Something ended and I haven’t really let it end',
+        anchorPhrase: 'something ended and you haven’t let it end',
+        weights: { [i('sudden_loss')]: 30, [e('grief')]: 12, [t('past')]: 10 },
+      },
+      {
+        id: 'same_person',
+        label: 'I keep going back to someone I know is bad for me',
+        anchorPhrase: 'you keep going back to someone you know is bad for you',
+        weights: { [i('toxic_loop')]: 30, [e('uncertainty')]: 10 },
+      },
+      {
+        id: 'always_alert',
+        label: 'I’m always braced for something to go wrong, even when nothing has',
+        anchorPhrase: 'you’re always braced for something to go wrong',
+        weights: { [i('scarcity_panic')]: 30, [e('anxiety')]: 12, [e('fear')]: 10 },
+      },
+      {
+        id: 'smaller',
+        label: 'I downplay myself before anyone else gets the chance',
+        anchorPhrase: 'you downplay yourself before anyone else can',
+        weights: { [i('identity_crisis')]: 30, [e('uncertainty')]: 8 },
+      },
+    ],
+  },
+
+  /* ── Q5 ────────────────────────────────────────────────────────── */
+
+  {
+    id: 'q5',
     shortLabel: 'How you feel',
     text: 'What feeling is strongest right now?',
     subtext: 'Choose up to two.',
@@ -175,9 +273,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
 
-  /* ── Q5 ────────────────────────────────────────────────────────── */
+  /* ── Q6 ────────────────────────────────────────────────────────── */
   {
-    id: 'q5',
+    id: 'q6',
     shortLabel: 'How long',
     text: 'How long has this been on your mind?',
     type: 'single',
@@ -190,9 +288,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
 
-  /* ── Q6 ────────────────────────────────────────────────────────── */
+  /* ── Q7 ────────────────────────────────────────────────────────── */
   {
-    id: 'q6',
+    id: 'q7',
     shortLabel: 'What kind of support',
     text: 'If you had someone to talk to about this, what would you want from them?',
     type: 'single',
@@ -249,9 +347,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     },
   },
 
-  /* ── Q7 ────────────────────────────────────────────────────────── */
+  /* ── Q8 ────────────────────────────────────────────────────────── */
   {
-    id: 'q7',
+    id: 'q8',
     shortLabel: 'In your own words',
     text: 'If you could get one answer right now, what would you ask?',
     subtext: 'Write it the way you’d say it out loud. This is only for you — we use it to shape your reading.',

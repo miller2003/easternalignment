@@ -8,11 +8,13 @@
 
 import {
   DOMAINS, EMOTIONS, TEMPORAL, OUTCOMES, RELATIONSHIP_STATES, URGENCIES, ORIENTATIONS,
+  INTERNAL_KEYS,
   type SessionAnswers, type UserProfile, type WeightMap,
   type Domain, type EmotionalState, type TemporalOrientation, type DesiredOutcome,
   type RelationshipState, type Urgency, type SpiritualOrientation,
+  type InternalKey, type Situation,
 } from '../types';
-import { NS, PROFILE_RULES as R } from '../config';
+import { NS, PROFILE_RULES as R, INTERNAL_RULES as IR, INTERNAL_TO_SITUATIONS } from '../config';
 import { QUIZ_QUESTIONS, optionsFor } from './questions';
 
 /* ── 1. 聚合原始分 ─────────────────────────────────────────────────── */
@@ -212,8 +214,9 @@ export function deriveSituations(
   answers: SessionAnswers,
   relationship_state?: RelationshipState,
   freeText?: string,
-): import('../types').Situation[] {
-  const out = new Set<import('../types').Situation>();
+  internal_key?: InternalKey,
+): Situation[] {
+  const out = new Set<Situation>();
 
   const q2 = answers.q2;
   if (typeof q2 === 'string') (Q2_SITUATIONS[q2] ?? []).forEach((s) => out.add(s));
@@ -223,7 +226,60 @@ export function deriveSituations(
     for (const [tag, re] of FREE_TEXT_SITUATIONS) if (re.test(freeText)) out.add(tag);
   }
 
+  // 机制轴 → 情境轴桥接。
+  // 机制比情境更细：两个人可能都是 no_contact，但一个真的失去了（sudden_loss），
+  // 一个是对象根本不可得（illusion_fixation）。这一步让推荐引擎用上这层信息，
+  // 而不必改动文章池的标注体系。机制情境是**追加**的，不覆盖已有推断 ——
+  // 它表达的是「除了字面情境，还有这一层」，冲突时要靠 SITUATION_WEIGHTS 自然裁决。
+  if (internal_key) {
+    for (const s of INTERNAL_TO_SITUATIONS[internal_key] ?? []) out.add(s);
+  }
+
   return Array.from(out);
+}
+
+/* ── 5b. 底层机制轴（内部专用） ─────────────────────────────────────── */
+
+/**
+ * 选出底层机制，并返回「是否值得渲染」的判断。
+ *
+ * 两道闸门（阈值都在 config.INTERNAL_RULES）：
+ *   1. minScore —— 冠军机制必须真的被点亮，而不是靠 q2 的辅助权重凑分。
+ *      专设题命中即 30 分，所以 18 分这条线意味着「要么直接被选中，
+ *      要么在具体困境里被强烈暗示」。
+ *   2. minLead  —— 冠军必须比第二名高出足够幅度。
+ *      两个人格样本（比如「反复回到伤害自己的人」同时命中
+ *      toxic_loop 与被侵蚀的边界 boundary_invasion）如果分差太小，
+ *      硬选一个去渲染解读，用户会觉得「说的不完全是我不一样的部分」。
+ *      此时返回 undefined，结果页整体不渲染机制区块 —— 这是刻意的：
+ *      一个错位的「被理解」比没有更伤信任。
+ */
+export function pickInternalKey(raw: WeightMap): InternalKey | undefined {
+  const ranked = INTERNAL_KEYS
+    .map((k) => ({ k, v: raw[NS.internal + k] ?? 0 }))
+    .sort((a, b) => b.v - a.v);
+
+  const top = ranked[0];
+  if (!top || top.v < IR.minScore) return undefined;
+
+  const second = ranked[1];
+  if (second && top.v - second.v < IR.minLead) return undefined;
+
+  return top.k;
+}
+
+/**
+ * 机制轴的归一化分（仅用于埋点分布分析与回归断言，不渲染）。
+ * 单独做而不是复用 normalizeScores，因为后者是全轴最大值归一化，
+ * 会被 domain 的大分数稀释，看不出机制内部的相对强弱。
+ */
+export function normalizeInternalScores(raw: WeightMap): WeightMap {
+  const out: WeightMap = {};
+  for (const k of INTERNAL_KEYS) {
+    const v = raw[NS.internal + k];
+    if (v !== undefined && v > 0) out[k] = v;
+  }
+  return out;
 }
 
 /* ── 6. 构建画像 ───────────────────────────────────────────────────── */
@@ -241,7 +297,9 @@ export function buildProfile(answers: SessionAnswers, sessionId?: string): UserP
   ) as EmotionalState[];
 
   const relTop = pickTop(rawScores, NS.relationship, RELATIONSHIP_STATES, 1, 1)[0] as RelationshipState | undefined;
-  const freeTextAnswer = typeof answers.q7 === 'string' ? (answers.q7 as string) : undefined;
+  // 自由文本是最后一题（q8）。历史事故：插入机制题后此处的题号引用未同步，
+  // 会读到一个不存在的键 → freeTextAnswer 永远 undefined，丧失事件检测全体失效。
+  const freeTextAnswer = typeof answers.q8 === 'string' ? (answers.q8 as string) : undefined;
   const relationship_state = relTop ?? relationshipFromFreeText(freeTextAnswer);
 
   const desired_outcomes = pickTop(
@@ -257,7 +315,11 @@ export function buildProfile(answers: SessionAnswers, sessionId?: string): UserP
   const spiritual_orientation = (pickTop(rawScores, NS.orientation, ORIENTATIONS, 1, 1)[0]
     ?? R.defaultOrientation) as SpiritualOrientation;
 
-  const situations = deriveSituations(answers, relationship_state, freeTextAnswer);
+  // 机制轴：必须在 deriveSituations 之前算出，因为情境推导要用它做桥接。
+  const internal_key = pickInternalKey(rawScores);
+  const internalScores = normalizeInternalScores(rawScores);
+
+  const situations = deriveSituations(answers, relationship_state, freeTextAnswer, internal_key);
 
   return {
     primary_domain,
@@ -269,6 +331,8 @@ export function buildProfile(answers: SessionAnswers, sessionId?: string): UserP
     urgency,
     spiritual_orientation,
     situations,
+    internal_key,
+    internalScores,
     loss_or_change: detectLossOrChange(freeTextAnswer),
     freeTextAnswer,
     rawScores,

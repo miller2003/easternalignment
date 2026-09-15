@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CompactFooter from '../components/CompactFooter.astro';
 import TopDisclosureBar from '../components/TopDisclosureBar.astro';
 import TopOfferBar from '../components/TopOfferBar.astro';
 import PostHog from '../components/PostHog.astro';
@@ -66,6 +67,21 @@ interface Props {
    * disclosure bar are NOT CTAs and stay.
    */
   noCta?: boolean;
+  /**
+   * Suppresses the top affiliate-disclosure strip for this page only.
+   * Used by /match, which is a self-contained tool: the strip's
+   * "if you use my links I earn a commission" framing reads as a sales
+   * pitch above a page that deliberately shows no offers until the user
+   * has finished answering. Default false — every other page keeps it.
+   */
+  hideDisclosure?: boolean;
+  /**
+   * Renders a compact footer instead of the full 6-column site map.
+   * Used by /match: a tool page should not carry the entire site's
+   * navigation under a quiz result — it distracts from the reading.
+   * Default false — every other page keeps the full footer.
+   */
+  bareFooter?: boolean;
 }
 
 const {
@@ -83,6 +99,8 @@ const {
   topOfferPlatform,
   stickyCta,
   noCta = false,
+  hideDisclosure = false,
+  bareFooter = false,
 } = Astro.props;
 
 const SITE_NAME = 'Eastern Alignment';
@@ -296,7 +314,7 @@ const personSchema = {
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <TopDisclosureBar />
+    {!hideDisclosure && <TopDisclosureBar />}
     {topOfferPlatform && <TopOfferBar platform={topOfferPlatform} />}
     <Header />
 
@@ -304,7 +322,7 @@ const personSchema = {
       <slot />
     </main>
 
-    <Footer />
+    {bareFooter ? <CompactFooter /> : <Footer />}
 
     <!-- Slim right-edge offer tab: the persistent CTA surface. Replaces both
          the old full-width bottom bar (which covered the last lines of every

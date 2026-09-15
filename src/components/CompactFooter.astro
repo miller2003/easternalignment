@@ -1,0 +1,83 @@
+---
+/**
+ * CompactFooter.astro — /match 专用精简页脚
+ *
+ * 为什么单独做一个而不是复用 Footer.astro：
+ *   /match 是一个自成体系的小工具。用户在结果页刚看完一段很私人的解读，
+ *   紧接着撞上 6 列 32 条的全站导航，会把「读完一段话」的余韵冲掉，
+ *   也会诱导用户立刻跳出到别的内容去。工具页的页脚应当只承担
+ *   「确认这是谁、怎么联系、法律免责」三件事，然后安静地结束。
+ *
+ * 设计原则：大气 = 留白 + 层级，而不是把东西堆满。
+ *   · 三段式：品牌 → 少量必要链接 → 法务行
+ *   · 字号只有两级（品牌 / 其余），靠留白和字距拉层次
+ *   · 深色底沿用全站页脚色，保证换页时视觉不断裂
+ *   · 移动端单列居中，触控目标 ≥44px
+ *
+ * 不使用任何 CTA / /go/ 链接 —— 与 /match 的 noCta 立场一致。
+ *
+ * ⚠️ 样式为何不写在 <style> 里（2026-09-15 实测）：
+ *   Astro 会把所有 layout 层组件的 scoped CSS 打进同一个
+ *   BaseLayout.<hash>.css，而那个文件【全站 564 页】都要下载。
+ *   样式放这里会让每页白背 ~340 bytes gzip。
+ *   因此样式统一放在 src/match/styles/match.css（只有 /match 加载），
+ *   搜 `.m-footer` 即可找到。若将来本组件要跨页复用，再把样式搬回来。
+ */
+const currentYear = new Date().getFullYear();
+
+/* 只留真正必要的：平台评测（信任锚）、方法说明（可信度）、法务三件套。
+   刻意不放 Astrology / Relationships / Mediumship 等分类导航 ——
+   那些属于全站页脚，不属于一个刚做完测验的人此刻需要的东西。 */
+const primaryLinks = [
+  { href: '/reviews/', label: 'Reviews' },
+  { href: '/guides/', label: 'Guides' },
+  { href: '/methodology/', label: 'Methodology' },
+  { href: '/about/', label: 'About' },
+];
+
+const legalLinks = [
+  { href: '/disclosure/', label: 'Disclosure' },
+  { href: '/privacy/', label: 'Privacy' },
+  { href: '/terms/', label: 'Terms' },
+];
+---
+
+<footer class="m-footer">
+  <div class="m-footer__inner">
+    <a href="/" class="m-footer__brand">
+      <img
+        src="/logo.jpg"
+        alt="Eastern Alignment"
+        class="m-footer__logo"
+        width="30"
+        height="30"
+        loading="lazy"
+      />
+      <span class="m-footer__wordmark">Eastern Alignment</span>
+    </a>
+
+    <p class="m-footer__tagline">
+      Independent reviews of online psychic reading platforms —
+      researched firsthand, and written for readers who want the
+      unglamorous version.
+    </p>
+
+    <nav class="m-footer__nav" aria-label="Site">
+      {primaryLinks.map((l) => (
+        <a class="m-footer__link" href={l.href}>{l.label}</a>
+      ))}
+    </nav>
+
+    <div class="m-footer__rule" role="presentation"></div>
+
+    <div class="m-footer__base">
+      <p class="m-footer__copy">&copy; {currentYear} Eastern Alignment</p>
+      <p class="m-footer__legal">
+        {legalLinks.map((l, i) => (
+          <>{i > 0 && <span class="m-footer__sep" aria-hidden="true">·</span>}<a href={l.href}>{l.label}</a></>
+        ))}
+      </p>
+      <p class="m-footer__note">For entertainment purposes only.</p>
+    </div>
+  </div>
+</footer>

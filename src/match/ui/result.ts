@@ -55,6 +55,7 @@ export function renderResult(state: ScreenState, act: MatchActions): HTMLElement
   /* ── 区块 ── */
   const blocks: Record<ResultSection, HTMLElement | null> = {
     narrative: blockNarrative(state),
+    mechanism: blockMechanism(state),
     deeperQuestion: blockDeeperQuestion(recs.narrative.block.deeperQuestion),
     whatNext: blockWhatNext(recs.narrative.block.whatNext),
     readers: blockReaders(state, act),
@@ -215,6 +216,47 @@ function blockNarrative(state: ScreenState): HTMLElement {
   });
   if (caution) {
     wrap.appendChild(h('p', { class: 'm-caution', text: caution }));
+  }
+
+  return wrap;
+}
+
+/* ── 1b. 底层机制解读（内部轴，代号永不外显） ──────────────────────── */
+
+/**
+ * 「为什么你会卡在这里」这一段。
+ *
+ * 三条硬纪律：
+ *   1. **不渲染 key。** `mechanism.key` 是内部代号（sudden_loss 这类），
+ *      渲染出来既吓人又暴露分类逻辑。这里只用它做 id 后缀（不可见 DOM 属性）、
+ *      也**不进埋点** —— 埋点只上报「有过机制区块 / 没有」这一个布尔。
+ *   2. **不渲染 actions。** 用户明确要求不提供「解决方法」。
+ *      数据层仍留着（content/internalMechanisms.ts），但渲染路径不读它，
+ *      总开关是 config.MECHANISM_ACTIONS_ENABLED。即便哪天打开，
+ *      这段代码也不会自动开始渲染 —— 必须显式改这里。
+ *   3. **信号不足时整段不渲染。** 由引擎的 minScore / minLead 决定，
+ *      这里只做 null 判断，不自己再判一次阈值（避免出现两套标准）。
+ *
+ * 结构：解读段落 → 一句过渡 → 反思问题。反思问题是留白，不是任务清单，
+ * 因此用 blockquote/列表的视觉语义，而不是带勾选框的 to-do。
+ */
+function blockMechanism(state: ScreenState): HTMLElement | null {
+  const m = state.recs?.narrative.mechanism;
+  if (!m || !m.paragraphs.length) return null;
+
+  const wrap = h('div', { class: 'm-block', id: 'm-block-mechanism' });
+  wrap.appendChild(h('h2', { class: 'm-h2', text: 'What may be keeping it in place' }));
+
+  m.paragraphs.forEach((p) => wrap.appendChild(h('p', { class: 'm-p', text: p })));
+
+  if (m.reflections.length) {
+    wrap.appendChild(h('p', {
+      class: 'm-p m-block__sub',
+      text: 'Two questions worth sitting with — you do not need answers today.',
+    }));
+    const ul = h('ul', { class: 'm-list m-list--reflect' });
+    m.reflections.forEach((q) => ul.appendChild(h('li', { text: q })));
+    wrap.appendChild(ul);
   }
 
   return wrap;
