@@ -105,6 +105,10 @@ const {
 
 const SITE_NAME = 'Eastern Alignment';
 const SITE_URL  = 'https://easternalignment.com';
+// Brand string declared to Google for the SERP "Site Name" feature
+// (the line next to the favicon). Google's first choice is the WebSite
+// schema `name`, with og:site_name and application-name as fallbacks.
+const SERP_SITE_NAME = 'EasternAlignment | Honest Psychic Review';
 
 const baseTitle = seoTitle || title;
 // Smart title length protection: only append the brand suffix when the
@@ -134,8 +138,8 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://easternalignment.com/#website",
-  "name": SITE_NAME,
-  "alternateName": "Eastern Alignment Psychic Reviews",
+  "name": SERP_SITE_NAME,
+  "alternateName": "Eastern Alignment",
   "url": SITE_URL,
   "description": "Honest, independently researched reviews and guidance for online psychic reading platforms.",
   "inLanguage": "en-US",
@@ -179,7 +183,7 @@ const personSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="application-name" content={SITE_NAME} />
+    <meta name="application-name" content={SERP_SITE_NAME} />
     <meta name='impact-site-verification' value='9b281445-730b-4b8f-ae89-484d7da8e36e'>
     <PostHog />
 

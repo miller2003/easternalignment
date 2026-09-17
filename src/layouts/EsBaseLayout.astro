@@ -42,6 +42,8 @@ const {
 
 const SITE_NAME = 'Eastern Alignment';
 const SITE_URL  = 'https://easternalignment.com';
+// Brand string declared to Google for the SERP "Site Name" feature.
+const SERP_SITE_NAME = 'EasternAlignment | Honest Psychic Review';
 
 const baseTitle = seoTitle || title;
 const fullTitle = baseTitle === SITE_NAME
@@ -115,8 +117,8 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://easternalignment.com/#website",
-  "name": SITE_NAME,
-  "alternateName": "Eastern Alignment Reseñas Psíquicas",
+  "name": SERP_SITE_NAME,
+  "alternateName": "Eastern Alignment",
   "url": SITE_URL,
   "description": "Reseñas honestas y análisis independientes de plataformas de lectura psíquica en línea.",
   "inLanguage": "es",
@@ -180,7 +182,7 @@ const websiteSchema = {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={metaDesc.slice(0, 100)} />
-    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:site_name" content={SERP_SITE_NAME} />
     <!-- es_LA = Latin American Spanish (Facebook's recognized locale for LATAM).
          Note: Google hreflang uses es-419; Facebook/OpenGraph uses es_LA. -->
     <meta property="og:locale" content="es_LA" />
