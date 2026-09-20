@@ -5,6 +5,7 @@ import CompactFooter from '../components/CompactFooter.astro';
 import TopDisclosureBar from '../components/TopDisclosureBar.astro';
 import TopOfferBar from '../components/TopOfferBar.astro';
 import PostHog from '../components/PostHog.astro';
+import GA4 from '../components/GA4.astro';
 import SideOfferTab from '../components/SideOfferTab.astro';
 import { affiliateLinks } from '../data/affiliateLinks';
 import '../styles/global.css';
@@ -186,6 +187,7 @@ const personSchema = {
     <meta name="application-name" content={SERP_SITE_NAME} />
     <meta name='impact-site-verification' value='9b281445-730b-4b8f-ae89-484d7da8e36e'>
     <PostHog />
+    <GA4 />
 
     <!-- Primary Meta -->
     <title>{fullTitle}</title>

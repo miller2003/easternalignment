@@ -3,6 +3,7 @@ import EsHeader from '../components/es/EsHeader.astro';
 import EsFooter from '../components/es/EsFooter.astro';
 import EsTopDisclosureBar from '../components/es/EsTopDisclosureBar.astro';
 import PostHog from '../components/PostHog.astro';
+import GA4 from '../components/GA4.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -134,6 +135,7 @@ const websiteSchema = {
     <meta name="application-name" content={SITE_NAME} />
     <meta name='impact-site-verification' value='9b281445-730b-4b8f-ae89-484d7da8e36e'>
     <PostHog />
+    <GA4 />
 
     <!-- Primary Meta -->
     <title>{fullTitle}</title>

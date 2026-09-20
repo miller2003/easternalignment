@@ -1,0 +1,17 @@
+---
+// GA4 全站统计（2026-09-20 接入）
+// 衡量 ID 来自 GA4 后台「网站数据流详情」：
+//   数据流名称 EasternAlignment / 数据流 ID 15811036238 / 衡量 ID G-YM1E05QJTK
+// BaseLayout（英文站）与 EsBaseLayout（西语站）都引用本组件，
+// 因此全站每一页的 <head> 都会带上这段代码；换 ID 只需改这一处。
+const GA4_ID = 'G-YM1E05QJTK';
+---
+
+<!-- Google tag (gtag.js) -->
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
+<script is:inline define:vars={{ GA4_ID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', GA4_ID);
+</script>
