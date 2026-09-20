@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $3.99/min (Chat / Call)"
 bestFor: "Analytical seekers who want a permanent transcript and concrete, card-anchored tarot interpretations"
 publishDate: '2026-06-16'
-updatedDate: '2026-09-02'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 unavailable: true
 customSchema: |
   {

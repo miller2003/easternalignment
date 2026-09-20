@@ -9,7 +9,8 @@ verdict: "Con más de 3.200 reseñas verificadas en 5.0★ a $2.99 por minuto, L
 pricing: "$2.99/min"
 bestFor: "Primera sesión en Purple Garden, videollamadas en español, mediumnidad con personas y mascotas, bloqueos emocionales íntimos"
 publishDate: "2026-08-17"
-updatedDate: "2026-08-17"
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luna-aestethic/"
 hreflangEn: ""  # Sin equivalente en inglés — dejar vacío (ver _plantilla-resena.md)
 avatarUrl: "/avatars/es-readers/luna-aestethic.webp"

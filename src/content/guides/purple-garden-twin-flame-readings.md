@@ -26,7 +26,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $0.99/min to $15.00+/min
 bestFor: People in twin flame separation who want to use Purple Garden's visual vetting tools and Journeys accountability ledger before committing to a TF advisor.
 publishDate: '2026-08-06'
-updatedDate: '2026-08-06'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 highlights:
   - "Explains why Purple Garden's video-first format adds a specific layer of accountability to TF readings."
   - "Profiles 5 advisors with TF specialization verifiable through the Journeys ledger."

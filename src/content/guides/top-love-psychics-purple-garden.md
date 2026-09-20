@@ -27,7 +27,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $2.99/min to $7.99/min
 bestFor: Anyone with a love question who wants the definitive Purple Garden ranking — verified through the platform's public prediction ledger before spending.
 publishDate: '2026-08-28'
-updatedDate: '2026-09-06'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 highlights:
   - "The answer comes first: #1 pick in the opening paragraph, full 10-reader table in the first screen."
   - "Ranked using the Journeys public ledger — predictions confirmed or contradicted by clients in public."

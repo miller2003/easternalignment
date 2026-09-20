@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/tarot-instincts.webp
 ogImage: "/avatars/purple-garden/tarot-instincts-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-02'
-updatedDate: '2026-07-02'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 platform: purple-garden
 metaDescription: "Tarot Instincts on Purple Garden: $1.99/min, 4.2 stars, 12,135 readings. Tarot + Numerology combination at the cheapest viable price point. Honest review."
 highlights:

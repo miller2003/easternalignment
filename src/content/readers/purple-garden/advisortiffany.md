@@ -9,7 +9,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $2.49/min · Voice $1.99/min · Video $1.99/min"
 bestFor: "Budget-conscious clients who want an empathic, non-judgmental listener over chat or voice, and are comfortable reading a bio that signals style over structure"
 publishDate: '2026-09-08'
-updatedDate: '2026-09-08'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 customSchema: |
   {
     "@context": "https://schema.org",

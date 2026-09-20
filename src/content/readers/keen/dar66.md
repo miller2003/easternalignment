@@ -13,7 +13,8 @@ pricing: "$4.20/min"
 bestFor: "People who want an experienced, spiritually rooted read on love, life questions, and spirit guidance - and who want it at a moderate price below most tenured readers"
 publishDate: '2026-06-28'
 canonicalUrl: https://easternalignment.com/reviews/keen/dar66/
-updatedDate: '2026-06-28'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

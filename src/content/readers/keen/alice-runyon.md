@@ -13,7 +13,8 @@ pricing: "$3.59/min"
 bestFor: "People who want a high-rated (4.95), experienced intuitive read on love and life questions - and who want it at one of the lowest rates among high-volume Keen advisors"
 publishDate: '2026-06-18'
 canonicalUrl: https://easternalignment.com/reviews/keen/alice-runyon/
-updatedDate: '2026-06-18'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 customSchema: |
   {
     "@context": "https://schema.org",

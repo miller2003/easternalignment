@@ -13,7 +13,8 @@ pricing: "$17.99/min (profile also shows $14.99-$18.99/min tiers)"
 bestFor: "Clients with a specific love or career question who want a Top Advisor with a history of tight, timing-based predictions - and who can justify a premium rate"
 publishDate: '2026-07-06'
 canonicalUrl: https://easternalignment.com/reviews/keen/psychic-jane-just-knows/
-updatedDate: '2026-07-06'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 customSchema: |
   {
     "@context": "https://schema.org",

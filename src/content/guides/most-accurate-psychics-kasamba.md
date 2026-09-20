@@ -27,7 +27,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $2.10/min to $10.99/min
 bestFor: Seekers who have been burned by inaccurate readings and want to identify Kasamba's most verifiably precise advisors before spending.
 publishDate: '2026-08-01'
-updatedDate: '2026-08-01'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 highlights:
   - "Explains why 'star rating alone' is a misleading accuracy metric — and what to measure instead."
   - "Uses the Negative Review Audit to identify accuracy signals hidden in 1-star complaints."

@@ -22,7 +22,8 @@ bestFor: Clients who want specific timeline predictions on love and relationship
   to a full reading
 publishDate: '2026-04-25'
 canonicalUrl: https://easternalignment.com/reviews/keen/the-psychic-one/
-updatedDate: '2026-04-25'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

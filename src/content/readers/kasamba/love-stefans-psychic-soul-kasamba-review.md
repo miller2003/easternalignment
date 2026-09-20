@@ -33,7 +33,8 @@ entities:
   - "Love Stefan"
   - "Psychic Readings"
 publishDate: '2026-07-24'
-updatedDate: '2026-07-24'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 customSchema: |
   {
     "@context": "https://schema.org",

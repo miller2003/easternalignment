@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $1.99/min"
 bestFor: "Budget metaphysics and tarot readings from a high-volume reader you can test risk-free"
 publishDate: '2026-07-10'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

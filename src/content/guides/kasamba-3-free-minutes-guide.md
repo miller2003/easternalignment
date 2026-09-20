@@ -8,7 +8,8 @@ platform: kasamba
 platformName: "Kasamba"
 affiliateUrl: /go/kasamba
 publishDate: '2026-08-14'
-updatedDate: '2026-08-14'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 canonicalUrl: https://easternalignment.com/guides/kasamba-3-free-minutes-guide/
 customSchema: |
   {

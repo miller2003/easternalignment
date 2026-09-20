@@ -23,7 +23,8 @@ bestFor: Clients who want warmth, genuine connection, and honest conversational 
   exploration
 publishDate: '2026-04-16'
 canonicalUrl: https://easternalignment.com/reviews/keen/ask-fran/
-updatedDate: '2026-04-16'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 customSchema: |
   {
     "@context": "https://schema.org",

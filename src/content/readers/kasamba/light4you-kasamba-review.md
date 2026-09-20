@@ -35,7 +35,8 @@ entities:
   - "Tarot Readings"
   - "Love Psychics"
 publishDate: '2026-08-26'
-updatedDate: '2026-08-26'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",

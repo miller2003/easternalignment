@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $5.99/min to $10.99/min
 bestFor: Anyone trapped in a toxic love triangle, suspecting infidelity, or fighting a losing battle against manipulative in-laws and lingering ex-partners.
 publishDate: '2026-05-01'
-updatedDate: '2026-05-01'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
 - Explains why a toxic mother-in-law acts as the exact same energetic drain as a mistress.
 - Focuses on psychics who provide concrete emotional forensics rather than vague guesses.

@@ -11,7 +11,8 @@ freeOffer: "3 free minutes + 50% off"
 pricing: "$4.99/min chat · $1.99/min voice (promo rates as low as $0.99–$2.49)"
 bestFor: "Clients who want unfiltered truth about a partner’s real intentions and feelings"
 publishDate: '2026-07-14'
-updatedDate: '2026-07-14'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 customSchema: |
   {
     "@context": "https://schema.org",

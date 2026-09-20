@@ -26,7 +26,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $1.99/min to $4.99/min
 bestFor: First-time Purple Garden clients who want to spend the $30 credit once and spend it right — with the research protocol that makes the choice evidence-based.
 publishDate: '2026-08-23'
-updatedDate: '2026-08-23'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 highlights:
   - "Ranks 5 starters by verified minutes per credit dollar — from 6 minutes (Logan) to 15 minutes (Tarot Instincts)."
   - "Includes the one-credit-three-strategies decision tree: one deep read, two medium reads, or three auditions."

@@ -13,7 +13,8 @@ pricing: "$2.99/min"
 bestFor: "Clients who want a direct, no-tools male reader for love and relationship questions - and who value straight-talk reassurance over gentle hand-holding"
 publishDate: '2026-06-24'
 canonicalUrl: https://easternalignment.com/reviews/keen/that-magic-man/
-updatedDate: '2026-06-24'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",

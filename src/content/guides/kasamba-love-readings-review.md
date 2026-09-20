@@ -11,7 +11,8 @@ affiliateUrl: /go/kasamba
 freeOffer: 3 free minutes with every new psychic + 50% off first session
 pricing: From $2.10/min to $10.99/min
 publishDate: '2026-04-18'
-updatedDate: '2026-08-24'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 canonicalUrl: https://easternalignment.com/guides/kasamba-love-readings-review/
 customSchema: |
   {

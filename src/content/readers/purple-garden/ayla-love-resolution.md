@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $2.99/min"
 bestFor: "Relationship clarity from a multi-tool clairvoyant who blends tarot, numerology, and energy insight"
 publishDate: '2026-07-14'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -13,7 +13,8 @@ pricing: "$6.99/min"
 bestFor: "People who want a long-tenured medium for closure, spirit messages, and relationship clarity - and who are patient with a slower, softer delivery"
 publishDate: '2026-08-01'
 canonicalUrl: https://easternalignment.com/reviews/keen/serenity-stone/
-updatedDate: '2026-08-01'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

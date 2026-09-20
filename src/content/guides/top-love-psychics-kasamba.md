@@ -27,7 +27,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $1.99/min to $14.99/min promo (regular $3.99–$29.99/min)
 bestFor: Anyone with a love question — ex, new person, commitment, or hard truth — who wants the definitive Kasamba ranking before spending a dollar.
 publishDate: '2026-08-15'
-updatedDate: '2026-09-06'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 highlights:
   - "The answer comes first: #1 pick in the opening paragraph, full 12-reader table in the first screen."
   - "12 readers matched to 5 love-question types, with the evidence class behind each pick named explicitly."

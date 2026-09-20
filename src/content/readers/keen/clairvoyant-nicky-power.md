@@ -13,7 +13,8 @@ pricing: "$6.99/min"
 bestFor: "Clients who want a direct, tarot-forward male reader for money, destiny, and breakup questions - and who value confidence with kindness"
 publishDate: '2026-07-09'
 canonicalUrl: https://easternalignment.com/reviews/keen/clairvoyant-nicky-power/
-updatedDate: '2026-07-09'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 customSchema: |
   {
     "@context": "https://schema.org",

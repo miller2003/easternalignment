@@ -33,7 +33,8 @@ entities:
   - "Quantum Drew"
   - "Psychic Readings"
 publishDate: '2026-07-09'
-updatedDate: '2026-07-09'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

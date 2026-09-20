@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/nicholas-knight.webp
 ogImage: "/avatars/purple-garden/nicholas-knight-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-07'
-updatedDate: '2026-07-07'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 platform: purple-garden
 metaDescription: "Nicholas Knight on Purple Garden: 4.9-star love specialist and life coach, 6,040 readings since 2017, $4.49/min. Self-described 4th-generation psychic."
 highlights:

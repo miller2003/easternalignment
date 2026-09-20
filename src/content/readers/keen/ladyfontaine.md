@@ -13,7 +13,8 @@ pricing: "$8.97/min"
 bestFor: "Clients who want a certified, no-tools master psychic for love and relationship clarity - and who value insight and honesty over gentle softening"
 publishDate: '2026-06-10'
 canonicalUrl: https://easternalignment.com/reviews/keen/ladyfontaine/
-updatedDate: '2026-06-10'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

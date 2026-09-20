@@ -11,7 +11,8 @@ freeOffer: "3 free minutes + 50% off"
 pricing: "$3.99/min chat · $5.99/min voice (promo $1.99–$2.99)"
 bestFor: "Relationship clarity and reconnection from an affordable, detail-oriented reader"
 publishDate: '2026-08-10'
-updatedDate: '2026-08-10'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

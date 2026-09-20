@@ -13,7 +13,8 @@ pricing: "$6.99/min"
 bestFor: "People who want a blunt, practical love coach who skips reassurance and gets straight to what they see - and who are happy to arrive with tight, ordered questions"
 publishDate: '2026-06-25'
 canonicalUrl: https://easternalignment.com/reviews/keen/lollie-ext-5555/
-updatedDate: '2026-06-25'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

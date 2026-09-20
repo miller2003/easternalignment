@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $4.99/min to $5.99/min
 bestFor: LGBTQ+ individuals and couples who want a reading that perfectly reflects their reality without having to explain or translate their dynamic to the psychic.
 publishDate: '2026-03-05'
-updatedDate: '2026-03-05'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 highlights:
 - Explains the exhausting "Translation Tax" of using standard heteronormative psychics.
 - Features readers who understand chosen family karma and same-sex twin flame dynamics.

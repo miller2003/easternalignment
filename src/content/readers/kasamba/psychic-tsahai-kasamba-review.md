@@ -9,7 +9,8 @@ freeOffer: "3 free minutes for new clients"
 pricing: "Chat $3.99/min · Voice $4.99/min · Video $3.99/min"
 bestFor: "Clients who specifically want an I-Ching reading or a reader who claims to give accurate timelines, and who understand they are booking a low-activity, small-sample reader"
 publishDate: '2026-09-08'
-updatedDate: '2026-09-08'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -13,7 +13,8 @@ pricing: "$3.33/min"
 bestFor: "People who want an affordable, experienced tarot and psychic read on love and career - and who want fast, clear answers without a premium price"
 publishDate: '2026-07-21'
 canonicalUrl: https://easternalignment.com/reviews/keen/heather-ashera/
-updatedDate: '2026-07-21'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 customSchema: |
   {
     "@context": "https://schema.org",

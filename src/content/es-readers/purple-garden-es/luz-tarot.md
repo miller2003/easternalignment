@@ -9,7 +9,8 @@ verdict: "Luz Tarot es la opción más sólida en Purple Garden para quien valor
 pricing: "$2.49–$3.99/min"
 bestFor: "Tarot analítico, verdades difíciles, amor y finanzas, usuarios que valoran precisión sobre suavidad"
 publishDate: "2026-08-17"
-updatedDate: "2026-08-17"
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luz-tarot/"
 hreflangEn: ""  # Sin equivalente en inglés — dejar vacío (ver _plantilla-resena.md)
 avatarUrl: "/avatars/es-readers/luz-tarot.webp"

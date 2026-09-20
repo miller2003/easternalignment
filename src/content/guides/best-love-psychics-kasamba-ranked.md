@@ -20,7 +20,8 @@ freeOffer: 3 free minutes + 50% off your first reading
 pricing: From $1.99/min to $30+/min
 bestFor: Clients seeking deep relationship forensics, ex-recovery timelines, and specific person insights.
 publishDate: '2026-03-10'
-updatedDate: '2026-09-06'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 highlights:
 - Selection filtered from thousands of profiles down to 5 data-backed practitioners.
 - Includes readers with specific methodologies: Triple Clair, Remote Telepathy, and Vision Channeling.

@@ -34,7 +34,8 @@ entities:
   - "Love Psychics"
   - "LGBTQ Psychic Reading"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

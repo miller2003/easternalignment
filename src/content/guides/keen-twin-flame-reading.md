@@ -26,7 +26,8 @@ freeOffer: 5 minutes for $1 for new clients
 pricing: From $3.59/min to $20.00+/min
 bestFor: People in twin flame separation who want a phone-based clairvoyant assessment of the connection's trajectory and the runner's current state.
 publishDate: '2026-08-09'
-updatedDate: '2026-08-09'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 highlights:
   - "Explains why Keen's voice channel is specifically suited to TF trajectory assessments."
   - "Exposes the TF dependency loop as it manifests in phone readings specifically."

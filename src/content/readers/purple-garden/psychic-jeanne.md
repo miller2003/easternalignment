@@ -33,7 +33,8 @@ entities:
   - "Psychic Jeanne"
   - "Psychic Readings"
 publishDate: '2026-07-13'
-updatedDate: '2026-07-13'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 customSchema: |
   {
     "@context": "https://schema.org",

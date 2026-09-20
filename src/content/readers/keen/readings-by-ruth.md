@@ -13,7 +13,8 @@ pricing: "$5.99/min"
 bestFor: "People who want a direct, detailed love and relationship read from an experienced third-generation psychic - and who want honesty delivered with a patient, compassionate side"
 publishDate: '2026-06-29'
 canonicalUrl: https://easternalignment.com/reviews/keen/readings-by-ruth/
-updatedDate: '2026-06-29'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

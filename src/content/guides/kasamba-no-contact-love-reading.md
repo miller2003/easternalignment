@@ -21,7 +21,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $2.10/min to $10.99/min
 bestFor: People in no-contact who want a specific-person energetic read during the silence —to understand what the other person is experiencing rather than waiting blindly.
 publishDate: '2026-08-09'
-updatedDate: '2026-08-09'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
   - "Explains what psychic access to a person in no-contact actually looks like."
   - "Addresses the most expensive behavioral trap in the no-contact reading category."

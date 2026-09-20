@@ -11,7 +11,8 @@ affiliateUrl: /go/keen
 freeOffer: 5 minutes for $1 for new clients
 pricing: From $1.99/min to $20.00+/min
 publishDate: '2026-08-24'
-updatedDate: '2026-08-24'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 canonicalUrl: https://easternalignment.com/guides/keen-love-psychics-review/
 customSchema: |
   {

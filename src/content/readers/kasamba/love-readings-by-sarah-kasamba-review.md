@@ -33,7 +33,8 @@ entities:
   - "Love Psychics"
   - "Career Forecasts"
 publishDate: '2026-08-26'
-updatedDate: '2026-08-26'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 customSchema: |
   {
     "@context": "https://schema.org",

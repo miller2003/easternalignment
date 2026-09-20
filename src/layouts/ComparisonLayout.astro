@@ -7,6 +7,7 @@ import LeftSidebar from '../components/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar.astro';
 import EndCTA from '../components/EndCTA.astro';
 import InlineCta from '../components/InlineCta.astro';
+import VerifiedNote from '../components/VerifiedNote.astro';
 import { PLATFORM_OFFERS } from '../lib/offers';
 import { platformFromName } from '../lib/platform';
 
@@ -17,6 +18,9 @@ interface Props {
   winner?: string;
   publishDate: string;
   updatedDate?: string;
+  /** Set on pages that were re-verified with no content changes needed —
+   *  renders the VerifiedNote stamp under the title. */
+  verifiedDate?: string;
   seoTitle?: string;
   metaDescription?: string;
   canonicalUrl?: string;
@@ -32,6 +36,7 @@ const {
   winner,
   publishDate,
   updatedDate,
+  verifiedDate,
   seoTitle,
   metaDescription,
   canonicalUrl,
@@ -173,6 +178,8 @@ const schemaGraph = {
         </div>
 
         <h1 class="comparison-title">{title}</h1>
+
+        {verifiedDate && <VerifiedNote date={verifiedDate} />}
 
         {winner && (
           <div class="comparison-winner">

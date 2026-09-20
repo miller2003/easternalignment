@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $3.99/min"
 bestFor: "Blunt, honest relationship and clarity readings from a UK-based reader in UK hours"
 publishDate: '2026-06-14'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

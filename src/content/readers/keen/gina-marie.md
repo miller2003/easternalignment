@@ -19,7 +19,8 @@ bestFor: People who want direct clairvoyant impressions on love and relationship
   without pre-loading context  -  and are ready to hear blunt truth
 publishDate: '2026-04-24'
 canonicalUrl: https://easternalignment.com/reviews/keen/gina-marie/
-updatedDate: '2026-04-24'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 customSchema: |
   {
     "@context": "https://schema.org",

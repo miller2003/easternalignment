@@ -34,7 +34,8 @@ entities:
   - "Love Reading"
   - "Tarot Reading"
 publishDate: '2026-08-26'
-updatedDate: '2026-08-26'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

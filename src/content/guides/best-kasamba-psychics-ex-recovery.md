@@ -21,7 +21,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $2.10/min to $10.99/min
 bestFor: People in no-contact, post-breakup uncertainty, or reconciliation situations who want a grounded assessment of whether a reconnection is energetically viable.
 publishDate: '2026-08-09'
-updatedDate: '2026-08-09'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 highlights:
   - "Explains why Kasamba's chat format is structurally superior for ex-recovery readings vs. voice platforms."
   - "Profiles readers with documented track records on reconciliation, reunion timelines, and no-contact outcomes."

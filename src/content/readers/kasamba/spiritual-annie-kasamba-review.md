@@ -34,7 +34,8 @@ entities:
   - "Clairsentient"
   - "Love Psychics"
 publishDate: '2026-08-26'
-updatedDate: '2026-08-26'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -18,7 +18,8 @@ freeOffer: 5 minutes for $1
 pricing: From $4.75/min to $6.99/min
 bestFor: Couples stuck in long-term LDRs who need to know exactly when (and if) a physical relocation will finally happen.
 publishDate: '2026-04-20'
-updatedDate: '2026-04-20'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 highlights:
 - Explains why 'Closing the Gap' is a financial and logistical event, not just an emotional one.
 - Breaks down the esoteric difference between who acts as the "Anchor" and who acts as the "Mover".

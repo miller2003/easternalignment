@@ -12,7 +12,8 @@ freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 pricing: "$6.99/min"
 bestFor: "Love, soulmate, and past life readings with a high-volume reader whose track record speaks louder than her bio"
 publishDate: "2026-04-01"
-updatedDate: "2026-04-01"
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

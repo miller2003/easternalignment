@@ -18,7 +18,8 @@ freeOffer: 'Kasamba: 3 free minutes per new advisor · Keen: 5 minutes for $1'
 pricing: From $5.99/min to $10.99/min
 bestFor: Widows and widowers who want to hear from their deceased spouse and expect specific, checkable details from the reading — not generic comfort.
 publishDate: '2026-04-12'
-updatedDate: '2026-04-12'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 highlights:
 - Explores the strict requirements of "Evidential Mediumship" versus standard psychic readings.
 - Explains the esoteric "Transition Phase" that happens immediately after death.

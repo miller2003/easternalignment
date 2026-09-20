@@ -27,7 +27,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $3.99/min to $13.49/min (video)
 bestFor: Anyone seeking contact, closure, or guidance around a loss — who wants a medium whose claims survive the platform's public verification tools.
 publishDate: '2026-08-30'
-updatedDate: '2026-08-30'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 highlights:
   - "Explains why Purple Garden's Journeys-plus-video structure is the strongest anti-fraud environment in online mediumship."
   - "Ranks 7 mediums by evidential structure, including one whose no-backstory rule eliminates cold reading by design."

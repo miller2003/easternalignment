@@ -22,7 +22,8 @@ cons:
   - '[Desventaja objetiva 1 — mencionada en reseñas de usuarios]'
   - '[Desventaja objetiva 2 — limitación de horario, herramientas, estilo]'
 publishDate: '2026-08-16'
-updatedDate: '2026-08-16'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 # avatarUrl: '/avatars/purple-garden/nombre-lector.jpg'  # Descomentar cuando tengas la imagen
 # hreflangEn: ''  # Dejar vacío: no hay página equivalente en inglés
 seoTitle: '[Nombre del Lector] en Purple Garden — Reseña 2026 | Eastern Alignment'

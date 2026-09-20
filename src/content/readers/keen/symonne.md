@@ -12,7 +12,8 @@ avatarUrl: /avatars/keen/symonne.webp
 ogImage: "/avatars/keen/symonne-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 platform: keen
 metaDescription: "SYMONNE on Keen: 59,082 readings over 23 years, $3.09/min. Reads subconscious fears and dreams with eerie accuracy. Her honest strengths and limits, reviewed."
 highlights:

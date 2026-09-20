@@ -9,6 +9,7 @@ import RightSidebar from '../components/RightSidebar.astro';
 import DealStrip from '../components/DealStrip.astro';
 import InlineCta from '../components/InlineCta.astro';
 import CtaTip from '../components/CtaTip.astro';
+import VerifiedNote from '../components/VerifiedNote.astro';
 import { platformFromName } from '../lib/platform';
 import { PLATFORM_OFFERS, proofTooltip } from '../lib/offers';
 
@@ -25,6 +26,9 @@ interface Props {
   hideSidebarDeal?: boolean;
   publishDate: string;
   updatedDate?: string;
+  /** Set on pages that were re-verified with no content changes needed —
+   *  renders the VerifiedNote stamp under the title. */
+  verifiedDate?: string;
   // SEO meta fields
   metaRobots?: string;
   canonicalUrl?: string;
@@ -51,6 +55,7 @@ const {
   hideSidebarDeal,
   publishDate,
   updatedDate,
+  verifiedDate,
   metaRobots,
   canonicalUrl,
   ogImage,
@@ -260,6 +265,8 @@ const sidebarDeal = hasCtaContext
         <div class="review-hero-header">
           <h1 class="review-title">{title}</h1>
         </div>
+
+        {verifiedDate && <VerifiedNote date={verifiedDate} />}
 
         <div class="review-identity">
           {isReaderReview && (

@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $2.10/min to $5.99/min
 bestFor: Anyone trapped in the agonizing "talking stage" or a confusing situationship who needs a fast, accurate read on a new romantic interest.
 publishDate: '2026-04-08'
-updatedDate: '2026-04-08'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 highlights:
 - Explains the danger of psychics confusing your anxiety with his actual feelings.
 - Breaks down the esoteric difference between physical lust and long-term romantic intent.

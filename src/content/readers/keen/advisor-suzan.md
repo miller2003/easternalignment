@@ -22,7 +22,8 @@ cons:
   - "$9.99/min sits at the top of Keen's standard band — the $1 trial matters"
   - "Supportive energy over blunt fatalism; look elsewhere for cold, hard verdicts"
 canonicalUrl: https://easternalignment.com/reviews/keen/advisor-suzan/
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

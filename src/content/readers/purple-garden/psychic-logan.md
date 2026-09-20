@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/psychic-logan.webp
 ogImage: "/avatars/purple-garden/psychic-logan-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 platform: purple-garden
 metaDescription: "Psychic Logan on Purple Garden: 64,955 readings since 2015, perfect 5.0, advisor #36. 3rd-generation spiritualist for life path, love & destiny. Honest review."
 highlights:

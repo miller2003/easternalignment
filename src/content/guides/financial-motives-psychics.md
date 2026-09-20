@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $2.10/min to $10.99/min
 bestFor: Anyone who suspects their partner is a "hobo-sexual," is hiding massive debt, or is only staying in the relationship because they cannot afford to move out.
 publishDate: '2026-04-15'
-updatedDate: '2026-04-15'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
 - Explains the "Hobo-Sexual Energy Signature" and how to spot it.
 - Teaches you how the 8th House in Astrology dictates financial vampirism.

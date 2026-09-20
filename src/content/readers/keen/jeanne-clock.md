@@ -13,7 +13,8 @@ pricing: "$15.99/min"
 bestFor: "Clients who want a patient, multi-gifted reader for love, family, and life-path questions - and who value being truly listened to"
 publishDate: '2026-06-16'
 canonicalUrl: https://easternalignment.com/reviews/keen/jeanne-clock/
-updatedDate: '2026-06-16'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

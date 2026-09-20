@@ -26,7 +26,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $1.99/min to $4.99/min
 bestFor: First-time Kasamba clients who want a low-risk first reading — and a protocol for using the 3-free-minutes deal to audition readers before paying.
 publishDate: '2026-08-22'
-updatedDate: '2026-08-22'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
   - "Ranks 7 starters by free-minute information density — the metric that decides whether a first reading converts or wastes the promo."
   - "Includes the full audition protocol: what to say in the first 3 minutes and what never to volunteer."

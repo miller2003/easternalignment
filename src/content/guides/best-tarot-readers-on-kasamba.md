@@ -27,7 +27,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $1.99/min to $12.99/min
 bestFor: Anyone who wants a reading they can audit afterward — love, career, and timing questions where card-anchored specificity beats vague intuition.
 publishDate: '2026-08-24'
-updatedDate: '2026-08-24'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 highlights:
   - "Explains tarot's structural advantage over pure clairvoyance: every claim is anchored to a documented card meaning."
   - "Ranks 6 readers by spread transparency, interpretation anchoring, and long-arc client verification."

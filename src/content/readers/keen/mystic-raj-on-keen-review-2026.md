@@ -13,7 +13,8 @@ pricing: "$2.25/min (Love & Relationships profile)"
 bestFor: "Clients who want warmth and emotional safety alongside psychic insight — particularly those who have felt judged or rushed by more clinical readers, or who want a male advisor's perspective on relationship and life path questions"
 publishDate: "2026-04-30"
 canonicalUrl: https://easternalignment.com/reviews/keen/mystic-raj-on-keen-review-2026/
-updatedDate: "2026-04-30"
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",

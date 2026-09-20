@@ -34,7 +34,8 @@ entities:
   - "Love Reading"
   - "Psychic Readings"
 publishDate: '2026-08-26'
-updatedDate: '2026-08-26'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

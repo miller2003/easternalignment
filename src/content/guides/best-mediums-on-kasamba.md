@@ -27,7 +27,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $2.99/min to $23.99/min
 bestFor: Anyone seeking contact, closure, or guidance around a loss — who wants an evidential medium vetted by client behavior rather than a comforting voice.
 publishDate: '2026-08-27'
-updatedDate: '2026-08-27'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 highlights:
   - "Explains the evidential standard for mediumship — what counts as evidence and what is just unverifiable comfort."
   - "Ranks 7 mediums using repeat-client behavior, negative-rate forensics, and published ethical boundaries."

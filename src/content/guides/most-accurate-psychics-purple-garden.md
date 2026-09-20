@@ -26,7 +26,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $0.99/min to $15.00+/min
 bestFor: Seekers who want to verify psychic accuracy through Purple Garden's platform-native tools before spending on a full session.
 publishDate: '2026-08-25'
-updatedDate: '2026-08-25'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 highlights:
   - "Explains the Journeys verification method that makes Purple Garden's accuracy uniquely auditable."
   - "Ranks five readers across video accuracy, Journeys track record, and written transcript accountability."

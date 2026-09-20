@@ -28,7 +28,8 @@ freeOffer: Kasamba 3 free minutes + 50% off · Keen 5 minutes for $1 · Purple G
 pricing: From $1.99/min to $14.99/min across three platforms
 bestFor: Anyone with a love question who wants the single definitive cross-platform ranking — and a framework for choosing the right platform before choosing the reader.
 publishDate: '2026-08-29'
-updatedDate: '2026-09-06'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 highlights:
   - "The answer comes first: #1 pick in the opening paragraph, full 10-reader cross-platform table in the first screen."
   - "The platform-selection framework: Kasamba for auditioning, Keen for phone depth, Purple Garden for public verification."

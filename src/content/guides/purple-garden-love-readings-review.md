@@ -11,7 +11,8 @@ affiliateUrl: /go/purple-garden
 freeOffer: $30 credit on first purchase
 pricing: From $0.99/min to $15.00+/min
 publishDate: "2026-07-02"
-updatedDate: "2026-08-24"
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 canonicalUrl: "https://easternalignment.com/guides/purple-garden-love-readings-review/"
 customSchema: |
   {

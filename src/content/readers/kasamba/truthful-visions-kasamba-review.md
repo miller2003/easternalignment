@@ -11,7 +11,8 @@ freeOffer: "3 free minutes + 50% off"
 pricing: "$4.99/min chat · $5.99/min voice"
 bestFor: "Love and career questions from a warm, detailed, repeat-client-friendly reader"
 publishDate: '2026-07-23'
-updatedDate: '2026-07-23'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

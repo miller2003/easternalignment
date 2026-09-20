@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "No-tools psychic mediumship and eye-reading (oculomancy) from a perfect-5.0 reader"
 publishDate: '2026-08-10'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 customSchema: |
   {
     "@context": "https://schema.org",

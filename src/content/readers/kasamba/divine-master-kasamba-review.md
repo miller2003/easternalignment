@@ -34,7 +34,8 @@ entities:
   - "Love Psychics"
   - "Breakup Advice"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

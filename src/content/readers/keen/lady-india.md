@@ -13,7 +13,8 @@ pricing: "$8.99/min"
 bestFor: "Clients who want a long-tenured, direct intuitive guide for love and life questions and value repeat-caller loyalty over a low rate"
 publishDate: '2026-07-02'
 canonicalUrl: https://easternalignment.com/reviews/keen/lady-india/
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -3,7 +3,8 @@ title: 'When You Suspect a Third Party: Psychic Readings for Jealousy, Rivals, a
 description: 'When you suspect someone else is a factor in your relationship —or your ex has moved on to someone new —getting clarity can feel impossible. Here is what skilled psychic readers can actually perceive about third-party situations, and how to approach these readings without destroying yourself.'
 category: Guide
 publishDate: '2026-06-01'
-updatedDate: '2026-06-01'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 seoTitle: 'Psychic Readings for Third Party Situations: Is There Someone Else? (2026)'
 metaDescription: 'Suspicious your partner is involved with someone else, or your ex has moved on? We explore what psychic readers can actually perceive in third-party situations —and the critical questions to ask versus avoid.'
 schemaDescription: 'A guide to psychic readings involving third parties —what skilled readers can perceive about romantic rivals, emotional affairs, and whether an ex has moved on, plus how to approach these readings without amplifying jealousy or obsession.'

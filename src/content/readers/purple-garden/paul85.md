@@ -34,7 +34,8 @@ entities:
   - "Love Reading"
   - "Career Reading"
 publishDate: '2026-08-26'
-updatedDate: '2026-08-26'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

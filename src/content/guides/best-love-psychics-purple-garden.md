@@ -20,7 +20,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $0.99/min to $15.00+/min
 bestFor: Seekers who want to use Purple Garden's video vetting and Journeys verification to identify the right love advisor before committing to a full session.
 publishDate: '2026-08-21'
-updatedDate: '2026-08-21'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 highlights:
   - "Explains the three-layer research protocol —video bio, Journeys audit, and live session test."
   - "Ranks five readers by specific love-reading use case, not generic star rating."

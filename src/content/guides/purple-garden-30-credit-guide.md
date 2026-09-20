@@ -15,7 +15,8 @@ entities:
   - "Welcome Offer"
   - "Online Psychic Reading"
 publishDate: '2026-08-14'
-updatedDate: '2026-08-14'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 canonicalUrl: https://easternalignment.com/guides/purple-garden-30-credit-guide/
 customSchema: |
   {

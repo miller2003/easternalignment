@@ -27,7 +27,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $3.99/min to $10.99/min
 bestFor: People in active twin flame separation who need clarity on the chaser-runner dynamic, the timeline of the current phase, and what work the current separation is designed to produce.
 publishDate: '2026-08-11'
-updatedDate: '2026-08-11'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 highlights:
   - "Distinguishes between legitimate twin flame reading methodology and dependency-loop exploitation."
   - "Explains why Kasamba's chat format has a structural advantage for TF separation-phase readings."

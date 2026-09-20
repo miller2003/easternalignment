@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $5.99/min"
 bestFor: "Relationship and life clarity from a certified coach fused with genuine psychic insight"
 publishDate: '2026-07-27'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

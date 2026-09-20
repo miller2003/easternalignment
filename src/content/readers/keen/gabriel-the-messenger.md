@@ -13,7 +13,8 @@ pricing: "$8.99/min"
 bestFor: "People who want a no-tools, relationship-focused reader with a massive track record - and who can absorb a premium rate"
 publishDate: '2026-06-23'
 canonicalUrl: https://easternalignment.com/reviews/keen/gabriel-the-messenger/
-updatedDate: '2026-06-23'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

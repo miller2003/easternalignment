@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $2.10/min to $6.99/min
 bestFor: Anyone dating online (Tinder, Bumble, Hinge) or engaged in a long-distance digital romance who suspects their partner might be married, fake, or a financial scammer.
 publishDate: '2026-05-02'
-updatedDate: '2026-05-02'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
 - Explores how psychics detect the "holographic void" of a Catfish persona.
 - Teaches you how to spot the "Married Man on Tinder" before you meet him.

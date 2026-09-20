@@ -20,7 +20,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $0.99/min to $15.00+/min
 bestFor: People navigating no-contact, post-breakup confusion, or uncertain reconciliation potential who want to use Purple Garden's video vetting and Journeys verification before committing to a reader.
 publishDate: '2026-08-24'
-updatedDate: '2026-08-24'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 highlights:
   - "Explains why Purple Garden's video format is structurally valuable for ex-recovery questions specifically."
   - "Profiles 5 readers with Journeys-verifiable track records on reconciliation and ex-energy situations."

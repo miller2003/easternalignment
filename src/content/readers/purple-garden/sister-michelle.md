@@ -9,7 +9,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $8.99/min (Chat / Voice / Video)"
 bestFor: "Clients who want a direct, no-coddling love or career reading, do not need timeframes, and are comfortable with a reader whose accountability language warrants caution"
 publishDate: '2026-09-07'
-updatedDate: '2026-09-07'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

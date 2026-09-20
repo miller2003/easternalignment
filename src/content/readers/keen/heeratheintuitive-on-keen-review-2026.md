@@ -13,7 +13,8 @@ pricing: "$7.99/min (Love & Relationships profile)"
 bestFor: "Clients with high-stakes ongoing situations — infidelity, long-term relationship decisions, major career crossroads — who want a consistent long-term advisor rather than a single-session reading"
 publishDate: "2026-04-27"
 canonicalUrl: https://easternalignment.com/reviews/keen/heeratheintuitive-on-keen-review-2026/
-updatedDate: "2026-04-27"
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

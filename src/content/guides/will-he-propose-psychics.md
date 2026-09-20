@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $4.75/min to $10.99/min
 bestFor: Women who have been in long-term relationships and need to know whether to keep investing their time or walk away.
 publishDate: '2026-05-09'
-updatedDate: '2026-05-09'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 highlights:
 - Explains the profound difference between "Lack of Love" and "Commitment Phobia."
 - Detailed breakdown of how astrological timing dictates proposal windows.

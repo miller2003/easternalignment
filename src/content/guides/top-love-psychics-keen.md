@@ -27,7 +27,8 @@ freeOffer: 5 minutes for $1 for new clients
 pricing: From $2.99/min to $14.99/min
 bestFor: Anyone with a love question who wants the definitive Keen ranking — verified across the platform's 14-million-user track record before spending.
 publishDate: '2026-08-18'
-updatedDate: '2026-09-06'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 highlights:
   - "The answer comes first: #1 pick in the opening paragraph, full 10-reader table in the first screen."
   - "Includes the only POI reader whose predictions were tracked in real time by an independent third-party forum."

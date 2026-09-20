@@ -13,7 +13,8 @@ pricing: "$2.25/min (Tarot Card Readings profile)"
 bestFor: "Clients who want concrete, actionable answers from a structured oracle-based reading — without the premium pricing of clairvoyant-first advisors"
 publishDate: "2026-05-01"
 canonicalUrl: https://easternalignment.com/reviews/keen/krys-britton-on-keen-review-2026/
-updatedDate: "2026-05-01"
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 customSchema: |
   {
     "@context": "https://schema.org",

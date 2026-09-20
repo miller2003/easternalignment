@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/psychic-willow.webp
 ogImage: "/avatars/purple-garden/psychic-willow-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 platform: purple-garden
 metaDescription: "Psychic Willow on Purple Garden: 61,756 readings since 2016, 4.9 stars, 48 years experience, Egyptian tarot. No timeframes, no sugarcoating. Honest review."
 highlights:

@@ -13,7 +13,8 @@ pricing: "$12.99/min (Love & Relationships profile)"
 bestFor: "Clients who prioritize session efficiency, want a permanent written record of what they were told, or are Finnish-speaking — and who understand that the highest per-minute rate in this series may produce the lowest real cost per useful insight"
 publishDate: "2026-04-27"
 canonicalUrl: https://easternalignment.com/reviews/keen/spirit-answers-on-keen-review-2026/
-updatedDate: "2026-04-27"
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 customSchema: |
   {
     "@context": "https://schema.org",

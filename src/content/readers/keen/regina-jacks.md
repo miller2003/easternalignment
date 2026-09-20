@@ -17,7 +17,8 @@ bestFor: People who want direct clairvoyant impressions on love and relationship
   without giving context first
 publishDate: '2026-04-22'
 canonicalUrl: https://easternalignment.com/reviews/keen/regina-jacks/
-updatedDate: '2026-04-22'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

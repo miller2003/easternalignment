@@ -22,7 +22,8 @@ bestFor: Clients who want guidance-oriented readings with genuine energetic supp
   hard prediction timelines
 publishDate: '2026-04-09'
 canonicalUrl: https://easternalignment.com/reviews/keen/intuitive-azzy/
-updatedDate: '2026-04-09'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

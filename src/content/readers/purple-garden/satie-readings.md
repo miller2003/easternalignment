@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "Experienced, camera-transparent love-tarot readings from a 40-year practitioner"
 publishDate: '2026-07-06'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 customSchema: |
   {
     "@context": "https://schema.org",

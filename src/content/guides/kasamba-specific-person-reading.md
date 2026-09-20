@@ -6,7 +6,8 @@ description: "The complete guide to specific-person readings on Kasamba: why the
 category: 'Platform Guide'
 platform: kasamba
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 canonicalUrl: https://easternalignment.com/guides/kasamba-specific-person-reading/
 customSchema: |
   {

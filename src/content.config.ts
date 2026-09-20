@@ -14,6 +14,13 @@ const seoFields = {
   customSchema: z.string().optional(),
 };
 
+// Freshness stamp: set only on pages that were re-verified with NO content
+// changes needed — renders the VerifiedNote under the title and is distinct
+// from updatedDate (which marks real content revisions).
+const verifiedDateField = {
+  verifiedDate: z.string().optional(),
+};
+
 const reviews = defineCollection({
   type: 'content',
   schema: z.object({
@@ -31,6 +38,7 @@ const reviews = defineCollection({
     cons: z.array(z.string()).default([]),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
+    ...verifiedDateField,
     rank: z.number().default(1),
     ...seoFields,
   }),
@@ -45,6 +53,7 @@ const comparisons = defineCollection({
     winner: z.string().optional(),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
+    ...verifiedDateField,
     ...seoFields,
   }),
 });
@@ -67,6 +76,7 @@ const readers = defineCollection({
     cons: z.array(z.string()).default([]),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
+    ...verifiedDateField,
     entities: z.array(z.string()).optional(),
     avatarUrl: z.string().optional(),
     ctaOverride: z.string().optional(),
@@ -83,6 +93,7 @@ const guides = defineCollection({
     category: z.string().optional(),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
+    ...verifiedDateField,
     ...seoFields,
   }).passthrough(),
 });
@@ -110,6 +121,7 @@ const esReaders = defineCollection({
     cons: z.array(z.string()).default([]),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
+    ...verifiedDateField,
     avatarUrl: z.string().optional(),
     entities: z.array(z.string()).optional(),
     // Optional: URL of the corresponding English review page (if one exists)

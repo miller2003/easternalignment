@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/namrata.webp
 ogImage: "/avatars/purple-garden/namrata-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-08'
-updatedDate: '2026-07-08'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 platform: purple-garden
 metaDescription: "Namrata on Purple Garden: 4.9 stars, $2.49/min, 10 years on the platform. Relationship, work, and finance readings from one of the most affordable senior."
 highlights:

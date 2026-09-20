@@ -18,7 +18,8 @@ freeOffer: 3 free minutes with every new psychic
 pricing: From $4.99/min to $10.99/min
 bestFor: Couples with a 10+ year age difference who are exhausted by societal judgment and need an unbiased, purely energetic assessment of their bond.
 publishDate: '2026-03-01'
-updatedDate: '2026-03-01'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 highlights:
 - Destroys the "Daddy/Mommy Issues" stereotype using esoteric soul-contract theory.
 - Maps how 'Saturn' placements are interpreted in age-gap synastry readings.

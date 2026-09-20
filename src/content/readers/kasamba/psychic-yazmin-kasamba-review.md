@@ -33,7 +33,8 @@ entities:
   - "Psychic Yazmin"
   - "Psychic Readings"
 publishDate: '2026-08-06'
-updatedDate: '2026-08-06'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 customSchema: |
   {
     "@context": "https://schema.org",

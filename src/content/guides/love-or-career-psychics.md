@@ -20,7 +20,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $4.29/min to $10.99/min
 bestFor: Ambitious singles deciding if they have the bandwidth for love, or power couples trying to figure out if their dual ambitions are destroying their marriage.
 publishDate: '2026-04-30'
-updatedDate: '2026-04-30'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 highlights:
 - Destroys the myth of "having it all" by explaining the concept of Energetic Bandwidth.
 - Teaches how to read "Mars" in a Synastry chart to prevent power couples from destroying each other.

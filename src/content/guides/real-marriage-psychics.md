@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $4.29/min to $10.99/min
 bestFor: Spouses dealing with infidelity, dead-end marital counseling, or the terrifying decision of whether to file for divorce.
 publishDate: '2026-05-05'
-updatedDate: '2026-05-05'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 highlights:
 - Explains the economic reason why most psychics lie to you about your marriage.
 - Features exactly 3 elite readers who are famous for cutting the cord on dead relationships.

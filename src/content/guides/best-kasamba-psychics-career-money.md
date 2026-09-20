@@ -27,7 +27,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $2.49/min to $8.99/min (promo rates vary)
 bestFor: Anyone facing a job move, business decision, deal, or financial crossroads who wants a reader with both intuitive skill and real-world pattern recognition.
 publishDate: '2026-08-25'
-updatedDate: '2026-08-25'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 highlights:
   - "Explains why career readings fail without real-world pattern recognition — and why this list is ranked by professional credentials first."
   - "Splits career questions into three types (decision, timing, people) and matches each to the reader built for it."

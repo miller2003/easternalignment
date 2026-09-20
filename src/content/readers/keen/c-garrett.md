@@ -18,7 +18,8 @@ bestFor: Relationship and career readings where you want empathic depth over str
   card interpretation
 publishDate: '2026-04-21'
 canonicalUrl: https://easternalignment.com/reviews/keen/c-garrett/
-updatedDate: '2026-04-21'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 customSchema: |
   {
     "@context": "https://schema.org",

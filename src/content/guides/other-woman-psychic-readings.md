@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $5.99/min to $10.99/min
 bestFor: Women who are deeply in love with an attached man and need to know if the "I'm going to leave her soon" promise is real or a manipulation tactic.
 publishDate: '2026-05-04'
-updatedDate: '2026-05-04'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
 - Explores the esoteric difference between a "Soulmate" and a "Divorce Catalyst."
 - Exposes the psychological reality of why married men stall on leaving their wives.

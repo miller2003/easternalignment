@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $3.99/min"
 bestFor: "Detailed, multi-clair insight from a mystic who will not soften the truth"
 publishDate: '2026-07-19'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 customSchema: |
   {
     "@context": "https://schema.org",

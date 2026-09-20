@@ -20,7 +20,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $0.99/min to $15.00+/min
 bestFor: Clients who have already received comfortable predictions that failed to materialize and want a reader whose accuracy they can verify before paying for a full session.
 publishDate: '2026-08-22'
-updatedDate: '2026-08-22'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
   - "Explains why video readings create structural honesty advantages that chat and phone cannot replicate."
   - "Shows you how to use the Journeys ledger to pre-screen for accurate vs. reassurance-first readers."

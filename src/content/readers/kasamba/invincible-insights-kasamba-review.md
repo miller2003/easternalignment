@@ -11,7 +11,8 @@ freeOffer: "3 free minutes + 50% off"
 pricing: "$1.99/min chat · $11.99/min voice"
 bestFor: "Budget-conscious clients focused on love, soulmate reconnection, and relationship healing"
 publishDate: '2026-06-18'
-updatedDate: '2026-06-18'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -16,7 +16,8 @@ pricing: $4.29/min
 bestFor: People who want honest, structured tarot readings without sugar-coating
 publishDate: '2026-04-22'
 canonicalUrl: https://easternalignment.com/reviews/keen/master-sher/
-updatedDate: '2026-04-22'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

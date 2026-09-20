@@ -18,7 +18,8 @@ freeOffer: 5 minutes for $1 for new clients
 pricing: From $3.59/min
 bestFor: Users navigating post-breakup uncertainty who need clarity on reconciliation potential
 publishDate: '2026-03-12'
-updatedDate: '2026-03-12'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
 - All 5 readers have over 40,000 completed sessions, filtering out short-term lucky streaks.
 - Selected specifically for reconciliation dynamics, twin flame situations, and post-breakup clarity.

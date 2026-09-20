@@ -26,7 +26,8 @@ freeOffer: 5 minutes for $1 for new clients
 pricing: From $3.59/min to $20.00+/min
 bestFor: Seekers who have been burned by inaccurate readings and want to identify Keen's most verifiably precise advisors using longitudinal performance data rather than star ratings.
 publishDate: '2026-08-03'
-updatedDate: '2026-08-03'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 highlights:
   - "Explains why session volume over a long timeline is the only unfakeable accuracy metric on the platform."
   - "Uses negative review forensics to distinguish readers who were uncomfortably accurate from those who failed genuinely."

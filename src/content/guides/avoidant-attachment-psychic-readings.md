@@ -3,7 +3,8 @@ title: 'Loving an Avoidant: What Psychics Can See That You Cannot'
 description: 'Avoidant attachment is the most confusing dynamic in modern relationships —hot and cold, close then distant, seemingly loving but structurally unreachable. Here is what psychic readers can actually perceive inside a partner who will not let you in.'
 category: Guide
 publishDate: '2026-05-27'
-updatedDate: '2026-05-27'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 seoTitle: 'Loving an Avoidant Partner: What Psychics Actually See Inside Them (2026)'
 metaDescription: "Your avoidant partner shuts down instead of opening up. Psychic readers explain what is actually happening inside someone with avoidant attachment —and what it means for your relationship's future."
 schemaDescription: 'A guide to psychic readings for relationships with avoidant attachment partners —what skilled empaths and clairsentients perceive inside emotionally unavailable people, and how that insight changes your understanding of the dynamic.'

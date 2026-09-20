@@ -34,7 +34,8 @@ entities:
   - "Love Psychics"
   - "Vedic Astrology"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",

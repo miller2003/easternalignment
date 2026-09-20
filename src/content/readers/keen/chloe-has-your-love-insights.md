@@ -13,7 +13,8 @@ pricing: "$2.58/min"
 bestFor: "People who want an affordable, direct love-and-relationship read from an experienced tarot reader - and who can handle blunt honesty without needing reassurance"
 publishDate: '2026-08-10'
 canonicalUrl: https://easternalignment.com/reviews/keen/chloe-has-your-love-insights/
-updatedDate: '2026-08-10'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -13,7 +13,8 @@ pricing: "$6.99/min"
 bestFor: "People who want a warm, intuitive read on love, relationships, and life-path questions - and who value a long-tenured advisor with a calm, connecting style"
 publishDate: '2026-07-07'
 canonicalUrl: https://easternalignment.com/reviews/keen/allmyangels/
-updatedDate: '2026-07-07'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

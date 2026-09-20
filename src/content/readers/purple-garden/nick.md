@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/nick.webp
 ogImage: "/avatars/purple-garden/nick-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-10'
-updatedDate: '2026-07-10'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 platform: purple-garden
 metaDescription: "Nick on Purple Garden: 5.0-star tarot reader with 14,642 readings since 2021, $4.99/min. Why this perfect score holds up under scrutiny — and the client."
 highlights:

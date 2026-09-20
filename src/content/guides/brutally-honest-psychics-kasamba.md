@@ -21,7 +21,8 @@ freeOffer: 3 free minutes with every new advisor + 50% off first session
 pricing: From $3.99/min to $10.99/min
 bestFor: Clients who have wasted money on reassurance and are ready for clarity that actually moves the needle.
 publishDate: '2026-08-14'
-updatedDate: '2026-08-14'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 highlights:
   - Exposes the "Comfort Economy" that incentivizes Kasamba psychics to withhold hard truths.
   - Profiles readers whose negative reviews are actually evidence of their honesty.

@@ -12,7 +12,8 @@ avatarUrl: /avatars/keen/lorrie-c.webp
 ogImage: "/avatars/keen/lorrie-c-og.jpg"
 freeOffer: "$1 for the first 5 minutes (new Keen users only)"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 platform: keen
 metaDescription: "lorrie c on Keen: 60,595 readings, 4.98 rating, $5.99/min. The empath a skeptics' forum verified live. Relationship person-reading specialist. Honest review."
 highlights:

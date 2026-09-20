@@ -18,7 +18,8 @@ freeOffer: 'Kasamba: 3 free minutes per new advisor · Keen: 5 minutes for $1'
 pricing: From $3.99/min to $10.99/min
 bestFor: Clients trapped in the "runner-chaser" phase, experiencing soul shock, or needing to verify if a connection is genuinely a twin flame.
 publishDate: '2026-03-25'
-updatedDate: '2026-03-25'
+updatedDate: "2026-09-16"
+verifiedDate: "2026-09-16"
 highlights:
 - Data-driven selection focusing exclusively on twin flame and soulmate specialties.
 - Features readers with decades of experience mapping the runner-chaser dynamic.

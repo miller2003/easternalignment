@@ -13,7 +13,8 @@ pricing: "$14.99/min (new clients: 5 min for $1)"
 bestFor: "Clients who want a fast, no-tools, compassionate reader for love and relationship questions - and who value quick, accurate pickup over slow build-up"
 publishDate: '2026-06-14'
 canonicalUrl: https://easternalignment.com/reviews/keen/dr-lisa-powerful-insights/
-updatedDate: '2026-06-14'
+updatedDate: "2026-09-15"
+verifiedDate: "2026-09-15"
 customSchema: |
   {
     "@context": "https://schema.org",

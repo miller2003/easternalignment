@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "Women analyzing an avoidant or commitment-ambiguous male partner, from a male perspective"
 publishDate: '2026-06-18'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

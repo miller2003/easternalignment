@@ -34,7 +34,8 @@ entities:
   - "Career Forecasts"
   - "New Orleans Psychic"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -27,7 +27,8 @@ freeOffer: Kasamba 3 free minutes + 50% off · Keen 5 minutes for $1 · Purple G
 pricing: From $4.99/min to $14.99/min
 bestFor: Anyone who has been burned by inaccurate love readings and wants the readers whose predictions have been verified — by clients, by public ledgers, and by third parties.
 publishDate: '2026-08-16'
-updatedDate: '2026-09-06'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 highlights:
   - "The answer comes first: #1 pick in the opening paragraph, full 10-reader evidence table in the first screen."
   - "Defines the five verification types — so you can audit any love psychic, not just the ones on this list."

@@ -12,7 +12,8 @@ entities:
   - "Online Psychic Platforms"
 platform: purple-garden
 publishDate: '2026-08-21'
-updatedDate: '2026-08-21'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 canonicalUrl: https://easternalignment.com/guides/purple-garden-journeys-guide/
 customSchema: |
   {

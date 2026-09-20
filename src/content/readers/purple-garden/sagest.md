@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/sagest.webp
 ogImage: "/avatars/purple-garden/sagest-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 platform: purple-garden
 metaDescription: "Sagest on Purple Garden: 62,205 readings since 2018, perfect 5.0, Top Accuracy badge. Her strict 2-question protocol, real reviews, and honest verdict."
 highlights:

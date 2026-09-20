@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $5.99/min (Video / Call)"
 bestFor: "Seekers stuck in an intense connection who want the truth about it, not validation"
 publishDate: '2026-06-22'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

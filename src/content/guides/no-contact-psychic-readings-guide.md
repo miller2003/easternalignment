@@ -3,7 +3,8 @@ title: 'No Contact and Psychic Readings: What to Do (and Not Do) in the Silence'
 description: 'No contact is one of the most emotionally difficult strategies in ex-recovery. It is also the period when people most urgently seek psychic guidance. Here is how to use readings strategically during no contact —and what mistakes to avoid.'
 category: Guide
 publishDate: '2026-06-07'
-updatedDate: '2026-06-07'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 seoTitle: 'No Contact & Psychic Readings: How to Use Them Without Making It Worse (2026)'
 metaDescription: 'Using psychic readings during no contact can accelerate your clarity —or deepen your obsession. We explain how to consult readers strategically during the silence, what questions actually help, and when to stop.'
 schemaDescription: 'A guide to using psychic readings effectively during no contact after a breakup —including what to ask, what to avoid, how to interpret timeline predictions, and how to know when readings are helping versus hurting your recovery.'

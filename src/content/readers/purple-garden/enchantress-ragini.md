@@ -9,7 +9,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "Chat $2.99/min · Voice $4.99/min · Video $11.99/min"
 bestFor: "Budget-conscious clients who want a Western-plus-Vedic dual-system love or soul-connection reading over chat, and are comfortable with a reader in her second platform year"
 publishDate: '2026-09-07'
-updatedDate: '2026-09-07'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 customSchema: |
   {
     "@context": "https://schema.org",

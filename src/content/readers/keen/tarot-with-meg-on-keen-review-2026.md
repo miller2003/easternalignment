@@ -13,7 +13,8 @@ pricing: "$4.75/min"
 bestFor: "Clients who have outgrown prediction-focused readings and want deep contextual understanding of why a situation is unfolding — plus LGBTQ+ clients seeking a reader who actively works with inclusive decks"
 publishDate: "2026-04-26"
 canonicalUrl: https://easternalignment.com/reviews/keen/tarot-with-meg-on-keen-review-2026/
-updatedDate: "2026-04-26"
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 metaDescription: "Tarot With Meg on Keen uses Hellenistic astrology, Queer Tarot, and a deck gifted by her late fiancé. The reader who shows you why — not just what. Full review."
 customSchema: |
   {

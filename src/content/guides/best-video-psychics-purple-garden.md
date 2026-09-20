@@ -27,7 +27,8 @@ freeOffer: $30 credit on first purchase
 pricing: Video from $4.99/min to $13.49/min
 bestFor: Anyone considering a live video reading who wants to know which readers justify the format premium — and which session types actually need face-to-face.
 publishDate: '2026-08-17'
-updatedDate: '2026-08-17'
+updatedDate: "2026-09-17"
+verifiedDate: "2026-09-17"
 highlights:
   - "Explains the two situations where video pays for itself — tool-visible readings and emotionally complex sessions — and the one where it never does."
   - "Ranks 5 video readers by on-camera skill, with the exact chat-to-video premium for each."

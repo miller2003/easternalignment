@@ -6,6 +6,7 @@ import LeftSidebar from '../components/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar.astro';
 import EndCTA from '../components/EndCTA.astro';
 import InlineCta from '../components/InlineCta.astro';
+import VerifiedNote from '../components/VerifiedNote.astro';
 import { PLATFORM_OFFERS } from '../lib/offers';
 
 interface Props {
@@ -14,6 +15,9 @@ interface Props {
   category?: string;
   publishDate: string;
   updatedDate?: string;
+  /** Set on pages that were re-verified with no content changes needed —
+   *  renders the VerifiedNote stamp under the title. */
+  verifiedDate?: string;
   breadcrumbParent?: { label: string; href: string };
   /** Optional cluster level between parent and title, e.g.
    *  Guides › Love & Relationship Readings › {title} (2026-08-28). */
@@ -55,6 +59,7 @@ const {
   category,
   publishDate,
   updatedDate,
+  verifiedDate,
   breadcrumbParent = { label: 'Guides', href: '/guides/' },
   breadcrumbMiddle,
   metaRobots,
@@ -270,6 +275,8 @@ const jsonLdOut = {
           <img src="/sarah-avatar.jpg" alt="Sarah" class="author-avatar-sm" width="32" height="32" loading="lazy" />
           <span class="author-name-sm">Sarah</span>
         </div>
+
+        {verifiedDate && <VerifiedNote date={verifiedDate} />}
 
         {!noCta && (
           <div class="article-hero-cta-wrap">

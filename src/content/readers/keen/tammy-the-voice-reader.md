@@ -13,7 +13,8 @@ pricing: "$9.99/min"
 bestFor: "People who want a Top Advisor with an unusually high rating and a voice-energy reading method for love and relationship clarity"
 publishDate: '2026-06-12'
 canonicalUrl: https://easternalignment.com/reviews/keen/tammy-the-voice-reader/
-updatedDate: '2026-06-12'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

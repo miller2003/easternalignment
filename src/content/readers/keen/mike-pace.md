@@ -13,7 +13,8 @@ pricing: "$9.99/min"
 bestFor: "People who want a fast, direct, prediction-first reader for love and relationship questions - and who can afford a premium rate"
 publishDate: '2026-06-19'
 canonicalUrl: https://easternalignment.com/reviews/keen/mike-pace/
-updatedDate: '2026-06-19'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

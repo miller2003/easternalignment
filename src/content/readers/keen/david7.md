@@ -18,7 +18,8 @@ bestFor: Twin flame and relationship readings from a direct, tool-free male intu
   with a long track record
 publishDate: '2026-03-29'
 canonicalUrl: https://easternalignment.com/reviews/keen/david7/
-updatedDate: '2026-03-29'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

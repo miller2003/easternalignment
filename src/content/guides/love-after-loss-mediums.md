@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $4.99/min to $5.99/min
 bestFor: Widows and widowers who feel paralyzed by grief and need explicit spiritual permission from the other side before they can open their hearts to a new relationship.
 publishDate: '2026-04-28'
-updatedDate: '2026-04-28'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 highlights:
 - Explores the esoteric concept of the "Permission Blockage" that prevents widows from dating.
 - Teaches how to clear the "Grief Aura" that subconsciously repels new love.

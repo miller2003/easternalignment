@@ -13,7 +13,8 @@ pricing: "$7.39/min"
 bestFor: "People who want an experienced, third-generation intuitive who helps them make decisions with clarity and purpose - and who want a decision-focused read over passive prediction"
 publishDate: '2026-06-26'
 canonicalUrl: https://easternalignment.com/reviews/keen/master-psychic-dev/
-updatedDate: '2026-06-26'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",

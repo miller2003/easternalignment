@@ -27,7 +27,8 @@ freeOffer: $30 credit on first purchase
 pricing: From $2.49/min to $12.99/min
 bestFor: Anyone facing a job move, promotion decision, business choice, or financial question who wants a reader verified by the platform's public outcome ledger.
 publishDate: '2026-08-31'
-updatedDate: '2026-08-31'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 highlights:
   - "Ranks 7 career readers by decision-read quality — not generic 'career specialty' claims."
   - "Explains why career readings need coach-structured sessions, and which readers actually deliver them."

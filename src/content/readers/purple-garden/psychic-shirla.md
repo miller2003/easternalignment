@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.49/min"
 bestFor: "Love and relationship coaching from a Master Love Specialist"
 publishDate: '2026-07-23'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",

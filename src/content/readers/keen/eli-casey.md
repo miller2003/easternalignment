@@ -13,7 +13,8 @@ pricing: "$8.97/min"
 bestFor: "People who want a warm, thorough, reassuring empath for love, breakup, and commitment questions - and who value being talked through a situation step by step"
 publishDate: '2026-06-15'
 canonicalUrl: https://easternalignment.com/reviews/keen/eli-casey/
-updatedDate: '2026-06-15'
+updatedDate: "2026-09-14"
+verifiedDate: "2026-09-14"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -18,7 +18,8 @@ freeOffer: Up to 3-5 free minutes depending on platform
 pricing: From $2.10/min to $10.99/min
 bestFor: Clients needing high-level diagnostic insight into complex breakups, no-contact situations, and twin flame separations.
 publishDate: '2026-03-15'
-updatedDate: '2026-03-15'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 highlights:
 - Data-driven selection from tens of thousands of platform profiles.
 - Features readers with a combined total of over 500,000 verified sessions.

@@ -13,7 +13,8 @@ pricing: "$10.88/min (Tarot Card Readings profile)"
 bestFor: "Clients who want warmth and accuracy in the same session without having to choose between them — particularly those in emotionally turbulent situations who need both honest guidance and genuine calm"
 publishDate: "2026-04-26"
 canonicalUrl: https://easternalignment.com/reviews/keen/intuitive-guidance-with-lc-on-keen-review-2026/
-updatedDate: "2026-04-26"
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 metaDescription: "4.97 stars, 8,687 reviews, $10.88/min. Lori (LC) on Keen has the series' most robust rating — and one fairytale reader concern worth understanding. Full review."
 customSchema: |
   {

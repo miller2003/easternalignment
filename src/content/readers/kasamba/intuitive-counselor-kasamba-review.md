@@ -34,7 +34,8 @@ entities:
   - "Tarot Readings"
   - "Soulmate Reading"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $4.99/min"
 bestFor: "Multi-tool readings (crystal ball, runes, tarot) for love and money questions"
 publishDate: '2026-08-05'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-12"
+verifiedDate: "2026-09-12"
 customSchema: |
   {
     "@context": "https://schema.org",

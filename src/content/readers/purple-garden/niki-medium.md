@@ -33,7 +33,8 @@ entities:
   - "Niki Medium"
   - "Psychic Readings"
 publishDate: '2026-07-17'
-updatedDate: '2026-07-17'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 customSchema: |
   {
     "@context": "https://schema.org",

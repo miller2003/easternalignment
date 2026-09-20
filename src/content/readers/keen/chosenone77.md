@@ -13,7 +13,8 @@ pricing: "$6.53/min"
 bestFor: "People who want an elite-rated (4.94), two-decade Keen reader for love and life questions - and who want to avoid the highest premium rates"
 publishDate: '2026-06-21'
 canonicalUrl: https://easternalignment.com/reviews/keen/chosenone77/
-updatedDate: '2026-06-21'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 customSchema: |
   {
     "@context": "https://schema.org",

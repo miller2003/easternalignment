@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $6.99/min"
 bestFor: "Intuitive tarot from a long-tenured, straight-talking reader (English or Spanish)"
 publishDate: '2026-08-01'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",

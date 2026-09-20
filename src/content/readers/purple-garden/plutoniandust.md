@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/plutoniandust.webp
 ogImage: "/avatars/purple-garden/plutoniandust-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-07-03'
-updatedDate: '2026-07-03'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 platform: purple-garden
 metaDescription: "PlutonianDust on Purple Garden: 4.8-star astrologer and tarot reader, 11,254 sessions since 2019, $3.99/min. Why the name predicts the reading style — and."
 highlights:

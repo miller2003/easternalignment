@@ -33,7 +33,8 @@ entities:
   - "David James"
   - "Psychic Readings"
 publishDate: '2026-08-08'
-updatedDate: '2026-08-08'
+updatedDate: "2026-09-18"
+verifiedDate: "2026-09-18"
 customSchema: |
   {
     "@context": "https://schema.org",

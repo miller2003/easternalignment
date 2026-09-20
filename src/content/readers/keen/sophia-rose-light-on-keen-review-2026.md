@@ -13,7 +13,8 @@ pricing: "$4.44/min (Life Path & Advice profile)"
 bestFor: "Clients with an active spiritual practice seeking soul-level guidance — Akashic Records, Kundalini, past lives, karmic patterns — plus North American night-owl and early-morning clients who need a reader when others are unavailable"
 publishDate: "2026-04-28"
 canonicalUrl: https://easternalignment.com/reviews/keen/sophia-rose-light-on-keen-review-2026/
-updatedDate: "2026-04-28"
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 customSchema: |
   {
     "@context": "https://schema.org",

@@ -13,7 +13,8 @@ pricing: "$8.99/min"
 bestFor: "People who want an elite-rated (4.98) intuitive read and are curious about a name-vibration method - and who are willing to pay a premium rate for a top-tier average"
 publishDate: '2026-06-11'
 canonicalUrl: https://easternalignment.com/reviews/keen/intuitive-jade/
-updatedDate: '2026-06-11'
+updatedDate: "2026-09-19"
+verifiedDate: "2026-09-19"
 customSchema: |
   {
     "@context": "https://schema.org",

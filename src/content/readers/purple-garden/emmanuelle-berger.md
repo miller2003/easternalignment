@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/emmanuelle-berger.webp
 ogImage: "/avatars/purple-garden/emmanuelle-berger-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-18'
-updatedDate: '2026-08-18'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 platform: purple-garden
 metaDescription: "Emmanuelle Berger on Purple Garden: the highest-volume soul-mate specialist — 76,154 readings since 2015 at 5.0. Chat $6.49/min, $30 free credit."
 highlights:

@@ -12,7 +12,8 @@ avatarUrl: /avatars/purple-garden/mystic-mark.webp
 ogImage: "/avatars/purple-garden/mystic-mark-og.jpg"
 freeOffer: "$30 free credit on your first purchase"
 publishDate: '2026-08-03'
-updatedDate: '2026-08-03'
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 platform: purple-garden
 metaDescription: "Mystic Mark on Purple Garden: 4.9-star tarot and scrying reader with 13,274 sessions since 2020, $4.99/min. What scrying adds that tarot alone can't — and."
 highlights:

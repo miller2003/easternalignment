@@ -13,7 +13,8 @@ pricing: "$5.99/min (Psychic Mediums profile)"
 bestFor: "Clients who want to connect with a deceased loved one, process grief through spirit communication, or seek messages from the other side — the specific need that no other reader in this series can serve"
 publishDate: "2026-04-28"
 canonicalUrl: https://easternalignment.com/reviews/keen/eye-of-pheobe-on-keen-review-2026/
-updatedDate: "2026-04-28"
+updatedDate: "2026-09-10"
+verifiedDate: "2026-09-10"
 customSchema: |
   {
     "@context": "https://schema.org",

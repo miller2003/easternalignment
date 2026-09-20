@@ -11,7 +11,8 @@ freeOffer: "$30 free credit on your first purchase"
 pricing: "from $5.99/min"
 bestFor: "Twin-flame and soulmate journeys from a healer who trades sweetness for truth"
 publishDate: '2026-07-01'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-11"
+verifiedDate: "2026-09-11"
 customSchema: |
   {
     "@context": "https://schema.org",

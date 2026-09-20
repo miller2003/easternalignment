@@ -11,7 +11,8 @@ freeOffer: "3 free minutes + 50% off"
 pricing: "$5.99/min chat · $39.99/min voice"
 bestFor: "Love, soulmate, and relationship questions from a spiritually oriented clairvoyant"
 publishDate: '2026-08-01'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-09"
+verifiedDate: "2026-09-09"
 customSchema: |
   {
     "@context": "https://schema.org",

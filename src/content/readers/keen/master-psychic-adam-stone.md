@@ -12,7 +12,8 @@ freeOffer: "$1 for your first 5 minutes (new Keen users only)"
 pricing: "$3.99/min"
 bestFor: "Budget-conscious clients who want a high-volume, experienced advisor and are comfortable with a direct, no-fluff style"
 publishDate: '2026-07-08'
-updatedDate: '2026-08-13'
+updatedDate: "2026-09-13"
+verifiedDate: "2026-09-13"
 customSchema: |
   {
     "@context": "https://schema.org",
