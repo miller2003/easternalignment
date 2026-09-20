@@ -6,7 +6,7 @@ description: "Is the Purple Garden app trustworthy? I spent months auditing thei
 category: "Platform Analysis"
 platform: purple-garden
 publishDate: "2026-06-30"
-updatedDate: "2026-07-14"
+updatedDate: "2026-09-16"
 canonicalUrl: "https://easternalignment.com/guides/is-purple-garden-legit/"
 customSchema: |
   {
@@ -58,11 +58,23 @@ I tested the refund process deliberately. During my audit, an app connection dro
 
 The caveats are real and worth stating. Purple Garden issues account credits, not cash refunds to your bank account. And like every legitimate platform, it does not refund sessions simply because you disliked the advice — nobody can run a psychic marketplace on "I didn't like the answer" refunds. If you want to protect yourself, understand the refund policy before you spend: technical failures are credited, buyer's remorse is not, and that split is the industry-standard sign of a legitimate operation.
 
+One correction worth making explicit in 2026: Purple Garden now also offers a satisfaction guarantee, not just a technical-failure credit. If your first session with a specific advisor doesn't meet expectations, you can request up to $50 in Purple Garden credits — usable on future readings, not cash — once every 30 days, for conversations from the previous seven days. That is broader than the dropped-connection credit I tested, but it still follows the same logic: credits, not refunds to your bank, and you must substantiate the claim. Treat the $50 guarantee as your safety net for a genuinely bad first session, and the technical-failure credit as your automatic protection when the app itself breaks.
+
 ## The Red Flags That Would Change My Verdict
 
 To be fair to the question, here are the specific things that would make Purple Garden a scam — and my findings on each. If it refused refunds for technical failures: it does not, as documented above. If ownership were anonymous: it is not. If advisors could delete negative outcome posts: they cannot, by platform design. If the platform inflated ratings with fake reviews: the Journeys ledger would contradict it publicly, and my audits found no systematic pattern of fabrication. If billing were unverifiable or routed outside secure gateways: it is not.
 
 None of these tests failed. That is a higher standard than most of the platforms I review can meet.
+
+## Frequently Asked Questions
+
+### Does Purple Garden have a satisfaction guarantee?
+
+Yes, as of 2026. Beyond the automatic technical-failure credit, Purple Garden offers a satisfaction guarantee of up to $50 in account credit if your first session with an advisor falls flat — requestable once every 30 days within seven days of the reading. It is credit toward future sessions, not a cash refund, and it only applies to your first session with that particular advisor. Use it to de-risk a new advisor; don't expect it to cover "I didn't like the answer."
+
+### Is the $30 Purple Garden credit really free?
+
+Effectively yes, but read the trigger. New users typically receive about $30 in first-purchase credit, often applied automatically in the app or via a code (commonly 30free) on the website, and it usually requires a small first purchase (around $10) to activate. You are not charged for the credit itself — you are spending your own ten dollars to unlock it, then getting roughly $30 of reading on top. Watch for the minimum-purchase condition so the credit isn't sitting unused.
 
 ## The Verdict: Legit, With Caveats
 

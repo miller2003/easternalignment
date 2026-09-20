@@ -12,7 +12,7 @@ pricing: "$1.99/min to $20.00+/min"
 bestFor: "Immediate phone connections & transparent vetting"
 rank: 3
 publishDate: "2026-05-09"
-updatedDate: "2026-05-09"
+updatedDate: "2026-09-14"
 highlights:
   - "The most transparent, un-deletable public review system in the industry."
   - "Flawless mobile and voice infrastructure for immediate, lag-free connections."
@@ -31,7 +31,18 @@ entities:
   - "Phone Readings"
   - "Spiritual Advisors"
   - "Online Mediums"
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is Keen's $1 for 5 minutes a one-time offer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — it's a new-account welcome package applied to your first session, not a recurring discount. Spend the five minutes on a top-tier advisor, ask one specific question, and decide from the hit whether they're worth standard per-minute rates going forward."}},
+      {"@type": "Question", "name": "How do I actually claim Keen's $25 satisfaction credit?", "acceptedAnswer": {"@type": "Answer", "text": "Request it through Keen support within 72 hours of the conversation; it's granted as Keen Dollars (account credit) up to $25, once every 30 days, for a session that didn't meet expectations. Only your unspent account balance is refundable to your card."}}
+    ]
+  }
 ---
+
+> I re-verified Keen's offer and roster in September 2026 with a live account. The $1-for-5-minutes trial was still the canonical new-user offer, the per-minute range below still matched what advisors actually charge, and the unedited review ledger worked exactly as described. The one thing worth flagging: some coupon aggregators now also advertise a "first 3 minutes free" variant, but the $1/5-minute welcome package remains the offer Keen promotes to new clients — use that one, and treat any "free minutes" coupon as a secondary promo to check at checkout.
 
 Keen is the oldest and most successful open marketplace in the online psychic industry, and understanding that model is the key to understanding everything about it. Since 1999, Keen has operated as a massive platform where independent advisors sink or swim on raw market feedback. There is no curation committee, no editorial quality gate, no artificial boosting of mediocre readers. Anyone who passes the identity check can list, price themselves, and compete — which means the roster contains some of the most gifted advisors in the world, and some of the least, side by side.
 
@@ -84,5 +95,16 @@ Finally, the satisfaction guarantee is real but limited: it issues account credi
 Keen is the platform for the seasoned seeker who treats vetting as a research discipline and values the raw power of a live voice connection. It rewards the user who mines the review ledger, understands the roster tiers, and uses the $1 trial as the scalpel it is. No other platform combines its transparency, its phone infrastructure, and its depth of specialist talent.
 
 It is unfiltered, immediate, and fiercely accountable — by design. In an industry where most platforms profit from obscuring quality, Keen's unedited ledger and marketplace model make quality visible for anyone willing to look. That is why, after testing every major platform in this space, I rank Keen as my #3 platform overall in 2026: not because it is the easiest platform, but because it is the most honest one.
+
+## What Changed in 2026 (and What Hasn't)
+Keen's model is the most stable of the three platforms I cover — the open marketplace, the callback system, and the permanent, un-scrubbable review ledger were all unchanged in my 2026 check. The depth of the roster (1,700+ advisors) continues to be its defining edge: no competitor gives you more specialists to mine. The one area that has crept forward elsewhere is video — Keen is still a voice-and-chat company, so if you want to watch a reader work, Purple Garden is the comparison to make. For pure auditory connection and the deepest review history, Keen remains the reference point in 2026.
+
+## Frequently Asked Questions
+
+### Is Keen's $1 for 5 minutes a one-time offer?
+Yes — it's a new-account welcome package applied to your first session, not a recurring discount. Use it as a scalpel: spend the five minutes on a top-tier advisor you'd otherwise hesitate to book, ask one specific question, and decide from the hit you get whether they're worth standard per-minute rates going forward.
+
+### How do I actually claim Keen's $25 satisfaction credit?
+Request it through Keen support within 72 hours of the conversation; it's granted as Keen Dollars (account credit) up to $25, once every 30 days, for a session that didn't meet expectations. It is not a refund to your card — only your unspent account balance is refundable. File promptly with the advisor name and date.
 
 If you are ready to use it properly, start with the $1 trial and the platform's [top-reviewed readers](/reviews/keen/), and read my guide on [spotting fake psychics](/guides/how-to-spot-fake-psychic/) before you book — the same detection skills that protect you from scammers are the skills that make Keen's marketplace work in your favor.

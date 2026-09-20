@@ -3,7 +3,7 @@ title: "How Much Does a Psychic Reading Cost? A Complete Guide to Psychic Readin
 description: "Psychic reading prices depend on more than the advertised number: pricing structure (per-minute, fixed-duration, package), session length, reader experience, reading type, platform, and format all move the real cost. A complete framework for comparing prices by value rather than headline rate, plus a pre-booking price checklist."
 category: Guide
 publishDate: '2026-09-05'
-updatedDate: '2026-09-05'
+updatedDate: '2026-09-12'
 seoTitle: 'Psychic Reading Prices: Complete Cost Guide (2026)'
 metaDescription: 'How psychic reading prices really work: per-minute vs fixed sessions, what drives cost, when paying more makes sense, and a pre-booking price checklist.'
 schemaDescription: "A complete guide to psychic reading prices covering the three pricing structures, the five factors that determine cost, why total price alone is a misleading comparison, first-time budgeting, when paying more is reasonable, billing-system traps, and a pre-booking price checklist."
@@ -79,6 +79,8 @@ This guide explains how psychic reading prices typically work, what influences t
 
 ---
 
+We refreshed the framing on this guide in September 2026. The pricing logic below has not changed — value per minute still beats the headline rate — but the three major platforms' trial offers are what make a first reading affordable, so we've added the current terms at the top of the factors section.
+
 ## What Is the Typical Cost of a Psychic Reading?
 
 There is no single standard price for a psychic reading.
@@ -108,6 +110,10 @@ But if your goal is a substantial conversation rather than a quick introductory 
 This is why **total price alone is not a meaningful comparison**.
 
 ---
+
+## Current Trial Offers (September 2026)
+
+The offer, not the list price, sets your real first-session cost. As of September 2026 the three platforms we cover run: Keen — 5 minutes for $1 (one-time new-client welcome); Kasamba — 3 free minutes with each new advisor plus 50% off your first session; Purple Garden — a $30 first-purchase credit (code 30free on the web). All three are enough to test a reader before you pay standard rates, which is exactly how to use the pricing framework below.
 
 ## What Determines the Price of a Psychic Reading?
 
@@ -365,6 +371,14 @@ Price should be a filter, not the primary selection criterion. Choosing solely o
 ### What determines the price of a psychic reading?
 
 Five factors dominate: the length of the reading; the reader's experience and reputation; the type of reading (general psychic, tarot, astrology, mediumship, and specialized consultations can price differently); the platform, which provides scheduling, payments, reviews, and support infrastructure; and the format — text, phone, and video can deliver very different experiences at similar advertised prices.
+
+### How much should a first psychic reading cost in 2026?
+
+Plan for $45–$150 at list price on a 15–25 minute professional-tier session, but a new-client trial usually pulls a focused first reading under $70. The $50 mark is a reasonable beginner budget — enough for a meaningful session without a high-stakes gamble.
+
+### Do the three big platforms still have intro offers?
+
+Yes, all three as of September 2026: Keen's 5-minutes-for-$1, Kasamba's 3 free minutes plus 50% off your first session, and Purple Garden's $30 first-purchase credit. Verify the exact terms at checkout, since promos rotate.
 
 **Keep reading:** [Should You Pay for a Psychic Reading?](/guides/should-you-pay-for-a-psychic-reading/) · [13 Things to Know Before You Pay for a Psychic Reading](/guides/before-you-pay-for-a-psychic-reading/)
 

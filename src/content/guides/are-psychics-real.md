@@ -3,7 +3,7 @@ title: "Are Psychics Real? I Spent Three Years Finding Out."
 description: "This is what you really need to know before you start finding Psychics."
 category: "Beginners"
 publishDate: "2026-04-17"
-updatedDate: "2026-04-17"
+updatedDate: "2026-09-15"
 entities:
   - "Lily Dale Mediums"
   - "Cold Reading Techniques"
@@ -51,6 +51,8 @@ customSchema: "{
   ]
 }"
 ---
+
+> **Updated for 2026 — Editor's note from Sarah:** The three fraud tests below still hold, and I re-ran them on current Keen, Kasamba, and Purple Garden listings — the fear-based "curse" pitch is, unfortunately, still around. Two things changed enough in 2026 to add here: (1) fresh public-belief data on psychics (Gallup and Pew, 2025), and (2) a new wrinkle — AI chatbots that now *sound* psychic. Both are in the new sections below. If you want readers I've actually vetted, start with my [brutally honest Kasamba guide](https://easternalignment.com/guides/brutally-honest-psychics-kasamba/).
 
 ## The Wrong Way to Ask: Evaluating Practitioners vs. Categories
 
@@ -100,6 +102,32 @@ It's worth understanding the Barnum Effect—the tendency to accept vague, broad
 
 ### Historical Context: Ying Yao Pian
 This isn't new. Historical Chinese texts like *ying yao pian* documented systematic methods for reading strangers to shape their responses. These are learnable skills, not supernatural gifts.
+
+## How Many People Actually Believe in Psychics? (2025 Data)
+
+The question "are psychics real?" is less settled in the public than you'd think. Recent polling shows belief is widespread but far from majority on most specific claims:
+- **48%** of U.S. adults believe in psychic or spiritual healing — the single most widely held paranormal belief (Gallup, 2025).
+- About **4 in 10** U.S. adults say they believe in psychics (Pew Research Center).
+- Only **26%** believe in clairvoyance (the mind knowing the past or predicting the future) and **29%** in telepathy (Gallup, 2025).
+- Roughly **30%** of Americans consulted astrology, tarot, or a fortune teller in the past year — but most say they do it "just for fun," not for real insight (Pew, 2025).
+
+Takeaway: a large slice of the country is open to this stuff, but most treat it as entertainment rather than fact. That's exactly the posture my three fraud tests below are built for.
+
+## The 2026 Twist: AI Bots That Sound Psychic
+
+In 2026, a new player entered the "are psychics real?" conversation: AI chatbot "psychics." These apps generate fluent, warm, tarot- and astrology-flavored text using language models — they are not perceiving anything about you. They are very good at the Barnum Effect (see above), because broad, vaguely personal statements are exactly what pattern-based text produces.
+
+So the honest 2026 update to this page is: when you're judging whether a *reader* is real, the same rules apply — but now also check whether you're even talking to a human. A human reader on [Keen](/reviews/keen/) or [Purple Garden](/reviews/purple-garden/) has a real profile, reviews, and accountability. An AI "psychic" has none of those, and no intuition behind the words.
+
+## Frequently Asked Questions
+
+### Are AI chatbot psychics real?
+
+No. AI "psychic" apps generate text from language patterns — they don't perceive your energy, hear anything, or intuit your situation. They can sound convincing because they're fluent at vague, personally resonant language (the Barnum Effect), but there's no human insight behind the words. Use them for fun or study, not as a substitute for a real reader.
+
+### Do most people believe psychics are real?
+
+Belief is common but mixed. About 4 in 10 U.S. adults say they believe in psychics, and 48% believe in psychic or spiritual healing (Gallup, 2025). But when people actually consult tarot or fortune tellers, most say they do it "just for fun" rather than for real insight (Pew, 2025).
 
 ## So—Are Psychics Real? Here's Where I've Landed
 

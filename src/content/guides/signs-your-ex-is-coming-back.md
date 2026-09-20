@@ -3,7 +3,7 @@ title: "Signs Your Ex Is Coming Back (According to Psychics): Real Signals vs Fa
 description: "Psychics hear the same question more than any other: is my ex coming back? Here are the signs readers actually look for when assessing reconciliation — and how to tell a real signal from the hope you are projecting."
 category: "Love & Relationships"
 publishDate: "2026-06-27"
-updatedDate: "2026-06-27"
+updatedDate: "2026-09-18"
 seoTitle: "Signs Your Ex Is Coming Back: What Psychics Actually Look For (2026)"
 metaDescription: "Is your ex coming back? Psychics look for specific signals when assessing reconciliation. Here are the real signs readers evaluate, the false hope traps, and what to ask in a reading."
 customSchema: |
@@ -45,7 +45,7 @@ entities:
   - "Psychic Love Reading"
 ---
 
-"Is my ex coming back" is the question the psychic industry is built on. It is the first question a third of all clients ask, the question that keeps the phone lines busy at 2 AM, and the question that produces both the industry's most meaningful work and its most cynical exploitation. I have reviewed dozens of readers who answer it, and I have developed a clear picture of what the honest ones look for — and what the dishonest ones sell instead.
+"Is my ex coming back" is the question the psychic industry is built on. It is one of the most common questions clients ask, the question that keeps the phone lines busy at 2 AM, and the question that produces both the industry's most meaningful work and its most cynical exploitation. I have reviewed dozens of readers who answer it, and I have developed a clear picture of what the honest ones look for — and what the dishonest ones sell instead.
 
 Here is the truth about reconciliation readings: the signs are real, but they are signs of possibility, not guarantees. The value of a good reading is not a yes-or-no verdict. It is an honest assessment of whether the connection is in a pause or a close — and the discipline to tell you which one you are hoping for.
 
@@ -85,6 +85,14 @@ Ask: "Is this connection in a pause or a close?" — the single best framing, be
 
 Do not ask: "Is he coming back, yes or no?" — this forces the guess. And never accept a reader who tells you to keep waiting without a testable window and mechanism. My [guide on questions to ask a psychic](/guides/questions-to-ask-a-psychic/) has the full framework.
 
+## The 2026 Season: What the Sky Is Doing Right Now
+Two real astrological events frame reconciliation questions this autumn, and readers keep asking how they change the odds.
+
+- **The Harvest Full Moon on September 26, 2026** (peaking at 16:49 UTC) is the closest full moon to the autumnal equinox and is traditionally read as a moment of clarity and release. Psychics I work with note it often surfaces "final" feelings — the kind that tell you whether a thread is closure or a pause.
+- **Mercury goes retrograde in Scorpio from October 24 to November 13, 2026.** In astrology this is linked to miscommunication, old connections resurfacing, and messages being misread. Plenty of people hear from an ex during this window — but the honest readers warn the contact is often muddy, not a green light.
+
+Neither event decides your outcome. The behavioral signs in the sections above still outweigh the calendar. Use the sky as a prompt to re-check the real signals, not as a prophecy.
+
 ## The Honest Bottom Line
 
 The signs that an ex is coming back are real, and the honest readers evaluate them the same way a competent friend would — attachment, unresolved ties, contact patterns, and the difference between a pause and a close. The dishonest readers sell certainty, windows without mechanisms, and the waiting loop that converts your hope into recurring payments.
@@ -92,6 +100,21 @@ The signs that an ex is coming back are real, and the honest readers evaluate th
 The most valuable thing a reconciliation reading can give you is not a verdict. It is an honest read on whether you are in a pause or a close — because the answer determines what you do with the next season of your life, and no amount of hoping changes which one it is.
 
 If you are in this situation, my [guide on breakups and reconciliation](/guides/divorce-breakup-psychics-online/) covers the broader territory, and the [Keen reader series](/reviews/keen/) includes several relationship specialists I have vetted for exactly this question — including readers who are known for telling clients when it is over.
+
+## Q&A: Should I Reach Out to My Ex This Autumn?
+**Short answer:** Reach out only if you already see behavioral signs of a pause, not a close — the calendar gives you cover for reflection, not a reason to act.
+
+The most common autumn question I get is some version of "the summer's over, should I text them?" Here is the honest read. Mercury retrograde (Oct 24–Nov 13, 2026) is the worst window to launch contact you want to be *clear* — astrology links it to misread texts and unfinished-business looping, and the scammers love it because "the energy is shifting" sells more sessions. The Harvest Full Moon (Sep 26, 2026) is a better moment to sit with whether the thread is real or projected. If you do reach out, do it from the "pause" column in the test above: a single, low-pressure message, not a waiting-loop.
+
+## Frequently Asked Questions
+
+### Can an ex come back during Mercury retrograde?
+
+Yes, exes do commonly resurface during Mercury retrograde (Oct 24–Nov 13, 2026), but astrology frames it as a time of confusion and unfinished business, not guaranteed reunion. Judge it by the behavioral signs — initiative, unresolved ties, changed patterns — not by the date.
+
+### How do I tell a real sign from false hope?
+
+A real sign is anchored in your ex's behavior (they initiate, reference the relationship, demonstrate changed patterns). False hope lives in your interpretation (a like, a song, a "coincidence"). If most of your signs sit in the interpretation column, the honest readers would tell you it is a close, not a pause.
 
 <div class="cta-flex" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
   <a href="/go/kasamba" class="btn btn--primary">Get 3 Free Minutes on Kasamba →</a>

@@ -3,7 +3,7 @@ title: "13 Things to Know Before You Pay for a Psychic Reading (2026)"
 description: "The complete pre-payment checklist for a psychic reading: how to vet the platform and the individual reader, what a first session really costs in total (with the math), how to prepare your questions, how to control the session once the meter is running, and the five red flags that mean end it immediately. Distilled from 160+ published single-advisor reviews."
 category: Guide
 publishDate: '2026-09-05'
-updatedDate: '2026-09-06'
+updatedDate: '2026-09-17'
 seoTitle: 'Before You Pay for a Psychic Reading: 13 Checks (2026)'
 metaDescription: '13 checks before you pay for a psychic reading: platform vetting, reader numbers, real cost math, session control, and the red flags that mean hang up.'
 schemaDescription: "A 13-point pre-payment checklist for psychic readings, covering platform vetting, advisor-level due diligence, realistic first-session cost calculations, question preparation, in-session control techniques, end-the-session red flags, and exit procedures."
@@ -113,6 +113,10 @@ What scale actually buys you:
 
 The limitation, stated plainly: scale filters out bad *operators*, not bad *readers*. A big platform guarantees you a referee, not a good match. That is what the next three checks are for.
 
+### Know the platform's money-back safety net before you pay
+
+Every major platform now has some version of a satisfaction guarantee, and you should read the exact terms before your first paid session — not after. As of 2026: Purple Garden credits up to $50 toward a future reading if your first session with a new advisor falls flat (request within 7 days, once per 30 days); Kasamba offers up to $50 in account credit on a first reading that misses; Keen issues up to $25 in Keen Dollars via its Satisfaction Guarantee. None of these are cash refunds, and all require you to substantiate the complaint. The point is not to rely on them — it's to know, before you hand over a card, exactly what protection exists if the reading is a dud. A platform that hides or lacks a guarantee is one you should not be paying full price to test.
+
 ### 2. What do the reader's three platform numbers say?
 
 **An advisor's profile carries three numbers that predict session quality better than anything they write about themselves: completed readings, average rating weighed against written review count, and the year they joined.** Longevity is a market filter — an advisor who burns clients does not accumulate eight years and twenty thousand sessions on a platform that displays every rating.
@@ -148,6 +152,8 @@ The offers change the math substantially. Illustrative, at a $4/min mid-range re
 | Kasamba | 3 free minutes with each new advisor + 50% off first session | 3 min free, 17 min at $2/min | ≈ $34 (list $80) |
 | Keen | First 5 minutes for $1 | $1, then 15 min at $4/min | ≈ $61 (list $80) |
 | Purple Garden | $30 credit toward your first reading | $80 − $30 credit | ≈ $50 (list $80) |
+
+One caveat: the Purple Garden credit usually requires a small first purchase (around $10) to activate, so it functions as a discount on a real session rather than an unconditional free reading — confirm the current terms at checkout.
 
 Offers rotate, so verify the current terms at checkout. Two structural rules hold regardless: the offer is only worth using on a reader you have already vetted (checks 2–4), and the post-offer rate is the one that matters if you plan to return. For the full cost anatomy — rate tiers, hidden multipliers, package traps — see [how much a psychic reading actually costs](/guides/how-much-does-a-psychic-reading-cost/).
 
@@ -224,6 +230,10 @@ The full taxonomy — twelve flags plus the cold-reading playbook underneath the
 
 Afterwards, two procedures. First, if the session was genuinely mis-sold — fear hooks, guarantees, bait behavior — use the platform's satisfaction program: all three majors compensate bad sessions with credit, subject to caps and windows that change, so check the current terms. Second, if the session felt fine but a prediction later fails, that is a different problem with its own protocol — [what to do when a psychic prediction does not come true](/guides/psychic-prediction-didnt-come-true/) — and the wrong reflex is immediate re-booking to chase the timeline. Rebooking discipline in general (one reader, one question, weeks apart) is covered in [how often you should get a reading](/guides/how-often-psychic-reading/).
 
+### New pre-payment check: confirm there is a real human advisor
+
+A 2026 wrinkle: some "psychic" services are AI chatbots with no person behind them. Before you pay, confirm the platform shows a named, individually-reviewed human advisor with a public track record — not a generated avatar or a scripted chat window. If the "reader" cannot be identified, has no verifiable reviews, and pivots instantly to a paid "curse removal" or premium report, you are funding a funnel, not a reading. This check belongs alongside Check 1 (vet the platform): a real review system is your only proof a human is on the other end.
+
 ---
 
 ## Which Checks Matter Most for You?
@@ -264,6 +274,10 @@ Usually as site credit, not cash. Kasamba, Keen, and Purple Garden all run satis
 ### How do I know if a psychic is scamming me mid-session?
 
 Apply the five flags from check 12: a fear hook ending in a paid "removal," a guaranteed outcome, urgency pressure to re-book, an attempt to move you off the platform, or a reader who asks more questions than they answer. Any one of them ends the session on its own. The fastest single test: if the session ends with you owing more than the per-minute rate times the minutes, something other than a reading was being sold. The complete twelve-flag breakdown is in [how to spot a fake psychic](/guides/how-to-spot-fake-psychic/).
+
+### Should a satisfaction guarantee decide which platform I pick?
+
+It should be one factor, not the deciding one. A guarantee (Purple Garden up to $50, Kasamba up to $50, Keen up to $25 in credit) reduces the cost of a bad first session, but none return cash and all require you to file within a window. Prioritize advisor quality and review depth first; use the guarantee as the safety net that lets you try a new reader with less risk.
 
 **Keep reading:** [Chat, Phone, or Video: Which Psychic Reading Format Is Best?](/guides/chat-vs-phone-vs-video-psychic-reading/) · [How to Tell If an Online Psychic Is Legitimate: 15 Red Flags](/guides/how-to-tell-if-an-online-psychic-is-legitimate/)
 

@@ -3,7 +3,7 @@ title: 'Dreaming About Your Ex (or a New Person): What Psychics Say It Actually 
 description: 'Recurring dreams about someone you love —or someone you lost —are rarely random. We explore what psychic practitioners and dream analysts say about the energetic messages hidden in your subconscious.'
 category: Guide
 publishDate: '2026-05-28'
-updatedDate: '2026-05-28'
+updatedDate: '2026-09-19'
 seoTitle: 'Dreaming About Your Ex or Someone You Love: What Psychics Say It Means (2026)'
 metaDescription: 'Are recurring dreams about an ex or a crush meaningful? We look at what psychic readers and spiritual practitioners actually say about dream analysis, telepathic connection, and what your subconscious is trying to tell you.'
 schemaDescription: 'A guide exploring the psychic and spiritual interpretation of recurring romantic dreams —including what they may signal about unresolved connections, telepathic bonds, and how dream analysis readings work on platforms like Kasamba and Keen.'
@@ -155,6 +155,14 @@ Sometimes that distinction is everything.
 
 ---
 
+## The 2026 Season: Why You May Be Dreaming About an Ex This Autumn
+If your ex is showing up in dreams more often right now, two verified astrological events explain the pattern readers report — though neither of them "causes" the dream.
+
+- **Venus goes retrograde from October 3 to November 14, 2026** (Scorpio, then back into Libra). In astrology this ~40-day love-and-worth rewind resurfaces old connections and unfinished feelings — the exact emotional material this guide says the subconscious replays at night.
+- **Mercury goes retrograde in Scorpio from October 24 to November 13, 2026.** Paired with Venus, it is a six-week window where old contact loops and unresolved business return to the surface.
+
+The honest read: retrogrades do not send the dreams. They surface the unfinished business your brain is already processing. A reader who tells you the dream "means they're coming back because of the retrograde" is converting a seasonal theme into a false guarantee. Use the framework above — is the connection still active, or is this your own unprocessed grief?
+
 ## FAQs
 
 ### Why do I only dream about my ex when I am starting to move on?
@@ -168,6 +176,19 @@ Brief-but-intense encounters can leave strong energetic impressions. A single co
 ### Can I control what I dream about?
 
 Lucid dreaming practices —particularly techniques like reality checks throughout the day, dream journaling, and the MILD (Mnemonic Induction of Lucid Dreams) method —can increase both dream recall and the probability of becoming conscious within a dream. Some practitioners recommend intentional pre-sleep visualizations to influence dream content. These are learnable skills, not innate gifts.
+
+### Do full moons affect dreams about an ex?
+
+The Harvest Full Moon on September 26, 2026 (peaking 16:49 UTC) is traditionally read as a moment of clarity and release. Some practitioners report more vivid or emotionally charged dreams around full moons, but there is no evidence the moon causes dreams about an ex. If dreams peak near this date, treat it as a prompt to check whether the connection is closure or a pause — not as a sign of contact.
+
+### Why do I dream about my ex more during retrograde season?
+
+Retrograde seasons surface unfinished emotional business. Venus retrograde (Oct 3–Nov 14, 2026) and Mercury retrograde (Oct 24–Nov 13, 2026) both bring old connections and unresolved conversations back into view, which the subconscious replays at night. The dream reflects what you are processing, not a guarantee of reconnection.
+
+## Q&A: Why Am I Dreaming About My Ex More Lately?
+**Short answer:** More frequent dreams of an ex usually mean unfinished emotional business has surfaced — and autumn 2026's retrograde season (Venus Oct 3–Nov 14, Mercury Oct 24–Nov 13) is a well-known trigger for exactly that.
+
+The question spikes every fall, and this year the timing is real. Venus retrograde pulls old feelings and old connections back into view; Mercury retrograde in Scorpio adds a loop of unresolved conversations. Your subconscious replays what is now front-of-mind, which is why the dreams intensify. That does not mean reconciliation is imminent — it means the material is ready to be processed. Apply the test from "How to Bring a Dream to a Psychic Reading": ask whether the connection is still active on their side, or whether this is your own grief finally safe enough to surface. The dream is a signal to look, not a prediction of contact.
 
 [Consult a Psychic Dream Analyst on Kasamba (3 Free Minutes) →](/go/kasamba)
 

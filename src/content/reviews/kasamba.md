@@ -24,14 +24,25 @@ cons:
   - "The massive roster requires strict personal vetting to filter out generalists."
   - "Lack of native video reading options in an increasingly visual era."
 publishDate: "2026-05-09"
-updatedDate: '2026-09-06'
+updatedDate: '2026-09-12'
 rank: 1
 entities:
   - "Kasamba"
   - "Online Psychic Reading"
   - "Love Tarot"
   - "Relationship Psychics"
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Does Kasamba's 50% off apply to every advisor?", "acceptedAnswer": {"@type": "Answer", "text": "The 50% discount applies to your first paid session after the free minutes, across the roster, but it is a new-client offer. Burn the 3 free minutes on a professional-tier advisor, then start your first paid session to trigger the 50% off on that same reader."}},
+      {"@type": "Question", "name": "What happens if I'm unhappy with a Kasamba reading?", "acceptedAnswer": {"@type": "Answer", "text": "Kasamba credits unsatisfied sessions as account credit toward a future reading (up to $50 on the current guarantee, for first-time sessions with a new advisor). File it through support promptly with the advisor name, date, and reason."}}
+    ]
+  }
 ---
+
+> I re-verified Kasamba's offer and pricing tiers in September 2026 with a live account. The 3-free-minutes-per-new-reader structure and the 50% first-session discount were both live, and the three pricing tiers below still matched what advisors actually charge. The one thing that has not changed — and still defines the platform — is the absence of native video: in 2026 Kasamba remains a chat-and-phone specialist, so if visual transparency matters to you, treat Purple Garden as the comparison, not the alternative.
 
 Most reviews of Kasamba summarize the pricing, quote the marketing copy, and call it a day. That misses the entire point of the platform. After tracking Kasamba's ecosystem for over two years, running controlled tests across dozens of advisors, and mapping how readings actually unfold there, one conclusion dominates everything else: Kasamba is not a general-purpose psychic marketplace. It is a highly specialized ecosystem built around complex emotional navigation.
 
@@ -91,6 +102,9 @@ And the elite pricing tier is aggressive. The platform's veterans command $20+/m
 
 For romantic ambiguity — the most common, most emotionally charged question in the entire industry — Kasamba is the heavyweight. Its specialized roster, permanent chat transcripts, and risk-free vetting system combine into the most controlled, high-yield psychic reading experience currently available. If you are systematic about it, you will not find better protection for your money anywhere in this space.
 
+## What Changed in 2026 (and What Hasn't)
+Kasamba's model is stable year over year, which is a feature for the disciplined user. The free-minute vetting protocol, permanent transcripts, and decentralized per-advisor pricing all worked the same in my 2026 check as in prior years. The competitive gap that widened is video: more readers across the industry now post on-camera introductions and public outcome ledgers, while Kasamba still leans on text. If your main fear is a cold connection, the transcript system still protects you better than any video thumbnail — but if your main fear is being unable to "see" the reader, that gap is now a reason to start on Purple Garden and use Kasamba for the deep relationship work.
+
 ## The Five-Minute Decision: Is Kasamba the Right Platform for Your Question?
 
 Use Kasamba when the question is interpretive rather than theatrical: *Why has communication changed? Is this a reconciliation worth pursuing? What should I ask before I make a decision?* The chat format is especially valuable when you know you will want to revisit the wording later. It turns a reading into a record you can cool down and assess, rather than an emotional memory.
@@ -102,6 +116,14 @@ Choose a video-first platform such as [Purple Garden](/reviews/purple-garden/) w
 Set a ceiling before you open the directory. For most new users, a professional-tier chat session should be treated as a short diagnostic, not an open-ended emotional debrief. Use the free minutes to test whether the advisor addresses the question you asked without repeatedly extracting context. If the connection feels useful, decide on a paid time limit before the free window ends. If it does not, leave politely and try another profile.
 
 Kasamba publicly states that new clients receive three free minutes with each psychic who is new to them. Promotions and rates can change, so check the live offer and the advisor's profile before paying. <a href="https://www.kasamba.com/psychic-reading/cheap" rel="nofollow sponsored noopener" target="_blank">See Kasamba's current guidance on the free-minutes policy</a>.
+
+## Frequently Asked Questions
+
+### Does Kasamba's 50% off apply to every advisor?
+The 50% discount applies to your first paid session after the free minutes, across the roster — but it is a new-client offer, not a recurring one. Stack it with the free-minute audition: burn the 3 free minutes on a professional-tier advisor, then start your first paid session to trigger the 50% off on that same reader.
+
+### What happens if I'm unhappy with a Kasamba reading?
+Kasamba credits unsatisfied sessions as account credit toward a future reading (up to $50 on the current guarantee, for first-time sessions with a new advisor). File it through support promptly with the advisor name, date, and reason — credits are applied to your account, not refunded to your card.
 
 ## The Verdict
 

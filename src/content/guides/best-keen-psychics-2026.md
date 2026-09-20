@@ -27,7 +27,7 @@ freeOffer: 5 minutes for $1 for new clients
 pricing: From $2.25/min to $14.99/min
 bestFor: Anyone who wants the definitive Keen shortlist for 2026 — one page that matches the right verified advisor to your question type before you spend.
 publishDate: '2026-09-02'
-updatedDate: '2026-09-06'
+updatedDate: '2026-09-12'
 highlights:
   - "The answer comes first: #1 pick in the opening paragraph, full 10-reader table in the first screen."
   - "Ranked by lane from dozens of advisor audits — including the largest completed-session counts in the industry."
@@ -165,6 +165,8 @@ The full ranking first — then the method, then the evidence for every pick.
 
 ---
 
+We re-verified Keen's new-client offer and rate floor in September 2026. The 5-minutes-for-$1 deal is still live and still the cheapest way to test an elite reader on the platform. Two things to keep in mind: the per-advisor rates below shift week to week, so confirm the live price on each profile before you connect, and the post-intro rate is what you'll actually pay on any return visit.
+
 ## How We Ranked: The Methodology
 
 This ranking is the output of our full Keen review program — dozens of in-depth advisor reviews published on this site, each built from the same protocol: session-count and tenure verification, review-feed language analysis across hundreds of client comments, negative-review forensics (we read the 1-stars for content, not just the count), and firsthand session testing on selected advisors. From that pool we selected the ten strongest, ranked by lane.
@@ -203,7 +205,7 @@ Advisor Suzan is a Keen institution: 136,000+ readings since 2005 at a 4.98 aver
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.99/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$9.99/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -247,7 +249,7 @@ Eli Casey's numbers are the largest we have ever audited: 81,000 ratings and **m
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$8.97/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$8.97/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -291,7 +293,7 @@ lorrie c holds a 4.98 across 60,595 readings — and a credential unique in our 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$5.99/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$5.99/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -335,7 +337,7 @@ David7 is Keen's authority on the most contested category in love readings: twin
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$6.99/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$6.99/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -379,7 +381,7 @@ LadyFontaine is a Certified Master Psychic on Keen with 5,098 ratings at 4.99 st
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$8.97/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$8.97/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -423,7 +425,7 @@ Dr Lisa Powerful Insights is one of Keen's highest-rated high-volume advisors: 1
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$14.99/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$14.99/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -467,7 +469,7 @@ Readings by Kelly777 is one of the most battle-tested readers on Keen by sheer v
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$6.99/min chat-only</span>
+        <span class="reader-summary__value">$6.99/min chat-only — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -511,7 +513,7 @@ Tammy the Voice Reader's 4.98 across 26,000 ratings is the highest average in he
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$9.99/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$9.99/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -555,7 +557,7 @@ That Magic Man — James — is a direct, no-tools male reader with 14,000 ratin
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.99/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$2.99/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -599,7 +601,7 @@ Krys Britton is the value anomaly of our entire Keen audit: twenty years of prac
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.25/min · 5 min for $1 intro</span>
+        <span class="reader-summary__value">$2.25/min · 5 min for $1 intro — verify live at checkout</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -638,6 +640,10 @@ Krys Britton is the value anomaly of our entire Keen audit: twenty years of prac
 
 ---
 
+## Pricing Changes to Know About (2026)
+
+The $1-for-5-minutes intro has not moved, and Keen's rate floor is still about $1.99/min for newer readers. What changes is the spread: top-rated Keen advisors now routinely run $9.99–$15+/min, so a 20-minute session with a marquee reader can hit $200+ at list price. Use the intro offer on a reader you have already vetted through reviews — never on a random pick — and set a hard budget timer the moment the paid minutes begin.
+
 ## How to Spend the Keen 5-Minutes-for-$1 Offer
 
 Keen's intro offer is a single deep audition, not a sampler. The protocol:
@@ -663,11 +669,19 @@ The 5-minutes-for-$1 intro covers the audition. Thereafter: $2.25–$5.99/min at
 
 ### Is Keen better than Kasamba or Purple Garden?
 
-Keen's edge is bench depth and tenure: the oldest platform, the largest completed-session counts in the industry, 14 million users, phone-first culture. Kasamba's edge is audition economics — 3 free minutes with *every* new advisor beats Keen's single $1 intro for comparison shopping. Purple Garden's edge is public verification via the Journeys ledger. [Full three-way comparison →](/comparisons/keen-vs-kasamba-vs-purple-garden/)
+Keen's edge is bench depth and tenure: the oldest platform, the largest completed-session counts in the industry, one of the longest-running, largest networks in the industry (since 1999), phone-first culture. Kasamba's edge is audition economics — 3 free minutes with *every* new advisor beats Keen's single $1 intro for comparison shopping. Purple Garden's edge is public verification via the Journeys ledger. [Full three-way comparison →](/comparisons/keen-vs-kasamba-vs-purple-garden/)
 
 ### Phone or chat on Keen?
 
 Phone if you process conversation better — it is Keen's home format and the top bench is built for it. Chat if you want a transcript: the written record is what lets you verify the prediction three weeks later, and on a phone-first platform it is the rarer asset (Kelly777 on this list is the chat-first pick).
+
+### Are the per-minute rates on this list the prices I'll pay?
+
+They're a starting range, not a fixed quote. Keen advisors set their own rates and promo pricing rotates, so the figure on an advisor's profile the day you book can differ from any roundup. Always confirm the live per-minute rate on the profile before your paid session starts.
+
+### Is Keen's $1 intro offer per advisor or per account?
+
+It's a one-time new-client welcome package applied to your first session — not a per-advisor reset like Kasamba's 3-free-minutes structure. Use it once, on the single reader you most want to test.
 
 ---
 

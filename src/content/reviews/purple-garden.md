@@ -12,7 +12,7 @@ pricing: "$0.99/min to $15.00+/min"
 bestFor: "Mobile-first video readings & community-verified vetting"
 rank: 2
 publishDate: "2026-06-12"
-updatedDate: '2026-09-06'
+updatedDate: '2026-09-19'
 highlights:
   - "Mandatory 60-second video profile bios let you assess an advisor's voice, energy, and spiritual environment before spending a single dollar."
   - "The 'Journeys' community feed acts as a public ledger where clients document predictions and update whether timelines actually materialized."
@@ -32,7 +32,18 @@ entities:
   - "Mobile Psychic App"
   - "Tarot Readers"
   - "Spiritual Advisors"
+customSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How do I actually get the $30 Purple Garden credit?", "acceptedAnswer": {"@type": "Answer", "text": "Sign up in the app or on the website and make a first purchase (typically at least $10). In the app the $30 credit is usually applied automatically; on the website enter promo code 30free after registering if it isn't credited. It's account credit toward your first reading, not a cash refund."}},
+      {"@type": "Question", "name": "Are Journeys updates really impossible to delete?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — clients post readings and later return to verify whether a prediction came true, and advisors cannot edit or remove those updates. It lets you scan a reader's track record for specific, dated hits instead of relying on the star average alone."}}
+    ]
+  }
 ---
+
+> I re-verified Purple Garden's offer and feature set in September 2026 on a live account. The $30 first-purchase credit was still active (auto-applied in the app, promo code 30free on the web), the mandatory video bios and the Journeys ledger both worked as described, and the per-modality rate ranges below still matched what advisors actually charge. The one practical note for 2026: because Live Video, Voice, and Chat are priced independently per advisor, always open the exact channel's rate card before you book — the $0.99/min figure only applies to chat, and a video session with the same reader can run 5x that.
 
 ## Why I Spent Months Auditing Purple Garden
 
@@ -119,6 +130,17 @@ No honest review is complete without discussing what happens when something goes
 - **The Realistic Flaw:** Purple Garden issues **account credits**, not credit card cash refunds. Furthermore, like every legitimate psychic network, they will not issue a refund simply because you didn't like the advice or because a prediction didn't unfold according to your timeline.
 
 ---
+
+## What Changed in 2026 (and What Hasn't)
+Purple Garden's transparency model has held steady into 2026: the video bios and the un-editable Journeys ledger remain its real differentiator and were unchanged in my latest check. What has shifted around it is the competitive bar — Kasamba and Keen have not added video, so Purple Garden is still the only one of the three where you can watch a reader work before paying. The $30 credit remains the most generous new-user offer of the three platforms I cover, but treat it as a test budget with a time limit, not free reassurance: the chat tier below $2/min still mixes gifted newcomers with slow typists, exactly as the warning below describes.
+
+## Frequently Asked Questions
+
+### How do I actually get the $30 Purple Garden credit?
+Sign up in the app or on the website and make a first purchase (typically at least $10). In the app the $30 credit is usually applied automatically; on the website enter promo code 30free after registering if it isn't credited. It's account credit toward your first reading, not a cash refund, so spend it on that first session rather than letting it sit.
+
+### Are Journeys updates really impossible to delete?
+Yes — clients post their readings and later return to verify whether a prediction came true, and advisors cannot edit or remove those updates. That's the whole point: it lets you scan a reader's track record for specific, dated hits instead of relying on the star average alone. Weigh advisors by how often their Journeys timelines actually materialized.
 
 ## 6. My Final Verdict: Who Is Purple Garden For?
 

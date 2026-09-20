@@ -27,7 +27,7 @@ freeOffer: $30 credit on first purchase
 pricing: From $2.49/min to $12.99/min (video rates higher)
 bestFor: Anyone who wants the definitive Purple Garden shortlist for 2026 — one page that matches the right verified reader to your question type, with the platform's verification tools explained.
 publishDate: '2026-08-19'
-updatedDate: '2026-09-06'
+updatedDate: '2026-09-15'
 highlights:
   - "Explains why Purple Garden is the only platform where accuracy is verifiable before you spend — and how to use that infrastructure."
   - "Ranks 10 readers across 6 lanes using Journeys ledger analysis, video bio screens, and repeat-client forensics."
@@ -154,6 +154,8 @@ The one-line answer: **Psychic Logan is the strongest all-context booking on the
 
 ---
 
+We re-verified Purple Garden's new-client terms in September 2026. The $30 first-purchase credit is still live (apply code 30free on the web if it isn't auto-applied in the app), and chat still starts at $0.99/min. One thing to plan around: the named per-minute rates below rotate, and video runs 50–100% above chat, so your $30 credit stretches furthest on a short, focused chat session rather than a video deep-dive.
+
 ## How We Ranked: Four Signals, in Order of Difficulty to Fake
 
 **1. The Journeys ledger.** Not all entries are equal. The informative ones contain a specific, dateable prediction and a client who returned after the window to confirm or contradict. A reader with 20 specific, checkable Journeys predictions at a 70% confirmation rate is more credibly accurate than one with 200 vague positive entries. We counted specificity, not enthusiasm.
@@ -193,7 +195,7 @@ Psychic Logan is Purple Garden royalty: **advisor #36** — one of the platform'
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$4.99/min — $30 credit covers ~6 minutes</span>
+        <span class="reader-summary__value">$4.99/min — $30 credit covers roughly 6 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -239,7 +241,7 @@ Andrew Angel is Purple Garden's most deliberately exclusive top advisor: a fourt
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">From $7.49/min — $30 credit covers ~4 minutes</span>
+        <span class="reader-summary__value">From $7.49/min — $30 credit covers roughly 4 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -285,7 +287,7 @@ Annah holds a perfect 5.0 across 37,281 readings since 2015 — 14,785 likes aga
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$7.99/min chat — $30 credit covers ~4 min</span>
+        <span class="reader-summary__value">$7.99/min chat — $30 credit covers roughly 4 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -331,7 +333,7 @@ Truelovetarot — Sneha, a certified tarot reader, numerologist, and Akashic rec
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$6.99/min chat — $30 credit covers ~4 min</span>
+        <span class="reader-summary__value">$6.99/min chat — $30 credit covers roughly 4 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -377,7 +379,7 @@ Athena Love is Purple Garden's truth-with-a-plan specialist: 54,032 readings sin
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">From $4.99/min — $30 credit covers ~6 min</span>
+        <span class="reader-summary__value">From $4.99/min — $30 credit covers roughly 6 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -423,7 +425,7 @@ Tattooed Psychic — Jon Moss, 30 years of practice, attuned at Stonehenge — i
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$7.99/min chat — $30 credit covers ~4 min</span>
+        <span class="reader-summary__value">$7.99/min chat — $30 credit covers roughly 4 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -469,7 +471,7 @@ Satie Readings is a 4.9-star love-tarot reader with 40+ years of experience and 
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">From $4.99/min</span>
+        <span class="reader-summary__value">From $4.99/min — $30 credit covers roughly 6 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -515,7 +517,7 @@ Oh Life Tarot holds Purple Garden's "most accurate" badge across 35,720 readings
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$6.99/min chat — $30 credit covers ~4 min</span>
+        <span class="reader-summary__value">$6.99/min chat — $30 credit covers roughly 4 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -561,7 +563,7 @@ Psychic Norell holds a perfect 5.0 across 39,794 readings since 2016, with a "hi
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$3.99/min chat — $30 credit covers ~7.5 min</span>
+        <span class="reader-summary__value">$3.99/min chat — $30 credit covers roughly 7.5 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -607,7 +609,7 @@ Namrata is one of the most quietly compelling value propositions on Purple Garde
       </div>
       <div class="reader-summary__item">
         <span class="reader-summary__label">Rate</span>
-        <span class="reader-summary__value">$2.49/min — $30 credit covers ~12 minutes</span>
+        <span class="reader-summary__value">$2.49/min — $30 credit covers roughly 12 minutes at this advisor's rate (confirm at checkout)</span>
       </div>
       <div class="reader-summary__item reader-summary__item--full">
         <span class="reader-summary__label">Why This Rank</span>
@@ -656,6 +658,10 @@ Her style is measured — thoughtful pacing over high-volume speed — which pai
 
 ---
 
+## How to Use This List in Fall 2026
+
+Book by format first, then by name. Purple Garden's differentiator is the video intro and the Journeys ledger — use both to vet before you spend a cent of the $30 credit. Stretch the credit on chat: at entry-tier chat rates it can cover a full first diagnostic session; on video it covers roughly 4–6 minutes, enough only to test fit. Because rates move, open each profile the day you book and confirm the live per-minute price before your session starts, and set a budget timer the moment paid minutes begin.
+
 ## Using Purple Garden's Verification Tools Before You Book
 
 The platform's edge is verifiability — but only if you use it. Ten minutes of research before your first session:
@@ -684,6 +690,14 @@ Top Rated and Highest Rated reflect sustained client ratings; Top Accuracy and M
 ### How far does the $30 credit actually go?
 
 At the rates on this list: 12 minutes with Namrata ($2.49), 7.5 with Norell ($3.99), 6 with Logan or Athena Love ($4.99), 4 with the $6.99–$7.99 tier. One focused question needs 4–6 minutes with a prepared reader; a full situational map needs 10–12. Choose the reader whose rate matches the session depth you need — the full math is in [our $30 credit guide](/guides/purple-garden-30-credit-guide/).
+
+### Is the $30 Purple Garden credit applied automatically?
+
+On the app it's usually automatic once you make a first purchase of at least $10. On the website, enter the promo code 30free after registering if the credit doesn't appear. It's a one-time first-purchase bonus, not a recurring discount.
+
+### Do the per-minute rates on this list match what I'll pay?
+
+They're a starting range. Purple Garden advisors set their own rates and promo pricing rotates, so the live profile price when you book can differ from any roundup. Always confirm the rate on the advisor's profile before your paid session starts.
 
 ---
 
