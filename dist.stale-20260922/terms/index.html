@@ -1,0 +1,537 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="application-name" content="EasternAlignment | Honest Psychic Review"><meta name="impact-site-verification" value="9b281445-730b-4b8f-ae89-484d7da8e36e"><script>(function(){const POSTHOG_KEY = "phc_wKtYrkAQ9gynGBsKNW6bZ2PahhYaACwdXTtLSmhB8TCj";
+const POSTHOG_HOST = "https://us.i.posthog.com";
+
+  // ⚠️ 2026-09-15 修复（重要）：此前整个「联盟点击门禁 + 归因」块被
+  // `if (POSTHOG_KEY !== 'REPLACE_ME_POSTHOG_KEY')` 包裹。后果是：
+  // 一旦 PUBLIC_POSTHOG_KEY 未配置 / 被误清空，**不只是埋点停摆** ——
+  // 连 /go/ 跳转前的 ea_sub 拼接与 e.preventDefault() 都一起消失，
+  // 点击归因链直接断裂（这一类故障不会报错，只会让转化数据凭空变少）。
+  //
+  // 现在把「分析上报」与「归因跳转」解耦：归因逻辑无条件运行，
+  // 只有 posthog.init 与事件上报受 key 约束。
+  const HAS_KEY = POSTHOG_KEY && POSTHOG_KEY !== 'REPLACE_ME_POSTHOG_KEY';
+  if (HAS_KEY) {
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId setPersonProperties".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init(POSTHOG_KEY, {
+      api_host: POSTHOG_HOST,
+      person_profiles: 'identified_only',
+      autocapture: true,
+      capture_pageview: true
+    });
+  } else {
+    console.warn("PostHog Analytics: PUBLIC_POSTHOG_KEY is not set. Analytics disabled — affiliate redirect attribution still active.");
+  }
+
+  {
+
+    // ── 联盟点击：门禁 + 归因 + 落点侦测 ───────────────────────────────────
+    // 只有「真人发起的、指向 /go/ 的」点击才算联盟点击。机器人/预取/脚本点击
+    // 永远不会到达联盟地址，联盟后台因此不再计入假点击。
+    //
+    // 2026-09-10 侦测增强（每一项都为了消掉一个盲区）：
+    //   1. ctaSource 三级推断 —— 显式属性 → 祖先 class/id 关键词 → 视口位置。
+    //      同时上报 ctaSourceMethod，用来反查哪些组件仍缺 data-cta-source。
+    //   2. is_first_click / click_seq —— 区分「试探性点击」与「决策性点击」。
+    //      实测有用户在 2 分钟内连点 3 个不同顾问的 CTA，最终由第 3 次成交；
+    //      不区分会把归因完全带偏。
+    //   3. href / page_type / time_on_page_ms / pages_before_click —— 补齐点击前上下文。
+    //   4. $insert_id 幂等 + sendBeacon 传输 —— 单通道上报，不重复计数。
+    //      ⚠️ 2026-09-10 修复：初版用「SDK + 手写 sendBeacon」双通道，并假设共用
+    //      $insert_id 会被 PostHog 去重。**该假设已被实测推翻**（PostHog 的
+    //      $insert_id 去重只在同一批次内生效，两次独立 HTTP 请求各存一条），
+    //      导致点击量翻倍、并让「点击→/go 到达率」分母翻倍触发虚假报警。
+    //      现改为单通道：SDK 一次上报 + `transport: 'sendBeacon'`（见文末发送处）。
+    document.addEventListener('DOMContentLoaded', () => {
+      const SEQ_KEY = 'ea_aff_seq';
+      const FIRST_KEY = 'ea_aff_first_done';
+      const CLICK_KEY = 'ea_aff_click';
+      const PV_KEY = 'ea_pv_count';
+      const T_PAGE = Date.now();
+
+      // 本会话已浏览页数（点击前看了几页）
+      let pvCount = 0;
+      try {
+        pvCount = parseInt(sessionStorage.getItem(PV_KEY) || '0', 10) || 0;
+        pvCount += 1;
+        sessionStorage.setItem(PV_KEY, String(pvCount));
+      } catch (_) {}
+
+      function pageType(p) {
+        if (p === '/' || p === '') return 'home';
+        if (p.indexOf('/guides/') === 0) return 'guide';
+        if (p.indexOf('/reviews/') === 0) return 'review';
+        if (p.indexOf('/comparisons') === 0) return 'comparison';
+        if (p.indexOf('/coupons') === 0) return 'coupons';
+        if (p.indexOf('/blog') === 0) return 'blog';
+        // 2026-09-14：/match 的读者 CTA 也要能被单独归因。
+        // 放在最后一位，不会遮蔽上面任何既有前缀判断。
+        if (p.indexOf('/match') === 0) return 'match';
+        return 'other';
+      }
+
+      function classSig(node) {
+        try {
+          if (node.className && typeof node.className.baseVal === 'string') return node.className.baseVal;
+          if (typeof node.className === 'string') return node.className;
+        } catch (_) {}
+        return '';
+      }
+
+      // 三级推断：显式属性 → DOM 关键词 → 视口位置
+      // 关键词用「分词后精确匹配」而不是子串匹配：否则 legend 会被判成 end、
+      // table-of-contents 会被判成 tab，产生看似合理但完全错误的归因。
+      const KEYMAP = [
+        ['hero', 'hero'], ['end', 'end'], ['inline', 'inline'],
+        ['sidebar', 'sidebar'], ['sticky', 'sticky'], ['topbar', 'topbar'],
+        ['score', 'score-panel'], ['deal', 'sidebar-deal'], ['tab', 'tab'],
+        ['footer', 'footer'], ['coupon', 'coupons-platform'], ['comparison', 'comparison']
+      ];
+      const FALLBACK_KEY = ['cta', 'cta-block'];
+
+      function tokensOf(node) {
+        const raw = ((node.id || '') + ' ' + classSig(node)).toLowerCase();
+        const arr = raw.split(/[^a-z0-9]+/);
+        const set = {};
+        for (let i = 0; i < arr.length; i++) if (arr[i]) set[arr[i]] = 1;
+        return set;
+      }
+
+      function resolveCtaSource(link) {
+        const own = link.getAttribute('data-cta-source');
+        if (own) return [own, 'attr-self'];
+        const anc = link.closest('[data-cta-source]');
+        if (anc) {
+          const v = anc.getAttribute('data-cta-source');
+          if (v) return [v, 'attr-ancestor'];
+        }
+        let node = link, depth = 0, sawFallback = false;
+        while (node && depth < 8) {
+          const tk = tokensOf(node);
+          for (let i = 0; i < KEYMAP.length; i++) {
+            if (tk[KEYMAP[i][0]]) return [KEYMAP[i][1], 'class:' + KEYMAP[i][0]];
+          }
+          if (tk[FALLBACK_KEY[0]]) sawFallback = true;
+          node = node.parentElement;
+          depth++;
+        }
+        if (sawFallback) return [FALLBACK_KEY[1], 'class:cta'];
+        try {
+          const r = link.getBoundingClientRect();
+          if (r.top >= 0 && r.top < window.innerHeight) return ['above-fold', 'viewpos'];
+        } catch (_) {}
+        return ['unknown', 'none'];
+      }
+
+      document.body.addEventListener('click', (e) => {
+        if (!e.isTrusted) return;
+        const link = e.target.closest('a');
+        if (!link) return;
+        const href = link.getAttribute('href') || '';
+        const m = href.match(/\/go\/([^/?#]+)/);
+        if (!m) return;
+        const slug = m[1];
+
+        e.preventDefault();
+
+        try { sessionStorage.setItem(CLICK_KEY, slug); } catch (_) {}
+
+        const distinctId = (window.posthog && typeof posthog.get_distinct_id === 'function')
+          ? posthog.get_distinct_id()
+          : '';
+
+        let clickSeq = 0, isFirst = false;
+        try {
+          clickSeq = (parseInt(sessionStorage.getItem(SEQ_KEY) || '0', 10) || 0) + 1;
+          sessionStorage.setItem(SEQ_KEY, String(clickSeq));
+          isFirst = sessionStorage.getItem(FIRST_KEY) === null;
+          if (isFirst) sessionStorage.setItem(FIRST_KEY, slug);
+        } catch (_) { clickSeq = 1; isFirst = true; }
+
+        const cs = resolveCtaSource(link);
+
+        // ── 每次点击一个唯一令牌 ────────────────────────────────────────
+        // 为什么需要它：click_id 取自 posthog.get_distinct_id()，是「按人」的，
+        // 同一个人点 3 个 CTA 会得到 3 个完全相同的 click_id。实测 178 次点击里
+        // 76% 来自点过 >=2 次的人，于是回调只说得清"是哪个人转化的"，
+        // 说不清"是他哪一次点击转化的"。
+        // 现在把 <人ID>.<点击令牌> 一起作为 aff_sub2 传给联盟，回调原样带回，
+        // 就能精确定位到那一次点击。令牌丢了也不会更糟，代码会退回到按人归因。
+        const clickToken = Math.random().toString(36).slice(2, 8);
+
+        // ⚠️ ea_sub 必须**永远存在**——它是"真人点击"的唯一凭证，
+        // 也是 Cloudflare `/go/` 规则放行的依据（详见部署指南）。
+        // 此前 SDK 未就绪时 distinctId 为空 → ea_sub 整个缺失 →
+        // 这类真实用户会被 CF 按"无 Referer 无凭证"质询。
+        // 实测 9/9 的 3 次点击里就有 1 次 click_id 为空 —— 那是真实存在的漏网。
+        // 兜底用 anon-<随机>，形状保持一致（仍是 <人ID>.<令牌>）；
+        // postback 侧识别 anon- 前缀，不会为它建垃圾人物档案。
+        const personId = distinctId || ('anon-' + Math.random().toString(36).slice(2, 10));
+        const subId = personId + '.' + clickToken;
+
+        const props = {
+          slug: slug,
+          location: window.location.pathname,
+          page_type: pageType(window.location.pathname),
+          ctaSource: cs[0],
+          ctaSourceMethod: cs[1],
+          target_blank: link.target === '_blank',
+          text: (link.innerText || '').trim().slice(0, 80),
+          href: href,
+          click_id: distinctId || null,
+          person_id: personId,
+          click_token: clickToken,
+          sub_id: subId,
+          is_first_click: isFirst,
+          click_seq: clickSeq,
+          pages_before_click: pvCount,
+          time_on_page_ms: Date.now() - T_PAGE,
+          viewport: window.innerWidth + 'x' + window.innerHeight,
+          $insert_id: 'ea-clk-' + (distinctId || 'anon') + '-' + slug + '-' + Date.now()
+        };
+
+        // 跳转目标：带上 <人ID>.<点击令牌> 作为 ea_sub，/go 会把它透传成 aff_sub2，
+        // 联盟回调再原样带回来 —— 于是"哪一次点击成交的"可以被精确回答。
+        const dest = '/go/' + slug + '/' + (subId ? ('?ea_sub=' + encodeURIComponent(subId)) : '');
+
+        // 记下点击时刻，供 /go 页测量「点击 → 到达中转页」的真实耗时
+        try { sessionStorage.setItem('ea_click_t', String(Date.now())); } catch (_) {}
+
+        // ⚡ 2026-09-10 顺序调整：先跳转，后埋点。
+        // 导航是异步排队的 —— 赋值 location.href / 调用 window.open 之后，当前这段
+        // 同步代码依然会执行完。所以把上报挪到跳转之后，可以保证
+        // 埋点**一毫秒都不占用跳转前的关键路径**。
+        // 使用 sendBeacon 传输时由浏览器负责在页面卸载后继续送达，放后面不会丢。
+        if (link.target === '_blank') {
+          window.open(dest, '_blank', 'noopener');
+        } else {
+          window.location.href = dest;
+        }
+
+        // ══ 上报：单通道，绝不允许发第二条 ═══════════════════════════════
+        //
+        // 🐞 2026-09-10 修复「点击量翻倍」：
+        //    原实现发两条 — 通道 A 走 posthog.capture()（$lib=web），通道 B 手写
+        //    POST /capture/ 走 navigator.sendBeacon（无 $lib）。两条共用同一个
+        //    $insert_id，原以为 PostHog 会去重。**实测不会**：两条的 event /
+        //    distinct_id / $insert_id 三者完全相同，ClickHouse 里依然存了两条
+        //    （18:21:32.268 与 18:21:33.437）。原因是 $insert_id 去重只作用于
+        //    **同一批次**，跨 HTTP 请求不生效。
+        //    后果：当日点击 6 条 / 实际 5 次；「点击→/go 到达率」分母翻倍 → 虚假报警。
+        //
+        // ✅ 现方案：只发一条，但用 SDK 的 `transport: 'sendBeacon'`。
+        //    posthog-js 原生支持该传输方式（v1.429.2 已确认 `transport` 选项存在），
+        //    因此能同时满足两个目标，不再需要第二条通道：
+        //      · 完整 SDK 上下文 —— $session_id / $device_type / $lib / 自动捕获链齐全
+        //      · 页面卸载后仍能送达 —— sendBeacon 由浏览器保证，跳转不会中断它
+        //    sendBeacon 不可用时退回 SDK 默认传输（XHR/fetch），而不是自己再发一次，
+        //    否则又会回到重复上报。
+        //    $insert_id 仍然保留 —— 作为幂等标记，供事后排查用（如需查询侧去重，
+        //    用 count(DISTINCT properties.$insert_id)）。
+        try {
+          if (!HAS_KEY) {
+            // 无 key：跳过上报，但**归因跳转已经发生**（见上方的 dest 赋值）。
+            // 这是刻意的取舍 —— 宁可丢这一条埋点，也不能因为配置缺失
+            // 让用户的点击失去 ea_sub 而归因失败。
+          } else if (window.posthog) {
+            const captureOpts = { send_instantly: true };
+            try {
+              if (navigator.sendBeacon) captureOpts.transport = 'sendBeacon';
+            } catch (_) {}
+            posthog.capture('affiliate_link_click', props, captureOpts);
+          } else {
+            // SDK 未就绪（脚本被拦/未初始化）时的唯一兜底：发一条，且只发这一条。
+            // 这里必须保留最小实现，否则会彻底丢点击；但要保证不会与上面的
+            // SDK 通道同时生效 —— 所以放在 else 分支里，二者互斥。
+            if (navigator.sendBeacon) {
+              navigator.sendBeacon(POSTHOG_HOST + '/capture/', new Blob([JSON.stringify({
+                api_key: POSTHOG_KEY,
+                event: 'affiliate_link_click',
+                distinct_id: personId,
+                properties: props,
+                timestamp: new Date().toISOString()
+              })], { type: 'application/json' }));
+            }
+          }
+        } catch (_) {}
+
+      });
+    });
+  }
+})();</script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YM1E05QJTK"></script> <script>(function(){const GA4_ID = "G-YM1E05QJTK";
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', GA4_ID);
+})();</script><!-- Primary Meta --><title>Terms of Use — Eastern Alignment</title><meta name="description" content="Terms and conditions governing your use of the Eastern Alignment website."><link rel="canonical" href="https://easternalignment.com/terms/"><meta name="robots" content="noindex, nofollow"><!-- hreflang cluster --><link rel="alternate" hreflang="en" href="https://easternalignment.com/terms/"><link rel="alternate" hreflang="x-default" href="https://easternalignment.com/terms/"><link rel="alternate" hreflang="es" href="https://easternalignment.com/es/terminos/"><link rel="alternate" hreflang="es-419" href="https://easternalignment.com/es/terminos/"><!-- Favicons --><!-- Google renders the favicon at ~16px. Declare the 96px and 192px PNGs first
+         (both multiples of 48, per Google's guidance) so the high-quality source is
+         picked instead of an upscaled 16px ICO. The .ico keeps multi-size frames as
+         a legacy fallback. Note: no sizes="any" - that hint is for SVG and can make
+         a raster ICO look like the preferred source. --><link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96"><link rel="icon" href="/favicon.png" type="image/png" sizes="192x192"><link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><!-- Google Fonts: DM Serif Display + Inter --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><!-- 联盟跳转主机预热：点击 CTA 时省掉 DNS + TLS 握手（2026-09-10） --><link rel="dns-prefetch" href="https://bargestech.go2cloud.org"><link rel="preconnect" href="https://bargestech.go2cloud.org" crossorigin><!-- PostHog 事件上报主机预热：让点击事件与 /go 到达事件更快发出 --><link rel="dns-prefetch" href="https://us.i.posthog.com"><link rel="preconnect" href="https://us.i.posthog.com" crossorigin><!-- Open Graph --><meta property="og:title" content="Terms of Use — Eastern Alignment"><meta property="og:description" content="Terms and conditions governing your use of the Eastern Alignment website."><meta property="og:type" content="website"><meta property="og:url" content="https://easternalignment.com/terms/"><meta property="og:image" content="https://easternalignment.com/og-default.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Terms and conditions governing your use of the Eastern Alignment website."><meta property="og:site_name" content="Eastern Alignment"><meta property="og:locale" content="en_US"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Terms of Use — Eastern Alignment"><meta name="twitter:description" content="Terms and conditions governing your use of the Eastern Alignment website."><meta name="twitter:image" content="https://easternalignment.com/og-default.jpg"><!-- Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://easternalignment.com/#website","name":"EasternAlignment | Honest Psychic Review","alternateName":"Eastern Alignment","url":"https://easternalignment.com","description":"Honest, independently researched reviews and guidance for online psychic reading platforms.","inLanguage":"en-US","publisher":{"@id":"https://easternalignment.com/#organization"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://easternalignment.com/#organization","name":"Eastern Alignment","alternateName":"Eastern Alignment Psychic Reviews","url":"https://easternalignment.com","logo":{"@type":"ImageObject","@id":"https://easternalignment.com/#logo","url":"https://easternalignment.com/logo.jpg","width":1024,"height":817},"image":"https://easternalignment.com/logo.jpg","description":"Independent review site for online psychic reading platforms — Kasamba, Purple Garden, and Keen — tested by real users."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://easternalignment.com/#sarah","name":"Sarah","url":"https://easternalignment.com/about/","image":"https://easternalignment.com/sarah-avatar.jpg","jobTitle":"Reviewer & Researcher","worksFor":{"@id":"https://easternalignment.com/#organization"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Terms of Use","description":"Terms and conditions governing your use of the Eastern Alignment website.","url":"https://easternalignment.com/terms/"}</script><!-- Agent Discovery link tags (2026-09-13) --><link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json"><link rel="service-desc" type="application/linkset+json" href="/.well-known/api-catalog"><link rel="webmcp" href="/.well-known/webmcp.json"><!-- WebMCP: expose site tools to AI browser agents via navigator.modelContext --><script>
+    (function() {
+      if (typeof navigator === 'undefined' || !navigator.modelContext) return;
+      navigator.modelContext.provideContext({
+        tools: [
+          {
+            name: "get_page_content",
+            description: "Get the full text content of the current Eastern Alignment page (review, guide, or comparison)",
+            inputSchema: { type: "object", properties: {}, required: [] },
+            execute: async function() {
+              var el = document.querySelector('main, article, [role="main"]');
+              return { content: (el || document.body).innerText };
+            }
+          },
+          {
+            name: "get_site_index",
+            description: "Get the complete index of all Eastern Alignment reviews, guides, and comparisons",
+            inputSchema: { type: "object", properties: {}, required: [] },
+            execute: async function() {
+              var r = await fetch('/llms.txt');
+              return { content: await r.text() };
+            }
+          },
+          {
+            name: "get_introductory_offers",
+            description: "Get verified 2026 introductory promos and free minutes/credits for Kasamba, Keen, and Purple Garden",
+            inputSchema: {
+              type: "object",
+              properties: {
+                platform: {
+                  type: "string",
+                  enum: ["kasamba", "keen", "purple-garden"],
+                  description: "Psychic platform name"
+                }
+              },
+              required: ["platform"]
+            },
+            execute: async function(params) {
+              var offers = {
+                kasamba: { headline: "3 Free Minutes + 50% Off", terms: "3 free chat minutes with each new advisor + 50% off up to $50 on first paid session.", url: "https://easternalignment.com/reviews/kasamba/" },
+                keen: { headline: "5 Minutes for $1", terms: "First 5 minutes for $1, then roughly $1.99-$20/min.", url: "https://easternalignment.com/reviews/keen/" },
+                "purple-garden": { headline: "$30 Free Credit", terms: "$30 free credit for new clients. Per-minute rates run $0.99-$15+.", url: "https://easternalignment.com/reviews/purple-garden/" }
+              };
+              return offers[params.platform] || { error: "Unknown platform. Use: kasamba, keen, or purple-garden" };
+            }
+          }
+        ]
+      });
+    })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.fkzBzsa_.css">
+<style>.breadcrumb[data-astro-cid-qaanghzh]{margin-bottom:var(--space-3)}.breadcrumb-list[data-astro-cid-qaanghzh]{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-2);list-style:none;margin:0;padding:0}.breadcrumb-item[data-astro-cid-qaanghzh]{display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm)}.breadcrumb-link[data-astro-cid-qaanghzh]{color:var(--color-text-muted);text-decoration:none;transition:color var(--transition-fast);padding:var(--space-2) var(--space-1);min-height:44px;display:inline-flex;align-items:center}.breadcrumb-link[data-astro-cid-qaanghzh]:hover{color:var(--color-primary)}.breadcrumb-sep[data-astro-cid-qaanghzh]{color:var(--color-border);font-size:var(--text-xs)}.breadcrumb-current[data-astro-cid-qaanghzh]{color:var(--color-text-light)}
+</style>
+<link rel="stylesheet" href="/_astro/global.CEI0YogE.css"></head> <body> <a class="skip-link" href="#main-content">Skip to main content</a> <div class="top-disclosure-bar" id="top-disclosure-bar" data-astro-cid-mqmmndvw> <div class="container" data-astro-cid-mqmmndvw> <p class="top-disclosure-text" data-astro-cid-mqmmndvw>
+Unlike commercial review sites, I personally test these platforms to help you avoid scams. If you use my links, I'll earn a small commission to fund my research and keep this site running. <a href="/disclosure/" data-astro-cid-mqmmndvw>Here's how it works.</a> </p> </div> </div>  <header class="site-header" id="site-header" data-astro-cid-3ef6ksr2> <div class="header-inner container flex-between" data-astro-cid-3ef6ksr2> <!-- Logo / Brand --> <a href="/" class="header-brand" aria-label="Eastern Alignment Home" data-astro-cid-3ef6ksr2> <img src="/logo.jpg" alt="Eastern Alignment Logo" class="brand-icon" width="36" height="36" loading="lazy" data-astro-cid-3ef6ksr2> <span class="brand-text" data-astro-cid-3ef6ksr2>Eastern Alignment</span> </a> <!-- Desktop Navigation --> <nav class="header-nav hide-mobile" aria-label="Main navigation" data-astro-cid-3ef6ksr2> <ul class="nav-list" data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/" class="nav-link" data-astro-cid-3ef6ksr2> Home  </a>  </li><li class="has-dropdown" data-astro-cid-3ef6ksr2> <a href="/reviews/" class="nav-link" data-astro-cid-3ef6ksr2> Reviews <span class="nav-chevron" aria-hidden="true" data-astro-cid-3ef6ksr2>▾</span> </a> <div class="nav-dropdown" data-astro-cid-3ef6ksr2> <div class="nav-dropdown-inner" data-astro-cid-3ef6ksr2> <a href="/reviews/kasamba/" class="nav-dropdown-link" data-astro-cid-3ef6ksr2> Kasamba Psychics </a><a href="/reviews/purple-garden/" class="nav-dropdown-link" data-astro-cid-3ef6ksr2> Purple Garden </a><a href="/reviews/keen/" class="nav-dropdown-link" data-astro-cid-3ef6ksr2> Keen Psychics </a> <a href="/reviews/" class="nav-dropdown-link nav-dropdown-all" data-astro-cid-3ef6ksr2>
+View All Reviews →
+</a> </div> </div> </li><li data-astro-cid-3ef6ksr2> <a href="/guides/" class="nav-link" data-astro-cid-3ef6ksr2> Guides  </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/comparisons/" class="nav-link" data-astro-cid-3ef6ksr2> Comparisons  </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/methodology/" class="nav-link" data-astro-cid-3ef6ksr2> Methodology  </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/about/" class="nav-link" data-astro-cid-3ef6ksr2> About  </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/coupons/" class="nav-link nav-link--button" data-astro-cid-3ef6ksr2> Coupons  </a>  </li> </ul> </nav> <!-- Mobile Menu Toggle --> <button class="mobile-toggle hide-desktop" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" data-astro-cid-3ef6ksr2> <span class="toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="toggle-bar" data-astro-cid-3ef6ksr2></span> </button> </div> <!-- Mobile Navigation --> <nav class="mobile-nav hide-desktop" id="mobile-menu" aria-label="Mobile navigation" data-astro-cid-3ef6ksr2> <ul class="mobile-nav-list" data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/" class="mobile-nav-link" data-astro-cid-3ef6ksr2> Home </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/reviews/" class="mobile-nav-link" data-astro-cid-3ef6ksr2> Reviews </a> <ul class="mobile-subnav" data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/reviews/kasamba/" class="mobile-subnav-link" data-astro-cid-3ef6ksr2> Kasamba Psychics </a> </li><li data-astro-cid-3ef6ksr2> <a href="/reviews/purple-garden/" class="mobile-subnav-link" data-astro-cid-3ef6ksr2> Purple Garden </a> </li><li data-astro-cid-3ef6ksr2> <a href="/reviews/keen/" class="mobile-subnav-link" data-astro-cid-3ef6ksr2> Keen Psychics </a> </li> </ul> </li><li data-astro-cid-3ef6ksr2> <a href="/guides/" class="mobile-nav-link" data-astro-cid-3ef6ksr2> Guides </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/comparisons/" class="mobile-nav-link" data-astro-cid-3ef6ksr2> Comparisons </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/methodology/" class="mobile-nav-link" data-astro-cid-3ef6ksr2> Methodology </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/about/" class="mobile-nav-link" data-astro-cid-3ef6ksr2> About </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/coupons/" class="mobile-nav-link mobile-nav-link--button" data-astro-cid-3ef6ksr2> Coupons </a>  </li> </ul> </nav> </header>  <script type="module">const e=document.getElementById("mobile-menu-toggle"),t=document.getElementById("mobile-menu");e&&t&&(e.addEventListener("click",()=>{const n=t.classList.toggle("is-open");e.setAttribute("aria-expanded",String(n))}),t.querySelectorAll("a").forEach(n=>{n.addEventListener("click",()=>{t.classList.remove("is-open"),e.setAttribute("aria-expanded","false")})}));</script> <main id="main-content">  <div class="section"> <div class="container container--narrow"> <nav class="breadcrumb" aria-label="Breadcrumb" data-astro-cid-qaanghzh> <ol class="breadcrumb-list" data-astro-cid-qaanghzh> <li class="breadcrumb-item" data-astro-cid-qaanghzh>  <a href="/" class="breadcrumb-link" data-astro-cid-qaanghzh>Home</a> <span class="breadcrumb-sep" aria-hidden="true" data-astro-cid-qaanghzh>/</span>  </li><li class="breadcrumb-item" data-astro-cid-qaanghzh> <span class="breadcrumb-current" aria-current="page" data-astro-cid-qaanghzh>Terms of Use</span> </li> </ol> </nav> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://easternalignment.com/"},{"@type":"ListItem","position":2,"name":"Terms of Use","item":"https://easternalignment.com/terms/"}]}</script> <h1>Terms of Use</h1> <div class="prose"> <p><em>Last updated: April 2026</em></p> <h2>Acceptance of Terms</h2> <p>By accessing and using Eastern Alignment (easternalignment.com), you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use this website.</p> <h2>Content Disclaimer</h2> <p>The content on Eastern Alignment is provided for <strong>informational and entertainment purposes only</strong>. My reviews, guides, and articles represent my personal opinions based on first-hand experience and are not intended as professional advice of any kind — including but not limited to medical, financial, legal, or psychological advice.</p> <h2>Psychic Services Disclaimer</h2> <p>Eastern Alignment is a review and information website. I do not provide psychic readings or spiritual services directly. When you click on links to third-party psychic platforms, you are leaving this website and engaging with independent services. I am not responsible for the quality, accuracy, or outcome of any psychic reading you receive through a third-party platform.</p> <p>Psychic readings should not be used as a substitute for professional counseling, therapy, medical treatment, legal advice, or financial planning.</p> <h2>Affiliate Relationships</h2> <p>Some links on this website are affiliate links. This means I may earn a commission if you sign up for a service through my links. See my <a href="/disclosure/">Disclosure page</a> for full details.</p> <h2>Intellectual Property</h2> <p>All content on Eastern Alignment — including text, images, graphics, and design elements — is the property of Eastern Alignment and is protected by applicable copyright laws. You may not reproduce, distribute, or republish this content without written permission.</p> <h2>User Conduct</h2> <p>When using this website, you agree not to:</p> <ul> <li>Use the site for any unlawful purpose</li> <li>Attempt to gain unauthorized access to this website</li> <li>Interfere with the proper functioning of the website</li> <li>Scrape or harvest content without permission</li> </ul> <h2>Limitation of Liability</h2> <p>Eastern Alignment and its owner shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of the website or any third-party services linked from the website.</p> <h2>Changes to Terms</h2> <p>I reserve the right to modify these Terms of Use at any time. Changes will be posted on this page with an updated revision date. Your continued use of the website after any modifications constitutes your acceptance of the updated terms.</p> <h2>Contact</h2> <p>For questions about these Terms of Use, please contact me at <a href="mailto:sarah@easternalignment.com">sarah@easternalignment.com</a>.</p> </div> </div> </div>  </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container" data-astro-cid-sz7xmlte> <!-- Main Footer Content --> <div class="footer-grid" data-astro-cid-sz7xmlte> <!-- Brand Column --> <div class="footer-brand-col" data-astro-cid-sz7xmlte> <a href="/" class="footer-brand" data-astro-cid-sz7xmlte> <img src="/logo.jpg" alt="Eastern Alignment Logo" class="brand-icon" width="32" height="32" loading="lazy" data-astro-cid-sz7xmlte> <span class="brand-text" data-astro-cid-sz7xmlte>Eastern Alignment</span> </a> <p class="footer-tagline" data-astro-cid-sz7xmlte>
+Honest reviews and guidance to help you find the right psychic reading service. I've personally tested every platform I recommend.
+</p> </div> <!-- Platform Reviews Column --> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 class="footer-heading" data-astro-cid-sz7xmlte>Platform Reviews</h4> <ul class="footer-links" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/reviews/kasamba/" data-astro-cid-sz7xmlte>Kasamba Psychics</a></li> <li data-astro-cid-sz7xmlte><a href="/reviews/purple-garden/" data-astro-cid-sz7xmlte>Purple Garden</a></li> <li data-astro-cid-sz7xmlte><a href="/reviews/keen/" data-astro-cid-sz7xmlte>Keen Psychics</a></li> <li data-astro-cid-sz7xmlte><a href="/reviews/" data-astro-cid-sz7xmlte>All Platform Reviews</a></li> <li data-astro-cid-sz7xmlte><a href="/comparisons/" data-astro-cid-sz7xmlte>Comparisons</a></li> </ul> </div> <!-- Explore Column --> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 class="footer-heading" data-astro-cid-sz7xmlte>Relationships</h4> <ul class="footer-links" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/guides/real-marriage-psychics/" data-astro-cid-sz7xmlte>Marriage & Soulmates</a></li> <li data-astro-cid-sz7xmlte><a href="/guides/best-love-psychics-keen-ex-recovery/" data-astro-cid-sz7xmlte>Ex-Recovery Guide</a></li> <li data-astro-cid-sz7xmlte><a href="/guides/divorce-breakup-psychics-online/" data-astro-cid-sz7xmlte>Divorce Forensics</a></li> <li data-astro-cid-sz7xmlte><a href="/guides/online-dating-psychics/" data-astro-cid-sz7xmlte>Online Dating Safety</a></li> </ul> </div> <!-- Learn Column --> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 class="footer-heading" data-astro-cid-sz7xmlte>Learn</h4> <ul class="footer-links" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/guides/what-is-psychic-reading/" data-astro-cid-sz7xmlte>Psychic Reading Basics</a></li> </ul> </div> <!-- Methodology Column --> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 class="footer-heading" data-astro-cid-sz7xmlte>Methodology</h4> <ul class="footer-links" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/methodology/" data-astro-cid-sz7xmlte>How We Test & Review</a></li> <li data-astro-cid-sz7xmlte><a href="/methodology/#scoring-framework" data-astro-cid-sz7xmlte>Scoring Framework</a></li> <li data-astro-cid-sz7xmlte><a href="/methodology/#evidence-standards" data-astro-cid-sz7xmlte>Evidence Standards</a></li> <li data-astro-cid-sz7xmlte><a href="/methodology/#editorial-independence" data-astro-cid-sz7xmlte>Editorial Independence</a></li> <li data-astro-cid-sz7xmlte><a href="/methodology/#research-ledger" data-astro-cid-sz7xmlte>Research Ledger</a></li> </ul> </div> <!-- Mediumship Column --> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 class="footer-heading" data-astro-cid-sz7xmlte>Mediumship</h4> <ul class="footer-links" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/guides/evidential-mediums-passed-spouse/" data-astro-cid-sz7xmlte>Evidential Mediums</a></li> <li data-astro-cid-sz7xmlte><a href="/guides/love-after-loss-mediums/" data-astro-cid-sz7xmlte>Love After Loss</a></li> <li data-astro-cid-sz7xmlte><a href="/guides/best-twin-flame-psychics-online/" data-astro-cid-sz7xmlte>Twin Flame Guide</a></li> <li data-astro-cid-sz7xmlte><a href="/guides/" data-astro-cid-sz7xmlte>All Content Guides</a></li> </ul> </div> <!-- Resources Column --> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 class="footer-heading" data-astro-cid-sz7xmlte>Resources</h4> <ul class="footer-links" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/about/" data-astro-cid-sz7xmlte>About Sarah</a></li> <li data-astro-cid-sz7xmlte><a href="/methodology/" data-astro-cid-sz7xmlte>Our Methodology</a></li> <li data-astro-cid-sz7xmlte><a href="/disclosure/" data-astro-cid-sz7xmlte>How This Site Works</a></li> <li data-astro-cid-sz7xmlte><a href="/privacy/" data-astro-cid-sz7xmlte>Privacy Policy</a></li> <li data-astro-cid-sz7xmlte><a href="/terms/" data-astro-cid-sz7xmlte>Terms of Use</a></li> <li data-astro-cid-sz7xmlte><a href="mailto:sarah@easternalignment.com" data-astro-cid-sz7xmlte>Contact</a></li> </ul> </div> </div> <!-- Divider --> <hr class="footer-divider" data-astro-cid-sz7xmlte> <!-- Mission Statement --> <div class="footer-disclosure" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte> <strong data-astro-cid-sz7xmlte>My Mission:</strong> I built Eastern Alignment because I was tired of fake "review" sites that are just ads in disguise. Every review here is based on my real experience — paid for with my own money, with no special treatment from platforms. If a platform is bad, I'll tell you. <a href="/disclosure/" data-astro-cid-sz7xmlte>Here's how it works</a>.
+</p> </div> <!-- Bottom Bar --> <div class="footer-bottom" data-astro-cid-sz7xmlte> <p class="footer-copyright" data-astro-cid-sz7xmlte>
+&copy; 2026 Eastern Alignment. All rights reserved.
+</p> <p class="footer-disclaimer" data-astro-cid-sz7xmlte>
+For entertainment purposes. Not a substitute for professional advice.
+</p> </div> </div> </footer> <!-- Slim right-edge offer tab: the persistent CTA surface. Replaces both
+         the old full-width bottom bar (which covered the last lines of every
+         article) and the sliding dock panel. It IS the affiliate link — no
+         panel, no toggle, no JavaScript. Pages may pass `stickyCta` to point
+         the tab at that page's own platform/reader URL
+         (e.g. /go/kasamba-master-enigma/). Suppressed entirely in noCta mode.
+
+         NOTE: `stickyCta.label` is deliberately NOT forwarded. Layouts still
+         supply horizontal-button copy ("Try Keen · 5 min for $1 →") which is
+         far too long for a 40px vertical tab — the tab derives its own short
+         line from `stickyCta.platform` instead. --> <a class="side-tab" id="side-offer-tab" href="/go/kasamba/" target="_blank" rel="nofollow sponsored" data-cta-source="side-tab-kasamba" aria-label="Kasamba new-client offer: 3 free minutes + 50% off (opens in a new tab)" data-astro-cid-whivj732> <img class="side-tab__logo" src="/logos/kasamba.png" alt="" width="24" height="24" loading="lazy" aria-hidden="true" data-astro-cid-whivj732> <span class="side-tab__label side-tab__label--dual" data-astro-cid-whivj732> <span class="side-tab__label-line" data-astro-cid-whivj732>3 FREE MINS</span><span class="side-tab__label-line" data-astro-cid-whivj732>+50% OFF</span> </span> <svg class="side-tab__arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false" data-astro-cid-whivj732> <path d="M5.5 10.5L10.5 5.5M6.4 5.5h4.1v4.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-whivj732></path> </svg> <svg class="side-tab__grip" viewBox="0 0 9 16" aria-hidden="true" focusable="false" data-astro-cid-whivj732> <path d="M6.5 2.5 L1.8 8 L6.5 13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-whivj732></path> </svg> </a> <script>
+  (function () {
+    var tab = document.getElementById('side-offer-tab');
+    if (!tab) return;
+
+    var isNarrow = window.matchMedia('(max-width: 768px)').matches;
+    var isTouch = window.matchMedia('(pointer: coarse)').matches;
+
+    /* The UA class only drives the no-JS fallback anchor (iOS gets a top
+       anchor because its collapsing toolbar sits at the bottom). */
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (isIOS) tab.classList.add('side-tab--ios');
+
+    if (!isNarrow || !isTouch) return; /* desktop: CSS-only, unchanged */
+
+    /* ── Touch interaction engine (full AssistiveTouch model) ─────────────
+       One coordinate space: `left` px from the viewport's left edge, so the
+       tab can travel the whole screen. State: side + y + tucked. While a
+       finger is down, transitions are off and the tab tracks 1:1; on
+       release it springs to the nearest edge. */
+    var KEY = 'ea_side_tab_v1';
+    var TUCK = 22; /* px hidden when tucked: 36px tab - 14px handle */
+
+    function W() { return window.innerWidth; }
+    function H() { return window.innerHeight; }
+    function tw() { return tab.offsetWidth || 36; }
+    function tabH() { return tab.offsetHeight || 130; }
+    function minY() { return 96; } /* below the sticky offer-bar + header */
+    function maxY() { return Math.max(minY(), H() - tabH() - 16); }
+    function clamp(v, a, b) { return v < a ? a : (v > b ? b : v); }
+    function defaultY() {
+      if (isIOS) return Math.round(H() * 0.42);
+      /* mirror the old CSS rule: bottom offset = max(6.5rem, 15vh) */
+      return Math.round(H() - Math.max(104, H() * 0.15) - tabH());
+    }
+    function dockX(side, tucked) {
+      return side === 'right'
+        ? (tucked ? W() - tw() + TUCK : W() - tw())
+        : (tucked ? -TUCK : 0);
+    }
+
+    var restored = null;
+    try { restored = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+    var side = (restored && restored.side === 'left') ? 'left' : 'right';
+    var y = (restored && typeof restored.y === 'number')
+      ? clamp(restored.y, minY(), maxY())
+      : clamp(defaultY(), minY(), maxY());
+    var tucked = !!(restored && restored.tucked);
+
+    function save() {
+      try { sessionStorage.setItem(KEY, JSON.stringify({ side: side, y: Math.round(y), tucked: tucked })); } catch (e) {}
+    }
+    function render() {
+      tab.style.left = Math.round(dockX(side, tucked)) + 'px';
+      tab.style.top = Math.round(y) + 'px';
+      tab.dataset.side = side;
+      tab.dataset.tucked = tucked ? 'true' : 'false';
+    }
+
+    tab.classList.add('side-tab--js');
+    tab.dataset.boot = 'true';   /* suppress transitions until after first paint */
+    render();
+    /* Two frames later the spring physics come online for gestures — the
+       tab must APPEAR at its restored state, never glide there on load. */
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { tab.dataset.boot = 'false'; });
+    });
+
+    var pid = null, dragging = false;
+    var sx = 0, sy = 0, baseX = 0, baseY = 0, moved = 0, t0 = 0;
+    var curX = 0, lastPX = 0, lastPY = 0, lastT = 0, vX = 0, vY = 0;
+
+    /* Floating state: while the tab is away from a dock (mid-drag, or
+       gliding to one), it wears a fully rounded shape; the flush one-sided
+       radius returns once the spring has landed. */
+    var floatTimer = null;
+    function setFloating(on) {
+      if (floatTimer) { clearTimeout(floatTimer); floatTimer = null; }
+      tab.dataset.floating = on ? 'true' : 'false';
+    }
+    function dockSoon() {
+      if (floatTimer) clearTimeout(floatTimer);
+      floatTimer = setTimeout(function () {
+        tab.dataset.floating = 'false';
+        floatTimer = null;
+      }, 480); /* slightly past the 0.42s spring so it stays rounded mid-glide */
+    }
+
+    tab.addEventListener('pointerdown', function (e) {
+      if (!e.isPrimary || dragging) return;
+      pid = e.pointerId;
+      try { tab.setPointerCapture(pid); } catch (err) {}
+      sx = e.clientX; sy = e.clientY;
+      baseX = dockX(side, tucked); baseY = y;
+      curX = baseX;
+      moved = 0; t0 = performance.now();
+      lastPX = sx; lastPY = sy; lastT = t0; vX = 0; vY = 0;
+      dragging = true;
+      tab.dataset.dragging = 'true';
+      setFloating(true);
+    });
+
+    tab.addEventListener('pointermove', function (e) {
+      if (!dragging || e.pointerId !== pid) return;
+      var dx = e.clientX - sx, dy = e.clientY - sy;
+      var total = Math.abs(dx) + Math.abs(dy);
+      if (total > moved) moved = total;
+
+      /* horizontal: 1:1 global follow, clamped so the tab never leaves
+         the screen further than its tucked position on either edge. */
+      curX = clamp(baseX + dx, -TUCK, W() - tw() + TUCK);
+
+      /* vertical: 1:1 follow, rubber-band resistance past the clamps */
+      var raw = baseY + dy, ny;
+      if (raw < minY()) ny = minY() - (minY() - raw) * 0.28;
+      else if (raw > maxY()) ny = maxY() + (raw - maxY()) * 0.28;
+      else ny = raw;
+      y = ny;
+
+      tab.style.left = Math.round(curX) + 'px';
+      tab.style.top = Math.round(y) + 'px';
+
+      var now = performance.now(), dt = now - lastT;
+      if (dt > 0) {
+        vX = 0.7 * vX + 0.3 * ((e.clientX - lastPX) / dt);
+        vY = 0.7 * vY + 0.3 * ((e.clientY - lastPY) / dt);
+      }
+      lastPX = e.clientX; lastPY = e.clientY; lastT = now;
+    });
+
+    function finish(e) {
+      if (!dragging || (e && e.pointerId !== pid)) return;
+      dragging = false;
+      tab.dataset.dragging = 'false';
+
+      var dt = performance.now() - t0;
+      var isTap = moved < 9 && dt < 500;
+
+      if (isTap) {
+        /* snap back from any rubber-band offset; click handler does the rest */
+        y = clamp(y, minY(), maxY());
+        render();
+        dockSoon();
+        return;
+      }
+
+      /* settle vertical with a hint of momentum, then clamp hard */
+      y = clamp(y + vY * 90, minY(), maxY());
+
+      /* horizontal: project the flick, dock to the nearest edge. A gesture
+         that ends INTO the edge becomes a tuck; anything else stays
+         expanded. Thresholds are deliberately forgiving (curved-screen
+         edges make long edge swipes laborious), yet sit well outside the
+         9px tap zone so taps never misfire. */
+      var expandedW = W() - tw();
+      var proj = curX + vX * 160;
+      if (proj <= expandedW / 2) {
+        side = 'left';
+        tucked = proj < -8;
+      } else {
+        side = 'right';
+        tucked = proj > expandedW + 8;
+      }
+      render();
+      save();
+      dockSoon();
+    }
+
+    tab.addEventListener('pointerup', finish);
+    tab.addEventListener('pointercancel', finish);
+
+    tab.addEventListener('click', function (e) {
+      if (moved >= 9) {                       /* it was a drag, not a tap */
+        e.preventDefault();
+        e.stopPropagation();
+        moved = 0;
+        return;
+      }
+      if (tucked) {                           /* tap on the handle: spring out */
+        e.preventDefault();
+        e.stopPropagation();
+        tucked = false;
+        render();
+        save();
+      }
+      /* expanded tap: default <a target="_blank"> navigation proceeds */
+    });
+
+    window.addEventListener('resize', function () {
+      y = clamp(y, minY(), maxY());
+      render();
+    }, { passive: true });
+  })();
+</script> </body></html>
