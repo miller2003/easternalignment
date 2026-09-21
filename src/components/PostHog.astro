@@ -64,7 +64,6 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
         if (p.indexOf('/guides/') === 0) return 'guide';
         if (p.indexOf('/reviews/') === 0) return 'review';
         if (p.indexOf('/comparisons') === 0) return 'comparison';
-        if (p.indexOf('/astrology') === 0) return 'astrology';
         if (p.indexOf('/coupons') === 0) return 'coupons';
         if (p.indexOf('/blog') === 0) return 'blog';
         // 2026-09-14：/match 的读者 CTA 也要能被单独归因。
