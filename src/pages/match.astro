@@ -1,133 +1,152 @@
 ---
 /**
- * /match —— Spiritual Intent Router + 个性化推荐引擎
+ * src/pages/match.astro
  *
- * 这一层只做三件事：
- *   1. 在构建期把内容索引（162 位读者 / 112 篇指南）算好并压成精简 JSON
- *   2. 调 BaseLayout 输出外壳与样式
- *   3. 挂载 src/match/app.ts
- *
- * 所有业务逻辑在 src/match/{engine,config,content}，所有渲染在 src/match/ui。
- * 这里不再出现任何内联脚本、内联样式或 DOM 拼接。
+ * Dedicated Situation-Based Reader Match Page for Eastern Alignment.
+ * Combines high-authority editorial guidance on choosing an advisor
+ * with the Apple-grade interactive matching tool.
  */
+
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { affiliateLinks } from '../data/affiliateLinks';
-import { classifyReader, type RawReader } from '../match/content/readerClassifier';
-import { buildArticle } from '../match/content/articleClassifier';
-import type { ReaderMatchMetadata, ArticleMetadata } from '../match/types';
-import '../match/styles/match.css';
+import ReaderMatch from '../components/ReaderMatch.astro';
+import FAQ from '../components/FAQ.astro';
+import readersData from '../data/readers.json';
 
-/* ── 1. 读者索引 ──────────────────────────────────────────────────── */
+const totalAuditedReaders = (readersData as any[]).length;
 
-const readerFiles = {
-  kasamba: import.meta.glob('../content/readers/kasamba/*.md', { eager: true }),
-  'purple-garden': import.meta.glob('../content/readers/purple-garden/*.md', { eager: true }),
-  keen: import.meta.glob('../content/readers/keen/*.md', { eager: true }),
-} as const;
-
-const knownGoSlugs = new Set(Object.keys(affiliateLinks));
-const readers: ReaderMatchMetadata[] = [];
-const dropped: string[] = [];
-
-for (const [platform, files] of Object.entries(readerFiles)) {
-  for (const [path, mod] of Object.entries(files)) {
-    const fm = ((mod as any).frontmatter ?? {}) as Record<string, unknown>;
-    const slug = path.split('/').pop()!.replace(/\.md$/, '');
-    const raw: RawReader = {
-      slug,
-      platform: platform as RawReader['platform'],
-      platformName: fm.platformName as string | undefined,
-      rating: fm.rating as number | undefined,
-      affiliateUrl: fm.affiliateUrl as string | undefined,
-      avatarUrl: fm.avatarUrl as string | undefined,
-      bestFor: fm.bestFor as string | undefined,
-      freeOffer: fm.freeOffer as string | undefined,
-      unavailable: fm.unavailable as boolean | undefined,
-    };
-
-    const goSlug = (raw.affiliateUrl ?? '').replace(/^\/go\//, '').replace(/\/$/, '');
-    if (goSlug && !knownGoSlugs.has(goSlug)) {
-      dropped.push(`${platform}/${slug} → /go/${goSlug}/ 不存在`);
-      continue;
-    }
-
-    const classified = classifyReader(raw);
-    if (classified) readers.push(classified);
+const matchFAQs = [
+  {
+    question: "How does the Eastern Alignment Match Engine select advisors?",
+    answer: "Our system uses deterministic fit-vector scoring across 240+ independently audited reader profiles on Kasamba, Purple Garden, and Keen. We evaluate 7 specific dimensions: your primary situation (e.g., relationship drift vs. career crossroads), whose headspace you need to read, modality fit, preferred communication format, reading style (e.g., direct vs. gentle), budget, and verified client evidence. We do not use arbitrary or hallucinated AI rankings."
+  },
+  {
+    question: "Why not just pick the highest-rated reader on a platform?",
+    answer: "Because popularity is not the same as situation fit. An advisor with 10,000 five-star reviews for general life-path astrology may be completely ineffective for decoding an avoidant ex-partner's silence. Matching your specific dilemma to an advisor whose documented track record proves competence in that exact scenario is what saves money and produces usable clarity."
+  },
+  {
+    question: "How do the introductory trials (e.g., 3 free minutes, $1 trial) work?",
+    answer: "Every major platform provides a low-risk entry offer for new clients: Kasamba offers 3 free minutes with every new advisor plus 50% off; Purple Garden provides a $30 first-purchase credit; and Keen offers a $1 for 5 minutes trial. We recommend using those opening minutes as an audition — ask your focused question immediately, and end the call inside the free window if the connection feels generic."
+  },
+  {
+    question: "What is the difference between chat, phone, and video readings?",
+    answer: "Live Chat (Kasamba) automatically saves permanent written transcripts so you can review and audit predictions weeks later. Phone readings (Keen) provide natural conversational cadence and vocal nuance. Live Video (Purple Garden) offers face-to-face visual transparency and mandatory reader intro videos. Your comfort level determines which format allows the most honest exchange."
+  },
+  {
+    question: "Are my answers to the matching quiz kept private?",
+    answer: "Yes. The Eastern Alignment match engine runs entirely in your local browser using client-side JavaScript. None of your personal situation choices or answers are ever sold, stored on remote databases, or tied to your identity."
   }
-}
+];
 
-// 分值相同时按 slug 稳定排序，保证同一画像每次得到同样的推荐顺序
-readers.sort((a, b) => a.slug.localeCompare(b.slug));
-
-/* ── 2. 文章索引 ──────────────────────────────────────────────────── */
-
-const guideFiles = import.meta.glob('../content/guides/*.md', { eager: true });
-const articles: ArticleMetadata[] = [];
-
-for (const [path, mod] of Object.entries(guideFiles)) {
-  const fm = ((mod as any).frontmatter ?? {}) as Record<string, unknown>;
-  const slug = path.split('/').pop()!.replace(/\.md$/, '');
-  const title = (fm.title as string) || slug.replace(/-/g, ' ');
-  if (!title) continue;
-  articles.push(buildArticle(slug, title));
-}
-
-articles.sort((a, b) => a.slug.localeCompare(b.slug));
-
-/* ── 3. 构建期体检（问题在这里暴露，而不是等用户点开才发现） ────── */
-
-if (dropped.length) {
-  console.warn(`[match] ${dropped.length} 位读者因 /go/ 路由缺失被排除：\n  - ${dropped.join('\n  - ')}`);
-}
-const noAvatar = readers.filter((r) => !r.avatarUrl);
-if (noAvatar.length) console.warn(`[match] ${noAvatar.length} 位读者缺少头像：${noAvatar.map((r) => r.slug).join(', ')}`);
-console.log(`[match] 索引完成：读者 ${readers.length} 位，文章 ${articles.length} 篇`);
-
-const readersJson = JSON.stringify(readers);
-const articlesJson = JSON.stringify(articles);
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Eastern Alignment Reader Match Engine",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "All",
+  "url": "https://easternalignment.com/match/",
+  "description": "Deterministic situation-based psychic advisor match engine. Matches personal relationship, career, and spiritual questions against 240+ independently audited readers.",
+  "creator": {
+    "@type": "Organization",
+    "name": "Eastern Alignment",
+    "url": "https://easternalignment.com"
+  }
+};
 ---
 
 <BaseLayout
-  title="Find Your Spiritual Theme | Eastern Alignment"
-  description="Answer seven quick questions and find what your current spiritual theme may be asking you to explore — plus the guides and readers that fit it."
-  noindex={true}
-  noCta={true}
-  hideDisclosure={true}
-  bareFooter={true}
+  title="Psychic Reader Match: Find the Right Advisor for Your Situation (2026)"
+  description={`Answer 7 quick questions to match your exact dilemma with the right vetted psychic advisor across ${totalAuditedReaders}+ documented profiles on Kasamba, Purple Garden, and Keen.`}
+  jsonLd={webAppSchema}
 >
-  <main id="match-root">
-    <div id="match-app">
-      <section class="m-screen m-screen--center">
-        <div class="m-computing">
-          <div class="m-orb" aria-hidden="true"></div>
-          <p>Preparing your reading…</p>
-        </div>
-      </section>
+  <!-- Page Header -->
+  <header class="match-page-hero section section--sm">
+    <div class="container container--narrow" style="text-align: center;">
+      <span class="section-eyebrow text-xs text-uppercase text-muted">Precision Matching · Documented Audits · Zero Marketing Padding</span>
+      <h1 class="hero-title" style="margin-top: var(--space-2); margin-bottom: var(--space-4);">
+        How to Choose the Right Psychic Reader <br />
+        <span class="text-gradient">for Your Exact Situation</span>
+      </h1>
+      <p class="hero-subtitle text-muted" style="max-width: 660px; margin: 0 auto var(--space-6);">
+        There is no single "best" psychic reader in the abstract — only the reader whose documented method and communication style fit your specific dilemma. Use our situation-based matching tool below to bypass marketing hype and find genuine competence.
+      </p>
+      <div class="hero-meta" style="display: flex; gap: 0.5rem; justify-content: center; font-size: var(--text-xs); color: var(--color-text-muted);">
+        <span>Audited by Eastern Alignment</span>
+        <span>·</span>
+        <span>{totalAuditedReaders}+ advisor profiles indexed</span>
+        <span>·</span>
+        <span>Client-side private evaluation</span>
+      </div>
     </div>
+  </header>
 
-    <noscript>
-      <section class="m-screen m-screen--center">
-        <div class="m-landing">
-          <h1 class="m-h1">This tool needs JavaScript</h1>
-          <p class="m-lede">
-            The theme finder runs entirely in your browser — that is what keeps your answers private,
-            and it is why it needs JavaScript enabled. In the meantime, these are the most-read pages on the site:
-          </p>
-          <p class="m-p">
-            <a class="m-link" href="/reviews/kasamba/">Kasamba review</a> ·
-            <a class="m-link" href="/reviews/purple-garden/">Purple Garden review</a> ·
-            <a class="m-link" href="/guides/no-contact-psychic-readings-guide/">No contact and psychic readings</a> ·
-            <a class="m-link" href="/guides/how-to-choose-a-psychic-reader/">How to choose a reader</a>
-          </p>
-        </div>
-      </section>
-    </noscript>
-  </main>
+  <!-- Interactive Match Tool Section -->
+  <ReaderMatch
+    id="match-tool"
+    eyebrow="Interactive Decision Engine"
+    title="Match Your Situation with a Vetted Advisor"
+    subtitle="Select what you are dealing with below. The matching algorithm evaluates your dilemma across 240+ documented advisor track records."
+  />
 
-  <script id="match-reader-data" type="application/json" set:html={readersJson}></script>
-  <script id="match-article-data" type="application/json" set:html={articlesJson}></script>
+  <!-- Editorial Context & Framework -->
+  <section class="match-editorial section section--alt">
+    <div class="container container--narrow prose">
+      <h2>Why Generic "Top 10 Psychic" Lists Usually Disappoint</h2>
+      <p>
+        The most common mistake new seekers make is booking the reader with the most reviews or the highest rating on a platform's homepage. On large networks like Kasamba, Purple Garden, and Keen, popularity is often a function of seniority and marketing visibility rather than specific situational skill.
+      </p>
+      <p>
+        In our multi-year review series covering more than two hundred readers, we discovered that reading accuracy is deeply compartmentalized:
+      </p>
+      <ul>
+        <li>
+          <strong>Third-Person Insight vs. Internal Coaching:</strong> If you want to know what an ex-partner is thinking during no-contact, you need an intuitive who specializes in <em>reading the other person</em>. Booking a life coach or empowerment card reader for that question will only result in generic advice on self-love.
+        </li>
+        <li>
+          <strong>Modality Trade-offs:</strong> Tarot excels at revealing subconscious dynamics, hidden obstacles, and relational roadmaps. Clairvoyant psychic reading excels at raw, unfiltered conversational candor. Mediumship has a single standard of evidence: recognizable memories of departed souls.
+        </li>
+        <li>
+          <strong>Communication Density:</strong> A fast, structured chat reader who types at 80 words per minute will deliver more actionable insights in an 8-minute session ($40) than a slow, rambling reader charging half that rate. Density, not per-minute sticker price, is the true cost of a reading.
+        </li>
+      </ul>
+
+      <h2>The 3-Minute Audition Protocol</h2>
+      <p>
+        We strongly advocate using introductory trials — such as Kasamba's 3 free minutes or Keen's dollar trial — as an unannounced audition. Here is our tested protocol:
+      </p>
+      <ol>
+        <li>
+          <strong>Formulate One Specific Question:</strong> Arrive with a clear focal point (e.g., <em>"What is the primary factor preventing [Name] from communicating honestly?"</em>). Avoid vague inquiries like "what do you see in my future?"
+        </li>
+        <li>
+          <strong>Offer Minimal Backstory:</strong> Share only names and birth dates (if requested). Do not feed the reader your suspicions or emotional theories.
+        </li>
+        <li>
+          <strong>Demand Unprompted Specificity:</strong> A genuine connection will produce recognizable emotional realities or specific behavioral details within 120 seconds. If the reader spends the first three minutes asking leading questions or making universally true statements, end the session immediately.
+        </li>
+      </ol>
+
+      <div class="match-editorial-cta" style="margin-top: var(--space-8); text-align: center;">
+        <a href="#match-tool" class="btn btn--primary">Take the Match Quiz Above ↑</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container container--narrow">
+      <FAQ items={matchFAQs} title="Frequently Asked Questions About Reader Matching" />
+    </div>
+  </section>
 </BaseLayout>
 
-<script>
-  import '../match/app';
-</script>
+<style>
+  .match-page-hero {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-6);
+  }
+
+  .match-editorial {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+</style>

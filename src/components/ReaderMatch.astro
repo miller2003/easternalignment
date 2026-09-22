@@ -1,0 +1,128 @@
+---
+/**
+ * src/components/ReaderMatch.astro
+ *
+ * Standalone embeddable Reader Match System component.
+ * Powers the situation-based matching on both the Homepage (below Hero)
+ * and the dedicated /match page.
+ */
+
+import readersData from '../data/readers.json';
+import '../match/styles/match.css';
+
+interface Props {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  compact?: boolean;
+}
+
+const {
+  id = 'match',
+  eyebrow = 'Situation-Based Precision Matching',
+  title = 'Find the Exact Psychic Advisor for Your Situation',
+  subtitle = 'Answer 7 focused questions. Our deterministic matching algorithm filters 240+ audited advisors across Kasamba, Purple Garden, and Keen to pinpoint the reader best suited to your specific question, preferred style, and budget.',
+  compact = false,
+} = Astro.props;
+
+// Minified client dataset (drops lengthy editorial bodies, preserving 100% of matching attributes)
+const clientReaders = (readersData as any[]).map((r) => ({
+  id: r.id,
+  slug: r.slug,
+  name: r.name,
+  platform: r.platform,
+  platformName: r.platformName,
+  reviewUrl: r.reviewUrl,
+  affiliateUrl: r.affiliateUrl,
+  avatarUrl: r.avatarUrl,
+  rating: r.rating,
+  reviewRating: r.reviewRating,
+  reviewCount: r.reviewCount,
+  pricing: r.pricing,
+  pricePerMinute: r.pricePerMinute,
+  freeOffer: r.freeOffer,
+  bestFor: r.bestFor,
+  practices: r.practices,
+  primaryPractice: r.primaryPractice,
+  intents: r.intents,
+  questionTypes: r.questionTypes,
+  formats: r.formats,
+  styles: r.styles,
+  fitVector: r.fitVector,
+  trust: r.trust,
+  availability: r.availability,
+  active: r.active,
+  cons: (r.cons || []).slice(0, 2),
+  pros: (r.pros || []).slice(0, 2),
+}));
+
+const readersJson = JSON.stringify(clientReaders);
+---
+
+<section class={`ea-match-section section ${compact ? 'section--sm' : ''}`} id={id}>
+  <div class="container">
+    <div class="section-header ea-match-section-head">
+      <span class="section-eyebrow text-xs text-uppercase text-muted">{eyebrow}</span>
+      <h2 class="section-title">{title}</h2>
+      <p class="section-desc text-muted">{subtitle}</p>
+    </div>
+
+    <!-- Match App Container -->
+    <div id="ea-match-root" class="ea-match-container">
+      <!-- Loading Skeleton / SSR Placeholder -->
+      <div class="ea-match-card">
+        <div class="ea-match-computing">
+          <div class="ea-computing-orb-wrapper">
+            <div class="ea-computing-orb">
+              <div class="ea-computing-ring"></div>
+              <div class="ea-computing-core"></div>
+            </div>
+          </div>
+          <h3 class="ea-computing-status">Initializing Situation Match Engine…</h3>
+          <p class="ea-computing-sub">Screening 240+ Audited Advisor Profiles</p>
+        </div>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="ea-match-card" style="text-align: center; margin-top: 1rem;">
+        <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Interactive Match Requires JavaScript</h3>
+        <p class="text-muted text-sm" style="max-width: 520px; margin: 0 auto 1rem;">
+          Our situation-based match engine runs entirely client-side in your browser to maintain 100% privacy for your answers.
+          You can also browse our top-rated platform reviews directly:
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/reviews/kasamba/" class="btn btn--primary btn--sm">Kasamba Review (3 Free Mins)</a>
+          <a href="/reviews/purple-garden/" class="btn btn--secondary btn--sm">Purple Garden Review ($30 Credit)</a>
+          <a href="/reviews/keen/" class="btn btn--secondary btn--sm">Keen Review ($1 Trial)</a>
+        </div>
+      </div>
+    </noscript>
+  </div>
+</section>
+
+<script id="ea-readers-data" type="application/json" set:html={readersJson}></script>
+
+<script>
+  import '../match/app';
+</script>
+
+<style>
+  .ea-match-section {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-12);
+    position: relative;
+  }
+
+  .ea-match-section-head {
+    max-width: 740px;
+    margin: 0 auto var(--space-8);
+    text-align: center;
+  }
+
+  .ea-match-section-head .section-title {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-3);
+  }
+</style>
