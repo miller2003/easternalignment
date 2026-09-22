@@ -23,7 +23,32 @@ import readersJson from '../../data/readers.json';
 
 const READERS: ReaderProfile[] = readersJson as unknown as ReaderProfile[];
 
-export const NEXT_STEP_URL = 'https://easternalignment.com/match/';
+/**
+ * Deterministic attribution: every surfaced link carries UTM so MCP-driven
+ * visits join the existing utm_source=chatgpt.com PostHog segmentation instead
+ * of landing as unattributed direct traffic.
+ */
+const MATCH_PAGE = 'https://easternalignment.com/match/';
+function nextStepUrl(tool: string): string {
+  return `${MATCH_PAGE}?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=${tool}`;
+}
+/** Generic (tool-agnostic) next-step URL. */
+export const NEXT_STEP_URL = nextStepUrl('match_spiritual_need');
+
+/** Size of the audited catalog — referenced by MCP instructions so it can
+ *  never drift from the actual data. */
+export const PROFILES_COUNT = READERS.length;
+
+/**
+ * Platform intro offers, centralized so matchReaderType and the audition
+ * protocol can never quote different (stale) numbers.
+ * Verified against platform terms as of 2026-09; re-verify each quarter.
+ */
+export const INTRO_OFFERS = [
+  'Kasamba: 3 free minutes + 50% off for new clients',
+  'Purple Garden: $30 first-purchase credit',
+  'Keen: $1 for 5 minutes',
+] as const;
 
 /* ────────────────────────────────────────────────────────────────────────────
  * 1. Intent classification (keyword scoring over the site's intent taxonomy)
@@ -31,33 +56,42 @@ export const NEXT_STEP_URL = 'https://easternalignment.com/match/';
 
 type IntentConfidence = 'high' | 'moderate' | 'low';
 
+// NOTE: the last regex in each high-traffic intent covers Spanish input (the
+// site ships an es/ edition, so Spanish users are a real segment). Accented
+// characters defeat \b in JS regex, so Spanish patterns deliberately use
+// boundary-free substrings.
 const INTENT_KEYWORDS: Record<Intent, RegExp[]> = {
   breakup_ex: [
     /\b(broke up|breakup|break[- ]up|divorce|separation|separated)\b/i,
     /\b(no contact|ghost(ed)?|dumped|left me|he left|she left|ended it|walked away)\b/i,
     /\b(ex[- ]?(boyfriend|girlfriend|husband|wife|partner)?|my ex)\b/i,
     /\b(get (him|her|them) back|win (him|her) back|come back|reconcil\w*|reunion)\b/i,
+    /(ruptura|mi ex|volver con|reconciliaci|se separ[oó]|\bex novio|\bex espos)/i,
   ],
   another_person_intentions: [
     /\b(does (he|she|my|their) (really )?(think|feel|love|care|want))\b/i,
     /\b(what (does|is) (he|she) (really )?(thinking|feeling|planning|hiding))\b/i,
     /\b(intentions|hiding something|lying|cheating|leading me on|using me|mixed signals)\b/i,
     /\b(how (does )?(he|she) (feel|see) (about|toward) me)\b/i,
+    /(siente por m[ií]|piensa de m[ií]|piensa sobre m[ií]|sus intenciones|me enga[nñ]a|se[nñ]ales confusas)/i,
   ],
   love_relationship: [
     /\b(relationship|partner|boyfriend|girlfriend|husband|wife|marriage|marry)\b/i,
     /\b(distant|drifting|growing apart|falling out of love|arguments|communication issues)\b/i,
     /\b(twin flame|soulmate|the one|committed|commitment)\b/i,
+    /(mi pareja|matrimonio|mi novio|mi novia|mi esposo|mi esposa|llama gemela|alma gemela)/i,
   ],
   dating: [
     /\b(dating|first date|crush|talking stage|situationship|seeing someone)\b/i,
     /\b(new (guy|girl|man|woman|person)|someone new|just started (talking|dating))\b/i,
     /\b(tinder|hinge|bumble|matched with|dating app)\b/i,
+    /(conoc[ií] a alguien|saliendo con alguien|tinder|hinge|bumble)/i,
   ],
   career_work: [
     /\b(job|career|boss|promotion|promote|coworker|colleague|workplace|interview)\b/i,
     /\b(quit|fired|laid off|layoff|resign|new role|new position)\b/i,
     /\b(business|startup|entrepreneur|office politics|burn ?out)\b/i,
+    /(mi trabajo|mi jefe|mi jefa|empleo|ascenso|despid|mi carrera|burn ?out)/i,
   ],
   money_finance: [
     /\b(money|finances|financial|debt|loan|mortgage|savings|invest(ment|ing)?)\b/i,
@@ -75,11 +109,13 @@ const INTENT_KEYWORDS: Record<Intent, RegExp[]> = {
     /\b(passed away|died|death|deceased|my late (mom|dad|husband|wife|son|daughter|friend))\b/i,
     /\b(grief|grieving|loss of|medium(ship)?|afterlife|in spirit|connect with (my|the) (mom|dad|grand))\b/i,
     /\b((grand)?(mother|father|mom|dad|brother|sister) who (passed|died))\b/i,
+    /(falleci|muri[oó]|\bduelo\b|difunt|hablar con mi (mam|pap|espos)|conectar con su esp[ií]ritu|m[eé]dium)/i,
   ],
   self_reflection: [
     /\b(my (purpose|healing|growth|anxiety|boundaries|self[- ]esteem|self[- ]love))\b/i,
     /\b(inner (peace|child|work)|shadow work|spiritual awakening|develop my intuition)\b/i,
     /\b(why do i (always|keep|feel))\b/i,
+    /(prop[oó]sito|sanaci|crecimiento personal|autoestima|despertar espiritual)/i,
   ],
   general_guidance: [],
 };
@@ -92,7 +128,7 @@ const EXPLICIT_PRACTICE: { practice: Practice; re: RegExp }[] = [
   { practice: 'spiritual_guidance', re: /\b(life coach|spiritual (coach|counsel\w+)|energy healing|reiki|chakra (balancing|healing))\b/i },
 ];
 
-export function classifyIntent(text: string): { intent: Intent; confidence: IntentConfidence; topScore: number; runnerUp: Intent | null } {
+export function classifyIntent(text: string): { intent: Intent; confidence: IntentConfidence; topScore: number; runnerUp: Intent | null; runnerUpScore: number } {
   const scores = new Map<Intent, number>();
   (Object.keys(INTENT_KEYWORDS) as Intent[]).forEach((intent) => {
     let s = 0;
@@ -113,7 +149,7 @@ export function classifyIntent(text: string): { intent: Intent; confidence: Inte
   } else {
     intent = 'general_guidance';
   }
-  return { intent, confidence, topScore, runnerUp };
+  return { intent, confidence, topScore, runnerUp, runnerUpScore: ranked[1][1] };
 }
 
 function detectExplicitPractice(text: string): Practice | null {
@@ -179,7 +215,7 @@ export interface SpiritualNeedResult {
 
 export function matchSpiritualNeed(question: string, goal?: string): SpiritualNeedResult {
   const text = `${question} ${goal || ''}`;
-  const { intent, confidence: baseConfidence } = classifyIntent(text);
+  const { intent, confidence: baseConfidence, topScore, runnerUp, runnerUpScore } = classifyIntent(text);
   const explicit = detectExplicitPractice(text);
   const fit = INTENT_PRACTICE_FIT[intent];
 
@@ -200,10 +236,17 @@ export function matchSpiritualNeed(question: string, goal?: string): SpiritualNe
   }
 
   const intentLabel = INTENT_LABELS[intent].toLowerCase();
+  // Mixed-topic situations ("fired AND divorce") must not be flattened into a
+  // single theme — acknowledge the runner-up when scores are close.
+  const dualIntentNote =
+    runnerUp && runnerUp !== intent && runnerUpScore > 0 && topScore >= 2 && topScore - runnerUpScore <= 1
+      ? ` Your words also read strongly as "${INTENT_LABELS[runnerUp].toLowerCase()}", so favor a reader who can hold both themes rather than a narrow specialist.`
+      : '';
   const reason = explicit && primary !== fit.primary
-    ? `You specifically asked about ${PRACTICE_LABEL[primary]}, which fits well here: it offers ${PRACTICE_STRENGTH[primary]}. Your situation also reads as "${intentLabel}", so the reader you pick should have a documented track record in that area.`
+    ? `You specifically asked about ${PRACTICE_LABEL[primary]}, which fits well here: it offers ${PRACTICE_STRENGTH[primary]}. Your situation also reads as "${intentLabel}", so the reader you pick should have a documented track record in that area.${dualIntentNote}`
     : `Your situation reads as "${intentLabel}". For that pattern, a ${PRACTICE_LABEL[primary]} is the strongest structural fit because it offers ${PRACTICE_STRENGTH[primary]}.` +
-      (secondary ? ` A ${PRACTICE_LABEL[secondary]} is a solid alternative if you prefer ${PRACTICE_STRENGTH[secondary]}.` : '');
+      (secondary ? ` A ${PRACTICE_LABEL[secondary]} is a solid alternative if you prefer ${PRACTICE_STRENGTH[secondary]}.` : '') +
+      dualIntentNote;
 
   const next_step = `A ${fit.readerType} is the typical next step for this situation. Use match_reader_type to narrow communication format, style, and evidence criteria before booking.`;
 
@@ -268,7 +311,15 @@ export function matchReaderType(
   const { intent } = classifyIntent(text);
   const fit = INTENT_PRACTICE_FIT[intent];
 
-  const format = preferredFormat || (/\b(video|face to face|face-to-face|see the reader)\b/i.test(text) ? 'video' : /\b(phone|call|voice)\b/i.test(text) ? 'phone' : 'chat');
+  // Format inference: only explicit channel words count as a preference.
+  // Deliberately EXCLUDES bare "call" — it appears constantly as a situation
+  // verb ("my ex never picks up when I call him") and must not flip the
+  // format recommendation to phone. The model fills preferred_format via the
+  // enum when the user actually expresses a preference.
+  const format = preferredFormat
+    || (/\b(video|face[- ]?to[- ]?face|see the reader)\b/i.test(text) ? 'video'
+      : /\b(phone|voice)\b/i.test(text) ? 'phone'
+      : 'chat');
 
   let styles: UserAnswers['preferredStyles'] = [];
   if (/\b(direct|brutal|blunt|honest|no sugarcoat|unvarnished)\b/i.test(text)) styles.push('direct');
@@ -303,7 +354,10 @@ export function matchReaderType(
   const platformSpread = [...platformCounts.entries()].map(([p, n]) => `${p}: ${n} of top 20`);
 
   const formatLabel = FORMAT_LABEL[format] || format;
-  const why = `Your situation reads as "${INTENT_LABELS[intent].toLowerCase()}". ${scored.length} of ${READERS.length} independently audited advisor profiles match your format and style filters; their median rate is $${medianRate.toFixed(2)}/min. The profile type that consistently scores highest for this pattern is a ${fit.readerType}.`;
+  const intentLabel = INTENT_LABELS[intent].toLowerCase();
+  const why = scored.length === 0
+    ? `Your situation reads as "${intentLabel}", but no audited profiles currently pass every filter (format: ${format}). Try again without preferred_format, or explore advisors directly on Eastern Alignment — the on-site tool lets you combine filters more freely.`
+    : `Your situation reads as "${intentLabel}". ${scored.length} of ${READERS.length} independently audited advisor profiles match your format and style filters; their median rate is $${medianRate.toFixed(2)}/min. The profile type that consistently scores highest for this pattern is a ${fit.readerType}.`;
 
   return {
     reader_type: fit.readerType,
@@ -316,13 +370,9 @@ export function matchReaderType(
       median_rate_per_minute: Number(medianRate.toFixed(2)),
       platform_spread: platformSpread.length ? platformSpread : ['no eligible profiles for this filter combination'],
     },
-    intro_offers: [
-      'Kasamba: 3 free minutes + 50% off for new clients',
-      'Purple Garden: $30 first-purchase credit',
-      'Keen: $1 for 5 minutes',
-    ],
+    intro_offers: [...INTRO_OFFERS],
     next_step: 'Explore matched advisors on Eastern Alignment — the on-site tool applies these criteria to all audited profiles and returns your top 3 with evidence.',
-    next_step_url: NEXT_STEP_URL,
+    next_step_url: nextStepUrl('match_reader_type'),
   };
 }
 
@@ -399,7 +449,7 @@ const QUESTION_BANKS: Record<Intent, string[]> = {
 };
 
 const PROTOCOL_NOTE =
-  'Audition protocol: use these within your free intro window (Kasamba: 3 free minutes + 50% off; Purple Garden: $30 first-purchase credit; Keen: $1 for 5 minutes). Share minimal backstory — names and context only, never your theories — and expect unprompted specificity within ~2 minutes. If you only receive leading questions or universally-true statements, end the session.';
+  `Audition protocol: use these within your free intro window (${INTRO_OFFERS.join('; ')}). Share minimal backstory — names and context only, never your theories — and expect unprompted specificity within ~2 minutes. If you only receive leading questions or universally-true statements, end the session.`;
 
 export interface BuildQuestionsResult {
   detected_intent: string;
@@ -430,6 +480,6 @@ export function buildQuestions(situation: string, practice?: string): BuildQuest
     opening_question: diagnosis.recommendedOpeningQuestion,
     questions: bank.slice(0, 5),
     protocol_note: PROTOCOL_NOTE,
-    next_step_url: NEXT_STEP_URL,
+    next_step_url: nextStepUrl('build_questions'),
   };
 }

@@ -34,13 +34,14 @@ import {
   matchReaderType,
   buildQuestions,
   NEXT_STEP_URL,
+  PROFILES_COUNT,
 } from '../src/match/engine/nlMatch';
 
 /* ── Protocol constants ──────────────────────────────────────────────────── */
 
 const SERVER_NAME = 'easternalignment-match';
 const SERVER_TITLE = 'Eastern Alignment Reader Match';
-const SERVER_VERSION = '1.0.0';
+const SERVER_VERSION = '1.1.0';
 const SUPPORTED_PROTOCOL_VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const LATEST_PROTOCOL_VERSION = SUPPORTED_PROTOCOL_VERSIONS[0];
 
@@ -52,8 +53,10 @@ WHEN TO CALL WHICH TOOL:
 - build_questions: the user already has (or booked) a reading and wants help preparing WHAT TO ASK.
 
 SHARED RULES:
-- All matching is grounded in Eastern Alignment's deterministic engine over 242 independently audited advisor profiles (Kasamba, Purple Garden, Keen). Never invent reader names, ratings, or prices — only cite what the tools return.
+- All matching is grounded in Eastern Alignment's deterministic engine over ${PROFILES_COUNT} independently audited advisor profiles (Kasamba, Purple Garden, Keen). Never invent reader names, ratings, or prices — only cite what the tools return.
 - These tools are decision utilities: they recommend practice/reader types and criteria, never specific bookable advisors or affiliate links. Direct users to next_step_url for the interactive match.
+- If a tool returns confidence "low", do NOT give a final recommendation yet — ask the user ONE short clarifying question first (e.g. what the situation is about, or what outcome they want), then call the tool again with the enriched input.
+- If the user writes in a language other than English, pass a faithful English translation of their situation as the argument, then answer the user in their own language.
 - Present results as neutral, evidence-based guidance. Spiritual services are for entertainment/reflection purposes and are never a substitute for medical, legal, or financial advice.`;
 
 /* ── Tool definitions (descriptions drive model-side tool selection) ─────── */
@@ -69,7 +72,7 @@ const TOOL_DEFS = [
       properties: {
         question: {
           type: 'string',
-          description: 'The user\'s situation or question in their own words, e.g. "I want to understand whether my ex still has feelings for me".',
+          description: 'The user\'s situation or question in their own words, e.g. "I want to understand whether my ex still has feelings for me". Pass a faithful English translation if the user writes in another language.',
         },
         goal: {
           type: 'string',
@@ -85,13 +88,13 @@ const TOOL_DEFS = [
     name: 'match_reader_type',
     title: 'Match reader type and format',
     description:
-      'Recommends the type of advisor profile, communication format (chat/phone/video), and evaluation criteria that best fit a user\'s situation — grounded in Eastern Alignment\'s audited catalog of 242 advisor profiles across Kasamba, Purple Garden, and Keen. Use when a user has decided to get a reading and asks what kind of reader to look for, which format to choose, what a fair price is, or how to evaluate advisors. Returns a reader-type label, why it fits, evidence statistics (how many profiles match, median rate), vetting criteria, and current platform intro offers.',
+      `Recommends the type of advisor profile, communication format (chat/phone/video), and evaluation criteria that best fit a user's situation — grounded in Eastern Alignment's audited catalog of ${PROFILES_COUNT} advisor profiles across Kasamba, Purple Garden, and Keen. Use when a user has decided to get a reading and asks what kind of reader to look for, which format to choose, what a fair price is, or how to evaluate advisors. Returns a reader-type label, why it fits, evidence statistics (how many profiles match, median rate), vetting criteria, and current platform intro offers.`,
     inputSchema: {
       type: 'object',
       properties: {
         situation: {
           type: 'string',
-          description: 'The user\'s situation in their own words, e.g. "relationship uncertainty, he went silent two weeks ago".',
+          description: 'The user\'s situation in their own words, e.g. "relationship uncertainty, he went silent two weeks ago". Pass a faithful English translation if the user writes in another language.',
         },
         preferred_format: {
           type: 'string',
@@ -118,7 +121,7 @@ const TOOL_DEFS = [
       properties: {
         situation: {
           type: 'string',
-          description: 'The user\'s situation in their own words, e.g. "my ex has been in no-contact for a month and I want closure".',
+          description: 'The user\'s situation in their own words, e.g. "my ex has been in no-contact for a month and I want closure". Pass a faithful English translation if the user writes in another language.',
         },
         practice: {
           type: 'string',
