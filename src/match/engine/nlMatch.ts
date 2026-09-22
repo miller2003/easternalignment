@@ -40,15 +40,61 @@ export const NEXT_STEP_URL = nextStepUrl('match_spiritual_need');
 export const PROFILES_COUNT = READERS.length;
 
 /**
- * Platform intro offers, centralized so matchReaderType and the audition
- * protocol can never quote different (stale) numbers.
- * Verified against platform terms as of 2026-09; re-verify each quarter.
+ * Platform intro offers + editorial meta, centralized so matchReaderType,
+ * compare_platforms, and the audition protocol can never quote different
+ * (stale) numbers. Offers verified against platform terms as of 2026-09;
+ * re-verify each quarter. Refund lines are honest guidance, not specific
+ * legal terms — point users to each platform's terms page before paying.
  */
-export const INTRO_OFFERS = [
-  'Kasamba: 3 free minutes + 50% off for new clients',
-  'Purple Garden: $30 first-purchase credit',
-  'Keen: $1 for 5 minutes',
-] as const;
+export const PLATFORM_META: Record<string, { label: string; intro_offer: string; refund_guidance: string; best_for: string }> = {
+  kasamba: {
+    label: 'Kasamba',
+    intro_offer: '3 free minutes + 50% off for new clients',
+    refund_guidance: 'Disputes are platform-mediated; contact support with the reading ID. Verify current terms on Kasamba before paying.',
+    best_for: 'Widest advisor pool, saved live-chat transcripts, strong love/relationship roster.',
+  },
+  keen: {
+    label: 'Keen',
+    intro_offer: '$1 for 5 minutes intro trial',
+    refund_guidance: 'First-call satisfaction credit up to a platform-set cap; support-mediated. Verify current terms on Keen before paying.',
+    best_for: 'Phone-first format with the cheapest trial entry; deep ex/reconciliation roster.',
+  },
+  'purple-garden': {
+    label: 'Purple Garden',
+    intro_offer: '$30 first-purchase credit',
+    refund_guidance: 'Credit-based; unused credit retains value; disputes via support. Verify current terms on Purple Garden before paying.',
+    best_for: 'Live video readings + verified intro videos; good for mediumship and face-to-face transparency.',
+  },
+};
+export const INTRO_OFFERS = ['kasamba', 'keen', 'purple-garden'].map(
+  (p) => `${PLATFORM_META[p].label}: ${PLATFORM_META[p].intro_offer}`,
+);
+
+/** Catalog audit cohort — re-verified each time readers.json is regenerated
+ *  (build-reader-database.mjs, deterministic). Surfaced in every tool so AI
+ *  answers can cite "as of {date}". */
+export const CATALOG_LAST_VERIFIED = '2026-09-22';
+
+/** Intent → on-site guide hub section anchor (GUIDE_SECTIONS single source of
+ *  truth, mirrored here). Makes the MCP tools a *citation hub*: every answer
+ *  can deep-link to the matching editorial guide cluster. */
+const INTENT_GUIDE_SECTION: Record<Intent, string> = {
+  love_relationship: 'love',
+  another_person_intentions: 'love',
+  breakup_ex: 'breakups-ex-recovery',
+  dating: 'love',
+  career_work: 'career-money',
+  money_finance: 'career-money',
+  decision_making: 'getting-started',
+  future_direction: 'getting-started',
+  grief_loss: 'mediumship',
+  self_reflection: 'spirituality',
+  general_guidance: 'getting-started',
+};
+const GUIDES_HUB = 'https://easternalignment.com/guides/';
+function relatedGuideUrl(intent: Intent): string {
+  return `${GUIDES_HUB}?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=guide_${intent}#${INTENT_GUIDE_SECTION[intent]}`;
+}
 
 /* ────────────────────────────────────────────────────────────────────────────
  * 1. Intent classification (keyword scoring over the site's intent taxonomy)
@@ -211,6 +257,8 @@ export interface SpiritualNeedResult {
   next_step: string;
   detected_intent: string;
   explicit_practice_detected: boolean;
+  related_guide_url: string;
+  catalog_last_verified: string;
 }
 
 export function matchSpiritualNeed(question: string, goal?: string): SpiritualNeedResult {
@@ -258,6 +306,8 @@ export function matchSpiritualNeed(question: string, goal?: string): SpiritualNe
     next_step,
     detected_intent: INTENT_LABELS[intent],
     explicit_practice_detected: explicitDetected,
+    related_guide_url: relatedGuideUrl(intent),
+    catalog_last_verified: CATALOG_LAST_VERIFIED,
   };
 }
 
@@ -274,11 +324,15 @@ export interface ReaderTypeResult {
     profiles_evaluated: number;
     profiles_matching: number;
     median_rate_per_minute: number;
+    p25_rate_per_minute: number;
+    p75_rate_per_minute: number;
     platform_spread: string[];
   };
   intro_offers: string[];
   next_step: string;
   next_step_url: string;
+  related_guide_url: string;
+  catalog_last_verified: string;
 }
 
 const CRITERIA_BY_INTENT: Record<Intent, string[]> = {
@@ -347,6 +401,8 @@ export function matchReaderType(
 
   const rates = scored.map((x) => x.r.pricePerMinute).sort((a, b) => a - b);
   const medianRate = rates.length ? rates[Math.floor(rates.length / 2)] : 0;
+  const p25Rate = rates.length ? rates[Math.floor(rates.length * 0.25)] : 0;
+  const p75Rate = rates.length ? rates[Math.floor(rates.length * 0.75)] : 0;
   const platformCounts = new Map<string, number>();
   for (const x of scored.slice(0, 20)) {
     platformCounts.set(x.r.platform, (platformCounts.get(x.r.platform) || 0) + 1);
@@ -357,7 +413,7 @@ export function matchReaderType(
   const intentLabel = INTENT_LABELS[intent].toLowerCase();
   const why = scored.length === 0
     ? `Your situation reads as "${intentLabel}", but no audited profiles currently pass every filter (format: ${format}). Try again without preferred_format, or explore advisors directly on Eastern Alignment — the on-site tool lets you combine filters more freely.`
-    : `Your situation reads as "${intentLabel}". ${scored.length} of ${READERS.length} independently audited advisor profiles match your format and style filters; their median rate is $${medianRate.toFixed(2)}/min. The profile type that consistently scores highest for this pattern is a ${fit.readerType}.`;
+    : `Your situation reads as "${intentLabel}". ${scored.length} of ${READERS.length} independently audited advisor profiles match your format and style filters; their median rate is $${medianRate.toFixed(2)}/min (typical band $${p25Rate.toFixed(2)}–$${p75Rate.toFixed(2)}/min). The profile type that consistently scores highest for this pattern is a ${fit.readerType}.`;
 
   return {
     reader_type: fit.readerType,
@@ -368,11 +424,15 @@ export function matchReaderType(
       profiles_evaluated: READERS.length,
       profiles_matching: scored.length,
       median_rate_per_minute: Number(medianRate.toFixed(2)),
+      p25_rate_per_minute: Number(p25Rate.toFixed(2)),
+      p75_rate_per_minute: Number(p75Rate.toFixed(2)),
       platform_spread: platformSpread.length ? platformSpread : ['no eligible profiles for this filter combination'],
     },
     intro_offers: [...INTRO_OFFERS],
     next_step: 'Explore matched advisors on Eastern Alignment — the on-site tool applies these criteria to all audited profiles and returns your top 3 with evidence.',
     next_step_url: nextStepUrl('match_reader_type'),
+    related_guide_url: relatedGuideUrl(intent),
+    catalog_last_verified: CATALOG_LAST_VERIFIED,
   };
 }
 
@@ -457,6 +517,8 @@ export interface BuildQuestionsResult {
   questions: string[];
   protocol_note: string;
   next_step_url: string;
+  related_guide_url: string;
+  catalog_last_verified: string;
 }
 
 export function buildQuestions(situation: string, practice?: string): BuildQuestionsResult {
@@ -481,5 +543,280 @@ export function buildQuestions(situation: string, practice?: string): BuildQuest
     questions: bank.slice(0, 5),
     protocol_note: PROTOCOL_NOTE,
     next_step_url: nextStepUrl('build_questions'),
+    related_guide_url: relatedGuideUrl(intent),
+    catalog_last_verified: CATALOG_LAST_VERIFIED,
+  };
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * 5. Reader audit (Tool: lookup_reader_audit) — THE citation moat
+ *
+ * Eastern Alignment's audited reader-level verdicts (verdict / highlights /
+ * pros / cons / eaEvidenceScore) are editorial content ChatGPT cannot get
+ * from training data. When a user asks "is psychic X on Kasamba legit?",
+ * this tool is the only source the model can cite. Returns the editorial
+ * review URL (never the affiliate /go/ link) — commercial intent stays one
+ * click behind the audit, consistent with the v1 "affiliate behind matching"
+ * principle.
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+export interface ReaderAuditMatch {
+  name: string;
+  platform: string;
+  platform_name: string;
+  review_url: string;
+  verdict: string;
+  highlights: string[];
+  pros: string[];
+  cons: string[];
+  best_for: string;
+  review_rating: number;
+  review_count: number;
+  ea_evidence_score: number;
+  pricing: string;
+  price_per_minute: number;
+  free_offer: string;
+  practices: string[];
+  primary_practice: string;
+  intents: string[];
+  formats: string[];
+  languages: string[];
+  styles: string[];
+  availability_status: string;
+  active: boolean;
+  catalog_last_verified: string;
+}
+
+export interface ReaderAuditResult {
+  found: boolean;
+  query: string;
+  matches: ReaderAuditMatch[];
+  suggestion: string;
+  next_step_url: string;
+  catalog_last_verified: string;
+}
+
+function normalizeQuery(q: string): string {
+  return q.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+/** Zero-dependency name similarity: exact-substring beats token-overlap. */
+function readerMatchScore(r: ReaderProfile, qNorm: string, platform?: string): number {
+  if (platform && r.platform !== platform) return 0;
+  if (!qNorm) return 0;
+  const name = r.name.toLowerCase();
+  const slug = r.slug.toLowerCase();
+  // Exact slug match dominates.
+  if (slug === qNorm || slug === `${qNorm}-kasamba-review`) return 100;
+  // Slug contains query (e.g. "divine-spirit" inside slug).
+  if (slug.includes(qNorm)) return 60;
+  // Full name substring.
+  if (name.includes(qNorm)) return 50;
+  // Token overlap (Jaccard on word sets).
+  const qTokens = new Set(qNorm.split(' ').filter((t) => t.length > 1));
+  const rTokens = new Set(`${name} ${slug} ${r.platformName.toLowerCase()}`.split(/[\s-]+/).filter((t) => t.length > 1));
+  if (qTokens.size === 0) return 0;
+  let overlap = 0;
+  for (const t of qTokens) if (rTokens.has(t)) overlap++;
+  return Math.round((overlap / qTokens.size) * 30);
+}
+
+function auditMatchFromReader(r: ReaderProfile): ReaderAuditMatch {
+  const origin = 'https://easternalignment.com';
+  return {
+    name: r.name,
+    platform: r.platform,
+    platform_name: r.platformName,
+    review_url: `${origin}${r.reviewUrl}?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=reader_audit`,
+    verdict: r.verdict,
+    highlights: r.highlights,
+    pros: r.pros,
+    cons: r.cons,
+    best_for: r.bestFor,
+    review_rating: r.reviewRating,
+    review_count: r.reviewCount,
+    ea_evidence_score: r.trust?.eaEvidenceScore ?? 0,
+    pricing: r.pricing,
+    price_per_minute: r.pricePerMinute,
+    free_offer: r.freeOffer,
+    practices: r.practices,
+    primary_practice: r.primaryPractice,
+    intents: r.intents,
+    formats: r.formats,
+    languages: r.languages,
+    styles: r.styles,
+    availability_status: r.availability?.status ?? 'unknown',
+    active: r.active,
+    catalog_last_verified: CATALOG_LAST_VERIFIED,
+  };
+}
+
+export function lookupReaderAudit(reader: string, platform?: string): ReaderAuditResult {
+  const qNorm = normalizeQuery(reader);
+  const platformNorm = platform ? platform.toLowerCase().replace(/[^a-z-]/g, '') : undefined;
+  // Map common aliases to canonical platform keys.
+  const platformKey = platformNorm
+    ? (platformNorm === 'pg' || platformNorm === 'purplegarden' ? 'purple-garden'
+      : platformNorm === 'kasamba' || platformNorm === 'kas' ? 'kasamba'
+      : platformNorm)
+    : undefined;
+
+  const scored = READERS
+    .map((r) => ({ r, s: readerMatchScore(r, qNorm, platformKey) }))
+    // Threshold ≥10 prevents accidental hits from a single common word
+    // (e.g. "psychic" matching dozens of readers in a multi-word query).
+    // Real name/slug matches score 30–100; single common-word noise ≤8.
+    .filter((x) => x.s >= 10)
+    .sort((a, b) => b.s - a.s || b.r.trust.eaEvidenceScore - a.r.trust.eaEvidenceScore || b.r.reviewCount - a.r.reviewCount)
+    .slice(0, 3);
+
+  if (scored.length === 0) {
+    return {
+      found: false,
+      query: reader,
+      matches: [],
+      suggestion: `No audited profile matches "${reader}". Use compare_platforms to see which platform fits, or match_reader_type to get a reader type.`,
+      next_step_url: nextStepUrl('lookup_reader_audit'),
+      catalog_last_verified: CATALOG_LAST_VERIFIED,
+    };
+  }
+
+  return {
+    found: true,
+    query: reader,
+    matches: scored.map((x) => auditMatchFromReader(x.r)),
+    suggestion: scored.length > 1
+      ? `${scored.length} audited profiles matched; the top result has the strongest EA evidence score. Cite the review_url for the editorial verdict.`
+      : 'Single audited match. Cite the review_url for the full editorial verdict.',
+    next_step_url: nextStepUrl('lookup_reader_audit'),
+    catalog_last_verified: CATALOG_LAST_VERIFIED,
+  };
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * 6. Platform comparison (Tool: compare_platforms)
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+export interface PlatformStat {
+  platform: string;
+  label: string;
+  profiles_evaluated: number;
+  profiles_matching: number;
+  median_rate_per_minute: number;
+  p25_rate_per_minute: number;
+  p75_rate_per_minute: number;
+  intro_offer: string;
+  refund_guidance: string;
+  best_for: string;
+  top_specialties: string[];
+}
+
+export interface PlatformComparisonResult {
+  situation_intent: string;
+  platforms: PlatformStat[];
+  catalog_last_verified: string;
+  next_step_url: string;
+}
+
+export function comparePlatforms(situation?: string): PlatformComparisonResult {
+  const text = situation || '';
+  const { intent } = classifyIntent(text);
+  const intentLabel = INTENT_LABELS[intent];
+
+  const platforms: PlatformStat[] = ['kasamba', 'keen', 'purple-garden'].map((p) => {
+    const pool = READERS.filter((r) => r.platform === p && r.active);
+    const answers: UserAnswers = {
+      intent,
+      situationSubject: 'not_sure',
+      preferredPractice: 'open',
+      preferredFormat: 'no_preference',
+      preferredStyles: [],
+      urgency: 'no_rush',
+      budget: 'no_pref',
+    };
+    const eligible = pool.filter((r) => scoreReader(r, answers).isEligible);
+    const rates = eligible.map((r) => r.pricePerMinute).sort((a, b) => a - b);
+    const median = rates.length ? rates[Math.floor(rates.length / 2)] : 0;
+    const p25 = rates.length ? rates[Math.floor(rates.length * 0.25)] : 0;
+    const p75 = rates.length ? rates[Math.floor(rates.length * 0.75)] : 0;
+    // Top specialties by frequency among eligible profiles.
+    const practiceCounts = new Map<string, number>();
+    for (const r of eligible) for (const pr of r.practices) practiceCounts.set(pr, (practiceCounts.get(pr) || 0) + 1);
+    const topSpecialties = [...practiceCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k]) => k);
+    const meta = PLATFORM_META[p];
+    return {
+      platform: p,
+      label: meta.label,
+      profiles_evaluated: pool.length,
+      profiles_matching: eligible.length,
+      median_rate_per_minute: Number(median.toFixed(2)),
+      p25_rate_per_minute: Number(p25.toFixed(2)),
+      p75_rate_per_minute: Number(p75.toFixed(2)),
+      intro_offer: meta.intro_offer,
+      refund_guidance: meta.refund_guidance,
+      best_for: meta.best_for,
+      top_specialties: topSpecialties,
+    };
+  });
+
+  return {
+    situation_intent: intentLabel,
+    platforms,
+    catalog_last_verified: CATALOG_LAST_VERIFIED,
+    next_step_url: nextStepUrl('compare_platforms'),
+  };
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * 7. Red-flag / scam check (Tool: check_red_flags)
+ *
+ * Grounded in Eastern Alignment's "Getting Started" guide cluster (how to
+ * spot fake psychics, what 'legit' means, online-truth). Returns the canonical
+ * scam checklist + a verification protocol. High shareability, high citation
+ * value: ChatGPT can answer "how do I avoid psychic scams" by calling this
+ * tool rather than generic advice.
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+export interface RedFlag {
+  flag: string;
+  detail: string;
+}
+
+export interface RedFlagCheckResult {
+  red_flags: RedFlag[];
+  verification_steps: string[];
+  one_line_summary: string;
+  related_guide_url: string;
+  catalog_last_verified: string;
+  next_step_url: string;
+}
+
+const RED_FLAGS: RedFlag[] = [
+  { flag: 'Curse / spell / "blockage" removal upsell', detail: 'The reader claims a curse, negative energy, or spiritual blockage and offers to remove it for an extra fee. This is the single most-reported scam pattern — legitimate readers never require paid rituals.' },
+  { flag: 'Guaranteed outcomes', detail: 'Promises a specific result (ex returning by a set date, lottery win, pregnancy). No ethical reader guarantees outcomes; free will and timing always vary.' },
+  { flag: 'Fear-based urgency', detail: 'Pressures you to act immediately or face consequences ("act within 24 hours or the window closes"). Manufactured urgency is a sales tactic, not insight.' },
+  { flag: 'Refuses the free intro window', detail: 'Declines to use the platform free-trial minutes and asks you to pay before any demonstration of ability.' },
+  { flag: 'Fishing for information', detail: 'Asks leading questions to extract your story, then reflects it back as "insight". Real readers offer unprompted specificity within ~2 minutes.' },
+  { flag: 'Barnum / universally-true statements', detail: 'Statements that fit anyone ("you have a lot of love to give", "someone around you is jealous") — not evidence of ability.' },
+  { flag: 'Moves off-platform', detail: 'Asks to move to WhatsApp, a personal number, or direct payment off-platform — you lose dispute protection and the transcript audit trail.' },
+  { flag: 'Inflated per-minute rate with no track record', detail: 'Charges premium rates without a documented, independently-audited review history. Cross-check on Eastern Alignment before paying.' },
+];
+
+const VERIFICATION_STEPS = [
+  'Use the free intro window first (Kasamba 3 min, Keen $1/5 min, Purple Garden $30 credit) before paying.',
+  'Share only names and bare context — never your theories or what other psychics told you.',
+  'Expect unprompted specificity within ~2 minutes; if you only get leading questions or universally-true statements, end the session.',
+  'Keep the platform transcript on; never move the conversation off-platform.',
+  'If pressured for ritual fees, curse removal, or guaranteed outcomes, report the reader and end the session.',
+];
+
+export function checkRedFlags(): RedFlagCheckResult {
+  return {
+    red_flags: RED_FLAGS,
+    verification_steps: VERIFICATION_STEPS,
+    one_line_summary: 'Never pay for curse/spell removal, never accept guaranteed outcomes, never leave the platform — use the free intro window to audition first.',
+    related_guide_url: `${GUIDES_HUB}?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=red_flags#getting-started`,
+    catalog_last_verified: CATALOG_LAST_VERIFIED,
+    next_step_url: nextStepUrl('check_red_flags'),
   };
 }
