@@ -37,8 +37,11 @@ scratch/
 # scripts/ — only these dev tools are tracked; everything else is a
 # run-once content-fix script kept locally only.
 # audit-cta-source.mjs 是长期维护工具（每次加 CTA 都要跑），必须入库。
+# build-reader-database.mjs 是 npm run build 的第一步（readers.json 唯一生成器），
+# 2026-09-22: 漏交导致 Cloudflare Pages 构建直接失败、/mcp 部署不上——必须入库。
 scripts/*
 !scripts/audit-cta-source.mjs
+!scripts/build-reader-database.mjs
 !scripts/test-markdown-for-agents.mjs
 !scripts/fetch-reader-avatars.mjs
 !scripts/validate-reviews.mjs
