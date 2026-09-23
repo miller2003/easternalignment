@@ -192,13 +192,13 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     options: [
       {
         id: 'prac_psychic',
-        label: 'Direct Intuitive Conversation (Psychic)',
+        label: 'Direct Intuitive Conversation',
         sublabel: 'Clairvoyant perception, third-person insight, and immediate conversational candor',
         value: 'psychic',
       },
       {
         id: 'prac_tarot',
-        label: 'Symbolic & Reflective Card Pull (Tarot)',
+        label: 'Symbolic & Reflective Card Pull',
         sublabel: 'Archetypes, subconscious patterns, and card-by-card situational roadmaps',
         value: 'tarot',
       },
@@ -210,7 +210,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       },
       {
         id: 'prac_medium',
-        label: 'Connecting with Loved Ones in Spirit (Mediumship)',
+        label: 'Connecting with Loved Ones in Spirit',
         sublabel: 'Evidential contact with passed loved ones, grief resolution, and closure',
         value: 'medium',
       },
@@ -232,19 +232,19 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     options: [
       {
         id: 'fmt_chat',
-        label: 'Live Chat (Kasamba / Purple Garden)',
+        label: 'Live Chat',
         sublabel: 'Private, real-time typing with auto-saved transcripts you can re-read and audit later',
         value: 'chat',
       },
       {
         id: 'fmt_phone',
-        label: 'Phone / Audio Call (Keen / Purple Garden)',
+        label: 'Phone / Audio Call',
         sublabel: 'Direct voice connection, instant vocal nuance, and immediate conversational flow',
         value: 'phone',
       },
       {
         id: 'fmt_video',
-        label: 'Live Video (Purple Garden)',
+        label: 'Live Video',
         sublabel: 'Face-to-face transparency — see the reader, their cards, and verified video bios',
         value: 'video',
       },
@@ -308,7 +308,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     options: [
       {
         id: 'urg_now',
-        label: 'Right now (Available immediately)',
+        label: 'Right now',
         sublabel: 'Prioritize advisors who are currently online and ready to take a session',
         value: 'right_now',
       },
@@ -342,20 +342,20 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     options: [
       {
         id: 'bud_under20',
-        label: 'Under $20 (Low-risk introductory trial)',
-        sublabel: 'Audition an advisor using introductory offers ($1 Keen trial or 3 free Kasamba minutes)',
+        label: 'Under $20',
+        sublabel: 'Audition an advisor using introductory offers before spending your own money',
         value: 'under_20',
       },
       {
         id: 'bud_20to50',
-        label: '$20 – $50 (Focused 10–15 min session)',
-        sublabel: 'A focused consultation with a mid-priced, verified specialist ($3 to $5/min)',
+        label: '$20 – $50',
+        sublabel: 'A focused consultation with a mid-priced, verified specialist',
         value: '20_to_50',
       },
       {
         id: 'bud_50plus',
-        label: '$50 – $100+ (Comprehensive in-depth reading)',
-        sublabel: 'Deep dive with an elite, high-demand advisor ($8 to $15+/min)',
+        label: '$50 – $100+',
+        sublabel: 'Deep dive with an elite, high-demand advisor',
         value: '50_plus',
       },
       {

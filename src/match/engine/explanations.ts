@@ -59,11 +59,19 @@ export function generateReaderExplanation(
   }
 
   // When to Skip
-  let whenToSkip = 'Skip if you are looking for absolute certainty theater; legitimate readings illuminate probabilities and internal headspaces rather than fixed, unalterable futures.';
-  if (reader.cons && reader.cons.length > 0) {
-    whenToSkip = reader.cons[0];
-  } else if (reader.styles.includes('direct')) {
+  // NOTE: `reader.cons` holds internal editorial audit notes (written for the
+  // review pages, e.g. "two fresh 1-star reviews this week — we flag them").
+  // Those must never surface on the user-facing quiz results, which recommend
+  // these same advisors. Always use generated, user-safe copy here.
+  let whenToSkip: string;
+  if (reader.styles.includes('direct')) {
     whenToSkip = 'Skip if you need soothing reassurance rather than direct reality; this advisor delivers candid truths without sugarcoating.';
+  } else if (reader.styles.includes('gentle')) {
+    whenToSkip = 'Skip if you want blunt, no-friction verdicts on a tight clock; this advisor paces the session gently and at a calmer speed.';
+  } else if (reader.styles.includes('fast_answers') || reader.styles.includes('structured')) {
+    whenToSkip = 'Skip if you want an open-ended, exploratory conversation; this advisor keeps sessions tight, structured, and question-focused.';
+  } else {
+    whenToSkip = 'Skip if you are looking for absolute certainty theater; legitimate readings illuminate probabilities and internal headspaces rather than fixed, unalterable futures.';
   }
 
   return {

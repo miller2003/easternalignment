@@ -261,7 +261,7 @@ const orgSchema = {
           We independently test and evaluate online psychic reading platforms — delivering objective, authentic reviews documented session by session so you can find trustworthy guidance without the guesswork. Over {totalReaders}+ advisor profiles audited across Kasamba, Purple Garden, and Keen. When you need direct answers tailored to your situation, our advanced matching engine cuts through platform marketing to pair your exact dilemma with the vetted reader best equipped to help.
         </p>
         <div class="hero-actions">
-          <a href="#match" class="btn btn--primary btn--lg">Match Your Situation</a>
+          <a href="#match" class="btn btn--primary btn--lg" data-match-open>Match Your Situation</a>
           <a href="#comparison" class="btn btn--secondary btn--lg">Compare Top Platforms</a>
         </div>
         <div class="hero-meta">
@@ -277,8 +277,9 @@ const orgSchema = {
     </div>
   </section>
 
-  <!-- Situation-Based Reader Match Engine -->
-  <ReaderMatch id="match" />
+  <!-- Situation-Based Reader Match Engine — launcher card + bottom-sheet
+       overlay (MysticDo-style modal host, iPhone Safari tuned) -->
+  <ReaderMatch id="match" mode="modal" />
 
   <!-- Link to the full /match/ page (editorial version of the tool) -->
   <section class="container" style="text-align: center; margin-top: calc(-1 * var(--space-6)); margin-bottom: var(--space-8);">

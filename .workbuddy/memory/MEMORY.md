@@ -1,7 +1,7 @@
 # Eastern Alignment 项目记忆
 
 ## 项目性质
-英文 Astrosoastro联盟站(站名 Eastern Alignment),变现 = Kasamba/Keen/Purple Garden 三平台 psychic 评测佣金(/go/ 跳转)。内容集:guides(112 篇)、readers(130+ 评测)、reviews(3 平台)、comparisons(4 篇)、astrology zodiac(数据驱动)、es/ 西语版。
+英文 Astrosoastro联盟站(站名 Eastern Alignment),变现 = Kasamba/Keen/Purple Garden 三平台 psychic 评测佣金(/go/ 跳转)。**联盟后台 = barges**(用户 2026-09-23 口头确认;README 里 Impact/TUNE 的提法以用户为准,转化核对一律查 barges 后台)。内容集:guides(112 篇)、readers(130+ 评测)、reviews(3 平台)、comparisons(4 篇)、astrology zodiac(数据驱动)、es/ 西语版。
 
 ## SEO 战略共识(2026-09-16 确定)
 - psychic 只是玄学分支,非总括词;站点从「psychic 站」升级为「全玄学词类聚合站」,psychic 内容不减产但不再独占产能。
@@ -13,3 +13,17 @@
 - Python 用 "C:/Users/samja/.workbuddy/binaries/python/versions/3.13.12/python.exe";bash 的 ls 等基础命令在此环境不可用,文件操作优先用专用工具。
 - guides 内容聚类定义在 src/lib/relatedReaders.ts(GUIDE_SECTIONS),hub 分区:love、breakups-ex-recovery、mediumship、tarot、career-money、spirituality、getting-started、more-guides。
 - 报告/脚本产出统一放 scratch/,勿动 src/。
+
+## 外部 API 调研结论(2026-09-23)
+- **TUNE 开发者门户(developers.tune.com)已核查:无「解读师/顾问实时在线状态」能力**。Affiliate API = HasOffers Apiv3(24 controller / 49 model),覆盖账号、Offer 与素材、报表与佣金、通知与 webhook;Network API(41 controller)、Advertiser API、JS SDK 同样无 readers/advisors/presence 类资源。最接近"实时"的只有 Affiliate_NotificationCenter 事件订阅 + Webhook(推送的是转化/offer 事件)。
+- 解读师在线状态只能从平台方(Kasamba/Keen/Purple Garden)自身获取,官网的实时可用标识是前端渲染,非开放 API。**不要再重复调研 TUNE。**
+
+## Match quiz 内容红线(2026-09-23 用户确认)
+- 用户可见的 quiz 选项**不点名平台**(Kasamba/Keen/PG)、不出现"直接给结果"的括号标签(类型/费率/优惠),靠 sublabel 描述引导沉浸式选择;题目数据在 src/match/taxonomy.ts。
+- readers.json 的 cons/pros 是编辑内部审计笔记,只准出现在评测文章页;quiz 结果页 When to Skip 用 explanations.ts 生成文案,首页客户端 payload 已剔除 cons/pros。
+- public/content-manager.html 是内部工具但会被部署到线上,待用户决定处置。
+
+## Match quiz 架构(2026-09-23 定型)
+- **首页 = 弹窗模式**(ReaderMatch mode="modal":launcher 卡 + bottom-sheet overlay,交互骨架移植自 mysticdo 的 main.js initQuiz 引擎);**/match/ 专页 = inline 内嵌**。模式由容器 data-match-mode 区分,quizApp.ts 双 host。
+- 弹窗要点:iPhone Safari 用 html 级滚动锁(ea-match-locked)+dvh+safe-area;history-back 可关闭弹窗;计算仪式 timer 必须可取消(否则旧会话结果写入新会话)。
+- mysticdo 项目在 C:/Users/samja/Desktop/site/mysticdo,**只读参考,严禁改动**。

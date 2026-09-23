@@ -16,6 +16,14 @@ interface Props {
   title?: string;
   subtitle?: string;
   compact?: boolean;
+  /**
+   * inline (default): the quiz renders directly inside this section
+   *   (the dedicated /match/ page).
+   * modal: the section shows an invitation launch card; the quiz runs
+   *   in a full-screen bottom-sheet overlay (homepage, iPhone-tuned).
+   *   All elements with [data-match-open] anywhere on the page open it.
+   */
+  mode?: 'inline' | 'modal';
 }
 
 const {
@@ -24,7 +32,10 @@ const {
   title = 'Find the Exact Psychic Advisor for Your Situation',
   subtitle = 'Answer 7 focused questions. Our deterministic matching algorithm filters 240+ audited advisors across Kasamba, Purple Garden, and Keen to pinpoint the reader best suited to your specific question, preferred style, and budget.',
   compact = false,
+  mode = 'inline',
 } = Astro.props;
+
+const isModal = mode === 'modal';
 
 // Minified client dataset (drops lengthy editorial bodies, preserving 100% of matching attributes)
 const clientReaders = (readersData as any[]).map((r) => ({
@@ -53,8 +64,9 @@ const clientReaders = (readersData as any[]).map((r) => ({
   trust: r.trust,
   availability: r.availability,
   active: r.active,
-  cons: (r.cons || []).slice(0, 2),
-  pros: (r.pros || []).slice(0, 2),
+  // NOTE: `pros`/`cons` are internal editorial audit notes (used on review
+  // pages). They must NOT ship to the homepage client payload — the quiz
+  // engine renders user-safe generated copy instead (see explanations.ts).
 }));
 
 const readersJson = JSON.stringify(clientReaders);
@@ -69,20 +81,52 @@ const readersJson = JSON.stringify(clientReaders);
     </div>
 
     <!-- Match App Container -->
-    <div id="ea-match-root" class="ea-match-container">
-      <!-- Loading Skeleton / SSR Placeholder -->
-      <div class="ea-match-card">
-        <div class="ea-match-computing">
-          <div class="ea-computing-orb-wrapper">
-            <div class="ea-computing-orb">
-              <div class="ea-computing-ring"></div>
-              <div class="ea-computing-core"></div>
-            </div>
+    <div id="ea-match-root" class="ea-match-container" data-match-mode={isModal ? 'modal' : undefined}>
+      {isModal ? (
+        <!-- Modal host: invitation launch card; the quiz runs in a
+             bottom-sheet overlay opened by any [data-match-open] trigger -->
+        <div class="ea-match-launch">
+          <span class="ea-match-launch-flag">Free · 2 minutes</span>
+          <div class="ea-match-launch-icon" aria-hidden="true">✦</div>
+          <h3 class="ea-match-launch-title">{title}</h3>
+          <p class="ea-match-launch-sub">{subtitle}</p>
+          <div class="ea-match-launch-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              About 2 minutes
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z"/></svg>
+              Private — stays in your browser
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>
+              241 audited advisors
+            </span>
           </div>
-          <h3 class="ea-computing-status">Initializing Situation Match Engine…</h3>
-          <p class="ea-computing-sub">Screening 240+ Audited Advisor Profiles</p>
+          <button type="button" class="btn btn--primary btn--lg" data-match-open>
+            <span data-match-open-label>Match My Situation →</span>
+          </button>
+          <p class="ea-match-launch-resume" style="display: none;">
+            Want a clean read?
+            <button type="button" data-match-retake>Start over</button>
+          </p>
         </div>
-      </div>
+      ) : (
+        <!-- Inline host: SSR placeholder while the client engine mounts -->
+        <div class="ea-match-card">
+          <div class="ea-match-computing">
+            <div class="ea-computing-orb-wrapper">
+              <div class="ea-computing-orb">
+                <div class="ea-computing-ring"></div>
+                <div class="ea-computing-core"></div>
+              </div>
+            </div>
+            <h3 class="ea-computing-status">Initializing Situation Match Engine…</h3>
+            <p class="ea-computing-sub">Screening 240+ Audited Advisor Profiles</p>
+          </div>
+        </div>
+      )}
     </div>
 
     <noscript>
