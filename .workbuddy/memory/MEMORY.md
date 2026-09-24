@@ -12,7 +12,15 @@
 ## 技术要点
 - Python 用 "C:/Users/samja/.workbuddy/binaries/python/versions/3.13.12/python.exe";bash 的 ls 等基础命令在此环境不可用,文件操作优先用专用工具。
 - guides 内容聚类定义在 src/lib/relatedReaders.ts(GUIDE_SECTIONS),hub 分区:love、breakups-ex-recovery、mediumship、tarot、career-money、spirituality、getting-started、more-guides。
-- 报告/脚本产出统一放 scratch/,勿动 src/。
+- 报告/脚本产出统一放 scratch/,勿动 src/。scratch/ 已于 2026-09-23 做过标准清理(713.5MB→15.6MB),**只保留报告类(.md / HTML report)与 research 资料**;一次性脚本、抓取快照、日志、截图用完即删,勿长期堆积。
+
+## 仓库卫生(2026-09-23 清理)
+- .gitignore 已覆盖 `dist.stale*/`、`*.bak.*/`、`*.bak-*`。历史事故:`dist.stale-20260922/`(200 文件)、`src.content.bak.20260910/`(285 文件)、`build-scores.log`、`src/data/affiliateLinks.ts.bak-20260921` 曾被误提交,已 git rm(可从事后历史恢复)。**本次共 487 项待提交删除 + .gitignore 修改,尚未 commit,部署前需提交。**
+- **清理 scratch/ 前的强制双信号校验**:①近 7 天 mtime 的脚本一律视为在用工具,不删;②grep `.workbuddy/memory/` 日志确认无"分析脚本:"类引用。仅 grep 源码不足以判断——关键引用写在 prose 日志里。
+- **事故代价**:18 个 PostHog/barges 分析脚本(`analyze_barges_stats.py`、`posthog_shave_audit.py`、`posthog_alltime_platform.py` 等)被误永久删除,尚需重建;未跟踪文件永久删除前**必须先打包备份**。删除清单留档 `scratch/_CLEANUP_MANIFEST_20260923.txt`。
+- `.env` 只有 `PUBLIC_POSTHOG_KEY` / `PUBLIC_POSTHOG_HOST`(埋点 public key,不能查询 Insights);重跑对账需另找 PostHog personal API key。
+- 失效引用待修:`src/data/affiliateLinks.ts:41` 注释指向已删的 `scratch/check_reader_links.py`。
+
 
 ## 外部 API 调研结论(2026-09-23)
 - **TUNE 开发者门户(developers.tune.com)已核查:无「解读师/顾问实时在线状态」能力**。Affiliate API = HasOffers Apiv3(24 controller / 49 model),覆盖账号、Offer 与素材、报表与佣金、通知与 webhook;Network API(41 controller)、Advertiser API、JS SDK 同样无 readers/advisors/presence 类资源。最接近"实时"的只有 Affiliate_NotificationCenter 事件订阅 + Webhook(推送的是转化/offer 事件)。

@@ -3,6 +3,12 @@ dist/
 dist2/
 # dated build snapshots — never commit (2,200+ files each; restore-able by rebuild)
 dist.bak.*/
+# 2026-09-23: dist.stale-20260922 was committed by accident (200 files) and had to be
+# git-rm'd out. Any dated snapshot prefix must stay ignored.
+dist.stale*/
+# dated whole-tree / file-level backups (src.content.bak.YYYYMMDD, *.ts.bak-YYYYMMDD)
+*.bak.*/
+*.bak-*
 out-verify/
 out-verify2/
 out-verify3/
