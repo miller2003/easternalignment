@@ -46,6 +46,13 @@ const avatarFallbackSvg = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="
 // URL for this reader's full review
 const platformPath = platform === 'psiquicos' ? 'psiquicos-web' : 'purple-garden-es';
 const reviewUrl = `/es/resenas/${platformPath}/${slug}/`;
+
+// Etiqueta de precio: solo añade "/min" si el valor es realmente una tarifa
+// numérica. Casos no numéricos ("Tarifa por confirmar") quedan intactos —
+// antes se renderizaba "Tarifa por confirmar/min".
+const priceLabel = pricing
+  ? (pricing.includes('/min') || !/\d/.test(pricing) ? pricing : `${pricing}/min`)
+  : null;
 ---
 
 <article class="reader-card card">
@@ -67,7 +74,7 @@ const reviewUrl = `/es/resenas/${platformPath}/${slug}/`;
         <StarRating rating={rating} size="sm" showValue={false} />
         <span class="reader-score">{rating}</span>
       </div>
-      {pricing && <span class="reader-price">{pricing}/min</span>}
+      {priceLabel && <span class="reader-price">{priceLabel}</span>}
     </div>
   </div>
 
@@ -82,7 +89,7 @@ const reviewUrl = `/es/resenas/${platformPath}/${slug}/`;
 
   <div class="reader-card-footer">
     <a href={reviewUrl} class="btn btn--ghost btn--sm">Leer reseña completa →</a>
-    <EsSpanishCTA platform={platform} variant="book" readerName={readerName} size="sm" source="reader-card" />
+    <EsSpanishCTA platform={platform} variant="book" readerName={readerName} readerSlug={slug} size="sm" source="reader-card" />
   </div>
 </article>
 

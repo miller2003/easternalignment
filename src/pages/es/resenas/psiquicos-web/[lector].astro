@@ -52,15 +52,29 @@ const readerName = frontmatter.platformName?.includes(':')
   ? frontmatter.platformName.split(':').pop()?.trim()
   : frontmatter.platformName;
 
-// Spanish FAQ — search intent aligned with LATAM patterns
-const faqItems = [
+// Normaliza el precio: si el frontmatter ya trae "/min", no repetirlo junto
+// a "por minuto" (evita "cobra $X.XX/min por minuto"). Si la tarifa no es
+// numérica ("Tarifa por confirmar") se usa una frase distinta en lugar de
+// concatenarla a "por minuto".
+const pricePerMin = (frontmatter.pricing || '').replace(/\s*\/\s*min\.?\s*$/i, '');
+const priceSentence = /\d/.test(pricePerMin)
+  ? `${readerName} cobra ${pricePerMin} por minuto.`
+  : `${readerName} no publica una tarifa fija por minuto en su perfil de Psíquicos Web — conviene confirmar la tarifa vigente antes de reservar.`;
+
+// Spanish FAQ — search intent aligned with LATAM patterns.
+// Frontmatter `faq` (per-reader, editorial) first; evergreen generic items
+// supplement it (deduped). Both feed the FAQPage JSON-LD from <EsFAQ />.
+const fmFaq = (frontmatter.faq || []).filter(
+  (item: { question?: string; answer?: string }) => item?.question && item?.answer,
+);
+const genericFaqItems = [
   {
     question: `¿Es ${readerName} un/a vidente de confianza en Psíquicos Web?`,
     answer: `${readerName} es un/a lector/a activo/a en Psíquicos Web con una calificación de ${frontmatter.rating} sobre 5. Esta reseña se basa en el análisis de su historial verificado, calificaciones de usuarios documentadas y datos públicos de la plataforma. Consulta el análisis completo para evaluar si se adapta a tu tipo de consulta.`,
   },
   {
     question: `¿Cuánto cuesta una sesión con ${readerName}?`,
-    answer: `${readerName} cobra ${frontmatter.pricing || 'según tarifa de la plataforma'} por minuto. ${frontmatter.freeOffer ? `Nuevos usuarios en Psíquicos Web pueden acceder a: ${frontmatter.freeOffer}.` : ''} Te recomendamos definir un presupuesto antes de iniciar la sesión.`,
+    answer: `${priceSentence} ${frontmatter.freeOffer ? `Nuevos usuarios en Psíquicos Web pueden acceder a: ${frontmatter.freeOffer}.` : ''} Te recomendamos definir un presupuesto antes de iniciar la sesión.`,
   },
   {
     question: `¿Qué opiniones reales existen sobre ${readerName} en Psíquicos Web?`,
@@ -71,6 +85,12 @@ const faqItems = [
     answer: `Puedes reservar una sesión con ${readerName} directamente en Psíquicos Web. Verifica su disponibilidad actual en la plataforma y elige la modalidad de comunicación disponible. El botón en esta página te lleva directamente a su perfil.`,
   },
 ];
+const normQ = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const fmQuestions = new Set(fmFaq.map((i: { question: string }) => normQ(i.question)));
+const faqItems = [
+  ...fmFaq,
+  ...genericFaqItems.filter((g) => !fmQuestions.has(normQ(g.question))),
+];
 ---
 
 <EsReviewLayout
@@ -78,6 +98,7 @@ const faqItems = [
   description={frontmatter.description}
   platformName={frontmatter.platformName}
   platform="psiquicos"
+  readerSlug={currentSlug}
   rating={frontmatter.rating}
   verdict={frontmatter.verdict}
   freeOffer={frontmatter.freeOffer}
@@ -112,6 +133,7 @@ const faqItems = [
     platform="psiquicos"
     ctaVariant={frontmatter.freeOffer ? 'discount' : 'book'}
     readerName={readerName}
+    readerSlug={currentSlug}
     variant="highlight"
   />
 

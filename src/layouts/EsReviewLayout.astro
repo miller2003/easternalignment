@@ -10,7 +10,18 @@ import StarRating from '../components/StarRating.astro';
 import EsSpanishCTA from '../components/es/EsSpanishCTA.astro';
 
 import EsLeftSidebar from '../components/es/EsLeftSidebar.astro';
+import EsRightSidebar from '../components/es/EsRightSidebar.astro';
+import EsDealStrip from '../components/es/EsDealStrip.astro';
+import EsInlineCta from '../components/es/EsInlineCta.astro';
+import CtaTip from '../components/CtaTip.astro';
 import VerifiedNote from '../components/VerifiedNote.astro';
+import {
+  ES_PLATFORM_OFFERS,
+  ES_READER_URLS,
+  esGoPath,
+  esProofTooltip,
+  type EsPlatformKey,
+} from '../lib/esOffers';
 
 interface Props {
   title: string;
@@ -163,6 +174,31 @@ if (freeOffer) {
     ctaVariant = 'discount';
   }
 }
+
+// ── Contexto CTA compartido por las superficies de conversión ───────────────
+// Paridad con ReviewLayout.astro: stickyCta (pestaña lateral), barra superior
+// de ofertas, DealStrip bajo el CTA del hero, InlineCta a mitad de artículo y
+// tarjeta de oferta en el raíl derecho. Disponible en cada página con
+// plataforma resoluble.
+const platformKey = platform as EsPlatformKey;
+const offerData = ES_PLATFORM_OFFERS[platformKey];
+
+// Deeplink real de esta página: lector (si hay slug conocido) → plataforma.
+const pageCtaHref =
+  (readerSlug && ES_READER_URLS[readerSlug]) || esGoPath(platformKey);
+
+const stickyCtaConfig = {
+  slug: pageCtaHref,
+  platform: platformKey,
+};
+
+const sidebarDeal = {
+  platform: platformKey,
+  rating,
+  label: isReaderReview ? 'Lector de esta página' : 'Recomendación de esta página',
+  href: pageCtaHref,
+  heading: isReaderReview && readerLabel ? `${readerLabel} · ${offerData.offer}` : undefined,
+};
 ---
 
 <EsBaseLayout
@@ -179,7 +215,11 @@ if (freeOffer) {
   hreflangEn={hreflangEn}
   breadcrumbs={breadcrumbItems}
   dateModified={updatedDate || publishDate}
+  topOfferPlatform={platformKey}
+  stickyCta={stickyCtaConfig}
 >
+  <!-- Grid de página completa de 3 columnas: las sidebars abarcan toda la
+       altura (paridad con ReviewLayout del sitio EN) -->
   <div class="page-with-sidebars">
     <!-- LEFT SIDEBAR -->
     <EsLeftSidebar />
@@ -238,19 +278,29 @@ if (freeOffer) {
         <p class="review-verdict">{verdict}</p>
 
         <div class="review-hero-cta">
-          <EsSpanishCTA
-            platform={platform}
-            variant={ctaVariant}
-            readerName={readerLabel}
-            readerSlug={readerSlug}
-            size="lg"
-            source="hero"
-          />
-          {freeOffer && (
-            <p class="review-hero-cta-note">
-              Oferta para nuevos usuarios: <strong>{freeOffer}</strong> — aplicada en tu primera compra. Crea una cuenta, activa la oferta y conecta en minutos.
-            </p>
-          )}
+          <div class="review-hero-trust">
+            <span class="trust-chip">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Investigación independiente
+            </span>
+            {freeOffer && (
+              <span class="trust-chip trust-chip--offer">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L4.09 12.35a.6.6 0 00.46.98H11l-1.8 8.02c-.13.6.63.95 1.03.48L20.91 10.6a.6.6 0 00-.46-.98H13l1.8-7.14c.14-.57-.6-.93-1.03-.48L13 2z"/></svg>
+                {freeOffer}
+              </span>
+            )}
+          </div>
+          <CtaTip text={esProofTooltip(platformKey)}>
+            <EsSpanishCTA
+              platform={platform}
+              variant={ctaVariant}
+              readerName={readerLabel}
+              readerSlug={readerSlug}
+              size="lg"
+              source="hero"
+            />
+          </CtaTip>
+          <EsDealStrip platform={platformKey} source="hero" href={pageCtaHref} />
         </div>
       </header>
 
@@ -259,6 +309,11 @@ if (freeOffer) {
         <div class="prose">
           <slot />
         </div>
+
+        {/* CTA de medio artículo: inyectado automáticamente antes del 2º H2
+            de .prose. Cierra la zona muerta de conversión entre el hero y
+            el CTA final. Paridad con InlineCta del sitio EN. */}
+        <EsInlineCta platform={platformKey} href={pageCtaHref} />
 
         <!-- Author/Platform attribution block -->
         <div class="author-bio card">
@@ -281,6 +336,9 @@ if (freeOffer) {
         </div>
       </article>
     </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <EsRightSidebar deal={sidebarDeal} />
   </div>
 </EsBaseLayout>
 
@@ -298,8 +356,9 @@ if (freeOffer) {
   .main-col {
     flex: 1;
     min-width: 0;
-    max-width: 760px;
+    max-width: var(--max-width-content, 760px);
     width: 100%;
+    transition: max-width 0.3s ease;
   }
 
   .review-breadcrumb { margin-bottom: var(--space-4); }
@@ -417,12 +476,32 @@ if (freeOffer) {
 
   .review-hero-cta { margin-bottom: var(--space-4); }
 
-  .review-hero-cta-note {
-    margin: var(--space-2) 0 0;
-    font-size: var(--text-xs);
-    line-height: var(--leading-normal);
-    color: var(--color-text-muted);
-    max-width: 480px;
+  .review-hero-trust {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+  }
+
+  .trust-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-primary-dark, #6b5438);
+    background: var(--color-sage-100, #eef2e9);
+    border: 1px solid rgba(107, 143, 94, 0.25);
+    padding: 3px 10px;
+    border-radius: 9999px;
+  }
+
+  .trust-chip--offer {
+    color: var(--color-accent-hover, #b07f55);
+    background: var(--color-warning-bg, #fdf5ec);
+    border-color: var(--color-accent-light, #e8cdb0);
   }
 
   .review-content { padding-bottom: var(--space-8); }
@@ -462,6 +541,14 @@ if (freeOffer) {
   }
 
   /* Responsive */
+  @media (max-width: 1300px) {
+    .page-with-sidebars { gap: 2rem; }
+  }
+
+  @media (max-width: 1100px) {
+    .page-with-sidebars { justify-content: center; padding-top: var(--space-6); }
+  }
+
   @media (max-width: 768px) {
     .page-with-sidebars {
       flex-direction: column;

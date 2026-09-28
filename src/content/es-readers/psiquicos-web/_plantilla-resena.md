@@ -107,7 +107,7 @@ customSchema: |
 
 ## Historial Verificado: Calificaciones y Volumen
 
-[Analizar la calificación pública, el número de sesiones completadas, y la consistencia del rating a lo largo del tiempo. Comparar con el promedio de la plataforma si hay datos disponibles.]
+[Analizar la calificación pública, el número de sesiones completadas, y la consistencia de la calificación a lo largo del tiempo. Comparar con el promedio de la plataforma si hay datos disponibles.]
 
 ### Lo Que Dicen las Opiniones Reales
 

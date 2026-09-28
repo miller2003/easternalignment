@@ -1,0 +1,1013 @@
+{
+ "sql": "\nSELECT coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       toString(properties.time_on_page_ms) AS tms,\n       toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       toString(properties.$session_id) AS sid,\n       toString(properties.click_id) AS cid\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1788796800)\nORDER BY timestamp DESC LIMIT 200\n",
+ "columns": [
+  "token",
+  "page",
+  "slug",
+  "tms",
+  "t",
+  "sid",
+  "cid"
+ ],
+ "results": [
+  [
+   "lm09dl",
+   "/guides/best-mediums-on-purple-garden/",
+   "purple-garden-serena",
+   "11818",
+   "2026-09-28 08:18:13.681000",
+   "01a0e560-3228-7ef8-902b-d3946ff7300b",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "1cpyim",
+   "/reviews/purple-garden/tattooed-psychic/",
+   "purple-garden-tattooed-psychic",
+   "25751",
+   "2026-09-28 07:29:43.422000",
+   "01a0e52f-ae05-7765-bdd1-15ff974bb7e6",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "y05dms",
+   "/guides/best-mediums-on-purple-garden/",
+   "purple-garden",
+   "33821",
+   "2026-09-28 07:25:36.200000",
+   "01a0e52f-ae05-7765-bdd1-15ff974bb7e6",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "oohwi6",
+   "/reviews/purple-garden/psychic-advisor-serena/",
+   "purple-garden-serena",
+   "79597",
+   "2026-09-28 06:36:52.396000",
+   "01a0e4ef-0008-78f8-bad7-9c3f905748e8",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "a8e1j4",
+   "/guides/best-mediums-on-purple-garden/",
+   "purple-garden",
+   "31544",
+   "2026-09-28 06:33:28.267000",
+   "01a0e4ef-0008-78f8-bad7-9c3f905748e8",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "gtos2m",
+   "/guides/best-mediums-on-purple-garden/",
+   "purple-garden",
+   "47803",
+   "2026-09-28 06:32:20.821000",
+   "01a0e4ef-0008-78f8-bad7-9c3f905748e8",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "bxteue",
+   "/reviews/purple-garden/tattooed-psychic/",
+   "purple-garden-tattooed-psychic",
+   "224159",
+   "2026-09-28 06:18:07.781000",
+   "01a0e4ef-0008-78f8-bad7-9c3f905748e8",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "axzuuf",
+   "/reviews/purple-garden/tattooed-psychic/",
+   "purple-garden-tattooed-psychic",
+   "82575",
+   "2026-09-28 06:15:46.267000",
+   "01a0e4ef-0008-78f8-bad7-9c3f905748e8",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "83x8eu",
+   "/guides/love-or-career-psychics/",
+   "kasamba-stefan",
+   "25779",
+   "2026-09-27 16:19:27.502000",
+   "01a0e1f1-e7fc-7935-92d0-ac4aaf442e19",
+   "01a0e1be-2269-77e9-a36c-85083d7b6d38"
+  ],
+  [
+   "pzcicb",
+   "/reviews/keen/master-sher/",
+   "keen-master-sher",
+   "272857",
+   "2026-09-27 15:32:01.613000",
+   "01a0e1be-2284-70ed-b160-407f2297f8e1",
+   "01a0e1be-2269-77e9-a36c-85083d7b6d38"
+  ],
+  [
+   "umbczq",
+   "/reviews/kasamba/advisor-by-jenny-kasamba-review/",
+   "kasamba-jenny",
+   "2535",
+   "2026-09-27 13:47:08.935000",
+   "01a0e161-1fe0-7476-8d21-38d654bb51f2",
+   "01a0e161-1faf-7a0d-b800-d28a149b316c"
+  ],
+  [
+   "7sm1wt",
+   "/reviews/kasamba/advisor-by-jenny-kasamba-review/",
+   "kasamba-jenny",
+   "1581",
+   "2026-09-27 13:43:37.992000",
+   "01a0e161-1fe0-7476-8d21-38d654bb51f2",
+   "01a0e161-1faf-7a0d-b800-d28a149b316c"
+  ],
+  [
+   "4mls4g",
+   "/guides/best-love-psychics-kasamba-ranked/",
+   "kasamba",
+   "21203",
+   "2026-09-27 13:40:55.366000",
+   "01a0e161-1fe0-7476-8d21-38d654bb51f2",
+   "01a0e161-1faf-7a0d-b800-d28a149b316c"
+  ],
+  [
+   "2u4ume",
+   "/guides/best-love-psychics-kasamba-ranked/",
+   "kasamba",
+   "8768",
+   "2026-09-27 13:40:42.921000",
+   "01a0e161-1fe0-7476-8d21-38d654bb51f2",
+   "01a0e161-1faf-7a0d-b800-d28a149b316c"
+  ],
+  [
+   "fqwax3",
+   "/guides/best-twin-flame-psychics-online/",
+   "keen-kelly",
+   "26679",
+   "2026-09-27 12:17:59.896000",
+   "01a0e114-b865-7a7c-b7d7-315019f093c9",
+   "01a0e114-b83b-7d95-aa49-80ad849a62fd"
+  ],
+  [
+   "57u0cu",
+   "/guides/free-psychic-readings-online-truth/",
+   "kasamba",
+   "1681",
+   "2026-09-27 09:33:53.634000",
+   "01a0e07f-433f-77db-a1aa-c8918ee5ff9a",
+   "01a0e07f-4331-748b-a11e-fbaa4db86226"
+  ],
+  [
+   "eepqvr",
+   "/reviews/purple-garden/psychic-jewels/",
+   "purple-garden-psychic-jewels",
+   "153526",
+   "2026-09-27 07:50:34.145000",
+   "01a0e01e-5a19-7f8e-a5eb-edb48bf50c3e",
+   "01a0e01e-59cb-77db-9ebb-07eafd1011aa"
+  ],
+  [
+   "t972la",
+   "/guides/best-tarot-readers-for-love/",
+   "keen-meg",
+   "29563",
+   "2026-09-27 01:39:09.473000",
+   "01a0decc-347d-7d51-8ede-e1a52b1aee74",
+   "01a0decc-346c-7e17-9da2-f6b9303c8faf"
+  ],
+  [
+   "cr9svr",
+   "/guides/best-kasamba-psychics-first-reading/",
+   "kasamba",
+   "31572",
+   "2026-09-26 12:03:21.043000",
+   "01a0dbe1-47ad-7bfb-ab6e-9374ac9d579e",
+   "01a0dbe1-47a2-7372-9c38-2e90efcebefd"
+  ],
+  [
+   "qamdja",
+   "/reviews/keen/",
+   "keen",
+   "163292",
+   "2026-09-26 11:47:53.557000",
+   "01a0dbd1-1d64-7840-950e-831b973471c2",
+   "01a0dbd1-1d42-782c-9665-89a978285957"
+  ],
+  [
+   "fa5gn3",
+   "/reviews/keen/master-sher/",
+   "keen-master-sher",
+   "54374",
+   "2026-09-26 03:53:21.406000",
+   "01a0da1f-aaf6-72b1-a910-cd11ece9d42f",
+   "01a0da1f-aadc-7e84-b5e4-65322e391a39"
+  ],
+  [
+   "c9xyni",
+   "/reviews/kasamba/a-psychic-friend-kasamba-review/",
+   "kasamba-a-psychic-friend",
+   "18354",
+   "2026-09-25 19:04:32.266000",
+   "01a0d83b-a4d6-7568-bae7-cc1940efc3c6",
+   "01a0d83b-a4b9-7c11-8724-f98acabce9b3"
+  ],
+  [
+   "zbl4st",
+   "/reviews/kasamba/a-psychic-friend-kasamba-review/",
+   "kasamba-a-psychic-friend",
+   "16722",
+   "2026-09-25 19:03:19.510000",
+   "01a0d83b-a4d6-7568-bae7-cc1940efc3c6",
+   "01a0d83b-a4b9-7c11-8724-f98acabce9b3"
+  ],
+  [
+   "wndsvp",
+   "/guides/evidential-mediums-passed-spouse/",
+   "keen",
+   "67473",
+   "2026-09-25 14:19:23.035000",
+   "01a0d736-ec4e-7c25-b32a-70df197a7b04",
+   "01a0d736-ec18-7349-88a6-a8eb17d9764a"
+  ],
+  [
+   "czp311",
+   "/guides/evidential-mediums-passed-spouse/",
+   "keen",
+   "4687",
+   "2026-09-25 14:18:20.409000",
+   "01a0d736-ec4e-7c25-b32a-70df197a7b04",
+   "01a0d736-ec18-7349-88a6-a8eb17d9764a"
+  ],
+  [
+   "46wj6v",
+   "/guides/best-tarot-readers-for-love/",
+   "keen-master-sher",
+   "115244",
+   "2026-09-25 11:28:23.256000",
+   "01a0d698-75af-798a-a8f4-063670c584e3",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2"
+  ],
+  [
+   "ev3vfw",
+   "/guides/best-tarot-readers-for-love/",
+   "kasamba-yazmin",
+   "105739",
+   "2026-09-25 11:28:13.748000",
+   "01a0d698-75af-798a-a8f4-063670c584e3",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2"
+  ],
+  [
+   "8qwx6j",
+   "/guides/best-tarot-readers-for-love/",
+   "keen-meg",
+   "74889",
+   "2026-09-25 11:27:43.038000",
+   "01a0d698-75af-798a-a8f4-063670c584e3",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2"
+  ],
+  [
+   "pq98uh",
+   "/",
+   "purple-garden-rose-soulmates",
+   "130973",
+   "2026-09-25 10:32:24.121000",
+   "01a0d666-23ef-7faf-aa25-80232664b214",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2"
+  ],
+  [
+   "2pehmh",
+   "/",
+   "kasamba-danielle",
+   "104159",
+   "2026-09-25 10:31:57.315000",
+   "01a0d666-23ef-7faf-aa25-80232664b214",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2"
+  ],
+  [
+   "88lcyx",
+   "/",
+   "kasamba-danielle",
+   "76008",
+   "2026-09-25 10:31:29.235000",
+   "01a0d666-23ef-7faf-aa25-80232664b214",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2"
+  ],
+  [
+   "isjnx3",
+   "/reviews/kasamba/",
+   "kasamba",
+   "10153",
+   "2026-09-25 05:07:50.613000",
+   "01a0d537-57e9-7e5c-a00f-952feba69ff5",
+   "01a0d537-5736-718c-ab82-607df9a2100f"
+  ],
+  [
+   "wzhql9",
+   "/guides/best-tarot-readers-for-love/",
+   "keen",
+   "3143",
+   "2026-09-25 05:02:06.159000",
+   "01a0d537-57e9-7e5c-a00f-952feba69ff5",
+   "01a0d537-5736-718c-ab82-607df9a2100f"
+  ],
+  [
+   "ki7c8v",
+   "/guides/best-tarot-readers-for-love/",
+   "keen",
+   "45139",
+   "2026-09-25 05:00:14.489000",
+   "01a0d537-57e9-7e5c-a00f-952feba69ff5",
+   "01a0d537-5736-718c-ab82-607df9a2100f"
+  ],
+  [
+   "eje3qi",
+   "/reviews/keen/tarot-with-meg-on-keen-review-2026/",
+   "keen-meg",
+   "64008",
+   "2026-09-24 18:00:34.503000",
+   "01a0d2da-b29e-75da-a32c-acaed5595270",
+   "01a0d2da-b25a-79b0-a8c8-64c40233b69f"
+  ],
+  [
+   "7dv0if",
+   "/guides/free-psychic-readings-online-truth/",
+   "kasamba",
+   "8759",
+   "2026-09-24 12:42:38.689000",
+   "01a0d1b8-e2b9-7b8b-9d35-665c16142f54",
+   "01a0d1b8-e20d-7266-978b-1dad370d21c5"
+  ],
+  [
+   "xyyfwv",
+   "/reviews/purple-garden/athena-love/",
+   "purple-garden-athena-love",
+   "148534",
+   "2026-09-23 06:56:13.166000",
+   "01a0cb4d-b047-70a8-a267-c6b4e9db147b",
+   "01a0cb4d-b024-70dc-87d6-fffebf0a7514"
+  ],
+  [
+   "h2yu5x",
+   "/reviews/purple-garden/",
+   "purplegarden",
+   "9697",
+   "2026-09-23 06:50:28.145000",
+   "01a0cb4d-b047-70a8-a267-c6b4e9db147b",
+   "01a0cb4d-b024-70dc-87d6-fffebf0a7514"
+  ],
+  [
+   "slv647",
+   "/reviews/purple-garden/niki-medium/",
+   "purple-garden-niki-medium",
+   "12146",
+   "2026-09-23 06:47:53.373000",
+   "01a0cb4d-b047-70a8-a267-c6b4e9db147b",
+   "01a0cb4d-b024-70dc-87d6-fffebf0a7514"
+  ],
+  [
+   "31mdo8",
+   "/guides/top-love-psychics-keen/",
+   "keen-advisor-suzan",
+   "10302",
+   "2026-09-22 03:11:54.517000",
+   "01a0c551-5f49-75da-bfb3-ef9153973702",
+   "01a0c551-5f2f-7b32-ac85-5f1a66493e90"
+  ],
+  [
+   "i6zduj",
+   "/guides/top-love-psychics-keen/",
+   "keen-advisor-suzan",
+   "6252",
+   "2026-09-22 03:10:40.680000",
+   "01a0c551-5f49-75da-bfb3-ef9153973702",
+   "01a0c551-5f2f-7b32-ac85-5f1a66493e90"
+  ],
+  [
+   "8rlbf2",
+   "/guides/top-love-psychics-keen/",
+   "keen-advisor-suzan",
+   "11012",
+   "2026-09-22 03:04:58.781000",
+   "01a0c551-5f49-75da-bfb3-ef9153973702",
+   "01a0c551-5f2f-7b32-ac85-5f1a66493e90"
+  ],
+  [
+   "zk609s",
+   "/guides/top-love-psychics-keen/",
+   "keen-advisor-suzan",
+   "13597",
+   "2026-09-22 03:02:46.726000",
+   "01a0c551-5f49-75da-bfb3-ef9153973702",
+   "01a0c551-5f2f-7b32-ac85-5f1a66493e90"
+  ],
+  [
+   "0h2wrv",
+   "/guides/top-love-psychics-keen/",
+   "keen-lorrie-c",
+   "10294",
+   "2026-09-22 02:59:16.361000",
+   "01a0c551-5f49-75da-bfb3-ef9153973702",
+   "01a0c551-5f2f-7b32-ac85-5f1a66493e90"
+  ],
+  [
+   "v926cy",
+   "/guides/top-love-psychics-keen/",
+   "keen-lorrie-c",
+   "82584",
+   "2026-09-22 02:58:12.666000",
+   "01a0c551-5f49-75da-bfb3-ef9153973702",
+   "01a0c551-5f2f-7b32-ac85-5f1a66493e90"
+  ],
+  [
+   "4ja8qa",
+   "/guides/top-love-psychics-keen/",
+   "keen",
+   "33965",
+   "2026-09-22 02:54:56.804000",
+   "01a0c551-5f49-75da-bfb3-ef9153973702",
+   "01a0c551-5f2f-7b32-ac85-5f1a66493e90"
+  ],
+  [
+   "bvokzh",
+   "/reviews/kasamba/",
+   "kasamba",
+   "6071",
+   "2026-09-21 05:03:03.577000",
+   "01a0c09e-d258-7423-87b5-1d5e8305e88b",
+   "01a0c09e-d242-79fe-b5bb-bc4f49355e4c"
+  ],
+  [
+   "botrrl",
+   "/",
+   "kasamba",
+   "12880",
+   "2026-09-21 05:00:42.061000",
+   "01a0c09e-d258-7423-87b5-1d5e8305e88b",
+   "01a0c09e-d242-79fe-b5bb-bc4f49355e4c"
+  ],
+  [
+   "f8zohz",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "19525",
+   "2026-09-21 00:06:38.351000",
+   "01a0bf91-7f60-7774-af18-8e0c7fe57d0d",
+   "01a0bf91-7f33-7f98-8bc5-74ef1db888a8"
+  ],
+  [
+   "7e8ims",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-chelle",
+   "4820",
+   "2026-09-21 00:06:23.660000",
+   "01a0bf91-7f60-7774-af18-8e0c7fe57d0d",
+   "01a0bf91-7f33-7f98-8bc5-74ef1db888a8"
+  ],
+  [
+   "uw7xbn",
+   "/guides/purple-garden-30-credit-guide/",
+   "purple-garden",
+   "30570",
+   "2026-09-20 09:17:17.417000",
+   "01a0bc63-1b36-7e81-bb85-19f4a5ba90c9",
+   "01a0bc63-1b0d-7a07-9df7-8d6359b60b75"
+  ],
+  [
+   "wru9mw",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "21205",
+   "2026-09-20 08:51:45.596000",
+   "01a0bc4b-e018-7940-b181-9eb21903f066",
+   "01a0bc4b-dff7-7777-a147-15f56aa572f5"
+  ],
+  [
+   "wv9iqh",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-chelle",
+   "7307",
+   "2026-09-20 08:51:31.695000",
+   "01a0bc4b-e018-7940-b181-9eb21903f066",
+   "01a0bc4b-dff7-7777-a147-15f56aa572f5"
+  ],
+  [
+   "jy7evw",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "1295709",
+   "2026-09-20 08:44:14.416000",
+   "01a0bc31-8b3f-76be-af29-96927b5ddc61",
+   "01a0bc31-8b31-76d3-9d58-bc32052817d4"
+  ],
+  [
+   "d73mr7",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "57562",
+   "2026-09-20 08:23:36.267000",
+   "01a0bc31-8b3f-76be-af29-96927b5ddc61",
+   "01a0bc31-8b31-76d3-9d58-bc32052817d4"
+  ],
+  [
+   "ljotkf",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-chelle",
+   "21641",
+   "2026-09-20 08:23:00.333000",
+   "01a0bc31-8b3f-76be-af29-96927b5ddc61",
+   "01a0bc31-8b31-76d3-9d58-bc32052817d4"
+  ],
+  [
+   "zaxy71",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "6907",
+   "2026-09-20 08:22:45.605000",
+   "01a0bc31-8b3f-76be-af29-96927b5ddc61",
+   "01a0bc31-8b31-76d3-9d58-bc32052817d4"
+  ],
+  [
+   "hvm5up",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-chelle",
+   "73787",
+   "2026-09-20 06:18:10.013000",
+   "01a0bbbe-7453-79de-b170-704c6b2088d9",
+   "01a0bbbe-7433-794f-aabc-d9ee0b2f6381"
+  ],
+  [
+   "ngwaev",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "59274",
+   "2026-09-20 06:17:55.540000",
+   "01a0bbbe-7453-79de-b170-704c6b2088d9",
+   "01a0bbbe-7433-794f-aabc-d9ee0b2f6381"
+  ],
+  [
+   "iib1oo",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "641014",
+   "2026-09-20 04:51:55.370000",
+   "01a0bb66-d707-7f25-afd9-b050223a2c13",
+   "01a0bb66-d6e2-768e-98ad-71c6388f222d"
+  ],
+  [
+   "mj0fmu",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-golden-eye",
+   "351742",
+   "2026-09-20 04:47:06.085000",
+   "01a0bb66-d707-7f25-afd9-b050223a2c13",
+   "01a0bb66-d6e2-768e-98ad-71c6388f222d"
+  ],
+  [
+   "jpc2ul",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-cosmic-fusion",
+   "259883",
+   "2026-09-20 04:45:34.241000",
+   "01a0bb66-d707-7f25-afd9-b050223a2c13",
+   "01a0bb66-d6e2-768e-98ad-71c6388f222d"
+  ],
+  [
+   "nyfxts",
+   "/guides/best-kasamba-psychics-ex-recovery/",
+   "kasamba-chelle",
+   "149243",
+   "2026-09-20 04:40:38.376000",
+   "01a0bb64-0367-7665-ba44-edec2e939693",
+   "01a0bb64-0349-79d1-bf03-da923634d75d"
+  ],
+  [
+   "mznd1i",
+   "/reviews/purple-garden/nick/",
+   "purple-garden-nick",
+   "10930",
+   "2026-09-19 23:04:47.281000",
+   "01a0ba32-9c9a-7ed0-8e95-e312bafe9f3e",
+   "01a0ba32-9c89-72ee-bbb4-37f5a4be93bb"
+  ],
+  [
+   "b0q1ua",
+   "/guides/most-accurate-psychics-kasamba/",
+   "kasamba",
+   "221274",
+   "2026-09-19 21:37:26.210000",
+   "01a0b9df-75e5-7ee6-b993-1662e58d317e",
+   "01a0b9df-75c3-7bc3-a054-ef742daaecc6"
+  ],
+  [
+   "78yb0r",
+   "/guides/most-accurate-psychics-kasamba/",
+   "kasamba",
+   "168749",
+   "2026-09-19 21:36:33.679000",
+   "01a0b9df-75e5-7ee6-b993-1662e58d317e",
+   "01a0b9df-75c3-7bc3-a054-ef742daaecc6"
+  ],
+  [
+   "zhj0rr",
+   "/guides/brutally-honest-psychics-keen/",
+   "keen-arradaza",
+   "25887",
+   "2026-09-19 17:46:53.656000",
+   "01a0b90f-5f99-7648-ab2c-1c911b9f0810",
+   "01a0b90f-5f82-732b-9d59-9c4dc2d0dc39"
+  ],
+  [
+   "d3si7w",
+   "/",
+   "kasamba",
+   "77898",
+   "2026-09-18 09:20:37.738000",
+   "01a0b216-b07d-7921-8b01-992762a756db",
+   "01a0b216-b033-7c86-bf1c-b304f17ec71c"
+  ],
+  [
+   "a85izb",
+   "/",
+   "kasamba",
+   "36619",
+   "2026-09-18 09:19:56.428000",
+   "01a0b216-b07d-7921-8b01-992762a756db",
+   "01a0b216-b033-7c86-bf1c-b304f17ec71c"
+  ],
+  [
+   "9qje81",
+   "/guides/what-is-psychic-reading/",
+   "kasamba",
+   "2227",
+   "2026-09-18 09:19:27.791000",
+   "01a0b216-b07d-7921-8b01-992762a756db",
+   "01a0b216-b033-7c86-bf1c-b304f17ec71c"
+  ],
+  [
+   "66ol6q",
+   "/",
+   "kasamba",
+   "20472",
+   "2026-09-18 09:17:27.131000",
+   "01a0b216-b07d-7921-8b01-992762a756db",
+   "01a0b216-b033-7c86-bf1c-b304f17ec71c"
+  ],
+  [
+   "r91sxk",
+   "/",
+   "kasamba",
+   "36411",
+   "2026-09-17 21:21:16.373000",
+   "01a0af86-c331-70f5-9008-a55f24e2043b",
+   "01a0af86-c32a-7585-ad1e-e3a1ea7de2db"
+  ],
+  [
+   "dki05i",
+   "/guides/best-love-psychics-kasamba-ranked/",
+   "kasamba",
+   "2777",
+   "2026-09-16 04:43:16.539000",
+   "01a0a6cd-97ee-7bcf-91bd-09bc87fb0a3a",
+   "01a0a6cd-97dd-7dd6-97a6-37f0bd533776"
+  ],
+  [
+   "tds03d",
+   "/guides/best-love-psychics-kasamba-ranked/",
+   "kasamba",
+   "6847",
+   "2026-09-16 04:41:33.355000",
+   "01a0a6cd-97ee-7bcf-91bd-09bc87fb0a3a",
+   "01a0a6cd-97dd-7dd6-97a6-37f0bd533776"
+  ],
+  [
+   "cleqyq",
+   "/reviews/purple-garden/",
+   "purple-garden",
+   "4413",
+   "2026-09-15 13:29:39.471000",
+   "01a0a37e-becf-7cf3-a9c0-d26c5581419d",
+   "01a0a37e-beb3-7c6d-b165-081e7f9c3e5d"
+  ],
+  [
+   "k0c383",
+   "/reviews/purple-garden/truelovetarot/",
+   "purple-garden-truelovetarot",
+   "13206",
+   "2026-09-15 10:33:21.142000",
+   "01a0a2e9-3235-712a-89df-2f7b4b870095",
+   "01a0a2e9-321c-7f7b-b24a-bfeb982ed677"
+  ],
+  [
+   "ed6b0v",
+   "/reviews/keen/gina-marie/",
+   "keen-gina-marie",
+   "4028",
+   "2026-09-15 09:18:12.708000",
+   "01a0a2a4-8f14-7cba-b516-24a65f0ea115",
+   "01a0a2a4-8ef1-7ffc-a4f3-1954a172c956"
+  ],
+  [
+   "zuhg11",
+   "/",
+   "kasamba",
+   "17169",
+   "2026-09-15 06:25:58.042000",
+   "01a0a206-2efb-74f7-b608-123c80759f75",
+   "01a0a206-2ee9-713e-8077-402f186db5bd"
+  ],
+  [
+   "hgbl8p",
+   "/guides/best-tarot-readers-for-love/",
+   "keen",
+   "2714",
+   "2026-09-15 06:25:31.885000",
+   "01a0a206-2efb-74f7-b608-123c80759f75",
+   "01a0a206-2ee9-713e-8077-402f186db5bd"
+  ],
+  [
+   "l3q60h",
+   "/reviews/kasamba/divine-spirit-kasamba-review/",
+   "kasamba",
+   "32159",
+   "2026-09-15 04:59:25.110000",
+   "01a0a1b7-35da-75b5-bdc6-b570ad22c498",
+   "01a0a1b7-35c7-73a3-b9a0-97972dd9215c"
+  ],
+  [
+   "h26xij",
+   "/guides/best-tarot-readers-on-kasamba/",
+   "kasamba",
+   "12189",
+   "2026-09-15 02:44:09.459000",
+   "01a0a13b-aa73-76e7-9e6d-07c9c3a38591",
+   "01a0a13b-aa52-743e-9000-4b29bc5b12bb"
+  ],
+  [
+   "pszm6y",
+   "/guides/best-tarot-readers-for-love/",
+   "keen-master-sher",
+   "22489",
+   "2026-09-14 21:53:59.528000",
+   "01a0a031-b3ce-7bea-9eb1-42f262a16aa0",
+   "01a0a031-b3b9-7199-902c-7187554a65bd"
+  ],
+  [
+   "zglyj3",
+   "/guides/best-tarot-readers-for-love/",
+   "keen",
+   "7193",
+   "2026-09-14 21:53:34.416000",
+   "01a0a031-b3ce-7bea-9eb1-42f262a16aa0",
+   "01a0a031-b3b9-7199-902c-7187554a65bd"
+  ],
+  [
+   "v6a0be",
+   "/guides/best-mediums-on-kasamba/",
+   "kasamba",
+   "23780",
+   "2026-09-14 20:23:11.331000",
+   "01a09fde-b36f-797d-9990-409c06a940a7",
+   "01a09fde-b35f-79eb-82dd-f53fe4a6baad"
+  ],
+  [
+   "qrbtx8",
+   "/reviews/kasamba/psychic-tsahai-kasamba-review/",
+   "kasamba-psychic-tsahai",
+   "62448",
+   "2026-09-14 04:10:17.675000",
+   "01a09c63-6650-7261-9842-f4ed82ee3164",
+   "01a09c63-6631-7678-981c-789575683e0d"
+  ],
+  [
+   "qkb2cv",
+   "/reviews/keen/gina-marie/",
+   "keen-gina-marie",
+   "3318",
+   "2026-09-14 01:51:00.663000",
+   "01a09be4-c916-73d8-809f-855afe39ba58",
+   "01a09be4-c8f1-761a-bc98-f4d636846781"
+  ],
+  [
+   "frcrrh",
+   "/guides/divorce-breakup-psychics-online/",
+   "keen-arradaza",
+   "552603",
+   "2026-09-13 23:19:40.939000",
+   "01a09b51-dd3a-74e1-8951-c65baef5a340",
+   "01a09b51-dc9f-7f40-9ff7-e01a0ac89341"
+  ],
+  [
+   "gsfpwc",
+   "/guides/divorce-breakup-psychics-online/",
+   "kasamba-yazmin",
+   "546153",
+   "2026-09-13 23:19:34.479000",
+   "01a09b51-dd3a-74e1-8951-c65baef5a340",
+   "01a09b51-dc9f-7f40-9ff7-e01a0ac89341"
+  ],
+  [
+   "hilc5d",
+   "/guides/divorce-breakup-psychics-online/",
+   "keen-david7",
+   "537119",
+   "2026-09-13 23:19:25.442000",
+   "01a09b51-dd3a-74e1-8951-c65baef5a340",
+   "01a09b51-dc9f-7f40-9ff7-e01a0ac89341"
+  ],
+  [
+   "10hk6l",
+   "/guides/divorce-breakup-psychics-online/",
+   "kasamba-stefan",
+   "532018",
+   "2026-09-13 23:19:20.391000",
+   "01a09b51-dd3a-74e1-8951-c65baef5a340",
+   "01a09b51-dc9f-7f40-9ff7-e01a0ac89341"
+  ],
+  [
+   "ysjyb2",
+   "/",
+   "kasamba",
+   "17403",
+   "2026-09-13 06:42:58.801000",
+   "01a097ba-44bd-7e47-afe5-151755880f60",
+   "01a097ba-44a4-7421-b162-b3558ee235d8"
+  ],
+  [
+   "gmdq1q",
+   "/",
+   "kasamba",
+   "18505",
+   "2026-09-13 06:41:37.873000",
+   "01a097ba-44bd-7e47-afe5-151755880f60",
+   "01a097ba-44a4-7421-b162-b3558ee235d8"
+  ],
+  [
+   "7qf1z1",
+   "/reviews/kasamba/",
+   "kasamba",
+   "16024",
+   "2026-09-13 06:30:11.849000",
+   "01a097ba-44bd-7e47-afe5-151755880f60",
+   "01a097ba-44a4-7421-b162-b3558ee235d8"
+  ],
+  [
+   "94eviu",
+   "/guides/what-is-psychic-reading/",
+   "kasamba",
+   "2972",
+   "2026-09-13 06:26:10.167000",
+   "01a097ba-44bd-7e47-afe5-151755880f60",
+   "01a097ba-44a4-7421-b162-b3558ee235d8"
+  ],
+  [
+   "1x4f4c",
+   "/guides/what-is-psychic-reading/",
+   "kasamba",
+   "1753",
+   "2026-09-13 03:51:09.965000",
+   "01a0972c-7459-75b2-aef1-e66f8d7f282e",
+   "01a0972c-743b-7c7b-a92a-d2eb577808b6"
+  ],
+  [
+   "q1wmps",
+   "/guides/top-love-psychics-keen/",
+   "keen",
+   "9109",
+   "2026-09-13 01:44:30.878000",
+   "01a096b7-59d5-7d1e-bc71-064af4ff09cb",
+   "01a096b7-5979-70a8-bc39-34b35d45b49c"
+  ],
+  [
+   "o3gjb3",
+   "/guides/top-love-psychics-keen/",
+   "keen",
+   "3579",
+   "2026-09-13 01:44:01.449000",
+   "01a096b7-59d5-7d1e-bc71-064af4ff09cb",
+   "01a096b7-5979-70a8-bc39-34b35d45b49c"
+  ],
+  [
+   "xtqsfp",
+   "/guides/top-love-psychics-keen/",
+   "keen",
+   "21387",
+   "2026-09-13 01:43:35.173000",
+   "01a096b7-59d5-7d1e-bc71-064af4ff09cb",
+   "01a096b7-5979-70a8-bc39-34b35d45b49c"
+  ],
+  [
+   "8swka6",
+   "/guides/best-tarot-readers-for-love/",
+   "keen",
+   "4300",
+   "2026-09-12 13:20:27.824000",
+   "01a0940f-43c5-723f-b11e-f0a4d45a2362",
+   "01a058ce-0d7a-72a8-91c4-638a97d7d3f5"
+  ],
+  [
+   "yww4tg",
+   "/",
+   "kasamba",
+   "1061",
+   "2026-09-12 06:58:06.837000",
+   "01a092a6-ec65-7365-984b-eaf384382ef7",
+   "01a092a6-ec53-7b4d-b52d-8f2ad6476f21"
+  ],
+  [
+   "jo7bav",
+   "/reviews/keen/",
+   "keen",
+   "7019",
+   "2026-09-12 06:54:54.577000",
+   "01a092a6-ec65-7365-984b-eaf384382ef7",
+   "01a092a6-ec53-7b4d-b52d-8f2ad6476f21"
+  ],
+  [
+   "anh4ql",
+   "/reviews/keen/",
+   "keen",
+   "6553",
+   "2026-09-12 06:51:36.661000",
+   "01a092a6-ec65-7365-984b-eaf384382ef7",
+   "01a092a6-ec53-7b4d-b52d-8f2ad6476f21"
+  ],
+  [
+   "unawq2",
+   "/reviews/keen/",
+   "keen",
+   "10464",
+   "2026-09-12 06:50:47.098000",
+   "01a092a6-ec65-7365-984b-eaf384382ef7",
+   "01a092a6-ec53-7b4d-b52d-8f2ad6476f21"
+  ],
+  [
+   "aayu48",
+   "/reviews/kasamba/",
+   "kasamba",
+   "30643",
+   "2026-09-12 06:47:27.037000",
+   "01a092a6-ec65-7365-984b-eaf384382ef7",
+   "01a092a6-ec53-7b4d-b52d-8f2ad6476f21"
+  ],
+  [
+   "0zsuyt",
+   "/reviews/kasamba/a-psychic-friend-kasamba-review/",
+   "kasamba-a-psychic-friend",
+   "22033",
+   "2026-09-12 04:56:57.637000",
+   "01a09242-05ce-7a7f-af1f-faefc0b3d039",
+   "01a09242-05ae-79d5-ad9f-15f015fc937d"
+  ],
+  [
+   "(无)",
+   "/guides/top-love-psychics-keen/",
+   "keen",
+   null,
+   "2026-09-10 12:29:16.226000",
+   "01a08993-7756-7a47-929a-11ab70aa81e5",
+   "01a08993-773b-71b7-8edf-5b18a4cda891"
+  ],
+  [
+   "(无)",
+   "/guides/what-is-psychic-reading/",
+   "kasamba",
+   null,
+   "2026-09-10 11:34:02.591000",
+   "01a08960-da79-7a13-b4fd-b93b244866d2",
+   "01a08960-da64-79be-9fd0-1a7a16d70a9c"
+  ],
+  [
+   "(无)",
+   "/guides/best-tarot-readers-on-kasamba/",
+   "kasamba",
+   null,
+   "2026-09-10 06:10:23.639000",
+   "01a08838-145c-77b1-a97b-ff44d238006b",
+   "01a08838-1452-77ab-8e18-c6e3b2b19f59"
+  ],
+  [
+   "(无)",
+   "/guides/best-tarot-readers-on-kasamba/",
+   "kasamba",
+   null,
+   "2026-09-10 06:09:37.691000",
+   "01a08838-145c-77b1-a97b-ff44d238006b",
+   "01a08838-1452-77ab-8e18-c6e3b2b19f59"
+  ],
+  [
+   "(无)",
+   "/reviews/kasamba/love-stefans-psychic-soul-kasamba-review/",
+   "kasamba-stefan",
+   null,
+   "2026-09-09 08:10:56.648000",
+   "01a08380-cc8e-746f-9950-abebbfc2e970",
+   "01a08380-cc7c-7d9d-9285-660dd516a3a1"
+  ],
+  [
+   "(无)",
+   "/reviews/keen/eye-of-pheobe-on-keen-review-2026/",
+   "keen-pheobe",
+   null,
+   "2026-09-08 18:00:37.055000",
+   "01a08056-02f0-71ca-8a2d-e6e9d5888277",
+   "01a08056-02be-76c9-b7e5-6bea331b4c8f"
+  ]
+ ]
+}

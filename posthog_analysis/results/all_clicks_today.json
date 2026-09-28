@@ -1,0 +1,115 @@
+{
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       coalesce(nullIf(properties.$session_entry_referring_domain,''),'(空)') AS ref,\n       coalesce(nullIf(toString(properties.slug),''),'') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'') AS token,\n       coalesce(nullIf(toString(properties.sub_id),''),'') AS sub_id,\n       toString(person_id) AS pid,\n       coalesce(nullIf(properties.$geoip_country_code,''),'(?)') AS cc\nFROM events WHERE event='affiliate_link_click'\n  AND timestamp >= toDateTime(1790524800) AND timestamp < toDateTime(1790594182)\nORDER BY timestamp DESC LIMIT 200\n",
+ "columns": [
+  "t",
+  "host",
+  "ref",
+  "slug",
+  "token",
+  "sub_id",
+  "pid",
+  "cc"
+ ],
+ "results": [
+  [
+   "2026-09-28 18:55:02.707000",
+   "easternalignment.com",
+   "www.google.com",
+   "kasamba-love-specialist-isabelle",
+   "wttqy0",
+   "01a0e7a6-e470-7a88-bc91-89668d92b4b5.wttqy0",
+   "03b26245-b83a-592d-8ac7-7ae647d7d3af",
+   "GB"
+  ],
+  [
+   "2026-09-28 11:16:26.401000",
+   "easternalignment.com",
+   "$direct",
+   "purplegarden",
+   "484cmo",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.484cmo",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 08:18:13.681000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden-serena",
+   "lm09dl",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.lm09dl",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 07:29:43.422000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden-tattooed-psychic",
+   "1cpyim",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.1cpyim",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 07:25:36.200000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden",
+   "y05dms",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.y05dms",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 06:36:52.396000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden-serena",
+   "oohwi6",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.oohwi6",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 06:33:28.267000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden",
+   "a8e1j4",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.a8e1j4",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 06:32:20.821000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden",
+   "gtos2m",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.gtos2m",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 06:18:07.781000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden-tattooed-psychic",
+   "bxteue",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.bxteue",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ],
+  [
+   "2026-09-28 06:15:46.267000",
+   "easternalignment.com",
+   "$direct",
+   "purple-garden-tattooed-psychic",
+   "axzuuf",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.axzuuf",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US"
+  ]
+ ]
+}

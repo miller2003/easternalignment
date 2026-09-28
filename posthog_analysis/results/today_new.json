@@ -1,0 +1,11 @@
+{
+ "sql": "\nWITH f AS (SELECT person_id, min(timestamp) AS first_ts FROM events\n           WHERE person_id IS NOT NULL GROUP BY person_id)\nSELECT count() AS first_seen_today\nFROM f WHERE toDate(toTimeZone(first_ts,'Asia/Shanghai')) = toDate(toTimeZone(toDateTime(1790524800),'Asia/Shanghai'))\n",
+ "columns": [
+  "first_seen_today"
+ ],
+ "results": [
+  [
+   8
+  ]
+ ]
+}

@@ -48,14 +48,29 @@ const readerName = frontmatter.platformName?.includes(':')
   ? frontmatter.platformName.split(':').pop()?.trim()
   : frontmatter.platformName;
 
-const faqItems = [
+// Normaliza el precio: si el frontmatter ya trae "/min", no repetirlo junto
+// a "por minuto" (evita "cobra $2.99/min por minuto"). Si la tarifa no es
+// numérica ("Tarifa por confirmar") se usa una frase distinta en lugar de
+// concatenarla a "por minuto".
+const pricePerMin = (frontmatter.pricing || '').replace(/\s*\/\s*min\.?\s*$/i, '');
+const priceSentence = /\d/.test(pricePerMin)
+  ? `${readerName} cobra ${pricePerMin} por minuto.`
+  : `${readerName} no publica una tarifa fija por minuto en su perfil de Purple Garden — conviene confirmar la tarifa vigente antes de reservar.`;
+
+// FAQ: frontmatter `faq` (per-reader, editorial) first — it is the richer,
+// review-specific content — then the evergreen generic items as a fallback
+// supplement. Both sets feed the FAQPage JSON-LD emitted by <EsFAQ />.
+const fmFaq = (frontmatter.faq || []).filter(
+  (item: { question?: string; answer?: string }) => item?.question && item?.answer,
+);
+const genericFaqItems = [
   {
     question: `¿${readerName} es una vidente confiable en Purple Garden?`,
     answer: `${readerName} tiene una calificación de ${frontmatter.rating} sobre 5 en Purple Garden. Esta reseña analiza su historial verificado, la metodología de sus lecturas y las opiniones documentadas de usuarios reales. Consulta el análisis completo antes de reservar.`,
   },
   {
     question: `¿Cuánto cobra ${readerName} por una sesión en Purple Garden?`,
-    answer: `${readerName} cobra ${frontmatter.pricing || 'según tarifa actualizada en la plataforma'} por minuto. ${frontmatter.freeOffer ? `Nuevos usuarios en Purple Garden pueden acceder a: ${frontmatter.freeOffer}.` : ''} Recomendamos definir un presupuesto antes de iniciar la consulta.`,
+    answer: `${priceSentence} ${frontmatter.freeOffer ? `Nuevos usuarios en Purple Garden pueden acceder a: ${frontmatter.freeOffer}.` : ''} Recomendamos definir un presupuesto antes de iniciar la consulta.`,
   },
   {
     question: `¿Qué opiniones reales existen sobre ${readerName}?`,
@@ -65,6 +80,13 @@ const faqItems = [
     question: `¿Cómo reservo con ${readerName} en Purple Garden?`,
     answer: `Puedes acceder al perfil de ${readerName} directamente en Purple Garden. El botón en esta página te lleva a su perfil con disponibilidad actualizada. Purple Garden ofrece sesiones por chat, teléfono y video según el lector.`,
   },
+];
+// Skip generic items whose question substantially duplicates a frontmatter one.
+const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const fmQuestions = new Set(fmFaq.map((i: { question: string }) => norm(i.question)));
+const faqItems = [
+  ...fmFaq,
+  ...genericFaqItems.filter((g) => !fmQuestions.has(norm(g.question))),
 ];
 ---
 

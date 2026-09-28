@@ -1,0 +1,75 @@
+{
+ "sql": "\nWITH s AS (\n  SELECT properties.$session_id AS sid,\n         any(person_id) AS pid,\n         min(timestamp) AS t0,\n         dateDiff('second', min(timestamp), max(timestamp)) AS dur,\n         countIf(event='$pageview') AS pv,\n         countIf(event='$web_vitals') AS vit,\n         countIf(event='affiliate_link_click') AS clicks,\n         any(coalesce(nullIf(properties.$geoip_country_code,''),'(?)')) AS cc,\n         any(coalesce(properties.$device_type,'')) AS dev,\n         any(coalesce(nullIf(properties.$session_entry_referring_domain,''),'')) AS ref,\n         any(coalesce(nullIf(properties.$session_entry_utm_source,''),'')) AS utm,\n         any(coalesce(nullIf(properties.$session_entry_pathname,''),'')) AS entry\n  FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND properties.$session_id IS NOT NULL\n        AND timestamp >= toDateTime(1787932800) AND timestamp < toDateTime(1790561801)\n        AND (match(coalesce(properties.$session_entry_referring_domain,''), '(?i)(google|bing|yahoo|duckduckgo|ecosia|yandex|msn[.]|aol[.]|brave|startpage|qwant|naver|baidu|search[.])'))\n  GROUP BY sid\n)\nSELECT CASE\n  WHEN entry LIKE '/guides/%'      THEN 'guides 指南'\n  WHEN entry LIKE '/reviews/%'     THEN 'reviews 评测'\n  WHEN entry LIKE '/comparisons/%' THEN 'comparisons 对比'\n  WHEN entry LIKE '/astrology/%'   THEN 'astrology 星座'\n  WHEN entry = '/' OR entry = ''   THEN '首页'\n  ELSE '其他' END AS ptype, count() AS sessions, sum(pv) AS pv_total,\n       sum(clicks) AS total_clicks, countIf(clicks>0) AS click_sessions,\n       round(100.0*countIf(clicks>0)/count(),1) AS cvr_pct,\n       round(avg(dur),1) AS avg_dur,\n       round(100.0*countIf(pv<=1)/count(),1) AS bounce_pct\nFROM s GROUP BY ptype ORDER BY sessions DESC LIMIT 20\n",
+ "columns": [
+  "ptype",
+  "sessions",
+  "pv_total",
+  "total_clicks",
+  "click_sessions",
+  "cvr_pct",
+  "avg_dur",
+  "bounce_pct"
+ ],
+ "results": [
+  [
+   "guides 指南",
+   129,
+   164,
+   17,
+   10,
+   7.8,
+   252.9,
+   84.5
+  ],
+  [
+   "reviews 评测",
+   115,
+   159,
+   7,
+   6,
+   5.2,
+   231.4,
+   80.0
+  ],
+  [
+   "首页",
+   9,
+   9,
+   0,
+   0,
+   0.0,
+   1.3,
+   100.0
+  ],
+  [
+   "其他",
+   9,
+   11,
+   0,
+   0,
+   0.0,
+   195.3,
+   88.9
+  ],
+  [
+   "comparisons 对比",
+   9,
+   9,
+   0,
+   0,
+   0.0,
+   215.6,
+   100.0
+  ],
+  [
+   "astrology 星座",
+   3,
+   3,
+   1,
+   1,
+   33.3,
+   52.7,
+   100.0
+  ]
+ ]
+}

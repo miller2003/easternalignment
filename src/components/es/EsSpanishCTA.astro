@@ -66,11 +66,10 @@ const PLATFORM_NAMES = {
 // ────────────────────────────────────────────────────────────────────────────
 // PER-READER DEEP LINKS (TUNE/Barges backend) — overrides platform offer
 // when the readerSlug matches. key = reader slug (md filename).
+// 2026-09-28: movido a lib/esOffers.ts (fuente única compartida con
+// EsReviewLayout para stickyCta / DealStrip / InlineCta / sidebar deal).
 // ────────────────────────────────────────────────────────────────────────────
-const READER_URLS: Record<string, string> = {
-  'luz-tarot': '/go/purple-garden-es-luz-tarot/',
-  'luna-aestethic': '/go/purple-garden-es-luna-aestethic/',
-} as const;
+import { ES_READER_URLS as READER_URLS } from '../../lib/esOffers';
 
 const href = (readerSlug && READER_URLS[readerSlug]) || OFFERS[platform];
 const platformName = PLATFORM_NAMES[platform];
@@ -80,8 +79,8 @@ let ctaLabel: string;
 if (variant === 'custom' && label) {
   ctaLabel = label;
 } else if (variant === 'discount') {
-  ctaLabel = platform === 'psiquicos' 
-    ? `Obtener 3 min gratis y 60% dto en ${platformName} →`
+  ctaLabel = platform === 'psiquicos'
+    ? `Obtener 3 min gratis y hasta 60% dto en ${platformName} →`
     : `Obtener $30 de crédito de bienvenida en ${platformName} →`;
 } else if (variant === 'book' && readerName) {
   ctaLabel = `Ver tarifas y disponibilidad de ${readerName} →`;

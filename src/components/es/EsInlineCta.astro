@@ -1,0 +1,157 @@
+---
+/**
+ * EsInlineCta.astro — CTA de medio artículo con inyección automática para /es
+ * (espejo exacto de InlineCta.astro, copy en español).
+ *
+ * Renderiza un <template> oculto con la tarjeta CTA; un script inserta la
+ * tarjeta antes del 2º <h2> dentro de .prose. Si el artículo tiene menos de
+ * 2 h2, no se inyecta nada. Se omite si el usuario ya cerró la barra sticky.
+ */
+import { ES_PLATFORM_OFFERS, esGoPath, esProofTooltip, type EsPlatformKey } from '../../lib/esOffers';
+import CtaTip from '../CtaTip.astro';
+
+interface Props {
+  platform: EsPlatformKey;
+  href?: string;
+  hook?: string;
+  position?: number;
+}
+
+const { platform, href, hook, position = 2 } = Astro.props;
+const offer = ES_PLATFORM_OFFERS[platform];
+const link = href || esGoPath(platform);
+const hookText =
+  hook ||
+  `¿Todavía lo estás valorando? La forma más rápida de saber si una lectura te conviene es probarla — ${offer.offer} para nuevos usuarios.`;
+---
+
+<template data-inline-cta-template data-position={position}>
+  <div class="inline-cta" data-cta-source="inline">
+    <p class="inline-cta__hook">{hookText}</p>
+    <div class="inline-cta__row">
+      <CtaTip text={esProofTooltip(platform)}>
+        <a
+          href={link}
+          class="inline-cta__btn"
+          rel="nofollow sponsored"
+          target="_blank"
+          data-cta-source="inline"
+        >
+          {offer.ctaLabel}
+        </a>
+      </CtaTip>
+    </div>
+    <p class="inline-cta__micro">{offer.microLine}</p>
+  </div>
+</template>
+
+<script>
+  (function () {
+    function mount() {
+      var tpl = document.querySelector('template[data-inline-cta-template]');
+      if (!tpl) return;
+      try {
+        if (window.__eaStickyDismissed) return;
+      } catch (e) {}
+
+      var prose = document.querySelector('.prose');
+      if (!prose) return;
+
+      var first = tpl instanceof HTMLTemplateElement ? tpl.content.firstElementChild : null;
+      if (!first) return;
+
+      var manualTarget = prose.querySelector('#inline-cta-target');
+      if (manualTarget && manualTarget.parentNode) {
+        manualTarget.parentNode.insertBefore(first.cloneNode(true), manualTarget);
+        return;
+      }
+
+      var pos = parseInt(tpl.getAttribute('data-position') || '2', 10);
+      var headings = prose.querySelectorAll('h2');
+      if (headings.length < pos) return;
+
+      var target = headings[pos - 1];
+      if (!target.parentNode) return;
+      target.parentNode.insertBefore(first.cloneNode(true), target);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', mount);
+    } else {
+      mount();
+    }
+  })();
+</script>
+
+<style>
+  .inline-cta {
+    margin: var(--space-8, 2rem) 0;
+    padding: var(--space-6, 1.5rem);
+    background: linear-gradient(135deg, rgba(196, 149, 106, 0.10) 0%, rgba(139, 111, 78, 0.06) 100%);
+    border: 1px solid var(--color-accent-light, #e8cdb0);
+    border-radius: var(--radius-lg, 12px);
+    text-align: center;
+  }
+
+  .inline-cta__hook {
+    margin: 0 0 var(--space-4, 1rem);
+    font-size: var(--text-base, 1rem);
+    font-weight: 600;
+    color: var(--color-text, #2d2a26);
+    line-height: var(--leading-normal, 1.5);
+  }
+
+  .inline-cta__row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .inline-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 22px;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, var(--es-gold-600, #8A651A) 0%, var(--es-gold-700, #6B4E0F) 100%);
+    color: var(--es-gold-cream, #F8F4E9) !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.16),
+      0 2px 10px rgba(107, 78, 15, 0.30);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .inline-cta__btn:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 0 0 1px var(--es-gold-ring, rgba(184, 147, 58, 0.55)),
+      0 8px 20px rgba(58, 44, 14, 0.28);
+    color: var(--es-gold-cream, #F8F4E9);
+  }
+
+  .inline-cta__micro {
+    margin: var(--space-3, 0.75rem) 0 0;
+    font-size: 12px;
+    color: var(--color-text-muted, #7a746b);
+  }
+
+  @media (max-width: 640px) {
+    .inline-cta__btn {
+      width: 100%;
+    }
+  }
+
+  :global(.prose) .inline-cta a {
+    text-decoration: none;
+  }
+
+  :global(.prose) .inline-cta__btn,
+  :global(.prose) .inline-cta__btn:visited,
+  :global(.prose) .inline-cta__btn:hover {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+</style>

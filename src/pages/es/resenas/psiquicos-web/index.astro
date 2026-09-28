@@ -18,6 +18,54 @@ const readers = Object.entries(allReaderModules)
   }))
   .sort((a, b) => (b.rating || 0) - (a.rating || 0));
 
+// ── Lectores destacados ───────────────────────────────────────────────────────
+// 2026-09-28: antes era una tarjeta hardcodeada (Penélope con "Tarot de Marsella
+// · Baraja Española · $2.49–$3.99/min") que contradecía su propia reseña
+// ($2.49/min, videncia de nacimiento + canalización angelical + numerología).
+// La selección es curada, pero todos los datos salen del frontmatter.
+const FEATURED_SLUGS = ['veronica', 'carlota'];
+
+const GRADIENTS = [
+  'linear-gradient(135deg, #f87171, #dc2626)',
+  'linear-gradient(135deg, #818cf8, #4338ca)',
+];
+
+const initialsOf = (name: string) =>
+  name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]?.toUpperCase()).join('') || 'PW';
+
+// Recorta el veredicto a sus dos primeras frases (máx. ~300 caracteres) para
+// que la tarjeta no se convierta en un muro de texto. El texto completo vive
+// en la reseña enlazada.
+const shortVerdict = (text: string) => {
+  if (!text) return '';
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  let out = '';
+  for (const s of sentences) {
+    if (out && [...out].length + [...s].length > 300) break;
+    out = out ? `${out} ${s}` : s;
+    if ([...out].length > 190) break;
+  }
+  return [...out].length > 330 ? `${[...out].slice(0, 327).join('')}…` : out;
+};
+
+const featuredReaders = FEATURED_SLUGS
+  .map((slug) => readers.find((r) => r.slug === slug))
+  .filter((r): r is (typeof readers)[number] => Boolean(r))
+  .map((r, i) => {
+    const displayName = r.platformName?.includes(':')
+      ? r.platformName.split(':').pop()!.trim()
+      : r.platformName;
+    return {
+      slug: r.slug,
+      initials: initialsOf(displayName),
+      name: displayName,
+      specialty: (r.bestFor || '').split(',').slice(0, 3).join(' · '),
+      price: r.pricing || '',
+      background: GRADIENTS[i % GRADIENTS.length],
+      description: shortVerdict(r.verdict || r.description || ''),
+    };
+  });
+
 const platformSchema = {
   "@context": "https://schema.org",
   "@type": "Review",
@@ -27,7 +75,7 @@ const platformSchema = {
   "url": canonicalUrl,
   "reviewRating": {
     "@type": "Rating",
-    "ratingValue": 4.5,
+    "ratingValue": 4.8,
     "bestRating": 5,
     "worstRating": 1
   },
@@ -53,7 +101,7 @@ const faqItems = [
   },
   {
     question: "¿Cuánto cuesta una sesión en Psíquicos Web?",
-    answer: "Los precios van de $1.99 a $14.99 por minuto, aunque la mayoría de los lectores activos con buen historial cobran entre $2.69 y $4.99/min. Los nuevos usuarios reciben los primeros 3 minutos gratis y hasta un 60% de descuento en la primera recarga. Una sesión estándar de 20 minutos con un lector de gama media ronda los $60–80."
+    answer: "Los precios van de $0.99 a $14.99 por minuto — la mediana del catálogo se sitúa en $2.79 — y la mayoría de los lectores activos con buen historial cobran entre $2.49 y $3.99/min. Los nuevos usuarios reciben los primeros 3 minutos gratis y hasta un 60% de descuento en la primera recarga. Una sesión estándar de 20 minutos con un lector de gama media ronda los $55–80."
   },
   {
     question: "¿Cómo funcionan los 3 minutos gratis?",
@@ -74,9 +122,10 @@ const faqItems = [
   title="Psíquicos Web: Análisis Completo 2026 — La Mayor Plataforma de Videncia en Español"
   description="Análisis independiente de Psíquicos Web: cómo funciona realmente, precios verificados, lectores destacados con historial documentado, opiniones de usuarios reales y veredicto sin filtros."
   seoTitle="Opiniones de Psíquicos Web 2026: ¿Confiable o Estafa? Análisis"
-  metaDescription="¿Psíquicos Web es confiable? Análisis con datos reales: 1M+ descargas, 4.2/5 estrellas, precios $1.99–$14.99/min, 3 min gratis. Lectores verificados y opiniones de usuarios reales."
+  metaDescription="¿Psíquicos Web es confiable? Análisis con datos reales: 1M+ descargas, 883.194 lecturas documentadas, 144 asesores en español, precios desde $0.99/min, 3 min gratis. Opiniones verificadas."
   canonicalUrl={canonicalUrl}
   jsonLd={platformSchema}
+  topOfferPlatform="psiquicos"
 >
   <article class="section">
     <div class="container">
@@ -95,13 +144,13 @@ const faqItems = [
 
         <!-- Rating Summary Bar -->
         <div class="hub-rating-bar">
-          <div class="hub-rating-score">4.5<span class="hub-rating-max">/5</span></div>
-          <div class="hub-rating-stars" aria-label="4.5 de 5 estrellas">
+          <div class="hub-rating-score">4.8<span class="hub-rating-max">/5</span></div>
+          <div class="hub-rating-stars" aria-label="4.8 de 5 estrellas">
             {'★★★★½'.split('').map(s => <span class="star-char">{s}</span>)}
           </div>
           <div class="hub-rating-meta">
             <span class="hub-rating-tag">Calificación de la Plataforma</span>
-            <span class="hub-rating-note">Basada en 5.200+ reseñas verificadas en Google Play + App Store</span>
+            <span class="hub-rating-note">4,80★ promedio de 135 asesores valorados · 883.194 lecturas documentadas · 99,0% de reseñas positivas</span>
           </div>
         </div>
 
@@ -118,14 +167,14 @@ const faqItems = [
           </div>
           <div class="hub-stat">
             <span class="hub-stat-value">4.2★</span>
-            <span class="hub-stat-label">Calificación App Store Android</span>
+            <span class="hub-stat-label">Calificación en Google Play (5.200+ reseñas)</span>
           </div>
           <div class="hub-stat">
-            <span class="hub-stat-value">2.000+</span>
-            <span class="hub-stat-label">Lectores activos</span>
+            <span class="hub-stat-value">100%</span>
+            <span class="hub-stat-label">Plataforma en español (interfaz, soporte y lectores)</span>
           </div>
           <div class="hub-stat">
-            <span class="hub-stat-value">$1.99</span>
+            <span class="hub-stat-value">$0.99</span>
             <span class="hub-stat-label">Desde / minuto</span>
           </div>
         </div>
@@ -138,7 +187,7 @@ const faqItems = [
         <h2>Por Qué Psíquicos Web Ocupa una Categoría Propia</h2>
 
         <p>
-          Hay docenas de plataformas de videncia en línea, pero casi todas operan en inglés y ofrecen español como opción secundaria — un filtro de idioma añadido sobre una infraestructura anglosajona. <strong>Psíquicos Web hace lo contrario</strong>: es una plataforma construida íntegramente para usuarios hispanohablantes, con lectores nativos de LATAM y España, contenido editorial en español, soporte técnico que responde en español, y una experiencia de usuario pensada para la cultura hispana desde el primer pixel.
+          Hay docenas de plataformas de videncia en línea, pero casi todas operan en inglés y ofrecen español como opción secundaria — un filtro de idioma añadido sobre una infraestructura anglosajona. <strong>Psíquicos Web hace lo contrario</strong>: es una plataforma construida íntegramente para usuarios hispanohablantes, con lectores nativos de LATAM y España, contenido editorial en español, soporte técnico que responde en español, y una experiencia de usuario pensada para la cultura hispana desde el primer píxel.
         </p>
 
         <p>
@@ -174,21 +223,15 @@ const faqItems = [
             <tbody>
               <tr>
                 <td><strong>Chat de texto</strong></td>
-                <td>$1.99–$5.99/min</td>
+                <td>$0.99–$14.99/min · típico $2.79</td>
                 <td>Preguntas concretas, registro escrito, usuarios tímidos</td>
                 <td>Si el lector escribe lento, el reloj corre igual</td>
               </tr>
               <tr>
                 <td><strong>Llamada de voz</strong></td>
-                <td>$2.99–$9.99/min</td>
+                <td>$0.99–$24.69/min · típico $3.09</td>
                 <td>Conexión empática más profunda, urgencia emocional</td>
                 <td>Sin transcripción automática guardada</td>
-              </tr>
-              <tr>
-                <td><strong>Video en vivo</strong></td>
-                <td>$3.99–$14.99/min</td>
-                <td>Lectura de cartas en tiempo real, lectura energética visual</td>
-                <td>Requiere buena conexión en ambos lados</td>
               </tr>
             </tbody>
           </table>
@@ -235,22 +278,29 @@ const faqItems = [
         <h2>Lectores Verificados con Historial Documentado</h2>
 
         <p>
-          La diferencia entre una plataforma mediocre y una valiosa no está en la interfaz — está en la calidad de sus lectores individuales. En Psíquicos Web, el catálogo supera los 2.000 asesores activos. Eso no es una ventaja automática: es una selva que requiere orientación. Los siguientes perfiles representan lectores con historial verificado y especialidades documentadas:
+          La diferencia entre una plataforma mediocre y una valiosa no está en la interfaz — está en la calidad de sus lectores individuales. Un catálogo amplio no es una ventaja automática: es una selva que requiere orientación. Los siguientes perfiles encabezan nuestro análisis por volumen documentado de lecturas, y cada dato proviene del frontmatter de su reseña completa:
         </p>
 
         <div class="readers-showcase">
-
-          <div class="reader-showcase-card">
-            <div class="reader-showcase-header">
-              <div class="reader-showcase-initials" style="background: linear-gradient(135deg, #f87171, #dc2626);">PE</div>
-              <div>
-                <h3 class="reader-showcase-name">Penélope</h3>
-                <span class="reader-showcase-tag">Tarot de Marsella · Baraja Española · Insights directos</span>
+          {featuredReaders.map((reader) => (
+            <div class="reader-showcase-card">
+              <div class="reader-showcase-header">
+                <div class="reader-showcase-initials" style={`background: ${reader.background};`}>{reader.initials}</div>
+                <div>
+                  <h3 class="reader-showcase-name">
+                    <a href={`/es/resenas/psiquicos-web/${reader.slug}/`}>{reader.name}</a>
+                  </h3>
+                  <span class="reader-showcase-tag">{reader.specialty}</span>
+                </div>
+                <span class="reader-showcase-price">{reader.price}</span>
               </div>
-              <span class="reader-showcase-price">$2.49–$3.99/min</span>
+              <p class="reader-showcase-desc">{reader.description}</p>
+              <div class="reader-showcase-cta">
+                <a href={`/es/resenas/psiquicos-web/${reader.slug}/`} class="btn btn--ghost btn--sm">Leer reseña completa →</a>
+                <EsSpanishCTA platform="psiquicos" variant="book" size="sm" readerName={reader.name} readerSlug={reader.slug} source={`reader-showcase-${reader.slug}`} />
+              </div>
             </div>
-            <p class="reader-showcase-desc">Lectora valorada por su estilo directo y sin rodeos. Trabaja con Tarot de Marsella y Baraja Española —herramientas con raíces históricas en la tradición ibérica— y es conocida por ir al punto sin generalidades que rellenen el tiempo de sesión.</p>
-          </div>
+          ))}
         </div>
 
         <!-- 5. OPINIONES REALES -->
@@ -298,7 +348,7 @@ const faqItems = [
         consTitle="Limitaciones a Considerar"
         pros={[
           "100% nativo en español: interfaz, soporte, lectores y contenido editorial — sin traducciones intermedias",
-          "Mayor plataforma hispanohablante del mercado: más de 2.000 lectores activos y 1M+ descargas",
+          "Plataforma operada íntegramente en español — no es un filtro de idioma añadido sobre una infraestructura anglófona: 1M+ descargas en Google Play",
           "Tres modalidades: chat, voz y video — con historial encriptado guardado en cuenta",
           "Lectores con tradiciones específicas del mundo hispano: Baraja Española, Tarot de Marsella, espiritualidad yoruba/afrocubana",
           "Oferta de bienvenida real: 3 minutos gratis + hasta 60% de descuento en primera recarga",
@@ -308,7 +358,7 @@ const faqItems = [
           "El contador de tiempo corre desde la conexión, no desde la primera respuesta — conviene llevar las preguntas preparadas",
           "Sin video bios grabados antes de la sesión (a diferencia de Purple Garden) — la primera impresión es solo por texto y foto",
           "Las reseñas sobre el sistema de cupones son inconsistentes: algunos usuarios reportan problemas al aplicar el descuento de bienvenida",
-          "El soporte técnico responde principalmente por email/ticket, con tiempos de 24–48h para disputas de facturación"
+          "El soporte técnico responde principalmente por correo electrónico y tickets, con tiempos de 24–48h para disputas de facturación"
         ]}
       />
 
@@ -628,6 +678,10 @@ const faqItems = [
     line-height: var(--leading-relaxed);
     margin: 0;
   }
+  .reader-showcase-card { display: flex; flex-direction: column; }
+  .reader-showcase-name a { color: inherit; text-decoration: none; }
+  .reader-showcase-name a:hover { color: var(--color-primary); }
+  .reader-showcase-cta { margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
 
   /* User Reviews */
   .user-reviews-grid {

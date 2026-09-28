@@ -1,0 +1,175 @@
+---
+/**
+ * EsSidebarDealCard.astro — Tarjeta CTA sticky del raíl derecho para /es
+ * (espejo exacto de SidebarDealCard.astro, copy en español).
+ *
+ * En escritorio (>=1100px) acompaña al lector por todo el artículo:
+ * badge de plataforma + estrellas + oferta + botón + microlínea.
+ * Invisible por debajo de 1100px (la EsSideOfferTab posee las pantallas
+ * pequeñas).
+ */
+import { ES_PLATFORM_OFFERS, esGoPath, esPlatformLogo, esProofTooltip, type EsPlatformKey } from '../../lib/esOffers';
+import StarRating from '../StarRating.astro';
+import CtaTip from '../CtaTip.astro';
+
+interface Props {
+  platform: EsPlatformKey;
+  rating?: number;
+  label?: string;
+  href?: string;
+  heading?: string;
+}
+
+const { platform, rating, label, href, heading } = Astro.props;
+const offer = ES_PLATFORM_OFFERS[platform];
+const link = href || esGoPath(platform);
+---
+
+<div class="sidebar-deal" data-cta-source="sidebar-deal">
+  <span class="sidebar-deal__eyebrow">{label || 'Recomendación de esta página'}</span>
+
+  <div class="sidebar-deal__brand-row">
+    <img
+      src={esPlatformLogo(platform)}
+      alt=""
+      class="sidebar-deal__logo"
+      width="22"
+      height="22"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    <div class="sidebar-deal__brand" style={`color: ${offer.color}`}>
+      {offer.name}
+    </div>
+  </div>
+
+  {typeof rating === 'number' && (
+    <div class="sidebar-deal__rating">
+      <StarRating rating={rating} size="sm" showValue={false} />
+      <span class="sidebar-deal__score">{rating.toFixed(1)}</span>
+    </div>
+  )}
+
+  <p class="sidebar-deal__offer">{heading || offer.offer}</p>
+
+  <CtaTip text={esProofTooltip(platform)} block>
+    <a
+      href={link}
+      class="sidebar-deal__btn"
+      rel="nofollow sponsored"
+      target="_blank"
+      data-cta-source="sidebar-deal"
+    >
+      {offer.ctaLabel}
+    </a>
+  </CtaTip>
+
+  <p class="sidebar-deal__micro">{offer.microLine}</p>
+</div>
+
+<style>
+  .sidebar-deal {
+    margin-top: 14px;
+    padding: 18px 16px 16px;
+    background: linear-gradient(180deg, var(--color-warning-bg, #fdf5ec) 0%, var(--color-surface, #ffffff) 100%);
+    border: 1px solid var(--color-accent-light, #e8cdb0);
+    border-radius: var(--radius-xl, 16px);
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(139, 111, 78, 0.08);
+  }
+
+  .sidebar-deal__eyebrow {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent-hover, #b07f55);
+    background: rgba(196, 149, 106, 0.14);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-deal__brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 6px;
+  }
+
+  .sidebar-deal__logo {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 2px;
+    box-shadow: 0 1px 4px rgba(45, 42, 38, 0.12);
+  }
+
+  .sidebar-deal__brand {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .sidebar-deal__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar-deal__score {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text, #2d2a26);
+  }
+
+  .sidebar-deal__offer {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary-dark, #6b5438);
+    line-height: 1.4;
+  }
+
+  .sidebar-deal__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 12px;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, var(--es-gold-600, #8A651A) 0%, var(--es-gold-700, #6B4E0F) 100%);
+    color: var(--es-gold-cream, #F8F4E9) !important;
+    font-size: 12.5px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.16),
+      0 2px 8px rgba(107, 78, 15, 0.28);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .sidebar-deal__btn:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 0 0 1px var(--es-gold-ring, rgba(184, 147, 58, 0.55)),
+      0 6px 16px rgba(58, 44, 14, 0.26);
+    color: var(--es-gold-cream, #F8F4E9);
+  }
+
+  .sidebar-deal__micro {
+    margin: 10px 0 0;
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: var(--color-text-muted, #7a746b);
+  }
+</style>

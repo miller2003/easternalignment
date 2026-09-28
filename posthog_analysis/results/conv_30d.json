@@ -1,0 +1,61 @@
+{
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       event,\n       coalesce(nullIf(toString(properties.raw_params),''),'') AS raw_params,\n       toString(properties.$source) AS src,\n       toString(properties.advertiser_name) AS advertiser\nFROM events WHERE coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386'))\n  AND (event='Order_Converted' OR event LIKE '%Postback%')\n  AND timestamp >= toDateTime(1787932800) AND timestamp < toDateTime(1790594114)\nORDER BY timestamp DESC LIMIT 200\n",
+ "columns": [
+  "t",
+  "event",
+  "raw_params",
+  "src",
+  "advertiser"
+ ],
+ "results": [
+  [
+   "2026-09-27 12:25:31.947000",
+   "Order_Converted",
+   "{\"click_id\":\"01a0e114-b83b-7d95-aa49-80ad849a62fd.fqwax3\",\"payout\":\"50\",\"transaction_id\":\"10225e81ebeaa44361919beb27804e\"}",
+   "tune_s2s_postback",
+   null
+  ],
+  [
+   "2026-09-26 10:35:47.406000",
+   "Order_Converted",
+   "{\"click_id\":\"01a0d666-23c8-749b-8734-429f0ea50fe2.pq98uh\",\"payout\":\"125\",\"transaction_id\":\"1021fa03bbe74546c6111b9cf79db4\"}",
+   "tune_s2s_postback",
+   null
+  ],
+  [
+   "2026-09-26 04:00:14.496000",
+   "Order_Converted",
+   "{\"click_id\":\"01a0da1f-aadc-7e84-b5e4-65322e391a39.fa5gn3\",\"payout\":\"50\",\"transaction_id\":\"102b6f0db2b44ff5f3f57a362f4335\"}",
+   "tune_s2s_postback",
+   null
+  ],
+  [
+   "2026-09-19 09:25:22.180000",
+   "Order_Converted",
+   "{\"click_id\":\"01a0b216-b033-7c86-bf1c-b304f17ec71c.d3si7w\",\"payout\":\"125\",\"transaction_id\":\"102524f5f3d971d4d460ce886709af\"}",
+   "tune_s2s_postback",
+   null
+  ],
+  [
+   "2026-09-15 20:30:33.113000",
+   "Order_Converted",
+   "{\"click_id\":\"01a09fde-b35f-79eb-82dd-f53fe4a6baad.v6a0be\",\"payout\":\"125\",\"transaction_id\":\"1024a405690cbea72223c3ecefc0e4\"}",
+   "tune_s2s_postback",
+   null
+  ],
+  [
+   "2026-09-14 06:31:58.467000",
+   "Order_Converted",
+   "{\"click_id\":\"01a097ba-44a4-7421-b162-b3558ee235d8.ysjyb2\",\"payout\":\"125\",\"transaction_id\":\"1025b14eca74012aad216ae2f933c9\"}",
+   "tune_s2s_postback",
+   null
+  ],
+  [
+   "2026-09-11 11:39:16.282000",
+   "Order_Converted",
+   "{\"click_id\":\"01a08960-da64-79be-9fd0-1a7a16d70a9c\",\"payout\":\"125\",\"transaction_id\":\"102e210fb60b4489ccf90c2eb7aad4\"}",
+   "tune_s2s_postback",
+   null
+  ]
+ ]
+}

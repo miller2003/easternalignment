@@ -2,9 +2,17 @@
 import EsHeader from '../components/es/EsHeader.astro';
 import EsFooter from '../components/es/EsFooter.astro';
 import EsTopDisclosureBar from '../components/es/EsTopDisclosureBar.astro';
+import EsTopOfferBar from '../components/es/EsTopOfferBar.astro';
+import EsSideOfferTab from '../components/es/EsSideOfferTab.astro';
 import PostHog from '../components/PostHog.astro';
 import GA4 from '../components/GA4.astro';
 import '../styles/global.css';
+
+const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
+// Preconexión al host de afiliado del subsitio /es (Barges/TUNE). El clic en
+// cualquier CTA pasa por /go/ → bargestech.go2cloud.org; precalentar DNS+TLS
+// aquí ahorra 150–400ms en el momento del clic.
+const ES_AFFILIATE_ORIGIN = 'https://bargestech.go2cloud.org';
 
 interface Props {
   title: string;
@@ -23,6 +31,30 @@ interface Props {
   dateModified?: string;
   /** Breadcrumb items for BreadcrumbList schema — array of {name, url} */
   breadcrumbs?: Array<{ name: string; url: string }>;
+  /**
+   * Platform context for the top offer bar (parity with BaseLayout).
+   * Layouts pass the page's platform so the promo strip matches the content.
+   * Omit to hide the bar (legal/utility pages).
+   */
+  topOfferPlatform?: 'psiquicos' | 'purple-garden-es';
+  /**
+   * Optional focused-CTA config for the right-edge offer tab (parity with
+   * BaseLayout). When provided, the tab promotes a single primary platform
+   * and deep-links to that page's reader affiliate URL. When omitted, the
+   * tab falls back to the site-wide No.1 (Psíquicos Web).
+   */
+  stickyCta?: {
+    slug: string;
+    label?: string;
+    platform?: 'psiquicos' | 'purple-garden-es';
+  };
+  /**
+   * Pure-content mode: when true, suppresses every affiliate CTA surface —
+   * the right-edge EsSideOfferTab and (via the caller omitting
+   * topOfferPlatform) the top promo bar. Used for trust pages that must
+   * carry zero commercial components.
+   */
+  noCta?: boolean;
 }
 
 const {
@@ -39,6 +71,9 @@ const {
   hreflangEn,
   dateModified,
   breadcrumbs,
+  topOfferPlatform,
+  stickyCta,
+  noCta = false,
 } = Astro.props;
 
 const SITE_NAME = 'Eastern Alignment';
@@ -175,6 +210,12 @@ const websiteSchema = {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+    <!-- Affiliate host + PostHog preconnects (parity with BaseLayout) -->
+    <link rel="dns-prefetch" href={ES_AFFILIATE_ORIGIN} />
+    <link rel="preconnect" href={ES_AFFILIATE_ORIGIN} crossorigin />
+    <link rel="dns-prefetch" href={posthogHost} />
+    <link rel="preconnect" href={posthogHost} crossorigin />
+
     <!-- Open Graph — LATAM Spanish locale -->
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={metaDesc} />
@@ -269,6 +310,7 @@ const websiteSchema = {
   <body>
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
     <EsTopDisclosureBar />
+    {topOfferPlatform && <EsTopOfferBar platform={topOfferPlatform} />}
     <EsHeader />
 
     <main id="main-content">
@@ -276,5 +318,17 @@ const websiteSchema = {
     </main>
 
     <EsFooter />
+
+    <!-- Pestaña de oferta anclada al borde derecho: la superficie CTA
+         persistente del subsitio /es (paridad con SideOfferTab del sitio
+         principal). Es EL enlace de afiliado — sin panel, sin toggle.
+         Las páginas pueden pasar `stickyCta` para apuntar al deeplink
+         propio de esa página. Se suprime por completo en modo noCta. -->
+    {!noCta && (
+      <EsSideOfferTab
+        slug={stickyCta?.slug}
+        platform={stickyCta?.platform}
+      />
+    )}
   </body>
 </html>

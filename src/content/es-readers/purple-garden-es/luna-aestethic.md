@@ -1,6 +1,7 @@
 ---
 title: "Luna Aestethic en Purple Garden: 3.200 Reseñas en 5★ y Videollamadas en Español"
-seoTitle: "Luna Aestethic Reseña — Purple Garden | 3.200 Opiniones 5★, Médium Colombiana"
+seoTitle: "Luna Aestethic Reseña — Purple Garden | 3.200 Opiniones 5★"
+metaDescription: "Reseña de Luna Aestethic en Purple Garden: 5.0★, $2.99/min. Primera sesión en Purple Garden, videollamadas en español, mediumnidad con personas y mascotas."
 description: "Análisis independiente de Luna Aestethic en Purple Garden: 3.200+ reseñas verificadas en 5.0★ a $2.99/min, videollamadas en español, medium colombiana con linaje matriarcal. El perfil más completo del catálogo hispano de la plataforma."
 platformName: "Purple Garden: Luna Aestethic"
 platform: "purple-garden-es"
@@ -9,11 +10,12 @@ verdict: "Con más de 3.200 reseñas verificadas en 5.0★ a $2.99 por minuto, L
 pricing: "$2.99/min"
 bestFor: "Primera sesión en Purple Garden, videollamadas en español, mediumnidad con personas y mascotas, bloqueos emocionales íntimos"
 publishDate: "2026-08-17"
-updatedDate: "2026-09-14"
-verifiedDate: "2026-09-14"
+updatedDate: "2026-09-28"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luna-aestethic/"
 hreflangEn: ""  # Sin equivalente en inglés — dejar vacío (ver _plantilla-resena.md)
 avatarUrl: "/avatars/es-readers/luna-aestethic.webp"
+ogImage: "/avatars/es-readers/luna-aestethic-og.jpg"
+freeOffer: "$30 de crédito de bienvenida en tu primera recarga"
 entities:
   - "Purple Garden"
   - "Luna Aestethic"
@@ -28,7 +30,7 @@ pros:
   - "Límites éticos explícitos y declarados: no hace lecturas de salud, embarazo ni legales — la honestidad sobre el alcance es la marca de un profesional de integridad"
   - "Mediumnidad con mascotas: especialidad genuinamente única que prácticamente no existe en otras lectoras del catálogo hispano"
 cons:
-  - "Disponibilidad en video no garantizada — sus slots de videollamada se agotan rápido; para garantizar video, revisar en horarios específicos (tardes colombianas, 2–6 PM COT)"
+  - "Disponibilidad en video no garantizada — sus cupos de videollamada se agotan rápido; para garantizar video, revisar en horarios específicos (tardes colombianas, 2–6 PM COT)"
   - "La mediumnidad con mascotas es una especialidad que algunos usuarios encuentran difícil de evaluar objetivamente antes de la sesión"
   - "No hace lecturas legales, médicas ni sobre embarazos — si esas son tus consultas específicas, necesitas otra lectora"
 faq:
@@ -37,7 +39,7 @@ faq:
   - question: "¿Qué significa exactamente que sea médium con mascotas?"
     answer: "Luna Aestethic ofrece sesiones de mediumnidad donde intenta establecer conexión con mascotas fallecidas — perros, gatos, animales de compañía — para transmitir mensajes o confirmar el bienestar del animal en el plano espiritual. Esta especialidad tiene demanda real pero muy pocos practicantes documentados. Es especialmente relevante para dueños que no han podido cerrar el duelo por la pérdida de una mascota con quien tuvieron un vínculo emocional profundo."
   - question: "¿Puedo pedirle que haga una videollamada en español desde el principio?"
-    answer: "Sí. Cuando Luna Aestethic tiene video disponible, aparece el ícono de cámara en su perfil de Purple Garden. El proceso es el mismo que para chat o voz — seleccionas la modalidad de video antes de iniciar la sesión. La disponibilidad varía: sus slots de video se llenan antes que sus slots de chat. El horario con mayor probabilidad de encontrarla disponible en video corresponde a las tardes en horario colombiano (COT, UTC-5): 2 PM a 7 PM COT = 2 PM a 7 PM ET = 9 PM a 2 AM en España."
+    answer: "Sí. Cuando Luna Aestethic tiene video disponible, aparece el ícono de cámara en su perfil de Purple Garden. El proceso es el mismo que para chat o voz — seleccionas la modalidad de video antes de iniciar la sesión. La disponibilidad varía: sus cupos de video se llenan antes que los de chat. El horario con mayor probabilidad de encontrarla disponible en video corresponde a las tardes en horario colombiano (COT, UTC-5): 2 PM a 7 PM COT; en España peninsular equivale a 9 PM a 2 AM en horario de verano y 8 PM a 1 AM en horario de invierno."
   - question: "¿Su límite de no hacer lecturas médicas significa que no puede ayudar con salud en absoluto?"
     answer: "Significa que no diagnostica, no interpreta síntomas, no recomienda tratamientos ni se pronuncia sobre si un médico está equivocado. Esos son límites éticos correctos que cualquier lector responsable debería tener. Sí puede hacer lecturas generales de energía — cómo está el campo energético del consultante, si hay bloqueos emocionales manifestándose físicamente, qué dicen las cartas sobre el bienestar general. La diferencia está entre orientación espiritual general (que sí hace) y diagnóstico médico (que no hace y no debería hacer nadie en este campo)."
 ---
@@ -62,9 +64,9 @@ Sus especialidades son realmente distintas — no el listado genérico de "amor,
 
 **Mediumnidad con mascotas:** Esta es probablemente la especialidad más inusual del catálogo hispano de Purple Garden. Luna Aestethic ofrece sesiones de mediumnidad con animales de compañía fallecidos — perros, gatos — para usuarios que no han podido cerrar el duelo. La demanda existe y es real; la oferta hispanohablante para este tipo de consulta es prácticamente inexistente en otras plataformas.
 
-**Sexual coaching espiritual:** Bloqueos emocionales en la esfera íntima, compatibilidad energética entre parejas, cicatrices emocionales que se manifiestan en la vida sexual. No es terapia sexual — es lectura de campo energético aplicada a la vida íntima, y requiere un nivel de apertura y confianza que pocas lectoras colombianas ofrecen con la naturalidad que sus reseñas describen.
+**Coaching espiritual de la sexualidad:** Bloqueos emocionales en la esfera íntima, compatibilidad energética entre parejas, cicatrices emocionales que se manifiestan en la vida sexual. No es terapia sexual — es lectura de campo energético aplicada a la vida íntima, y requiere un nivel de apertura y confianza que pocas lectoras colombianas ofrecen con la naturalidad que sus reseñas describen.
 
-**Videollamadas en español:** La función más valiosa de Purple Garden — la que permite ver al lector antes y durante la sesión — combinada con hablante nativa hispanohablante es una combinación que en el catálogo de la plataforma pertenece a un subgrupo de dos o tres lectoras con historial verificado. Luna Aestethic es una de ellas.
+**Videollamadas en español:** La función más valiosa de Purple Garden — la que permite ver al lector antes y durante la sesión — unida a una hablante nativa de español forma una combinación que en el catálogo de la plataforma pertenece a un subgrupo de dos o tres lectoras con historial verificado. Luna Aestethic es una de ellas.
 
 ---
 
@@ -131,12 +133,14 @@ Si estás eligiendo a qué lectora hispanohablante de Purple Garden dedicar tus 
 Eso no es garantía de que tu sesión específica será perfecta. La mediumnidad, el tarot y la orientación espiritual tienen variabilidad inherente. Pero la probabilidad de que la experiencia sea coherente con lo que 3.200 usuarios verificados reportaron durante ocho años es significativamente más alta que con cualquier lectora que tenga 40 reseñas y 4.8★.
 
 **Luna Aestethic es la primera opción si:**
-- Quieres minimizar el riesgo de una primera sesión decepcionante — historial de 8 años es la mejor garantía disponible
+- Quieres minimizar el riesgo de una primera sesión decepcionante — un historial de 8 años es la mejor garantía disponible
 - Buscas videollamada en español — activa el filtro y espera disponibilidad en horario COT
 - Tu consulta involucra mediumnidad, duelo por mascotas o bloqueos emocionales en la vida íntima
 - Quieres aprovechar el crédito de $30 de bienvenida de la forma más segura posible
 
 **Considera otra opción si:**
 - Necesitas disponibilidad inmediata en video — revisar primero disponibilidad antes de recargar
-- Tu consulta es de análisis de tarot puro y analítico — Luz Tarot tiene mayor especialización técnica en ese eje
+- Tu consulta es de tarot analítico o necesitas detectar engaños y situaciones ocultas — Luz tarot combina tarot y videncia y declara esa especialidad de forma explícita (27 años de oficio, 5.0★)
 - Buscas lectura en horario europeo de madrugada colombiana — la disponibilidad sigue el horario COT principalmente
+
+[Reservar con Luna Aestethic en Purple Garden ($30 de crédito para nuevos usuarios) →](/go/purple-garden-es-luna-aestethic/)

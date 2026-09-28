@@ -221,22 +221,26 @@
     justify-content: center;
     gap: 4px;
     width: 100%;
-    padding: 8px;
-    border-radius: 6px;
-    background: linear-gradient(135deg, var(--color-accent, #c4956a) 0%, var(--color-accent-hover, #b07f55) 100%);
-    color: #ffffff !important;
-    font-size: 14px;
-    font-weight: 600;
+    padding: 7px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--es-gold-600, #8A651A) 0%, var(--es-gold-700, #6B4E0F) 100%);
+    color: var(--es-gold-cream, #F8F4E9) !important;
+    font-size: 13px;
+    font-weight: 700;
     text-decoration: none;
     transition: all var(--transition-base, 0.25s ease);
-    box-shadow: 0 2px 8px rgba(196, 149, 106, 0.25);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.16),
+      0 2px 8px rgba(107, 78, 15, 0.26);
   }
 
   .deal-card__btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(196, 149, 106, 0.4);
-    background: linear-gradient(135deg, var(--color-accent-hover, #b07f55) 0%, var(--color-accent, #c4956a) 100%);
-    color: #ffffff;
+    background: linear-gradient(180deg, #7a5a15 0%, #5d430c 100%);
+    box-shadow:
+      0 0 0 1px var(--es-gold-ring, rgba(184, 147, 58, 0.55)),
+      0 6px 16px rgba(58, 44, 14, 0.26);
+    color: var(--es-gold-cream, #F8F4E9);
   }
 
   .deal-card__btn-icon {

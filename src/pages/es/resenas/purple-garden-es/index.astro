@@ -69,69 +69,70 @@ const faqItems = [
   }
 ];
 
-// Lectores destacados en español con datos verificados
-const spanishReaders = [
-  {
-    initials: "LT",
-    name: "Luz Tarot",
-    handle: "Luztarot",
-    specialty: "Tarot de Marsella · 27 años de experiencia",
-    price: "$2.99–$4.99/min",
-    rating: "4.9★ · 500+ reseñas",
-    background: "linear-gradient(135deg, #c084fc, #7c3aed)",
-    description: "Una de las lectoras más respetadas de la plataforma. 27 años de experiencia con Tarot de Marsella y lectura espiritual. Sus seguidores hispanohablantes destacan consistentemente su capacidad para dar fechas concretas sin rodeos."
-  },
-  {
-    initials: "AS",
-    name: "Aiden Spirit",
-    handle: "AidenSpirit",
-    specialty: "Tarot · Amor · Carrera · 15+ años",
-    price: "$5.99/min",
-    rating: "4.9–5.0★ · 1.000+ reseñas",
-    background: "linear-gradient(135deg, #06b6d4, #0284c7)",
-    description: "El lector bilingüe con mayor volumen de reseñas verificadas en el segmento hispano de la plataforma. Más de 1.000 valoraciones en 4.9+ estrellas es un umbral extraordinariamente difícil de mantener. Especialmente valorado para consultas de amor con situaciones complejas de pareja."
-  },
-  {
-    initials: "OL",
-    name: "Olokun",
-    handle: "Olokun",
-    specialty: "Baraja Española · Espodomancia · Quiromancia",
-    price: "$2.99–$4.99/min",
-    rating: "4.8★ · 250+ reseñas",
-    background: "linear-gradient(135deg, #10b981, #065f46)",
-    description: "Lector hispanohablante nativo con 13+ años de experiencia. Trabaja con Baraja Española y técnicas de espodomancia (lectura de cenizas) — herramientas poco comunes en plataformas globales. Una opción distinta para quienes buscan tradiciones fuera del circuito tarot/astrología estándar."
-  },
-  {
-    initials: "LA",
-    name: "Luna Aestethic",
-    handle: "LunaAestethic",
-    specialty: "Médium · Coaching Espiritual · Video",
-    price: "$3.99–$5.99/min",
-    rating: "5.0★ · 400+ reseñas",
-    background: "linear-gradient(135deg, #8b5cf6, #4c1d95)",
-    description: "Médium colombiana con calificación perfecta de 5.0★ y más de 400 reseñas. Ofrece específicamente videollamadas en español — la combinación de video en vivo con hablante nativa hispanohablante es rara incluso en Purple Garden. Disponibilidad variable."
-  },
-  {
-    initials: "AR",
-    name: "Aura Rosa",
-    handle: "AuraRosa",
-    specialty: "Tarot Celta · Tarot de Marsella · Cartomancia",
-    price: "$1.99–$3.99/min",
-    rating: "4.8★ · 350+ reseñas",
-    background: "linear-gradient(135deg, #fb7185, #be123c)",
-    description: "Lectora hispanohablante nativa especializada en tres sistemas de cartomancia diferentes. Su precio accesible y calificación sólida la convierten en una buena primera opción para quienes quieren explorar la plataforma en español sin un gasto significativo."
-  }
+// ── Lectores destacados ───────────────────────────────────────────────────────
+// 2026-09-28: antes era un array hardcodeado. Se quedó desincronizado de las
+// reseñas (Luz tarot aparecía con 4.9★/500+ reseñas/$2.49–3.99 cuando su página
+// dice 5.0★/909 lecturas/$1.99) y contenía perfiles que el catálogo hispano de
+// la plataforma no expone. Ahora la selección es curada (top del ranking) pero
+// TODOS los datos salen del frontmatter de cada reseña — fuente única.
+const FEATURED_SLUGS = ['lucius-blanco', 'nina-zadir', 'armand', 'atlantisv', 'medium-fernanda'];
+
+const GRADIENTS = [
+  'linear-gradient(135deg, #c084fc, #7c3aed)',
+  'linear-gradient(135deg, #06b6d4, #0284c7)',
+  'linear-gradient(135deg, #10b981, #065f46)',
+  'linear-gradient(135deg, #8b5cf6, #4c1d95)',
+  'linear-gradient(135deg, #fb7185, #be123c)',
 ];
+
+const initialsOf = (name: string) =>
+  name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]?.toUpperCase()).join('') || 'PG';
+
+// Recorta el veredicto a sus dos primeras frases (máx. ~300 caracteres) para
+// que la tarjeta no se convierta en un muro de texto. El texto completo vive
+// en la reseña enlazada.
+const shortVerdict = (text: string) => {
+  if (!text) return '';
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  let out = '';
+  for (const s of sentences) {
+    if (out && [...out].length + [...s].length > 300) break;
+    out = out ? `${out} ${s}` : s;
+    if ([...out].length > 190) break;
+  }
+  return [...out].length > 330 ? `${[...out].slice(0, 327).join('')}…` : out;
+};
+
+const spanishReaders = FEATURED_SLUGS
+  .map((slug) => readers.find((r) => r.slug === slug))
+  .filter((r): r is (typeof readers)[number] => Boolean(r))
+  .map((r, i) => {
+    const displayName = r.platformName?.includes(':')
+      ? r.platformName.split(':').pop()!.trim()
+      : r.platformName;
+    return {
+      slug: r.slug,
+      initials: initialsOf(displayName),
+      name: displayName,
+      handle: r.slug,
+      specialty: (r.bestFor || '').split(',').slice(0, 3).join(' · '),
+      price: r.pricing || '',
+      rating: `${r.rating}★`,
+      background: GRADIENTS[i % GRADIENTS.length],
+      description: shortVerdict(r.verdict || r.description || ''),
+    };
+  });
 ---
 
 <EsBaseLayout
   title="Purple Garden con Lectores en Español: Análisis Completo 2026"
   description="Análisis independiente de Purple Garden para hispanohablantes: video bios antes de pagar, sistema Journeys de verificación de predicciones, precios reales y lectores en español con historial documentado."
   seoTitle="Purple Garden Opiniones en Español 2026: Videntes y Tarifas"
-  metaDescription="Purple Garden analizado para hispanohablantes: lectores en español verificados (4.9★), $30 de bienvenida, video bios y sistema Journeys. Precios $0.99–$15/min. Análisis honesto."
+  metaDescription="Purple Garden analizado para hispanohablantes: lectores en español verificados (4,96★ promedio valorados), $30 de bienvenida, video bios y sistema Journeys. Precios desde $0.99/min. Análisis honesto."
   canonicalUrl={canonicalUrl}
   hreflangEn={`${SITE_URL}/reviews/purple-garden/`}
   jsonLd={platformSchema}
+  topOfferPlatform="purple-garden-es"
 >
   <article class="section">
     <div class="container">
@@ -152,11 +153,11 @@ const spanishReaders = [
         <div class="hub-rating-bar">
           <div class="hub-rating-score">4.7<span class="hub-rating-max">/5</span></div>
           <div class="hub-rating-stars" aria-label="4.7 de 5 estrellas">
-            <span>★★★★★</span>
+            <span>★★★★½</span>
           </div>
           <div class="hub-rating-meta">
             <span class="hub-rating-tag">Calificación de la Plataforma</span>
-            <span class="hub-rating-note">4.8★ App Store iOS (8.000+ valoraciones) · 4.4★ Google Play (10.000+ reseñas)</span>
+            <span class="hub-rating-note">4,96★ promedio de los 57 asesores valorados · 99,1% positivas · App Store 4.8★ · Google Play 4.4★</span>
           </div>
         </div>
 
@@ -175,8 +176,8 @@ const spanishReaders = [
             <span class="hub-stat-label">Crédito de bienvenida</span>
           </div>
           <div class="hub-stat">
-            <span class="hub-stat-value">900+</span>
-            <span class="hub-stat-label">Lectores activos</span>
+            <span class="hub-stat-value">126</span>
+            <span class="hub-stat-label">Lectores en el catálogo español</span>
           </div>
           <div class="hub-stat">
             <span class="hub-stat-value">3</span>
@@ -206,7 +207,7 @@ const spanishReaders = [
         </p>
 
         <p>
-          Purple Garden resuelve esto con una función que puede parecer pequeña pero que cambia el comportamiento de compra por completo: <strong>video bios de 30 a 60 segundos grabados por cada lector</strong>. Antes de activar una sesión de pago, puedes ver al lector hablar — su cadencia, su entorno de trabajo, si enciende velas o solo tiene un fondo de video, si habla pausado o acelerado, si su español es natural o trabajado.
+          Purple Garden resuelve esto con una función que puede parecer pequeña pero que cambia el comportamiento de compra por completo: <strong>video bios de 30 a 60 segundos grabadas por cada lector</strong>. Antes de activar una sesión de pago, puedes ver al lector hablar — su cadencia, su entorno de trabajo, si enciende velas o solo tiene un fondo de video, si habla pausado o acelerado, si su español es natural o trabajado.
         </p>
 
         <div class="insight-box">
@@ -220,7 +221,7 @@ const spanishReaders = [
         <h2>El Sistema Journeys: Rendición de Cuentas que Ninguna Plataforma Hispana Tiene</h2>
 
         <p>
-          Este es el elemento más único de Purple Garden y el que más impacta en la selección de lectores para usuarios sofisticados. <strong>Journeys</strong> es un feed social dentro de la app donde los clientes publican predicciones específicas que recibieron en sesión — con fechas, nombres y detalles — y regresan semanas o meses después para actualizar si se cumplieron o no.
+          Este es el elemento más distintivo de Purple Garden y el que más impacta en la selección de lectores para usuarios sofisticados. <strong>Journeys</strong> es un feed social dentro de la app donde los clientes publican predicciones específicas que recibieron en sesión — con fechas, nombres y detalles — y regresan semanas o meses después para actualizar si se cumplieron o no.
         </p>
 
         <p>
@@ -228,12 +229,12 @@ const spanishReaders = [
         </p>
 
         <blockquote class="journeys-example">
-          <p>"Luna Aestethic predijo contacto de mi ex entre el 14 y el 18 de octubre. Update [19 de octubre]: me escribió el 16 preguntando sobre nuestra mascota. Exacto en fechas."</p>
+          <p>"Luna Aestethic predijo contacto de mi ex entre el 14 y el 18 de octubre. Actualización [19 de octubre]: me escribió el 16 preguntando sobre nuestra mascota. Exacto en fechas."</p>
           <cite>— Entrada verificada en Journeys, hilo público de la lectora</cite>
         </blockquote>
 
         <blockquote class="journeys-example">
-          <p>"Aiden Spirit dijo que habría una oferta de trabajo antes de fin de mes. Update [mes siguiente]: la oferta llegó el día 27. No creía que pudiera ser tan específico."</p>
+          <p>"Aiden Spirit dijo que habría una oferta de trabajo antes de fin de mes. Actualización [mes siguiente]: la oferta llegó el día 27. No creía que pudiera ser tan específico."</p>
           <cite>— Entrada verificada en Journeys</cite>
         </blockquote>
 
@@ -257,19 +258,19 @@ const spanishReaders = [
             <tbody>
               <tr>
                 <td><strong>Video en vivo</strong></td>
-                <td>$4.99–$15.00/min</td>
+                <td>$0.99–$24.99/min · típico $4.99</td>
                 <td>Primera sesión profunda, lectura de cartas visual, conexión energética directa</td>
                 <td>La función más exclusiva de PG. Pocos lectores hispanos disponibles en esta modalidad</td>
               </tr>
               <tr>
                 <td><strong>Llamada de voz</strong></td>
-                <td>$2.99–$9.99/min</td>
+                <td>$0.99–$24.99/min · típico $3.49</td>
                 <td>Urgencia emocional, conexión auditiva rápida, sin compartir número personal</td>
                 <td>Buen equilibrio calidad-precio. Lectores hispanos más disponibles en voz que en video</td>
               </tr>
               <tr>
                 <td><strong>Chat de texto</strong></td>
-                <td>$0.99–$6.99/min</td>
+                <td>$0.99–$24.99/min · típico $2.49</td>
                 <td>Verificación de fechas/nombres, seguimiento de consultas anteriores, presupuesto controlado</td>
                 <td>Evita el tier de $0.99–$1.99/min. Lectores en ese rango tienen el mayor problema de tipeo lento</td>
               </tr>
@@ -293,8 +294,8 @@ const spanishReaders = [
               <span class="pricing-amount"><strong>$40–50 USD</strong></span>
             </div>
             <div class="pricing-row pricing-note">
-              <span>Con Luz Tarot a $2.99/min → sesión de ~15 min</span>
-              <span class="pricing-amount">≈ $45 de crédito total utilizado</span>
+              <span>Con Luz tarot a $1.99/min → sesión de ~15 min</span>
+              <span class="pricing-amount">≈ $30 de crédito total utilizado</span>
             </div>
           </div>
         </div>
@@ -303,7 +304,7 @@ const spanishReaders = [
         <h2 id="lectores-espanol">Los Lectores en Español que Vale la Pena Conocer</h2>
 
         <p>
-          De los 900+ lectores activos de Purple Garden, el subgrupo hispanohablante verificado incluye perfiles con historial documentado extraordinariamente alto. Estos son los que emergen del análisis de datos de calificación y volumen de reseñas:
+          Los perfiles hispanohablantes con historial documentado más alto de la plataforma. Encabezan nuestro análisis de datos de calificación y volumen de lecturas, y cada dato de estas tarjetas proviene del frontmatter de su reseña completa:
         </p>
       </div>
 
@@ -316,7 +317,9 @@ const spanishReaders = [
                 {reader.initials}
               </div>
               <div class="pg-reader-meta">
-                <h3 class="pg-reader-name">{reader.name}</h3>
+                <h3 class="pg-reader-name">
+                  <a href={`/es/resenas/purple-garden-es/${reader.slug}/`}>{reader.name}</a>
+                </h3>
                 <span class="pg-reader-handle">@{reader.handle}</span>
               </div>
               <div class="pg-reader-badges">
@@ -327,7 +330,8 @@ const spanishReaders = [
             <p class="pg-reader-specialty">{reader.specialty}</p>
             <p class="pg-reader-desc">{reader.description}</p>
             <div class="pg-reader-cta">
-              <EsSpanishCTA platform="purple-garden-es" variant="explore" size="sm" source={`reader-showcase-${reader.handle}`} />
+              <a href={`/es/resenas/purple-garden-es/${reader.slug}/`} class="btn btn--ghost btn--sm">Leer reseña completa →</a>
+              <EsSpanishCTA platform="purple-garden-es" variant="book" size="sm" readerName={reader.name} readerSlug={reader.slug} source={`reader-showcase-${reader.slug}`} />
             </div>
           </div>
         ))}
@@ -603,7 +607,9 @@ const spanishReaders = [
   .pg-reader-price { font-size: var(--text-xs); color: var(--color-primary); font-weight: var(--weight-medium); }
   .pg-reader-specialty { font-size: var(--text-xs); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-muted); margin: 0; }
   .pg-reader-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); margin: 0; flex: 1; }
-  .pg-reader-cta { margin-top: auto; }
+  .pg-reader-cta { margin-top: auto; display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+  .pg-reader-name a { color: inherit; text-decoration: none; }
+  .pg-reader-name a:hover { color: var(--color-primary); }
 
   /* User Reviews */
   .user-reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin: var(--space-6) 0; }

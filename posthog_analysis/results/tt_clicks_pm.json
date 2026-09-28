@@ -1,0 +1,62 @@
+{
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'(无)') AS pos,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.sub_id),''),'(无)') AS sub_id,\n       coalesce(nullIf(toString(properties.text),''),'(无)') AS txt,\n       toString(properties.time_on_page_ms) AS tms,\n       toString(properties.pages_before_click) AS pbc,\n       toString(properties.is_first_click) AS first_click,\n       toString(properties.click_seq) AS seq,\n       toString(properties.$session_id) AS sid,\n       toString(person_id) AS pid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'(?)') AS cc,\n       coalesce(nullIf(toString(properties.$session_entry_referring_domain),''),'$direct') AS ref,\n       coalesce(nullIf(toString(properties.$session_entry_utm_source),''),'') AS utm,\n       coalesce(nullIf(toString(properties.$raw_user_agent),''),'') AS ua\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1790560800) AND timestamp < toDateTime(1790594041)\nORDER BY timestamp DESC LIMIT 100\n",
+ "columns": [
+  "t",
+  "page",
+  "pos",
+  "slug",
+  "token",
+  "sub_id",
+  "txt",
+  "tms",
+  "pbc",
+  "first_click",
+  "seq",
+  "sid",
+  "pid",
+  "cc",
+  "ref",
+  "utm",
+  "ua"
+ ],
+ "results": [
+  [
+   "2026-09-28 18:55:02.707000",
+   "/reviews/kasamba/love-specialist-isabelle-kasamba-review/",
+   "sidebar-deal",
+   "kasamba-love-specialist-isabelle",
+   "wttqy0",
+   "01a0e7a6-e470-7a88-bc91-89668d92b4b5.wttqy0",
+   "Claim 3 Free Minutes →",
+   "33330",
+   "1",
+   "true",
+   "1",
+   "01a0e7a6-e497-7220-b13c-dce2733d97fc",
+   "03b26245-b83a-592d-8ac7-7ae647d7d3af",
+   "GB",
+   "www.google.com",
+   "",
+   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+  ],
+  [
+   "2026-09-28 11:16:26.401000",
+   "/guides/best-mediums-on-purple-garden/",
+   "topbar",
+   "purplegarden",
+   "484cmo",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.484cmo",
+   "Purple Garden Special Offer — $30 in FREE credit for new clients",
+   "5857",
+   "1",
+   "true",
+   "1",
+   "01a0e603-7187-7a5b-8610-bf6663964e08",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "US",
+   "$direct",
+   "chatgpt.com",
+   "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6.1 Mobile/15E148 Safari/604.1"
+  ]
+ ]
+}

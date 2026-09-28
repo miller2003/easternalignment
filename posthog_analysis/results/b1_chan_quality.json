@@ -1,0 +1,65 @@
+{
+ "sql": "\nWITH s AS (\n  SELECT properties.$session_id AS sid,\n         any(person_id) AS pid,\n         min(timestamp) AS t0,\n         dateDiff('second', min(timestamp), max(timestamp)) AS dur,\n         countIf(event='$pageview') AS pv,\n         countIf(event='$web_vitals') AS vit,\n         countIf(event='affiliate_link_click') AS clicks,\n         any(coalesce(nullIf(properties.$device_type,''),'')) AS dev,\n         any(coalesce(nullIf(properties.$session_entry_pathname,''),'')) AS entry,\n         any(CASE WHEN match(concat(coalesce(properties.$session_entry_referring_domain,''),' ',coalesce(properties.$session_entry_utm_source,'')), '(?i)(chatgpt|openai|perplexity|claude|gemini|copilot|kimi|deepseek|grok)') THEN 'AI助手'\n             WHEN match(coalesce(properties.$session_entry_referring_domain,''), '(?i)(google|bing|yahoo|duckduckgo|ecosia|yandex|msn[.]|aol[.]|brave|startpage|qwant|naver|baidu|search[.])') THEN '搜索引擎'\n             WHEN coalesce(nullIf(properties.$session_entry_referring_domain,''),'$direct')='$direct' THEN '直接访问'\n             ELSE '外链引荐' END) AS chan\n  FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND properties.$session_id IS NOT NULL\n        AND timestamp >= toDateTime(1787932800) AND timestamp < toDateTime(1790561957)\n  GROUP BY sid\n)\nSELECT chan,\n       count() AS sessions,\n       round(sum(pv)*1.0/count(),2) AS pv_per_sess,\n       round(100.0*countIf(pv=1)/count(),1) AS one_page_pct,\n       round(avg(dur),1) AS mean_dur,\n       quantile(0.5)(dur) AS median_dur,\n       round(100.0*countIf(vit=0)/count(),1) AS no_vitals_pct,\n       sum(clicks) AS total_clicks,\n       countIf(clicks>0) AS click_sessions,\n       round(100.0*countIf(clicks>0)/count(),1) AS cvr_pct\nFROM s GROUP BY chan ORDER BY sessions DESC LIMIT 10\n",
+ "columns": [
+  "chan",
+  "sessions",
+  "pv_per_sess",
+  "one_page_pct",
+  "mean_dur",
+  "median_dur",
+  "no_vitals_pct",
+  "total_clicks",
+  "click_sessions",
+  "cvr_pct"
+ ],
+ "results": [
+  [
+   "搜索引擎",
+   274,
+   1.3,
+   79.6,
+   230.3,
+   41.5,
+   22.6,
+   25,
+   17,
+   6.2
+  ],
+  [
+   "直接访问",
+   243,
+   1.06,
+   86.8,
+   60.0,
+   1.0,
+   72.0,
+   22,
+   11,
+   4.5
+  ],
+  [
+   "AI助手",
+   184,
+   1.68,
+   67.9,
+   192.9,
+   12.5,
+   37.0,
+   103,
+   52,
+   28.3
+  ],
+  [
+   "外链引荐",
+   38,
+   1.0,
+   71.1,
+   285.0,
+   5.0,
+   50.0,
+   1,
+   1,
+   2.6
+  ]
+ ]
+}

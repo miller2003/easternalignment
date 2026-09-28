@@ -114,7 +114,11 @@ const navLinks = [
 <style>
   .site-header {
     position: sticky;
-    top: 0;
+    /* `top: var(--top-offer-h, 0px)` permite que el header se estacione
+       justo DEBAJO de la EsTopOfferBar (sticky) mientras la oferta esté en
+       pantalla; al cerrar la barra, el script escribe 0px y el header
+       recupera el hueco superior. Paridad con Header.astro del sitio EN. */
+    top: var(--top-offer-h, 0px);
     z-index: 100;
     background: rgba(250, 248, 245, 0.92);
     backdrop-filter: blur(12px);

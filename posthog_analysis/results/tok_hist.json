@@ -1,0 +1,41 @@
+{
+ "sql": "\nSELECT coalesce(nullIf(toString(properties.click_token),''),'') AS token,\n       toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(toString(properties.slug),''),'') AS slug,\n       coalesce(nullIf(toString(properties.location),''),'') AS page,\n       toString(person_id) AS pid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'') AS cc,\n       toString(properties.time_on_page_ms) AS tms\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND toString(properties.click_token) IN ('fqwax3','pq98uh','fa5gn3')\nORDER BY timestamp DESC LIMIT 50\n",
+ "columns": [
+  "token",
+  "t",
+  "slug",
+  "page",
+  "pid",
+  "cc",
+  "tms"
+ ],
+ "results": [
+  [
+   "fqwax3",
+   "2026-09-27 12:17:59.896000",
+   "keen-kelly",
+   "/guides/best-twin-flame-psychics-online/",
+   "709de596-a755-50b8-95c1-beb25af61aee",
+   "AU",
+   "26679"
+  ],
+  [
+   "fa5gn3",
+   "2026-09-26 03:53:21.406000",
+   "keen-master-sher",
+   "/reviews/keen/master-sher/",
+   "1d4a4823-6dc5-5fb1-8b2b-0bfb53f538e9",
+   "GB",
+   "54374"
+  ],
+  [
+   "pq98uh",
+   "2026-09-25 10:32:24.121000",
+   "purple-garden-rose-soulmates",
+   "/",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "US",
+   "130973"
+  ]
+ ]
+}

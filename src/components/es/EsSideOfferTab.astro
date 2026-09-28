@@ -1,0 +1,464 @@
+---
+/**
+ * EsSideOfferTab.astro — Pestaña de oferta anclada al borde (espejo exacto
+ * de SideOfferTab.astro, copy en español).
+ *
+ * Misma interacción completa: arrastre global 1:1 en móvil (Pointer Events),
+ * acople a ambos bordes, estado "tucked" con asa, persistencia en
+ * sessionStorage. Escritorio: CSS puro en el borde derecho.
+ *
+ * El copy nunca se inventa aquí — se lee de lib/esOffers.ts para que el
+ * wording sea veraz y consistente en todo el subsitio /es.
+ */
+interface Props {
+  /** Slug /go/ con prefijo y barra final. */
+  slug?: string | null;
+  /** Override del texto vertical (mantener corto). */
+  label?: string;
+  /** Contexto de plataforma; se deduce de `slug` si falta. */
+  platform?: 'psiquicos' | 'purple-garden-es' | null;
+}
+
+import { esPlatformLogo, ES_PLATFORM_OFFERS, ES_PLATFORM_PRIORITY, esGoPath, type EsPlatformKey } from '../../lib/esOffers';
+
+const props = Astro.props as Props;
+const explicitSlug = (props.slug ?? '').trim();
+
+function detectPlatformFromSlug(slug: string): EsPlatformKey | null {
+  const s = slug.toLowerCase();
+  if (s.includes('purple-garden')) return 'purple-garden-es';
+  if (s.includes('psiquicos')) return 'psiquicos';
+  return null;
+}
+
+/* Plataforma principal: prop explícita → deducida del slug → No.1 del sitio (Psíquicos Web). */
+const key = (props.platform ?? detectPlatformFromSlug(explicitSlug) ?? ES_PLATFORM_PRIORITY[0]) as EsPlatformKey;
+
+const primary = ES_PLATFORM_OFFERS[key];
+const href = explicitSlug || esGoPath(key);
+
+const rawLabel = (props.label && props.label.trim()) || primary.sideTabLabel;
+const labelLines = Array.isArray(rawLabel) ? rawLabel : [rawLabel];
+const ctaSource = `side-tab-${primary.goSlug}`;
+---
+
+<a
+  class="side-tab"
+  id="side-offer-tab"
+  href={href}
+  target="_blank"
+  rel="nofollow sponsored"
+  data-cta-source={ctaSource}
+  aria-label={`Oferta para nuevos usuarios de ${primary.name}: ${primary.offer} (abre en una pestaña nueva)`}
+>
+  <img
+    class="side-tab__logo"
+    src={esPlatformLogo(key)}
+    alt=""
+    width="24"
+    height="24"
+    loading="lazy"
+    aria-hidden="true"
+  />
+  <span class:list={['side-tab__label', { 'side-tab__label--dual': labelLines.length > 1 }]}>
+    {labelLines.map(line => <span class="side-tab__label-line">{line}</span>)}
+  </span>
+  <svg class="side-tab__arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+    <path d="M5.5 10.5L10.5 5.5M6.4 5.5h4.1v4.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+  <svg class="side-tab__grip" viewBox="0 0 9 16" aria-hidden="true" focusable="false">
+    <path d="M6.5 2.5 L1.8 8 L6.5 13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</a>
+
+<script is:inline>
+  (function () {
+    var tab = document.getElementById('side-offer-tab');
+    if (!tab) return;
+
+    var isNarrow = window.matchMedia('(max-width: 768px)').matches;
+    var isTouch = window.matchMedia('(pointer: coarse)').matches;
+
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (isIOS) tab.classList.add('side-tab--ios');
+
+    if (!isNarrow || !isTouch) return; /* escritorio: solo CSS, sin cambios */
+
+    /* ── Motor de interacción táctil (modelo AssistiveTouch completo) ── */
+    var KEY = 'ea_side_tab_v1';
+    var TUCK = 22;
+
+    function W() { return window.innerWidth; }
+    function H() { return window.innerHeight; }
+    function tw() { return tab.offsetWidth || 36; }
+    function tabH() { return tab.offsetHeight || 130; }
+    function minY() { return 96; }
+    function maxY() { return Math.max(minY(), H() - tabH() - 16); }
+    function clamp(v, a, b) { return v < a ? a : (v > b ? b : v); }
+    function defaultY() {
+      if (isIOS) return Math.round(H() * 0.42);
+      return Math.round(H() - Math.max(104, H() * 0.15) - tabH());
+    }
+    function dockX(side, tucked) {
+      return side === 'right'
+        ? (tucked ? W() - tw() + TUCK : W() - tw())
+        : (tucked ? -TUCK : 0);
+    }
+
+    var restored = null;
+    try { restored = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+    var side = (restored && restored.side === 'left') ? 'left' : 'right';
+    var y = (restored && typeof restored.y === 'number')
+      ? clamp(restored.y, minY(), maxY())
+      : clamp(defaultY(), minY(), maxY());
+    var tucked = !!(restored && restored.tucked);
+
+    function save() {
+      try { sessionStorage.setItem(KEY, JSON.stringify({ side: side, y: Math.round(y), tucked: tucked })); } catch (e) {}
+    }
+    function render() {
+      tab.style.left = Math.round(dockX(side, tucked)) + 'px';
+      tab.style.top = Math.round(y) + 'px';
+      tab.dataset.side = side;
+      tab.dataset.tucked = tucked ? 'true' : 'false';
+    }
+
+    tab.classList.add('side-tab--js');
+    tab.dataset.boot = 'true';
+    render();
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { tab.dataset.boot = 'false'; });
+    });
+
+    var pid = null, dragging = false;
+    var sx = 0, sy = 0, baseX = 0, baseY = 0, moved = 0, t0 = 0;
+    var curX = 0, lastPX = 0, lastPY = 0, lastT = 0, vX = 0, vY = 0;
+
+    var floatTimer = null;
+    function setFloating(on) {
+      if (floatTimer) { clearTimeout(floatTimer); floatTimer = null; }
+      tab.dataset.floating = on ? 'true' : 'false';
+    }
+    function dockSoon() {
+      if (floatTimer) clearTimeout(floatTimer);
+      floatTimer = setTimeout(function () {
+        tab.dataset.floating = 'false';
+        floatTimer = null;
+      }, 480);
+    }
+
+    tab.addEventListener('pointerdown', function (e) {
+      if (!e.isPrimary || dragging) return;
+      pid = e.pointerId;
+      try { tab.setPointerCapture(pid); } catch (err) {}
+      sx = e.clientX; sy = e.clientY;
+      baseX = dockX(side, tucked); baseY = y;
+      curX = baseX;
+      moved = 0; t0 = performance.now();
+      lastPX = sx; lastPY = sy; lastT = t0; vX = 0; vY = 0;
+      dragging = true;
+      tab.dataset.dragging = 'true';
+      setFloating(true);
+    });
+
+    tab.addEventListener('pointermove', function (e) {
+      if (!dragging || e.pointerId !== pid) return;
+      var dx = e.clientX - sx, dy = e.clientY - sy;
+      var total = Math.abs(dx) + Math.abs(dy);
+      if (total > moved) moved = total;
+
+      curX = clamp(baseX + dx, -TUCK, W() - tw() + TUCK);
+
+      var raw = baseY + dy, ny;
+      if (raw < minY()) ny = minY() - (minY() - raw) * 0.28;
+      else if (raw > maxY()) ny = maxY() + (raw - maxY()) * 0.28;
+      else ny = raw;
+      y = ny;
+
+      tab.style.left = Math.round(curX) + 'px';
+      tab.style.top = Math.round(y) + 'px';
+
+      var now = performance.now(), dt = now - lastT;
+      if (dt > 0) {
+        vX = 0.7 * vX + 0.3 * ((e.clientX - lastPX) / dt);
+        vY = 0.7 * vY + 0.3 * ((e.clientY - lastPY) / dt);
+      }
+      lastPX = e.clientX; lastPY = e.clientY; lastT = now;
+    });
+
+    function finish(e) {
+      if (!dragging || (e && e.pointerId !== pid)) return;
+      dragging = false;
+      tab.dataset.dragging = 'false';
+
+      var dt = performance.now() - t0;
+      var isTap = moved < 9 && dt < 500;
+
+      if (isTap) {
+        y = clamp(y, minY(), maxY());
+        render();
+        dockSoon();
+        return;
+      }
+
+      y = clamp(y + vY * 90, minY(), maxY());
+
+      var expandedW = W() - tw();
+      var proj = curX + vX * 160;
+      if (proj <= expandedW / 2) {
+        side = 'left';
+        tucked = proj < -8;
+      } else {
+        side = 'right';
+        tucked = proj > expandedW + 8;
+      }
+      render();
+      save();
+      dockSoon();
+    }
+
+    tab.addEventListener('pointerup', finish);
+    tab.addEventListener('pointercancel', finish);
+
+    tab.addEventListener('click', function (e) {
+      if (moved >= 9) {
+        e.preventDefault();
+        e.stopPropagation();
+        moved = 0;
+        return;
+      }
+      if (tucked) {
+        e.preventDefault();
+        e.stopPropagation();
+        tucked = false;
+        render();
+        save();
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      y = clamp(y, minY(), maxY());
+      render();
+    }, { passive: true });
+  })();
+</script>
+
+<style>
+  .side-tab {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 70;
+
+    /* Entrada: aparcada fuera de pantalla, desliza una sola vez. Animar la
+       propiedad independiente `translate` mantiene `transform` libre para hover. */
+    translate: 100% -50%;
+    animation: sd-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0s forwards;
+
+    width: 40px;
+    min-height: 168px;
+    padding: 14px 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 14px 0 0 14px;
+    background: linear-gradient(165deg, #8f7350 0%, #6b5438 55%, #4f3c26 100%);
+    color: #ffffff;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow:
+      inset 1px 0 0 rgba(255, 255, 255, 0.16),
+      0 10px 28px rgba(61, 43, 24, 0.22),
+      0 2px 8px rgba(61, 43, 24, 0.14);
+    transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, scale 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @keyframes sd-in { to { translate: 0 -50%; } }
+
+  @media (hover: hover) and (pointer: fine) {
+    .side-tab:hover {
+      filter: brightness(1.09);
+      transform: translateX(-3px);
+      box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 14px 34px rgba(61, 43, 24, 0.28),
+        0 3px 10px rgba(61, 43, 24, 0.16);
+    }
+  }
+  .side-tab:active { scale: 0.96; }
+  .side-tab:focus-visible { outline: 2px solid #e8cdb0; outline-offset: -4px; }
+
+  /* Barrido de luz lento — captura la atención una vez, nunca parpadea.
+     Solo escritorio: en móvil cuesta composición GPU permanente. */
+  .side-tab::after {
+    content: '';
+    position: absolute;
+    inset: -30% -60%;
+    background: linear-gradient(
+      100deg,
+      transparent 34%,
+      rgba(255, 255, 255, 0.22) 48%,
+      transparent 62%
+    );
+    animation: sd-sweep 5.2s ease-in-out 1.6s infinite;
+    pointer-events: none;
+  }
+  @keyframes sd-sweep {
+    0%        { transform: translateY(-70%); }
+    38%, 100% { transform: translateY(70%); }
+  }
+
+  .side-tab__logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 2px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(40, 28, 16, 0.28);
+  }
+
+  .side-tab__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    font-family: var(--font-body);
+  }
+  .side-tab__label-line {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(40, 28, 16, 0.35);
+  }
+  .side-tab__label--dual .side-tab__label-line {
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    line-height: 1.05;
+  }
+
+  .side-tab__arrow {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    opacity: 0.85;
+  }
+
+  .side-tab__grip { display: none; }
+
+  /* ── Móvil ── */
+  @media (max-width: 768px) {
+    .side-tab {
+      top: auto;
+      bottom: calc(max(6.5rem, 15vh) + env(safe-area-inset-bottom, 0px));
+      right: env(safe-area-inset-right, 0px);
+      translate: none;
+      animation: none;
+      width: 36px;
+      min-height: 0;
+      padding: 12px 0;
+      gap: 8px;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .side-tab::after { display: none; }
+    .side-tab__arrow { display: none; }
+
+    .side-tab--ios {
+      top: 42vh;
+      bottom: auto;
+    }
+
+    .side-tab--js {
+      top: 0;
+      bottom: auto;
+      right: auto;
+      left: 0;
+      transition:
+        top 0.42s cubic-bezier(0.32, 0.72, 0, 1),
+        left 0.42s cubic-bezier(0.32, 0.72, 0, 1),
+        transform 0.42s cubic-bezier(0.32, 0.72, 0, 1),
+        box-shadow 0.3s ease,
+        opacity 0.3s ease,
+        border-radius 0.25s ease;
+      will-change: top, left;
+    }
+    .side-tab--js[data-dragging="true"] {
+      transition: none;
+    }
+    .side-tab--js[data-boot="true"] {
+      transition: none !important;
+    }
+
+    .side-tab--js[data-tucked="true"] {
+      opacity: 0.88;
+      box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.16),
+        -3px 0 12px rgba(61, 43, 24, 0.18);
+    }
+    .side-tab--js[data-tucked="true"]::before {
+      content: '';
+      position: absolute;
+      inset: -6px 0 -6px -14px;
+    }
+    .side-tab--js[data-tucked="true"] .side-tab__grip {
+      display: block;
+      position: absolute;
+      left: 2.5px;
+      top: 50%;
+      translate: 0 -50%;
+      width: 9px;
+      height: 16px;
+      opacity: 0.75;
+    }
+
+    .side-tab--js[data-side="left"] {
+      border-radius: 0 14px 14px 0;
+      box-shadow:
+        inset -1px 0 0 rgba(255, 255, 255, 0.16),
+        0 10px 28px rgba(61, 43, 24, 0.22),
+        0 2px 8px rgba(61, 43, 24, 0.14);
+    }
+    .side-tab--js[data-side="left"][data-tucked="true"] {
+      box-shadow:
+        inset -1px 0 0 rgba(255, 255, 255, 0.16),
+        3px 0 12px rgba(61, 43, 24, 0.18);
+    }
+    .side-tab--js[data-side="left"][data-tucked="true"]::before {
+      inset: -6px -14px -6px 0;
+    }
+    .side-tab--js[data-side="left"] .side-tab__grip {
+      left: auto;
+      right: 2.5px;
+      transform: scaleX(-1);
+    }
+    .side-tab--js[data-side="left"] .side-tab__label-line {
+      transform: rotate(0deg);
+    }
+
+    .side-tab--js[data-floating="true"] {
+      border-radius: 14px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .side-tab--js { transition: none; }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .side-tab { animation: none; }
+    .side-tab::after { animation: none; }
+  }
+</style>

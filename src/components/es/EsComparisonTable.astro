@@ -1,0 +1,154 @@
+---
+/**
+ * EsComparisonTable.astro — Tabla comparativa de plataformas para /es
+ * (espejo exacto de ComparisonTable.astro, etiquetas en español).
+ */
+interface PlatformData {
+  name: string;
+  affiliateUrl: string;
+  rating: number;
+  pricing: string;
+  freeOffer: string;
+  specialties: string;
+  satisfaction: string;
+  availability: string;
+  communication: string;
+}
+
+interface Props {
+  platforms: PlatformData[];
+  highlightIndex?: number;
+}
+
+const { platforms, highlightIndex = 0 } = Astro.props;
+
+const rows = [
+  { key: 'rating', label: 'Nuestra Calificación', format: (v: number) => `${v}/5 ★` },
+  { key: 'pricing', label: 'Precio Inicial' },
+  { key: 'freeOffer', label: 'Oferta Gratuita' },
+  { key: 'specialties', label: 'Especialidades Principales' },
+  { key: 'satisfaction', label: 'Garantía de Satisfacción' },
+  { key: 'availability', label: 'Disponibilidad' },
+  { key: 'communication', label: 'Comunicación' },
+];
+---
+
+<div class="comparison-table-wrapper">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th class="feature-col">Característica</th>
+        {platforms.map((p, i) => (
+          <th class:list={['platform-col', { 'platform-col--highlight': i === highlightIndex }]}>
+            <span class="platform-col-name">{p.name}</span>
+            {i === highlightIndex && <span class="winner-badge badge badge--primary">Ganador</span>}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(row => (
+        <tr>
+          <td class="feature-label">{row.label}</td>
+          {platforms.map((p, i) => (
+            <td class:list={[{ 'cell--highlight': i === highlightIndex }]}>
+              {row.format
+                ? row.format(p[row.key as keyof PlatformData] as number)
+                : (row.key === 'pricing'
+                    ? (p.pricing ? p.pricing.split('(')[0].split(' - ')[0].trim() : '')
+                    : p[row.key as keyof PlatformData])}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="feature-label"></td>
+        {platforms.map((p) => (
+          <td>
+            <a href={p.affiliateUrl} class="btn btn--primary es-cta btn--sm btn--full" rel="nofollow sponsored" target="_blank">
+              Visitar {p.name}
+            </a>
+          </td>
+        ))}
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<style>
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    margin: var(--space-8) 0;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  .comparison-table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+  }
+
+  .comparison-table thead {
+    background: var(--color-bg-alt);
+  }
+
+  .comparison-table th {
+    padding: var(--space-4) var(--space-5);
+    text-align: center;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .feature-col {
+    text-align: left !important;
+    min-width: 160px;
+  }
+
+  .platform-col {
+    min-width: 160px;
+  }
+
+  .platform-col-name {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    margin-bottom: var(--space-1);
+  }
+
+  .platform-col--highlight {
+    background: rgba(196, 149, 106, 0.06);
+  }
+
+  .winner-badge {
+    font-size: 0.65rem;
+  }
+
+  .comparison-table td {
+    padding: var(--space-3) var(--space-5);
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .feature-label {
+    text-align: left !important;
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+  }
+
+  .cell--highlight {
+    background: rgba(196, 149, 106, 0.04);
+  }
+
+  .comparison-table tfoot td {
+    padding: var(--space-4) var(--space-5);
+    border-bottom: none;
+  }
+</style>

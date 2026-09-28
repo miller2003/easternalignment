@@ -1,0 +1,23 @@
+{
+ "sql": "\nSELECT coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions,\n       countIf(event='$pageview') AS pv,\n       countIf(event='affiliate_link_click') AS clicks\nFROM events WHERE timestamp >= toDateTime(1790524800) AND timestamp < toDateTime(1790559466)\nGROUP BY host ORDER BY sessions DESC LIMIT 20\n",
+ "columns": [
+  "host",
+  "sessions",
+  "pv",
+  "clicks"
+ ],
+ "results": [
+  [
+   "easternalignment.com",
+   12,
+   21,
+   8
+  ],
+  [
+   "(no-host)",
+   0,
+   0,
+   0
+  ]
+ ]
+}

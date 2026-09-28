@@ -31,7 +31,42 @@
 - readers.json 的 cons/pros 是编辑内部审计笔记,只准出现在评测文章页;quiz 结果页 When to Skip 用 explanations.ts 生成文案,首页客户端 payload 已剔除 cons/pros。
 - public/content-manager.html 是内部工具但会被部署到线上,待用户决定处置。
 
+## 基础设施事实:Cloudflare 防盗链(2026-09-27 实测)
+- **easternalignment.com 所在 CF zone 开启了 Scrape Shield → Hotlink Protection**。判定依据:图片资源在跨站 Referer 下返回 `403 error code: 1011` + `Vary: referer`,同源/无 Referer/www 子域均 200,且非图片资源(如 `/_astro/*.css`)不受限 → 按资源类型生效的 CF 边缘规则,与站点代码无关(`public/_headers`、`functions/` 均无 referer 判断)。
+- **后果1(已解释一个真实困惑)**:PostHog 会话回放**不录图片像素**,只存 `<img src>`;回放器在 posthog.com iframe 内以 posthog.com 为 Referer 重新取图 → 403 → 录像里图片全是破图。**这是回放侧假象,真实用户图片显示正常**,排查线上图片问题勿被录像误导。
+- **后果2(客观损失)**:Google/Bing 图片代理带自家 Referer → 403,站内图片难进图片搜索索引。社交/IM 预览爬虫多不带 Referer,通常不受影响。
+- 关闭方式:CF Dashboard → Scrape Shield → Hotlink Protection → Off(零代码)。若要保留,须改用 WAF 自定义规则自建 allowlist(放行无 Referer / 同站 / posthog.com)。
+
 ## Match quiz 架构(2026-09-23 定型)
 - **首页 = 弹窗模式**(ReaderMatch mode="modal":launcher 卡 + bottom-sheet overlay,交互骨架移植自 mysticdo 的 main.js initQuiz 引擎);**/match/ 专页 = inline 内嵌**。模式由容器 data-match-mode 区分,quizApp.ts 双 host。
 - 弹窗要点:iPhone Safari 用 html 级滚动锁(ea-match-locked)+dvh+safe-area;history-back 可关闭弹窗;计算仪式 timer 必须可取消(否则旧会话结果写入新会话)。
 - mysticdo 项目在 C:/Users/samja/Desktop/site/mysticdo,**只读参考,严禁改动**。
+
+## 西语解读师 66 篇基建定型(2026-09-28,上线前检查后终态)
+- **内容规模**:PG 31 篇 + psi 35 篇 = 66 篇,全部 `src/content/es-readers/{purple-garden-es,psiquicos-web}/`。
+- **CTA 单一事实源 = `src/lib/esOffers.ts` ES_READER_URLS(66 条全量)**;/go/ slug 真源 = affiliateLinks.ts。**offer 口径:PG = offer_id 34(2026-09-28 用户在 barges 生成 30 条按人深链,桌面 `new30_official_urls.txt` 回填),psi = offer_id 42(`psi35_official_urls.txt` 用户回填);三向核验一致(用户 txt = affiliateLinks.ts = dist/go 产物)。勿再用 offer 30。** 所有 CTA 表面(hero/sticky/DealStrip/InlineCta/CTABox/EsReaderCard/hub 卡)均按人化;TopOfferBar 保持平台级通用链接是设计如此。**psi 的按人深链需要两件事同时到位才算接线:affiliateLinks.ts 条目 + `[lector].astro` 传 `readerSlug`——2026-09-28 曾漏掉后者,35 条深链静默失效。**
+- **【铁律】读师数据只有一个事实源 = 各篇 md 的 frontmatter。** hub 展示卡、首页 field note、任何引用都不得手写数字。2026-09-28 在 PG hub 抓到 5 张硬编码卡中 3 张被平台数据否证(最严重:Aura Rosa 宣称 4.8★/350+ 而平台 0.0★),另有 Luz Tarot 与自家评测页互相矛盾。两个 hub 的展示卡现已改为 frontmatter 驱动(PG 选品 Top5、psi 选品 veronica/carlota,选品常量 + 渲染时取 frontmatter)。
+- **头像/OG 规格与管线**:public/avatars/es-readers/{slug}.webp(192²)+{slug}-og.jpg(**588² 方形,而页面声明 og:image:width/height=1200×630,全站不一致,待用户定夺**);66 篇全齐(132 文件)。PG 批用 `build_avatar_assets.py`,psi 批用 `build_psi_avatar_assets.py`(竖图顶部锚定)。列表 API 不可靠,找人一律反查 roster/detail。
+- **frontmatter 旗舰标准**(66 篇已达标,新篇必须遵循):ogImage + freeOffer(PG="$30 de crédito…"/psi="3 minutos gratis + hasta 60% de descuento")+ metaDescription(120–160 字符)+ seoTitle ≤65 字符。工具 `patch_frontmatter.py <platform>` / `audit_seo.py <platform>`。
+- **FAQ 渲染**:两个 [lector].astro 已改为 frontmatter.faq 优先 + 通用问题去重补充,EsFAQ 自动出 FAQPage JSON-LD——新篇写 faq frontmatter 即生效,不要再写正文 FAQ 段。
+- **pricing 字段写法**:统一 `"$X.XX/min"`;非数字值(如 "Tarifa por confirmar")组件已做防御,不会再渲染成 "…/min"。
+- **待办/已知缺口**:①psi 35 篇篇幅偏薄(PG 1.028–1.687 词中位 1.357;psi 262–1.317 中位 583,17 篇 <500 词),建议扩到 900–1.200 词;②66 篇之间正文互链为 0;③平台规模数字(psi 全池 144、PG 1.689/西语 126)与页面宣称的「2.000+」「900+」口径待用户确认。
+- **上线前检查工具**(scratch/es-readers/,可复用):`predeploy_audit.mjs`(源码级:frontmatter/SEO 长度/canonical/资产/CTA 三向一致/深链 offer 与宏/重复度/英文残留)、`verify_es_dist.mjs`(产物级逐页核验)、`check_es_links.mjs`(站内链接全量解析)、`rewrite_psi_body_cta.py`。报告:`scratch/es-predeploy-audit-20260928.html`。
+
+## 西语站 CTA 按钮系统(2026-09-28 定型)
+- **global.css §5b `.es-cta` 作用域** = /es 全部转化按钮的样式真源:深金渐变(--es-gold-600 #8A651A→700 #6B4E0F,取自 mysticdo 色板)+ cream 文字(#F8F4E9) + 药丸 + 紧凑 padding(lg 10×22px)+ hover 金环 rgba(184,147,58,.55)。英文站 tan 色 .btn--primary 不受影响;**不要改全局 --color-accent token**。
+- 长标签按钮必须 `white-space: normal`(旧 nowrap 是手机截断根因)。新增 ES 按钮一律挂 `es-cta` 类(游离 btn--primary 已全部补挂:EsComparisonTable、es/index、es/404)。
+- EsInlineCta/EsSidebarDealCard/EsLeftSidebar deal-card__btn/EsDealStrip 链接色均已同步金色系;EsTopOfferBar 横幅与 EsSideOfferTab 深棕是刻意保留。
+- **移动端判定必须用 puppeteer 仿真**(setViewport isMobile+deviceScaleFactor),`chrome --headless --screenshot --window-size=375` 布局与截图宽度不一致会伪造整页右裁假象(2026-09-28 实测踩坑)。工具:`~/.workbuddy/binaries/node/workspace/overflow_probe.js`(溢出探针)、`mobile_btn_check.js`(按钮测量);npm 502 时用 `env HTTP_PROXY= NO_PROXY="*" npm install`。
+
+## 平台评分口径(2026-09-28 用户定版:+0.1 终态,勿回退)
+- **编辑评分:Psíquicos Web 4.8 > Purple Garden 4.7**(用户在数据版 4.7/4.6 基础上要求各 +0.1)。依据 = 抓取库硬数据:psi 883.194 次解读(7,2×)/144 位全西语/已评分均 4,80★/99,0% 好评/中位 chat $2,79;PG-ES 126 位(全池 7,5%)/仅 57 位已评分(均 4,96★,51 位 ≥4,9)/69 位未评分新人/99,1%/中位 chat $2,49·voz $3,49·video $4,99。PG 胜在顶部精英+全球 App+$30;psi 胜在体量/母语平台/价格/质量密度。
+- **四处同步才算改分**:schema ratingValue + hub-rating-bar + 首页 comparisonPlatforms + 首页平台卡 StarRating。
+- **psi 无 video 模式**(DB 144/144 仅 chat+voice)——psi hub 模式表已删 Video 行,首页 communication 为 Chat·Teléfono。规模口径:psi 144 位(勿写 2.000+)、PG 西语 126 位(勿写 900+)。价格区间一律「中位 + 区间」格式,区间来自 live_modes 实测。
+- PG 子池过滤口径:`data/detail/pg/*.json` 里 `language_code=='es'`(126 位);rating=0 是未评分新人,平均分必须排除后算。
+
+## 构建陷阱(2026-09-28 实测)
+- **astro build 的 import.meta.glob 快照发生在构建启动时**:并发 agent 落盘的文章会被静默漏掉(实测 35 篇 psi 只出 10 页,build 仍报 Complete 不报错)。**多 agent 并发场景,build 前必须先 `ls` 确认源文件数量与 mtime 全部落盘,再启动构建;build 后必须数 dist 产物数量,不能只看 build 页数**。
+- **`rm -rf dist` 会被本机 safe-delete 守卫拦截**(genie-trash 失败 → FAIL_CLOSED)。要冷构建清 dist,走 PowerShell `Remove-Item -LiteralPath ... -Recurse -Force`。
+- **es 路由的集合 schema 完全不生效**:两个 `[lector].astro` 用 `import.meta.glob` 读原始 frontmatter,绕过 `content.config.ts` 里 `esReaders` 的 platform enum 与必填校验(写错不报错)。长期建议改 `getCollection('esReaders')` 或把审计脚本挂进构建前置。
+

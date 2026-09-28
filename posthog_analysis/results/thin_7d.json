@@ -1,0 +1,60 @@
+{
+ "sql": "\nWITH s AS (\n  SELECT toDate(toTimeZone(min(timestamp),'Asia/Shanghai')) AS day,\n         properties.$session_id AS sid,\n         countIf(event='$pageview') AS pv,\n         countIf(event='$web_vitals') AS v,\n         dateDiff('second', min(timestamp), max(timestamp)) AS dur\n  FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND timestamp >= toDateTime(1789920000)\n        AND properties.$session_id IS NOT NULL\n  GROUP BY sid\n)\nSELECT day, count() AS sessions, countIf(pv=1 AND v=0 AND dur<=2) AS thin,\n       countIf(v=0) AS zero_vitals\nFROM s GROUP BY day ORDER BY day DESC LIMIT 20\n",
+ "columns": [
+  "day",
+  "sessions",
+  "thin",
+  "zero_vitals"
+ ],
+ "results": [
+  [
+   "2026-09-28",
+   21,
+   3,
+   9
+  ],
+  [
+   "2026-09-27",
+   30,
+   11,
+   15
+  ],
+  [
+   "2026-09-26",
+   19,
+   3,
+   8
+  ],
+  [
+   "2026-09-25",
+   31,
+   5,
+   6
+  ],
+  [
+   "2026-09-24",
+   23,
+   2,
+   4
+  ],
+  [
+   "2026-09-23",
+   11,
+   2,
+   2
+  ],
+  [
+   "2026-09-22",
+   23,
+   11,
+   13
+  ],
+  [
+   "2026-09-21",
+   22,
+   7,
+   12
+  ]
+ ],
+ "hasMore": null
+}
