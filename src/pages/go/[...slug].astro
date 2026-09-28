@@ -44,6 +44,25 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
 const destHost = (() => {
   try { return new URL(url).host; } catch { return 'unknown'; }
 })();
+
+/**
+ * 平台码 —— 2026-09-28 新增。
+ *
+ * 背景：回传事件里没有 offer_id，实测 7 笔转化的 platform 属性全是 null，
+ * 于是「按平台核对滞后常数」做不了；$0 注册类回传更是完全不知道该记到
+ * Kasamba 还是 Purple Garden。
+ *
+ * 做法：把平台码拼到 aff_sub2 的第三段（`<人ID>.<点击令牌>.<平台码>`），
+ * 联盟侧原样回传，端点按白名单解析（functions/api/postback.js）。
+ * 不改联盟后台配置，也不额外占 sub 参数位。
+ */
+const OFFER_TO_PLATFORM_CODE: Record<string, string> = { '221': 'keen', '191': 'kasamba', '30': 'purplegarden' };
+const platformCode = (() => {
+  try {
+    const offerId = new URL(url).searchParams.get('offer_id') || '';
+    return OFFER_TO_PLATFORM_CODE[offerId] || '';
+  } catch { return ''; }
+})();
 ---
 
 <!DOCTYPE html>
@@ -54,7 +73,7 @@ const destHost = (() => {
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Runs before first paint: real users never see a flash, bots get nothing. -->
-    <script define:vars={{ url, POSTHOG_KEY, POSTHOG_HOST, destHost }}>
+    <script define:vars={{ url, POSTHOG_KEY, POSTHOG_HOST, destHost, platformCode }}>
       (function () {
         // ══ 第一步：判定真伪 + 拼出跳转目标 ══════════════════════════════
         // 这一段完全不碰埋点。跳转与否只由下面三个信号决定，与埋点代码零耦合。
@@ -77,8 +96,10 @@ const destHost = (() => {
         if (isReal && sub) {
           try {
             var u = new URL(dest);
-            // sub 形如 <人ID>.<点击令牌>，原样透传，联盟回调会带回来
-            u.searchParams.set('aff_sub2', sub);
+            // sub 形如 <人ID>.<点击令牌>[.<平台码>]，原样透传，联盟回调会带回来。
+            // 平台码（kasamba/keen/purplegarden）让回传侧不必依赖 offer_id —— 实测
+            // 回传里没有 offer_id，导致 platform 一直是 null，无法按平台核对常数。
+            u.searchParams.set('aff_sub2', platformCode ? sub + '.' + platformCode : sub);
             dest = u.toString();
           } catch (e) {}
         }

@@ -13,7 +13,9 @@
     "astro": "astro",
     "fetch:avatars": "node ./scripts/fetch-reader-avatars.mjs",
     "audit:cta": "node ./scripts/audit-cta-source.mjs",
-    "test:agents": "node ./scripts/test-markdown-for-agents.mjs"
+    "test:agents": "node ./scripts/test-markdown-for-agents.mjs",
+    "test:postback": "node ./scripts/test-postback-classify.mjs",
+    "postback:selftest": "node ./scripts/postback-selftest.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

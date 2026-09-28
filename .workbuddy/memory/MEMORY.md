@@ -70,3 +70,14 @@
 - **`rm -rf dist` 会被本机 safe-delete 守卫拦截**(genie-trash 失败 → FAIL_CLOSED)。要冷构建清 dist,走 PowerShell `Remove-Item -LiteralPath ... -Recurse -Force`。
 - **es 路由的集合 schema 完全不生效**:两个 `[lector].astro` 用 `import.meta.glob` 读原始 frontmatter,绕过 `content.config.ts` 里 `esReaders` 的 platform enum 与必填校验(写错不报错)。长期建议改 `getCollection('esReaders')` 或把审计脚本挂进构建前置。
 
+## 转化回传链路(2026-09-28 补全,勿回退)
+- **事件名只有一个:`Order_Converted`**。lead(注册,$0) 与 sale(付费,>0) 靠 `properties.conversion_type` 区分,**不要拆成两个事件名**(所有既有洞察都按此口径建立)。
+- **`$insert_id` 格式 = `ea-pb-<txn>-<type>-<payout>`**(approved/无状态时保持此形状 → 历史事件幂等不被破坏);**撤销类追加 `-<status>` 另开一条**;孤儿事件追加参数指纹。
+- **revenue 语义**:lead 记 0;sale 记实收;撤销类记**负值** → `sum(revenue)` 天然是净营收。**但"转化笔数"必须按 `transaction_id` 去重**(Kasamba/PG 的注册→付费是同交易号两条记录)。
+- **类型判定四级**(结果写进 `type_inference`):显式 `conversion_type` > `commission` > `amount/sale_amount/order_amount` > `payout`。踩坑:联盟侧在 Lead 动作上可能把 `{payout}` 填成**报价**,只看 payout 会把注册算成付费 → 判为 lead 且金额只来自 payout 时 revenue 归零并记 `revenue_source=lead_zeroed`。
+- **平台识别 = `aff_sub2` 第三段**:`/go/` 页把 `<人ID>.<令牌>.<平台码>`(kasamba|keen|purplegarden) 拼进 aff_sub2,端点按白名单解析。**因为回传里根本没有 offer_id,改造前 7 笔转化的 platform 全是 null**。老的两段格式继续兼容;归一化值在 `sub_id_canonical`。
+- **端点可选鉴权**:`env.POSTBACK_SECRET` 未设置时不校验(向后兼容);设置后必须先在后台 URL 补 `&k=`,**顺序反了会让回传全部 403**。鉴权失败不写事件(否则端点自己变污染源)。
+- **判"后台没发"还是"发丢了"**:`Postback_Orphan` 恒为 0 而后台有转化 → **后台根本没发**(端点早已能收 $0)。
+- **🔴 Lead 收不到的根因(2026-09-28 后台截图确认)**:barges「追踪点/回传」页只有 3 行,**每行「目标」都是 `First Purchase`** → 注册类目标从未绑定回传 URL。修法 = **新增**行(目标换成注册/Signup/Lead 类,三个广告单各一条,URL 末尾补 `&conversion_type=lead`),**现有 3 行不要动**。既有 URL 形如 `https://easternalignment.com/api/postback?click_id={aff_sub2}&payout={payout}&transaction_id={transaction_id}`(宏名以此为准,不要再猜)。
+- 代码 `functions/api/postback.js`;手册 `docs/lead-postback-setup.md`;自检 `scripts/postback-selftest.mjs`(线上 dry-run/写入)、`scripts/test-postback-classify.mjs`(离线回归,9 用例)、`posthog_analysis/lead_funnel.py`(lead→sale 升级率 + 注册归因)。
+
