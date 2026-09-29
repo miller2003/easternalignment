@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'(无)') AS pos,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.time_on_page_ms),''),'') AS tms,\n       toString(properties.$insert_id) AS iid,\n       toString(properties.$session_id) AS sid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'(?)') AS cc\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1789315200) AND timestamp < toDateTime(1790594029)\nORDER BY timestamp DESC LIMIT 300\n",
+ "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'(无)') AS pos,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.time_on_page_ms),''),'') AS tms,\n       toString(properties.$insert_id) AS iid,\n       toString(properties.$session_id) AS sid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'(?)') AS cc\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1789401600) AND timestamp < toDateTime(1790660197)\nORDER BY timestamp DESC LIMIT 300\n",
  "columns": [
   "day",
   "page",
@@ -12,6 +12,28 @@
   "cc"
  ],
  "results": [
+  [
+   "2026-09-28",
+   "/guides/best-tarot-readers-on-kasamba/",
+   "above-fold",
+   "kasamba-divine-spirit",
+   "zx1sv7",
+   "147697",
+   "ea-clk-01a0e814-3405-7a2c-97e5-4aca4c223d53-kasamba-divine-spirit-1790600180811",
+   "01a0e814-3431-7b3c-95c7-c7b2032dcedf",
+   "PH"
+  ],
+  [
+   "2026-09-28",
+   "/guides/best-tarot-readers-on-kasamba/",
+   "above-fold",
+   "kasamba-miss-bathsheba",
+   "6cp8o5",
+   "74375",
+   "ea-clk-01a0e814-3405-7a2c-97e5-4aca4c223d53-kasamba-miss-bathsheba-1790600107488",
+   "01a0e814-3431-7b3c-95c7-c7b2032dcedf",
+   "PH"
+  ],
   [
    "2026-09-28",
    "/reviews/kasamba/love-specialist-isabelle-kasamba-review/",
@@ -923,61 +945,6 @@
    "12189",
    "ea-clk-01a0a13b-aa52-743e-9000-4b29bc5b12bb-kasamba-1789411449369",
    "01a0a13b-aa73-76e7-9e6d-07c9c3a38591",
-   "US"
-  ],
-  [
-   "2026-09-14",
-   "/guides/best-tarot-readers-for-love/",
-   "above-fold",
-   "keen-master-sher",
-   "pszm6y",
-   "22489",
-   "ea-clk-01a0a031-b3b9-7199-902c-7187554a65bd-keen-master-sher-1789394029079",
-   "01a0a031-b3ce-7bea-9eb1-42f262a16aa0",
-   "IQ"
-  ],
-  [
-   "2026-09-14",
-   "/guides/best-tarot-readers-for-love/",
-   "hero",
-   "keen",
-   "zglyj3",
-   "7193",
-   "ea-clk-01a0a031-b3b9-7199-902c-7187554a65bd-keen-1789394013783",
-   "01a0a031-b3ce-7bea-9eb1-42f262a16aa0",
-   "IQ"
-  ],
-  [
-   "2026-09-14",
-   "/guides/best-mediums-on-kasamba/",
-   "inline",
-   "kasamba",
-   "v6a0be",
-   "23780",
-   "ea-clk-01a09fde-b35f-79eb-82dd-f53fe4a6baad-kasamba-1789388591154",
-   "01a09fde-b36f-797d-9990-409c06a940a7",
-   "AU"
-  ],
-  [
-   "2026-09-14",
-   "/reviews/kasamba/psychic-tsahai-kasamba-review/",
-   "hero",
-   "kasamba-psychic-tsahai",
-   "qrbtx8",
-   "62448",
-   "ea-clk-01a09c63-6631-7678-981c-789575683e0d-kasamba-psychic-tsahai-1789330217549",
-   "01a09c63-6650-7261-9842-f4ed82ee3164",
-   "US"
-  ],
-  [
-   "2026-09-14",
-   "/reviews/keen/gina-marie/",
-   "hero",
-   "keen-gina-marie",
-   "qkb2cv",
-   "3318",
-   "ea-clk-01a09be4-c8f1-761a-bc98-f4d636846781-keen-gina-marie-1789321860560",
-   "01a09be4-c916-73d8-809f-855afe39ba58",
    "US"
   ]
  ],

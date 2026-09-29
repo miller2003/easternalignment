@@ -46,7 +46,7 @@ const destHost = (() => {
 })();
 
 /**
- * 平台码 —— 2026-09-28 新增。
+ * 平台码 —— 2026-09-28 新增，2026-09-29 补齐全部 offer。
  *
  * 背景：回传事件里没有 offer_id，实测 7 笔转化的 platform 属性全是 null，
  * 于是「按平台核对滞后常数」做不了；$0 注册类回传更是完全不知道该记到
@@ -55,8 +55,26 @@ const destHost = (() => {
  * 做法：把平台码拼到 aff_sub2 的第三段（`<人ID>.<点击令牌>.<平台码>`），
  * 联盟侧原样回传，端点按白名单解析（functions/api/postback.js）。
  * 不改联盟后台配置，也不额外占 sub 参数位。
+ *
+ * ⚠️ 2026-09-29 补齐：初版只登记了 221/191/30，导致 321 条联盟链接里的 **96 条（30%）
+ * 拿不到平台码** —— 具体是 offer 34（PG 西语按人深链，32 条）、offer 42（psiquicos，
+ * 36 条）、offer 209（Keen 按人深链，28 条）。影响：这些链接的转化在回传侧
+ * platform 为 null，其中 psiquicos 连名称兜底都命中不了（platformFromName 只认
+ * kasamba/keen/purple），会**永久不可归因**。
+ * 映射依据：逐条解析 affiliateLinks.ts 的落地区域名（purplegarden.co / psiquicos.net /
+ * keen.com），见 2026-09-29 日志。新增平台码时必须同步改三处：
+ *   ① 本文件的 OFFER_TO_PLATFORM_CODE
+ *   ② functions/api/postback.js 的 OFFER_TO_PLATFORM
+ *   ③ functions/api/postback.js 的 PLATFORM_CODE 白名单（否则解析不出来）
  */
-const OFFER_TO_PLATFORM_CODE: Record<string, string> = { '221': 'keen', '191': 'kasamba', '30': 'purplegarden' };
+const OFFER_TO_PLATFORM_CODE: Record<string, string> = {
+  '221': 'keen',
+  '209': 'keen',        // Keen 按人深链走的是另一个 offer_id
+  '191': 'kasamba',
+  '30': 'purplegarden',
+  '34': 'purplegarden', // PG 西语按人深链（2026-09-28 起 30 → 34）
+  '42': 'psiquicos',    // psiquicos.net（西语分站第二平台）
+};
 const platformCode = (() => {
   try {
     const offerId = new URL(url).searchParams.get('offer_id') || '';

@@ -28,6 +28,12 @@ const CASES = [
   ['G Keen 平台码', `click_id=01a0e114-b83b-7d95-aa49-80ad849a62fd.fqwax3.keen&payout=125&transaction_id=T7`, 'sale', 'payout', 'Keen', false, true],
   ['H 未知第三段不应被当平台', `click_id=01a0e4ee-xxx.tok.somethingelse&payout=1&transaction_id=T8`, 'sale', 'payout', null, false, true],
   ['I 三参数宏未被替换（真实探测形状）', `c=&click_i=&click_id=`, 'lead', 'payout', null, false, false],
+  // 2026-09-29：补齐 offer 34 / 42 / 209 后的回归（这三条覆盖了此前 30% 的归因空洞）
+  ['J offer 34 = PG 西语', `click_id=01a0e4ee-xxx.tok&offer_id=34&payout=125&transaction_id=T9`, 'sale', 'payout', 'PurpleGarden', false, true],
+  ['K offer 42 = Psiquicos', `click_id=01a0e4ee-xxx.tok&offer_id=42&payout=0&transaction_id=T10`, 'lead', 'payout', 'Psiquicos', false, true],
+  ['L offer 209 = Keen 按人深链', `click_id=01a0e4ee-xxx.tok&offer_id=209&payout=125&transaction_id=T11`, 'sale', 'payout', 'Keen', false, true],
+  ['M sub 平台码 psiquicos', `click_id=01a0e4ee-ffe5-714b-bca7-fa56afa674f9.abc123.psiquicos&payout=0&transaction_id=T12`, 'lead', 'payout', 'Psiquicos', false, true],
+  ['N 名称兜底认 psiquicos', `click_id=01a0e4ee-xxx.tok&payout=0&transaction_id=T13&advertiser_name=Psiquicos.net`, 'lead', 'payout', 'Psiquicos', false, true],
 ];
 
 let fail = 0;

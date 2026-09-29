@@ -74,11 +74,17 @@ const CORS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
-/** 广告单 ID → 平台名（与 src/data/affiliateLinks.ts 里的 offer_id 保持一致） */
+/** 广告单 ID → 平台名（与 src/data/affiliateLinks.ts 里的 offer_id 保持一致）
+ *  ⚠️ 2026-09-29 补齐 34/42/209：初版只有 221/191/30，导致 321 条联盟链接里
+ *  96 条（30%）的转化 platform 为 null。新增平台时必须三处同步：
+ *    ① 本表 → ② PLATFORM_CODE 白名单 → ③ src/pages/go/[...slug].astro 的 OFFER_TO_PLATFORM_CODE */
 const OFFER_TO_PLATFORM = {
   '221': 'Keen',
+  '209': 'Keen',          // Keen 按人深链走另一个 offer_id
   '191': 'Kasamba',
   '30': 'PurpleGarden',
+  '34': 'PurpleGarden',   // PG 西语按人深链
+  '42': 'Psiquicos',      // psiquicos.net（西语分站第二平台）
 };
 
 /** sub_id 第三段的平台码（由 /go/ 页写入，见 src/pages/go/[...slug].astro） */
@@ -86,6 +92,7 @@ const PLATFORM_CODE = {
   keen: 'Keen',
   kasamba: 'Kasamba',
   purplegarden: 'PurpleGarden',
+  psiquicos: 'Psiquicos',
 };
 
 /** 撤销 / 拒绝类状态：这类回调要把营收冲回去，且必须单独入库 */
@@ -100,6 +107,9 @@ function platformFromName(name) {
   if (s.indexOf('kasamba') > -1) return 'Kasamba';
   if (s.indexOf('keen') > -1) return 'Keen';
   if (s.indexOf('purple') > -1) return 'PurpleGarden';
+  // 2026-09-29 补：西语分站第二平台。此前没有这条，导致 psiquicos 的转化
+  // 在 offer_id 缺失时连名称兜底都命中不了 → platform 恒为 null、永久不可归因。
+  if (s.indexOf('psiquic') > -1) return 'Psiquicos';
   return null;
 }
 

@@ -231,3 +231,23 @@ GROUP BY day, properties.conversion_type ORDER BY day DESC
 - 滞后常数（用于异常检测）：Kasamba / PG 点击 → $0 记录 **58.8–68.6 分钟**；
   Keen 点击 → 记录 4.6 / 8.6 分钟；Kasamba / PG 注册 → 付费约 **23–24 小时**。
 - 「PostHog 看不到注册」在接通前是**预期现象**，不要当成埋点故障。
+
+---
+
+## 7. 新增平台 / 新增 offer 时必须同步的三处
+
+平台识别走的是 **offer_id → 平台码** 映射，而这个映射**分散在三个地方**。
+2026-09-28 初版只登记了 `221/191/30`，后果是 321 条联盟链接里 **96 条（30%）拿不到平台码**
+（offer `34` PG 西语 32 条、offer `42` psiquicos 36 条、offer `209` Keen 按人深链 28 条），
+其中 psiquicos 连名称兜底都命中不了 → 转化 `platform` 恒为 null、**永久不可归因**。
+
+| # | 位置 | 改什么 |
+|---|---|---|
+| ① | `src/pages/go/[...slug].astro` → `OFFER_TO_PLATFORM_CODE` | `offer_id: '平台码小写'`（写入 aff_sub2 第三段） |
+| ② | `functions/api/postback.js` → `OFFER_TO_PLATFORM` | `offer_id: '平台名'`（回传里有 offer_id 时用） |
+| ③ | `functions/api/postback.js` → `PLATFORM_CODE` 白名单 | `平台码小写: '平台名'`（**漏了这处，①写的码解析不出来**） |
+
+补充：若新平台的转化可能不带 `offer_id`，还要在 `platformFromName()` 里加域名关键词兜底。
+
+**验证**：`node scripts/test-postback-classify.mjs`（含 offer 34/42/209 与 psiquicos 的回归用例）。
+**当前已登记**：`221`+`209`→Keen、`191`→Kasamba、`30`+`34`→PurpleGarden、`42`→Psiquicos。

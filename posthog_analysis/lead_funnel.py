@@ -24,14 +24,37 @@ DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 60
 BJ = timezone(timedelta(hours=8))
 T0 = ep(TODAY - timedelta(days=DAYS))
 
-# 排除自检写入的测试数据
+# 排除手工测试/自检数据。
+# 口径：真实转化的 distinct_id 一定是 **UUID 形状**（PostHog 的 click_id），
+# 因为 sub_id 是 `<人ID>.<点击令牌>[.<平台码>]`、人ID 取 get_distinct_id()。
+# 实测 2026-09-29 有人手工发了 `test123` / `x.y` / `abc.def` / `zz1` 这类占位回传，
+# 它们会被算成"注册/付费"并污染升级率——用形状判定可以一次性过滤掉所有这类噪声，
+# 不必维护一份永远列不全的黑名单。
+# 另：scripts/postback-selftest.mjs --write 写的是 SELFTEST- 前缀交易号，一并排除。
 NOT_TEST = """
   AND coalesce(toString(properties.transaction_id),'') NOT LIKE 'SELFTEST-%'
+  AND (coalesce(toString(properties.distinct_id),'') = ''
+       OR match(toString(properties.distinct_id), '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-'))
+"""
+
+# 显式统计被过滤掉的疑似测试行，避免"悄悄少了数据"看不出来
+TESTY_COUNT = f"""
+SELECT countIf(NOT (
+         coalesce(toString(properties.transaction_id),'') NOT LIKE 'SELFTEST-%'
+         AND (coalesce(toString(properties.distinct_id),'') = ''
+              OR match(toString(properties.distinct_id), '^[0-9a-fA-F]{{8}}-[0-9a-fA-F]{{4}}-'))
+       )) AS testish,
+       count() AS total
+FROM events WHERE {CONV} AND event IN ('Order_Converted','Postback_Orphan')
+  AND timestamp >= toDateTime({T0}) AND timestamp < toDateTime({TN})
 """
 
 Q = {}
 
 # ① 全部转化行（lead + sale），带判定依据与金额
+#    ⚠️ 只取 Order_Converted：孤儿事件（Postback_Orphan）的 distinct_id 恒为
+#    `orphan-…`，形状过滤器会把它们全部剔除，所以单独用 lf_orphans 统计，
+#    否则「发了但认不出人」这个关键故障信号会静默消失。
 Q["lf_conversions"] = f"""
 SELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,
        coalesce(nullIf(toString(properties.transaction_id),''),'') AS txn,
@@ -45,10 +68,20 @@ SELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,
        coalesce(nullIf(toString(properties.type_inference),''),'') AS ti,
        toString(properties.orphan) AS orphan,
        event AS ev
-FROM events WHERE {CONV} AND event IN ('Order_Converted','Postback_Orphan')
+FROM events WHERE {CONV} AND event='Order_Converted'
   AND timestamp >= toDateTime({T0}) AND timestamp < toDateTime({TN})
   {NOT_TEST}
 ORDER BY timestamp DESC LIMIT 500
+"""
+
+# ①b 孤儿回传（诊断用：>0 = 后台发了但我们认不出人；=0 = 后台没发）
+Q["lf_orphans"] = f"""
+SELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,
+       coalesce(nullIf(toString(properties.transaction_id),''),'') AS txn,
+       coalesce(nullIf(toString(properties.raw_params),''),'') AS raw
+FROM events WHERE {CONV} AND event='Postback_Orphan'
+  AND timestamp >= toDateTime({T0}) AND timestamp < toDateTime({TN})
+ORDER BY timestamp DESC LIMIT 200
 """
 
 # ② 同期点击行（用于把 token 还原成页面 / CTA 位置）
@@ -68,6 +101,7 @@ ORDER BY timestamp DESC LIMIT 800
 """
 
 # ③ 转化行按日/类型汇总（不依赖点击，先给总量）
+Q["lf_testish"] = TESTY_COUNT
 Q["lf_daily"] = f"""
 SELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,
        countIf(properties.conversion_type='lead') AS leads,
@@ -114,9 +148,23 @@ def report():
         else:
             (reversals if rec["ti"] == "reversal" else sales).append(rec)
 
+    try:
+        orph_all = json.load(open(os.path.join(OUT, "lf_orphans.json"), encoding="utf-8"))["results"]
+    except Exception:
+        orph_all = []
+
     print(f"\n{'='*72}\nLead/Sale 漏斗（近 {DAYS} 天）\n{'='*72}")
-    print(f"注册(lead) {len(leads)} 笔 ｜ 付费(sale) {len(sales)} 笔 ｜ "
-          f"撤销 {len(reversals)} 笔 ｜ 无法归因(Orphan) {len(orphans)} 笔")
+    testish = 0
+    try:
+        t = json.load(open(os.path.join(OUT, "lf_testish.json"), encoding="utf-8"))["results"][0]
+        testish, total = int(t[0] or 0), int(t[1] or 0)
+    except Exception:
+        pass
+    print(f"注册(lead) {len(leads)} 笔 ｜ 付费(sale) {len(sales)} 笔 ｜ 撤销 {len(reversals)} 笔")
+    print(f"孤儿回传 {len(orph_all)} 条（>0 = 后台发了但认不出人；=0 = 后台没发该类型回传）")
+    if testish:
+        print(f"⚠️ 已从 lead/sale 统计中过滤疑似手工测试回传 {testish} 条"
+              f"（distinct_id 非 UUID 形状 / SELFTEST- 前缀）——避免把测试当成真实转化")
     rev = sum(float(s["revenue"] or 0) for s in sales) + sum(float(s["revenue"] or 0) for s in reversals)
     print(f"净营收（sale + 撤销冲回，已按事件值汇总）: ${rev:.0f}")
 

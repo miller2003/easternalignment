@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1787932800)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
+ "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1788019200)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
  "columns": [
   "ref",
   "host",
@@ -9,27 +9,27 @@
   [
    "$direct",
    "easternalignment.com",
-   529
+   521
   ],
   [
    "www.google.com",
    "easternalignment.com",
-   246
+   248
   ],
   [
    "$direct",
    "mysticdo.com",
-   62
+   63
   ],
   [
    "easternalignment.com",
    "easternalignment.com",
-   28
+   27
   ],
   [
    "chatgpt.com",
    "easternalignment.com",
-   20
+   21
   ],
   [
    "www.bing.com",
@@ -49,7 +49,7 @@
   [
    "$direct",
    "localhost:4321",
-   6
+   5
   ],
   [
    "duckduckgo.com",
@@ -92,7 +92,7 @@
    2
   ],
   [
-   "www.tiktok.com",
+   "www.facebook.com",
    "easternalignment.com",
    2
   ],
@@ -102,17 +102,17 @@
    2
   ],
   [
-   "www.facebook.com",
+   "www.tiktok.com",
    "easternalignment.com",
    2
   ],
   [
-   "www.pinterest.com",
+   "127.0.0.1:8188",
    "easternalignment.com",
    1
   ],
   [
-   "127.0.0.1:8188",
+   "www.pinterest.com",
    "easternalignment.com",
    1
   ],
@@ -137,17 +137,7 @@
    1
   ],
   [
-   "$direct",
-   "0ef55655.easternalignment.pages.dev",
-   1
-  ],
-  [
    "grok.com",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "rtp137.polalexis.pro",
    "easternalignment.com",
    1
   ],
@@ -157,22 +147,12 @@
    1
   ],
   [
+   "rtp137.polalexis.pro",
+   "easternalignment.com",
+   1
+  ],
+  [
    "yandex.ru",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "search.google.com",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "www.kimi.com",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "kit-ru2.voximplant.com",
    "easternalignment.com",
    1
   ],
@@ -182,7 +162,42 @@
    1
   ],
   [
+   "$direct",
+   "0ef55655.easternalignment.pages.dev",
+   1
+  ],
+  [
+   "www.kimi.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "search.google.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "fangguo.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "localhost:4321",
+   "localhost:4321",
+   1
+  ],
+  [
+   "www.google.com.au",
+   "easternalignment.com",
+   1
+  ],
+  [
    "workplace.mgovcloud.in",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "kit-ru2.voximplant.com",
    "easternalignment.com",
    1
   ],
@@ -197,23 +212,8 @@
    1
   ],
   [
-   "www.google.com.au",
-   "easternalignment.com",
-   1
-  ],
-  [
    "$direct",
    "localhost:8765",
-   1
-  ],
-  [
-   "fangguo.com",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "localhost:4321",
-   "localhost:4321",
    1
   ],
   [

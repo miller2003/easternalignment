@@ -87,7 +87,9 @@ def save(name, sql):
 
 # ---------- 时间窗口（东八区，幂等整数） ----------
 BJ = timezone(timedelta(hours=8))
-TODAY = datetime(2026, 9, 28, 0, 0, 0, tzinfo=BJ)
+# 动态取「今天 00:00（北京时间）」。2026-09-29 改为动态：此前这一行写死成某个日期，
+# 隔天再跑就会静默分析旧日期（查询照常返回、hasMore 正常，看不出错）。
+TODAY = datetime.now(BJ).replace(hour=0, minute=0, second=0, microsecond=0)
 NOW = datetime.now(BJ)
 ELAPSED = NOW - TODAY
 print("BJ now:", NOW.isoformat(), "| elapsed today:", ELAPSED, flush=True)
