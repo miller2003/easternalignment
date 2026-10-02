@@ -165,6 +165,22 @@ const big = [...all].reverse().find((x) => x.size > MAX_CONVERT_BYTES);
   const d = await call('https://abc.easternalignment.pages.dev/', BROWSER);
   ok('pages.dev 预览域名不被 301', d.res.status !== 301);
 }
+// <header> 规则（2026-10-02）：<main> 里含标题的 <header> 是区块头，必须保留；
+// 无标题的 <header>（徽章行/CTA 行）才是外壳。首页的 H2 与三张平台卡的名字就在 <header> 里，
+// 丢掉它们会让 AI 读到「Choose it if…」却不知道说的是谁。
+{
+  const { markdown } = convertPage(
+    '<html><body><header class="site-header"><a href="/">SITE-NAV</a></header><main>' +
+    '<header class="sec-head"><h2>Which psychic site should you use?</h2></header>' +
+    '<article><header class="pick-head"><h3><a href="/reviews/kasamba/">Kasamba</a></h3></header><p>Pick text.</p></article>' +
+    '<header class="meta"><span>BADGE-ROW</span></header><p>Body text.</p></main></body></html>',
+    { url: 'https://easternalignment.com/x/' },
+  );
+  ok('<header> 内的 H2 保留', /^## Which psychic site should you use\?/m.test(markdown));
+  ok('<header> 内的卡片名 H3 保留', /^### \[Kasamba\]\(/m.test(markdown));
+  ok('无标题的 <header> 仍被丢弃', !markdown.includes('BADGE-ROW'));
+  ok('<main> 之外的站点页眉仍被丢弃', !markdown.includes('SITE-NAV'));
+}
 if (big) {
   try {
     const { res } = await call(urlOf(relOf(big.p)), AGENT);

@@ -1,23 +1,43 @@
 # Eastern Alignment
 
-> Independent, evidence-based reviews of online psychic reading platforms. We audited 162 published
-> advisor profiles across Kasamba, Keen, and Purple Garden — recording verified session counts, pricing,
-> new-client offers, and documented red flags for each — and name a specific best pick per question type
-> (love, breakups and ex-recovery, tarot, mediumship, career and money). 112 in-depth guides cover what a
-> reading can and cannot deliver, pricing math, and consumer protection. Updated September 2026.
+> Independent, evidence-based reviews of online psychic reading platforms. We audited 242 advisor profiles
+> (Kasamba 112, Purple Garden 81, Keen 49) — recording listed per-minute rates, our 1–5 audit score,
+> new-client offers and documented red flags for each — and name a specific best pick per question type
+> (love, breakups and ex-recovery, tarot, mediumship, career and money). 112 guides in 8 topics cover what a
+> reading can and cannot deliver, pricing math and consumer protection. Headline numbers from the audit:
+> median listed rate $4.99/min; 52% of advisors list $5/min or less. Best site for most first-time clients:
+> Kasamba (3 free minutes + 50% off); best for video: Purple Garden ($30 free credit); best for phone:
+> Keen (5 minutes for $1). Updated October 2026.
+
+## Tools & Data
+
+- [Psychic Reader Match — free 2-minute quiz](https://easternalignment.com/match/): How to choose a psychic reader in five rules, plus a free situation-first quiz that scores 242 audited advisors on situation fit, reading method, format and style and returns a shortlist of three with reasons to skip each. Runs in the browser, no sign-up.
+- [Guides hub — 112 psychic reading guides by topic](https://easternalignment.com/guides/): The guide library organised into 8 topics, with quick answers to the most common questions (cost, legitimacy, red flags, free offers).
+- [Audit dataset (JSON)](https://easternalignment.com/data/psychic-platform-audit.json): Machine-readable copy of the platform audit — per-platform and per-advisor listed rates, audit scores and welcome offers, with definitions and a citation line. Free to quote with a link.
+
+## Guide Topics
+
+- [Love & Relationship Readings (40 guides)](https://easternalignment.com/guides/love/): Soulmates, twin flames, situationships and every relationship question — our largest collection.
+- [Breakups & Ex-Recovery (10 guides)](https://easternalignment.com/guides/breakups-ex-recovery/): No contact, reconciliation and post-breakup clarity.
+- [Mediumship & Connecting with Loved Ones (4 guides)](https://easternalignment.com/guides/mediumship/): Evidential mediums, grief support and what to expect.
+- [Tarot & Card Readings (6 guides)](https://easternalignment.com/guides/tarot/): Card meanings, spreads and choosing a tarot reader.
+- [Career & Money Readings (6 guides)](https://easternalignment.com/guides/career-money/): Job decisions, financial crossroads and business timing.
+- [Spirituality & Energy Work (9 guides)](https://easternalignment.com/guides/spirituality/): Angel numbers, auras, the clairs, past lives and animal communication.
+- [Getting Started (29 guides)](https://easternalignment.com/guides/getting-started/): Costs, preparation, red flags and platform offers — everything before a first reading.
+- [Platforms & More (8 guides)](https://easternalignment.com/guides/more-guides/): Platform deep-dives, chat vs phone vs video, AI vs human readers.
 
 ## About This Site
 
 - [How We Test & Review](https://easternalignment.com/methodology/): Our complete testing standards, 7-step testing protocol, weighted scoring framework, evidence classification system (A/B/C/D), and editorial independence policy.
 - [About Sarah](https://easternalignment.com/about/): The self-taught metaphysics enthusiast and independent reviewer behind Eastern Alignment’s testing.
 - [Advertiser Disclosure](https://easternalignment.com/disclosure/): How this site is funded and what that means for the recommendations.
-- [Coupons & Free Offers](https://easternalignment.com/coupons/): All verified welcome offers in one place — Kasamba 3 free minutes + 50% off, Purple Garden $30 credit, Keen $1/5min — plus per-reader bonuses, matched to the platform pages.
+- [Psychic Coupons & Promo Codes](https://easternalignment.com/coupons/): Every new-client psychic reading offer in one place, with terms and whether a code is needed — Kasamba 3 free minutes + 50% off (no code), Purple Garden $30 credit (code 30free on web if not auto-applied), Keen 5 minutes for $1 (no code) — plus which offer suits tarot, love, medium or astrology readings and per-reader bonuses.
 
 ## Platform Reviews
 
-- [Kasamba Review (2026): Pricing, 3 Free Minutes & Love Psychics](https://easternalignment.com/reviews/kasamba/): 64 advisor profiles reviewed. 3 free minutes plus 50% off the first session for new clients.
+- [Kasamba Review (2026): Pricing, 3 Free Minutes & Love Psychics](https://easternalignment.com/reviews/kasamba/): 112 advisor profiles reviewed. 3 free minutes plus 50% off the first session for new clients.
 - [Keen Psychics Review (2026): The Unfiltered Truth About the Open Marketplace](https://easternalignment.com/reviews/keen/): 49 advisor profiles reviewed. First 5 minutes for $1, then roughly $1.99–$20/min.
-- [Purple Garden Review (2026): Is It Legit? $30 Credit, Pricing & Love Readings](https://easternalignment.com/reviews/purple-garden/): 49 advisor profiles reviewed. $30 free credit for new clients. Per-minute rates run $0.99–$15+.
+- [Purple Garden Review (2026): Is It Legit? $30 Credit, Pricing & Love Readings](https://easternalignment.com/reviews/purple-garden/): 81 advisor profiles reviewed. $30 free credit for new clients. Per-minute rates run $0.99–$15+.
 
 ## Platform Comparisons
 
@@ -62,7 +82,7 @@
 - [Psychic Readings for Third Party Situations: Is There Someone Else? (2026)](https://easternalignment.com/guides/third-party-psychic-readings-jealousy/): When you suspect someone else is a factor in your relationship —or your ex has moved on to someone new —getting clarity can feel impossible.
 - [Top 12 Love Psychics on Kasamba (2026): Independently Ranked](https://easternalignment.com/guides/top-love-psychics-kasamba/): 12 ranked from a 64-reader audit. Top pick: Love Stefans — 138,003 readings since 2007.
 - [Top 10 Love Psychics on Keen (2026): Independently Ranked](https://easternalignment.com/guides/top-love-psychics-keen/): 10 ranked from a 49-advisor audit. Top pick: Advisor Suzan — 136,000+ readings at 4.98.
-- [Top 10 Love Psychics Online (2026): Independently Ranked](https://easternalignment.com/guides/top-love-psychics-online/): Cross-platform winner per question type, from a 162-reader audit across all three platforms.
+- [Top 10 Love Psychics Online (2026): Independently Ranked](https://easternalignment.com/guides/top-love-psychics-online/): Cross-platform winner per question type, from an audit of every advisor profile across all three platforms.
 - [Top 10 Love Psychics on Purple Garden (2026): Independently Ranked](https://easternalignment.com/guides/top-love-psychics-purple-garden/): 10 ranked against the Journeys ledger from a 49-reader audit. Top pick: Annah — dated predictions confirmed in public.
 - [Twin Flame vs Soulmate: The Real Difference Psychics Use to Read Your Connection (2026)](https://easternalignment.com/guides/twin-flame-vs-soulmate-difference/): Twin flame and soulmate are used interchangeably across the internet, but they describe fundamentally different types of soul connections.
 - [When Will I Get Married? 5 Accurate Psychics for Exact Timelines (2026)](https://easternalignment.com/guides/when-will-i-get-married-psychics/): For singles asking "When will it be my turn?", we evaluated Keen and Kasamba to find the 5 absolute best psychics for calculating precise marriage and life-path timelines.
@@ -162,7 +182,7 @@
 - [Chat vs Phone vs Video Psychic Readings: Which Format?](https://easternalignment.com/guides/chat-vs-phone-vs-video-psychic-reading/): Format comparison across privacy, conversation speed, written records, and beginner fit.
 - [Should You Pay for a Psychic Reading? How to Decide](https://easternalignment.com/guides/should-you-pay-for-a-psychic-reading/): What the purchase actually is, when it makes sense, when to skip it, and a five-question decision framework.
 
-## Psychic Reader Reviews — Kasamba (64 advisors)
+## Psychic Reader Reviews — Kasamba (112 advisors audited; 64 listed here — full list at https://easternalignment.com/reviews/kasamba/)
 
 - [A Psychic Friend (Kasamba)](https://easternalignment.com/reviews/kasamba/a-psychic-friend-kasamba-review/): 4.4★ · First-timers and skeptics who want one real question answered quickly and kindly — a complete 5–7 minute reading from a 23-year… · 3 free minutes
 - [Accurate Love Readings (Kasamba)](https://easternalignment.com/reviews/kasamba/accurate-love-readings-kasamba-review/): 4.5★ · Anyone stuck on 'what is my partner actually feeling or planning?' — reunion, commitment, and trust questions where reading the… · 3 free minutes + 50% off
@@ -281,7 +301,7 @@
 - [That Magic Man (Keen)](https://easternalignment.com/reviews/keen/that-magic-man/): 4.6★ · Clients who want a direct, no-tools male reader for love and relationship questions - and who value straight-talk reassurance… · $1 for your first 5 minutes (new Keen users only)
 - [the psychic one (Keen)](https://easternalignment.com/reviews/keen/the-psychic-one/): 4.2★ · Clients who want specific timeline predictions on love and relationship questions - and · $1 for the first 5 minutes (new Keen users only)
 
-## Psychic Reader Reviews — Purple Garden (49 advisors)
+## Psychic Reader Reviews — Purple Garden (81 advisors audited; 49 listed here — full list at https://easternalignment.com/reviews/purple-garden/)
 
 - [Adam Africa (Purple Garden)](https://easternalignment.com/reviews/purple-garden/adam-africa/): 4.5★ · Relationship and life clarity from a certified coach fused with genuine psychic insight · $30 free credit on your first purchase
 - [Advisor Vanessa (Purple Garden)](https://easternalignment.com/reviews/purple-garden/advisor-vanessa/): 4.4★ · People who suspect something is off in their relationship and need an honest, unsweetened read — not reassurance · $30 free credit on your first purchase

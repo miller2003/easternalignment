@@ -62,7 +62,7 @@ customSchema: |
 
 Most psychic platforms offer a trial. Keen gives you 5 minutes for a dollar —once, with one reader, your choice. California Psychics gives you a deeply discounted first session. Purple Garden credits your account with $30 on a first purchase.
 
-Kasamba does something structurally different, and that difference matters more than any other single feature on the platform.
+Kasamba does something structurally different, and that difference matters more than any other single feature on the platform. (Want the current offer terms and how it compares with Keen and Purple Garden? See all [psychic coupons and promo codes](/coupons/#kasamba-coupon).)
 
 Kasamba gives you **3 free chat minutes with every new advisor you try** —not just the first reader on your account, and not a one-time offer that evaporates once used. Every advisor on the platform who is new to you comes with a 3-minute free window. You can use this on three readers. Or thirty. Or the entire roster.
 

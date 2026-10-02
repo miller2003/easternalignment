@@ -1,9 +1,20 @@
 /**
  * src/match/taxonomy.ts
- * Central taxonomy, questions, and label dictionaries for Eastern Alignment Reader Match.
+ * Central taxonomy, the branching quiz flow, and label dictionaries for
+ * Eastern Alignment Reader Match.
+ *
+ * Flow: two phases.
+ *   1. "Your situation" (5 questions, branched by the first answer): area ->
+ *      what's happening -> how long -> how it feels -> what they most hope to
+ *      hear. Then a three-card draw that doubles as the mid-quiz mirror.
+ *   2. "Your reader" (2-3 questions): style, reading method (skipped for
+ *      grief: always mediumship), format.
+ * Budget and urgency are no longer asked: urgency had no live availability
+ * data behind it, and budget moved the score by 2 points at most.
  */
 
-import type { QuizQuestion, Intent, Practice, CommunicationFormat, ReadingStyle, Urgency, BudgetRange } from './types';
+import type { QuizQuestion, Intent, Practice, CommunicationFormat, ReadingStyle, UserAnswers } from './types';
+import { AREAS, AREA_BY_ID, DURATIONS, GRIEF_DURATIONS, HOPES, feelingsFor, findSituation, reflectionLine } from './reading';
 
 export const INTENT_LABELS: Record<Intent, string> = {
   love_relationship: 'Relationship Dynamic',
@@ -65,305 +76,139 @@ export const PLATFORM_BADGES: Record<string, { label: string; class: string; pro
   },
 };
 
-export const QUIZ_QUESTIONS: QuizQuestion[] = [
-  {
-    id: 'intent',
-    stepNumber: 1,
-    totalSteps: 7,
-    eyebrow: 'Step 1 of 7 · Primary Focus',
-    title: 'What are you trying to understand most right now?',
-    subtitle: 'Choose the specific situation creating the most friction or uncertainty in your life today.',
-    options: [
-      {
-        id: 'love_rel',
-        label: 'My relationship dynamic',
-        sublabel: 'Mixed signals, growing distance, or understanding where we stand',
-        value: 'love_relationship',
-      },
-      {
-        id: 'intentions',
-        label: "Someone's hidden feelings or intentions",
-        sublabel: 'What they actually think, feel, and plan beneath their emotional guard',
-        value: 'another_person_intentions',
-      },
-      {
-        id: 'breakup',
-        label: 'A breakup or possible reconciliation',
-        sublabel: 'No-contact silence, unresolved threads, or deciding whether to let go',
-        value: 'breakup_ex',
-      },
-      {
-        id: 'dating',
-        label: 'Dating and evaluating someone new',
-        sublabel: 'Assessing sincerity, chemistry, and spotting potential red flags early',
-        value: 'dating',
-      },
-      {
-        id: 'career',
-        label: 'Career crossroads or work direction',
-        sublabel: 'Job transition, workplace politics, promotions, or burnout',
-        value: 'career_work',
-      },
-      {
-        id: 'money',
-        label: 'Money, finances, or a major investment',
-        sublabel: 'Financial stability, business risks, contracts, or major expenditures',
-        value: 'money_finance',
-      },
-      {
-        id: 'decision',
-        label: 'A critical decision I am facing',
-        sublabel: 'Paralyzed between two paths or timing a high-stakes life transition',
-        value: 'decision_making',
-      },
-      {
-        id: 'future',
-        label: 'My broader future path and timing',
-        sublabel: 'What shifts, obstacles, or opportunities are approaching in the next 3–6 months',
-        value: 'future_direction',
-      },
-      {
-        id: 'grief',
-        label: 'Connecting with someone who passed away',
-        sublabel: 'Mediumship for closure, departed loved ones, and emotional peace',
-        value: 'grief_loss',
-      },
-      {
-        id: 'general',
-        label: "I'm not sure / Need general clarity",
-        sublabel: 'A foggy sense of unease or seeking an honest high-level perspective',
-        value: 'general_guidance',
-      },
-    ],
-  },
-  {
-    id: 'situationSubject',
-    stepNumber: 2,
-    totalSteps: 7,
-    eyebrow: 'Step 2 of 7 · Reality Slice',
-    title: 'Whose situation or headspace are you mainly asking about?',
-    subtitle: 'This helps our algorithm determine whether you need a third-person reader or internal guidance.',
-    options: [
-      {
-        id: 'subj_other',
-        label: 'Another specific person',
-        sublabel: 'Their internal thoughts, emotional bandwidth, sincerity, and next moves',
-        value: 'another_person',
-      },
-      {
-        id: 'subj_dynamic',
-        label: 'The dynamic between us',
-        sublabel: 'How our energies interact, compatibility, and where this connection leads',
-        value: 'relationship_dynamic',
-      },
-      {
-        id: 'subj_myself',
-        label: 'Mostly myself',
-        sublabel: 'My personal healing, career choices, boundary setting, and next steps',
-        value: 'myself',
-      },
-      {
-        id: 'subj_future',
-        label: 'A future event or timeline',
-        sublabel: 'An impending milestone, turning point, or external outcome',
-        value: 'future_event',
-      },
-      {
-        id: 'subj_closure',
-        label: 'Closure on something that already happened',
-        sublabel: 'Making peace with what went wrong and halting repetitive mental loops',
-        value: 'past_closure',
-      },
-      {
-        id: 'subj_open',
-        label: "I'm not sure / A mix of these",
-        sublabel: 'Open to whatever the advisor uncovers first',
-        value: 'not_sure',
-      },
-    ],
-  },
-  {
-    id: 'preferredPractice',
-    stepNumber: 3,
-    totalSteps: 7,
-    eyebrow: 'Step 3 of 7 · Modality Fit',
-    title: 'What kind of reading experience fits you best?',
-    subtitle: 'Different intuitive modalities answer questions through completely different frameworks.',
-    options: [
-      {
-        id: 'prac_psychic',
-        label: 'Direct Intuitive Conversation',
-        sublabel: 'Clairvoyant perception, third-person insight, and immediate conversational candor',
-        value: 'psychic',
-      },
-      {
-        id: 'prac_tarot',
-        label: 'Symbolic & Reflective Card Pull',
-        sublabel: 'Archetypes, subconscious patterns, and card-by-card situational roadmaps',
-        value: 'tarot',
-      },
-      {
-        id: 'prac_astrology',
-        label: 'Astrological Cycles & Energetic Blueprint',
-        sublabel: 'Planetary alignments, transits, compatibility matrices, and timing windows',
-        value: 'astrology',
-      },
-      {
-        id: 'prac_medium',
-        label: 'Connecting with Loved Ones in Spirit',
-        sublabel: 'Evidential contact with passed loved ones, grief resolution, and closure',
-        value: 'medium',
-      },
-      {
-        id: 'prac_open',
-        label: "I'm open / Match me with what best fits my question",
-        sublabel: 'Let Eastern Alignment match the modality based on your core question',
-        value: 'open',
-      },
-    ],
-  },
-  {
-    id: 'preferredFormat',
-    stepNumber: 4,
-    totalSteps: 7,
-    eyebrow: 'Step 4 of 7 · Communication Channel',
-    title: 'How do you prefer to communicate with an advisor?',
-    subtitle: 'Choose the format where you feel most grounded and secure.',
-    options: [
-      {
-        id: 'fmt_chat',
-        label: 'Live Chat',
-        sublabel: 'Private, real-time typing with auto-saved transcripts you can re-read and audit later',
-        value: 'chat',
-      },
-      {
-        id: 'fmt_phone',
-        label: 'Phone / Audio Call',
-        sublabel: 'Direct voice connection, instant vocal nuance, and immediate conversational flow',
-        value: 'phone',
-      },
-      {
-        id: 'fmt_video',
-        label: 'Live Video',
-        sublabel: 'Face-to-face transparency — see the reader, their cards, and verified video bios',
-        value: 'video',
-      },
-      {
-        id: 'fmt_open',
-        label: 'No preference / Prioritize reader quality & best intro deal',
-        sublabel: 'Auditions top-rated advisors regardless of communication format',
-        value: 'no_preference',
-      },
-    ],
-  },
-  {
-    id: 'preferredStyles',
-    stepNumber: 5,
-    totalSteps: 7,
-    eyebrow: 'Step 5 of 7 · Reader Style',
-    title: 'What style of advisor delivers the highest value for you?',
-    subtitle: 'Select up to 2 qualities you value most in a reading session.',
-    isMultiSelect: true,
-    maxSelect: 2,
-    options: [
-      {
-        id: 'style_direct',
-        label: 'Direct & Unvarnished',
-        sublabel: 'Tells the hard truth without sugarcoating, but zero moral judgment',
-        value: 'direct',
-      },
-      {
-        id: 'style_gentle',
-        label: 'Empathetic & Gentle',
-        sublabel: 'A safe, compassionate space that validates emotions and root causes',
-        value: 'gentle',
-      },
-      {
-        id: 'style_fast',
-        label: 'Fast, Structured & Efficient',
-        sublabel: 'Rapid communicator, no mystical padding, maximum value per minute',
-        value: 'fast_answers',
-      },
-      {
-        id: 'style_practical',
-        label: 'Practical & Strategic',
-        sublabel: 'Grounded advice, concrete boundaries, and tangible next steps for tomorrow',
-        value: 'practical',
-      },
-      {
-        id: 'style_reflective',
-        label: 'Reflective & Soulful',
-        sublabel: 'Deep psychological insights, karmic lessons, and personal sovereignty',
-        value: 'reflective',
-      },
-    ],
-  },
-  {
-    id: 'urgency',
-    stepNumber: 6,
-    totalSteps: 7,
-    eyebrow: 'Step 6 of 7 · Urgency & Timing',
-    title: 'How soon do you want to talk to an advisor?',
-    subtitle: 'We balance verified reader track records with current advisor availability.',
-    options: [
-      {
-        id: 'urg_now',
-        label: 'Right now',
-        sublabel: 'Prioritize advisors who are currently online and ready to take a session',
-        value: 'right_now',
-      },
-      {
-        id: 'urg_today',
-        label: 'Within today or tonight',
-        sublabel: 'Looking to connect during personal downtime later today',
-        value: 'today',
-      },
-      {
-        id: 'urg_days',
-        label: 'In the next couple of days',
-        sublabel: 'Willing to queue or wait for high-demand, booked-out specialists',
-        value: 'few_days',
-      },
-      {
-        id: 'urg_norush',
-        label: 'No rush — I care most about the best match',
-        sublabel: 'Focus purely on deep expertise and audited reviews, not immediate queue status',
-        value: 'no_rush',
-      },
-    ],
-  },
-  {
-    id: 'budget',
-    stepNumber: 7,
-    totalSteps: 7,
-    eyebrow: 'Step 7 of 7 · Budget & Session Scope',
-    title: 'What is your approximate budget for this session?',
-    subtitle: 'Every major platform offers introductory risk-reduction trials for new clients.',
-    options: [
-      {
-        id: 'bud_under20',
-        label: 'Under $20',
-        sublabel: 'Audition an advisor using introductory offers before spending your own money',
-        value: 'under_20',
-      },
-      {
-        id: 'bud_20to50',
-        label: '$20 – $50',
-        sublabel: 'A focused consultation with a mid-priced, verified specialist',
-        value: '20_to_50',
-      },
-      {
-        id: 'bud_50plus',
-        label: '$50 – $100+',
-        sublabel: 'Deep dive with an elite, high-demand advisor',
-        value: '50_plus',
-      },
-      {
-        id: 'bud_open',
-        label: 'No preference / Value-first',
-        sublabel: 'Match purely based on situation fit and verified client track records',
-        value: 'no_pref',
-      },
-    ],
-  },
+/* ────────────────────────────────────────────────────────────────────────
+ * Branching quiz flow
+ * ──────────────────────────────────────────────────────────────────────── */
+
+/** Answer fields that depend on the area; cleared when the area changes. */
+export const AREA_DEPENDENT_FIELDS: (keyof UserAnswers)[] = ['symptom', 'duration', 'feeling', 'hope', 'card'];
+
+const STYLE_OPTIONS = [
+  { id: 'style_direct', label: 'Straight to the point', sublabel: 'Honest, even when it’s hard to hear', value: 'direct' },
+  { id: 'style_gentle', label: 'Gentle and kind', sublabel: 'Takes care with how things land', value: 'gentle' },
+  { id: 'style_practical', label: 'Practical', sublabel: 'Clear next steps, not just predictions', value: 'practical' },
+  { id: 'style_reflective', label: 'Deep and soulful', sublabel: 'Helps me understand the why, not just the what', value: 'reflective' },
+  { id: 'style_fast', label: 'Quick and focused', sublabel: 'No padding; the most from every minute', value: 'fast_answers' },
 ];
+
+function styleSubtitle(a: Partial<UserAnswers>): string {
+  const tender = feelingsFor(a.area).find((f) => f.id === a.feeling)?.tender;
+  if (tender) return 'Pick up to two. Given what you’re carrying, a lot of people in your place choose “Gentle and kind”, but go with your gut.';
+  if (a.feeling === 'anxious' || a.feeling === 'confused') return 'Pick up to two. When your mind is racing, many people find a straight answer or practical steps the most settling.';
+  return 'Pick up to two.';
+}
+
+/**
+ * The quiz steps for the current answers. Re-evaluated on every render so
+ * the branch follows the area answer; the step count only changes with the
+ * area (grief skips the reading-method question).
+ */
+export function buildQuizSteps(a: Partial<UserAnswers>): QuizQuestion[] {
+  const area = a.area ? AREA_BY_ID[a.area] : undefined;
+  const isGrief = a.area === 'grief';
+  const sitTotal = 5;
+  const readerTotal = isGrief ? 2 : 3;
+  const sit = (n: number) => `Your situation · ${n} of ${sitTotal}`;
+  const rdr = (n: number) => `Your reader · ${n} of ${readerTotal}`;
+
+  const steps: QuizQuestion[] = [
+    {
+      id: 'area', field: 'area', eyebrow: sit(1),
+      title: 'What’s weighing on you most right now?',
+      subtitle: 'Pick the one that’s been on your mind the most. Be as honest as you like; nothing here is tied to your name.',
+      options: AREAS.map((x) => ({ id: `area_${x.id}`, label: x.label, sublabel: x.sublabel, value: x.id })),
+    },
+    {
+      id: `symptom.${a.area || 'none'}`, field: 'symptom', eyebrow: sit(2),
+      title: area?.situationTitle || 'What’s been happening?',
+      subtitle: area?.situationSubtitle,
+      options: (area?.situations || []).map((x) => ({ id: `sym_${x.id}`, label: x.label, sublabel: x.sublabel || undefined, value: x.id })),
+    },
+    isGrief
+      ? {
+          id: 'duration.grief', field: 'duration', eyebrow: sit(3),
+          title: `When did you lose ${findSituation('grief', a.symptom)?.short || 'them'}?`,
+          subtitle: 'There’s no timeline for grief. This just helps us be gentle in the right way.',
+          options: GRIEF_DURATIONS.map((d) => ({ id: `dur_${d.id}`, label: d.label, value: d.id })),
+        }
+      : {
+          id: 'duration', field: 'duration', eyebrow: sit(3),
+          title: 'How long has this been on your mind?',
+          options: DURATIONS.map((d) => ({ id: `dur_${d.id}`, label: d.label, value: d.id })),
+        },
+    {
+      id: isGrief ? 'feeling.grief' : 'feeling', field: 'feeling', eyebrow: sit(4),
+      title: isGrief ? 'How are you, honestly?' : 'Which is closest to how you feel right now?',
+      subtitle: isGrief ? 'Whatever you’re feeling is allowed.' : 'Pick the one that’s most true today.',
+      options: feelingsFor(a.area).map((f) => ({ id: `feel_${f.id}`, label: f.label, sublabel: f.sublabel || undefined, value: f.id })),
+    },
+    {
+      id: `hope.${a.area || 'none'}`, field: 'hope', eyebrow: sit(5),
+      title: isGrief ? 'If you could know one thing, what would it be?' : 'If a reading could tell you one thing, what would you most want to hear?',
+      subtitle: 'Be honest with yourself. This is the question we’ll build your reading around.',
+      options: (area?.hopes || []).map((h) => ({ id: `hope_${h}`, label: HOPES[h].label, value: h })),
+    },
+    {
+      id: `card.${a.area || 'none'}`, field: 'card', kind: 'cards', eyebrow: 'Your card',
+      reflection: reflectionLine(a),
+      title: 'Draw a card for this',
+      subtitle: 'Hold your question in mind, take a breath, and choose the card you’re drawn to.',
+      options: (area?.deck || []).map((c) => ({ id: `card_${c.id}`, label: c.id, value: c.id })),
+    },
+    {
+      id: 'preferredStyles', field: 'preferredStyles', eyebrow: rdr(1),
+      title: 'How do you want a reader to talk to you?',
+      subtitle: styleSubtitle(a),
+      isMultiSelect: true, maxSelect: 2,
+      options: STYLE_OPTIONS,
+    },
+  ];
+
+  if (!isGrief) {
+    steps.push({
+      id: 'preferredPractice', field: 'preferredPractice', eyebrow: rdr(2),
+      title: 'What kind of reading feels right?',
+      subtitle: 'Not sure? Let us choose. We’ll pick what suits your situation.',
+      options: [
+        { id: 'prac_open', label: 'Whatever fits my situation best', sublabel: 'Recommended if you’re not sure', value: 'open' },
+        { id: 'prac_psychic', label: 'A psychic reading', sublabel: 'Intuitive insight, often into what another person feels', value: 'psychic' },
+        { id: 'prac_tarot', label: 'Tarot cards', sublabel: 'Cards that show the pattern and where it leads', value: 'tarot' },
+        { id: 'prac_astrology', label: 'Astrology', sublabel: 'Your chart, timing, and compatibility', value: 'astrology' },
+      ],
+    });
+  }
+
+  steps.push({
+    id: 'preferredFormat', field: 'preferredFormat', eyebrow: rdr(readerTotal),
+    title: 'Where would you feel most comfortable talking?',
+    options: [
+      { id: 'fmt_chat', label: 'Chat', sublabel: 'Type privately, and keep the transcript to reread later', value: 'chat' },
+      { id: 'fmt_phone', label: 'Phone', sublabel: 'Hear their voice; easier if you think out loud', value: 'phone' },
+      { id: 'fmt_video', label: 'Video', sublabel: 'See them face to face (Purple Garden only)', value: 'video' },
+      { id: 'fmt_open', label: 'Any is fine', sublabel: 'The widest choice of readers', value: 'no_preference' },
+    ],
+  });
+
+  return steps;
+}
+
+const AREA_FALLBACK_INTENT: Record<string, Intent> = {
+  love: 'love_relationship', dating: 'dating', breakup: 'breakup_ex', career: 'career_work',
+  direction: 'decision_making', unsure: 'general_guidance', grief: 'grief_loss',
+};
+
+/** Turn raw quiz answers into the complete UserAnswers the engine scores. */
+export function finalizeAnswers(a: Partial<UserAnswers>): UserAnswers {
+  const sit = findSituation(a.area, a.symptom);
+  const isGrief = a.area === 'grief';
+  return {
+    ...a,
+    intent: sit?.intent || (a.area ? AREA_FALLBACK_INTENT[a.area] : 'general_guidance'),
+    situationSubject: sit?.subject || 'not_sure',
+    preferredPractice: isGrief ? 'medium' : (a.preferredPractice || 'open'),
+    preferredFormat: a.preferredFormat || 'no_preference',
+    preferredStyles: a.preferredStyles || [],
+    urgency: 'no_rush',
+    budget: 'no_pref',
+  } as UserAnswers;
+}

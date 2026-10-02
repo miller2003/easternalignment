@@ -75,7 +75,7 @@ export const INTRO_OFFERS = ['kasamba', 'keen', 'purple-garden'].map(
  *  answers can cite "as of {date}". */
 export const CATALOG_LAST_VERIFIED = '2026-09-22';
 
-/** Intent → on-site guide hub section anchor (GUIDE_SECTIONS single source of
+/** Intent → on-site guide topic page /guides/<id>/ (GUIDE_SECTIONS single source of
  *  truth, mirrored here). Makes the MCP tools a *citation hub*: every answer
  *  can deep-link to the matching editorial guide cluster. */
 const INTENT_GUIDE_SECTION: Record<Intent, string> = {
@@ -93,7 +93,7 @@ const INTENT_GUIDE_SECTION: Record<Intent, string> = {
 };
 const GUIDES_HUB = 'https://easternalignment.com/guides/';
 function relatedGuideUrl(intent: Intent): string {
-  return `${GUIDES_HUB}?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=guide_${intent}#${INTENT_GUIDE_SECTION[intent]}`;
+  return `${GUIDES_HUB}${INTENT_GUIDE_SECTION[intent]}/?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=guide_${intent}`;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -815,7 +815,7 @@ export function checkRedFlags(): RedFlagCheckResult {
     red_flags: RED_FLAGS,
     verification_steps: VERIFICATION_STEPS,
     one_line_summary: 'Never pay for curse/spell removal, never accept guaranteed outcomes, never leave the platform — use the free intro window to audition first.',
-    related_guide_url: `${GUIDES_HUB}?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=red_flags#getting-started`,
+    related_guide_url: `${GUIDES_HUB}getting-started/?utm_source=chatgpt&utm_medium=mcp&utm_campaign=reader_match&utm_content=red_flags`,
     catalog_last_verified: CATALOG_LAST_VERIFIED,
     next_step_url: nextStepUrl('check_red_flags'),
   };

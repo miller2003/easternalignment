@@ -2,151 +2,809 @@
 /**
  * src/pages/match.astro
  *
- * Dedicated Situation-Based Reader Match Page for Eastern Alignment.
- * Combines high-authority editorial guidance on choosing an advisor
- * with the Apple-grade interactive matching tool.
+ * Dedicated Situation-Based Reader Match page.
+ *
+ * Layout (2026-10-02 redesign): the quiz no longer sits flat in the page.
+ * The hero carries one gold CTA; the 7-question match runs in the shared
+ * bottom-sheet overlay (ReaderMatch mode="modal" launcher="none"). The rest
+ * of the page explains what the match returns, how each answer is weighted,
+ * what it searches, and how to use the result — all numbers computed from
+ * readers.json / offers.ts at build time, never hand-written.
  */
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ReaderMatch from '../components/ReaderMatch.astro';
 import FAQ from '../components/FAQ.astro';
 import readersData from '../data/readers.json';
+import { PLATFORM_OFFERS, PLATFORM_PRIORITY, goPath, type PlatformKey } from '../lib/offers';
+import { buildWebApplication } from '../lib/toolSchema';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { auditStats } from '../lib/auditStats';
+import { webPageNode, isoMax, fmtDate, PLATFORM_ORGS, TOPIC_ENTITIES } from '../lib/seo';
+import pageMeta from '../data/page-meta.json';
 
-const totalAuditedReaders = (readersData as any[]).length;
+const SITE_URL = 'https://easternalignment.com';
+const readers = readersData as any[];
+const totalReaders = readers.length;
+
+/* ---- per-platform coverage, straight from the match dataset ---- */
+const median = (xs: number[]) => {
+  const s = [...xs].sort((a, b) => a - b);
+  return s.length ? s[Math.floor(s.length / 2)] : 0;
+};
+const PLATFORM_FORMAT_NOTE: Record<PlatformKey, string> = {
+  kasamba: 'Chat and phone. Chat sessions leave a saved transcript you can re-read later.',
+  'purple-garden': 'The only platform with live video, plus chat and phone. Most readers post an intro video.',
+  keen: 'Phone-first, with chat. Best if you think out loud and want a live back-and-forth.',
+};
+const platforms = PLATFORM_PRIORITY.map((key) => {
+  const list = readers.filter((r) => r.platform === key);
+  const rates = list.map((r) => r.pricePerMinute).filter((n: number) => Number.isFinite(n));
+  return {
+    key,
+    name: PLATFORM_OFFERS[key].name,
+    offer: PLATFORM_OFFERS[key].offer,
+    count: list.length,
+    medianRate: median(rates).toFixed(2),
+    note: PLATFORM_FORMAT_NOTE[key],
+    review: `/reviews/${key}/`,
+    go: goPath(key),
+  };
+});
+const videoCount = readers.filter((r) => (r.formats || []).includes('video')).length;
+
+/* ---- the quiz steps and the points each one carries (engine/scoring.ts).
+   weight 0 = shapes the written reading, not the ranking ---- */
+const steps = [
+  { label: 'What’s weighing on you', detail: 'A relationship, someone new, an ex, work or money, a big decision, someone you’ve lost, or something you can’t name yet.', weight: 35, note: 'Weighs the most. A reader’s documented track record on your type of question.' },
+  { label: 'What’s actually happening', detail: 'Pulling away, hot and cold, no contact, a job offer… each area has its own options.', weight: 15, note: 'Separates readers who read other people from readers who coach you.' },
+  { label: 'How long, how it feels, what you hope to hear', detail: 'Three quick taps about where you are emotionally.', weight: 0, note: 'Shapes your written reading and opening question. It never changes who ranks first.' },
+  { label: 'Draw a card', detail: 'Pick one of three face-down tarot cards for your situation.', weight: 0, note: 'Part of your reading, not the ranking.' },
+  { label: 'Reading style', detail: 'Pick up to two: straight to the point, gentle, practical, deep, or quick.', weight: 8, note: 'Matched against the styles clients actually describe in reviews.' },
+  { label: 'Reading method', detail: 'Psychic, tarot, astrology, or let us choose. Grief questions always go to mediums.', weight: 20, note: 'Exact specialty scores higher than a side practice.' },
+  { label: 'Chat, phone or video', detail: 'Or no preference.', weight: 10, note: 'Also a hard filter: readers who don’t offer your format are removed.' },
+];
+
+/* ---- browse-instead routes (existing guides only) ---- */
+const situationRoutes = [
+  { label: 'They went silent / no contact', href: '/guides/no-contact-psychic-readings-guide/' },
+  { label: 'After a breakup', href: '/guides/best-psychics-for-breakups/' },
+  { label: 'What is one person thinking?', href: '/guides/kasamba-specific-person-reading/' },
+  { label: 'Love questions with tarot', href: '/guides/best-tarot-readers-for-love/' },
+  { label: 'Career or money', href: '/guides/career-and-money-psychic-readings/' },
+  { label: 'Reaching someone who passed', href: '/guides/evidential-mediums-passed-spouse/' },
+  { label: 'My first reading ever', href: '/guides/first-psychic-reading-guide/' },
+];
 
 const matchFAQs = [
   {
-    question: "How does the Eastern Alignment Match Engine select advisors?",
-    answer: "Our system uses deterministic fit-vector scoring across 240+ independently audited reader profiles on Kasamba, Purple Garden, and Keen. We evaluate 7 specific dimensions: your primary situation (e.g., relationship drift vs. career crossroads), whose headspace you need to read, modality fit, preferred communication format, reading style (e.g., direct vs. gentle), budget, and verified client evidence. We do not use arbitrary or hallucinated AI rankings."
+    question: 'How does the match pick advisors?',
+    answer: `It scores every active advisor in our dataset (${totalReaders} profiles across Kasamba, Purple Garden and Keen) out of 100 points: situation fit 35, reading method 20, what’s actually happening 15, format 10 and style 8. The last 12 points (price and live availability) are held level for everyone until we have live availability data, so they never change the order. The scores come from our own audit notes on each reader, not from an AI guessing. The same answers always return the same shortlist.`,
   },
   {
-    question: "Why not just pick the highest-rated reader on a platform?",
-    answer: "Because popularity is not the same as situation fit. An advisor with 10,000 five-star reviews for general life-path astrology may be completely ineffective for decoding an avoidant ex-partner's silence. Matching your specific dilemma to an advisor whose documented track record proves competence in that exact scenario is what saves money and produces usable clarity."
+    question: 'Why not just book the highest-rated reader on the platform?',
+    answer: 'Because a rating measures popularity, not fit. A reader with thousands of five-star reviews for life-path astrology can be the wrong person for decoding an ex’s silence. The match ranks readers on the kind of question you’re asking, then uses ratings and review volume as supporting evidence.',
   },
   {
-    question: "How do the introductory trials (e.g., 3 free minutes, $1 trial) work?",
-    answer: "Every major platform provides a low-risk entry offer for new clients: Kasamba offers 3 free minutes with every new advisor plus 50% off; Purple Garden provides a $30 first-purchase credit; and Keen offers a $1 for 5 minutes trial. We recommend using those opening minutes as an audition — ask your focused question immediately, and end the call inside the free window if the connection feels generic."
+    question: 'How do the intro offers work, and how should I use them?',
+    answer: `Kasamba gives new clients ${PLATFORM_OFFERS.kasamba.offer} (the free minutes apply with each new advisor), Purple Garden gives ${PLATFORM_OFFERS['purple-garden'].offer}, and Keen gives ${PLATFORM_OFFERS.keen.offer}. Treat those first minutes as an audition: ask the opening question the match gives you, and end the session inside the intro window if the reader stays vague.`,
   },
   {
-    question: "What is the difference between chat, phone, and video readings?",
-    answer: "Live Chat (Kasamba) automatically saves permanent written transcripts so you can review and audit predictions weeks later. Phone readings (Keen) provide natural conversational cadence and vocal nuance. Live Video (Purple Garden) offers face-to-face visual transparency and mandatory reader intro videos. Your comfort level determines which format allows the most honest exchange."
+    question: 'Chat, phone or video: which should I choose?',
+    answer: `Chat keeps a written transcript you can check against what happens later. Phone suits people who think out loud. Video lets you see the reader and the cards, but only Purple Garden offers it, so choosing video narrows the match to ${videoCount} advisors. If you have no preference, say so; you’ll get the widest pool.`,
   },
   {
-    question: "Are my answers to the matching quiz kept private?",
-    answer: "Yes. The Eastern Alignment match engine runs entirely in your local browser using client-side JavaScript. None of your personal situation choices or answers are ever sold, stored on remote databases, or tied to your identity."
-  }
+    question: 'What happens to my answers?',
+    answer: 'The matching runs in your browser, and you never type your name, email or a description of your situation. We log anonymous usage events (which step you reached and which option you tapped) so we can see where the quiz is confusing. They aren’t tied to your identity and we don’t sell them.',
+  },
+  {
+    question: 'Does the match tell me which psychic is the most accurate?',
+    answer: 'No. Nobody can verify psychic accuracy from the outside, and we don’t put a percentage on it. The match ranks how well a reader fits your kind of question, format and style, based on our audit notes. The intro minutes are how you test the reader: ask one specific question and see whether the answer is specific and checkable.',
+  },
+  {
+    question: 'Is the reader match free, and do I need an account?',
+    answer: 'It is free and needs no account, email or description of your situation; it takes about two minutes and runs in your browser. We may earn a commission if you book through our links, which never changes who ranks first.',
+  },
+  {
+    question: 'Is the match paid placement?',
+    answer: 'No. Readers can’t buy a higher score. We do earn a commission if you book through our links, which is why every match also tells you when to skip that reader.',
+  },
 ];
 
-const webAppSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Eastern Alignment Reader Match Engine",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "All",
-  "url": "https://easternalignment.com/match/",
-  "description": "Deterministic situation-based psychic advisor match engine. Matches personal relationship, career, and spiritual questions against 240+ independently audited readers.",
-  "creator": {
-    "@type": "Organization",
-    "name": "Eastern Alignment",
-    "url": "https://easternalignment.com"
-  }
+/* ---- the short version: five rules for choosing a reader.
+   One list feeds the visible section AND the HowTo schema, so they can't drift.
+   Plain text only (schema text must not carry markup). ---- */
+const overallMedian = median(readers.map((r) => r.pricePerMinute).filter((n: number) => Number.isFinite(n)));
+const chooseRules = [
+  {
+    name: 'Start with your question, not the rating',
+    text: 'Reading what another person is thinking, coaching you through a decision and reaching someone who has died are different skills. Choose the reader who is documented as good at yours; a high rating mostly reflects seniority and review volume.',
+  },
+  {
+    name: 'Match the method to the question',
+    text: 'Tarot is good at mapping patterns and obstacles. Direct intuitive readers are blunter and quicker. A medium should be judged on one thing: details about the person who died that you recognize and did not supply.',
+  },
+  {
+    name: 'Pick the format you will be comfortable in',
+    text: `Chat leaves a transcript you can check against what happens later, phone suits people who think out loud, and video lets you see the reader (only Purple Garden offers it, so choosing video narrows the match to ${videoCount} advisors).`,
+  },
+  {
+    name: 'Judge the cost of a useful answer, not the per-minute rate',
+    text: `The median listed rate across the ${totalReaders} advisors we audited is $${overallMedian.toFixed(2)} a minute, but a focused chat reader at $4.99 a minute can tell you more in eight minutes than a slow reader at half the rate does in twenty.`,
+  },
+  {
+    name: 'Audition before you pay',
+    text: `Use the new-client minutes (Kasamba: ${PLATFORM_OFFERS.kasamba.offer}; Purple Garden: ${PLATFORM_OFFERS['purple-garden'].offer}; Keen: ${PLATFORM_OFFERS.keen.offer}) to ask one specific question with as little backstory as possible. End the session if the answers are vague, pressure you to buy more minutes, or diagnose a curse.`,
+  },
+];
+
+const modifiedISO = isoMax(pageMeta.match.updated, auditStats.lastUpdated);
+const seoTitle = 'How to Choose a Psychic: Free 2-Minute Reader Match Quiz (2026)';
+const metaDescription = `Not sure which psychic to book? Take our free 2-minute match: describe your situation and get 3 advisors from ${totalReaders} audited profiles. No sign-up.`;
+
+const pageUrl = `${SITE_URL}/match/`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    webPageNode({
+      url: pageUrl,
+      name: 'Psychic Reader Match',
+      headline: seoTitle,
+      description: metaDescription,
+      type: 'WebPage',
+      datePublished: pageMeta.match.published,
+      dateModified: modifiedISO,
+      about: [TOPIC_ENTITIES.psychic, TOPIC_ENTITIES.tarot, TOPIC_ENTITIES.mediumship, TOPIC_ENTITIES.astrology],
+      mentions: PLATFORM_ORGS,
+      speakable: ['.mt-title', '#how-to-choose .mt-rules-lede'],
+      mainEntityId: `${pageUrl}#webapp`,
+    }),
+    {
+      '@type': 'HowTo',
+      '@id': `${pageUrl}#howto`,
+      name: 'How to choose the right psychic reader',
+      description: 'Five rules for choosing an online psychic reader: start with the question, match the method, pick the format, judge the cost of a useful answer, and audition before you pay.',
+      step: chooseRules.map((r, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: r.name,
+        text: r.text,
+        url: `${pageUrl}#how-to-choose`,
+      })),
+    },
+    {
+      ...buildWebApplication({
+      name: 'Eastern Alignment Reader Match',
+      url: pageUrl,
+      description: `A free situation-first quiz that writes you a short personal reading, then matches your situation, preferred reading method, format and style against ${totalReaders} audited psychic advisor profiles on Kasamba, Purple Garden and Keen.`,
+      applicationSubCategory: 'Psychic advisor matching',
+      featureList: [
+        'Situation-based scoring across 5 weighted factors',
+        'A personal reading built from your answers, with a tarot card draw',
+        'Top 3 advisor shortlist with reasons and when-to-skip notes',
+        'Suggested opening question for your intro minutes',
+        'Runs in the browser, no sign-up',
+      ],
+    }),
+      inLanguage: 'en-US',
+      isAccessibleForFree: true,
+      datePublished: pageMeta.match.published,
+      dateModified: modifiedISO,
+      mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+    },
+  ],
 };
 ---
 
 <BaseLayout
   title="Psychic Reader Match: Find the Right Advisor for Your Situation (2026)"
-  description={`Answer 7 quick questions to match your exact dilemma with the right vetted psychic advisor across ${totalAuditedReaders}+ documented profiles on Kasamba, Purple Garden, and Keen.`}
-  jsonLd={webAppSchema}
+  description={metaDescription}
+  seoTitle={seoTitle}
+  metaDescription={metaDescription}
+  modifiedTime={modifiedISO}
+  publishedTime={pageMeta.match.published}
+  jsonLd={jsonLd}
 >
-  <!-- Page Header -->
-  <header class="match-page-hero section section--sm">
-    <div class="container container--narrow" style="text-align: center;">
-      <span class="section-eyebrow text-xs text-uppercase text-muted">Precision Matching · Documented Audits · Zero Marketing Padding</span>
-      <h1 class="hero-title" style="margin-top: var(--space-2); margin-bottom: var(--space-4);">
+  <!-- ═══ 1. HERO — the promise + one gold action ═══ -->
+  <header class="mt-hero">
+    <div class="container container--narrow mt-hero-inner">
+      <div class="mt-crumb"><Breadcrumb items={[{ label: 'Reader Match' }]} /></div>
+      <span class="mt-kicker">Free · About 2 minutes · No sign-up</span>
+      <h1 class="hero-title mt-title">
         How to Choose the Right Psychic Reader <br />
         <span class="text-gradient">for Your Exact Situation</span>
       </h1>
-      <p class="hero-subtitle text-muted" style="max-width: 660px; margin: 0 auto var(--space-6);">
-        There is no single "best" psychic reader in the abstract — only the reader whose documented method and communication style fit your specific dilemma. Use our situation-based matching tool below to bypass marketing hype and find genuine competence.
+      <p class="mt-sub">
+        No reader is the best for everyone. The right one depends on what you’re asking about,
+        and how you like to be read. Tell us what’s going on, get a short reading of your situation, and we’ll narrow
+        {totalReaders} audited advisors down to the 3 who fit.
       </p>
-      <div class="hero-meta" style="display: flex; gap: 0.5rem; justify-content: center; font-size: var(--text-xs); color: var(--color-text-muted);">
-        <span>Audited by Eastern Alignment</span>
-        <span>·</span>
-        <span>{totalAuditedReaders}+ advisor profiles indexed</span>
-        <span>·</span>
-        <span>Client-side private evaluation</span>
+
+      <div class="mt-cta-wrap">
+        <a href="#start" class="mt-cta" data-match-open data-cta-source="match-hero">
+          <span class="mt-cta-spark" aria-hidden="true">✦</span>
+          <span data-match-open-label>Find My Reader →</span>
+        </a>
+        <p class="mt-cta-retake" data-match-retake-wrap style="display: none;">
+          Want a fresh result? <button type="button" data-match-retake>Start over</button>
+        </p>
       </div>
+
+      <ul class="mt-assure" aria-label="About the match">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>
+          {totalReaders} audited advisors
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z"/></svg>
+          No sign-up, no email
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+          Readers can’t pay to rank
+        </li>
+      </ul>
+      <p class="mt-updated">
+        Advisor data and scoring last updated <time datetime={modifiedISO}>{fmtDate(modifiedISO)}</time>
+      </p>
     </div>
   </header>
 
-  <!-- Interactive Match Tool Section -->
-  <ReaderMatch
-    id="match-tool"
-    eyebrow="Interactive Decision Engine"
-    title="Match Your Situation with a Vetted Advisor"
-    subtitle="Select what you are dealing with below. The matching algorithm evaluates your dilemma across 240+ documented advisor track records."
-  />
-
-  <!-- Editorial Context & Framework -->
-  <section class="match-editorial section section--alt">
-    <div class="container container--narrow prose">
-      <h2>Why Generic "Top 10 Psychic" Lists Usually Disappoint</h2>
-      <p>
-        The most common mistake new seekers make is booking the reader with the most reviews or the highest rating on a platform's homepage. On large networks like Kasamba, Purple Garden, and Keen, popularity is often a function of seniority and marketing visibility rather than specific situational skill.
-      </p>
-      <p>
-        In our multi-year review series covering more than two hundred readers, we discovered that reading accuracy is deeply compartmentalized:
-      </p>
-      <ul>
-        <li>
-          <strong>Third-Person Insight vs. Internal Coaching:</strong> If you want to know what an ex-partner is thinking during no-contact, you need an intuitive who specializes in <em>reading the other person</em>. Booking a life coach or empowerment card reader for that question will only result in generic advice on self-love.
-        </li>
-        <li>
-          <strong>Modality Trade-offs:</strong> Tarot excels at revealing subconscious dynamics, hidden obstacles, and relational roadmaps. Clairvoyant psychic reading excels at raw, unfiltered conversational candor. Mediumship has a single standard of evidence: recognizable memories of departed souls.
-        </li>
-        <li>
-          <strong>Communication Density:</strong> A fast, structured chat reader who types at 80 words per minute will deliver more actionable insights in an 8-minute session ($40) than a slow, rambling reader charging half that rate. Density, not per-minute sticker price, is the true cost of a reading.
-        </li>
-      </ul>
-
-      <h2>The 3-Minute Audition Protocol</h2>
-      <p>
-        We strongly advocate using introductory trials — such as Kasamba's 3 free minutes or Keen's dollar trial — as an unannounced audition. Here is our tested protocol:
-      </p>
-      <ol>
-        <li>
-          <strong>Formulate One Specific Question:</strong> Arrive with a clear focal point (e.g., <em>"What is the primary factor preventing [Name] from communicating honestly?"</em>). Avoid vague inquiries like "what do you see in my future?"
-        </li>
-        <li>
-          <strong>Offer Minimal Backstory:</strong> Share only names and birth dates (if requested). Do not feed the reader your suspicions or emotional theories.
-        </li>
-        <li>
-          <strong>Demand Unprompted Specificity:</strong> A genuine connection will produce recognizable emotional realities or specific behavioral details within 120 seconds. If the reader spends the first three minutes asking leading questions or making universally true statements, end the session immediately.
-        </li>
+  <!-- ═══ 1b. THE SHORT VERSION — five rules (also the HowTo schema) ═══ -->
+  <section class="section mt-section mt-section--tight" id="how-to-choose">
+    <div class="container container--narrow">
+      <header class="mt-head">
+        <p class="mt-eyebrow">The short version</p>
+        <h2 class="mt-h2">How to choose a psychic reader: five rules</h2>
+        <p class="mt-desc mt-rules-lede">
+          Prefer to decide without the quiz? These are the rules the match is built on, from our testing on
+          Kasamba, Purple Garden and Keen.
+        </p>
+      </header>
+      <ol class="mt-protocol mt-rules">
+        {chooseRules.map((r) => (
+          <li>
+            <h3>{r.name}</h3>
+            <p>{r.text}</p>
+          </li>
+        ))}
       </ol>
+    </div>
+  </section>
 
-      <div class="match-editorial-cta" style="margin-top: var(--space-8); text-align: center;">
-        <a href="#match-tool" class="btn btn--primary">Take the Match Quiz Above ↑</a>
+  <!-- ═══ 2. WHAT YOU GET — set expectations for the result screen ═══ -->
+  <section class="section mt-section">
+    <div class="container">
+      <header class="mt-head">
+        <p class="mt-eyebrow">What you’ll get</p>
+        <h2 class="mt-h2">A shortlist you can act on in the next ten minutes</h2>
+      </header>
+      <div class="mt-gets">
+        <article class="mt-get">
+          <span class="mt-get-num">01</span>
+          <h3>A read on your situation</h3>
+          <p>The core dynamic in plain words, what’s already clear, and what a reading can actually help with.</p>
+        </article>
+        <article class="mt-get mt-get--feature">
+          <span class="mt-get-num">02</span>
+          <h3>Three advisors, ranked</h3>
+          <p>Each with a fit score, the reasons they made the list, their rate and intro offer, and <strong>when to skip them</strong>.</p>
+        </article>
+        <article class="mt-get">
+          <span class="mt-get-num">03</span>
+          <h3>Your opening question</h3>
+          <p>One sentence to copy into the intro minutes, so you can tell within two minutes whether the reader is any good.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="section">
+  <!-- ═══ 3. HOW IT WORKS — the quiz steps and their weights ═══ -->
+  <section class="section section--alt mt-section">
     <div class="container container--narrow">
-      <FAQ items={matchFAQs} title="Frequently Asked Questions About Reader Matching" />
+      <header class="mt-head">
+        <p class="mt-eyebrow">How the match works</p>
+        <h2 class="mt-h2">Your situation first, then 100 points</h2>
+        <p class="mt-desc">
+          Every advisor is scored out of 100. The bar shows how many points each answer controls,
+          so you can see why your situation matters more than anything else.
+        </p>
+      </header>
+      <ol class="mt-steps">
+        {steps.map((s, i) => (
+          <li class="mt-step">
+            <span class="mt-step-n">{i + 1}</span>
+            <div class="mt-step-body">
+              <div class="mt-step-top">
+                <h3>{s.label}</h3>
+                <span class="mt-step-pts">{s.weight ? `${s.weight} pts` : "Your reading"}</span>
+              </div>
+              <p class="mt-step-detail">{s.detail}</p>
+              {s.weight > 0 && <div class="mt-bar" aria-hidden="true"><span style={`width: ${(s.weight / 35) * 100}%`}></span></div>}
+              <p class="mt-step-note">{s.note}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <div class="mt-inline-cta">
+        <a href="#start" class="mt-cta mt-cta--sm" data-match-open data-cta-source="match-howitworks">
+          <span data-match-open-label>Start My Reading →</span>
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- ═══ 4. COVERAGE — what the match actually searches ═══ -->
+  <section class="section mt-section">
+    <div class="container">
+      <header class="mt-head">
+        <p class="mt-eyebrow">What the match searches</p>
+        <h2 class="mt-h2">{totalReaders} advisors on three platforms we’ve tested</h2>
+        <p class="mt-desc">
+          Every profile has been through our review. Your format answer decides which platforms are in play.
+        </p>
+      </header>
+      <div class="mt-plats">
+        {platforms.map((p) => (
+          <article class="mt-plat">
+            <div class="mt-plat-top">
+              <h3>{p.name}</h3>
+              <span class="mt-plat-count"><strong>{p.count}</strong> advisors</span>
+            </div>
+            <p class="mt-plat-note">{p.note}</p>
+            <dl class="mt-plat-facts">
+              <div><dt>Median rate</dt><dd>${p.medianRate}/min</dd></div>
+              <div><dt>New-client offer</dt><dd>{p.offer}</dd></div>
+            </dl>
+            <a href={p.review} class="mt-plat-link">Read our {p.name} review →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 5. EDITORIAL — why rating ≠ fit ═══ -->
+  <section class="section section--alt mt-section">
+    <div class="container container--narrow prose mt-prose">
+      <h2>Why the top-rated reader is often the wrong one</h2>
+      <p>
+        Most people book the reader at the top of the platform’s homepage. On Kasamba, Purple Garden
+        and Keen, that spot mostly reflects seniority and review volume. It says little about whether
+        the reader is any good with your kind of question. In our reviews, skill turned out to be
+        narrow in three ways:
+      </p>
+      <ul>
+        <li>
+          <strong>Reading another person vs. coaching you.</strong> To find out what an ex is
+          thinking during no contact, you need a reader who reads the other person. A coaching-style
+          reader will answer with advice on self-love, however good they are at it.
+        </li>
+        <li>
+          <strong>The method has to suit the question.</strong> Tarot is good at mapping patterns and
+          obstacles. Direct intuitive readers are blunter and quicker. Mediumship should be judged on
+          one thing: details about the person who died that you can recognize.
+        </li>
+        <li>
+          <strong>Pace matters more than price per minute.</strong> A focused chat reader at $4.99/min
+          can tell you more in eight minutes than a slow reader at half the rate tells you in twenty.
+          Judge the total cost of a useful answer, not the per-minute rate.
+        </li>
+      </ul>
+      <p>
+        The match is built around those three points, which is why it asks about your situation and
+        whose head you need read before it asks about price.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ 6. AFTER THE MATCH — the audition protocol ═══ -->
+  <section class="section mt-section">
+    <div class="container container--narrow">
+      <header class="mt-head">
+        <p class="mt-eyebrow">After you get your matches</p>
+        <h2 class="mt-h2">Use the intro minutes as an audition</h2>
+        <p class="mt-desc">
+          Every platform gives new clients a cheap or free start. Here’s how we use it in our own testing.
+        </p>
+      </header>
+      <ol class="mt-protocol">
+        <li>
+          <h3>Lead with one specific question</h3>
+          <p>Use the opening question from your results, or write your own, e.g. <em>“What’s really stopping him from being honest with me?”</em> Skip “what do you see in my future?”</p>
+        </li>
+        <li>
+          <h3>Give as little backstory as possible</h3>
+          <p>A first name and, if asked, a birth date. Don’t hint at what you suspect. You want to see what the reader picks up without being told.</p>
+        </li>
+        <li>
+          <h3>Expect something specific within two minutes</h3>
+          <p>A good connection produces details you recognize. If you get leading questions or lines that would fit anyone, end the session while you’re still in the intro window.</p>
+        </li>
+      </ol>
+      <div class="mt-flags">
+        <p class="mt-flags-title">End the session if you hear:</p>
+        <ul>
+          <li>“There’s a curse or dark energy on you” followed by an offer to remove it</li>
+          <li>Pressure to buy more minutes before you’ve heard anything specific</li>
+          <li>Guaranteed outcomes or exact dates offered as certainties</li>
+        </ul>
+        <a href="/red-flags/" class="mt-flags-link">See the full red-flags guide →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 7. BROWSE INSTEAD — situation guides ═══ -->
+  <section class="section section--alt mt-section">
+    <div class="container container--narrow">
+      <header class="mt-head">
+        <p class="mt-eyebrow">Prefer to read first?</p>
+        <h2 class="mt-h2">Start from your situation</h2>
+        <p class="mt-desc">Each guide names the readers we’d book for that question, and the ones we wouldn’t.</p>
+      </header>
+      <div class="mt-routes">
+        {situationRoutes.map((r) => (
+          <a href={r.href} class="mt-route">
+            <span>{r.label}</span>
+            <span class="mt-route-go" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 8. FAQ ═══ -->
+  <section class="section mt-section">
+    <div class="container container--narrow">
+      <FAQ items={matchFAQs} title="Questions about the reader match" />
+    </div>
+  </section>
+
+  <!-- ═══ 9. CLOSING CTA ═══ -->
+  <section class="mt-close">
+    <div class="container container--narrow mt-close-inner">
+      <h2 class="mt-close-title">Find the 3 readers who fit your situation</h2>
+      <p class="mt-close-sub">About 2 minutes. You get a short reading of your situation, an opening question, and reasons to skip each reader too.</p>
+      <a href="#start" class="mt-cta" data-match-open data-cta-source="match-close">
+        <span class="mt-cta-spark" aria-hidden="true">✦</span>
+        <span data-match-open-label>Find My Reader →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Quiz runs in the shared bottom-sheet overlay; no visible launch card -->
+  <ReaderMatch mode="modal" launcher="none" />
 </BaseLayout>
 
 <style>
-  .match-page-hero {
-    padding-top: var(--space-12);
-    padding-bottom: var(--space-6);
+  /* ---------- gold CTA ---------- */
+  .mt-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 58px;
+    padding: 0 2.4rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 1.06rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #FFF8E7 !important;
+    text-decoration: none !important;
+    background: linear-gradient(180deg, #B98A2E 0%, #8A651A 55%, #6B4E0F 100%);
+    border: 1px solid rgba(107, 78, 15, 0.55);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 236, 190, 0.45),
+      0 0 0 5px rgba(184, 147, 58, 0.12),
+      0 10px 28px rgba(107, 78, 15, 0.32);
+    overflow: hidden;
+    isolation: isolate;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* slow sheen sweep — draws the eye once the page settles */
+  .mt-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 240, 200, 0.38) 48%, transparent 66%);
+    transform: translateX(-120%);
+    animation: mt-sheen 4.8s ease-in-out 1.2s infinite;
+  }
+  @keyframes mt-sheen {
+    0%, 62% { transform: translateX(-120%); }
+    100% { transform: translateX(120%); }
+  }
+  .mt-cta:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 236, 190, 0.5),
+      0 0 0 6px rgba(184, 147, 58, 0.18),
+      0 14px 34px rgba(107, 78, 15, 0.38);
+  }
+  .mt-cta:active { transform: translateY(0) scale(0.985); }
+  .mt-cta:focus-visible { outline: 2px solid #6B4E0F; outline-offset: 4px; }
+  .mt-cta-spark { font-size: 0.95rem; opacity: 0.9; }
+  .mt-cta--sm {
+    min-height: 50px;
+    padding: 0 1.9rem;
+    font-size: 0.98rem;
+    box-shadow: inset 0 1px 0 rgba(255, 236, 190, 0.45), 0 8px 22px rgba(107, 78, 15, 0.26);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mt-cta::after { animation: none; display: none; }
   }
 
-  .match-editorial {
-    padding-top: var(--space-12);
-    padding-bottom: var(--space-12);
+  /* ---------- hero ---------- */
+  .mt-hero {
+    padding: var(--space-12) 0 var(--space-12);
+    text-align: center;
+    background:
+      radial-gradient(ellipse 60% 55% at 50% 0%, rgba(196, 149, 106, 0.14), transparent 70%),
+      var(--color-bg);
+  }
+  .mt-kicker {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: rgba(196, 149, 106, 0.12);
+    border: 1px solid rgba(139, 111, 78, 0.22);
+    padding: 0.4rem 0.95rem;
+    border-radius: 999px;
+  }
+  .mt-title { margin: var(--space-4) 0 var(--space-5); }
+  .mt-sub {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: var(--text-base);
+    line-height: 1.65;
+    color: var(--color-text-muted);
+  }
+  .mt-cta-wrap { margin-top: var(--space-8); }
+  .mt-cta-retake {
+    margin: var(--space-3) 0 0;
+    font-size: 0.86rem;
+    color: var(--color-text-muted);
+  }
+  .mt-cta-retake button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+  }
+  .mt-assure {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-6) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2) var(--space-6);
+    font-size: 0.84rem;
+    color: var(--color-text-muted);
+  }
+  .mt-assure li { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .mt-assure svg { width: 15px; height: 15px; color: var(--color-primary); flex: none; }
+
+  /* ---------- shared section heads ---------- */
+  .mt-section { padding: var(--space-16) 0; }
+  .mt-section--tight { padding: var(--space-12) 0 var(--space-8); }
+  .mt-crumb { display: flex; justify-content: center; margin-bottom: var(--space-4); }
+  .mt-updated {
+    margin: var(--space-4) 0 0;
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+  }
+  .mt-head { text-align: center; max-width: 640px; margin: 0 auto var(--space-10); }
+  .mt-eyebrow {
+    margin: 0 0 var(--space-2);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+  .mt-h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    line-height: 1.2;
+    color: var(--color-text);
+    margin: 0;
+  }
+  .mt-desc { margin: var(--space-3) 0 0; color: var(--color-text-muted); line-height: 1.6; }
+
+  /* ---------- what you get ---------- */
+  .mt-gets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .mt-get {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+  .mt-get--feature {
+    border-color: rgba(139, 111, 78, 0.38);
+    box-shadow: 0 0 0 4px rgba(139, 111, 78, 0.05), 0 14px 34px rgba(45, 42, 38, 0.08);
+  }
+  .mt-get-num {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-accent);
+  }
+  .mt-get h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin: var(--space-2) 0 var(--space-2);
+    color: var(--color-text);
+  }
+  .mt-get p { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--color-text-muted); }
+  .mt-get strong { color: var(--color-text); }
+
+  /* ---------- 7 steps ---------- */
+  .mt-steps { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); }
+  .mt-step {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+  }
+  .mt-step-n {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #FFF8E7;
+    background: linear-gradient(180deg, #B98A2E, #6B4E0F);
+  }
+  .mt-step-top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); }
+  .mt-step h3 { margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--color-text); }
+  .mt-step-pts { font-size: 0.82rem; font-weight: 700; color: var(--color-primary); white-space: nowrap; }
+  .mt-step-detail { margin: var(--space-1) 0 var(--space-3); font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.5; }
+  .mt-bar { height: 6px; border-radius: 3px; background: var(--color-border-light); overflow: hidden; }
+  .mt-bar span { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #C4956A, #8A651A); }
+  .mt-step-note { margin: var(--space-2) 0 0; font-size: 0.84rem; color: var(--color-text-light); line-height: 1.5; }
+  .mt-inline-cta { text-align: center; margin-top: var(--space-8); }
+
+  /* ---------- platforms ---------- */
+  .mt-plats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .mt-plat {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+  .mt-plat-top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-2); }
+  .mt-plat h3 { margin: 0; font-family: var(--font-heading); font-size: 1.3rem; color: var(--color-text); }
+  .mt-plat-count { font-size: 0.85rem; color: var(--color-text-muted); white-space: nowrap; }
+  .mt-plat-count strong { color: var(--color-primary); font-size: 1.05rem; }
+  .mt-plat-note { margin: var(--space-3) 0 var(--space-4); font-size: 0.93rem; line-height: 1.55; color: var(--color-text-muted); }
+  .mt-plat-facts { margin: 0 0 var(--space-4); display: grid; gap: var(--space-2); }
+  .mt-plat-facts div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--color-border-light);
+    font-size: 0.88rem;
+  }
+  .mt-plat-facts dt { color: var(--color-text-muted); }
+  .mt-plat-facts dd { margin: 0; font-weight: 600; color: var(--color-text); text-align: right; }
+  .mt-plat-link { margin-top: auto; font-size: 0.9rem; font-weight: 600; color: var(--color-primary); text-decoration: none; }
+  .mt-plat-link:hover { text-decoration: underline; }
+
+  /* ---------- editorial ---------- */
+  .mt-prose h2 { margin-top: 0; }
+
+  /* ---------- protocol ---------- */
+  .mt-protocol { list-style: none; counter-reset: mt; padding: 0; margin: 0; display: grid; gap: var(--space-5); }
+  .mt-protocol li {
+    counter-increment: mt;
+    position: relative;
+    padding-left: 3.2rem;
+  }
+  .mt-protocol li::before {
+    content: counter(mt);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-accent);
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mt-protocol h3 { margin: 0 0 var(--space-1); font-size: 1.08rem; font-weight: 700; color: var(--color-text); }
+  .mt-protocol p { margin: 0; color: var(--color-text-muted); line-height: 1.6; }
+  .mt-flags {
+    margin-top: var(--space-8);
+    background: var(--color-error-bg);
+    border: 1px solid rgba(184, 92, 74, 0.22);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5) var(--space-6);
+  }
+  .mt-flags-title { margin: 0 0 var(--space-2); font-weight: 700; color: var(--color-error); }
+  .mt-flags ul { margin: 0 0 var(--space-3); padding-left: 1.2rem; color: var(--color-text); line-height: 1.7; font-size: 0.95rem; }
+  .mt-flags-link { font-size: 0.9rem; font-weight: 600; color: var(--color-error); }
+
+  /* ---------- routes ---------- */
+  .mt-routes { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .mt-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+  .mt-route:hover { border-color: var(--color-accent); transform: translateY(-1px); }
+  .mt-route-go { color: var(--color-primary); }
+
+  /* ---------- closing band ---------- */
+  .mt-close {
+    padding: var(--space-16) 0;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 70% 80% at 50% 100%, rgba(196, 149, 106, 0.18), transparent 70%),
+      var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+  }
+  .mt-close-title { font-family: var(--font-heading); font-size: var(--text-2xl); margin: 0 0 var(--space-3); color: var(--color-text); }
+  .mt-close-sub { margin: 0 auto var(--space-6); max-width: 520px; color: var(--color-text-muted); line-height: 1.6; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px) {
+    .mt-gets, .mt-plats { grid-template-columns: 1fr; max-width: 560px; }
+  }
+  @media (max-width: 600px) {
+    .mt-hero { padding: var(--space-8) 0 var(--space-10); }
+    .mt-title br { display: none; }
+    .mt-section { padding: var(--space-12) 0; }
+    .mt-cta { width: 100%; max-width: 360px; padding: 0 1.5rem; }
+    .mt-routes { grid-template-columns: 1fr; }
+    .mt-step { grid-template-columns: 32px 1fr; gap: var(--space-3); padding: var(--space-4); }
+    .mt-step-n { width: 30px; height: 30px; font-size: 0.82rem; }
   }
 </style>

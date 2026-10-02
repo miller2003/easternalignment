@@ -78,6 +78,13 @@ interface Props {
    */
   hideDisclosure?: boolean;
   /**
+   * ISO dates (YYYY-MM-DD) emitted as og:updated_time / article:modified_time /
+   * article:published_time. Pages pass their real content dates — never the build
+   * date — so freshness signals stay honest.
+   */
+  modifiedTime?: string;
+  publishedTime?: string;
+  /**
    * Renders a compact footer instead of the full 6-column site map.
    * Used by /match: a tool page should not carry the entire site's
    * navigation under a quiz result — it distracts from the reading.
@@ -103,6 +110,8 @@ const {
   noCta = false,
   hideDisclosure = false,
   bareFooter = false,
+  modifiedTime,
+  publishedTime,
 } = Astro.props;
 
 const SITE_NAME = 'Eastern Alignment';
@@ -164,6 +173,23 @@ const organizationSchema = {
   },
   "image": `${SITE_URL}/logo.jpg`,
   "description": "Independent review site for online psychic reading platforms — Kasamba, Purple Garden, and Keen — tested by real users.",
+  "founder": { "@id": "https://easternalignment.com/#sarah" },
+  // Trust documents, machine-readable: how we test, and how the site is funded.
+  "publishingPrinciples": `${SITE_URL}/methodology/`,
+  "ownershipFundingInfo": `${SITE_URL}/disclosure/`,
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "editorial",
+    "email": "sarah@easternalignment.com",
+    "availableLanguage": ["English", "Spanish"],
+  },
+  "knowsAbout": [
+    "Online psychic reading platforms",
+    "Psychic reading prices and free-minute offers",
+    "Kasamba", "Purple Garden", "Keen",
+    "Tarot", "Mediumship", "Astrology",
+    "Consumer protection for psychic services",
+  ],
   // TODO: add real social profile URLs here to unlock the Google Knowledge Panel.
   // "sameAs": ["https://www.facebook.com/...", "https://www.instagram.com/...", "..."],
 };
@@ -176,7 +202,10 @@ const personSchema = {
   "url": `${SITE_URL}/about/`,
   "image": `${SITE_URL}/sarah-avatar.jpg`,
   "jobTitle": "Reviewer & Researcher",
+  "description": "Founder and lead reviewer of Eastern Alignment. Has studied astrology, tarot, BaZi and feng shui since age 21 and spent three years booking online psychic readings as an ordinary paying customer to test platforms and advisors.",
+  "knowsAbout": ["Online psychic reading platforms", "Tarot", "Astrology", "BaZi", "Feng shui", "Psychic reading prices"],
   "worksFor": { "@id": "https://easternalignment.com/#organization" },
+  "mainEntityOfPage": `${SITE_URL}/about/`,
 };
 ---
 
@@ -195,7 +224,11 @@ const personSchema = {
     <title>{fullTitle}</title>
     <meta name="description" content={metaDesc} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <!-- max-snippet:-1 / max-image-preview:large / max-video-preview:-1 explicitly allow
+         Google (incl. AI Overviews) and Bing (incl. Copilot) to quote as much of the page
+         as they like and to show large image previews. -->
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
+    <meta name="author" content="Sarah, Eastern Alignment" />
 
     <!-- hreflang cluster -->
     <link rel="alternate" hreflang="en" href={hreflangSelf} />
@@ -246,6 +279,9 @@ const personSchema = {
     <meta property="og:image:alt" content={metaDesc.slice(0, 100)} />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:locale" content="en_US" />
+    {modifiedTime && <meta property="og:updated_time" content={modifiedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,6 +299,7 @@ const personSchema = {
     {customSchema && customSchema.trim() && (
       <script type="application/ld+json" set:html={customSchema} />
     )}
+    <slot name="head" />
     <!-- Agent Discovery link tags (2026-09-13) -->
     <link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
     <link rel="service-desc" type="application/linkset+json" href="/.well-known/api-catalog" />

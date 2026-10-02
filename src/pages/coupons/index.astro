@@ -1,22 +1,68 @@
 ---
 /**
- * Coupons & Free Offers — /coupons/
+ * Psychic Coupons, Promo Codes & Free Offers — /coupons/
  *
- * A dedicated deals landing page:
- *   1. Hero with the three platform welcome offers surfaced up top.
- *   2. Three detailed platform "offer cards" (the canonical PLATFORM_OFFERS).
- *   3. Scrolling down: individual reader bonuses, grouped by platform, each
- *      reader rendered with the existing ReaderCard (avatar, rating, their
- *      specific free offer, Book + Full Review CTAs).
+ * SEO architecture (2026-10-02 rebuild)
+ * ─────────────────────────────────────
+ * Target intent: "psychic coupon / promo code / discount / free minutes" and the
+ * brand + modifier long tail ("kasamba promo code", "keen 5 minutes for $1",
+ * "purple garden 30free", "tarot reading discount", "free psychic reading"…).
+ * SERP reality: the head terms are held by coupon aggregators and affiliate
+ * roundups. What they all lack — and what we can win on — is (a) the offer
+ * TERMS (what counts, what doesn't, who qualifies), (b) honest "no code needed"
+ * answers, (c) a decision layer (which offer for which reading type) and
+ * (d) real freshness + verification signals.
  *
- * All offer copy + links come from src/lib/offers.ts (single source of truth),
- * so this page can never drift from the rest of the site's CTAs.
+ * Page order (answer-first, then depth):
+ *   1. H1 + quick-answer box        → featured-snippet / AI-overview target
+ *   2. At-a-glance comparison table → table snippet
+ *   3. Three offer cards            → the conversion block (unchanged component CSS)
+ *   4. How to claim                 → HowTo-style steps
+ *   5. One H2 per platform          → brand + "coupon / promo code" long tail
+ *   6. Offers by reading type       → tarot / love / medium / astrology / career…
+ *   7. Free-reading reality check   → "free psychic reading" intent
+ *   8. Savings playbook + "why coupon-site codes fail" + other-site checklist
+ *   9. Per-reader bonuses (top N per platform, link to full roster)
+ *  10. FAQ (FAQPage schema), update log, disclosure
+ *
+ * Single sources of truth — nothing below invents an offer:
+ *   · offer copy / links     → src/lib/offers.ts
+ *   · pricing / ratings      → each platform review's frontmatter
+ *   · page date + verify date→ src/data/coupons-meta.json (also feeds the sitemap <lastmod>)
+ *   · reader cards           → src/content/readers frontmatter
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import FAQ from '../../components/FAQ.astro';
 import ReaderCard from '../../components/ReaderCard.astro';
 import { PLATFORM_OFFERS, PLATFORM_PRIORITY, goPath, platformLogo } from '../../lib/offers';
+import couponsMeta from '../../data/coupons-meta.json';
 
-/* Load every reader across the three platforms (content/readers/<platform>/*.md). */
+const SITE = 'https://easternalignment.com';
+const PAGE_URL = `${SITE}/coupons/`;
+
+/* ───────── dates (shown on page AND in schema) ───────── */
+const fmtDate = (iso: string) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+  });
+const updatedISO: string = couponsMeta.updated;
+const verifiedISO: string = couponsMeta.verified;
+const updatedLabel = fmtDate(updatedISO);
+const verifiedLabel = fmtDate(verifiedISO);
+const verifiedMonthYear = new Date(`${verifiedISO}T12:00:00Z`).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', timeZone: 'UTC',
+});
+
+/* ───────── platform review frontmatter (pricing / rating) ───────── */
+const reviewModules = import.meta.glob('../../content/reviews/*.md', { eager: true });
+const reviewFM: Record<string, any> = {};
+for (const [p, mod] of Object.entries(reviewModules) as [string, any][]) {
+  const slug = p.split('/').pop()?.replace('.md', '') || '';
+  reviewFM[slug] = mod.frontmatter || {};
+}
+
+/* ───────── readers (content/readers/<platform>/*.md) ───────── */
 const readerModules = import.meta.glob('../../content/readers/**/*.md', { eager: true });
 const allReaders = Object.entries(readerModules)
   .map(([path, mod]: [string, any]) => {
@@ -27,7 +73,6 @@ const allReaders = Object.entries(readerModules)
   })
   .filter((r) => r.platform && ['kasamba', 'keen', 'purple-garden'].includes(r.platform) && r.rating);
 
-/* Group by platform, sorted by rating desc within each group. */
 const readersByPlatform: Record<string, any[]> = { kasamba: [], 'purple-garden': [], keen: [] };
 for (const r of allReaders) {
   if (readersByPlatform[r.platform]) readersByPlatform[r.platform].push(r);
@@ -35,46 +80,397 @@ for (const r of allReaders) {
 for (const k of Object.keys(readersByPlatform)) {
   readersByPlatform[k].sort((a, b) => (b.rating || 0) - (a.rating || 0));
 }
-
+/* Show the top N per platform here; the full roster lives on each platform hub.
+   162 cards on one page diluted the topical focus and bloated the DOM/LCP. */
+const READERS_SHOWN = 9;
 const totalReaders = allReaders.length;
-const totalReviewed = Object.values(readersByPlatform).reduce((sum, arr) => sum + (arr as any[]).length, 0);
 const editorChoice = PLATFORM_PRIORITY[0]; // kasamba
 
-const breadcrumbSchema = {
+const price = (k: string) => reviewFM[k]?.pricing || '';
+const rate = (k: string) => reviewFM[k]?.rating;
+
+/* ───────── comparison table (at-a-glance) ───────── */
+const glance = [
+  {
+    key: 'kasamba',
+    code: 'None — applied through our link',
+    best: 'Love & relationship chat readings; auditioning several advisors',
+    guarantee: 'Account credit up to $50 on a first session with a new advisor',
+  },
+  {
+    key: 'purple-garden',
+    code: 'Web only: 30free if the credit is not applied automatically',
+    best: 'Video readings and tarot; mobile-first users',
+    guarantee: 'Support credits your account balance (no card refunds)',
+  },
+  {
+    key: 'keen',
+    code: 'None — applied at checkout',
+    best: 'Phone readings; astrology & mediumship variety; a $1 test drive',
+    guarantee: 'Up to $25 account credit if you ask within 72 hours',
+  },
+] as const;
+
+/* ───────── offers by reading type ───────── */
+const byType = [
+  {
+    type: 'Love, relationship & “does he like me” readings',
+    pick: 'kasamba',
+    why: 'Free minutes with every new advisor let you audition several relationship specialists before paying.',
+    href: '/guides/best-love-psychics-kasamba-ranked/',
+    link: 'Best love psychics on Kasamba',
+  },
+  {
+    type: 'Breakup, ex-recovery & no-contact readings',
+    pick: 'kasamba',
+    why: 'Chat transcripts are saved, so you can re-read a timeline later instead of relying on memory.',
+    href: '/guides/best-psychics-for-breakups/',
+    link: 'Best psychics for breakups',
+  },
+  {
+    type: 'Tarot reading discount (love or general)',
+    pick: 'purple-garden',
+    why: 'The $30 credit covers a first session, and 60-second video bios show how a tarot reader works before you book.',
+    href: '/guides/best-tarot-readers-for-love/',
+    link: 'Best tarot readers for love',
+  },
+  {
+    type: 'Medium readings & connecting with a loved one',
+    pick: 'keen',
+    why: 'Keen’s roster covers the broadest range of disciplines in our review, mediumship included, and $1 for 5 minutes is a cheap first test.',
+    href: '/guides/evidential-mediums-passed-spouse/',
+    link: 'Evidential mediums guide',
+  },
+  {
+    type: 'Astrology & zodiac compatibility readings',
+    pick: 'keen',
+    why: 'Astrology is part of Keen’s broad discipline range; start with the $1 intro and one focused question.',
+    href: '/guides/zodiac-compatibility-psychic-readings/',
+    link: 'Zodiac compatibility readings',
+  },
+  {
+    type: 'Career & money readings',
+    pick: 'kasamba',
+    why: 'Short free-minute auditions suit practical, single-question topics like a job decision.',
+    href: '/guides/career-and-money-psychic-readings/',
+    link: 'Career & money psychic readings',
+  },
+  {
+    type: 'Twin flame & soulmate readings',
+    pick: 'purple-garden',
+    why: 'Video bios and the public “Journeys” track-record feed help you filter for specific, dated claims.',
+    href: '/guides/best-twin-flame-psychics-online/',
+    link: 'Best twin flame psychics',
+  },
+  {
+    type: 'The cheapest way to try a reading at all',
+    pick: 'keen',
+    why: 'Your first 5 minutes cost $1. Purple Garden chat starting near $0.99/min is the budget alternative.',
+    href: '/guides/cheap-love-psychics-online/',
+    link: 'Cheap psychic readings that are worth it',
+  },
+] as const;
+
+/* ───────── FAQ (also emitted as FAQPage JSON-LD by the FAQ component) ───────── */
+const faqItems = [
+  {
+    question: 'Is there a Kasamba promo code?',
+    answer:
+      'You do not need one. Kasamba’s new-client offer — 3 free minutes with each new advisor plus 50% off your first paid session — is attached to your account when you sign up through our promotional link. If a signup screen ever asks for a code, use the one shown on that screen. Be wary of random “Kasamba coupon codes” from coupon aggregators: they are usually expired or describe a different promotion. Details are in the <a href="#kasamba-coupon">Kasamba coupon section</a> above and in our <a href="/guides/kasamba-3-free-minutes-guide/">Kasamba 3 free minutes guide</a>.',
+  },
+  {
+    question: 'Does Kasamba really give 3 free minutes with every advisor?',
+    answer:
+      'Kasamba states that new clients get three free minutes with each psychic who is new to them, which is why it is the best platform for auditioning several readers. The free minutes are chat minutes and apply to new accounts only. Promotions can change, so confirm the offer on the screen before you start a session.',
+  },
+  {
+    question: 'Can I combine Kasamba’s free minutes with the 50% off?',
+    answer:
+      'Yes — they are designed to work in sequence. The free minutes cover the opening of a session with a new advisor, and the 50% discount applies to your first paid session afterwards. The discount is a one-time new-client offer, not a recurring one. Separate coupon-site codes generally cannot be stacked on top of a welcome offer.',
+  },
+  {
+    question: 'What is the best Keen promo code or coupon for new customers?',
+    answer:
+      'Keen’s headline new-client offer is your first 5 minutes for $1. It applies to your first session on a new account and is not a recurring discount; after the intro minutes you pay the advisor’s regular per-minute rate. Some coupon sites advertise other Keen intro bundles — check the checkout screen to see which one actually applies to your account before you pay.',
+  },
+  {
+    question: 'Does Purple Garden have a coupon code?',
+    answer:
+      'Yes, sort of. The $30 free credit is applied automatically in the app after a qualifying first purchase. On the website, if the credit is not applied after you register, enter the promo code <strong>30free</strong>. It is a one-time first-purchase bonus. See our <a href="/guides/purple-garden-30-credit-guide/">Purple Garden $30 credit guide</a> for what it covers.',
+  },
+  {
+    question: 'Is the Purple Garden $30 credit actually free?',
+    answer:
+      'It is a bonus, not a no-strings trial. You make a small first purchase (about $10 when we last checked — confirm the current minimum at checkout) and Purple Garden adds $30 of credit to your account. The credit is usable toward readings, not withdrawable as cash.',
+  },
+  {
+    question: 'Which psychic site has the best offer for first-timers?',
+    answer:
+      'For most people Kasamba, because free minutes with each new advisor let you test several readers at no cost and the 50% discount follows. Choose Keen if you want the lowest possible entry price ($1) for a phone reading, and Purple Garden if you want the most credit and prefer to watch a reader’s video bio before booking. Our <a href="/match/">reader match tool</a> can narrow it down to your question.',
+  },
+  {
+    question: 'Can I get a free psychic reading with no credit card?',
+    answer:
+      'Free time is real but limited. Reputable platforms tie their free minutes to a new account, and a payment method is usually needed if you want a session to continue past the free window. Be skeptical of pages promising a full free reading while asking for card details up front, or “free readings” that are generic horoscopes delivered by email. Our <a href="/guides/free-psychic-readings-online-truth/">free psychic readings guide</a> shows how to tell the difference.',
+  },
+  {
+    question: 'Do these coupons work for tarot, astrology and medium readings?',
+    answer:
+      'The welcome offers are account-level promotions for new clients, so they are not limited to one reading style — tarot readers, mediums, astrologers and general psychics are all on these platforms. Each advisor’s profile and the checkout screen show exactly what applies, so check there before you start a session.',
+  },
+  {
+    question: 'Do psychic coupons and welcome offers expire?',
+    answer:
+      'They can change or end without notice, and they are for new accounts only — existing customers generally do not qualify. We re-check the three offers on this page regularly and show the last verification date near the top. If the checkout screen does not show the offer described here, the promotion has probably changed.',
+  },
+  {
+    question: 'Do psychic sites run Black Friday or holiday deals?',
+    answer:
+      'Platforms can run limited-time seasonal promotions, but none are guaranteed and they are not published on a schedule. When we verify one, it is added to this page; otherwise the three welcome offers above are the stable, repeatable ones.',
+  },
+  {
+    question: 'How much does a psychic reading cost after the coupon?',
+    answer:
+      'After the intro offer you pay each advisor’s own rate. Current ranges from our platform reviews: Kasamba ' + price('kasamba') + '; Keen ' + price('keen') + '; Purple Garden ' + price('purple-garden') + '. Rates change often, so confirm the live price on the advisor’s profile. Our <a href="/guides/psychic-reading-prices/">psychic reading price guide</a> explains how per-minute billing adds up.',
+  },
+  {
+    question: 'What if I am not happy with a reading I used a coupon on?',
+    answer:
+      'Each platform has its own protection, usually as account credit rather than a card refund: Kasamba credits up to $50 for a first session with a new advisor; Keen credits up to $25 if you contact support within 72 hours; Purple Garden support credits your account balance. File promptly with the advisor name and date. See each platform review for the fine print.',
+  },
+  {
+    question: 'Do you earn a commission if I use these links?',
+    answer:
+      'Yes. Eastern Alignment is reader-supported: if you sign up through a link here we may earn a commission at no extra cost to you. It never changes the offer you get, and it does not buy placement — read <a href="/disclosure/">how this site works</a> and <a href="/methodology/">how we test</a>.',
+  },
+  {
+    question: 'Where are the Psychic Source, California Psychics or Oranum coupons?',
+    answer:
+      'We only list platforms we have tested with our own paid sessions — Kasamba, Purple Garden and Keen — so we do not publish offers for other sites. If you are comparing welcome offers elsewhere, use the <a href="#judge-any-offer">checklist for judging any psychic offer</a> on this page.',
+  },
+];
+
+/* ───────── structured data (WebSite / Organization / Person come from BaseLayout) ───────── */
+const offerNode = (key: 'kasamba' | 'purple-garden' | 'keen', description: string, url: string) => ({
+  '@type': 'Offer',
+  name: `${PLATFORM_OFFERS[key].name} new-client offer: ${PLATFORM_OFFERS[key].offer}`,
+  description,
+  url,
+  category: 'New-client welcome offer',
+  eligibleCustomerType: 'New customers only',
+  seller: { '@type': 'Organization', name: PLATFORM_OFFERS[key].name },
+  itemOffered: {
+    '@type': 'Service',
+    name: `Online psychic reading on ${PLATFORM_OFFERS[key].name}`,
+    serviceType: 'Online psychic reading (chat, phone or video)',
+    provider: { '@type': 'Organization', name: PLATFORM_OFFERS[key].name },
+  },
+});
+
+const pageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://easternalignment.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Coupons & Free Offers', item: 'https://easternalignment.com/coupons/' },
+  '@graph': [
+    {
+      '@type': ['CollectionPage', 'WebPage'],
+      '@id': `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: 'Psychic Coupons, Promo Codes & Free Minutes (2026)',
+      headline: 'Psychic Reading Coupons & Promo Codes: Free Minutes, Credit & Discounts',
+      description:
+        'Current new-client psychic reading coupons and promo codes for Kasamba, Keen and Purple Garden — what each offer includes, whether a code is needed, the fine print, and which deal suits tarot, love, medium or astrology readings.',
+      inLanguage: 'en-US',
+      isPartOf: { '@id': `${SITE}/#website` },
+      publisher: { '@id': `${SITE}/#organization` },
+      author: { '@id': `${SITE}/#sarah` },
+      reviewedBy: { '@id': `${SITE}/#sarah` },
+      datePublished: '2026-08-25',
+      dateModified: updatedISO,
+      lastReviewed: verifiedISO,
+      about: [
+        { '@type': 'Thing', name: 'Psychic reading coupons' },
+        { '@type': 'Thing', name: 'Psychic reading promo codes' },
+        { '@type': 'Thing', name: 'Free psychic reading minutes' },
+      ],
+      mentions: [
+        { '@type': 'Organization', name: 'Kasamba' },
+        { '@type': 'Organization', name: 'Keen' },
+        { '@type': 'Organization', name: 'Purple Garden' },
+      ],
+      mainEntity: { '@id': `${PAGE_URL}#offers` },
+      primaryImageOfPage: { '@type': 'ImageObject', url: `${SITE}/og-default.jpg` },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${PAGE_URL}#offers`,
+      name: 'Current psychic reading welcome offers',
+      itemListOrder: 'https://schema.org/ItemListOrderDescending',
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          item: offerNode(
+            'kasamba',
+            'New clients get 3 free chat minutes with each new advisor plus 50% off their first paid session. No promo code is needed through the promotional link.',
+            `${SITE}/reviews/kasamba/`,
+          ),
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          item: offerNode(
+            'purple-garden',
+            'New clients get $30 of free credit with a first purchase. Applied automatically in the app; on the web use promo code 30free if it is not credited.',
+            `${SITE}/reviews/purple-garden/`,
+          ),
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          item: offerNode(
+            'keen',
+            'New clients pay $1 for their first 5 minutes with an advisor, then the advisor’s regular per-minute rate.',
+            `${SITE}/reviews/keen/`,
+          ),
+        },
+      ],
+    },
   ],
 };
+
+const jumpLinks = [
+  { href: '#compare', label: 'Compare offers' },
+  { href: '#kasamba-coupon', label: 'Kasamba' },
+  { href: '#purple-garden-coupon', label: 'Purple Garden' },
+  { href: '#keen-promo-code', label: 'Keen' },
+  { href: '#by-reading-type', label: 'Tarot, love & more' },
+  { href: '#free-psychic-reading', label: 'Free readings' },
+  { href: '#savings-playbook', label: 'Save more' },
+  { href: '#readers-kasamba', label: 'Per-reader bonuses' },
+  { href: '#faq', label: 'FAQ' },
+];
 ---
 
 <BaseLayout
-  title="Psychic Reading Coupons & Free Offers (2026)"
-  description="Verified 2026 psychic reading coupons and welcome offers from Kasamba, Purple Garden, and Keen — plus per-reader bonuses on individual psychics. Claimed through our promotional link; if a signup page asks for a code, use the code shown on that page."
-  seoTitle="Psychic Reading Coupons & Free Offers 2026 — Kasamba, Purple Garden & Keen Deals"
-  metaDescription="Verified 2026 psychic reading coupons & welcome offers: Kasamba (3 free minutes + 50% off), Purple Garden ($30 free credit) & Keen (5 minutes for $1). Plus per-reader bonuses — claimed via our promotional link."
-  canonicalUrl="https://easternalignment.com/coupons/"
-  jsonLd={breadcrumbSchema}
+  title="Psychic Coupons & Promo Codes 2026: Free Minutes, Credit & Deals"
+  description="Current psychic reading coupons and promo codes for Kasamba, Keen and Purple Garden — 3 free minutes + 50% off, 5 minutes for $1, $30 free credit — with the terms, the fine print and which deal fits tarot, love or medium readings."
+  seoTitle="Psychic Coupons & Promo Codes 2026: Free Minutes & Deals"
+  metaDescription="Psychic reading coupons & promo codes for 2026: Kasamba 3 free minutes + 50% off, Keen 5 min for $1, Purple Garden $30 credit (code 30free). Terms explained."
+  canonicalUrl={PAGE_URL}
+  jsonLd={pageSchema}
 >
   <div class="container coupons-body">
+    <Breadcrumb items={[{ label: 'Coupons & Free Offers' }]} />
+
+    <!-- ============ HERO + QUICK ANSWER ============ -->
+    <header class="coupon-hero">
+      <span class="eyebrow eyebrow--center">New-Client Offers · Hand-Checked</span>
+      <h1 class="section-title">Psychic Reading Coupons &amp; Promo Codes <span class="nowrap">(2026)</span></h1>
+      <p class="coupon-hero__lede">
+        The psychic coupons and free-minute offers worth claiming right now — what each one actually includes,
+        whether you need a promo code, and the fine print coupon sites leave out.
+      </p>
+      <p class="coupon-hero__meta">
+        <span>Page updated <time datetime={updatedISO}>{updatedLabel}</time></span>
+        <span aria-hidden="true">·</span>
+        <span>Offers last hand-verified {verifiedMonthYear}</span>
+        <span aria-hidden="true">·</span>
+        <span>By <a href="/about/">Sarah</a></span>
+      </p>
+    </header>
+
+    <section class="answer-box" aria-labelledby="quick-answer">
+      <h2 id="quick-answer" class="answer-box__title">Quick answer: which psychic coupon is best?</h2>
+      <p>
+        For most first-timers, <strong>Kasamba</strong> has the best psychic reading coupon:
+        <strong>3 free minutes with every new advisor plus 50% off your first paid session</strong>.
+        <strong>Keen</strong> is the cheapest way to try a phone reading (<strong>5 minutes for $1</strong>), and
+        <strong>Purple Garden</strong> gives the most room for a first video reading (<strong>$30 free credit</strong>).
+      </p>
+      <p>
+        You don’t need a coupon-site code for any of them. The only code in play is Purple Garden’s
+        <code>30free</code>, and only on the web if the credit isn’t applied automatically. All three offers are
+        for <strong>new accounts only</strong>.
+      </p>
+      <div class="answer-box__cta">
+        <a
+          href={goPath('kasamba')}
+          class="btn btn--primary"
+          rel="nofollow sponsored"
+          target="_blank"
+          data-cta-source="coupons-answerbox"
+          data-cta-platform="kasamba"
+        >{PLATFORM_OFFERS.kasamba.ctaLabel}</a>
+        <a href="#compare" class="answer-box__alt">Compare all three offers ↓</a>
+      </div>
+    </section>
+
+    <nav class="jump-nav" aria-label="On this page">
+      {jumpLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+
+    <!-- ============ AT-A-GLANCE TABLE ============ -->
+    <section id="compare" class="prose-section">
+      <h2 class="section-title section-title--md">Psychic Coupons Compared: Offers, Codes &amp; Fine Print</h2>
+      <p class="section-desc">
+        Side-by-side view of every new-client psychic reading discount on this page. Prices are the per-minute
+        ranges from our platform reviews — advisors set their own rates, so confirm the live number on a profile.
+      </p>
+      <div class="table-wrap" role="region" aria-label="Psychic coupon comparison table" tabindex="0">
+        <table class="compare-table">
+          <caption class="sr-only">Comparison of Kasamba, Purple Garden and Keen new-client offers</caption>
+          <thead>
+            <tr>
+              <th scope="col">Platform</th>
+              <th scope="col">Welcome offer</th>
+              <th scope="col">Promo code needed?</th>
+              <th scope="col">Best for</th>
+              <th scope="col">Per-minute range</th>
+              <th scope="col">Safety net</th>
+              <th scope="col"><span class="sr-only">Claim</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            {glance.map((g) => {
+              const o = PLATFORM_OFFERS[g.key];
+              return (
+                <tr>
+                  <th scope="row">
+                    {o.name}
+                    {rate(g.key) && <span class="compare-table__rating">{rate(g.key)}★ expert rating</span>}
+                  </th>
+                  <td><strong>{o.offer}</strong></td>
+                  <td>{g.code}</td>
+                  <td>{g.best}</td>
+                  <td>{price(g.key)}</td>
+                  <td>{g.guarantee}</td>
+                  <td>
+                    <a
+                      href={goPath(g.key)}
+                      class="btn btn--primary btn--sm"
+                      rel="nofollow sponsored"
+                      target="_blank"
+                      data-cta-source="coupons-table"
+                      data-cta-platform={g.key}
+                    >Claim</a>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- ============ PLATFORM OFFER CARDS ============ -->
     <section id="platform-offers" class="offer-section">
       <div class="section-head section-head--center">
         <span class="eyebrow eyebrow--center">The Big Three</span>
-        <h1 class="section-title">Psychic Reading Coupons &amp; Free Offers</h1>
+        <h2 class="section-title section-title--md">Claim a Psychic Reading Welcome Offer</h2>
         <p class="section-desc">
-          Every new-client deal below mirrors each platform's current new-client promotion. Claim through our
-          promotional link — if the signup page asks for a code, use the code shown there.
+          Each card mirrors that platform’s current new-client promotion. Claim through our promotional link — if the
+          signup page asks for a code, use the code shown there.
         </p>
-        <p class="text-sm text-muted" style="margin-top: var(--space-3); margin-bottom: var(--space-2);">Roundup Updated September 17, 2026</p>
-        <div class="coupons-note" style="margin-bottom: var(--space-8); padding: var(--space-4) var(--space-5); background: var(--color-bg-alt); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg);">
-          <h3 style="margin: 0 0 var(--space-2); font-size: var(--text-base);">A Note on How These Offers Work (2026)</h3>
-          <p style="margin: 0; font-size: var(--text-sm); line-height: var(--leading-relaxed); color: var(--color-text-muted);">
-            The three welcome offers above are platform-wide and were active at the time of my last check. Two things to keep in mind: (1) Promotions expire and reset without notice — if a link doesn't show the stated credit or trial at signup, the offer has likely changed, so confirm on the platform's checkout screen before paying. (2) Every per-reader rate on this page is a point-in-time snapshot; advisors reprice frequently, and the only authoritative number is the one on their live profile. Where I've written "(verify live)," that's the rule for the whole list. The platform bonus (free minutes or credit) stacks on top of whatever the current per-minute rate is.
-          </p>
-        </div>
       </div>
 
       <div class="offer-grid">
@@ -140,38 +536,278 @@ const breadcrumbSchema = {
         <div class="how-step">
           <span class="how-step__num">1</span>
           <div>
-            <h4 class="how-step__title">Tap your offer</h4>
-            <p class="how-step__text">No code to copy — the link opens the platform's new-client promo directly.</p>
+            <h3 class="how-step__title">Start from the promo link</h3>
+            <p class="how-step__text">New-client offers attach at signup, so open the platform through the button above — in the same browser — before you create an account.</p>
           </div>
         </div>
         <div class="how-step">
           <span class="how-step__num">2</span>
           <div>
-            <h4 class="how-step__title">Sign up free</h4>
-            <p class="how-step__text">Create an account (always free, no subscription) and pick your reader.</p>
+            <h3 class="how-step__title">Sign up free</h3>
+            <p class="how-step__text">Creating an account is free, with no subscription. Pick your reader and check that the offer shows on the screen.</p>
           </div>
         </div>
         <div class="how-step">
           <span class="how-step__num">3</span>
           <div>
-          <h4 class="how-step__title">Bonus applies</h4>
-          <p class="how-step__text">The welcome offer applies to your first purchase — most platforms apply it automatically; if a code is shown at signup, use it there.</p>
+            <h3 class="how-step__title">Bonus applies</h3>
+            <p class="how-step__text">Free minutes and discounts apply automatically on Kasamba and Keen. Purple Garden’s credit follows a first purchase — on the web, enter <code>30free</code> if it isn’t credited.</p>
           </div>
         </div>
       </div>
+
+      <div class="callout" role="note">
+        <h3 class="callout__title">How to read these offers (2026)</h3>
+        <p>
+          The three welcome offers are platform-wide and were live at my last check ({verifiedLabel}). Two caveats:
+          (1) promotions can change or reset without notice — if a link doesn’t show the stated credit or trial at
+          signup, the offer has probably changed, so confirm on the checkout screen before paying; (2) every
+          per-reader rate on this page is a snapshot — advisors reprice often, and the number on their live profile is
+          the only authoritative one. The platform bonus (free minutes or credit) stacks on top of whatever the
+          advisor’s current per-minute rate is.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ KASAMBA ============ -->
+    <section id="kasamba-coupon" class="detail-section">
+      <h2 class="section-title section-title--md">Kasamba Coupon Code: 3 Free Minutes + 50% Off</h2>
+      <p class="detail-lede">
+        <strong>Do you need a Kasamba promo code?</strong> No. The new-client offer — 3 free minutes with each new advisor
+        and 50% off your first paid session — is applied through our promotional link. If the signup screen asks for a
+        code, use the one displayed there.
+      </p>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>What you get</h3>
+          <ul>
+            <li><strong>3 free minutes with every new advisor</strong> you start a chat with — not just the first one.</li>
+            <li><strong>50% off your first paid session</strong>, applied after the free minutes.</li>
+            <li>Both are for new accounts; the discount is a one-time offer.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Fine print worth knowing</h3>
+          <ul>
+            <li>The free minutes are chat minutes with advisors who are new to you.</li>
+            <li>Separate coupon-site codes generally can’t be stacked on top of the welcome offer.</li>
+            <li>Unhappy with a first session? Kasamba credits up to $50 to your account (credit, not a card refund) — file with support promptly.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>How to use it well</h3>
+          <ul>
+            <li>Audition two or three advisors with the free minutes — it costs nothing.</li>
+            <li>Bring one written question; judge whether the advisor answers it or just asks you for context.</li>
+            <li>Start the paid session with the advisor who felt specific, so the 50% off lands on the right person.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="detail-links">
+        <a href={goPath('kasamba')} class="btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="coupons-detail" data-cta-platform="kasamba">{PLATFORM_OFFERS.kasamba.ctaLabel}</a>
+        <a href="/guides/kasamba-3-free-minutes-guide/">Kasamba 3 free minutes: the full strategy guide →</a>
+        <a href="/reviews/kasamba/">Kasamba review →</a>
+        <a href="/guides/best-kasamba-psychics-first-reading/">Best Kasamba psychics for a first reading →</a>
+      </p>
+    </section>
+
+    <!-- ============ PURPLE GARDEN ============ -->
+    <section id="purple-garden-coupon" class="detail-section">
+      <h2 class="section-title section-title--md">Purple Garden Coupon Code (30free): $30 Free Credit</h2>
+      <p class="detail-lede">
+        <strong>Is there a Purple Garden promo code?</strong> Sometimes. The $30 credit is normally applied
+        automatically in the app after a qualifying first purchase; on the website, if it doesn’t appear after you
+        register, enter the promo code <code>30free</code>.
+      </p>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>What you get</h3>
+          <ul>
+            <li><strong>$30 in account credit</strong> toward your first reading, added after a small first purchase.</li>
+            <li>Credit works for video, phone and chat sessions.</li>
+            <li>One-time new-client bonus — not a recurring discount.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Fine print worth knowing</h3>
+          <ul>
+            <li>It’s a bonus, not a free trial: the first purchase is typically around $10 — confirm the current minimum at checkout.</li>
+            <li>Credit can’t be withdrawn as cash, and support resolves billing issues with account credit rather than card refunds.</li>
+            <li>Video, voice and chat are priced separately per advisor — open the exact channel’s rate before booking.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>How to use it well</h3>
+          <ul>
+            <li>Watch an advisor’s 60-second video bio first, then check their “Journeys” track record.</li>
+            <li>Chat starts near $0.99/min, so the credit stretches furthest there; on video it covers roughly 2–6 minutes at typical rates.</li>
+            <li>Spend it on the first session rather than letting it sit.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="detail-links">
+        <a href={goPath('purple-garden')} class="btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="coupons-detail" data-cta-platform="purple-garden">{PLATFORM_OFFERS['purple-garden'].ctaLabel}</a>
+        <a href="/guides/purple-garden-30-credit-guide/">Purple Garden $30 credit: what it covers →</a>
+        <a href="/reviews/purple-garden/">Purple Garden review →</a>
+        <a href="/guides/is-purple-garden-legit/">Is Purple Garden legit? →</a>
+      </p>
+    </section>
+
+    <!-- ============ KEEN ============ -->
+    <section id="keen-promo-code" class="detail-section">
+      <h2 class="section-title section-title--md">Keen Promo Code: 5 Minutes for $1</h2>
+      <p class="detail-lede">
+        <strong>Do you need a Keen coupon?</strong> No — the intro price is applied at checkout on a new account.
+        Your first 5 minutes with an advisor cost $1; after that you pay the advisor’s regular per-minute rate.
+      </p>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h3>What you get</h3>
+          <ul>
+            <li><strong>First 5 minutes for $1</strong> on your first session.</li>
+            <li>A one-time new-account welcome package, not a recurring discount.</li>
+            <li>Access to a very large, open roster across phone, chat and many disciplines.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Fine print worth knowing</h3>
+          <ul>
+            <li>Some coupon sites advertise different Keen intro bundles — the checkout screen shows what really applies to you.</li>
+            <li>After the intro minutes the clock runs at the advisor’s own rate, so decide your limit before you start.</li>
+            <li>The satisfaction guarantee is up to $25 of account credit, requested within 72 hours.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>How to use it well</h3>
+          <ul>
+            <li>Use the $1 minutes on an advisor you’d otherwise hesitate to book, with one specific question.</li>
+            <li>Sort reviews by recent and look for specifics, not “she was so sweet.”</li>
+            <li>Phone is Keen’s strongest format — pick a quiet spot and have your question ready.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="detail-links">
+        <a href={goPath('keen')} class="btn btn--primary" rel="nofollow sponsored" target="_blank" data-cta-source="coupons-detail" data-cta-platform="keen">{PLATFORM_OFFERS.keen.ctaLabel}</a>
+        <a href="/reviews/keen/">Keen review →</a>
+        <a href="/guides/best-keen-psychics-2026/">Best Keen psychics (2026) →</a>
+        <a href="/comparisons/kasamba-vs-keen/">Kasamba vs Keen →</a>
+      </p>
+    </section>
+
+    <!-- ============ BY READING TYPE ============ -->
+    <section id="by-reading-type" class="prose-section">
+      <h2 class="section-title section-title--md">Psychic, Tarot, Medium &amp; Astrology Discounts: Which Offer for Which Reading?</h2>
+      <p class="section-desc">
+        The welcome offers aren’t tied to one reading style, so the real question is which one suits your topic. Here
+        is how I’d match them — based on each platform’s strengths in our reviews.
+      </p>
+      <div class="table-wrap" role="region" aria-label="Which coupon fits which reading type" tabindex="0">
+        <table class="compare-table compare-table--type">
+          <thead>
+            <tr>
+              <th scope="col">If you want…</th>
+              <th scope="col">Start with</th>
+              <th scope="col">Why</th>
+              <th scope="col">Go deeper</th>
+            </tr>
+          </thead>
+          <tbody>
+            {byType.map((t) => (
+              <tr>
+                <th scope="row">{t.type}</th>
+                <td>
+                  <a
+                    href={goPath(t.pick)}
+                    rel="nofollow sponsored"
+                    target="_blank"
+                    data-cta-source="coupons-type"
+                    data-cta-platform={t.pick}
+                  >{PLATFORM_OFFERS[t.pick].name}: {PLATFORM_OFFERS[t.pick].offer}</a>
+                </td>
+                <td>{t.why}</td>
+                <td><a href={t.href}>{t.link}</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="section-desc" style="margin-top: var(--space-4);">
+        Not sure which topic or platform fits you? The <a href="/match/">reader match tool</a> asks a few questions
+        and points you to a good fit.
+      </p>
+    </section>
+
+    <!-- ============ FREE READINGS ============ -->
+    <section id="free-psychic-reading" class="prose-section">
+      <h2 class="section-title section-title--md">Free Psychic Reading Online: What’s Actually Free</h2>
+      <p class="section-desc">
+        “Free psychic reading” covers three very different things, and only one of them is truly free:
+      </p>
+      <ul class="plain-list">
+        <li><strong>Free minutes (Kasamba).</strong> Real, no-cost time with a new advisor — the closest thing to a free reading from a legitimate platform. It’s time-limited by design.</li>
+        <li><strong>Near-free trial (Keen).</strong> Five minutes for $1 isn’t free, but it’s the cheapest legitimate first reading.</li>
+        <li><strong>Subsidized first session (Purple Garden).</strong> $30 of credit after a small first purchase — more room, not zero cost.</li>
+      </ul>
+      <p class="section-desc">
+        Pages promising a full free reading that demand card details first, or that email you a generic horoscope,
+        are funnels, not readings. Our <a href="/guides/free-psychic-readings-online-truth/">free psychic readings guide</a>
+        tests each type, and <a href="/guides/before-you-pay-for-a-psychic-reading/">13 things to know before you pay</a>
+        covers the rest.
+      </p>
+    </section>
+
+    <!-- ============ SAVINGS PLAYBOOK ============ -->
+    <section id="savings-playbook" class="prose-section">
+      <h2 class="section-title section-title--md">How to Get the Most From a Psychic Discount</h2>
+      <ol class="tips-list">
+        <li><strong>Claim before you browse.</strong> New-client offers attach at signup and generally can’t be added later — click through from the offer button first.</li>
+        <li><strong>Write one question in advance.</strong> A focused question is the difference between a useful 5 minutes and a vague 15. See <a href="/guides/how-to-prepare-for-psychic-reading/">how to prepare for a reading</a>.</li>
+        <li><strong>Set a budget and a stop time.</strong> Per-minute billing runs after the promo minutes end. Decide your limit before you start.</li>
+        <li><strong>Audition, don’t commit.</strong> Use free minutes on two or three advisors and keep the one who answers your actual question.</li>
+        <li><strong>Check the live rate.</strong> Per-minute prices change; the profile page is the only real number. Compare with our <a href="/guides/psychic-reading-prices/">psychic reading price guide</a>.</li>
+        <li><strong>Don’t book someone because of the coupon.</strong> A discount on the wrong reader is still wasted money.</li>
+        <li><strong>Know your safety net.</strong> Kasamba’s credit guarantee and Keen’s 72-hour window are only useful if you act in time — note the date and advisor.</li>
+      </ol>
+    </section>
+
+    <!-- ============ WHY COUPON-SITE CODES FAIL + JUDGE ANY OFFER ============ -->
+    <section id="judge-any-offer" class="prose-section">
+      <h2 class="section-title section-title--md">Why Most Psychic Promo Codes You Find Online Don’t Work</h2>
+      <p class="section-desc">
+        Search for a psychic coupon and you’ll mostly find aggregator pages listing “verified” codes with
+        wildly different headline numbers for the same platform. The usual reasons they fail: the code expired, it
+        describes a different promotion than the one on offer to you, or the platform’s new-client offer is already
+        applied automatically and can’t be combined with a second code. That’s why this page lists the
+        <em>structure</em> of each welcome offer and when I last checked it, rather than a pile of codes.
+      </p>
+      <h3 class="subhead">Comparing an offer from a site we don’t cover?</h3>
+      <p class="section-desc">
+        We only publish offers for platforms we’ve tested with paid sessions — Kasamba, Purple Garden and Keen — so there
+        are no Psychic Source, California Psychics or Oranum coupons here. If you’re weighing one anyway, check:
+      </p>
+      <ol class="tips-list">
+        <li><strong>Who qualifies?</strong> Almost every welcome offer is for brand-new accounts only.</li>
+        <li><strong>What does it really cost?</strong> Add the first purchase or package price to the per-minute rate after the promo ends.</li>
+        <li><strong>Is the promo time or credit?</strong> Free minutes, a flat-price intro and bonus credit behave differently.</li>
+        <li><strong>What’s the safety net?</strong> Look for a published satisfaction guarantee and whether it pays out as credit or to your card.</li>
+        <li><strong>Can you test more than one reader?</strong> A trial limited to one advisor is a weaker way to find a good match.</li>
+      </ol>
+      <p class="section-desc">
+        For a ranked view of the platforms we do cover, see the <a href="/guides/best-psychic-hotlines-2026/">best psychic hotlines of 2026</a>
+        or compare them head-to-head in the <a href="/comparisons/">comparisons hub</a>.
+      </p>
     </section>
 
     <!-- ============ INDIVIDUAL READER BONUSES ============ -->
     <section class="readers-section">
       <div class="section-head">
         <span class="eyebrow">Per-Reader Bonuses</span>
+        <h2 class="section-title section-title--md">Claim a Bonus with a Specific Psychic</h2>
         <p class="section-desc">
-          I re-verified the three platform-level offers on this page in September 2026 — Kasamba's 3 free minutes + 50% off, Purple Garden's $30 first-purchase credit, and Keen's $1-for-5-minutes trial were all live and applied automatically through the links below, with no code to copy. One important caveat: the per-reader per-minute rates listed under each platform shift constantly as advisors change their pricing, so treat any specific dollar figure here as a snapshot and always confirm the live rate on the advisor's profile at checkout.
-        </p>
-        <h2 class="section-title">Claim a Bonus with a Specific Reader</h2>
-        <p class="section-desc">
-          Prefer a particular reader? Every psychic below carries their own new-client bonus.
-          Scroll through and tap <strong>Book Now</strong> to claim it on that exact profile.
+          Prefer a particular reader? Every psychic below carries their platform’s new-client bonus. Tap
+          <strong>Book Now</strong> to claim it on that exact profile. I re-verified the three platform-level offers in
+          {verifiedMonthYear}; per-reader rates move constantly, so treat any dollar figure as a snapshot and confirm
+          the live rate at checkout. Showing the top-rated {READERS_SHOWN} per platform — {totalReaders} reviewed in total.
         </p>
       </div>
 
@@ -189,11 +825,11 @@ const breadcrumbSchema = {
             />
             <h3 class="reader-group__title">{PLATFORM_OFFERS[platform].name} Readers</h3>
             <span class="reader-group__count">{readersByPlatform[platform].length} readers</span>
-            <a href={`/reviews/${platform}/`} class="reader-group__all">View all on {PLATFORM_OFFERS[platform].name} →</a>
+            <a href={`/reviews/${platform}/`} class="reader-group__all">View all {readersByPlatform[platform].length} on {PLATFORM_OFFERS[platform].name} →</a>
           </div>
 
           <div class="reader-grid">
-            {readersByPlatform[platform].map((reader) => (
+            {readersByPlatform[platform].slice(0, READERS_SHOWN).map((reader) => (
               <ReaderCard
                 name={reader.platformName}
                 slug={reader.slug}
@@ -208,8 +844,46 @@ const breadcrumbSchema = {
               />
             ))}
           </div>
+          {readersByPlatform[platform].length > READERS_SHOWN && (
+            <p class="reader-group__more">
+              <a href={`/reviews/${platform}/`}>See all {readersByPlatform[platform].length} {PLATFORM_OFFERS[platform].name} reader reviews →</a>
+            </p>
+          )}
         </div>
       ))}
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="prose-section prose-section--faq">
+      <FAQ items={faqItems} title="Psychic Coupon & Promo Code FAQ" />
+    </section>
+
+    <!-- ============ HOW WE VERIFY + UPDATE LOG ============ -->
+    <section id="how-we-verify" class="prose-section">
+      <h2 class="section-title section-title--md">How I Verify These Offers</h2>
+      <p class="section-desc">
+        I check each welcome offer from a fresh sign-up path, confirm what the checkout screen shows, and only then
+        update the date at the top of this page. Offers I can’t confirm get removed rather than left up.
+        Every platform here is one I’ve paid for sessions on myself — see the
+        <a href="/methodology/">methodology</a> and my <a href="/disclosure/">affiliate disclosure</a>.
+      </p>
+      <div class="table-wrap" role="region" aria-label="Offer update log" tabindex="0">
+        <table class="compare-table compare-table--log">
+          <thead>
+            <tr><th scope="col">Date</th><th scope="col">Change</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{updatedLabel}</th>
+              <td>Page rebuilt: added the comparison table, per-platform terms and fine print, the reading-type guide and FAQ. Offers unchanged.</td>
+            </tr>
+            <tr>
+              <th scope="row">{verifiedLabel}</th>
+              <td>All three welcome offers re-checked: Kasamba 3 free minutes + 50% off, Purple Garden $30 credit, Keen 5 minutes for $1.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <!-- ============ SITE-WIDE DISCLAIMER ============ -->
@@ -603,5 +1277,326 @@ const breadcrumbSchema = {
       top: 14px;
       right: -32px;
     }
+  }
+
+  /* ===================== 2026-10-02 SEO REBUILD ADDITIONS ===================== */
+  .nowrap { white-space: nowrap; }
+
+  .coupon-hero {
+    max-width: 780px;
+    margin: var(--space-6) auto var(--space-8);
+    text-align: center;
+  }
+
+  .coupon-hero .section-title {
+    font-size: clamp(1.9rem, 1.4rem + 2.2vw, 2.75rem);
+    line-height: 1.12;
+    margin-bottom: var(--space-4);
+  }
+
+  .coupon-hero__lede {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-4);
+  }
+
+  .coupon-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2) var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  .coupon-hero__meta a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+  .section-title--md {
+    font-size: var(--text-2xl);
+    line-height: 1.2;
+  }
+
+  /* Quick-answer box: the featured-snippet / AI-overview target */
+  .answer-box {
+    max-width: 820px;
+    margin: 0 auto var(--space-6);
+    padding: var(--space-6) var(--space-8);
+    background: linear-gradient(160deg, #fdf6ee 0%, #f6ece0 100%);
+    border: 1px solid var(--color-accent);
+    border-left-width: 5px;
+    border-radius: var(--radius-lg);
+  }
+
+  .answer-box__title {
+    font-size: var(--text-lg);
+    color: var(--color-primary-dark);
+    margin: 0 0 var(--space-3);
+  }
+
+  .answer-box p {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+    margin: 0 0 var(--space-3);
+  }
+
+  .answer-box__cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+  }
+
+  .answer-box__alt {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary);
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    padding: 1px 6px;
+    border-radius: var(--radius-sm);
+    background: var(--color-accent-light);
+    color: var(--color-primary-dark);
+  }
+
+  .jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    max-width: 900px;
+    margin: 0 auto var(--space-12);
+  }
+
+  .jump-nav a {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: background var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .jump-nav a:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent);
+  }
+
+  /* Prose sections */
+  .prose-section {
+    max-width: 960px;
+    margin: 0 auto var(--space-16);
+    scroll-margin-top: var(--space-16);
+  }
+
+  .prose-section--faq { max-width: 820px; }
+
+  .prose-section > .section-title { margin-bottom: var(--space-3); }
+  .prose-section > .section-desc { margin-bottom: var(--space-5); }
+  .prose-section .section-desc a,
+  .detail-lede a,
+  .tips-list a,
+  .plain-list a,
+  .detail-card a { color: var(--color-primary); text-underline-offset: 2px; }
+
+  .subhead {
+    font-size: var(--text-lg);
+    color: var(--color-primary-dark);
+    margin: var(--space-6) 0 var(--space-2);
+  }
+
+  /* Tables */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .compare-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: var(--space-4);
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-text-muted);
+  }
+
+  .compare-table thead th {
+    background: var(--color-bg-alt);
+    color: var(--color-primary-dark);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .compare-table tbody th {
+    color: var(--color-text);
+    font-weight: var(--weight-semibold);
+  }
+
+  .compare-table tbody tr:last-child th,
+  .compare-table tbody tr:last-child td { border-bottom: 0; }
+  .compare-table td strong { color: var(--color-text); }
+
+  .compare-table__rating {
+    display: block;
+    margin-top: 2px;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-light);
+  }
+
+  .compare-table--type { min-width: 820px; }
+  .compare-table--log { min-width: 0; }
+  .compare-table--log tbody th { white-space: nowrap; width: 1%; }
+
+  /* Platform detail sections */
+  .detail-section {
+    max-width: 1040px;
+    margin: 0 auto var(--space-16);
+    scroll-margin-top: var(--space-16);
+  }
+
+  .detail-section > .section-title { margin-bottom: var(--space-3); }
+
+  .detail-lede {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-6);
+    max-width: 820px;
+  }
+
+  .detail-lede strong { color: var(--color-text); }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+
+  .detail-card {
+    padding: var(--space-5) var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+
+  .detail-card h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin: 0 0 var(--space-3);
+  }
+
+  .detail-card ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: var(--space-5);
+    display: grid;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+  }
+
+  .detail-card li strong { color: var(--color-text); }
+
+  .detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3) var(--space-6);
+    margin: 0;
+    font-size: var(--text-sm);
+  }
+
+  .detail-links a:not(.btn) {
+    color: var(--color-primary);
+    font-weight: var(--weight-medium);
+    text-decoration: none;
+  }
+
+  .detail-links a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .callout {
+    margin-top: var(--space-8);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+  }
+
+  .callout__title {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-base);
+  }
+
+  .callout p {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  .plain-list,
+  .tips-list {
+    list-style: disc;
+    margin: 0 0 var(--space-5);
+    padding-left: var(--space-6);
+    display: grid;
+    gap: var(--space-3);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  .tips-list { list-style: decimal; }
+
+  .plain-list strong,
+  .tips-list strong { color: var(--color-text); }
+
+  .reader-group__more {
+    margin: var(--space-6) 0 0;
+    text-align: center;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+  }
+
+  .reader-group__more a { color: var(--color-primary); }
+
+  @media (max-width: 1024px) {
+    .detail-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .answer-box { padding: var(--space-5); }
+    .jump-nav { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding-bottom: var(--space-2); }
+    .jump-nav a { white-space: nowrap; }
+    .coupons-body { padding-top: var(--space-8); }
   }
 </style>

@@ -76,8 +76,8 @@ export function runMatchEngine(readers: ReaderProfile[], answers: UserAnswers): 
 
   // Build recommendation objects
   const topMatches: MatchRecommendation[] = topThree.map((item) => {
-    // Scale totalScore slightly so top match feels rewarding (93% - 99%)
-    const matchPercentage = Math.min(99, Math.max(82, Math.round(item.score.totalScore * 0.96 + (item.rank === 1 ? 4 : (item.rank === 2 ? 2 : 0)))));
+    // The real 100-point score, unboosted (ties between ranks are shown as ties)
+    const matchPercentage = Math.min(99, Math.max(50, Math.round(item.score.totalScore)));
     const explanation = generateReaderExplanation(item.reader, answers, item.score, item.rank);
 
     return {

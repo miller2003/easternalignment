@@ -110,6 +110,9 @@ export interface ReaderProfile {
   active: boolean;
 }
 
+/** Top-level life area chosen on the quiz's first screen. */
+export type Area = 'love' | 'dating' | 'breakup' | 'career' | 'direction' | 'unsure' | 'grief';
+
 export interface UserAnswers {
   intent: Intent;
   situationSubject: 'myself' | 'another_person' | 'relationship_dynamic' | 'future_event' | 'past_closure' | 'not_sure';
@@ -118,6 +121,15 @@ export interface UserAnswers {
   preferredStyles: ReadingStyle[];
   urgency: Urgency;
   budget: BudgetRange;
+  /* Situation-depth answers from the quiz (absent on the MCP / NL path).
+     They drive the personalised reading; scoring only uses the derived
+     intent + situationSubject above. */
+  area?: Area;
+  symptom?: string;
+  duration?: string;
+  feeling?: string;
+  hope?: string;
+  card?: string;
 }
 
 export interface ScoreBreakdown {
@@ -144,9 +156,25 @@ export interface MatchRecommendation {
   whenToSkip: string;
 }
 
+export interface ReadingCard {
+  id: string;
+  name: string;
+  numeral: string;
+  keyword: string;
+  message: string;
+}
+
 export interface DiagnosticDossier {
   coreDynamicTitle: string;
   situationSummary: string;
+  /** Second mirror paragraph: feeling validation + two-sided reflection. */
+  feelingReflection?: string;
+  /** The question underneath the question, in the user's own voice. */
+  hiddenQuestion?: string;
+  card?: ReadingCard;
+  /** Safety / care notes (crisis line, early-grief pacing, medium honesty). */
+  careNotes?: string[];
+  recommendedFollowUp?: string;
   underlyingMechanism: string;
   whatIsClear: string[];
   whatIsUnresolved: string[];
@@ -172,9 +200,14 @@ export interface QuizQuestionOption {
 }
 
 export interface QuizQuestion {
-  id: keyof UserAnswers | 'welcome';
-  stepNumber: number;
-  totalSteps: number;
+  /** Unique step id (branch-specific, e.g. 'symptom.love'); also the analytics questionId. */
+  id: string;
+  /** The answer field this step writes. */
+  field: keyof UserAnswers;
+  /** 'cards' renders the three-card draw instead of option buttons. */
+  kind?: 'choice' | 'cards';
+  /** Optional reflection shown above the question (mid-quiz mirror). */
+  reflection?: string;
   eyebrow: string;
   title: string;
   subtitle?: string;

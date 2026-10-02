@@ -114,7 +114,7 @@ If a site is offering a full-length reading with zero monetization mechanism vis
 
 ## The Math on Free Minutes: Why Kasamba's Model Is the Best Deal Available
 
-Here is where I need to be specific, because the difference between free offers is enormous when you actually calculate what you are getting.
+Here is where I need to be specific, because the difference between free offers is enormous when you actually calculate what you are getting. (For the current terms side by side, see our [psychic coupons and free minutes comparison](/coupons/#compare).)
 
 ### Kasamba: 3 Free Minutes Per Reader
 

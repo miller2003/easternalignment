@@ -135,3 +135,11 @@
   Content-Type: text/markdown; charset=utf-8
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=86400
+
+# --- Reader Match 的读师目录（2026-10-02）---
+# 原先以 363KB 内联 JSON 嵌在首页与 /match/ 的 HTML 里，导致两页超过边缘
+# Markdown 转换器的 150KB 上限（AI 智能体拿不到干净 markdown），也让每位访客
+# 白下 363KB。现在改为 quiz 空闲/意图触发时才 fetch 的静态文件。
+# noindex：它是应用数据，不是给搜索引擎的页面。
+/data/match-readers.json
+  X-Robots-Tag: noindex

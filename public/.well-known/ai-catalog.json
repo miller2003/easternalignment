@@ -3,8 +3,8 @@
   "host": {
     "name": "Eastern Alignment",
     "domain": "easternalignment.com",
-    "description": "Independent testing, price auditing, and buyer guidance for online psychic reading platforms (Kasamba, Keen, Purple Garden). 162+ advisor profiles reviewed with verifiable session counts and prediction records.",
-    "contact": "mailto:contact@easternalignment.com"
+    "description": "Independent testing, price auditing, and buyer guidance for online psychic reading platforms (Kasamba, Keen, Purple Garden). 242 advisor profiles audited with listed rates, audit scores and new-client offers.",
+    "contact": "mailto:sarah@easternalignment.com"
   },
   "entries": [
     {
@@ -18,6 +18,42 @@
         "Best psychics on Kasamba 2026",
         "How much does a psychic reading cost?",
         "Kasamba vs Keen vs Purple Garden comparison"
+      ]
+    },
+    {
+      "identifier": "urn:air:easternalignment.com:data:platform-audit",
+      "displayName": "Psychic Platform Audit Dataset",
+      "description": "Machine-readable audit figures for Kasamba, Purple Garden and Keen: per-platform and per-advisor listed per-minute rates, audit scores and new-client welcome offers, with definitions and a citation line. Free to quote with a link.",
+      "type": "application/json",
+      "url": "https://easternalignment.com/data/psychic-platform-audit.json",
+      "representativeQueries": [
+        "Median price per minute of online psychic readings",
+        "How much do Kasamba, Keen and Purple Garden advisors charge per minute?",
+        "What share of psychic advisors charge $5 a minute or less?"
+      ]
+    },
+    {
+      "identifier": "urn:air:easternalignment.com:tool:reader-match",
+      "displayName": "Psychic Reader Match",
+      "description": "Free, no-sign-up quiz and five-rule guide for choosing a psychic reader: scores 242 audited advisors on situation fit, reading method, format and style and returns a shortlist of three with reasons to skip each.",
+      "type": "text/html",
+      "url": "https://easternalignment.com/match/",
+      "representativeQueries": [
+        "How do I choose a psychic reader?",
+        "Which psychic should I book for my situation?",
+        "Psychic matching quiz"
+      ]
+    },
+    {
+      "identifier": "urn:air:easternalignment.com:content:guides-hub",
+      "displayName": "Psychic Reading Guides Hub",
+      "description": "112 guides in 8 topics (love, breakups, mediumship, tarot, career and money, spirituality, getting started, platforms) with quick answers on cost, legitimacy, red flags and free offers.",
+      "type": "text/html",
+      "url": "https://easternalignment.com/guides/",
+      "representativeQueries": [
+        "Are online psychic readings legit?",
+        "How can I tell if a psychic is fake?",
+        "What should I ask a psychic?"
       ]
     },
     {

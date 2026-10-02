@@ -63,7 +63,7 @@ The $30 new-user credit is Purple Garden's answer to the question every first-ti
 
 The answer is not, in this case, a free trial. It is a subsidized first session — and the distinction matters enormously for how you should approach it. Purple Garden is not giving you 30 minutes of free readings. It is giving you $30 toward your first experience of the platform, which, depending on how you spend it, can be the difference between a session that gives you real clarity and a session that evaporates into good-feeling vagueness.
 
-This guide is the complete breakdown: what the credit actually is, how far it goes across the platform's three reading formats, the smartest possible strategy for spending it, and how it compares to every other major trial offer in the psychic space.
+(Just want the offer and the promo code? See the [Purple Garden coupon code and current psychic coupons](/coupons/#purple-garden-coupon).) This guide is the complete breakdown: what the credit actually is, how far it goes across the platform's three reading formats, the smartest possible strategy for spending it, and how it compares to every other major trial offer in the psychic space.
 
 ---
 

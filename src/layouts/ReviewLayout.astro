@@ -326,6 +326,11 @@ const sidebarDeal = hasCtaContext
           {offerData && (
             <p class="review-hero-cta-note">{offerData.microLine}</p>
           )}
+          {offerData && (
+            <p class="review-hero-cta-note review-hero-coupon-link">
+              <a href="/coupons/">{isReaderReview ? 'More psychic coupons & free minutes' : `${offerData.name} coupon & promo code details`} →</a>
+            </p>
+          )}
           {hasCtaContext && (
             <DealStrip platform={platformKey!} source="hero" href={affiliateUrl} />
           )}
@@ -545,6 +550,12 @@ const sidebarDeal = hasCtaContext
     line-height: var(--leading-normal);
     color: var(--color-text-muted);
     max-width: 480px;
+  }
+
+  .review-hero-coupon-link a {
+    color: var(--color-primary);
+    font-weight: var(--weight-medium);
+    text-underline-offset: 2px;
   }
 
   @media (max-width: 768px) {

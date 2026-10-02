@@ -3,6 +3,7 @@ import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
 import MidArticleLink from '../../components/MidArticleLink.astro';
 import { pickRelatedGuidesForGuide, pickMidArticleGuide, guideSection, guideClusters } from '../../lib/relatedReaders';
+import { topicUrl } from '../../lib/guideHub';
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../content/guides/*.md');
@@ -115,7 +116,7 @@ const relatedItems = [
   publishDate={frontmatter.publishDate}
   updatedDate={frontmatter.updatedDate}
   verifiedDate={frontmatter.verifiedDate}
-  breadcrumbMiddle={{ label: section.heading, href: `/guides/#${section.id}` }}
+  breadcrumbMiddle={{ label: section.heading, href: topicUrl(section.id) }}
   metaRobots={frontmatter.metaRobots}
   canonicalUrl={frontmatter.canonicalUrl}
   ogImage={frontmatter.ogImage}

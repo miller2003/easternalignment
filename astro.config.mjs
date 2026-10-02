@@ -54,6 +54,32 @@ function buildLastmodMap() {
       map.set(SITE + toUrl(segs[0], slug), date);
     }
   }
+  // /coupons/ is a hand-built page, not a content-collection entry. Its date
+  // lives in one JSON file that the page itself also reads, so the on-page
+  // "Updated" label, the schema dateModified and this <lastmod> cannot drift.
+  try {
+    const cm = JSON.parse(fs.readFileSync(path.resolve("./src/data/coupons-meta.json"), "utf8"));
+    if (cm && cm.updated) map.set(SITE + "/coupons/", cm.updated);
+  } catch (_) { /* optional */ }
+
+  // Home, /match/ and the /guides/ hub are hand-built too. Each page computes its
+  // own dateModified as the later of (a) its entry in src/data/page-meta.json and
+  // (b) the newest content it summarises — reviews + advisor profiles for / and
+  // /match/, guides for /guides/. Mirror exactly that here so the on-page date,
+  // the schema dateModified and this <lastmod> are the same value.
+  try {
+    const pm = JSON.parse(fs.readFileSync(path.resolve("./src/data/page-meta.json"), "utf8"));
+    const newest = (prefix) =>
+      [...map.entries()]
+        .filter(([u]) => u.startsWith(SITE + prefix))
+        .map(([, d]) => d)
+        .sort()
+        .pop();
+    const later = (a, b) => [a, b].filter(Boolean).sort().pop();
+    if (pm.home?.updated) map.set(SITE + "/", later(pm.home.updated, newest("/reviews/")));
+    if (pm.match?.updated) map.set(SITE + "/match/", later(pm.match.updated, newest("/reviews/")));
+    if (pm.guidesHub?.updated) map.set(SITE + "/guides/", later(pm.guidesHub.updated, newest("/guides/")));
+  } catch (_) { /* optional */ }
   return map;
 }
 
@@ -100,6 +126,15 @@ export default defineConfig({
             if (item.url === 'https://easternalignment.com/' || item.url === 'https://easternalignment.com/es/') {
                 item.changefreq = 'weekly';
                 item.priority = 1.0;
+            } else if (item.url === 'https://easternalignment.com/coupons/') {
+                // Money page for coupon / promo-code / free-minutes queries; offers
+                // change often, so tell crawlers to come back weekly.
+                item.changefreq = 'weekly';
+                item.priority = 0.9;
+            } else if (item.url === 'https://easternalignment.com/match/' || item.url === 'https://easternalignment.com/guides/') {
+                // Entry points to the funnel: the reader-match tool and the guide hub.
+                item.changefreq = 'weekly';
+                item.priority = 0.8;
             } else if (item.url.includes('/reviews/') || item.url.includes('/resenas/')) {
                 item.changefreq = 'monthly';
                 item.priority = 0.9;

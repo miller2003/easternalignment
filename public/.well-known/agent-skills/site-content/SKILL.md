@@ -8,7 +8,7 @@ version: 1.0.0
 
 ## Overview
 
-Eastern Alignment publishes independent reviews, rankings, and buyer guidance for online psychic reading platforms — Kasamba, Keen, and Purple Garden. All content is based on hands-on testing and auditing of 162+ published advisor profiles.
+Eastern Alignment publishes independent reviews, rankings, and buyer guidance for online psychic reading platforms — Kasamba, Keen, and Purple Garden. All content is based on hands-on testing and auditing of 242 advisor profiles.
 
 ## How to Access Content
 
@@ -46,9 +46,9 @@ https://easternalignment.com/sitemap-index.xml
 ### Platform Reviews (`/reviews/{platform}/`)
 
 Full platform reviews with methodology scores:
-- `/reviews/kasamba/` — 64 advisor profiles, 3 free minutes + 50% off
+- `/reviews/kasamba/` — 112 advisor profiles, 3 free minutes + 50% off
 - `/reviews/keen/` — 49 advisor profiles, 5 minutes for $1
-- `/reviews/purple-garden/` — 49 advisor profiles, $30 free credit
+- `/reviews/purple-garden/` — 81 advisor profiles, $30 free credit
 
 ### Individual Reader Reviews (`/reviews/{platform}/{reader-slug}/`)
 

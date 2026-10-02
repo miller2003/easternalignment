@@ -113,7 +113,7 @@ This is why **total price alone is not a meaningful comparison**.
 
 ## Current Trial Offers (September 2026)
 
-The offer, not the list price, sets your real first-session cost. As of September 2026 the three platforms we cover run: Keen — 5 minutes for $1 (one-time new-client welcome); Kasamba — 3 free minutes with each new advisor plus 50% off your first session; Purple Garden — a $30 first-purchase credit (code 30free on the web). All three are enough to test a reader before you pay standard rates, which is exactly how to use the pricing framework below.
+The offer, not the list price, sets your real first-session cost. As of September 2026 the three platforms we cover run: Keen — 5 minutes for $1 (one-time new-client welcome); Kasamba — 3 free minutes with each new advisor plus 50% off your first session; Purple Garden — a $30 first-purchase credit (code 30free on the web). All three are enough to test a reader before you pay standard rates, which is exactly how to use the pricing framework below. Terms, codes and fine print for each are on our [psychic coupons page](/coupons/).
 
 ## What Determines the Price of a Psychic Reading?
 

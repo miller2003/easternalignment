@@ -1,1069 +1,1919 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PlatformCard from '../components/PlatformCard.astro';
-import ComparisonTable from '../components/ComparisonTable.astro';
 import FAQ from '../components/FAQ.astro';
 import ReaderMatch from '../components/ReaderMatch.astro';
+import { PLATFORM_OFFERS, platformLogo, type PlatformKey } from '../lib/offers';
+import { siteStats } from '../lib/siteStats';
+import { auditStats, lastReviewUpdate } from '../lib/auditStats';
+import { TOPIC_META, TOPIC_ORDER, topicUrl } from '../lib/guideHub';
+import { webPageNode, isoMax, fmtDate, fmtMonthYear, PLATFORM_ORGS, TOPIC_ENTITIES, IDS } from '../lib/seo';
+import pageMeta from '../data/page-meta.json';
 
 const SITE_URL = 'https://easternalignment.com';
 
-/* Fetch reviews for the platform cards */
+/* ──────────────────────────────────────────────────────────────────────
+   DATA — every number on this page is read from content at build time.
+     platform score / price range / rank / dates → content/reviews/*.md
+     welcome-offer wording + CTA labels         → lib/offers.ts
+     profile counts                             → lib/siteStats.ts
+     advisor cards + median rates               → content/readers/** frontmatter
+   Do not hand-write a rating, price, count or date anywhere below.
+   (readers.json is NOT used here: its reviewRating is a 4.9 placeholder.)
+   ────────────────────────────────────────────────────────────────────── */
+
 const reviewModules = import.meta.glob('../content/reviews/*.md', { eager: true });
 const reviews = Object.entries(reviewModules)
   .map(([path, mod]: [string, any]) => ({
     ...mod.frontmatter,
-    slug: path.split('/').pop()?.replace('.md', ''),
+    key: path.split('/').pop()!.replace('.md', '') as PlatformKey,
   }))
   .sort((a, b) => (a.rank || 99) - (b.rank || 99));
 
-/* Fetch guides */
 const guideModules = import.meta.glob('../content/guides/*.md', { eager: true });
-const guides = Object.entries(guideModules).map(([path, mod]: [string, any]) => ({
-  ...mod.frontmatter,
-  slug: path.split('/').pop()?.replace('.md', ''),
-}));
+const guideSlugs = new Set(Object.keys(guideModules).map((p) => p.split('/').pop()!.replace('.md', '')));
+const totalGuides = guideSlugs.size;
 
-/* Load all reader reviews to count them */
 const readerModules = import.meta.glob('../content/readers/**/*.md', { eager: true });
-const totalReaders = Object.keys(readerModules).length;
-const totalPlatforms = reviews.length;
-const totalGuides = guides.length;
+const readerEntries = Object.entries(readerModules)
+  .map(([path, mod]: [string, any]) => {
+    const fm = mod.frontmatter ?? {};
+    const platform = /readers\/([a-z-]+)\//.exec(path)?.[1] as PlatformKey;
+    const slug = path.split('/').pop()!.replace('.md', '');
+    const rate = Number(/\$(\d+(?:\.\d+)?)/.exec(String(fm.pricing ?? ''))?.[1]);
+    return {
+      platform,
+      slug,
+      name: String(fm.platformName ?? slug).split(':').slice(1).join(':').trim() || slug,
+      rating: Number(fm.rating) || 0,
+      rate: Number.isFinite(rate) && rate > 0 ? rate : null,
+      avatarUrl: fm.avatarUrl as string | undefined,
+      bestFor: String(fm.bestFor ?? ''),
+      proof: (fm.highlights ?? [])[0] as string | undefined,
+      affiliateUrl: (fm.affiliateUrl as string) || `/go/${PLATFORM_OFFERS[platform]?.goSlug}/`,
+      url: `/reviews/${platform}/${slug}/`,
+    };
+  })
+  .filter((r) => r.platform in PLATFORM_OFFERS);
 
-/* Curated "Start Here" guides — the best entry points for new readers */
-const curatedSlugs = [
-  'what-is-psychic-reading',
-  'questions-to-ask-a-psychic',
-  'how-to-choose-a-psychic-reader',
-  'how-much-does-a-psychic-reading-cost',
-  'best-psychic-hotlines-2026',
-  'signs-your-ex-is-coming-back',
-  'clairs-the-four-psychic-abilities-guide',
-  'karmic-relationships-signs-and-lessons',
-];
-const curatedGuides = curatedSlugs
-  .map(slug => guides.find(g => g.slug === slug))
-  .filter(Boolean);
+/* ── helpers ── */
+const median = (xs: number[]) => {
+  const s = [...xs].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+};
+const money = (n: number) => `$${n.toFixed(2)}`;
+const fmtRange = (p: string) => String(p).replace('/min to ', '–').replace(/\.00/g, '');
+const fmtMonth = (d: Date) => d.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const shorten = (s: string, max = 115) => {
+  const first = s.split(/\s[—–-]\s/)[0].trim();
+  if (first.length <= max) return first.replace(/[.,;:]$/, '');
+  return first.slice(0, first.lastIndexOf(' ', max)).replace(/[.,;:]$/, '') + '…';
+};
 
-/* Quick comparison table data — sourced from the full platform reviews.
-   Order: Kasamba (No.1, highest rating) → Purple Garden (No.2) → Keen (No.3).
-   Updated 2026-08-25 with the site-wide default rating reset. */
-const comparisonPlatforms = [
-  {
-    name: 'Kasamba',
-    affiliateUrl: '/go/kasamba/',
-    rating: 4.9,
-    pricing: '$1.99–$30+/min',
-    freeOffer: '3 free min per reader + 50% off',
-    specialties: 'Chat readings · Relationship specialists · Auto-saved transcripts',
-    satisfaction: 'Credit for unsatisfied sessions',
-    availability: '24/7 · 500+ advisors',
-    communication: 'Chat · Phone',
+const lastChecked = fmtMonth(
+  new Date(Math.max(...reviews.map((r) => new Date(r.updatedDate || r.publishDate).getTime())))
+);
+
+const lastCheckedShort = lastChecked.replace(/^(\w{3})\w*/, '$1'); // "Sep 2026"
+
+/* ── freshness + original-data layer (2026-10-02 SEO/GEO pass) ──
+   Page date = the later of "someone edited this page" (data/page-meta.json) and
+   "an audit behind it changed" (lib/auditStats). Same two sources feed the
+   sitemap <lastmod> in astro.config.mjs, so label, schema and sitemap agree. */
+const modifiedISO = isoMax(pageMeta.home.updated, auditStats.lastUpdated);
+const modifiedLabel = fmtDate(modifiedISO);
+const auditMonthYear = fmtMonthYear(auditStats.lastUpdated);
+const ov = auditStats.overall;
+const auditRows = auditStats.platforms;
+
+/* One quotable sentence on the spread between platforms. Handles ties. */
+const byMedian = [...auditRows].sort((a, b) => b.medianListedRate - a.medianListedRate);
+const hiMedian = byMedian[0].medianListedRate;
+const loMedian = byMedian[byMedian.length - 1].medianListedRate;
+const nameList = (xs: string[]) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}` : xs[0]);
+const hiNames = nameList(byMedian.filter((p) => p.medianListedRate === hiMedian).map((p) => p.name));
+const loNames = nameList(byMedian.filter((p) => p.medianListedRate === loMedian).map((p) => p.name));
+const spreadSentence = hiMedian === loMedian
+  ? `All three platforms share the same median listed rate, ${money(hiMedian)}/min.`
+  : `${hiNames} ${hiNames.includes(' and ') ? 'have' : 'has'} the highest median listed rate (${money(hiMedian)}/min); ${loNames} ${loNames.includes(' and ') ? 'sit' : 'sits'} lowest at ${money(loMedian)}/min.`;
+
+const homeTopics = TOPIC_ORDER.map((id) => ({ id, label: TOPIC_META[id].label, url: topicUrl(id) }));
+
+const ratesByPlatform = (k: PlatformKey) =>
+  readerEntries.filter((r) => r.platform === k && r.rate).map((r) => r.rate as number);
+const allRates = readerEntries.filter((r) => r.rate).map((r) => r.rate as number);
+const medianAll = median(allRates);
+
+/* ──────────────────────────────────────────────────────────────────────
+   EDITORIAL — judgement calls, not data. Policy terms ($50 / $25 / 72h /
+   $10 first purchase) mirror each platform review's FAQ; if a review's
+   terms change, update the matching line here in the same commit.
+   ────────────────────────────────────────────────────────────────────── */
+const EDITORIAL: Record<PlatformKey, {
+  tag: string;
+  situation: string;
+  chooseIf: string;
+  why: string;
+  skipIf: string;
+  formats: string;
+  guarantee: string;
+  weakness: string;
+  catches: string[];
+  play: string;
+}> = {
+  kasamba: {
+    tag: 'Our #1 overall',
+    situation: 'Love, breakups and “will they come back”',
+    chooseIf: 'your question is about a relationship and you want the answer in writing.',
+    why: 'The free minutes reset with every new advisor, so you can audition two or three relationship specialists before paying — and every chat is saved as a transcript you can check against what actually happens.',
+    skipIf: 'you want to see the reader. Kasamba is chat and phone only — no video.',
+    formats: 'Chat · Phone',
+    guarantee: 'Account credit up to $50 for a disappointing first session with a new advisor. Credit, not a card refund.',
+    weakness: 'The best-rated advisors charge $20+/min, and the huge roster is full of generalists you have to filter out.',
+    catches: [
+      'The 3 free minutes repeat with every new advisor; the 50% discount does not — it applies once, to your first paid session.',
+      'Top-rated advisors scale to $20+/min. Check the rate before your free minutes run out, not after.',
+    ],
+    play: 'Ask the same single question to two or three advisors inside their free minutes. Pay only the one who told you something specific you didn’t give them.',
   },
-  {
-    name: 'Purple Garden',
-    affiliateUrl: '/go/purple-garden/',
-    rating: 4.88,
-    pricing: '$0.99–$15+/min',
-    freeOffer: '$30 credit on first purchase',
-    specialties: 'Video readings · Journeys outcome ledger · Mobile app',
-    satisfaction: 'Site credit for technical issues',
-    availability: '24/7 · Curated mid-size roster',
-    communication: 'Video · Phone · Chat',
+  'purple-garden': {
+    tag: 'Best for video',
+    situation: 'Seeing the reader before you pay',
+    chooseIf: 'you want to watch a reader before spending anything, or you mostly read on your phone.',
+    why: 'Every advisor posts a 60-second video intro, and the public Journeys feed shows clients coming back to say whether a prediction landed — advisors can’t edit or delete those posts.',
+    skipIf: 'you read on a desktop. The website feels like an afterthought next to the app.',
+    formats: 'Video · Phone · Chat',
+    guarantee: 'Account credit for verified technical problems, such as a dropped call. No refunds for advice you didn’t like.',
+    weakness: 'The sub-$2/min chat tier has high turnover and the occasional copy-paste reading.',
+    catches: [
+      'The $30 credit unlocks with your first purchase (typically $10 or more). It is account credit, not cash, and it expires if unused.',
+      'Video, phone and chat are priced separately on the same advisor. Check the rate on the channel you’ll actually use.',
+    ],
+    play: 'Watch three video intros, then scan each advisor’s Journeys for dated predictions with client follow-ups. Spend the credit on the one with the most confirmed hits.',
   },
-  {
-    name: 'Keen',
-    affiliateUrl: '/go/keen/',
-    rating: 4.8,
-    pricing: '$1.99–$20+/min',
-    freeOffer: 'a low-cost introductory trial (typically around $1 for your first few minutes)',
-    specialties: 'Phone readings · Deepest roster · Un-deletable reviews',
-    satisfaction: 'Account credit, up to $25',
-    availability: '24/7 · Thousands of advisors',
-    communication: 'Phone · Chat',
+  keen: {
+    tag: 'Best for phone',
+    situation: 'Phone readings for the least money down',
+    chooseIf: 'you’d rather talk than type, and want to test a top-tier reader for pocket change.',
+    why: 'Keen’s client reviews can’t be deleted, so every advisor’s full track record is public — and its phone line connects instantly, with callbacks when a busy reader frees up.',
+    skipIf: 'you want a saved transcript to check later. Keen’s chat is an afterthought next to its phone service.',
+    formats: 'Phone · Chat',
+    guarantee: 'Up to $25 in Keen Dollars (account credit), requested within 72 hours, once every 30 days.',
+    weakness: 'An open marketplace: quality varies widely, so you have to read the review ledger before you call.',
+    catches: [
+      '5 minutes for $1 is a one-time welcome offer on your first session. After that you pay the advisor’s normal per-minute rate.',
+      'Coupon sites also push a “3 free minutes” variant. The $1 package is the one Keen itself promotes — claim that one.',
+    ],
+    play: 'Spend the $1 on the highest-rated advisor you can find, ask one specific question, and decide from the first answer whether they’re worth full price.',
   },
+};
+
+const platforms = reviews
+  .filter((r) => r.key in EDITORIAL)
+  .map((r) => {
+    const o = PLATFORM_OFFERS[r.key];
+    const rates = ratesByPlatform(r.key);
+    return {
+      key: r.key,
+      name: o.name,
+      rank: r.rank,
+      rating: r.rating,
+      range: fmtRange(r.pricing),
+      offer: o.offer,
+      ctaLabel: o.ctaLabel,
+      affiliateUrl: r.affiliateUrl,
+      reviewUrl: `/reviews/${r.key}/`,
+      logo: platformLogo(r.key),
+      profiles: siteStats.count(r.key),
+      medianRate: rates.length ? median(rates) : null,
+      ...EDITORIAL[r.key],
+    };
+  });
+
+/* Comparison rows — each value is either data or a one-line editorial
+   fact; the playbook section below carries the longer fine print. */
+const compareRows: { label: string; hint?: string; value: (p: (typeof platforms)[number]) => string }[] = [
+  { label: 'Our score', hint: '<a href="/methodology/#platform-methodology">How we score</a>', value: (p) => `<strong class="cmp-score">${p.rating}</strong><span class="cmp-unit">/5</span>` },
+  { label: 'Pick it for', value: (p) => p.situation },
+  { label: 'Welcome offer', value: (p) => `<strong>${p.offer}</strong>` },
+  { label: 'Per-minute range', value: (p) => p.range },
+  { label: 'Typical rate of advisors we audited', hint: 'Median listed rate', value: (p) => (p.medianRate ? `${money(p.medianRate)}/min` : '—') },
+  { label: 'Reading formats', value: (p) => p.formats },
+  { label: 'If a reading goes wrong', value: (p) => p.guarantee },
+  { label: 'Biggest weakness', value: (p) => p.weakness },
+  { label: 'Advisor profiles we’ve audited', value: (p) => `<a href="${p.reviewUrl}">${p.profiles} profiles →</a>` },
 ];
 
-/* Verdict cards — first card is the site-wide #1 (BEST OVERALL), then the
-   niche winners. Kasamba now wears "Best Overall"; Purple Garden keeps
-   "Best for Video & Mobile"; Keen's new niche tag is "Best for Phone"
-   (its $1/5min voice entry is its strongest play, not the overall crown). */
-const verdictCards = [
-  {
-    name: 'Kasamba',
-    tag: 'Best Overall',
-    url: '/reviews/kasamba/',
-    affiliate: '/go/kasamba/',
-    offer: '3 free minutes per new reader',
-    body: 'The highest overall score in my 2026 testing — and the safest platform to start on: 3 free minutes with every new advisor, permanent chat transcripts, and a relationship-specialist roster that no competitor matches at the same entry price.',
-  },
-  {
-    name: 'Purple Garden',
-    tag: 'Best for Video & Mobile',
-    url: '/reviews/purple-garden/',
-    affiliate: '/go/purple-garden/',
-    offer: '$30 credit on first purchase',
-    body: 'Mandatory video intros and the public Journeys ledger let you see and audit an advisor before spending a dollar. The most accessible entry price.',
-  },
-  {
-    name: 'Keen',
-    tag: 'Best for Phone',
-    url: '/reviews/keen/',
-    affiliate: '/go/keen/',
-    offer: 'a low-cost introductory trial (typically around $1 for your first few minutes)',
-    body: 'The deepest roster in the industry, the finest phone infrastructure, and the most transparent review ledger. The strongest choice for a phone-first seeker on the tightest budget.',
-  },
+/* Advisor shortlist — algorithmic, so it can't drift from the audits:
+   per platform, (1) our highest-scored advisor and (2) our highest-scored
+   advisor at or under VALUE_CAP/min. Ties → cheaper rate wins. */
+const VALUE_CAP = 7;
+const byScore = (a: (typeof readerEntries)[number], b: (typeof readerEntries)[number]) =>
+  b.rating - a.rating || (a.rate ?? 99) - (b.rate ?? 99) || a.slug.localeCompare(b.slug);
+type Pick = (typeof readerEntries)[number] & { pick: string; platformName: string };
+const picksByPlatform = platforms.map((p) => {
+  const pool = readerEntries.filter((r) => r.platform === p.key && r.rate).sort(byScore);
+  const top = pool[0];
+  const value = pool.find((r) => r !== top && (r.rate as number) <= VALUE_CAP);
+  return {
+    top: top && { ...top, pick: `Top score on ${p.name}`, platformName: p.name },
+    value: value && { ...value, pick: `Best value on ${p.name}`, platformName: p.name },
+  };
+});
+// Row 1 = top scores, row 2 = best values → each grid column is one platform.
+const shortlist = [
+  ...picksByPlatform.map((x) => x.top),
+  ...picksByPlatform.map((x) => x.value),
+].filter(Boolean) as Pick[];
+
+/* Situation router → the strongest existing guide for each intent. */
+const situations = [
+  { label: 'My ex went silent', detail: 'No contact and mixed signals — the real signs they’re coming back, and the false hope to ignore.', slug: 'signs-your-ex-is-coming-back' },
+  { label: 'Does he actually like me?', detail: 'New relationships and situationships — which readers give a straight answer.', slug: 'does-he-like-me-psychics' },
+  { label: 'Twin flame or soulmate?', detail: 'Readers who will tell you what they see, not what you want to hear.', slug: 'best-twin-flame-psychics-online' },
+  { label: 'Someone I’ve lost', detail: 'Evidential mediums — and what genuine evidence of contact sounds like.', slug: 'evidential-mediums-passed-spouse' },
+  { label: 'A career or money decision', detail: 'Practical readings for work crossroads, without mystical padding.', slug: 'career-and-money-psychic-readings' },
+  { label: 'My very first reading', detail: 'What to ask, what to hold back, and how to spend free minutes well.', slug: 'first-psychic-reading-guide' },
+].filter((s) => guideSlugs.has(s.slug));
+
+const redFlags = [
+  { title: 'A curse, “dark energy” or a blockage', body: '— followed by a paid removal. End the session.' },
+  { title: 'A guaranteed outcome', body: '“He’ll be back within 30 days, 100%.” Readings describe possibilities; guarantees are a sales script.' },
+  { title: 'Pressure to stay on the clock', body: 'Urgency, cliffhangers, “I’m seeing more — don’t go yet.” The meter is the motive.' },
+  { title: 'A move off the platform', body: 'Paying or talking elsewhere removes every refund and dispute right you have.' },
 ];
 
-/* Field notes — real, documented findings from my testing (each links to its source review) */
-const fieldNotes = [
-  {
-    title: 'The Transcript Audit (Kasamba)',
-    stat: 'Every chat session is saved permanently',
-    body: 'Predictions with windows become checkable claims. When an advisor says \u201ccommunication in 14 days,\u201d you pull the transcript three weeks later and audit it with clinical precision.',
-    link: '/reviews/kasamba/',
-    linkLabel: 'Read the full Kasamba review',
-  },
-  {
-    title: 'The Extended Purple Garden Audit',
-    stat: 'Video · Voice · Chat · Journeys ledger',
-    body: 'The Journeys threads I reviewed contained extensive authentic client follow-ups confirming whether a prediction materialized. Advisors cannot edit or delete those posts.',
-    link: '/guides/is-purple-garden-legit/',
-    linkLabel: 'Read the legitimacy audit',
-  },
-  {
-    title: 'The $1 Elite Test (Keen)',
-    stat: '$1 buys 5 minutes with a $15\u2013$20/min reader',
-    body: 'If an elite reader cannot deliver a profound, specific hit within five minutes, they are not worth your ongoing investment at any price. That single test beats an hour of reading reviews.',
-    link: '/reviews/keen/',
-    linkLabel: 'Read the full Keen review',
-  },
-  {
-    title: 'The Reader Who Earned Her Rating (Keen)',
-    stat: 'Krys Britton \u00b7 49,000 readings \u00b7 4.82 stars',
-    body: '8,523 verified ratings, 93% five-star, at $2.25/min \u2014 the best price-to-experience ratio I have documented in any review series. Keen reviews are un-deletable, so you can audit her full track record yourself before spending a dollar.',
-    link: '/reviews/keen/krys-britton-on-keen-review-2026/',
-    linkLabel: 'Read Krys Britton\u2019s review',
-  },
-  {
-    title: 'The Dedicated Medium (Keen)',
-    stat: 'Eye of Pheobe \u00b7 24 years \u00b7 2,680 sessions',
-    body: 'The only dedicated medium in my nine-reader Keen series. Her 4.69 rating is the hardest number in the series to earn, because mediumship has a single success condition: recognizable connection.',
-    link: '/reviews/keen/eye-of-pheobe-on-keen-review-2026/',
-    linkLabel: 'Read Eye of Pheobe\u2019s review',
-  },
-  {
-    title: 'The Chat Value Test (Purple Garden)',
-    stat: 'Tarot by Elena \u00b7 8-minute session \u00b7 complete reading',
-    body: '4,100+ readings delivered as card-by-card breakdowns. A fast, structured reader produces more usable content in 8 minutes than a slow one does in 20 \u2014 density, not rate, is the real price.',
-    link: '/reviews/purple-garden/tarot-by-elena/',
-    linkLabel: 'Read Tarot by Elena\u2019s review',
-  },
-];
-
-/* Testimonial-style excerpts — paraphrased from documented session notes in the reviews */
-const testaments = [
-  {
-    quote: 'Intensity is not the same thing as spiritual compatibility. What the cards show here is a karmic mirror \u2014 designed to trigger the wound so you finally build internal sovereignty.',
-    source: 'Twin Flame Specialist Aria, Purple Garden \u2014 8-minute video session',
-    link: '/reviews/purple-garden/twin-flame-specialist-aria/',
-  },
-  {
-    quote: 'He is not silent because he doesn\u2019t care. He is silent because his emotional bandwidth is consumed by external stress \u2014 and his attachment style treats vulnerability as a loss of autonomy.',
-    source: 'Empathic Intuitive Marcus, Purple Garden \u2014 voice session, minute 3',
-    link: '/reviews/purple-garden/empathic-intuitive-marcus/',
-  },
-  {
-    quote: 'Her Journeys feed is full of dated, checkable predictions \u2014 clients post follow-ups saying whether it happened, and she cannot edit or delete those posts.',
-    source: 'Psychic Medium Chloe, Purple Garden \u2014 public Journeys ledger',
-    link: '/reviews/purple-garden/psychic-medium-chloe/',
-  },
-];
+/* Quotable lead for the verdict section. Offers come from lib/offers.ts; the
+   statistics from lib/auditStats.ts — nothing hand-written that could drift. */
+const P = Object.fromEntries(platforms.map((p) => [p.key, p])) as Record<PlatformKey, (typeof platforms)[number]>;
+const shortAnswer =
+  `For most first-time clients, ${P.kasamba.name} is the best psychic site: ${P.kasamba.offer}, and every chat is saved as a transcript. ` +
+  `${P['purple-garden'].name} is best if you want to see the reader first (${P['purple-garden'].offer}, video-based) and ` +
+  `${P.keen.name} is best for phone readings (${P.keen.offer}). Across the ${siteStats.total} advisor profiles we audited, ` +
+  `the median listed rate is ${money(ov.medianListedRate)}/min and ${ov.shareAtOrUnder5PerMin}% of advisors list $5/min or less.`;
 
 const homeFAQs = [
   {
-    question: "Are online psychic readings legitimate?",
-    answer: "Many online platforms employ screened, experienced advisors who provide genuine intuitive guidance. The key is choosing reputable platforms that vet their psychics and offer satisfaction guarantees. My reviews are based on personal testing \u2014 real accounts, real money, documented sessions \u2014 to help you distinguish quality from pretenders."
+    question: 'Which psychic site is best for a first reading?',
+    answer: `<a href="/reviews/kasamba/">Kasamba</a>, for most people. The 3 free minutes repeat with every new advisor, so you can try two or three readers before paying anyone, and every chat is saved as a transcript. If you want to see the reader first, start with <a href="/reviews/purple-garden/">Purple Garden</a>; if you only want to talk on the phone, start with <a href="/reviews/keen/">Keen</a>.`,
   },
   {
-    question: "How much does an online psychic reading cost?",
-    answer: "Prices typically range from $0.99 to $30+ per minute, depending on the platform, the modality, and the reader\u2019s experience. Entry-level chat runs $1\u2013$5/min, professional readers with track records run $5\u2013$15/min, and elite specialists run $15\u2013$30+/min. Most major platforms offer free or heavily discounted introductory minutes so you can test the connection before committing. See the full <a href=\"/guides/how-much-does-a-psychic-reading-cost/\">pricing guide</a>."
+    question: 'Are Kasamba, Purple Garden and Keen legitimate?',
+    answer: `Yes — all three are established platforms with published refund or credit policies, and we have tested each as an ordinary paying customer (<a href="/reviews/kasamba/">Kasamba</a>, <a href="/reviews/purple-garden/">Purple Garden</a>, <a href="/reviews/keen/">Keen</a>). A legitimate platform does not make every advisor on it good, though: quality varies by reader, which is why we audit advisor profiles individually. The red flags that matter are in <a href="/guides/how-to-tell-if-an-online-psychic-is-legitimate/">How to tell if an online psychic is legitimate</a>.`,
   },
   {
-    question: "How do you review psychic platforms?",
-    answer: "I sign up for and test each platform personally over weeks or months. I evaluate roster quality, pricing transparency, user experience, customer support, satisfaction guarantees, and the accuracy of the readings I actually receive. Where available, I audit public outcome ledgers and session transcripts \u2014 for example, my extended audit of Purple Garden included reviewing the Journeys community ledger."
+    question: 'Do I need a promo code for a psychic reading?',
+    answer: `Usually not. Kasamba’s 3 free minutes + 50% off and Keen’s 5 minutes for $1 need no code. Purple Garden’s $30 credit applies automatically in the app; on the website, enter code 30free if it isn’t applied after you register. Every one of these is for new accounts only. The exact terms, and why coupon-site codes tend to fail, are on our <a href="/coupons/">psychic coupons page</a>.`,
   },
   {
-    question: "Which psychic reading platform is best for beginners?",
-    answer: "I generally recommend <a href=\"/go/kasamba/\" rel=\"nofollow sponsored\" target=\"_blank\" data-cta-source=\"faq\">Kasamba</a> for beginners \u2014 it is my #1 overall platform in 2026. New clients get <strong>3 free minutes with every new advisor</strong> (plus 50% off the first paid session), so you can test multiple relationship specialists risk-free before spending a dollar, and every chat session is saved as a permanent transcript you can audit later."
+    question: 'How do I choose the right psychic reader?',
+    answer: `Match the reader to the kind of question, not to the highest rating: reading what another person thinks is a different skill from coaching you through a decision, and tarot, intuitive and mediumship readers each suit different questions. Then audition the reader inside the free or intro minutes with one specific question. Our free <a href="/match/">reader match</a> does the first step for you, and <a href="/guides/how-to-choose-a-psychic-reader/">How to choose a psychic reader</a> explains the reasoning.`,
   },
   {
-    question: "Which platform is best for phone readings?",
-    answer: "Keen. Its telephone infrastructure is the best in the industry: immediate connections, a flawless callback system for busy readers, and an un-deletable review ledger that makes every advisor\u2019s track record public. If you trust your ears, Keen is the platform."
+    question: 'What is the cheapest way to try a psychic reading?',
+    answer: `Kasamba costs nothing to try — 3 free minutes with each new advisor — but three minutes is only enough for one question. Keen’s 5 minutes for $1 is the cheapest way to get a slightly longer first session with a top-tier reader. Purple Garden’s $30 credit is the most money, but it requires a first purchase (typically $10 or more) and is account credit, not cash.`,
   },
   {
-    question: "Which platform is best for chat readings with permanent records?",
-    answer: "Kasamba. Every chat session is saved automatically, turning every prediction into a written claim you can audit weeks later. Its 3 free minutes with every new advisor also make it the safest platform for testing many readers risk-free."
+    question: 'How much does a psychic reading actually cost?',
+    answer: `Platform rates run from under $1 to over $30 a minute. Across the ${allRates.length} advisor profiles we’ve audited, the median listed rate is ${money(medianAll)}/min — so a focused 15-minute reading with a well-rated advisor costs roughly $${Math.round(medianAll * 15)}. The full breakdown is in our <a href="/guides/how-much-does-a-psychic-reading-cost/">pricing guide</a>.`,
   },
   {
-    question: "Which platform is best for video readings?",
-    answer: "Purple Garden. Every advisor is required to post a 60-second video introduction, and its public Journeys ledger lets you audit how clients\u2019 predictions actually landed. It is the only major platform where you can see and inspect an advisor before spending a dollar."
+    question: 'Can I get a refund if a reading is bad?',
+    answer: `Rarely in cash. All three platforms compensate with account credit: Kasamba up to $50 for a disappointing first session with a new advisor, Keen up to $25 in Keen Dollars if you ask within 72 hours, and Purple Garden for verified technical problems. None of them refund a reading because you didn’t like the answer — which is why auditioning readers inside the free minutes matters.`,
   },
   {
-    question: "What is the difference between a psychic and a medium?",
-    answer: "A psychic perceives information about your circumstances, relationships, or likely path through extrasensory perception. A medium specifically works with people who have died. All mediums are psychics, but not all psychics are mediums \u2014 mediumship is a specialized discipline with a much harder standard of evidence. See the full <a href=\"/guides/psychic-vs-medium-vs-tarot-reader/\">breakdown</a>."
+    question: 'Are online psychic readings legit?',
+    answer: `The platforms are real businesses with real refund policies; the readers vary enormously. A good reading leaves you with specific, checkable statements and a clearer head. A bad one is vague, flattering, or tries to sell you a fix for a problem it just invented. We review platforms and advisors so you can tell the two apart before paying — see <a href="/methodology/">how we test</a>.`,
   },
   {
-    question: "How do I avoid psychic scams?",
-    answer: "The industry\u2019s scam patterns are consistent: manufactured fear (curses, dark energy, blocks), escalating paid \u201cremovals,\u201d guaranteed outcomes, and the waiting loop that keeps clients paying month after month. A legitimate reading leaves you clearer, not more afraid. I\u2019ve documented every pattern in the <a href=\"/guides/how-to-spot-fake-psychic/\">fake psychic detection guide</a>."
+    question: 'How do I spot a fake psychic?',
+    answer: `Walk away from anyone who diagnoses a curse or “dark energy” and offers a paid removal, guarantees an outcome, pressures you to stay on the clock, or asks to continue off the platform. We’ve documented every pattern in <a href="/guides/how-to-spot-fake-psychic/">How to Spot a Fake Psychic</a>.`,
   },
   {
-    question: "How do I prepare for my first reading?",
-    answer: "Write down one focused question before the session, give the reader minimal backstory, and let them demonstrate unprompted specificity before you confirm anything. The question quality determines the reading quality. My <a href=\"/guides/questions-to-ask-a-psychic/\">question guide</a> and <a href=\"/guides/first-psychic-reading-guide/\">first-reading guide</a> walk through the whole protocol."
-  },
-  {
-    question: "Is the $30 Purple Garden credit really free?",
-    answer: "Yes — it's applied to your first purchase (typically auto-applied in the app, or via promo code 30free on the website) and lets you book a full intro session with a newer reader before spending much of your own money. It is not a cash refund and expires if unused, so spend it on your first reading."
-  },
-  {
-    question: "Why does Kasamba give 3 free minutes with every new reader?",
-    answer: "Because the free minutes reset per advisor, not per account. You can audition two or three different psychics risk-free, which is the platform's main edge over competitors that charge from minute one. Use them to ask one focused opening question and judge whether the reader gives something specific."
+    question: 'How does Eastern Alignment make money — and does it affect the rankings?',
+    answer: `If you sign up through our links, the platform may pay us a commission at no cost to you. It doesn’t buy a score: our scoring weights are published and fixed before testing, no platform can negotiate them, and advisors who use fear tactics are excluded regardless of rating. Details are in our <a href="/disclosure/">disclosure</a> and <a href="/methodology/">methodology</a>.`,
   },
 ];
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Eastern Alignment",
-  "url": "https://easternalignment.com",
-  "logo": "https://easternalignment.com/logo.jpg",
-  "description": "Honest, independent reviews of online psychic reading platforms. Researched and documented with firsthand experience.",
-  "founder": {
-    "@type": "Person",
-    "name": "Sarah"
-  }
+/* Organization / WebSite / Person nodes are emitted site-wide by BaseLayout
+   (and carry the @ids used below). The homepage adds: the WebPage itself with
+   freshness + speakable, the ranked platform list, and the audit Dataset that
+   backs the "What our audits show" section and /data/psychic-platform-audit.json. */
+const HOME_URL = `${SITE_URL}/`;
+const seoTitle = 'Best Psychic Reading Sites 2026: Kasamba, Keen & Purple Garden';
+const metaDescription = `Best online psychic sites compared: Kasamba, Purple Garden and Keen, tested on paid accounts. Prices, free minutes, refund rules and ${siteStats.total} audited advisors.`;
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    webPageNode({
+      url: HOME_URL,
+      name: 'Eastern Alignment — independent psychic platform reviews',
+      headline: seoTitle,
+      description: metaDescription,
+      type: ['WebPage', 'CollectionPage'],
+      dateModified: modifiedISO,
+      lastReviewed: lastReviewUpdate,
+      about: [TOPIC_ENTITIES.psychic, TOPIC_ENTITIES.tarot, TOPIC_ENTITIES.mediumship, TOPIC_ENTITIES.astrology],
+      mentions: PLATFORM_ORGS,
+      speakable: ['.hero-title', '#short-answer .answer-capsule__text'],
+      mainEntityId: `${HOME_URL}#platforms`,
+    }),
+    {
+      '@type': 'ItemList',
+      '@id': `${HOME_URL}#platforms`,
+      name: 'Best online psychic reading platforms (2026)',
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      numberOfItems: platforms.length,
+      itemListElement: platforms.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: `${p.name}: ${p.tag}`,
+        description: `${p.situation}. Welcome offer: ${p.offer}. Listed per-minute range ${p.range}.`,
+        url: `${SITE_URL}${p.reviewUrl}`,
+      })),
+    },
+    {
+      '@type': 'Dataset',
+      '@id': `${HOME_URL}#audit-dataset`,
+      name: 'Online psychic platform audit: listed rates and audit scores for Kasamba, Purple Garden and Keen',
+      description:
+        `Platform-level figures from Eastern Alignment’s audit of ${siteStats.total} public advisor profiles on Kasamba, Purple Garden and Keen: ` +
+        'median, lowest and highest listed per-minute rate, share of advisors at or under $5/min, average audit score, and each platform’s new-client welcome offer.',
+      url: `${HOME_URL}#audit-data`,
+      keywords: ['psychic reading prices', 'psychic reading cost per minute', 'Kasamba', 'Purple Garden', 'Keen', 'online psychic platforms'],
+      creator: { '@id': IDS.organization },
+      publisher: { '@id': IDS.organization },
+      isAccessibleForFree: true,
+      dateModified: auditStats.lastUpdated,
+      temporalCoverage: auditStats.lastUpdated.slice(0, 4),
+      isBasedOn: `${SITE_URL}/methodology/`,
+      measurementTechnique:
+        'Manual audit of each advisor’s public profile. Listed rate = the lowest per-minute rate shown on the profile; audit score = our editorial 1–5 score under the published scoring weights.',
+      variableMeasured: [
+        { '@type': 'PropertyValue', name: 'Listed per-minute rate', unitText: 'USD per minute' },
+        { '@type': 'PropertyValue', name: 'Audit score', minValue: 1, maxValue: 5 },
+        { '@type': 'PropertyValue', name: 'Share of advisors at or under $5 per minute', unitText: 'percent' },
+      ],
+      distribution: [
+        {
+          '@type': 'DataDownload',
+          encodingFormat: 'application/json',
+          contentUrl: `${SITE_URL}/data/psychic-platform-audit.json`,
+        },
+      ],
+      citation: `Eastern Alignment (${auditStats.lastUpdated.slice(0, 4)}). Online psychic platform audit. ${SITE_URL}/`,
+    },
+  ],
 };
 ---
 
 <BaseLayout
-  title="Eastern Alignment: Independent Psychic Reviews & Reader Rankings (2026)"
-  description={`Eastern Alignment — independent psychic platform reviews. ${totalReaders} advisor profiles published across Kasamba, Purple Garden, and Keen with firsthand research and documented sessions. See the 2026 rankings.`}
-  jsonLd={orgSchema}
+  title="Eastern Alignment: Psychic Reviews Tested Before You Pay (2026)"
+  description={metaDescription}
+  seoTitle={seoTitle}
+  metaDescription={metaDescription}
+  modifiedTime={modifiedISO}
+  jsonLd={pageSchema}
   hreflangEs={`${SITE_URL}/es/`}
   topOfferPlatform="kasamba"
 >
-  <!-- Hero Section -->
-  <section class="hero section--lg">
-    <div class="container">
-      <div class="hero-content">
-        <span class="hero-eyebrow text-xs text-uppercase text-muted">Objective Testing · Independent Reviews · Precision Matching</span>
-        <h1 class="hero-title">Finding Clarity in <br /><span class="text-gradient">Online Psychic Readings</span></h1>
-        <p class="hero-subtitle">
-          We independently test and evaluate online psychic reading platforms — delivering objective, authentic reviews documented session by session so you can find trustworthy guidance without the guesswork. Over {totalReaders}+ advisor profiles audited across Kasamba, Purple Garden, and Keen. When you need direct answers tailored to your situation, our advanced matching engine cuts through platform marketing to pair your exact dilemma with the vetted reader best equipped to help.
-        </p>
-        <div class="hero-actions">
-          <a href="#match" class="btn btn--primary btn--lg" data-match-open>Match Your Situation</a>
-          <a href="#comparison" class="btn btn--secondary btn--lg">Compare Top Platforms</a>
-        </div>
-        <div class="hero-meta">
-          <span class="hero-meta-item">Audited by <a href="/about/">Eastern Alignment</a></span>
-          <span class="hero-meta-dot" aria-hidden="true">·</span>
-          <span class="hero-meta-item">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
-          <span class="hero-meta-dot" aria-hidden="true">·</span>
-          <span class="hero-meta-item">{totalReaders}+ reader audits published</span>
-          <span class="hero-meta-dot" aria-hidden="true">·</span>
-          <span class="hero-meta-item">{totalGuides} guides &amp; comparisons on site</span>
-        </div>
+  <link slot="head" rel="alternate" type="application/json" href="/data/psychic-platform-audit.json" title="Online psychic platform audit data (JSON)" />
+  <!-- ═══ 1. HERO — the promise, the proof, two ways forward ═══ -->
+  <section class="home-hero">
+    <div class="container hero-inner">
+      <p class="kicker">Independent psychic reviews · tested on paid accounts</p>
+      <h1 class="hero-title">
+        Know which psychic is worth paying <span class="text-gradient">before you pay.</span>
+      </h1>
+      <p class="hero-sub">
+        We test Kasamba, Purple Garden and Keen as ordinary paying customers, audit advisors’ public
+        track records, and publish the fine print the platforms bury — so your first reading goes to
+        the right person.
+      </p>
+      <div class="hero-actions">
+        <a href="/match/" class="btn btn--primary btn--lg" data-match-open>Find my reader — 2-minute match</a>
+        <a href="#verdict" class="btn btn--secondary btn--lg">See the verdict</a>
       </div>
+      <ul class="hero-proof" aria-label="About our testing">
+        <li><strong>{siteStats.total}</strong><span>advisor profiles audited</span></li>
+        <li><strong>{platforms.length}</strong><span>platforms tested with our own money</span></li>
+        <li><strong>{totalGuides}</strong><span>buyer guides</span></li>
+        <li><strong>{lastCheckedShort}</strong><span>offers last re-checked</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- Situation-Based Reader Match Engine — launcher card + bottom-sheet
-       overlay (MysticDo-style modal host, iPhone Safari tuned) -->
-  <ReaderMatch id="match" mode="modal" />
-
-  <!-- Link to the full /match/ page (editorial version of the tool) -->
-  <section class="container" style="text-align: center; margin-top: calc(-1 * var(--space-6)); margin-bottom: var(--space-8);">
-    <p class="text-sm text-muted" style="margin: 0;">
-      Prefer the full guided version?
-      <a href="/match/"><strong>Open the complete Reader Match page</strong></a>
-      — situation diagnosis, the 3-minute audition protocol, and the matching FAQ included.
-    </p>
-  </section>
-
-  <!-- Trust Bar -->
-  <section class="trust-bar section--alt">
+  <!-- ═══ 2. VERDICT — the answer, with the reason to skip each pick ═══ -->
+  <section class="section verdict" id="verdict">
     <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item">
-          <span class="trust-number">{totalPlatforms}</span>
-          <span class="trust-label">Platforms Covered In-Depth</span>
-        </div>
-        <div class="trust-divider" aria-hidden="true"></div>
-        <div class="trust-item">
-          <span class="trust-number">{totalReaders}+</span>
-          <span class="trust-label">Reader Profiles Published</span>
-        </div>
-        <div class="trust-divider" aria-hidden="true"></div>
-        <div class="trust-item">
-          <span class="trust-number">{totalGuides}</span>
-          <span class="trust-label">Guides &amp; Comparisons</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Comparison -->
-  <section class="quick-compare section" id="comparison">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow text-xs text-uppercase text-muted">Side-by-Side · Tested in 2026</span>
-        <h2 class="section-title">The Best Psychic Platforms Compared</h2>
-        <p class="section-desc text-muted">
-          Three platforms, one standard: every number below comes from firsthand research — not from marketing pages. Kasamba is my #1 overall pick for most seekers in 2026; Purple Garden is the strongest video/mobile choice, and Keen remains the best phone-first platform at the lowest entry price.
+      <header class="sec-head">
+        <p class="kicker">The 30-second answer</p>
+        <h2 class="sec-title">Which psychic site should you use?</h2>
+        <p class="sec-desc">
+          There is no single best site — there is a best one for how you want your reading.
+          Every pick below comes with the reason <em>not</em> to choose it.
         </p>
+      </header>
+
+      <div class="answer-capsule" id="short-answer">
+        <p class="answer-capsule__label">
+          Short answer · updated <time datetime={modifiedISO}>{modifiedLabel}</time>
+        </p>
+        <p class="answer-capsule__text">{shortAnswer}</p>
       </div>
 
-      <ComparisonTable platforms={comparisonPlatforms} highlightIndex={0} />
+      <div class="picks">
+        {platforms.map((p, i) => (
+          <article class:list={['pick', { 'pick--top': i === 0 }]}>
+            <header class="pick-head">
+              <img src={p.logo} alt="" class="pick-logo" width="48" height="48" loading="lazy" />
+              <div class="pick-id">
+                <span class="pick-tag">#{i + 1} · {p.tag}</span>
+                <h3 class="pick-name"><a href={p.reviewUrl}>{p.name}</a></h3>
+              </div>
+              <div class="pick-score" aria-label={`Our score: ${p.rating} out of 5`}>
+                <strong>{p.rating}</strong><span>/5</span>
+              </div>
+            </header>
 
-      <div class="verdict-grid stagger">
-        {verdictCards.map(card => (
-          <div class="verdict-card card">
-            <div class="verdict-card-head">
-              <span class="badge badge--primary">{card.tag}</span>
-              <h3 class="verdict-card-name">{card.name}</h3>
+            <p class="pick-choose"><strong>Choose it if</strong> {p.chooseIf}</p>
+            <p class="pick-why">{p.why}</p>
+
+            <dl class="pick-facts">
+              <div><dt>Welcome offer</dt><dd>{p.offer}</dd></div>
+              <div><dt>Price range</dt><dd>{p.range}</dd></div>
+              <div><dt>Formats</dt><dd>{p.formats}</dd></div>
+            </dl>
+
+            <p class="pick-skip"><strong>Skip it if</strong> {p.skipIf}</p>
+
+            <div class="pick-actions">
+              <a href={p.affiliateUrl} class="btn btn--primary btn--full" rel="nofollow sponsored" target="_blank" data-cta-source="home-verdict">{p.ctaLabel}</a>
+              <a href={p.reviewUrl} class="pick-review">Read the full {p.name} review →</a>
             </div>
-            <p class="verdict-card-body text-muted">{card.body}</p>
-            <div class="verdict-card-offer">
-              <span class="offer-label">Offer:</span>
-              <span class="offer-value">{card.offer}</span>
-            </div>
-            <div class="verdict-card-actions">
-              <a href={card.affiliate} class="btn btn--primary btn--sm" rel="nofollow sponsored" target="_blank">Visit {card.name} →</a>
-              <a href={card.url} class="btn btn--ghost btn--sm">Full Review</a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- The Short Version (flagship editorial) -->
-  <section class="short-version section section--alt">
-    <div class="container container--narrow">
-      <div class="byline-card">
-        <img src="/sarah-avatar.jpg" alt="Sarah — founder of Eastern Alignment" class="byline-avatar" width="56" height="56" loading="lazy" />
-        <div class="byline-text">
-          <span class="text-xs text-uppercase text-muted">Written by</span>
-          <span class="byline-name">Sarah</span>
-          <span class="byline-title text-sm text-muted">Spiritual Wellness Researcher · Years of testing psychic platforms</span>
-        </div>
-      </div>
-
-      <div class="prose">
-        <h2>The Short Version: What I Recommend After Years of Testing</h2>
-        <p class="text-muted">
-          I re-verified every platform, price, and trial offer on this page in September 2026 using live accounts, not marketing copy. The three promotions above — Kasamba's 3 free minutes + 50% off, Purple Garden's $30 first-purchase credit, and Keen's dollar trial — were all live at the time of checking. One practical shift worth noting: across 2026 the platforms have leaned harder into video and app-only features, so if you mostly read on desktop, test the mobile experience before you commit.
-        </p>
-        <p>
-          If you only read one section of this page, read this one. After years of firsthand research across the major platforms — real sessions, documented observations, and every platform reviewed below evaluated with my own money — the honest conclusion is that there is no single "best" psychic platform. There is the best platform <em>for your situation</em>, and the differences are more consequential than the marketing suggests.
-        </p>
-        <p>
-          <a href="/reviews/kasamba/">Kasamba</a> is my #1 overall recommendation for most people in 2026. It earned the highest score in my latest testing because it pairs two genuinely rare things: a relationship-specialist roster that no competitor matches at the same entry price, and <strong>3 free minutes with every new advisor</strong> (plus 50% off the first paid session). The permanent chat transcripts make every prediction a claim you can audit later. If you are new to online readings, start here.
-        </p>
-        <p>
-          <a href="/reviews/purple-garden/">Purple Garden</a> is the modern answer to the industry\u2019s core trust problem. Every advisor is required to post a 60-second video introduction, and its public Journeys ledger — where clients document whether predictions came true — is the only platform-level outcome record I have found anywhere. Its <strong>$30 first-purchase credit</strong> and sub-$1 entry rates make it the most accessible way to start, especially if you prefer video or are on mobile.
-        </p>
-        <p>
-          <a href="/reviews/keen/">Keen</a> is the choice for voice-first seekers on the tightest budget. It has the deepest roster in the industry, the finest phone infrastructure, and — most importantly — the only truly un-deletable public review ledger I have found. Quality is visible on Keen if you are willing to look, and its <strong>a low-cost introductory trial (typically around $1 for your first few minutes)</strong> lets you test a top-tier phone reader for pocket change.
-        </p>
-        <p>
-          The common thread in every platform I recommend: they let you <em>verify</em>. The platforms I tell people to avoid are the ones that hide their rosters, scrub negative reviews, or monetize fear. I have documented the scam patterns in my <a href="/guides/how-to-spot-fake-psychic/">fake psychic guide</a> — and the single most useful habit you can build is treating every reading as a hypothesis to be checked, not a verdict to be obeyed.
-        </p>
-        <div class="section-cta">
-          <a href="/reviews/" class="btn btn--primary">Read All Platform Reviews →</a>
-          <a href="/comparisons/" class="btn btn--secondary">See the Comparisons →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Reviews -->
-  <section class="featured-reviews section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow text-xs text-uppercase text-muted">Independently Researched & Ranked</span>
-        <h2 class="section-title">How to Use This 2026 Comparison</h2>
-        <p class="section-desc text-muted">
-          Treat the table as a starting filter, not a verdict. In my 2026 testing the single biggest cost driver was modality: video and phone readings on the same advisor often bill at different per-minute rates, and Purple Garden in particular prices Live Video, Phone, and Chat independently. Before your first paid session, open the advisor's rate card on the exact channel you'll use and burn the free minutes as an audition — end the call inside the free window if the connection feels generic. The readings that helped me most were the ones where I arrived with one specific question, not a vague "what's my future."
-        </p>
-
-        <h2 class="section-title">Best Psychic Reading Platforms 2026</h2>
-        <p class="section-desc text-muted">
-          My rankings are based on real experiences — not advertising dollars. Every platform below has been independently researched and evaluated, and the full review for each documents what I actually found.
-        </p>
-      </div>
-
-      <div class="review-cards stagger">
-        {reviews.map(review => (
-          <PlatformCard
-            rank={review.rank}
-            name={review.platformName}
-            slug={review.slug}
-            rating={review.rating}
-            verdict={review.verdict}
-            bestFor={review.bestFor || 'General readings'}
-            highlights={review.highlights || []}
-            affiliateUrl={review.affiliateUrl}
-            freeOffer={review.freeOffer}
-            isTopPick={review.rank === 1}
-          />
+          </article>
         ))}
       </div>
 
-      <div class="section-cta">
-        <a href="/reviews/" class="btn btn--secondary">View All Reviews →</a>
-      </div>
+      <p class="verdict-foot">
+        Want specific names, not just a platform?
+        <a href="/match/" data-match-open>Tell us your situation and get a shortlist of advisors →</a>
+      </p>
     </div>
   </section>
 
-  <!-- Field Notes: documented testing evidence -->
-  <section class="field-notes section section--alt">
+  <!-- ═══ 3. COMPARE — the details that change what you pay ═══ -->
+  <section class="section section--alt" id="compare">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow text-xs text-uppercase text-muted">Documented Evidence</span>
-        <h2 class="section-title">Field Notes: Documented Findings Behind My Reviews</h2>
-        <p class="section-desc text-muted">
-          Anyone can write a review. These are the documented findings behind mine — verifiable claims, platform data, and session observations, each linked to the full source.
+      <header class="sec-head">
+        <p class="kicker">Side by side</p>
+        <h2 class="sec-title">The details that change what you pay</h2>
+        <p class="sec-desc">
+          Scores, prices and terms come from our platform reviews (re-checked {lastChecked}) and the
+          {siteStats.total} advisor profiles we’ve audited — not from the platforms’ marketing pages.
         </p>
+      </header>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <caption class="sr-only">Kasamba, Purple Garden and Keen compared</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="cmp-corner"><span class="sr-only">Feature</span></th>
+              {platforms.map((p, i) => (
+                <th scope="col" class:list={['cmp-plat', { 'cmp-plat--top': i === 0 }]}>
+                  <img src={p.logo} alt="" width="28" height="28" loading="lazy" />
+                  <span>{p.name}</span>
+                  {i === 0 && <span class="cmp-badge">Our #1</span>}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {compareRows.map((row) => (
+              <tr>
+                <th scope="row">
+                  {row.label}
+                  {row.hint && <span class="cmp-hint" set:html={row.hint} />}
+                </th>
+                {platforms.map((p, i) => (
+                  <td data-label={p.name} class:list={{ 'cmp-top': i === 0 }}><span class="cmp-v" set:html={row.value(p)} /></td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row"><span class="sr-only">Visit</span></th>
+              {platforms.map((p) => (
+                <td data-label={p.name}>
+                  <a href={p.affiliateUrl} class="btn btn--primary btn--sm btn--full" rel="nofollow sponsored" target="_blank" data-cta-source="home-table">{p.ctaLabel}</a>
+                </td>
+              ))}
+            </tr>
+          </tfoot>
+        </table>
       </div>
 
-      <div class="field-notes-grid stagger">
-        {fieldNotes.map(note => (
-          <div class="field-note card">
-            <h3 class="field-note-title">{note.title}</h3>
-            <div class="field-note-stat">{note.stat}</div>
-            <p class="field-note-body text-muted text-sm">{note.body}</p>
-            <a href={note.link} class="field-note-link text-sm">{note.linkLabel} →</a>
-          </div>
+      <p class="cmp-more">
+        Deciding between two?
+        <a href="/comparisons/kasamba-vs-keen/">Kasamba vs Keen</a> ·
+        <a href="/comparisons/purple-garden-vs-kasamba/">Purple Garden vs Kasamba</a> ·
+        <a href="/comparisons/purple-garden-vs-keen/">Purple Garden vs Keen</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ 3b. OUR DATA — original, citable numbers from the audits ═══ -->
+  <section class="section" id="data">
+    <div class="container">
+      <header class="sec-head">
+        <p class="kicker">Original data</p>
+        <h2 class="sec-title">What {siteStats.total} advisor audits show</h2>
+        <p class="sec-desc">
+          Every advisor we audit gets a recorded listed rate and a 1–5 audit score. These figures are
+          recalculated from those audits whenever they change. Last updated
+          <time datetime={auditStats.lastUpdated}>{auditMonthYear}</time>.
+        </p>
+      </header>
+
+      <ul class="stats" aria-label="Headline numbers from our advisor audits">
+        <li class="stat">
+          <strong>{ov.profiles}</strong>
+          <span>advisor profiles audited across {auditRows.length} platforms</span>
+        </li>
+        <li class="stat">
+          <strong>{money(ov.medianListedRate)}<small>/min</small></strong>
+          <span>median listed rate, lowest to highest {money(ov.lowestListedRate)}–{money(ov.highestListedRate)}</span>
+        </li>
+        <li class="stat">
+          <strong>{ov.shareAtOrUnder5PerMin}<small>%</small></strong>
+          <span>of advisors list $5.00/min or less</span>
+        </li>
+        <li class="stat">
+          <strong>{ov.averageAuditScore.toFixed(2)}<small>/5</small></strong>
+          <span>average audit score; 80% of advisors score {ov.auditScoreP10.toFixed(1)}–{ov.auditScoreP90.toFixed(1)}, so <em>fit</em> matters more than rating</span>
+        </li>
+      </ul>
+
+      <div class="cmp-wrap">
+        <table class="cmp data-table">
+          <caption class="sr-only">Listed rates and audit scores by platform</caption>
+          <thead>
+            <tr>
+              <th scope="col">Platform</th>
+              <th scope="col">Profiles audited</th>
+              <th scope="col">Median listed rate</th>
+              <th scope="col">Lowest – highest</th>
+              <th scope="col">At or under $5/min</th>
+              <th scope="col">Average audit score</th>
+            </tr>
+          </thead>
+          <tbody>
+            {auditRows.map((r) => (
+              <tr>
+                <th scope="row"><a href={`/reviews/${r.key}/`}>{r.name}</a></th>
+                <td data-label="Profiles audited">{r.profiles}</td>
+                <td data-label="Median listed rate">{money(r.medianListedRate)}/min</td>
+                <td data-label="Lowest – highest">{money(r.lowestListedRate)} – {money(r.highestListedRate)}</td>
+                <td data-label="At or under $5/min">{r.shareAtOrUnder5PerMin}%</td>
+                <td data-label="Average audit score">{r.averageAuditScore.toFixed(2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="data-note">
+        {spreadSentence} A “listed rate” is the lowest per-minute rate on an advisor’s public profile; advisors
+        set and change their own prices, so confirm the rate on the profile before you book.
+        Method: <a href="/methodology/">how we audit and score</a>.
+        Free to quote with a link to this page. Raw numbers:
+        <a href="/data/psychic-platform-audit.json">psychic-platform-audit.json</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ 4. BEFORE YOU PAY — fine print + red flags ═══ -->
+  <section class="section" id="before-you-pay">
+    <div class="container">
+      <header class="sec-head">
+        <p class="kicker">Avoid the traps</p>
+        <h2 class="sec-title">Read this before you claim any offer</h2>
+        <p class="sec-desc">
+          Every welcome offer has a catch. None of them are deal-breakers — as long as you know them going in.
+        </p>
+      </header>
+
+      <div class="playbook">
+        {platforms.map((p) => (
+          <article class="pb">
+            <h3 class="pb-title">
+              <img src={p.logo} alt="" width="28" height="28" loading="lazy" />
+              <span>{p.name}<small>{p.offer}</small></span>
+            </h3>
+            <p class="pb-label pb-label--catch">The catch</p>
+            <ul class="pb-list">
+              {p.catches.map((c) => <li>{c}</li>)}
+            </ul>
+            <p class="pb-label pb-label--play">Play it like this</p>
+            <p class="pb-play">{p.play}</p>
+          </article>
         ))}
       </div>
 
-      <!-- Documented session excerpts -->
-      <div class="testament-grid stagger">
-        {testaments.map(t => (
-          <figure class="testament-card card">
-            <blockquote class="testament-quote">“{t.quote}”</blockquote>
-            <figcaption class="testament-source text-sm text-muted">{t.source}</figcaption>
-            <a href={t.link} class="testament-link text-sm">See the session notes →</a>
-          </figure>
-        ))}
+      <div class="flags">
+        <div class="flags-head">
+          <h3 class="flags-title">Walk away from any reader, on any platform, who gives you…</h3>
+          <a href="/guides/how-to-spot-fake-psychic/" class="flags-link">All 13 red flags →</a>
+        </div>
+        <ol class="flags-list">
+          {redFlags.map((f) => (
+            <li><strong>{f.title}</strong> {f.body}</li>
+          ))}
+        </ol>
+        <p class="flags-foot">
+          Also worth ten minutes before your first session:
+          <a href="/guides/before-you-pay-for-a-psychic-reading/">13 things to know before you pay</a> ·
+          <a href="/guides/questions-to-ask-a-psychic/">Questions that get real answers</a> ·
+          <a href="/guides/free-psychic-readings-online-truth/">What “free reading” really means</a>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- How I Review -->
-  <section class="methodology section">
+  <!-- ═══ 5. SITUATIONS — route by intent + the matching tool ═══ -->
+  <section class="section section--alt" id="situations">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow text-xs text-uppercase text-muted">My Process</span>
-        <h2 class="section-title">How I Review Platforms</h2>
-        <p class="section-desc text-muted">
-          I don't just browse websites and call it a review. Here's what sets my process apart — and why every number on this page is worth trusting.
-        </p>
-      </div>
+      <header class="sec-head">
+        <p class="kicker">Start from your situation</p>
+        <h2 class="sec-title">What are you trying to find out?</h2>
+        <p class="sec-desc">Each guide names the advisors we’d book for that exact question — and the ones we wouldn’t.</p>
+      </header>
 
-      <div class="method-grid grid grid--3 stagger">
-        <div class="method-card card">
-          <span class="method-number">01</span>
-          <h3 class="method-title">I Sign Up & Pay</h3>
-          <p class="method-desc text-muted text-sm">
-            I create real accounts and pay with real money — no free press passes, no special treatment. My Purple Garden research alone spanned an extended period, covering multiple advisors across video, voice, and chat.
-          </p>
-        </div>
-        <div class="method-card card">
-          <span class="method-number">02</span>
-          <h3 class="method-title">I Get Readings & Keep Records</h3>
-          <p class="method-desc text-muted text-sm">
-            Multiple sessions per platform, across different specialties and advisors. I keep transcripts, note exact predictions with their windows, and audit them against reality weeks later — the same way you should.
-          </p>
-        </div>
-        <div class="method-card card">
-          <span class="method-number">03</span>
-          <h3 class="method-title">I Share Honestly — Both Directions</h3>
-          <p class="method-desc text-muted text-sm">
-            The good, the bad, and the mediocre, with the same candor. I've documented readers who told paying clients hard truths at their own financial cost, and platforms whose guarantees I deliberately stress-tested.
-          </p>
-        </div>
-      </div>
-
-      <div class="ledger-strip">
-        <div class="ledger-item">
-          <span class="ledger-value">{totalPlatforms}</span>
-          <span class="ledger-label">Platforms covered</span>
-        </div>
-        <div class="ledger-item">
-          <span class="ledger-value">{totalReaders}+</span>
-          <span class="ledger-label">Reader profiles published</span>
-        </div>
-        <div class="ledger-item">
-          <span class="ledger-value">{totalGuides}</span>
-          <span class="ledger-label">Guides published</span>
-        </div>
-        <div class="ledger-item">
-          <span class="ledger-value">Ongoing</span>
-          <span class="ledger-label">Continuously updated</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Start Here: curated guides -->
-  <section class="latest-guides section section--alt">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow text-xs text-uppercase text-muted">Learn & Explore</span>
-        <h2 class="section-title">Start Here: The Guides I Send Everyone To</h2>
-        <p class="section-desc text-muted">
-          Whether you're brand new to readings or deep into a specific question, these are the guides that will save you money and protect you from the industry's traps.
-        </p>
-      </div>
-
-      <div class="guides-grid grid grid--2 stagger">
-        {curatedGuides.map(guide => (
-          <a href={`/guides/${guide.slug}/`} class="guide-card card card--elevated">
-            {guide.category && <span class="badge badge--sage">{guide.category}</span>}
-            <h3 class="guide-card-title">{guide.title}</h3>
-            <p class="guide-card-desc text-muted text-sm">{guide.description}</p>
-            <span class="guide-card-link text-primary text-sm">Read Guide →</span>
+      <div class="situations">
+        {situations.map((s) => (
+          <a href={`/guides/${s.slug}/`} class="sit">
+            <span class="sit-label">{s.label}</span>
+            <span class="sit-detail">{s.detail}</span>
+            <span class="sit-go" aria-hidden="true">→</span>
           </a>
         ))}
-        <a href="/comparisons/" class="guide-card card card--elevated">
-          <span class="badge badge--primary">Compare</span>
-          <h3 class="guide-card-title">Platform Comparisons</h3>
-          <p class="guide-card-desc text-muted text-sm">Head-to-head breakdowns to help you choose between top platforms.</p>
-          <span class="guide-card-link text-primary text-sm">See Comparisons →</span>
-        </a>
       </div>
+
+      <nav class="topic-links" aria-label="Browse all guides by topic">
+        <span class="topic-links__label">Or browse all {totalGuides} guides by topic:</span>
+        {homeTopics.map((t) => <a href={t.url}>{t.label}</a>)}
+        <a href="/guides/" class="topic-links__all">All guides →</a>
+      </nav>
     </div>
   </section>
 
-  <!-- About Teaser -->
-  <section class="about-teaser section">
-    <div class="container container--narrow" style="text-align: center;">
-      <img src="/sarah-avatar.jpg" alt="Sarah — Founder of Eastern Alignment" class="about-avatar" width="80" height="80" loading="lazy" />
-      <h2 class="section-title" style="margin-top: var(--space-6);">Hi, I'm Sarah</h2>
-      <p class="text-muted" style="max-width: 520px; margin: 0 auto var(--space-6);">
-        After a devastating breakup led me to try online psychic readings out of desperation, I discovered that finding the right advisor can genuinely change your perspective. Now I help others navigate this space with honest, first-hand reviews — paid for with my own money, documented session by session.
+  <ReaderMatch
+    id="match"
+    mode="modal"
+    showHeader={false}
+    title="Rather get names for your situation?"
+    subtitle={`Tell us what’s going on and how you like to be read. You get a short reading of your situation, then a shortlist from ${siteStats.total} audited advisors with the reason each one made it. It runs privately in your browser.`}
+  />
+
+  <!-- ═══ 6. SHORTLIST — advisors who topped our audits (algorithmic) ═══ -->
+  <section class="section" id="advisors">
+    <div class="container">
+      <header class="sec-head">
+        <p class="kicker">From our audits</p>
+        <h2 class="sec-title">Advisors who earned the top of our list</h2>
+        <p class="sec-desc">
+          The highest-scored advisor on each platform, plus the best one at ${VALUE_CAP}/min or less.
+          Picked automatically from our audit scores — nobody pays to be here.
+        </p>
+      </header>
+
+      <div class="advisors">
+        {shortlist.map((r) => (
+          <article class="adv">
+            <div class="adv-top">
+              <span class="adv-avatar" aria-hidden="true">
+                <span class="adv-initial">{r.name.charAt(0)}</span>
+                {r.avatarUrl && <img src={r.avatarUrl} alt="" width="64" height="64" loading="lazy" decoding="async" />}
+              </span>
+              <div class="adv-id">
+                <span class="adv-pick">{r.pick}</span>
+                <h3 class="adv-name"><a href={r.url}>{r.name}</a></h3>
+              </div>
+            </div>
+            <dl class="adv-stats">
+              <div><dt>Our score</dt><dd>{r.rating}/5</dd></div>
+              <div><dt>Listed rate</dt><dd>{money(r.rate as number)}/min</dd></div>
+            </dl>
+            {r.proof && <p class="adv-proof">{r.proof}</p>}
+            {r.bestFor && <p class="adv-for"><strong>Best for:</strong> {shorten(r.bestFor)}</p>}
+            <div class="adv-actions">
+              <a href={r.affiliateUrl} class="btn btn--primary btn--sm" rel="nofollow sponsored" target="_blank" data-cta-source="home-advisor">See profile on {r.platformName} →</a>
+              <a href={r.url} class="adv-audit">Read our audit</a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p class="advisors-foot">
+        Browse every audited advisor:
+        {platforms.map((p, i) => (
+          <>{i > 0 && ' · '}<a href={p.reviewUrl}>{p.name} ({p.profiles})</a></>
+        ))}
       </p>
-      <a href="/about/" class="btn btn--secondary">Read My Story →</a>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="home-faq section section--alt">
+  <!-- ═══ 7. TRUST — how we test, what we refuse to do, who we are ═══ -->
+  <section class="section section--alt" id="method">
+    <div class="container">
+      <header class="sec-head">
+        <p class="kicker">How we test</p>
+        <h2 class="sec-title">Why these verdicts hold up</h2>
+      </header>
+
+      <div class="trust">
+        <ol class="steps">
+          <li>
+            <h3>Normal accounts, our own money</h3>
+            <p>No press accounts or sponsored credit — only the welcome offer any new client gets.</p>
+          </li>
+          <li>
+            <h3>Several readers, one question framework</h3>
+            <p>We never judge a platform on one advisor, and we ask everyone the same kind of question so answers are comparable.</p>
+          </li>
+          <li>
+            <h3>Predictions logged — then checked</h3>
+            <p>Dated predictions go in a ledger and get re-checked when the window passes. Public track records get audited the same way.</p>
+          </li>
+          <li>
+            <h3>Fixed, published weights</h3>
+            <p>Scoring weights are set before testing and <a href="/methodology/#scoring-framework">published in full</a>. No platform can negotiate them.</p>
+          </li>
+        </ol>
+
+        <div class="wont">
+          <h3 class="wont-title">What we won’t do</h3>
+          <ul>
+            <li>Sell a ranking, a badge or a “featured” slot.</li>
+            <li>Put a percentage on psychic accuracy. “87% accurate” is unverifiable — we score how specific and checkable a reading is instead.</li>
+            <li>Recommend anyone who uses fear tactics. One strike, whatever their rating.</li>
+            <li>Rank an advisor we haven’t audited.</li>
+          </ul>
+        </div>
+      </div>
+
+      <figure class="author">
+        <img src="/sarah-avatar.jpg" alt="Sarah, founder of Eastern Alignment" width="72" height="72" loading="lazy" />
+        <figcaption>
+          <p class="author-quote">
+            “I’ve studied astrology, tarot, BaZi and feng shui since I was 21, and I’ve spent the last three years
+            booking online readings as an ordinary paying customer. I built this site because I couldn’t find one
+            that told me the truth <em>before</em> I spent the money.”
+          </p>
+          <p class="author-meta">
+            <strong>Sarah</strong>, founder ·
+            <a href="/about/">My story</a> · <a href="/methodology/">Full methodology</a> · <a href="/disclosure/">How we’re funded</a>
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══ 8. FAQ ═══ -->
+  <section class="section home-faq">
     <div class="container container--narrow">
-      <FAQ items={homeFAQs} title="Common Questions" />
+      <FAQ items={homeFAQs} title="Before you book: common questions" />
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  /* Hero */
-  .hero {
+  /* ── shared section scaffolding ── */
+  .kicker {
+    margin: 0 0 var(--space-3);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  .sec-head {
+    max-width: 680px;
+    margin: 0 auto var(--space-10);
     text-align: center;
-    padding-top: var(--space-16);
-    padding-bottom: var(--space-10);
   }
 
-  .hero-content {
-    max-width: 720px;
-    margin: 0 auto;
+  .sec-title {
+    margin: 0 0 var(--space-3);
+    text-wrap: balance;
+    font-size: var(--text-3xl);
+    line-height: var(--leading-tight);
   }
 
-  .hero-eyebrow {
-    display: block;
-    margin-bottom: var(--space-4);
-    letter-spacing: 0.15em;
+  .sec-desc {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ── short-answer capsule: one self-contained, quotable passage ── */
+  .answer-capsule {
+    max-width: 780px;
+    margin: 0 auto var(--space-8);
+    padding: var(--space-5) var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+  }
+
+  .answer-capsule__label {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .answer-capsule__text {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+  }
+
+  /* ── our data: headline stats + per-platform table ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+    margin: 0 0 var(--space-8);
+    padding: 0;
+    list-style: none;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+
+  .stat strong {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-text);
+  }
+
+  .stat strong small {
+    margin-left: 2px;
+    font-family: var(--font-body, inherit);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .stat span {
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    color: var(--color-text-muted);
+  }
+
+  .data-note {
+    max-width: 780px;
+    margin: var(--space-6) auto 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+
+  .data-note a {
+    color: var(--color-primary);
+  }
+
+  /* ── guide-topic links under the situation router ── */
+  .topic-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2) var(--space-4);
+    max-width: 880px;
+    margin: var(--space-8) auto 0;
+    font-size: var(--text-sm);
+  }
+
+  .topic-links__label {
+    color: var(--color-text-muted);
+  }
+
+  .topic-links a {
+    color: var(--color-primary);
+    text-underline-offset: 2px;
+  }
+
+  .topic-links__all {
+    font-weight: var(--weight-semibold);
+  }
+
+  /* ── 1. hero ── */
+  .home-hero {
+    padding: var(--space-16) 0 var(--space-12);
+    text-align: center;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 0%, rgba(196, 149, 106, 0.14), transparent 70%),
+      var(--color-bg);
+  }
+
+  .hero-inner {
+    max-width: 820px;
   }
 
   .hero-title {
+    margin: 0 auto var(--space-6);
+    max-width: 19ch;
     font-size: var(--text-4xl);
-    margin-bottom: var(--space-6);
-    line-height: 1.15;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
   }
 
-  .hero-subtitle {
-    font-size: var(--text-lg);
-    color: var(--color-text-muted);
-    line-height: var(--leading-relaxed);
-    margin-bottom: var(--space-8);
+  .hero-sub {
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto var(--space-8);
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
   }
 
   .hero-actions {
     display: flex;
-    gap: var(--space-4);
-    justify-content: center;
     flex-wrap: wrap;
+    gap: var(--space-3);
+    justify-content: center;
   }
 
-  .hero-meta {
+  .hero-proof {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 720px;
+    margin: var(--space-10) auto 0;
+    padding: var(--space-5) 0;
+    list-style: none;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hero-proof li {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: 0 var(--space-3);
+  }
+
+  .hero-proof li + li {
+    border-left: 1px solid var(--color-border);
+  }
+
+  .hero-proof strong {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-text);
+  }
+
+  .hero-proof span {
+    font-size: var(--text-xs);
+    line-height: var(--leading-snug);
+    color: var(--color-text-muted);
+  }
+
+  /* ── 2. verdict picks ── */
+  .verdict {
+    padding-top: var(--space-8);
+  }
+
+  .picks {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+    align-items: stretch;
+  }
+
+  .pick {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pick--top {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent), var(--shadow-md);
+  }
+
+  .pick-head {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-    margin-top: var(--space-8);
-    font-size: var(--text-xs);
-    color: var(--color-text-light);
-    flex-wrap: wrap;
+    gap: var(--space-3);
   }
 
-  .hero-meta a {
+  .pick-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+  }
+
+  .pick-id {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .pick-tag {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  .pick-name {
+    margin: 2px 0 0;
+    font-size: var(--text-xl);
+    line-height: 1.2;
+  }
+
+  .pick-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .pick-score {
+    flex-shrink: 0;
+    text-align: right;
+    font-family: var(--font-heading);
+    line-height: 1;
+  }
+
+  .pick-score strong {
+    font-size: var(--text-2xl);
+    font-weight: 400;
+    color: var(--color-text);
+  }
+
+  .pick-score span {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+  }
+
+  .pick-choose {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: var(--leading-snug);
+  }
+
+  .pick-why {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+  }
+
+  .pick-facts {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .pick-facts div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: var(--text-sm);
+  }
+
+  .pick-facts dt {
+    color: var(--color-text-muted);
+  }
+
+  .pick-facts dd {
+    margin: 0;
+    text-align: right;
+    font-weight: var(--weight-semibold);
+  }
+
+  .pick-skip {
+    margin: 0;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+  }
+
+  .pick-skip strong {
+    color: var(--color-error);
+  }
+
+  .pick-choose strong {
+    color: var(--color-success);
+  }
+
+  .pick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .pick-actions .btn {
+    white-space: normal;
+    line-height: 1.3;
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+
+  .pick-review,
+  .adv-audit {
+    font-size: var(--text-sm);
     color: var(--color-primary);
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
     text-decoration-color: var(--color-celestial);
   }
 
-  .hero-meta-dot {
-    opacity: 0.5;
+  .verdict-foot {
+    margin: var(--space-8) 0 0;
+    text-align: center;
+    color: var(--color-text-muted);
   }
 
-  @media (max-width: 480px) {
+  .verdict-foot a {
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+  }
+
+  /* ── 3. comparison table ── */
+  .cmp-wrap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+  }
+
+  .cmp {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+
+  .cmp th,
+  .cmp td {
+    padding: var(--space-4) var(--space-5);
+    text-align: left;
+    vertical-align: top;
+    line-height: var(--leading-snug);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .cmp thead th {
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+  }
+
+  .cmp-plat {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    width: 26%;
+  }
+
+  .cmp-plat img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    vertical-align: middle;
+    margin-right: var(--space-2);
+  }
+
+  .cmp-plat span {
+    vertical-align: middle;
+  }
+
+  .cmp-badge {
+    display: inline-block;
+    margin-left: var(--space-2);
+    padding: 2px 8px;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    background: var(--color-accent-light);
+    border-radius: var(--radius-full);
+  }
+
+  .cmp-plat--top,
+  .cmp-top {
+    background: rgba(196, 149, 106, 0.06);
+  }
+
+  .cmp thead .cmp-plat--top {
+    background: rgba(196, 149, 106, 0.16);
+  }
+
+  .cmp tbody th {
+    width: 22%;
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+  }
+
+  .cmp-hint {
+    display: block;
+    margin-top: 2px;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-normal);
+    color: var(--color-text-light);
+  }
+
+  .cmp :global(.cmp-score) {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+  }
+
+  .cmp :global(.cmp-unit) {
+    color: var(--color-text-light);
+  }
+
+  .cmp :global(a) {
+    color: var(--color-primary);
+  }
+
+  .cmp tfoot td,
+  .cmp tfoot th {
+    border-bottom: none;
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+  }
+
+  .cmp tfoot .btn {
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .cmp-more {
+    margin: var(--space-6) 0 0;
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .cmp-more a {
+    color: var(--color-primary);
+  }
+
+  /* ── 4. playbook + red flags ── */
+  .playbook {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .pb {
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+  }
+
+  .pb-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: 0 0 var(--space-5);
+    font-size: var(--text-lg);
+  }
+
+  .pb-title img {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+  }
+
+  .pb-title small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+  }
+
+  .pb-label {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pb-label--catch {
+    color: var(--color-error);
+  }
+
+  .pb-label--play {
+    margin-top: var(--space-5);
+    color: var(--color-success);
+  }
+
+  .pb-list {
+    margin: 0;
+    padding-left: var(--space-5);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .pb-list {
+    list-style: disc;
+  }
+
+  .pb-list li::marker {
+    color: var(--color-error);
+  }
+
+  .pb-list li + li {
+    margin-top: var(--space-2);
+  }
+
+  .pb-play {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .flags {
+    margin-top: var(--space-10);
+    padding: var(--space-8);
+    background: var(--color-error-bg);
+    border: 1px solid rgba(184, 92, 74, 0.25);
+    border-radius: var(--radius-xl);
+  }
+
+  .flags-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-6);
+    margin-bottom: var(--space-5);
+  }
+
+  .flags-title {
+    margin: 0;
+    font-size: var(--text-xl);
+  }
+
+  .flags-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-error);
+  }
+
+  .flags-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4) var(--space-8);
+    margin: 0;
+    padding-left: var(--space-5);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .flags-list strong {
+    color: var(--color-text);
+  }
+
+  .flags-foot {
+    margin: var(--space-6) 0 0;
+    padding-top: var(--space-5);
+    border-top: 1px solid rgba(184, 92, 74, 0.2);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .flags-foot a {
+    color: var(--color-primary);
+  }
+
+  /* ── 5. situations ── */
+  .situations {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .sit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5) var(--space-12) var(--space-5) var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .sit-label {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    line-height: 1.25;
+    color: var(--color-text);
+  }
+
+  .sit-detail {
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    color: var(--color-text-muted);
+  }
+
+  .sit-go {
+    position: absolute;
+    top: 50%;
+    right: var(--space-5);
+    transform: translateY(-50%);
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    transition: transform var(--transition-fast);
+  }
+
+  @media (hover: hover) {
+    .sit:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .sit:hover .sit-go {
+      transform: translate(4px, -50%);
+    }
+  }
+
+  /* ── 6. advisors ── */
+  .advisors {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .adv {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+  }
+
+  .adv-top {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  /* gradient + initial underneath, photo absolutely on top — if the image
+     fails the card still shows a clean monogram, never a broken icon */
+  .adv-avatar {
+    position: relative;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+    box-shadow: 0 0 0 3px var(--color-surface), 0 0 0 4px var(--color-border);
+  }
+
+  .adv-initial {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: #fff;
+  }
+
+  .adv-avatar img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .adv-pick {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  .adv-name {
+    margin: 2px 0 0;
+    font-size: var(--text-xl);
+    line-height: 1.2;
+  }
+
+  .adv-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .adv-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin: 0;
+  }
+
+  .adv-stats div {
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+  }
+
+  .adv-stats dt {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .adv-stats dd {
+    margin: 0;
+    font-weight: var(--weight-semibold);
+  }
+
+  .adv-proof {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    color: var(--color-text);
+  }
+
+  .adv-for {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    color: var(--color-text-muted);
+  }
+
+  .adv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3) var(--space-4);
+    margin-top: auto;
+  }
+
+  .advisors-foot {
+    margin: var(--space-8) 0 0;
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .advisors-foot a {
+    color: var(--color-primary);
+  }
+
+  /* ── 7. trust ── */
+  .trust {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+  }
+
+  .steps li {
+    counter-increment: step;
+  }
+
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    display: block;
+    margin-bottom: var(--space-2);
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    line-height: 1;
+    color: var(--color-accent);
+  }
+
+  .steps h3 {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-lg);
+  }
+
+  .steps p {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+  }
+
+  .steps a {
+    color: var(--color-primary);
+  }
+
+  .wont {
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+  }
+
+  .wont-title {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-lg);
+  }
+
+  .wont ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .wont li {
+    position: relative;
+    padding-left: var(--space-6);
+  }
+
+  .wont li + li {
+    margin-top: var(--space-3);
+  }
+
+  .wont li::before {
+    content: '✕';
+    position: absolute;
+    left: 0;
+    font-weight: var(--weight-bold);
+    color: var(--color-error);
+  }
+
+  .author {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-5);
+    max-width: 760px;
+    margin: var(--space-12) auto 0;
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+  }
+
+  .author img {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  .author-quote {
+    margin: 0 0 var(--space-3);
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+  }
+
+  .author-meta {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .author-meta a {
+    color: var(--color-primary);
+  }
+
+  /* ── responsive ── */
+  @media (max-width: 1024px) {
+    .picks,
+    .playbook,
+    .advisors {
+      grid-template-columns: 1fr;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .situations {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trust {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Table → one card per attribute, each platform as a labelled line */
+  @media (max-width: 760px) {
+    .cmp,
+    .cmp tbody,
+    .cmp tfoot,
+    .cmp tr,
+    .cmp th,
+    .cmp td {
+      display: block;
+      width: auto;
+    }
+
+    .cmp thead {
+      display: none;
+    }
+
+    .cmp tbody tr,
+    .cmp tfoot tr {
+      padding: var(--space-4) var(--space-4) var(--space-2);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .cmp tbody th,
+    .cmp tfoot th {
+      width: auto;
+      padding: 0 0 var(--space-2);
+      border: none;
+      font-size: var(--text-xs);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
+
+    .cmp-hint {
+      display: inline;
+      margin-left: var(--space-2);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .cmp td {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: var(--space-3);
+      padding: var(--space-2) 0;
+      border-bottom: 1px dashed var(--color-border-light);
+      background: none;
+    }
+
+    .cmp td:last-child {
+      border-bottom: none;
+    }
+
+    .cmp td::before {
+      content: attr(data-label);
+      font-weight: var(--weight-semibold);
+      color: var(--color-text-muted);
+    }
+
+    .cmp tfoot th {
+      display: none;
+    }
+
+    .cmp tfoot td {
+      grid-template-columns: 1fr;
+      padding: var(--space-1) 0;
+      border: none;
+    }
+
+    .cmp tfoot td::before {
+      display: none;
+    }
+
+    .cmp tfoot tr {
+      display: grid;
+      gap: var(--space-2);
+      border-bottom: none;
+      padding-bottom: var(--space-4);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
+
+    .answer-capsule {
+      padding: var(--space-4) var(--space-5);
+    }
+
+    .home-hero {
+      padding: var(--space-10) 0 var(--space-8);
+    }
+
     .hero-actions {
       flex-direction: column;
       align-items: stretch;
     }
 
     .hero-actions .btn {
-      width: 100%;
+      white-space: normal;
     }
-  }
 
-  /* Trust Bar */
-  .trust-bar {
-    padding: var(--space-8) 0;
-  }
+    .hero-proof {
+      grid-template-columns: 1fr 1fr;
+      row-gap: var(--space-5);
+    }
 
-  .trust-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--space-8);
-    flex-wrap: wrap;
-  }
+    .hero-proof li + li:nth-child(3) {
+      border-left: none;
+    }
 
-  .trust-item {
-    text-align: center;
-  }
+    .hero-sub {
+      font-size: var(--text-base);
+    }
 
-  .trust-number {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: var(--text-2xl);
-    color: var(--color-primary);
-    line-height: 1;
-    margin-bottom: var(--space-1);
-  }
+    .sec-head {
+      margin-bottom: var(--space-8);
+    }
 
-  .trust-label {
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .trust-divider {
-    width: 1px;
-    height: 40px;
-    background: var(--color-border);
-  }
-
-  /* Section Headers */
-  .section-header {
-    text-align: center;
-    margin-bottom: var(--space-8);
-  }
-
-  .section-eyebrow {
-    display: block;
-    margin-bottom: var(--space-3);
-    letter-spacing: 0.15em;
-  }
-
-  .section-title {
-    margin-top: 0;
-    margin-bottom: var(--space-3);
-  }
-
-  .section-desc {
-    max-width: 620px;
-    margin: 0 auto;
-    line-height: var(--leading-normal);
-  }
-
-  .section-cta {
-    display: flex;
-    gap: var(--space-4);
-    justify-content: center;
-    align-items: center;
-    margin-top: var(--space-8);
-    flex-wrap: wrap;
-  }
-
-  /* Verdict cards under the comparison table */
-  .verdict-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
-    margin-top: var(--space-10);
-  }
-
-  .verdict-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-  }
-
-  .verdict-card-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-  }
-
-  .verdict-card-name {
-    font-size: var(--text-xl);
-    margin: 0;
-  }
-
-  .verdict-card-body {
-    margin: 0;
-    line-height: var(--leading-relaxed);
-    flex: 1;
-  }
-
-  .verdict-card-offer {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3);
-    background: var(--color-warning-bg);
-    border-radius: var(--radius-md);
-  }
-
-  .offer-label {
-    font-size: var(--text-xs);
-    font-weight: var(--weight-semibold);
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .offer-value {
-    font-size: var(--text-sm);
-    font-weight: var(--weight-medium);
-    color: var(--color-primary-dark);
-  }
-
-  .verdict-card-actions {
-    display: flex;
-    gap: var(--space-3);
-    align-items: center;
-  }
-
-  @media (max-width: 1024px) {
-    .verdict-grid {
+    .situations {
       grid-template-columns: 1fr;
-      gap: var(--space-4);
     }
-  }
 
-  /* Byline card */
-  .byline-card {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-    padding: var(--space-4) var(--space-6);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    margin-bottom: var(--space-10);
-  }
+    .flags {
+      padding: var(--space-6) var(--space-5);
+    }
 
-  .byline-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 20%;
-    border: 2px solid var(--color-border-light);
-    flex-shrink: 0;
-  }
-
-  .byline-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .byline-name {
-    font-family: var(--font-heading);
-    font-size: var(--text-lg);
-    line-height: 1.2;
-  }
-
-  /* Short version prose overrides */
-  .short-version .prose {
-    max-width: var(--max-width-content);
-    margin: 0 auto;
-  }
-
-  /* Field notes */
-  .field-notes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
-    margin-bottom: var(--space-10);
-  }
-
-  .field-note {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-  }
-
-  .field-note-title {
-    font-size: var(--text-lg);
-    margin: 0;
-  }
-
-  .field-note-stat {
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    color: var(--color-primary-dark);
-    padding: var(--space-2) var(--space-3);
-    background: var(--color-warning-bg);
-    border-radius: var(--radius-md);
-    line-height: var(--leading-snug);
-  }
-
-  .field-note-body {
-    margin: 0;
-    flex: 1;
-    line-height: var(--leading-relaxed);
-  }
-
-  .field-note-link {
-    color: var(--color-primary);
-    font-weight: var(--weight-medium);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: var(--color-celestial);
-    transition: color var(--transition-fast);
-  }
-
-  .field-note-link:hover {
-    color: var(--color-primary-dark);
-    text-decoration-color: var(--color-primary);
-  }
-
-  @media (max-width: 1024px) {
-    .field-notes-grid {
+    .flags-list {
       grid-template-columns: 1fr;
-      gap: var(--space-4);
     }
-  }
 
-  /* Testaments */
-  .testament-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
-  }
-
-  .testament-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    margin: 0;
-  }
-
-  .testament-quote {
-    font-family: var(--font-heading);
-    font-size: var(--text-lg);
-    line-height: var(--leading-relaxed);
-    color: var(--color-text);
-    margin: 0;
-    flex: 1;
-  }
-
-  .testament-source {
-    margin: 0;
-    line-height: var(--leading-normal);
-  }
-
-  .testament-link {
-    color: var(--color-primary);
-    font-weight: var(--weight-medium);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: var(--color-celestial);
-  }
-
-  .testament-link:hover {
-    color: var(--color-primary-dark);
-  }
-
-  @media (max-width: 1024px) {
-    .testament-grid {
+    .steps {
       grid-template-columns: 1fr;
-      gap: var(--space-4);
-    }
-  }
-
-  /* Review Cards */
-  .review-cards {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  /* Method Cards */
-  .method-card {
-    text-align: center;
-    padding: var(--space-8) var(--space-6);
-  }
-
-  .method-number {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: var(--text-3xl);
-    color: var(--color-accent-light);
-    margin-bottom: var(--space-4);
-    line-height: 1;
-  }
-
-  .method-title {
-    font-size: var(--text-lg);
-    margin: 0 0 var(--space-3) 0;
-  }
-
-  .method-desc {
-    margin: 0;
-  }
-
-  /* Ledger strip */
-  .ledger-strip {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-6);
-    margin-top: var(--space-12);
-    padding: var(--space-8);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-  }
-
-  .ledger-item {
-    text-align: center;
-  }
-
-  .ledger-value {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: var(--text-2xl);
-    color: var(--color-primary);
-    line-height: 1.1;
-    margin-bottom: var(--space-1);
-  }
-
-  .ledger-label {
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  @media (max-width: 1024px) {
-    .ledger-strip {
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-6);
-    }
-  }
-
-  @media (max-width: 640px) {
-    .ledger-strip {
-      grid-template-columns: repeat(2, 1fr);
-      padding: var(--space-6);
-    }
-  }
-
-  /* Guides Grid */
-  .guide-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-    text-decoration: none;
-    padding: var(--space-6);
-  }
-
-  .guide-card-title {
-    font-size: var(--text-lg);
-    margin: 0;
-    transition: color var(--transition-fast);
-  }
-
-  .guide-card:hover .guide-card-title {
-    color: var(--color-primary);
-  }
-
-  .guide-card-desc {
-    margin: 0;
-    flex: 1;
-  }
-
-  .guide-card-link {
-    font-weight: var(--weight-medium);
-  }
-
-  /* About Teaser */
-  .about-avatar {
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 20%;
-    border: 3px solid var(--color-border-light);
-    margin: 0 auto;
-  }
-
-  @media (max-width: 640px) {
-    .hero {
-      padding-top: var(--space-10);
     }
 
-    .trust-divider {
-      display: none;
-    }
-
-    .trust-grid {
-      gap: var(--space-6);
-    }
-
-    .section-cta {
+    .author {
       flex-direction: column;
-      align-items: stretch;
-    }
-
-    .section-cta .btn {
-      width: 100%;
-      text-align: center;
+      gap: var(--space-4);
     }
   }
 </style>

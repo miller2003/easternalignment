@@ -1,0 +1,679 @@
+---
+/* Topic page body for /guides/<topic-id>/ (2026-10-02 redesign).
+ * Each topic URL is a thin page file that renders <GuideTopicPage id="…" />. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../Breadcrumb.astro';
+import GuideCard from './GuideCard.astro';
+import GuidesCta from './GuidesCta.astro';
+import FAQ from '../FAQ.astro';
+import { loadTopics, guideKind, formatDate } from '../../lib/guideHub';
+import { PLATFORM_OFFERS } from '../../lib/offers';
+import { auditStats } from '../../lib/auditStats';
+import { webPageNode, isoMax, fmtDate, PLATFORM_ORGS, TOPIC_ENTITIES, IDS } from '../../lib/seo';
+import pageMeta from '../../data/page-meta.json';
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+const topics = loadTopics();
+const topic = topics.find((t) => t.id === id);
+if (!topic) throw new Error(`[guides] unknown topic "${id}"`);
+
+const { meta, items } = topic;
+const [lead, ...rest] = items;
+const latest = items.map((g) => g.date ?? '').sort().pop();
+
+// Filter tabs: only kinds actually present, in a fixed order.
+const KIND_ORDER = ['Top Picks', 'Guide', 'Beginner', 'Platform Guide', 'Research'];
+const kindCounts = new Map<string, number>();
+for (const g of items) kindCounts.set(guideKind(g), (kindCounts.get(guideKind(g)) ?? 0) + 1);
+const kinds = KIND_ORDER.filter((k) => kindCounts.has(k));
+
+const others = topics.filter((t) => t.id !== id);
+
+const SITE = 'https://easternalignment.com';
+const TOPIC_URL = `${SITE}${topic.url}`;
+
+/* Page date = the later of "this page was edited" and "its newest guide changed". */
+const modifiedISO = isoMax(pageMeta.guidesHub.updated, latest);
+
+/* ── Quick answers (FAQPage schema comes from the FAQ component) ──
+ * Each answer links to the guide that covers it in depth. Rates, counts and
+ * offers are computed (lib/auditStats, lib/offers); the rest restates positions
+ * the guides themselves take. */
+const money = (n: number) => `$${n.toFixed(2)}`;
+const lnk = (slug: string, label: string) => `<a href="/guides/${slug}/">${label}</a>`;
+const medianRate = auditStats.overall.medianListedRate;
+const advisors = auditStats.overall.profiles;
+const costAnswer =
+  `Across the ${advisors} advisor profiles we have audited, the median listed rate is ${money(medianRate)} per minute, so a focused 15-minute reading with a typical advisor costs about $${Math.round(medianRate * 15)}. ` +
+  `Individual advisors list from ${money(auditStats.overall.lowestListedRate)} to ${money(auditStats.overall.highestListedRate)} per minute. ` +
+  `See ${lnk('how-much-does-a-psychic-reading-cost', 'How much does a psychic reading cost?')} for the hidden costs.`;
+const offers = `${PLATFORM_OFFERS.kasamba.name}: ${PLATFORM_OFFERS.kasamba.offer}; ${PLATFORM_OFFERS['purple-garden'].name}: ${PLATFORM_OFFERS['purple-garden'].offer}; ${PLATFORM_OFFERS.keen.name}: ${PLATFORM_OFFERS.keen.offer}`;
+
+const TOPIC_FAQS: Record<string, { question: string; answer: string }[]> = {
+  love: [
+    {
+      question: 'Which psychic is best for love questions?',
+      answer: `There is no single best reader; it depends on whether you want someone to read another person (what is he thinking?) or to coach you, and on whether you prefer chat, phone or video. Kasamba chat leaves a saved transcript, Purple Garden offers video, and Keen is phone-first. ${lnk('most-accurate-love-psychics', 'Our ranking of love psychics')} is built on verified track records, and the free <a href="/match/">reader match</a> narrows ${advisors} audited advisors to three for your situation.`,
+    },
+    {
+      question: 'Can a psychic really tell me what someone is thinking or feeling?',
+      answer: `A good reader can describe dynamics, patterns and likely directions in a relationship, and some are better at reading another person than others. No reader can guarantee what someone will do, and exact dates or certainties (“he’ll be back in 30 days”) are a red flag. See ${lnk('does-he-like-me-psychics', 'Does he like me? psychics')} and ${lnk('kasamba-specific-person-reading', 'specific-person readings on Kasamba')}.`,
+    },
+    {
+      question: 'How much does a love psychic reading cost?',
+      answer: `${costAnswer} If you are watching your budget, ${lnk('cheap-love-psychics-online', 'cheap love psychics online')} lists readers by price, and the free-minute offers are on our <a href="/coupons/">coupons page</a>.`,
+    },
+  ],
+  'breakups-ex-recovery': [
+    {
+      question: 'Can a psychic tell me if my ex is coming back?',
+      answer: `A reader can describe the dynamics and the possibilities; none can guarantee an outcome, so look for readers who give specific, checkable observations rather than certainty. ${lnk('signs-your-ex-is-coming-back', 'The signs readers actually look for')} are explained in a separate guide, and ${lnk('best-psychics-for-breakups', 'our breakup psychic picks')} name the readers we would book.`,
+    },
+    {
+      question: 'Should I get a psychic reading during no contact?',
+      answer: `Many people do, because no contact is when the urge to ask is strongest. The risk is paying repeatedly for reassurance. A reading works best as a one-off check on your own patterns, with one specific question and a budget set in advance. ${lnk('no-contact-psychic-readings-guide', 'Using readings during no contact')} covers the mistakes to avoid.`,
+    },
+    {
+      question: 'Which platform is best for breakup readings?',
+      answer: `Kasamba is our top pick for relationship and breakup questions: chat transcripts and ${PLATFORM_OFFERS.kasamba.offer} (the free minutes repeat with every new advisor) let you audition several readers before you pay. Keen is the cheaper way to try a phone reading (${PLATFORM_OFFERS.keen.offer}); Purple Garden suits you if you want video. Roundups: ${lnk('best-kasamba-psychics-ex-recovery', 'Kasamba')}, ${lnk('best-love-psychics-keen-ex-recovery', 'Keen')}, ${lnk('best-purple-garden-psychics-ex-recovery', 'Purple Garden')}.`,
+    },
+  ],
+  mediumship: [
+    {
+      question: 'What is an evidential medium?',
+      answer: `An evidential medium offers specific, verifiable details about the person who has died (names, memories, circumstances you can recognise) rather than generic comfort. That is the standard we judge mediums by. ${lnk('evidential-mediums-passed-spouse', 'Evidential mediums for a passed spouse')} explains what good evidence sounds like.`,
+    },
+    {
+      question: 'How do I know if a medium is genuine?',
+      answer: `Judge a medium on one thing: details about the person who died that you recognise and did not supply. Be wary of vague statements that would fit anyone, fear-based upsells such as paying to remove a curse, and pressure to keep buying minutes. The full list is in ${lnk('how-to-spot-fake-psychic', 'How to spot a fake psychic')}.`,
+    },
+    {
+      question: 'Where can I find a medium online?',
+      answer: `We have tested roundups of mediums on ${lnk('best-mediums-on-kasamba', 'Kasamba')} and ${lnk('best-mediums-on-purple-garden', 'Purple Garden')}, and ${lnk('love-after-loss-mediums', 'a guide for readers dating again after losing a spouse')}. New clients can use the platforms’ intro offers to audition a medium cheaply: ${offers}.`,
+    },
+  ],
+  tarot: [
+    {
+      question: 'What can a tarot reading actually tell you?',
+      answer: `Tarot is best at mapping patterns, obstacles and options in a situation, using the cards as a structured prompt for your question. It is less suited to naming exact dates or what a specific person is thinking. ${lnk('tarot-for-love-practical-guide', 'Tarot for love: a practical guide')} shows how to ask questions a spread can answer.`,
+    },
+    {
+      question: 'Tarot, psychic or medium: which should I book?',
+      answer: `Match the method to the question: tarot for patterns and choices, an intuitive psychic for a quicker, blunter read, a medium only for contact with someone who has died. ${lnk('psychic-vs-medium-vs-tarot-reader', 'Psychic vs medium vs tarot reader')} and ${lnk('psychic-vs-tarot-vs-astrology', 'psychic vs tarot vs astrology')} explain the differences.`,
+    },
+    {
+      question: 'Where can I find a good tarot reader online?',
+      answer: `Start with our tested roundups: ${lnk('best-tarot-readers-on-kasamba', 'best tarot readers on Kasamba')} and ${lnk('best-tarot-readers-for-love', 'best tarot readers for love')}. Kasamba’s ${PLATFORM_OFFERS.kasamba.offer} lets you try several tarot readers inside their free minutes before paying anyone.`,
+    },
+  ],
+  'career-money': [
+    {
+      question: 'Can a psychic help with career and money decisions?',
+      answer: `A reading can help you think through options and timing and surface questions you had not asked. It is not financial or career advice, and nobody should make a major money decision on a prediction alone. ${lnk('career-and-money-psychic-readings', 'Career and money psychic readings')} covers what a work or finance reading can realistically deliver.`,
+    },
+    {
+      question: 'Which psychics are best for career questions?',
+      answer: `Choose readers who focus on practical outcomes rather than mystical padding. Our tested roundups are ${lnk('best-kasamba-psychics-career-money', 'Kasamba career and money psychics')} and ${lnk('best-purple-garden-psychics-career-money', 'Purple Garden career and money psychics')}; if you are torn between a love and a work question, read ${lnk('love-or-career-psychics', 'love or career psychics')} first.`,
+    },
+    {
+      question: 'What should I ask a psychic about money?',
+      answer: `Ask about decisions and timing, not guaranteed returns, and walk away from anyone who guarantees a financial outcome or sells a paid fix for a curse or a “blockage”. ${lnk('questions-to-ask-a-psychic', 'Questions to ask a psychic')} lists the questions that get specific answers.`,
+    },
+  ],
+  spirituality: [
+    {
+      question: 'What are the four clairs?',
+      answer: `Clairvoyance (seeing), clairaudience (hearing), clairsentience (feeling) and claircognizance (knowing) are the four main channels of psychic perception described in readings. ${lnk('clairs-the-four-psychic-abilities-guide', 'The four psychic abilities guide')} explains each and how readers use them.`,
+    },
+    {
+      question: 'What do angel numbers like 1111 mean?',
+      answer: `In popular spiritual practice, repeating numbers are read as prompts to notice what you are thinking or deciding when you see them. It is a belief-based practice, not a scientific measure, so treat the meanings as prompts for reflection. ${lnk('angel-numbers-1111-222-333-meaning-guide', 'The angel numbers guide')} lists the most common meanings.`,
+    },
+    {
+      question: 'Can a psychic reading help with anxiety?',
+      answer: `A reading may give you clarity or a structured way to think about a decision, but it is not therapy and can backfire if you keep going back for reassurance. For persistent anxiety, talk to a licensed professional. ${lnk('psychic-readings-for-anxiety', 'Psychic readings for anxiety')} and ${lnk('psychic-reading-vs-therapy', 'psychic reading vs therapy')} cover when each is appropriate.`,
+    },
+  ],
+  'getting-started': [
+    {
+      question: 'What should I know before my first psychic reading?',
+      answer: `Choose the reader by the kind of question, use the free or intro minutes as an audition with one specific question, and set a spending limit before the meter starts. End the session if you hear a curse or “dark energy” diagnosis, a guaranteed outcome, pressure to stay on the clock, or a request to move off the platform. Start with ${lnk('before-you-pay-for-a-psychic-reading', '13 things to know before you pay')} and ${lnk('first-psychic-reading-guide', 'the first reading guide')}.`,
+    },
+    {
+      question: 'How much does a psychic reading cost?',
+      answer: costAnswer,
+    },
+    {
+      question: 'Is there such a thing as a free psychic reading?',
+      answer: `Usually “free” means introductory minutes or credit rather than a full reading. New-client offers right now: ${offers}. ${lnk('free-psychic-readings-online-truth', 'What “free reading” really means')} separates real offers from data harvesting, and the terms are on our <a href="/coupons/">coupons page</a>.`,
+    },
+  ],
+  'more-guides': [
+    {
+      question: 'Which Kasamba, Purple Garden or Keen advisors are best?',
+      answer: `We publish a ranked roundup per platform, built from audits of public advisor profiles rather than the platforms’ own rankings: ${lnk('best-kasamba-psychics-2026', 'Kasamba')}, ${lnk('best-purple-garden-psychics-2026', 'Purple Garden')} and ${lnk('best-keen-psychics-2026', 'Keen')}.`,
+    },
+    {
+      question: 'Chat, phone or video: which reading format is best?',
+      answer: `Chat keeps a written transcript you can check against what happens later, phone suits people who think out loud, and video lets you see the reader and the cards (only Purple Garden offers it). ${lnk('chat-vs-phone-vs-video-psychic-reading', 'Chat vs phone vs video')} compares them on privacy, speed, records and preparation.`,
+    },
+    {
+      question: 'Can AI give a psychic reading as good as a human?',
+      answer: `Our guide ${lnk('ai-psychic-readings-vs-human', 'AI psychic readings vs human readers')} explains what an AI is actually doing when it gives a “reading” and scores it against experienced human readers across ten dimensions. The conclusion is more nuanced than either side of the debate expects.`,
+    },
+  ],
+};
+const faqs = TOPIC_FAQS[id] ?? [];
+
+const topicName = topic.heading;
+/* Keep the ItemList light: /guides/love/ lists 40 guides and the page must stay
+ * under the edge Markdown converter's 150 KB cap (functions/_middleware.js). */
+const clip = (t: string, max = 150) =>
+  t.length <= max ? t : t.slice(0, t.lastIndexOf(' ', max)).replace(/[.,;:\s]+$/, '') + '…';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    webPageNode({
+      url: TOPIC_URL,
+      name: topicName,
+      headline: meta.seoTitle,
+      description: meta.metaDescription,
+      type: ['CollectionPage', 'WebPage'],
+      dateModified: modifiedISO,
+      about: [TOPIC_ENTITIES.psychic],
+      mentions: PLATFORM_ORGS,
+      speakable: ['.gt-hero__title', '.gt-hero__intro'],
+      mainEntityId: `${TOPIC_URL}#guides`,
+      extra: { isPartOf: [{ '@id': IDS.website }, { '@id': `${SITE}/guides/#webpage` }] },
+    }),
+    // Stub of the parent hub so this page's graph resolves on its own.
+    {
+      '@type': 'CollectionPage',
+      '@id': `${SITE}/guides/#webpage`,
+      url: `${SITE}/guides/`,
+      name: 'Psychic Reading Guides',
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${TOPIC_URL}#guides`,
+      name: `${topicName}: all guides`,
+      numberOfItems: items.length,
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListElement: items.map((guide, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${SITE}/guides/${guide.slug}/`,
+        name: guide.title,
+        ...(guide.description ? { description: clip(String(guide.description)) } : {}),
+      })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={meta.seoTitle}
+  description={meta.metaDescription}
+  modifiedTime={modifiedISO}
+  topOfferPlatform="kasamba"
+  jsonLd={jsonLd}
+>
+  <div class="gt" style={`--accent:${meta.accent};--tint:${meta.tint}`}>
+    <!-- HERO -->
+    <section class="gt-hero">
+      <div class="gt-wrap">
+        <Breadcrumb items={[{ label: 'Guides', href: '/guides/' }, { label: meta.label }]} />
+        <div class="gt-hero__row">
+          <span class="gt-hero__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" set:html={meta.icon} />
+          </span>
+          <div class="gt-hero__text">
+            <p class="gt-hero__eyebrow">Guide topic</p>
+            <h1 class="gt-hero__title">{topic.heading}</h1>
+          </div>
+        </div>
+        <p class="gt-hero__intro">{topic.intro}</p>
+        <ul class="gt-hero__stats">
+          <li><strong>{items.length}</strong> {items.length === 1 ? 'guide' : 'guides'}</li>
+          {kindCounts.get('Top Picks') && <li><strong>{kindCounts.get('Top Picks')}</strong> reader roundups</li>}
+          <li>Updated <strong><time datetime={modifiedISO}>{fmtDate(modifiedISO)}</time></strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPIC SWITCHER -->
+    <nav class="gt-topics" aria-label="Guide topics">
+      <div class="gt-wrap">
+        <ul class="gt-topics__list">
+          <li>
+            <a href="/guides/" class="gt-chip gt-chip--all">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+              All topics
+            </a>
+          </li>
+          {topics.map((t) => (
+            <li>
+              <a
+                href={t.url}
+                class:list={['gt-chip', { 'is-active': t.id === id }]}
+                aria-current={t.id === id ? 'page' : undefined}
+                style={`--chip:${t.meta.accent}`}
+              >
+                {t.meta.label}
+                <span class="gt-chip__n">{t.items.length}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ARTICLES -->
+    <section class="gt-body">
+      <div class="gt-wrap">
+        {kinds.length > 1 && (
+          <div class="gt-filter" role="toolbar" aria-label="Filter guides by type">
+            <button type="button" class="gt-filter__btn is-active" data-filter="all" aria-pressed="true">
+              All <span>{items.length}</span>
+            </button>
+            {kinds.map((k) => (
+              <button type="button" class="gt-filter__btn" data-filter={k} aria-pressed="false">
+                {k} <span>{kindCounts.get(k)}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {lead && (
+          <div class="gt-lead" data-item data-kind={guideKind(lead)}>
+            <GuideCard guide={lead} featured accent={meta.accent} tint={meta.tint} icon={meta.icon} />
+          </div>
+        )}
+
+        {rest.length > 0 && (
+          <ul class="gt-grid">
+            {rest.map((g) => (
+              <li data-item data-kind={guideKind(g)}>
+                <GuideCard guide={g} accent={meta.accent} tint={meta.tint} />
+              </li>
+            ))}
+          </ul>
+        )}
+        <p class="gt-empty" hidden>No guides of this type yet.</p>
+      </div>
+    </section>
+
+    <!-- QUICK ANSWERS (FAQPage schema comes from the FAQ component) -->
+    {faqs.length > 0 && (
+      <section class="gt-faq" aria-label={`Quick answers: ${meta.label}`}>
+        <div class="gt-wrap gt-wrap--narrow">
+          <FAQ items={faqs} title={`Quick answers: ${meta.label}`} />
+        </div>
+      </section>
+    )}
+
+    <!-- OTHER TOPICS -->
+    <section class="gt-more">
+      <div class="gt-wrap">
+        <h2 class="gt-more__title">Explore other topics</h2>
+        <ul class="gt-more__grid">
+          {others.map((t) => (
+            <li>
+              <a href={t.url} class="gt-mini" style={`--accent:${t.meta.accent};--tint:${t.meta.tint}`}>
+                <span class="gt-mini__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" set:html={t.meta.icon} />
+                </span>
+                <span class="gt-mini__text">
+                  <span class="gt-mini__label">{t.meta.label}</span>
+                  <span class="gt-mini__n">{t.items.length} guides</span>
+                </span>
+                <svg class="gt-mini__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <GuidesCta />
+  </div>
+</BaseLayout>
+
+<script>
+  function initTopicFilter() {
+    // Mobile chip rail: bring the active topic into view without page scroll.
+    const rail = document.querySelector<HTMLElement>('.gt-topics__list');
+    const active = rail?.querySelector<HTMLElement>('.gt-chip.is-active');
+    if (rail && active && rail.scrollWidth > rail.clientWidth) {
+      rail.scrollLeft = active.parentElement!.offsetLeft - rail.clientWidth / 2 + active.offsetWidth / 2;
+    }
+
+    const bar = document.querySelector<HTMLElement>('.gt-filter');
+    if (!bar || bar.dataset.ready) return;
+    bar.dataset.ready = '1';
+    const buttons = Array.from(bar.querySelectorAll<HTMLButtonElement>('.gt-filter__btn'));
+    const items = Array.from(document.querySelectorAll<HTMLElement>('.gt [data-item]'));
+    const empty = document.querySelector<HTMLElement>('.gt-empty');
+    const grid = document.querySelector<HTMLElement>('.gt-grid');
+
+    bar.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.gt-filter__btn');
+      if (!btn) return;
+      const f = btn.dataset.filter;
+      buttons.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', String(on));
+      });
+      let shown = 0;
+      let gridShown = 0;
+      for (const el of items) {
+        const ok = f === 'all' || el.dataset.kind === f;
+        el.hidden = !ok;
+        if (ok) {
+          shown++;
+          if (el.tagName === 'LI') gridShown++;
+        }
+      }
+      if (grid) grid.hidden = gridShown === 0;
+      if (empty) empty.hidden = shown > 0;
+    });
+  }
+  initTopicFilter();
+  document.addEventListener('astro:page-load', initTopicFilter);
+</script>
+
+<style>
+  .gt-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+  }
+  .gt-wrap--narrow { max-width: 820px; }
+  .gt-faq { padding: var(--space-12) 0 0; }
+
+  /* ── Hero ── */
+  .gt-hero {
+    position: relative;
+    padding: var(--space-6) 0 var(--space-10);
+    background:
+      radial-gradient(ellipse 70% 90% at 100% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+      linear-gradient(180deg, var(--tint), var(--color-bg));
+    border-bottom: 1px solid var(--color-border-light);
+    overflow: hidden;
+  }
+  .gt-hero__row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    margin-top: var(--space-6);
+  }
+  .gt-hero__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 22px;
+    background: var(--color-surface);
+    color: var(--accent);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+  .gt-hero__icon svg { width: 38px; height: 38px; }
+  .gt-hero__eyebrow {
+    margin: 0 0 var(--space-1);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .gt-hero__title {
+    margin: 0;
+    font-size: clamp(2rem, 1.4rem + 2.6vw, 3.4rem);
+    line-height: 1.1;
+    color: var(--color-text);
+  }
+  .gt-hero__intro {
+    max-width: 680px;
+    margin: var(--space-5) 0 0;
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+  }
+  .gt-hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-6) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .gt-hero__stats li {
+    margin: 0;
+    padding: 0.45rem 0.9rem;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-full);
+  }
+  .gt-hero__stats strong { color: var(--color-text); font-weight: var(--weight-semibold); }
+
+  /* ── Topic switcher ── */
+  .gt-topics {
+    border-bottom: 1px solid var(--color-border-light);
+    background: var(--color-bg);
+  }
+  .gt-topics__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0;
+    padding: var(--space-4) 0;
+    list-style: none;
+  }
+  .gt-topics__list::-webkit-scrollbar { display: none; }
+  .gt-topics__list li { margin: 0; flex-shrink: 0; scroll-snap-align: start; }
+  .gt-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 40px;
+    padding: 0 var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    white-space: nowrap;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+  }
+  .gt-chip:hover { border-color: var(--chip, var(--color-primary)); color: var(--color-text); }
+  .gt-chip svg { width: 16px; height: 16px; }
+  .gt-chip--all { background: transparent; }
+  .gt-chip__n {
+    font-size: 0.72rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: var(--radius-full);
+    background: var(--color-bg-alt);
+    color: var(--color-text-muted);
+  }
+  .gt-chip.is-active {
+    background: var(--chip);
+    border-color: var(--chip);
+    color: #fff;
+  }
+  .gt-chip.is-active .gt-chip__n { background: rgba(255, 255, 255, 0.22); color: #fff; }
+
+  /* ── Body ── */
+  .gt-body { padding: var(--space-8) 0 var(--space-12); }
+
+  .gt-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+  .gt-filter__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 38px;
+    padding: 0 var(--space-4);
+    font: inherit;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  .gt-filter__btn span { font-size: 0.75rem; color: var(--color-text-light); }
+  .gt-filter__btn:hover { color: var(--color-text); border-color: var(--color-primary-light); }
+  .gt-filter__btn.is-active {
+    color: var(--color-text);
+    background: var(--color-surface);
+    border-color: var(--accent);
+    box-shadow: inset 0 -2px 0 var(--accent);
+  }
+  .gt-filter__btn.is-active span { color: var(--accent); }
+
+  .gt-lead { margin-bottom: var(--space-6); }
+  .gt-lead[hidden] { display: none; }
+
+  .gt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .gt-grid[hidden], .gt-grid li[hidden] { display: none; }
+  .gt-grid li { margin: 0; }
+  .gt-empty { text-align: center; color: var(--color-text-muted); padding: var(--space-10) 0; }
+
+  /* ── Other topics ── */
+  .gt-more {
+    padding: var(--space-12) 0;
+    background: var(--color-bg-alt);
+  }
+  .gt-more__title {
+    margin: 0 0 var(--space-6);
+    font-size: var(--text-2xl);
+  }
+  .gt-more__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .gt-more__grid li { margin: 0; }
+  .gt-mini {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  .gt-mini:hover { border-color: var(--accent); box-shadow: var(--shadow-md); }
+  .gt-mini__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--tint);
+    color: var(--accent);
+  }
+  .gt-mini__icon svg { width: 22px; height: 22px; }
+  .gt-mini__text { display: flex; flex-direction: column; min-width: 0; }
+  .gt-mini__label { font-weight: var(--weight-semibold); font-size: var(--text-sm); }
+  .gt-mini__n { font-size: var(--text-xs); color: var(--color-text-light); }
+  .gt-mini__arrow { width: 18px; height: 18px; margin-left: auto; color: var(--color-text-light); flex-shrink: 0; }
+  .gt-mini:hover .gt-mini__arrow { color: var(--accent); }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .gt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 640px) {
+    .gt-wrap { padding: 0 var(--space-4); }
+    .gt-hero { padding: var(--space-4) 0 var(--space-6); }
+    .gt-hero__row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-4);
+      margin-top: var(--space-5);
+    }
+    .gt-hero__icon { width: 52px; height: 52px; border-radius: 16px; }
+    .gt-hero__icon svg { width: 26px; height: 26px; }
+    .gt-hero__title { font-size: 2.1rem; }
+    .gt-hero__intro { margin-top: var(--space-3); font-size: var(--text-base); line-height: var(--leading-normal); }
+    .gt-hero__stats { gap: var(--space-1) var(--space-4); margin-top: var(--space-4); }
+    .gt-hero__stats li {
+      padding: 0;
+      font-size: var(--text-xs);
+      background: none;
+      border: 0;
+      border-radius: 0;
+    }
+
+    /* Full-bleed horizontal chip rail with edge fade */
+    .gt-topics .gt-wrap { padding: 0; }
+    .gt-topics__list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x proximity;
+      padding: var(--space-3) var(--space-4);
+      scroll-padding-inline: var(--space-4);
+      mask-image: linear-gradient(90deg, #000 88%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+    }
+
+    .gt-body { padding: var(--space-5) 0 var(--space-10); }
+    .gt-filter {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      margin: 0 calc(-1 * var(--space-4)) var(--space-4);
+      padding: 0 var(--space-4);
+    }
+    .gt-filter::-webkit-scrollbar { display: none; }
+    .gt-filter__btn { flex-shrink: 0; white-space: nowrap; }
+
+    .gt-lead { margin-bottom: var(--space-4); }
+    .gt-grid { grid-template-columns: 1fr; gap: var(--space-3); }
+
+    .gt-more { padding: var(--space-8) 0; }
+    .gt-more__title { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+    .gt-more__grid { grid-template-columns: 1fr 1fr; gap: var(--space-2); }
+    .gt-mini { padding: var(--space-3); gap: var(--space-2); }
+    .gt-mini__icon { width: 36px; height: 36px; border-radius: 10px; }
+    .gt-mini__icon svg { width: 18px; height: 18px; }
+    .gt-mini__label { font-size: 0.82rem; line-height: 1.25; }
+    .gt-mini__arrow { display: none; }
+  }
+</style>

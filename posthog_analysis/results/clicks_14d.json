@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'(无)') AS pos,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.time_on_page_ms),''),'') AS tms,\n       toString(properties.$insert_id) AS iid,\n       toString(properties.$session_id) AS sid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'(?)') AS cc\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1789574400) AND timestamp < toDateTime(1790864091)\nORDER BY timestamp DESC LIMIT 300\n",
+ "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'(无)') AS pos,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.time_on_page_ms),''),'') AS tms,\n       toString(properties.$insert_id) AS iid,\n       toString(properties.$session_id) AS sid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'(?)') AS cc\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1789660800) AND timestamp < toDateTime(1790913078)\nORDER BY timestamp DESC LIMIT 300\n",
  "columns": [
   "day",
   "page",
@@ -891,17 +891,6 @@
    "ea-clk-01a0b216-b033-7c86-bf1c-b304f17ec71c-kasamba-1789694247071",
    "01a0b216-b07d-7921-8b01-992762a756db",
    "CA"
-  ],
-  [
-   "2026-09-17",
-   "/",
-   "comparison",
-   "kasamba",
-   "r91sxk",
-   "36411",
-   "ea-clk-01a0af86-c32a-7585-ad1e-e3a1ea7de2db-kasamba-1789651276024",
-   "01a0af86-c331-70f5-9008-a55f24e2043b",
-   "US"
   ]
  ],
  "hasMore": null

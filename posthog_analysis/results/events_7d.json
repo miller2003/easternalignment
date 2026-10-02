@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT event, count() AS n, count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1790179200) AND coalesce(properties.$host,'') = 'easternalignment.com'\nGROUP BY event ORDER BY n DESC LIMIT 80\n",
+ "sql": "\nSELECT event, count() AS n, count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1790265600) AND coalesce(properties.$host,'') = 'easternalignment.com'\nGROUP BY event ORDER BY n DESC LIMIT 80\n",
  "columns": [
   "event",
   "n",
@@ -8,43 +8,43 @@
  "results": [
   [
    "$web_vitals",
-   292,
-   136
+   274,
+   124
   ],
   [
    "$pageview",
-   281,
-   185
+   266,
+   172
   ],
   [
    "$pageleave",
-   193,
-   127
+   182,
+   115
   ],
   [
    "$autocapture",
-   154,
-   45
+   139,
+   41
   ],
   [
    "affiliate_link_click",
-   47,
-   28
+   45,
+   26
   ],
   [
    "match_step_completed",
-   29,
-   5
+   22,
+   4
   ],
   [
    "match_started",
-   8,
-   7
+   7,
+   6
   ],
   [
    "match_completed",
-   4,
-   4
+   3,
+   3
   ],
   [
    "reader_clicked",

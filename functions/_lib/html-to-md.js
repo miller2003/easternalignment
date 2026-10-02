@@ -24,7 +24,8 @@ const DROP_ALWAYS = new Set([
 ]);
 
 /** 提取正文后额外丢弃（页面外壳） */
-const DROP_IN_MAIN = new Set(['aside', 'nav', 'header', 'footer']);
+// 'header' 不在此列：无标题的 <header> 由 stripRawBlocks 预先剔除，含标题的保留（见那里的注释）
+const DROP_IN_MAIN = new Set(['aside', 'nav', 'footer']);
 
 /** 按 class/id 命中的导航性元素 */
 const DROP_BY_CLASS = /\b(toc|table-of-contents|breadcrumb|breadcrumbs|skip-link|sr-only|visually-hidden|screen-reader|pagination|social-share|share-bar|back-to-top|newsletter|search-form)\b/i;
@@ -169,7 +170,13 @@ function stripRawBlocks(html) {
     // <svg> 是纯装饰图标，站点上每个顾问卡片都带若干 —— 实测占页面体积约 7%、
     // 却是 token 里最密集的部分。整段切掉后转换耗时降约 26%（有测量支撑）。
     .replace(/<svg\b[^>]*>[\s\S]*?<\/svg>/gi, ' ')
-    .replace(/<!--[\s\S]*?-->/g, ' ');
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    // 2026-10-02：<header> 在 <main> 里是「区块头」，不是页面外壳（站点级页眉在
+    // <main> 之外，extractMain 切段时已经排除）。首页/导航页/攻略页把 H1、H2 和
+    // 平台卡片名（Kasamba / Purple Garden / Keen）都放在 <header> 里 —— 整块丢掉
+    // 会让 AI 读到「Choose it if…」却不知道说的是谁。
+    // 规则：含标题（h1–h6）的 <header> 保留；不含标题的（徽章行、CTA 行）仍丢弃。
+    .replace(/<header\b[^>]*>[\s\S]*?<\/header>/gi, (m) => (/<h[1-6][\s>]/i.test(m) ? m : ' '));
 }
 
 /**

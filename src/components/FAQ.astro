@@ -147,4 +147,11 @@ const faqSchema = generateSchema ? {
     color: var(--color-text-muted);
     margin: 0;
   }
+  /* Links inside answers (set:html) must read as links: same colour as the
+     body text made them invisible, so nobody could tell they were clickable. */
+  .faq-answer :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 </style>

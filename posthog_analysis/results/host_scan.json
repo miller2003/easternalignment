@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1788192000)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
+ "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1788278400)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
  "columns": [
   "ref",
   "host",
@@ -9,22 +9,17 @@
   [
    "$direct",
    "easternalignment.com",
-   515
+   500
   ],
   [
    "www.google.com",
    "easternalignment.com",
-   241
+   239
   ],
   [
    "$direct",
    "mysticdo.com",
-   66
-  ],
-  [
-   "easternalignment.com",
-   "easternalignment.com",
-   24
+   67
   ],
   [
    "chatgpt.com",
@@ -32,9 +27,14 @@
    23
   ],
   [
+   "easternalignment.com",
+   "easternalignment.com",
+   22
+  ],
+  [
    "www.bing.com",
    "easternalignment.com",
-   13
+   14
   ],
   [
    "search.yahoo.com",
@@ -107,12 +107,12 @@
    1
   ],
   [
-   "www.pinterest.com",
+   "127.0.0.1:8188",
    "easternalignment.com",
    1
   ],
   [
-   "127.0.0.1:8188",
+   "www.pinterest.com",
    "easternalignment.com",
    1
   ],
@@ -122,12 +122,12 @@
    1
   ],
   [
-   "docs.google.com",
+   "cn.bing.com",
    "easternalignment.com",
    1
   ],
   [
-   "cn.bing.com",
+   "www.ecosia.org",
    "easternalignment.com",
    1
   ],
@@ -142,7 +142,12 @@
    1
   ],
   [
-   "rtp137.polalexis.pro",
+   "search.google.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "172.25.2.150:32293",
    "easternalignment.com",
    1
   ],
@@ -157,22 +162,17 @@
    1
   ],
   [
-   "www.ecosia.org",
-   "easternalignment.com",
+   "chatgpt.com",
+   "mysticdo.com",
    1
   ],
   [
-   "search.google.com",
-   "easternalignment.com",
+   "$direct",
+   "127.0.0.1:8931",
    1
   ],
   [
-   "172.25.2.150:32293",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "www.kimi.com",
+   "rtp137.polalexis.pro",
    "easternalignment.com",
    1
   ],
@@ -187,27 +187,17 @@
    1
   ],
   [
-   "localhost:4321",
-   "localhost:4321",
-   1
-  ],
-  [
-   "chatgpt.com",
-   "mysticdo.com",
-   1
-  ],
-  [
-   "$direct",
-   "127.0.0.1:8931",
-   1
-  ],
-  [
    "workplace.mgovcloud.in",
    "easternalignment.com",
    1
   ],
   [
-   "kit-ru2.voximplant.com",
+   "localhost:4321",
+   "localhost:4321",
+   1
+  ],
+  [
+   "www.google.com.au",
    "easternalignment.com",
    1
   ],
@@ -217,7 +207,7 @@
    1
   ],
   [
-   "www.google.com.au",
+   "kit-ru2.voximplant.com",
    "easternalignment.com",
    1
   ],

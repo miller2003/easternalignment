@@ -1,0 +1,89 @@
+---
+/* Closing band for the guides hub + topic pages: routes undecided readers
+ * into Reader Match instead of letting the page dead-end. */
+---
+
+<section class="gcta">
+  <div class="gcta__inner">
+    <div class="gcta__text">
+      <p class="gcta__eyebrow">Not sure where to start?</p>
+      <h2 class="gcta__title">Tell us your question. We'll match the reader.</h2>
+      <p class="gcta__sub">Reader Match pairs your situation with a verified psychic who specialises in it — in under a minute.</p>
+    </div>
+    <a href="/match/" class="gcta__btn">
+      Try Reader Match
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<style>
+  .gcta {
+    padding: var(--space-12) var(--space-6);
+  }
+  .gcta__inner {
+    position: relative;
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+    padding: var(--space-10) var(--space-12);
+    border-radius: 24px;
+    color: #fff;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(232, 205, 176, 0.35), transparent 45%),
+      linear-gradient(135deg, #3D3127 0%, #6B5438 100%);
+    overflow: hidden;
+  }
+  .gcta__eyebrow {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent-light);
+  }
+  .gcta__title {
+    margin: 0;
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
+    line-height: 1.2;
+    color: #fff;
+  }
+  .gcta__sub {
+    margin: var(--space-3) 0 0;
+    max-width: 560px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: var(--text-base);
+  }
+  .gcta__btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 52px;
+    padding: 0 var(--space-6);
+    font-weight: var(--weight-semibold);
+    color: #3D3127;
+    background: #fff;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+  .gcta__btn svg { width: 18px; height: 18px; transition: transform var(--transition-base); }
+  .gcta__btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25); color: #3D3127; }
+  .gcta__btn:hover svg { transform: translateX(3px); }
+
+  @media (max-width: 768px) {
+    .gcta { padding: var(--space-8) var(--space-4); }
+    .gcta__inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-5);
+      padding: var(--space-8) var(--space-6);
+      border-radius: 20px;
+    }
+    .gcta__btn { justify-content: center; }
+  }
+</style>

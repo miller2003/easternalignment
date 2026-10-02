@@ -4,7 +4,7 @@
     "name": "eastern-alignment-reviews",
     "title": "Eastern Alignment Psychic Platform Reviews",
     "version": "1.0.0",
-    "description": "Independent reviews, rankings, and buyer guidance for online psychic reading platforms. 162+ advisor profiles reviewed across Kasamba, Keen, and Purple Garden with verifiable session counts and prediction records."
+    "description": "Independent reviews, rankings, and buyer guidance for online psychic reading platforms. 242 advisor profiles audited across Kasamba, Keen, and Purple Garden with verifiable session counts and prediction records."
   },
   "transport": {
     "type": "streamable-http",
@@ -24,7 +24,7 @@
     },
     {
       "name": "kasamba-review",
-      "description": "Full Kasamba platform review: 64 advisor profiles examined, 3 free minutes + 50% off offer details, scoring methodology",
+      "description": "Full Kasamba platform review: 112 advisor profiles examined, 3 free minutes + 50% off offer details, scoring methodology",
       "mimeType": "text/html",
       "uri": "https://easternalignment.com/reviews/kasamba/"
     },

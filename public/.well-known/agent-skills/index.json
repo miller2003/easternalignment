@@ -5,7 +5,7 @@
     {
       "name": "site-content-access",
       "type": "documentation",
-      "description": "Access Eastern Alignment's 162+ psychic platform reviews, head-to-head comparisons, ranked guides, and cost breakdowns. Supports markdown content negotiation via Accept: text/markdown header on any page URL.",
+      "description": "Access Eastern Alignment's 240+ audited advisor profiles, platform reviews, head-to-head comparisons, ranked guides, and cost breakdowns. Supports markdown content negotiation via Accept: text/markdown header on any page URL.",
       "url": "https://easternalignment.com/.well-known/agent-skills/site-content/SKILL.md",
       "digest": "sha256:dbcb8cc6f505cef7c3b672d98d1a451d8c4ceb065bfa9966b2f6da37827d55ad",
       "tags": ["reviews", "psychics", "comparisons", "markdown", "content"]

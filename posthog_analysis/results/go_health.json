@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day, event, count() AS n\nFROM events WHERE coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event IN ('aff_go_hit','aff_go_blocked','affiliate_link_click')\n  AND timestamp >= toDateTime(1789574400) AND timestamp < toDateTime(1790864091)\nGROUP BY day, event ORDER BY day DESC LIMIT 60\n",
+ "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day, event, count() AS n\nFROM events WHERE coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event IN ('aff_go_hit','aff_go_blocked','affiliate_link_click')\n  AND timestamp >= toDateTime(1789660800) AND timestamp < toDateTime(1790913078)\nGROUP BY day, event ORDER BY day DESC LIMIT 60\n",
  "columns": [
   "day",
   "event",
@@ -58,12 +58,12 @@
   ],
   [
    "2026-09-26",
-   "aff_go_hit",
+   "affiliate_link_click",
    3
   ],
   [
    "2026-09-26",
-   "affiliate_link_click",
+   "aff_go_hit",
    3
   ],
   [
@@ -138,23 +138,13 @@
   ],
   [
    "2026-09-18",
-   "affiliate_link_click",
+   "aff_go_hit",
    4
   ],
   [
    "2026-09-18",
-   "aff_go_hit",
-   4
-  ],
-  [
-   "2026-09-17",
-   "aff_go_hit",
-   1
-  ],
-  [
-   "2026-09-17",
    "affiliate_link_click",
-   1
+   4
   ]
  ],
  "hasMore": null
