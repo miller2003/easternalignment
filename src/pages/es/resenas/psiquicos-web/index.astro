@@ -58,6 +58,9 @@ const featuredReaders = FEATURED_SLUGS
     return {
       slug: r.slug,
       initials: initialsOf(displayName),
+      // 2026-09-29: mismo caso que el hub de Purple Garden — la tarjeta
+      // renderizaba iniciales sobre degradado e ignoraba el avatar real.
+      avatarUrl: r.avatarUrl,
       name: displayName,
       specialty: (r.bestFor || '').split(',').slice(0, 3).join(' · '),
       price: r.pricing || '',
@@ -285,7 +288,20 @@ const faqItems = [
           {featuredReaders.map((reader) => (
             <div class="reader-showcase-card">
               <div class="reader-showcase-header">
-                <div class="reader-showcase-initials" style={`background: ${reader.background};`}>{reader.initials}</div>
+                <div class="reader-showcase-initials" style={`background: ${reader.background};`}>
+                  <span>{reader.initials}</span>
+                  {reader.avatarUrl && (
+                    <img
+                      class="reader-showcase-avatar-img"
+                      src={reader.avatarUrl}
+                      alt=""
+                      width="44"
+                      height="44"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                </div>
                 <div>
                   <h3 class="reader-showcase-name">
                     <a href={`/es/resenas/psiquicos-web/${reader.slug}/`}>{reader.name}</a>
@@ -643,6 +659,8 @@ const faqItems = [
     margin-bottom: var(--space-3);
   }
   .reader-showcase-initials {
+    position: relative;
+    overflow: hidden;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -653,6 +671,16 @@ const faqItems = [
     font-weight: var(--weight-bold);
     color: white;
     flex-shrink: 0;
+  }
+  /* Avatar real por encima del degradado con iniciales: si la imagen no carga,
+     se degrada a lo que había antes en vez de dejar un círculo vacío. */
+  .reader-showcase-avatar-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   .reader-showcase-name {
     font-size: var(--text-base);

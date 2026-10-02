@@ -1,17 +1,16 @@
 ---
 title: "Luna Ishtar en Purple Garden: La Voz a $0.99 — y la Única Lectora del Top Hispano donde Llamar Cuesta la Mitad que el Chat"
-seoTitle: "Luna Ishtar Reseña — Purple Garden | 5★, 628 Lecturas, $0.99 Voz"
-metaDescription: "Reseña de Luna Ishtar en Purple Garden: 5.0★, $0.99/min. Lecturas por voz con precio más bajo que el chat, combinación de tarot + runas + astrología."
+seoTitle: "Luna Ishtar Reseña — Purple Garden | 4.9★, 628 Lecturas"
+metaDescription: "Reseña de Luna Ishtar en Purple Garden: 4.9★, $0.99/min. Lecturas por voz con precio más bajo que el chat, combinación de tarot + runas + astrología."
 description: "Análisis independiente de Luna Ishtar en Purple Garden: 628 lecturas en 5.0★ desde 2023. La única del top hispano cuya voz ($0.99/min) cuesta la mitad que su chat ($1.99/min) — una invitación de precio a la modalidad donde mejor lee. Astróloga, tarotista y lectora de runas con 10 años de oficio. 'Me describió una situación tal cual es sin decirle nada'."
 platformName: "Purple Garden: Luna Ishtar"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.9
 verdict: "Luna Ishtar es la anomalía de precios del top hispanohablante de Purple Garden: la única lectora del top 30 donde la voz ($0.99/min) cuesta exactamente la mitad que el chat ($1.99/min). La estructura de tarifa es una invitación de precio a la modalidad donde su lectura fluye mejor — la conversación hablada, donde su combinación de astrología, tarot y runas encuentra su ritmo natural. Con 628 lecturas en 5.0★ desde 2023 y una proporción de satisfacción del 97,5%, sus reseñas documentan la doble virtud más difícil de producir en el sector: 'no me echó choro' — la clienta mexicana que certifica la ausencia de relleno — y 'me describió una situación tal cual es sin decirle nada' — el test de lectura fría superado y reseñado. A $0.99 la voz con ese nivel de precisión, su perfil es el acceso más económico a una lectora de tarot, runas y astrología en el catálogo hispano."
 pricing: "$0.99/min"
 bestFor: "Lecturas por voz con precio más bajo que el chat, combinación de tarot + runas + astrología, verificación de situación sin contexto previo, sesiones sin relleno conversacional"
 publishDate: "2026-09-27"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luna-ishtar/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/luna-ishtar.webp"

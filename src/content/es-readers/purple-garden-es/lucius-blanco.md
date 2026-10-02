@@ -5,13 +5,12 @@ metaDescription: "Reseña de Lucius Blanco en Purple Garden: 5.0★, $2.99/min. 
 description: "Análisis independiente de Lucius Blanco en Purple Garden: 4.663 lecturas verificadas en 5.0★ a $2.99/min, tarotista con 12 años de experiencia en lecturas vinculares y gitanas. El perfil de más rápido crecimiento en el catálogo hispanohablante de la plataforma."
 platformName: "Purple Garden: Lucius Blanco"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 5
 verdict: "Lucius Blanco es el perfil de mayor velocidad de crecimiento en el catálogo hispanohablante de Purple Garden en 2025–2026: 4.663 lecturas y 1.537 reseñas verificadas en 5.0★ en menos de dos años desde su ingreso, con una trayectoria que en términos estadísticos solo es sostenible cuando hay algo real detrás. Su especialización en lecturas de tarot vincular y técnicas de magia gitana lo distingue de la mayoría del catálogo hispano, que se concentra en tarot convencional. A $2.99/min con ese historial, la ecuación precio-calidad no tiene parangón entre los perfiles con más de 4.000 sesiones en la plataforma. Limitación real: en momentos de alta demanda puede estar en estado 'ocupado' más tiempo del habitual — lo cual es, precisamente, la mejor prueba de que sus cupos se agotan."
 pricing: "$2.99/min"
 bestFor: "Lecturas de amor con componente vincular profundo, consultas con tradición gitana, primera sesión en Purple Garden, análisis de bloqueos relacionales"
 publishDate: "2026-09-12"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/lucius-blanco/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/lucius-blanco.webp"

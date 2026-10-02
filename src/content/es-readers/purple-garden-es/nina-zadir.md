@@ -5,13 +5,12 @@ metaDescription: "Reseña de NINA ZADIR en Purple Garden: 5.0★, $1.49/min. Lec
 description: "Análisis independiente de NINA ZADIR en Purple Garden: 18.952 lecturas verificadas en 5★ desde 2018, insignia most accurate, 19 años de profesión y 8 años de radio espiritual en directo. A $1.49/min, la mejor relación precio-historial de todo el catálogo hispanohablante."
 platformName: "Purple Garden: NINA ZADIR"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 5
 verdict: "NINA ZADIR es el perfil con mayor volumen documentado del catálogo hispanohablante de Purple Garden: 18.952 lecturas completadas en 5.0★ desde 2018, con la insignia most accurate de la plataforma y una proporción de reseñas positivas del 99,7%. Su credencial diferencial no es unclaim de marketing: son 8 años conduciendo sus propios programas de radio espiritual en directo — tarot, videncia e interpretación de sueños sin edición, sin corte, sin segunda toma — sobre una carrera profesional de 19 años. A $1.49/min en chat, es simultáneamente la lectora más veteranada y la más económica del top hispano, una combinación que no se repite en ninguna otra posición del ranking. Limitación real: su estilo integra coaching espiritual por diseño — si buscas únicamente predicción sin orientación, su formato puede darte más de lo que pediste."
 pricing: "$1.49/min"
 bestFor: "Lecturas por chat con presupuesto ajustado, verificación de detalles sin contexto previo, interpretación de sueños, consultantes que valoran el seguimiento de acción y no solo el pronóstico, primera sesión de larga duración maximizando el bono"
 publishDate: "2026-09-22"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/nina-zadir/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/nina-zadir.webp"

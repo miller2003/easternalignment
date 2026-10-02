@@ -5,13 +5,12 @@ metaDescription: "Reseña de Carlota en Psíquicos Web: 5.0★, $3.19/min. Lectu
 description: "Análisis independiente de Carlota en Psíquicos Web: 55.277 lecturas en 5.0★ desde 2020. Más de diez años como tarotista en un programa de televisión nocturno — la prueba más exigente del sector, sin edición ni segunda toma. 27.738 positivas frente a 37 negativas."
 platformName: "Psíquicos Web: Carlota"
 platform: "psiquicos"
-rating: 5.0
+rating: 5
 verdict: "Carlota ocupa el puesto #2 del ranking de Psíquicos Web con el segundo mayor volumen documentado: 55.277 lecturas en 5.0★ desde 2020, con 27.738 reseñas positivas frente a solo 37 negativas (99,9%). Lo que la define no es solo el volumen — es la credencial que pocos perfiles del catálogo hispano pueden mostrar: más de diez años como tarotista en un programa de televisión nocturno, leyendo en directo ante audiencia, sin edición, sin segunda toma. La televisión es el entorno menos indulgente del sector: el espectador que llama lo hace en tiempo real, sin contexto previo, y juzga al instante. Sobrevivir una década en ese formato implica sostener lecturas reales ante público real. A $3.19/min, su tarifa es estándar — su expediente no lo es."
 pricing: "$3.19/min"
 bestFor: "Lecturas con tarotista de televisión contrastada, vidente con dotes psíquicos, experta en temas sentimentales y laborales, rituales de protección y limpieza energética"
 publishDate: "2026-09-15"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/carlota/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/carlota.webp"

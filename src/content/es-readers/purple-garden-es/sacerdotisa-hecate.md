@@ -1,17 +1,16 @@
 ---
 title: "Sacerdotisa Hecate en Purple Garden: La Diosa de las Encrucijadas como Programa de Lectura — y la Sacerdotisa que Habla con Voseo"
-seoTitle: "Sacerdotisa Hecate Reseña — Purple Garden | 5★, 616 Lecturas"
-metaDescription: "Reseña de Sacerdotisa Hecate en Purple Garden: 5.0★, $2.99/min. Decisiones de bifurcación (qué camino tomar), transformación profunda con tarot evolutivo."
+seoTitle: "Sacerdotisa Hecate Reseña — Purple Garden | 4.8★, 616 Lecturas"
+metaDescription: "Reseña de Sacerdotisa Hecate en Purple Garden: 4.8★, $2.99/min. Decisiones de bifurcación (qué camino tomar), transformación profunda con tarot evolutivo."
 description: "Análisis independiente de Sacerdotisa Hecate en Purple Garden: 616 lecturas en 5.0★ desde 2024. Su nombre es su método: Hécate, la diosa griega de las encrucijadas, aplicada a lecturas de decisión. Tarot evolutivo, Registros Akáshicos y Reiki operados con voseo rioplatense. 'La mejor sesión que he tenido, me ha dado una claridad brutal'."
 platformName: "Purple Garden: Sacerdotisa Hecate"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Sacerdotisa Hecate ocupa el puesto #19 del ranking hispanohablante de Purple Garden con un perfil donde el nombre no es decorativo: Hécate, la diosa griega de las encrucijadas y la magia, define el programa completo de su método — lecturas de decisión, de momentos donde el consultante está en una bifurcación del camino y necesita saber qué camino tomar. Sobre esa identidad opera un repertorio de Tarot Evolutivo, Registros Akáshicos y Reiki con un rasgo lingüístico poco común en el catálogo: el voseo rioplatense ('tenés', 'querés', 'hacés'), que la conecta con un público específico — argentino y uruguayo — por su registro nativo. Con 616 lecturas en 5.0★ desde 2024 y una sola reseña negativa en 137 positivas (99,3%), su estilo queda documentado por una clienta en la frase más enfática del catálogo: 'la mejor sesión que he tenido, me ha dado una claridad brutal'."
 pricing: "$2.99/min"
 bestFor: "Decisiones de bifurcación (qué camino tomar), transformación profunda con tarot evolutivo, Registros Akáshicos para propósito de vida, sesiones en voseo rioplatense, consultas donde se valora la verdad sin rodeos"
 publishDate: "2026-09-28"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/sacerdotisa-hecate/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/sacerdotisa-hecate.webp"

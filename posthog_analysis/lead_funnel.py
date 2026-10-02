@@ -137,7 +137,10 @@ def report():
         if c[0] and c[0] not in tok:
             tok[c[0]] = c
 
-    leads, sales, orphans, reversals = [], [], [], []
+    # 🔴 必须按 ctype 显式分类，不能写 `else → sales`：
+    # 2026-08 之前（conversion_type 字段上线前）的回传 ctype 为空字符串，
+    # 若归入 sale 会把历史行当成本窗口付费（实测虚增 2 笔 / $100）。
+    leads, sales, orphans, reversals, unknown = [], [], [], [], []
     for r in conv:
         rec = dict(zip(["t", "txn", "ctype", "platform", "token", "sub", "did",
                         "revenue", "status", "ti", "orphan", "ev"], r))
@@ -145,8 +148,10 @@ def report():
             orphans.append(rec)
         elif rec["ctype"] == "lead":
             leads.append(rec)
-        else:
+        elif rec["ctype"] == "sale":
             (reversals if rec["ti"] == "reversal" else sales).append(rec)
+        else:
+            unknown.append(rec)
 
     try:
         orph_all = json.load(open(os.path.join(OUT, "lf_orphans.json"), encoding="utf-8"))["results"]
@@ -161,6 +166,9 @@ def report():
     except Exception:
         pass
     print(f"注册(lead) {len(leads)} 笔 ｜ 付费(sale) {len(sales)} 笔 ｜ 撤销 {len(reversals)} 笔")
+    if unknown:
+        print(f"⚠️ 另有 {len(unknown)} 笔回传 conversion_type 为空（字段上线前的历史行），"
+              f"既不计入注册也不计入付费 —— 请单独判读，不要让它们默认落进 sale")
     print(f"孤儿回传 {len(orph_all)} 条（>0 = 后台发了但认不出人；=0 = 后台没发该类型回传）")
     if testish:
         print(f"⚠️ 已从 lead/sale 统计中过滤疑似手工测试回传 {testish} 条"

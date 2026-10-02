@@ -1,0 +1,53 @@
+---
+/**
+ * Keeps history (back/forward) scroll restoration instant while leaving smooth
+ * scrolling intact for real in-page anchor clicks.
+ *
+ * The problem: `html { scroll-behavior: smooth }` (global.css §2) also applies to
+ * the scroll the browser performs when it restores a page's position on back
+ * navigation. Instead of landing where you left off, the page visibly slides down
+ * from the top. Because the restore happens on the root element, no amount of
+ * per-element CSS avoids it — it has to be neutralised at the root, and only for
+ * the duration of the restore.
+ *
+ * The fix: `html.ea-scroll-instant` forces `scroll-behavior: auto`, and this
+ * inline head script applies it before first paint (i.e. before the restore runs)
+ * and removes it as soon as the user shows intent to interact. Once disarmed, any
+ * anchor click scrolls smoothly again, exactly as before.
+ *
+ * Inline (`is:inline`) on purpose: an external/bundled module is deferred and
+ * would run after the browser has already done the restoration scroll.
+ *
+ * Must be rendered in <head> of every layout.
+ */
+---
+
+<script is:inline>
+  (function () {
+    var root = document.documentElement;
+    var CLASS = 'ea-scroll-instant';
+    // Signals that the user is about to drive the page themselves. None of these
+    // fire during the browser's own restoration scroll, which is what makes this
+    // a safe trigger.
+    var INTENT = ['pointerdown', 'keydown', 'wheel', 'touchstart'];
+
+    function arm() {
+      root.classList.add(CLASS);
+    }
+    function disarm() {
+      root.classList.remove(CLASS);
+    }
+
+    arm();
+    // Kept attached for the whole document lifetime: a page revived from the
+    // back/forward cache does not re-execute this script, so the listeners must
+    // still be there to disarm it again after the user interacts.
+    for (var i = 0; i < INTENT.length; i++) {
+      window.addEventListener(INTENT[i], disarm, { capture: true, passive: true });
+    }
+    // Leaving the page re-arms it — whether we are being unloaded or parked in the
+    // back/forward cache. On a cache restore the click that navigated away had
+    // already disarmed it, and without this the slide would come straight back.
+    window.addEventListener('pagehide', arm);
+  })();
+</script>

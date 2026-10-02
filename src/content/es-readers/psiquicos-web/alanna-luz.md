@@ -1,17 +1,16 @@
 ---
 title: "Alanna Luz en Psíquicos Web: 'Te Contaré los Diálogos con las Mismas Palabras' — la Reivindicación Más Audaz del Catálogo"
-seoTitle: "Alanna Luz Reseña — Psíquicos Web | 4.9★, 4.062 Lecturas"
-metaDescription: "Reseña de Alanna Luz en Psíquicos Web: 4.9★, $3.79/min. Canalización exacta de diálogos y frases, médium y vidente con 12 años de oficio, Péndulo Hebreo."
+seoTitle: "Alanna Luz Reseña — Psíquicos Web | 4.7★, 4.062 Lecturas"
+metaDescription: "Reseña de Alanna Luz en Psíquicos Web: 4.7★, $3.79/min. Canalización exacta de diálogos y frases, médium y vidente con 12 años de oficio, Péndulo Hebreo."
 description: "Análisis independiente de Alanna Luz en Psíquicos Web: 4.062 lecturas en 4.9★ desde 2024 con insignia trending. La reivindicación más audaz del catálogo: 'te contaré cosas que te han pasado exactamente igual, y hasta diálogos o frases que la persona te dijo con las mismas palabras.' 12 años de tarot, médium y vidente. 1.041 positivas frente a 17 negativas."
 platformName: "Psíquicos Web: Alanna Luz"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "Alanna Luz ocupa el puesto #31 del ranking de Psíquicos Web con 4.062 lecturas en 4.9★ desde 2024, insignia trending y una proporción del 98,4% (1.041 positivas frente a 17 negativas). Lo que la define es la reivindicación más audaz del catálogo hispano: 'te contaré cosas que te han pasado exactamente igual, y hasta diálogos o frases que la persona por la que preguntas te dijo con las mismas palabras.' Es la afirmación más extrema del test de lectura fría: no solo detalles no proporcionados, sino las palabras exactas de diálogos no compartidos. 12 años de tarot, médium, vidente, con Péndulo Hebreo, Velomancia y Coach Ontológico."
 pricing: "$3.79/min"
 bestFor: "Canalización exacta de diálogos y frases, médium y vidente con 12 años de oficio, Péndulo Hebreo, Velomancia, Coach Ontológico, vidas pasadas"
 publishDate: "2026-09-23"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/alanna-luz/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/alanna-luz.webp"

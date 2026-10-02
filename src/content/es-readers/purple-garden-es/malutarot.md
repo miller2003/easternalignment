@@ -1,17 +1,16 @@
 ---
 title: "Malutarot en Purple Garden: Tercera Generación de Clarividencia y la Lectora que No Te Pone Límite de Preguntas"
-seoTitle: "Malutarot Reseña — Purple Garden | 5★, 1.576 Lecturas, $2.49/min"
-metaDescription: "Reseña de Malutarot en Purple Garden: 5.0★, $2.49/min. Sesiones con varias preguntas sin límite, clarividencia con herencia de tres generaciones."
+seoTitle: "Malutarot Reseña — Purple Garden | 4.9★, 1.576 Lecturas"
+metaDescription: "Reseña de Malutarot en Purple Garden: 4.9★, $2.49/min. Sesiones con varias preguntas sin límite, clarividencia con herencia de tres generaciones."
 description: "Análisis independiente de Malutarot (Malú) en Purple Garden: 1.576 lecturas en 5.0★ desde 2022. Clarividente de tercera generación, heredera del don de su abuela, con un repertorio de seis barajas y la política más inusual del catálogo hispano: responde todas las preguntas durante la sesión, sin límite."
 platformName: "Purple Garden: Malutarot"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.9
 verdict: "Malutarot — Malú, chilena — ocupa el puesto #13 del ranking hispanohablante de Purple Garden con el expediente de linaje más explícito del segmento: clarividente de tercera generación, formada por una abuela que le enseñó a escuchar la voz del espíritu. Sobre esa herencia opera una de las políticas más inusuales del catálogo: 'responder todas las dudas, sin límites, rápida y sincera' — en un mercado saturado de lectoras que limitan cada consulta a una o dos preguntas, su sesiones de preguntas ilimitadas son una rareza con valor directo para el consultante. Con 1.576 lecturas en 5.0★ desde 2022 y una proporción de reseñas positivas del 99,5% (596 favorables frente a solo 3 negativas), su perfil es la combinación de linaje, repertorio y generosidad de sesión más sólida del segundo tramo del top hispano."
 pricing: "$2.49/min"
 bestFor: "Sesiones con varias preguntas sin límite, clarividencia con herencia de tres generaciones, repertorio de seis barajas, lectura directa y sincera sin conversación de relleno"
 publishDate: "2026-09-16"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/malutarot/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/malutarot.webp"

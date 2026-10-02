@@ -1,17 +1,16 @@
 ---
 title: "Luz tarot en Purple Garden: La Detectora de Engaños — 27 Años de Oficio Argentino y la Verdad Oculta"
-seoTitle: "Luz tarot Reseña — Purple Garden | 5★, 909 Lecturas, $1.99/min"
-metaDescription: "Reseña de Luz tarot en Purple Garden: 5.0★, $1.99/min. Detección de engaños y situaciones ocultas, verificación de infidelidad o doble intención."
+seoTitle: "Luz tarot Reseña — Purple Garden | 4.8★, 909 Lecturas, $1.99/min"
+metaDescription: "Reseña de Luz tarot en Purple Garden: 4.8★, $1.99/min. Detección de engaños y situaciones ocultas, verificación de infidelidad o doble intención."
 description: "Análisis independiente de Luz tarot en Purple Garden: 909 lecturas en 5.0★ desde 2019. Argentina, 27 años de oficio, terapeuta holística. La lectora del top hispano que se declara especialista en 'detectar engaños o situaciones ocultas' — la verdad que la otra parte esconde. Directa, acertada y empática, en registro rioplatense."
 platformName: "Purple Garden: Luz tarot"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Luz tarot ocupa el puesto #24 del ranking hispanohablante de Purple Garden con una especialidad que ningún otro perfil del top 30 declara con esa precisión operativa: 'detectar engaños o situaciones ocultas'. Para el segmento de consultantes que llega con la sospecha de que la otra parte esconde algo — infidelidad, doble intención, situación que no calza — esa especialidad es exactamente el diagnóstico que necesitan. Sobre ella opera una argentina con 27 años de oficio, terapeuta holística, que combina tarot, videncia y canalización con un registro lingüístico rioplatense que conecta con su público nativo. Con 909 lecturas en 5.0★ desde 2019 y una proporción de satisfacción del 97,3% (178 positivas frente a 5 negativas), su perfil combina oficio largo, especialidad declarada y precio accesible. Limitación real: su directividad puede no conectar con todas las clientas — cuando la verdad es dura, duele leerla."
 pricing: "$1.99/min"
 bestFor: "Detección de engaños y situaciones ocultas, verificación de infidelidad o doble intención, destrabar bloqueos amorosos o económicos, 27 años de oficio argentino, registro rioplatense"
 publishDate: "2026-09-28"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luz-tarot/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/luz-tarot.webp"

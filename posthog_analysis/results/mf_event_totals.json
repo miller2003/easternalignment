@@ -1,0 +1,38 @@
+{
+ "sql": "\nSELECT event,\n       count() AS n_clean,\n       count(DISTINCT person_id) AS users_clean,\n       count(DISTINCT properties.$session_id) AS sessions_clean,\n       countIf(coalesce(properties.$geoip_country_code,'')='CN') AS n_cn,\n       countIf(coalesce(properties.$host,'') != 'easternalignment.com') AS n_otherhost\nFROM events\nWHERE event IN ('match_started','match_step_completed','match_completed')\n  AND timestamp >= toDateTime(1790092800)\nGROUP BY event ORDER BY n_clean DESC LIMIT 20\n",
+ "columns": [
+  "event",
+  "n_clean",
+  "users_clean",
+  "sessions_clean",
+  "n_cn",
+  "n_otherhost"
+ ],
+ "results": [
+  [
+   "match_step_completed",
+   40,
+   6,
+   7,
+   7,
+   0
+  ],
+  [
+   "match_started",
+   9,
+   7,
+   8,
+   1,
+   0
+  ],
+  [
+   "match_completed",
+   5,
+   5,
+   5,
+   1,
+   0
+  ]
+ ],
+ "hasMore": null
+}

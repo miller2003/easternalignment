@@ -9,6 +9,8 @@ import EsProsCons from '../../../../components/es/EsProsCons.astro';
 import EsCTABox from '../../../../components/es/EsCTABox.astro';
 import EsFAQ from '../../../../components/es/EsFAQ.astro';
 import EsReaderCard from '../../../../components/es/EsReaderCard.astro';
+import EsRelatedGuides from '../../../../components/es/EsRelatedGuides.astro';
+import { getEsGuides, relatedGuidesForReader } from '../../../../lib/esGuides';
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../../../content/es-readers/psiquicos-web/*.md');
@@ -30,6 +32,9 @@ export async function getStaticPaths() {
 
 const { default: Content, frontmatter } = Astro.props;
 const currentSlug = Astro.params.lector;
+
+// 2026-10-02: enlaces a guías (las reseñas tenían 0 enlaces hacia contenido informativo)
+const relatedGuides = relatedGuidesForReader({ slug: currentSlug as string, title: frontmatter.title, bestFor: frontmatter.bestFor, verdict: frontmatter.verdict }, getEsGuides(), 3);
 
 // Load all other Psíquicos Web readers for cross-linking
 const allReaderModules = import.meta.glob('../../../../content/es-readers/psiquicos-web/*.md', { eager: true });
@@ -70,7 +75,7 @@ const fmFaq = (frontmatter.faq || []).filter(
 const genericFaqItems = [
   {
     question: `¿Es ${readerName} un/a vidente de confianza en Psíquicos Web?`,
-    answer: `${readerName} es un/a lector/a activo/a en Psíquicos Web con una calificación de ${frontmatter.rating} sobre 5. Esta reseña se basa en el análisis de su historial verificado, calificaciones de usuarios documentadas y datos públicos de la plataforma. Consulta el análisis completo para evaluar si se adapta a tu tipo de consulta.`,
+    answer: `${readerName} es un/a lector/a activo/a en Psíquicos Web. En nuestro análisis obtiene una puntuación editorial de ${frontmatter.rating} sobre 5 — es la valoración de Eastern Alignment, no la del perfil. Se basa en su historial verificado, las calificaciones de usuarios documentadas y los datos públicos de la plataforma; la calificación que muestra su perfil se cita aparte en esta reseña. Consulta el análisis completo para evaluar si se adapta a tu tipo de consulta.`,
   },
   {
     question: `¿Cuánto cuesta una sesión con ${readerName}?`,
@@ -168,6 +173,8 @@ const faqItems = [
       </div>
     </section>
   )}
+
+  <EsRelatedGuides guides={relatedGuides} title="Guías para preparar tu consulta" intro="Lo que conviene saber antes de reservar — escrito con el mismo criterio que esta reseña." />
 
   <!-- Back link -->
   <div class="back-link-row">

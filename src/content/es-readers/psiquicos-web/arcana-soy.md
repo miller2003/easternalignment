@@ -1,17 +1,16 @@
 ---
 title: "Arcana Soy en Psíquicos Web: 'La Magia como Medio de Transformación' — y la Honestidad de No Ofrecer Mediumnidad"
-seoTitle: "Arcana Soy Reseña — Psíquicos Web | 4.9★, 1.386 Lecturas"
-metaDescription: "Reseña de Arcana Soy en Psíquicos Web: 4.9★, $2.49/min. Magia como transformación activa, lecturas con insignia most accurate y 20 años de oficio."
+seoTitle: "Arcana Soy Reseña — Psíquicos Web | 4.7★, 1.386 Lecturas"
+metaDescription: "Reseña de Arcana Soy en Psíquicos Web: 4.7★, $2.49/min. Magia como transformación activa, lecturas con insignia most accurate y 20 años de oficio."
 description: "Análisis independiente de Arcana Soy (Alejandra) en Psíquicos Web: 1.386 lecturas en 4.9★ desde 2026 con insignia most accurate. 20+ años de experiencia. 'La Magia como medio de transformación para ciertos momentos de nuestra vida.' 437 positivas frente a 11 negativas."
 platformName: "Psíquicos Web: Arcana Soy"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "Arcana Soy — Alejandra — ocupa el puesto #28 del ranking de Psíquicos Web con 1.386 lecturas en 4.9★ desde 2026, insignia most accurate y una proporción del 97,5% (437 positivas frente a 11 negativas). Lo que la define es la filosofía más articulada del tramo sobre su propio método: 'la Magia como medio de transformación para ciertos momentos de nuestra vida' — no solo lectura, sino transformación activa. A ello suma la honestidad de delimitación más clara del tramo: 'No realizo contacto con personas fallecidas.' 20+ años de experiencia con Tarot, Runas y Oráculos."
 pricing: "$2.49/min"
 bestFor: "Magia como transformación activa, lecturas con insignia most accurate y 20 años de oficio, Tarot + Runas + Oráculos, delimitación honesta, verdad sin rodeos"
 publishDate: "2026-09-21"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/arcana-soy/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/arcana-soy.webp"

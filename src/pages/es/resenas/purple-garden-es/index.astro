@@ -113,6 +113,10 @@ const spanishReaders = FEATURED_SLUGS
     return {
       slug: r.slug,
       initials: initialsOf(displayName),
+      // 2026-09-29: la tarjeta mostraba siempre las iniciales sobre un degradado
+      // e ignoraba el avatar real del frontmatter — de ahí que el hub del sitio
+      // en español no mostrara ninguna foto. El avatar es la fuente única.
+      avatarUrl: r.avatarUrl,
       name: displayName,
       handle: r.slug,
       specialty: (r.bestFor || '').split(',').slice(0, 3).join(' · '),
@@ -314,7 +318,18 @@ const spanishReaders = FEATURED_SLUGS
           <div class="pg-reader-card">
             <div class="pg-reader-header">
               <div class="pg-reader-avatar" style={`background: ${reader.background}`}>
-                {reader.initials}
+                <span class="pg-reader-initials">{reader.initials}</span>
+                {reader.avatarUrl && (
+                  <img
+                    class="pg-reader-avatar-img"
+                    src={reader.avatarUrl}
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
               </div>
               <div class="pg-reader-meta">
                 <h3 class="pg-reader-name">
@@ -594,10 +609,22 @@ const spanishReaders = FEATURED_SLUGS
   .pg-reader-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
   .pg-reader-header { display: flex; align-items: flex-start; gap: var(--space-3); }
   .pg-reader-avatar {
+    position: relative;
+    overflow: hidden;
     width: 48px; height: 48px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-size: var(--text-base); font-weight: var(--weight-bold); color: white;
     flex-shrink: 0;
+  }
+  /* El degradado + iniciales quedan debajo del avatar: si la foto no carga
+     (o el slug destacado aún no tiene frontmatter de avatar), se ve igual que
+     antes en lugar de un hueco blanco. Sin JS, sin salto de layout. */
+  .pg-reader-avatar-img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   .pg-reader-meta { flex: 1; min-width: 0; }
   .pg-reader-name { font-size: var(--text-base); font-weight: var(--weight-semibold); margin: 0 0 2px; }

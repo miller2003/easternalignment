@@ -1,17 +1,16 @@
 ---
 title: "medium fernanda en Purple Garden: Canalización Pura, Sin Tarot — La Única Médium de su Tipo en el Top Hispano"
-seoTitle: "medium fernanda Reseña — Purple Garden | 4.9★, 1.120 Lecturas"
-metaDescription: "Reseña de medium fernanda en Purple Garden: 4.9★, $2.99/min. Canalización directa sin tarot, consultas de alta carga emocional, conexión con guías espirituales."
+seoTitle: "medium fernanda Reseña — Purple Garden | 4.8★, 1.120 Lecturas"
+metaDescription: "Reseña de medium fernanda en Purple Garden: 4.8★, $2.99/min. Canalización directa sin tarot, consultas de alta carga emocional, conexión con guías espirituales."
 description: "Análisis independiente de medium fernanda en Purple Garden: 1.120 lecturas en 4.9★ desde 2022. Clarividente, clariaudiente y clarisintiente que trabaja exclusivamente por canalización psíquica directa — sin tarot — y enseña protección y limpieza energética. La única médium de canalización pura del top hispanohablante."
 platformName: "Purple Garden: medium fernanda"
 platform: "purple-garden-es"
-rating: 4.9
+rating: 4.8
 verdict: "medium fernanda ocupa el puesto #5 del ranking hispanohablante de Purple Garden con un historial limpio: 1.120 lecturas desde 2022, 4.9★ y una proporción de reseñas positivas del 96,6%. Pero lo que la define no es la posición — es el método: es la única médium del top hispano que trabaja por canalización psíquica pura, sin baraja de por medio, accediendo a la información por tres canales simultáneos — visión, audición y sentir — directamente de los guías espirituales del consultante. A ello suma un servicio que en el catálogo hispano casi nadie ofrece de forma explícita: la enseñanza de limpieza y protección energética — 'te enseño a quitar brujerías y a protegerte para que nunca más te hagan daño'. Para quien ya probó el tarot y siente que le falta algo, o para situaciones de alta carga emocional donde contención e información deben viajar juntas, es la opción metodológicamente distinta del top. Limitación real: su canal necesita calibración — la conexión puede tardar unos minutos en afinarse, y quien llega con prisas pierde la parte mejor de la sesión."
 pricing: "$2.99/min"
 bestFor: "Canalización directa sin tarot, consultas de alta carga emocional, conexión con guías espirituales, limpieza y protección energética, alternativa para quienes no conectaron con el tarot convencional"
 publishDate: "2026-09-12"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/medium-fernanda/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/medium-fernanda.webp"

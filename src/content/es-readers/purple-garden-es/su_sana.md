@@ -1,17 +1,16 @@
 ---
 title: "Su_Sana en Purple Garden: La Consultora de Posibles Futuros — 25 Años de Consultorio y la Lectura que Tú Eliges"
-seoTitle: "Su_Sana Reseña — Purple Garden | 5★, 245 Lecturas, $2.99/min"
-metaDescription: "Reseña de Su_Sana en Purple Garden: 5.0★, $2.99/min. Lecturas con marco de futuros potenciales cuánticos (opciones a elegir)."
+seoTitle: "Su_Sana Reseña — Purple Garden | 4.8★, 245 Lecturas, $2.99/min"
+metaDescription: "Reseña de Su_Sana en Purple Garden: 4.8★, $2.99/min. Lecturas con marco de futuros potenciales cuánticos (opciones a elegir)."
 description: "Análisis independiente de Su_Sana (Susana) en Purple Garden: 245 lecturas en 5.0★ desde 2025. 25 años de consultorio presencial previo, con un marco inusual: la lectura cuántica de futuros potenciales que el consultante elige. 'No es lo que deseas oír, es lo que necesitas para evolucionar'."
 platformName: "Purple Garden: Su_Sana"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Su_Sana — Susana — ocupa el puesto #30 del ranking hispanohablante de Purple Garden con un perfil donde se cruzan dos rarezas del catálogo: 25 años de consultorio presencial previo (la veterana que llegó nueva en 2025) y un marco metodológico filosóficamente singular — la lectura cuántica de futuros potenciales. Su formulación lo define: 'Hay muchos futuros potenciales cuánticos para cada experiencia y te los puedo mostrar. Luego tú decides lo que deseas experimentar.' Es la inversión del lector como oráculo: la lectora muestra las opciones, el consultante elige. Con 245 lecturas en 5.0★ desde 2025 y una proporción del 98,7% (78 positivas frente a 1 negativa), su perfil combina oficio largo, marco coherente y un inicio limpio. La nota honesta: 245 lecturas son señales tempranas, no expediente consolidado; pero el patrón de sus primeras 78 clientas es excepcionalmente sólido."
 pricing: "$2.99/min"
 bestFor: "Lecturas con marco de futuros potenciales cuánticos (opciones a elegir), 25 años de consultorio presencial previo, consultas donde se valora 'lo que necesitas oír' antes que 'lo que deseas oír', seguimiento de proceso personal"
 publishDate: "2026-09-13"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/su_sana/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/su_sana.webp"

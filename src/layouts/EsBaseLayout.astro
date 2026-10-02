@@ -6,6 +6,7 @@ import EsTopOfferBar from '../components/es/EsTopOfferBar.astro';
 import EsSideOfferTab from '../components/es/EsSideOfferTab.astro';
 import PostHog from '../components/PostHog.astro';
 import GA4 from '../components/GA4.astro';
+import ScrollRestoreGuard from '../components/ScrollRestoreGuard.astro';
 import '../styles/global.css';
 
 const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
@@ -167,6 +168,7 @@ const websiteSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <ScrollRestoreGuard />
     <meta name="application-name" content={SITE_NAME} />
     <meta name='impact-site-verification' value='9b281445-730b-4b8f-ae89-484d7da8e36e'>
     <PostHog />

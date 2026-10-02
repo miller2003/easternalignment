@@ -1,17 +1,16 @@
 ---
 title: "Ren Aurum en Purple Garden: 'Tu Crisis es Sagrada' — y el Hombre que Escucha, con 26 Años de Oficio Esotérico"
-seoTitle: "Ren Aurum Reseña — Purple Garden | 5★, 1.015 Lecturas, $2.99/min"
-metaDescription: "Reseña de Ren Aurum en Purple Garden: 5.0★, $2.99/min. Perspectiva masculina en lectura de relaciones, alquimia emocional sin complacencia."
+seoTitle: "Ren Aurum Reseña — Purple Garden | 4.8★, 1.015 Lecturas"
+metaDescription: "Reseña de Ren Aurum en Purple Garden: 4.8★, $2.99/min. Perspectiva masculina en lectura de relaciones, alquimia emocional sin complacencia."
 description: "Análisis independiente de Ren Aurum en Purple Garden: 1.015 lecturas en 5.0★ desde 2021. Colombiano, 26 años de oficio esotérico, especializado en empoderamiento y relaciones. Su filosofía: 'tu crisis es sagrada' — alquimia emocional en lugar de pañitos tibios. Una de las pocas voces masculinas del catálogo hispano."
 platformName: "Purple Garden: Ren Aurum"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Ren Aurum ocupa el puesto #22 del ranking hispanohablante de Purple Garden con un perfil poco común en el catálogo: voz masculina en un sector dominado por lectoras, 26 años de oficio esotérico y una filosofía declarada que define su método — 'tu crisis es sagrada'. Sobre Rider-Waite, cartas de los ángeles y fundamentos kabalísticos, opera lo que él mismo llama 'alquimia emocional': no dar pañitos tibios, sino transformar la crisis en material de trabajo. Con 1.015 lecturas en 5.0★ desde 2021 y una proporción de satisfacción del 97,7% (332 positivas frente a 8 negativas), su perfil es la opción del segundo tramo del top hispano para la consultante — mayoritariamente mujer — que está 'harta de pañitos tibios y lista para la alquimia emocional'. Limitación real: su registro es literario y conceptualmente rico — para quien busca lenguaje sencillo, hay que pedírselo explícitamente."
 pricing: "$2.99/min"
 bestFor: "Perspectiva masculina en lectura de relaciones, alquimia emocional sin complacencia, crisis valorada como material sagrado de trabajo, fundamentos kabalísticos + Rider-Waite, sesiones donde se valora la honestidad masculina"
 publishDate: "2026-09-20"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/ren-aurum/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/ren-aurum.webp"

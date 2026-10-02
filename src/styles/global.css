@@ -124,6 +124,20 @@ html {
   text-size-adjust: 100%;
 }
 
+/* Back/forward navigation must NOT animate the scroll restoration.
+   The browser restores the previous scroll offset on the root element itself, so
+   `scroll-behavior: smooth` above turns that jump into a visible ~1s slide down
+   from the top of the document (2026-09-29: measured 40+ intermediate frames on
+   history.back()). `ScrollRestoreGuard.astro` puts this class on <html> before
+   first paint and removes it on the first real user intent, so:
+     - history traversal  → scroll-behavior: auto  (instant, no slide)
+     - anchor link click  → scroll-behavior: smooth (unchanged, still glides)
+   JS-driven scrolls that pass `behavior: 'smooth'` explicitly (both sidebars,
+   the quiz modal) are unaffected either way. */
+html.ea-scroll-instant {
+  scroll-behavior: auto;
+}
+
 body {
   font-family: var(--font-body);
   font-size: var(--text-base);

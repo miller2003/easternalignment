@@ -1,0 +1,115 @@
+---
+/**
+ * Índice de guías del subsitio /es — /es/guias/
+ * Agrupa por categoría (ES_GUIDE_CATEGORIES). Sin números escritos a mano:
+ * todo se deriva de la colección.
+ */
+import EsBaseLayout from '../../../layouts/EsBaseLayout.astro';
+import EsBreadcrumb from '../../../components/es/EsBreadcrumb.astro';
+import { getEsGuides, ES_GUIDE_CATEGORIES, ES_GUIDE_CATEGORY_ORDER } from '../../../lib/esGuides';
+
+const SITE_URL = 'https://easternalignment.com';
+const guides = getEsGuides();
+const groups = ES_GUIDE_CATEGORY_ORDER
+  .map((key) => ({ key, ...ES_GUIDE_CATEGORIES[key], items: guides.filter((g) => g.category === key) }))
+  .filter((g) => g.items.length > 0);
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Guías de tarot, videncia y amor',
+  inLanguage: 'es',
+  url: `${SITE_URL}/es/guias/`,
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: guides.map((g, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE_URL}${g.url}`,
+      name: g.title,
+    })),
+  },
+};
+---
+
+<EsBaseLayout
+  title="Guías de Tarot, Videncia y Amor"
+  seoTitle="Guías de Tarot, Videncia y Amor | Eastern Alignment"
+  description="Guías honestas sobre tarot del amor, ex, señales espirituales y cómo consultar a una vidente sin que te engañen. Criterio de auditor, no de vendedor."
+  metaDescription="Guías honestas sobre tarot del amor, tu ex, números de ángeles, sueños y cómo consultar a una vidente sin que te engañen. Criterio de auditor, no de vendedor."
+  canonicalUrl={`${SITE_URL}/es/guias/`}
+  jsonLd={collectionSchema}
+  topOfferPlatform="psiquicos"
+>
+  <div class="section">
+    <div class="container">
+      <EsBreadcrumb items={[{ label: 'Guías' }]} />
+
+      <header class="guias-header">
+        <span class="guias-eyebrow">Guías editoriales</span>
+        <h1 class="guias-title">Guías de tarot, videncia y amor</h1>
+        <p class="guias-desc">
+          Aquí no vas a encontrar «rituales infalibles» ni promesas de que vuelve en 7 días. Vas a encontrar lo que sabe alguien que ha leído miles de reseñas de consultas: qué preguntas sí tienen respuesta, qué señales significan algo, qué es humo — y a qué lector llevarle cada caso.
+        </p>
+        <nav class="guias-jump" aria-label="Categorías">
+          {groups.map((g) => <a href={`#${g.key}`}>{g.label}</a>)}
+        </nav>
+      </header>
+
+      {groups.map((g) => (
+        <section class="guias-group" id={g.key} aria-labelledby={`${g.key}-h`}>
+          <div class="guias-group-head">
+            <h2 id={`${g.key}-h`}>{g.label}</h2>
+            <p>{g.blurb}</p>
+          </div>
+          <div class="guias-grid">
+            {g.items.map((it) => (
+              <a class="guia-card" href={it.url}>
+                <span class="guia-card__title">{it.cardTitle || it.title}</span>
+                <span class="guia-card__desc">{it.description}</span>
+                <span class="guia-card__more">Leer la guía →</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <aside class="guias-note">
+        <strong>Antes de nada:</strong> si lo que te ocurre afecta a tu salud, a tu seguridad o a decisiones legales, una lectura no sustituye a un profesional. El tarot ayuda a ver; no decide por ti.
+      </aside>
+    </div>
+  </div>
+</EsBaseLayout>
+
+<style>
+  .guias-header { max-width: 760px; margin: var(--space-6) 0 var(--space-10); }
+  .guias-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--color-accent-hover); }
+  .guias-title { margin: var(--space-2) 0 var(--space-4); }
+  .guias-desc { font-size: var(--text-lg); color: var(--color-text-muted); line-height: var(--leading-relaxed); }
+  .guias-jump { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-5); }
+  .guias-jump a {
+    padding: 6px 14px; border-radius: 9999px; border: 1px solid var(--color-border);
+    background: var(--color-surface); font-size: var(--text-sm); text-decoration: none; color: var(--color-text);
+  }
+  .guias-jump a:hover { border-color: var(--color-accent); }
+  .guias-group { margin-bottom: var(--space-12); scroll-margin-top: 120px; }
+  .guias-group-head { margin-bottom: var(--space-5); }
+  .guias-group-head h2 { margin: 0 0 var(--space-1); font-size: var(--text-2xl); }
+  .guias-group-head p { margin: 0; color: var(--color-text-muted); }
+  .guias-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-5); }
+  .guia-card {
+    display: flex; flex-direction: column; gap: var(--space-2);
+    padding: var(--space-6); background: var(--color-surface);
+    border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+    text-decoration: none; color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .guia-card:hover { transform: translateY(-2px); border-color: var(--color-accent-light); box-shadow: 0 10px 24px rgba(107, 84, 56, .10); }
+  .guia-card__title { font-family: var(--font-heading); font-size: var(--text-lg); line-height: 1.3; color: var(--color-text); }
+  .guia-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.55; }
+  .guia-card__more { margin-top: auto; padding-top: var(--space-2); font-size: var(--text-sm); font-weight: 600; color: var(--color-primary); }
+  .guias-note {
+    margin: var(--space-4) 0 var(--space-8); padding: var(--space-5);
+    background: var(--color-bg-alt); border-radius: var(--radius-md); font-size: var(--text-sm); color: var(--color-text-muted);
+  }
+  @media (max-width: 640px) { .guias-grid { grid-template-columns: 1fr; } .guias-desc { font-size: var(--text-base); } }
+</style>

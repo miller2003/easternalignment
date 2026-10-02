@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       count(DISTINCT person_id) AS users,\n       count(DISTINCT properties.$session_id) AS sessions,\n       countIf(event='$pageview') AS pageviews,\n       countIf(event='affiliate_link_click') AS aff_clicks\nFROM events WHERE timestamp >= toDateTime(1789401600)\nGROUP BY day ORDER BY day DESC LIMIT 20\n",
+ "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       count(DISTINCT person_id) AS users,\n       count(DISTINCT properties.$session_id) AS sessions,\n       countIf(event='$pageview') AS pageviews,\n       countIf(event='affiliate_link_click') AS aff_clicks\nFROM events WHERE timestamp >= toDateTime(1789574400)\nGROUP BY day ORDER BY day DESC LIMIT 20\n",
  "columns": [
   "day",
   "users",
@@ -9,11 +9,25 @@
  ],
  "results": [
   [
-   "2026-09-29",
+   "2026-10-01",
+   18,
    19,
-   13,
-   37,
-   2
+   28,
+   3
+  ],
+  [
+   "2026-09-30",
+   18,
+   18,
+   22,
+   1
+  ],
+  [
+   "2026-09-29",
+   30,
+   25,
+   52,
+   3
   ],
   [
    "2026-09-28",
@@ -98,20 +112,6 @@
    25,
    25,
    1
-  ],
-  [
-   "2026-09-16",
-   16,
-   16,
-   18,
-   2
-  ],
-  [
-   "2026-09-15",
-   32,
-   36,
-   63,
-   7
   ]
  ],
  "hasMore": null

@@ -60,12 +60,18 @@ TODAY = [daily[-1][2], daily[-1][1], daily[-1][3], daily[-1][4]]  # sessions, us
 LBL = ["会话", "用户", "浏览量", "联盟点击"]
 mean = [sum(w[i] for w in wins) / max(1, len(wins)) for i in range(4)]
 S = [sum(w[i] for w in wins) for i in range(4)]
-Z = [((TODAY[i] - S[i] / len(wins)) / math.sqrt(TODAY[i] + S[i])) if (TODAY[i] + S[i]) else 0.0 for i in range(4)]
+# 泊松检验：把「前 7 日同时段」视为期望 λ（取均值），z = (obs - λ) / sqrt(λ)。
+# 不要写成 sqrt(obs + S)：S 是 7 日均值的和，会把分母放大 ~2.6 倍、系统性低估 z。
+Z = [((TODAY[i] - mean[i]) / math.sqrt(mean[i])) if mean[i] > 0 else 0.0 for i in range(4)]
 
 sale_rows = [r for r in lf_conv if r[2] == "sale"]
 lead_rows = [r for r in lf_conv if r[2] == "lead"]
 rev = sum(float(r[7] or 0) for r in sale_rows)
 testish = int(lf_testish[0] or 0)
+# 转化侧窗口必须与取数脚本一致（lead_funnel.py 的 DAYS 默认 60），
+# 不能写死成「近 4 日」——lf_* 数据是 60 日窗口，标签写错会让读者误判时间范围。
+LF_DAYS = 60
+LF_SPAN = (f"{lf_daily[-1][0]} ~ {lf_daily[0][0]}" if lf_daily else "—")
 
 # ------------- SVG -------------
 def svg_bars(data, labels, w=900, h=200, pad=(44, 16, 34, 48), color="#94b3f0", hi=None, hi_color="#dc2626",
@@ -173,19 +179,30 @@ conv_rows = "".join(
     f"<td>{esc(r[3] or '—')}</td><td class='mono'>{esc(r[4] or '—')}</td><td class='num'>${float(r[7] or 0):.0f}</td></tr>"
     for r in lf_conv)
 
-# 近 14 日点击明细里找 bxteue 的点击（用于链路还原）
-chain_click = next((c for c in clicks14 if c[4] == "bxteue"), None)
-if chain_click:
-    AGAPS.clear()
-    AGAPS.extend([gap_between("2026-09-28 06:18:07", "2026-09-28 07:00:00"),
-                  gap_between("2026-09-28 07:00:00", "2026-09-29 07:36:10")])
+# 链路还原：取窗口内最近一笔 sale，用其 click_token 回查点击（勿硬编码具体 token）
+_last_sale = sale_rows[0] if sale_rows else None
+chain_click = None
+if _last_sale and _last_sale[4]:
+    chain_click = next((c for c in clicks14 if c[4] == str(_last_sale[4])), None)
+if _last_sale:
+    _clk_txt = (f"{esc(str(chain_click[1]))} · {esc(str(chain_click[2]))}" if chain_click else "窗口内点击明细未命中（token 早于 14 日）")
     CHAIN = svg_chain([
-        ("点击 CTA", "09-28 06:18:07", f"{chain_click[1]} · {chain_click[2]}", "#2f6fed"),
-        ("后台注册 $0", "09-28 约 07:00", "Purple Garden（用户提供）", "#d99b28"),
-        ("付费 $125", "09-29 07:36:10", "transaction 1023ae07…", "#15803d"),
+        ("点击 CTA", (str(chain_click[0]) if chain_click else "—"), _clk_txt, "#2f6fed"),
+        ("付费回传", esc(str(_last_sale[0])[:16]), f"{esc(str(_last_sale[3]))} · ${float(_last_sale[7] or 0):.0f}", "#15803d"),
     ])
+    _tok_note = (f"付费回传 <span class='mono'>click_token = {esc(str(_last_sale[4]))}</span>"
+                 + (f"，与 <span class='mono'>{esc(str(chain_click[0]))}</span> 的 <span class='mono'>{esc(str(chain_click[1]))}</span> 点击吻合 → 归属由令牌确定"
+                    if chain_click else "，但该 token 不在近 14 日点击明细中，无法在本报告内闭环"))
+    CONV_BLOCK = (f"<div class='note good'><b>窗口内最近一笔付费（sale）：{esc(str(_last_sale[0])[:16])}，"
+                  f"{esc(str(_last_sale[3]))}，${float(_last_sale[7] or 0):.0f}。</b>{CHAIN}"
+                  f"<ul><li>{_tok_note}</li>"
+                  f"<li>交易号 <span class='mono'>{esc(str(_last_sale[1]))}</span>；"
+                  f"<b>有令牌就用令牌</b>，不要用「成交在最后一次点击」的经验规则推断。</li>"
+                  f"<li>「$0 注册 → 约 24h 后 $125 付费」是同一交易号的两行，累计营收按交易号去重。</li></ul></div>")
 else:
-    CHAIN = '<div class="small">（本期窗口内未找到成交点击）</div>'
+    CONV_BLOCK = ("<div class='note'><b>近 {LF_DAYS} 日窗口内没有付费（sale）回传。</b>"
+                  "PostHog 未收到 ≠ 后台没有转化；转化笔数与营收以 barges 后台为唯一事实源，"
+                  "PostHog 侧仅用于归因（可见下限）。</div>")
 
 tsum_row = next((r for r in raw if r[0] == DAY), None)
 raw_note = (f"未过滤口径：会话 {tsum_row[2]} / 用户 {tsum_row[1]} / 浏览 {tsum_row[3]} / 点击 {tsum_row[4]}"
@@ -209,6 +226,33 @@ lf_daily_rows = "".join(
 
 go_today = [g for g in go if str(g[0]) == DAY]
 go_txt = "，".join(f"{g[1]} {g[2]}" for g in go_today) or "今日无 /go 事件"
+
+# ---- 派生叙述（勿硬编码，随当日数据变化）----
+_sig = [i for i in range(4) if abs(Z[i]) > 2]
+traf_verdict = "在噪声内，未见异常" if not _sig else f"需关注（{ '、'.join(LBL[i] for i in _sig) } 超过 |z|&gt;2）"
+if TODAY[3] == 0:
+    LI_CLICK = ("<li><b>今日到目前没有任何联盟点击。</b>这是最值得盯的一项：不是统计显著，而是“零”本身。</li>")
+    AI_CLICK = (f"<span class='tag warn'>观察</span><b>今日 0 点击</b>。单日 0 不构成趋势"
+                f"（前 7 日同时段均值 {mean[3]:.1f}，z={Z[3]:+.2f}），但需连着看 2–3 天：若连续为 0，才说明承接端出问题。")
+else:
+    _ck = sorted(set(c[11] for c in sess if c[10]))
+    LI_CLICK = (f"<li><b>今日联盟点击 {TODAY[3]} 次，来自 {len(_ck)} 个人</b>"
+                f"（去重人数 {len(_ck)}）——报点击必须同时报人数，否则一个人连点会被误读成效率提升。</li>")
+    _tms = [int(c[6])/1000 for c in clicks if c[6]]
+    _q = ("决策时长充足（≥10s），属高意愿权衡" if _tms and min(_tms) >= 10
+          else "存在 <3s 的快速点击，注意扫射式无效点击" if _tms and min(_tms) < 3 else "决策时长中等")
+    AI_CLICK = (f"<span class='tag {'ok' if _tms and min(_tms)>=10 else 'warn'}'>观察</span>"
+                f"<b>今日点击质量：{TODAY[3]} 次 / {len(_ck)} 人</b>（均值 {mean[3]:.1f}，z={Z[3]:+.2f}）。{_q}"
+                f"（决策时长 {'/'.join(f'{t:.0f}s' for t in _tms) or '—'}）。")
+
+# 当日转化摘要（当日 + 前一日，避免空窗口）
+_today_conv = [r for r in lf_conv if str(r[0])[:10] == DAY]
+if _today_conv:
+    LI_CONV = f"<b>转化：</b>今日收到 {len(_today_conv)} 笔回传（详见第五节）。"
+else:
+    _last = lf_conv[0] if lf_conv else None
+    LI_CONV = (f"<b>转化：今日暂无回传</b>（最近一笔为 {esc(str(_last[0])[:16])}，{esc(str(_last[3]))} {esc(str(_last[2]))}）"
+               f"。PostHog 未收到 ≠ 后台没有，转化以后台（barges）为唯一事实源。")
 
 HTML = f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
@@ -251,10 +295,10 @@ ul{{margin:8px 0 8px 20px;padding:0}}li{{margin:5px 0}}
 <h2>一、结论摘要</h2>
 <div class="card">
 <ul>
-<li><b>今日流量偏低但在噪声内。</b>会话 {TODAY[0]}（前 7 日同时段均值 {mean[0]:.1f}，z={Z[0]:+.2f}）、用户 {TODAY[1]}、浏览 {TODAY[2]}、<b>联盟点击 {TODAY[3]}</b>（均值 {mean[3]:.1f}，z={Z[3]:+.2f}）——四项均未过泊松检验（|z|&gt;2），<b>不能判为"流量掉了"</b>。</li>
-<li><b>今日到目前没有任何联盟点击。</b>这是最值得盯的一项：不是统计显著，而是"零"本身。</li>
-<li><b>昨日那笔 PG 注册已成功付费：09-29 07:36 收到 $125 回传</b>，点击令牌 <span class="mono">bxteue</span>（= 09-28 06:18:07 那次点击）。<b>昨天的预测命中</b>，且归因由令牌级证据闭环——不是推断。</li>
-<li><b>Lead（注册）回传已接通但尚未收到真实注册。</b>近 4 日 <b>{len(lead_rows)} 笔注册</b>、{len(sale_rows)} 笔付费（净营收 ${rev:.0f}）；另有 {len(lf_orph)} 条孤儿回传与 {testish} 条手工测试被排除。</li>
+<li><b>今日流量{traf_verdict}。</b>会话 {TODAY[0]}（前 7 日同时段均值 {mean[0]:.1f}，z={Z[0]:+.2f}）、用户 {TODAY[1]}、浏览 {TODAY[2]}、<b>联盟点击 {TODAY[3]}</b>（均值 {mean[3]:.1f}，z={Z[3]:+.2f}）。{"四项均未过泊松检验（|z|&gt;2），不能判为流量异常。" if all(abs(z) <= 2 for z in Z) else "存在超过 |z|&gt;2 的项，见下方判定列。"}</li>
+{LI_CLICK}
+<li>{LI_CONV}</li>
+<li><b>Lead（注册）回传状态：</b>近 {LF_DAYS} 日 <b>{len(lead_rows)} 笔注册</b>、{len(sale_rows)} 笔付费（净营收 ${rev:.0f}）；另有 {len(lf_orph)} 条孤儿回传与 {testish} 条手工测试被排除。</li>
 </ul>
 </div>
 
@@ -293,33 +337,25 @@ ul{{margin:8px 0 8px 20px;padding:0}}li{{margin:5px 0}}
 <tbody>{click_rows or "<tr><td colspan='6' class='small'>今日无点击</td></tr>"}</tbody></table>
 <div class="small">/go 链路：{esc(go_txt)}</div>
 
-<h2>五、转化：一笔完整链路还原</h2>
-<div class="note good">
-<b>09-28 那笔 PG 注册已经付费，且证据是令牌级的。</b>{CHAIN}
-<ul>
-<li>点击→注册：{AGAPS[0] if AGAPS else "—"}（用户后台口径「早上 7 点」）</li>
-<li>注册→付费：{AGAPS[1] if len(AGAPS) > 1 else "—"}，落在既有的「约 23–24 小时升级窗口」内</li>
-<li>交易号 <span class="mono">1023ae07b288cc99adcfc9970615c4</span>；<b>付费回传的 <span class="mono">click_token = bxteue</span> 与 09-28 06:18:07 那次点击完全一致</b> → 归属确定，无需再推断</li>
-<li><b>修正一处此前的误判</b>：昨天我按「成交在最后一次点击」的经验猜是 11:16:26 的 topbar 点击，实际成交在 <b>06:18:07 的 side-tab 点击</b>（会话内第 2 次点击、决策时长 224s）。这条经验不可靠，<b>有令牌就用令牌</b>。</li>
-</ul>
-</div>
+<h2>五、转化</h2>
+{CONV_BLOCK}
 
-<h3>近 4 日真实转化（已剔除测试数据）</h3>
+<h3>近 {LF_DAYS} 日真实转化（{LF_SPAN}，已剔除测试数据）</h3>
 <table><thead><tr><th>日</th><th class="num">注册 $0</th><th class="num">付费</th><th class="num">营收</th><th class="num">撤销</th></tr></thead>
 <tbody>{lf_daily_rows}</tbody></table>
 <table style="margin-top:12px"><thead><tr><th>时间</th><th>交易号</th><th>类型</th><th>平台</th><th>click_token</th><th class="num">金额</th></tr></thead>
 <tbody>{conv_rows or "<tr><td colspan='6' class='small'>无</td></tr>"}</tbody></table>
 <div class="note"><b>数据卫生提醒：</b>转化流里出现手工测试回传（<span class="mono">test123</span> / <span class="mono">x.y</span> / <span class="mono">zz1</span> 等占位值）。
-已按「distinct_id 必须是 UUID 形状」在分析侧过滤，近 4 日剔除 <b>{testish} 条</b>；孤儿回传 <b>{len(lf_orph)} 条</b>单独统计（它们正是"后台会发、但宏未替换"的证据）。
+已按「distinct_id 必须是 UUID 形状」在分析侧过滤，近 {LF_DAYS} 日剔除 <b>{testish} 条</b>；孤儿回传 <b>{len(lf_orph)} 条</b>单独统计（它们正是"后台会发、但宏未替换"的证据）。
 真实注册与付费的 <span class="mono">distinct_id</span> 恒为 UUID，因此这条过滤规则可靠，不需要维护黑名单。</div>
 
 <h2>六、风险与行动项</h2>
 <div class="card">
 <ul>
-<li><span class="tag warn">观察</span><b>今日 0 点击</b>。单日 0 不构成趋势（前 7 日同时段均值 {mean[3]:.1f}，z={Z[3]:+.2f}），但需连着看 2–3 天：若连续为 0，才说明承接端出问题。</li>
-<li><span class="tag warn">待验证</span><b>Lead 回传尚未收到任何真实注册</b>。目前只有手工测试打过（19:43 那两条就是）。<b>第一笔真实注册是唯一的验收标准</b>——若后台有注册而 PostHog 没有，看孤儿数：&gt;0 是宏没替换，=0 是目标没触发。</li>
-<li><span class="tag">跟进</span>09-28 的 PG 注册明细（交易号 <span class="mono">1023ae07…</span>）后台仍应有**两行**（$0 注册 + $125 付费），<b>累计营收按交易号去重</b>，别算成两笔。</li>
-<li><span class="tag ok">已闭环</span>昨日「这个人会不会付费」的问题已由结果回答：<b>会，且已在 24h36m 内完成</b>。画像（ChatGPT 首触 + 美国 + 移动端 + 高意愿多点点击）与既有 3 笔付费转化同型，这次是第 4 笔。</li>
+<li>{AI_CLICK}</li>
+<li><span class="tag warn">待验证</span><b>Lead（注册）回传</b>。近 {LF_DAYS} 日 {len(lead_rows)} 笔注册、{len(sale_rows)} 笔付费。<b>真实注册是唯一验收标准</b>——若后台有注册而 PostHog 没有，看孤儿数：&gt;0 是宏没替换，=0 是「目标」没触发（barges 现有 3 行目标全是 First Purchase）。</li>
+<li><span class="tag">口径</span>累计营收<b>按 transaction_id 去重</b>：Kasamba/PG 的「$0 注册 → 约 24h 后 $125 付费」是同一交易号的两行，按行求和会翻倍。</li>
+<li><span class="tag ok">链路</span>归因令牌链健康：今日 affiliate_link_click {TODAY[3]} → aff_go_hit {sum(1 for g in go_today if g[1]=='aff_go_hit')}（今日）。</li>
 </ul>
 </div>
 

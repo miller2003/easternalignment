@@ -1,0 +1,22 @@
+{
+ "sql": "\nWITH s AS (\n  SELECT toString(properties.$session_id) AS sid,\n         countIf(event='affiliate_link_click') AS clicks,\n         maxIf(timestamp, event='affiliate_link_click') AS last_click,\n         maxIf(timestamp, event='$pageview') AS last_pv,\n         countIf(event='$pageview') AS pv\n  FROM events\n  WHERE timestamp >= toDateTime(1788192000) AND timestamp < toDateTime(1790784000) AND coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386'))\n  GROUP BY sid\n)\nSELECT countIf(clicks>0) AS clicked_sessions,\n       countIf(clicks>0 AND pv=0) AS clicked_no_pv,\n       countIf(clicks>0 AND last_pv > last_click) AS browsed_after_click,\n       countIf(clicks>0 AND last_pv > last_click\n               AND dateDiff('second', last_click, last_pv) <= 60) AS browse_0_60s,\n       countIf(clicks>0 AND last_pv > last_click\n               AND dateDiff('second', last_click, last_pv) > 60) AS browse_gt60s,\n       countIf(clicks>1) AS multiclick_sessions\nFROM s LIMIT 5\n",
+ "columns": [
+  "clicked_sessions",
+  "clicked_no_pv",
+  "browsed_after_click",
+  "browse_0_60s",
+  "browse_gt60s",
+  "multiclick_sessions"
+ ],
+ "results": [
+  [
+   81,
+   0,
+   16,
+   6,
+   10,
+   31
+  ]
+ ],
+ "hasMore": null
+}

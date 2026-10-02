@@ -1,17 +1,16 @@
 ---
 title: "Aura Vidente en Purple Garden: La Especialista en Relaciones Kármicas — y la Vidente Natural con 5.000+ Lecturas"
-seoTitle: "Aura Vidente Reseña — Purple Garden | 5★, 5.165 Lecturas"
-metaDescription: "Reseña de Aura Vidente en Purple Garden: 5.0★, $2.99/min. Diagnóstico de relaciones kármicas (ciclos repetidos), vidente natural con 20 años de oficio."
+seoTitle: "Aura Vidente Reseña — Purple Garden | 4.8★, 5.165 Lecturas"
+metaDescription: "Reseña de Aura Vidente en Purple Garden: 4.8★, $2.99/min. Diagnóstico de relaciones kármicas (ciclos repetidos), vidente natural con 20 años de oficio."
 description: "Análisis independiente de Aura Vidente en Purple Garden: 5.165 lecturas en 5.0★ desde 2022. La lectora del top hispano que se declara especialista en relaciones kármicas — para diagnosticar si tu vínculo es un ciclo que se repite. Vidente natural con cartas españolas y egipcias, numerología y péndulo, a $1.99 la voz."
 platformName: "Purple Garden: Aura Vidente"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Aura Vidente ocupa el puesto #20 del ranking hispanohablante de Purple Garden con una especialidad que ningún otro perfil del top 30 declara con esa precisión: 'especialista en relaciones kármicas'. Para el segmento de consultantes que llega con la sospecha de que su vínculo es un ciclo que se repite — el mismo patrón con la misma persona, o el mismo tipo de persona en vínculos sucesivos — esa especialidad es exactamente el diagnóstico que necesitan. Sobre ella opera una vidente natural de 20 años con cartas españolas y egipcias, numerología y péndulo, y un registro lingüístico propio: 'sin sexo, sólo almas' — lecturas de amor en el plano del alma, no de la superficie. Con 5.165 lecturas en 5.0★ desde 2022 y 1.268 reseñas positivas frente a 16 negativas (98,8%), su perfil combina volumen alto y especialidad declarada a un precio donde la voz ($1.99/min) cuesta menos que el chat ($2.99/min)."
 pricing: "$2.99/min"
 bestFor: "Diagnóstico de relaciones kármicas (ciclos repetidos), vidente natural con 20 años de oficio, cartas españolas y egipcias, numerología y péndulo, lecturas de amor desde el plano del alma"
 publishDate: "2026-09-14"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/aura-vidente/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/aura-vidente.webp"

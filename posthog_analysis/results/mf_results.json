@@ -1,0 +1,30 @@
+{
+ "sql": "\nSELECT coalesce(nullIf(toString(properties.topReader),''),'(空)') AS top_reader,\n       coalesce(nullIf(toString(properties.intent),''),'(空)') AS intent,\n       count() AS n,\n       count(DISTINCT person_id) AS users\nFROM events\nWHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='match_completed'\n  AND timestamp >= toDateTime(1790092800)\nGROUP BY top_reader, intent ORDER BY n DESC LIMIT 60\n",
+ "columns": [
+  "top_reader",
+  "intent",
+  "n",
+  "users"
+ ],
+ "results": [
+  [
+   "kasamba-danielle-psychic-kasamba-review",
+   "another_person_intentions",
+   1,
+   1
+  ],
+  [
+   "kasamba-divine-soul-kasamba-review",
+   "another_person_intentions",
+   1,
+   1
+  ],
+  [
+   "kasamba-best-psychic-readings-kasamba-review",
+   "love_relationship",
+   1,
+   1
+  ]
+ ],
+ "hasMore": null
+}

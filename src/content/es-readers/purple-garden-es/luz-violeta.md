@@ -1,17 +1,16 @@
 ---
 title: "Luz Violeta en Purple Garden: La Lectora más Económica del Top Hispano — $0.99 en Chat y Voz, con Don Heredado"
-seoTitle: "Luz Violeta Reseña — Purple Garden | 4.7★, 1.212 Lecturas"
-metaDescription: "Reseña de Luz Violeta en Purple Garden: 4.7★, $0.99/min. Lecturas al precio más bajo del catálogo hispano, clarividencia heredada de padre y madre sanadores."
+seoTitle: "Luz Violeta Reseña — Purple Garden | 4.5★, 1.212 Lecturas"
+metaDescription: "Reseña de Luz Violeta en Purple Garden: 4.5★, $0.99/min. Lecturas al precio más bajo del catálogo hispano, clarividencia heredada de padre y madre sanadores."
 description: "Análisis independiente de Luz Violeta en Purple Garden: 1.212 lecturas en 4.7★ desde 2021. La lectora más económica del top hispano: $0.99/min en chat y voz. Clarividencia heredada de padre y madre (sanadores espirituales), con presencia documentada de ángeles. Viajó por México, Colombia, Suramérica y vive en Brasil."
 platformName: "Purple Garden: Luz Violeta"
 platform: "purple-garden-es"
-rating: 4.7
+rating: 4.5
 verdict: "Luz Violeta ocupa el puesto #28 del ranking hispanohablante de Purple Garden con la tarifa más baja de todo el top 30: $0.99/min en chat y voz — el bono de bienvenida de $30 cubre 30 minutos, el máximo rendimiento disponible en el catálogo. Pero el precio no es lo que la define: es la fuente de su don. Clarividente heredada — padre y madre ambos sanadores espirituales —, con presencia documentada de ángeles desde su niñez y una biografía inusual: viajó por México, Colombia, Suramérica y vive en Brasil. Con 1.212 lecturas en 4.7★ desde 2021 y una proporción de satisfacción del 94,8% (163 positivas frente a 9 negativas), su perfil combina don heredado, biografía espiritual intensa y precio mínimo. La nota honesta: la calificación de 4.7★ es la segunda más baja del tramo, y su estilo puede no conectar con todas — cuando la lectura va en otra dirección, puede apartarse de la pregunta literal."
 pricing: "$0.99/min"
 bestFor: "Lecturas al precio más bajo del catálogo hispano, clarividencia heredada de padre y madre sanadores, conexión con ángeles, sesiones de larga duración por presupuesto ajustado"
 publishDate: "2026-09-20"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luz-violeta/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/luz-violeta.webp"

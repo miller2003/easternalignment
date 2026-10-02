@@ -1,17 +1,16 @@
 ---
 title: "Anuar en Purple Garden: Una Sola Reseña Negativa en 3.598 Lecturas — y Hasta Esa Terminó Reconociendo Su Energía"
-seoTitle: "Anuar Reseña — Purple Garden | 5★, 3.598 Lecturas"
-metaDescription: "Reseña de Anuar en Purple Garden: 5.0★, $2.99/min. Momentos de incertidumbre y oscuridad que requieren luz y dirección, apertura de caminos estancados."
+seoTitle: "Anuar Reseña — Purple Garden | 4.9★, 3.598 Lecturas"
+metaDescription: "Reseña de Anuar en Purple Garden: 4.9★, $2.99/min. Momentos de incertidumbre y oscuridad que requieren luz y dirección, apertura de caminos estancados."
 description: "Análisis independiente de Anuar en Purple Garden: 3.598 lecturas en 5.0★ desde 2022 con una sola reseña negativa — que termina reconociendo su energía. Trabajador de la luz con 20+ años: canalización angelical, tarot, reiki y radiestesia para abrir lo estancado."
 platformName: "Purple Garden: Anuar"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.9
 verdict: "Anuar presenta la proporción de satisfacción más extrema del catálogo hispanohablante de Purple Garden: 904 reseñas positivas frente a una sola negativa en 3.598 lecturas — y la única reseña negativa de su historial termina, literalmente, reconociendo que es 'una buena persona con una energía muy bonita'. Ese nivel de consenso no se fabrica. Su propuesta es la del trabajador de la luz clásico: canalización angelical, tarot, reiki y radiestesia aplicadas a abrir lo estancado y cerrar lo que ya cumplió su ciclo, con 20 años de trayectoria previa a la plataforma. Es la opción del top hispano para el consultante que no busca solo un pronóstico sino un acompañamiento espiritual completo de su proceso. Limitación real: su trabajo es procesual por diseño — orientado a aperturas y cierres que requieren seguimiento, no a respuestas instantáneas de sí o no."
 pricing: "$2.99/min"
 bestFor: "Momentos de incertidumbre y oscuridad que requieren luz y dirección, apertura de caminos estancados, mensajes angelicales, corte energético con relaciones pasadas, acompañamiento espiritual de procesos largos"
 publishDate: "2026-09-20"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/anuar/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/anuar.webp"

@@ -5,13 +5,12 @@ metaDescription: "Reseña de Amatista en Psíquicos Web: 5.0★, $2.99/min. Repe
 description: "Análisis independiente de Amatista en Psíquicos Web: 15.635 lecturas en 5.0★ desde 2022. Joven vidente con 10 años de oficio y un repertorio que combina baraja española, tarot de Marsella y de los ángeles, gemoterapia, Reiki y velas mágicas. Conexión con guías protectores y ángeles de luz."
 platformName: "Psíquicos Web: Amatista"
 platform: "psiquicos"
-rating: 5.0
+rating: 5
 verdict: "Amatista ocupa el puesto #3 del ranking de Psíquicos Web con 15.635 lecturas en 5.0★ desde 2022 y una proporción de satisfacción del 99,8% (6.866 positivas frente a 27 negativas). Lo que la define no es el volumen — es el repertorio: baraja española, tarot de Marsella y de los ángeles, gemoterapia, Reiki y velas mágicas, gestionados por una vidente de 10 años de oficio que se describe a sí misma como 'joven' y que conecta con guías protectores y ángeles de luz. A $2.99/min en ambas modalidades, su precio es estándar — pero su repertorio de cinco sistemas cubre un espectro que pocos perfiles de su segmento igualan."
 pricing: "$2.99/min"
 bestFor: "Repertorio amplio de cartas (española + Marsella + ángeles), gemoterapia con piedras, Reiki a distancia, velas mágicas, conexión con guías y ángeles de luz"
 publishDate: "2026-09-25"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/amatista/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/amatista.webp"

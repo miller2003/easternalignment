@@ -1,17 +1,16 @@
 ---
 title: "Bastet Tarot en Purple Garden: La Tarotista de Amor Más Cara del Catálogo Hispano — y el Protocolo que Explica Por Qué"
-seoTitle: "Bastet Tarot Reseña — Purple Garden | 5★, Insignia Most Accurate"
-metaDescription: "Reseña de Bastet Tarot en Purple Garden: 5.0★, $15.99/min. Veredicto amoroso de máxima precisión, consultas con una pregunta definida y datos completos."
+seoTitle: "Bastet Tarot Reseña — Purple Garden | 4.9★, Most Accurate"
+metaDescription: "Reseña de Bastet Tarot en Purple Garden: 4.9★, $15.99/min. Veredicto amoroso de máxima precisión, consultas con una pregunta definida y datos completos."
 description: "Análisis independiente de Bastet Tarot en Purple Garden: 5.323 lecturas en 5.0★, insignia most accurate y la tarifa más alta del catálogo hispanohablante ($15.99/min). Su protocolo de precisión — nombres, fechas y dos preguntas por caso — es la razón por la que sus clientas la describen como 'certera al 100%'."
 platformName: "Purple Garden: Bastet Tarot"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.9
 verdict: "Bastet Tarot es la anomalía de precio del catálogo hispanohablante de Purple Garden: $15.99/min — la tarifa más alta del top 10 por un margen de tres veces — sostenida durante años por un perfil de 5.323 lecturas en 5.0★ con la insignia most accurate. Lo que la justifica no es el marketing sino un protocolo de precisión único en la plataforma: exige nombres y fechas de nacimiento (declara abiertamente que no puede leer con asertividad sin ellos), limita cada consulta a dos preguntas sobre un solo caso, y trabaja exclusivamente el futuro cercano con estimaciones en lugar de fechas inventadas. Ese marco es la antítesis del lector complaciente que alarga sesiones con preguntas vagas — y explica por qué sus clientas la definen con una fórmula que en este sector casi nadie puede sostener: 'nunca falla'. Es la lectora para quien busca el veredicto amoroso más nítido disponible en español y acepta pagar tarifa de especialista por él."
 pricing: "$15.99/min"
 bestFor: "Veredicto amoroso de máxima precisión, consultas con una pregunta definida y datos completos, personas que prefieren la verdad de las cartas antes que el consuelo, consultantes que valoran protocolos serios y sin relleno"
 publishDate: "2026-09-17"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/bastet-tarot/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/bastet-tarot.webp"

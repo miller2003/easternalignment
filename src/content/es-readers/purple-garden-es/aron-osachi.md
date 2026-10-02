@@ -1,17 +1,16 @@
 ---
 title: "Aron Osachi en Purple Garden: El Tabaco como Herramienta de Diagnóstico — y el Lector que No Te Va a Decir lo que Quieres Escuchar"
-seoTitle: "Aron Osachi Reseña — Purple Garden | 4.9★, 885 Lecturas"
-metaDescription: "Reseña de Aron Osachi en Purple Garden: 4.9★, $1.99/min. Diagnóstico energético del aura con tabaco, detección de envidias e intenciones ocultas."
+seoTitle: "Aron Osachi Reseña — Purple Garden | 4.8★, 885 Lecturas"
+metaDescription: "Reseña de Aron Osachi en Purple Garden: 4.8★, $1.99/min. Diagnóstico energético del aura con tabaco, detección de envidias e intenciones ocultas."
 description: "Análisis independiente de Aron Osachi en Purple Garden: 885 lecturas en 4.9★ desde 2021. El lector del top hispano que diagnostica el campo áurico con humo y ceniza de tabaco — para detectar envidias, bloqueos e intenciones ocultas de terceros. Una década de oficio y respuestas sin rodeos."
 platformName: "Purple Garden: Aron Osachi"
 platform: "purple-garden-es"
-rating: 4.9
+rating: 4.8
 verdict: "Aron Osachi es el perfil del top hispanohablante que trabaja la lectura de tabaco con estructura de servicio más completa: usa el humo y la ceniza como instrumento de revisión del campo áurico — la vía de la tradición espiritista caribeña para detectar envidias, bloqueos e intenciones ocultas de terceros — y complementa con un tarot concebido como mapa de decisiones, no como sentencia. Con una década de oficio, 885 lecturas en 4.9★ desde 2021 y una honestidad declarada ('no vengo a decirte lo que quieres escuchar'), su chat a $1.99/min es una de las entradas más económicas del segmento. El dato que hay que saber antes de entrar: su precio de voz ($10.49/min) es el más alto del top hispano después de Bastet Tarot — el chat es la vía de acceso real a este perfil."
 pricing: "$1.99/min"
 bestFor: "Diagnóstico energético del aura con tabaco, detección de envidias e intenciones ocultas, cortes de lazos kármicos, reconciliaciones, claridad para decisiones sin anestesia"
 publishDate: "2026-09-22"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/aron-osachi/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/aron-osachi.webp"

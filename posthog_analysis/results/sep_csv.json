@@ -1,0 +1,350 @@
+{
+ "rows": 28,
+ "signup_rows": 16,
+ "sale_rows": 12,
+ "unique_customers": 20,
+ "gross_payout": 1350.0,
+ "by_platform": {
+  "PurpleGarden": {
+   "signups": 2,
+   "sales": 3,
+   "payout": 375.0,
+   "customers_in_csv": 3,
+   "upgraded_in_csv": 3
+  },
+  "Keen": {
+   "signups": 2,
+   "sales": 2,
+   "payout": 100.0,
+   "customers_in_csv": 4,
+   "upgraded_in_csv": 2
+  },
+  "Kasamba": {
+   "signups": 12,
+   "sales": 7,
+   "payout": 875.0,
+   "customers_in_csv": 13,
+   "upgraded_in_csv": 7
+  }
+ },
+ "by_country": {
+  "United States": {
+   "signups": 8,
+   "sales": 6,
+   "payout": 750.0
+  },
+  "Australia": {
+   "signups": 1,
+   "sales": 2,
+   "payout": 175.0
+  },
+  "Canada": {
+   "signups": 1,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "Trinidad And Tobago": {
+   "signups": 1,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "Switzerland": {
+   "signups": 0,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "United Kingdom": {
+   "signups": 1,
+   "sales": 1,
+   "payout": 50.0
+  },
+  "Sweden": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "Nepal": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "Saudi Arabia": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "Netherlands": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  }
+ },
+ "by_device": {
+  "iPhone / iPod": {
+   "signups": 13,
+   "sales": 9,
+   "payout": 1050.0
+  },
+  "Android": {
+   "signups": 3,
+   "sales": 2,
+   "payout": 250.0
+  },
+  "Firefox": {
+   "signups": 0,
+   "sales": 1,
+   "payout": 50.0
+  }
+ },
+ "by_day": {
+  "2026-09-01": {
+   "signups": 0,
+   "sales": 2,
+   "payout": 250.0
+  },
+  "2026-09-04": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-05": {
+   "signups": 3,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "2026-09-06": {
+   "signups": 1,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "2026-09-10": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-11": {
+   "signups": 0,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "2026-09-12": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-13": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-14": {
+   "signups": 1,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "2026-09-15": {
+   "signups": 1,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "2026-09-16": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-18": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-19": {
+   "signups": 0,
+   "sales": 1,
+   "payout": 125.0
+  },
+  "2026-09-22": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-25": {
+   "signups": 2,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-26": {
+   "signups": 0,
+   "sales": 2,
+   "payout": 175.0
+  },
+  "2026-09-27": {
+   "signups": 0,
+   "sales": 1,
+   "payout": 50.0
+  },
+  "2026-09-28": {
+   "signups": 1,
+   "sales": 0,
+   "payout": 0.0
+  },
+  "2026-09-29": {
+   "signups": 0,
+   "sales": 1,
+   "payout": 125.0
+  }
+ },
+ "upgrade_lags": [
+  {
+   "ad_id": "1023ae07b288cc99adcfc9970615c4",
+   "platform": "PurpleGarden",
+   "country": "United States",
+   "browser": "iPhone / iPod",
+   "signup": "2026-09-28 07:17:19",
+   "purchase": "2026-09-29 07:36:10",
+   "lag_hours": 24.31
+  },
+  {
+   "ad_id": "1021fa03bbe74546c6111b9cf79db4",
+   "platform": "PurpleGarden",
+   "country": "United States",
+   "browser": "Android",
+   "signup": "2026-09-25 11:34:00",
+   "purchase": "2026-09-26 10:35:47",
+   "lag_hours": 23.03
+  },
+  {
+   "ad_id": "102524f5f3d971d4d460ce886709af",
+   "platform": "Kasamba",
+   "country": "Canada",
+   "browser": "iPhone / iPod",
+   "signup": "2026-09-18 10:21:22",
+   "purchase": "2026-09-19 09:25:22",
+   "lag_hours": 23.07
+  },
+  {
+   "ad_id": "1024a405690cbea72223c3ecefc0e4",
+   "platform": "Kasamba",
+   "country": "Australia",
+   "browser": "iPhone / iPod",
+   "signup": "2026-09-14 21:24:42",
+   "purchase": "2026-09-15 20:30:32",
+   "lag_hours": 23.1
+  },
+  {
+   "ad_id": "1025b14eca74012aad216ae2f933c9",
+   "platform": "Kasamba",
+   "country": "United States",
+   "browser": "iPhone / iPod",
+   "signup": "2026-09-13 07:27:23",
+   "purchase": "2026-09-14 06:31:58",
+   "lag_hours": 23.08
+  },
+  {
+   "ad_id": "102e210fb60b4489ccf90c2eb7aad4",
+   "platform": "Kasamba",
+   "country": "United States",
+   "browser": "iPhone / iPod",
+   "signup": "2026-09-10 12:38:20",
+   "purchase": "2026-09-11 11:39:16",
+   "lag_hours": 23.02
+  },
+  {
+   "ad_id": "1023af50a2cfe6046ce11afaad152c",
+   "platform": "Kasamba",
+   "country": "United States",
+   "browser": "Android",
+   "signup": "2026-09-05 11:09:57",
+   "purchase": "2026-09-06 10:14:25",
+   "lag_hours": 23.07
+  },
+  {
+   "ad_id": "1026baec543b750a74a1a01f5d554e",
+   "platform": "Kasamba",
+   "country": "Trinidad And Tobago",
+   "browser": "iPhone / iPod",
+   "signup": "2026-09-04 08:49:41",
+   "purchase": "2026-09-05 07:51:19",
+   "lag_hours": 23.03
+  }
+ ],
+ "sale_without_signup_in_csv": [
+  {
+   "ad_id": "10225e81ebeaa44361919beb27804e",
+   "platform": "Keen",
+   "country": "Australia",
+   "purchase": "2026-09-27 12:25:31",
+   "payout": 50.0
+  },
+  {
+   "ad_id": "102b6f0db2b44ff5f3f57a362f4335",
+   "platform": "Keen",
+   "country": "United Kingdom",
+   "purchase": "2026-09-26 04:00:14",
+   "payout": 50.0
+  },
+  {
+   "ad_id": "1024b2bdd4dc155a747f19e7f6aeaa",
+   "platform": "Kasamba",
+   "country": "United States",
+   "purchase": "2026-09-01 22:31:51",
+   "payout": 125.0
+  },
+  {
+   "ad_id": "1023b5d448bbe99749f66be291ca2e",
+   "platform": "PurpleGarden",
+   "country": "Switzerland",
+   "purchase": "2026-09-01 16:26:59",
+   "payout": 125.0
+  }
+ ],
+ "signup_without_sale_in_csv": [
+  {
+   "ad_id": "102c000203c50963649823a093db34",
+   "platform": "Kasamba",
+   "country": "United States",
+   "signup": "2026-09-25 06:16:47"
+  },
+  {
+   "ad_id": "102165af62f8b0b432c9e2788775e3",
+   "platform": "Keen",
+   "country": "Sweden",
+   "signup": "2026-09-22 03:05:12"
+  },
+  {
+   "ad_id": "10274212e1028daed16844beab2502",
+   "platform": "Kasamba",
+   "country": "Nepal",
+   "signup": "2026-09-16 05:45:28"
+  },
+  {
+   "ad_id": "102550ae463644ff8d26b22f2aa923",
+   "platform": "Kasamba",
+   "country": "Saudi Arabia",
+   "signup": "2026-09-15 07:26:38"
+  },
+  {
+   "ad_id": "10214d8edf866dcfe5ebca9b719ca7",
+   "platform": "Kasamba",
+   "country": "United States",
+   "signup": "2026-09-12 07:58:54"
+  },
+  {
+   "ad_id": "102518b51a4acbf22ce7d00899a1af",
+   "platform": "Kasamba",
+   "country": "Netherlands",
+   "signup": "2026-09-06 20:12:19"
+  },
+  {
+   "ad_id": "102ff655afb2d90841c8dde1f763f5",
+   "platform": "Kasamba",
+   "country": "United Kingdom",
+   "signup": "2026-09-05 06:22:52"
+  },
+  {
+   "ad_id": "102e28c385b60ac359ff1000a6f890",
+   "platform": "Keen",
+   "country": "United States",
+   "signup": "2026-09-05 05:55:02"
+  }
+ ]
+}

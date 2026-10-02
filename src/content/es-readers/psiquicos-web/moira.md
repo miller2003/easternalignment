@@ -1,17 +1,16 @@
 ---
 title: "Moira en Psíquicos Web: Insignia Most Accurate y la Honestidad de Decir 'No Soy Médium'"
-seoTitle: "Moira Reseña — Psíquicos Web | 4.9★, 6.663 Lecturas, $2.59/min"
-metaDescription: "Reseña de Moira en Psíquicos Web: 4.9★, $2.59/min. Lecturas con insignia most accurate y delimitación honesta, clarividencia desde los 15 años."
+seoTitle: "Moira Reseña — Psíquicos Web | 4.8★, 6.663 Lecturas, $2.59/min"
+metaDescription: "Reseña de Moira en Psíquicos Web: 4.8★, $2.59/min. Lecturas con insignia most accurate y delimitación honesta, clarividencia desde los 15 años."
 description: "Análisis independiente de Moira en Psíquicos Web: 6.663 lecturas en 4.9★ desde 2022 con insignia most accurate. La lectora que delimita su método con honestidad: 'no soy médium.' Clarividente desde los 15 años, con interpretación de sueños y canalización angelical. 2.005 positivas frente a 18 negativas."
 platformName: "Psíquicos Web: Moira"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.8
 verdict: "Moira ocupa el puesto #11 del ranking de Psíquicos Web con 6.663 lecturas en 4.9★ desde 2022, insignia most accurate y una proporción del 99,1% (2.005 positivas frente a 18 negativas). Lo que la define es la honestidad de delimitación más franca del catálogo: 'No soy médium. Si alguien ha dejado su cuerpo y entra en una lectura de forma espontánea, con gusto les daré su mensaje, pero yo no llamo espíritus.' En un sector donde muchos lectores prometen todo a todos, la negativa explícita de Moira es la credencial de una profesional que delimita su alcance con integridad. A $2.59/min en chat y $1.99/min en voz, su precio es accesible para una lectora con insignia most accurate."
 pricing: "$2.59/min"
 bestFor: "Lecturas con insignia most accurate y delimitación honesta, clarividencia desde los 15 años, canalización angelical, interpretación de sueños, voz más económica que el chat"
 publishDate: "2026-09-26"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/moira/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/moira.webp"

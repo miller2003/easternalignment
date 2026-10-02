@@ -5,13 +5,12 @@ metaDescription: "Reseña de Veronica en Psíquicos Web: 5.0★, $3.99/min. Lect
 description: "Análisis independiente de Veronica en Psíquicos Web: 56.751 lecturas en 5.0★ desde 2019 — el mayor volumen documentado del catálogo hispano. Vidente con tarot gitano y egipcio, astrología, Registros Akáshicos y rituales de amor. 26.098 reseñas positivas frente a 62 negativas."
 platformName: "Psíquicos Web: Veronica"
 platform: "psiquicos"
-rating: 5.0
+rating: 5
 verdict: "Veronica ocupa el puesto #1 del ranking de Psíquicos Web con el volumen documentado más alto de todo el catálogo hispanohablante: 56.751 lecturas completadas en 5.0★ desde 2019, con 26.098 reseñas positivas frente a solo 62 negativas — una proporción del 99,8% sostenida durante siete años y casi sesenta mil sesiones. Su método combina videncia de nacimiento (experiencias fuera del cuerpo desde la infancia), tarot gitano y egipcio, astrología con lectura de carta natal, Registros Akáshicos, rituales de amor, endulzamientos y amarres, además de conocimientos de neurociencia y psicología espiritual. A $3.99/min, su tarifa es estándar de la plataforma — pero su historial no lo es: ningún otro perfil del catálogo hispano acumula ese volumen con esa calificación. La limitación real: con la demanda de siete años, aparece frecuentemente como 'ocupada'."
 pricing: "$3.99/min"
 bestFor: "Lecturas con la trayectoria más larga documentada del catálogo hispano, tarot gitano y egipcio, Registros Akáshicos, rituales de amor y amarres, astrología con carta natal"
 publishDate: "2026-09-12"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/veronica/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/veronica.webp"

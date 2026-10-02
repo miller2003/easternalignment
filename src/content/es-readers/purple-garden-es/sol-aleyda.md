@@ -1,17 +1,16 @@
 ---
 title: "Sol aleyda en Purple Garden: La Lectura Conversada — y la Lectora que También Te Hace Preguntas"
-seoTitle: "Sol aleyda Reseña — Purple Garden | 5★, 3.447 Lecturas, $2.99/min"
-metaDescription: "Reseña de Sol aleyda en Purple Garden: 5.0★, $2.99/min. Lecturas conversadas (donde la lectora también pregunta), diagnósticos con profundización interactiva."
+seoTitle: "Sol aleyda Reseña — Purple Garden | 4.8★, 3.447 Lecturas"
+metaDescription: "Reseña de Sol aleyda en Purple Garden: 4.8★, $2.99/min. Lecturas conversadas (donde la lectora también pregunta), diagnósticos con profundización interactiva."
 description: "Análisis independiente de Sol aleyda en Purple Garden: 3.447 lecturas en 5.0★ desde 2020. La lectora del top hispano con el método inverso al del oráculo silencioso: hace preguntas al consultante para profundizar la lectura. Astróloga, tarotista e intérprete de sueños con rituales de esencias, velas, yerbas e incienso."
 platformName: "Purple Garden: Sol aleyda"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Sol aleyda ocupa el puesto #21 del ranking hispanohablante de Purple Garden con un método que en el catálogo hispano casi no tiene equivalente: la lectura conversada. Donde la mayoría de los lectores operan como oráculos silenciosos — el consultante pregunta, el lector responde — Sol hace lo contrario: hace preguntas al consultante durante la sesión para que la lectura sea más profunda. Es la inversión metodológica del procedimiento más sospechado del sector (la lectura fría, donde el lector extrae información del consultante por pregunta aparentemente casual), transformada aquí en un método co-creativo declarado. Sobre esa base opera una astróloga y tarotista con 5 años en la plataforma, 3.447 lecturas en 5.0★ y 955 reseñas positivas frente a 13 negativas (98,7%), con rituales herbales de limpieza energética integrados. A $2.99/min, su precio es estándar; su método no lo es."
 pricing: "$2.99/min"
 bestFor: "Lecturas conversadas (donde la lectora también pregunta), diagnósticos con profundización interactiva, rituales herbales de limpieza, astrología + tarot + interpretación de sueños"
 publishDate: "2026-09-21"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/sol-aleyda/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/sol-aleyda.webp"

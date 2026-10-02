@@ -1,0 +1,18 @@
+{
+ "sql": "\nSELECT count(DISTINCT properties.$session_id) AS sessions,\n       count(DISTINCT person_id) AS users,\n       countIf(event='$pageview') AS views,\n       uniqExactIf(toString(properties.$insert_id), event='affiliate_link_click') AS clicks\nFROM events\nWHERE timestamp >= toDateTime(1788192000) AND timestamp < toDateTime(1790784000)\n  AND coalesce(properties.$host,'') = 'easternalignment.com'\nLIMIT 5\n",
+ "columns": [
+  "sessions",
+  "users",
+  "views",
+  "clicks"
+ ],
+ "results": [
+  [
+   848,
+   701,
+   1229,
+   162
+  ]
+ ],
+ "hasMore": null
+}

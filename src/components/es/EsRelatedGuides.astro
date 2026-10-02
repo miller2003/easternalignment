@@ -1,0 +1,81 @@
+---
+/**
+ * EsRelatedGuides — bloque de guías relacionadas del subsitio /es.
+ * Se usa al final de cada guía y de cada reseña de lector (cierra el
+ * hueco de «0 enlaces internos» entre reseñas y contenido informativo).
+ */
+import { ES_GUIDE_CATEGORIES, type EsGuide } from '../../lib/esGuides';
+
+interface Props {
+  guides: EsGuide[];
+  title?: string;
+  intro?: string;
+  id?: string;
+}
+
+const { guides, title = 'Guías que te pueden servir', intro, id = 'guias-relacionadas' } = Astro.props;
+---
+
+{guides.length > 0 && (
+  <section class="es-related-guides" id={id} aria-labelledby={`${id}-title`}>
+    <h2 class="es-related-guides__title" id={`${id}-title`}>{title}</h2>
+    {intro && <p class="es-related-guides__intro">{intro}</p>}
+    <div class="es-related-guides__grid">
+      {guides.map((g) => (
+        <a class="es-related-guides__card" href={g.url}>
+          <span class="es-related-guides__cat">{ES_GUIDE_CATEGORIES[g.category]?.label || 'Guía'}</span>
+          <span class="es-related-guides__name">{g.cardTitle || g.title}</span>
+          <span class="es-related-guides__desc">{g.description.length > 130 ? g.description.slice(0, 127).replace(/\s+\S*$/, '') + '…' : g.description}</span>
+          <span class="es-related-guides__more">Leer la guía →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .es-related-guides {
+    margin: var(--space-10, 2.5rem) 0 var(--space-6, 1.5rem);
+    padding-top: var(--space-8, 2rem);
+    border-top: 1px solid var(--color-border, #E8E2DA);
+  }
+  .es-related-guides__title { font-size: var(--text-xl, 1.25rem); margin: 0 0 var(--space-2, .5rem); }
+  .es-related-guides__intro { color: var(--color-text-muted); font-size: var(--text-sm, .875rem); margin: 0 0 var(--space-5, 1.25rem); }
+  .es-related-guides__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-4, 1rem);
+  }
+  .es-related-guides__card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: var(--space-5, 1.25rem);
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border, #E8E2DA);
+    border-radius: var(--radius-lg, 12px);
+    text-decoration: none !important;
+    color: inherit;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .es-related-guides__card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent-light, #E8CDB0);
+    box-shadow: 0 8px 20px rgba(107, 84, 56, .10);
+  }
+  .es-related-guides__cat {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--color-accent-hover, #B07F55);
+  }
+  .es-related-guides__name {
+    font-family: var(--font-heading);
+    font-size: var(--text-base, 1rem);
+    line-height: 1.3;
+    color: var(--color-text, #2d2a26);
+  }
+  .es-related-guides__desc { font-size: 13px; line-height: 1.5; color: var(--color-text-muted, #7a746b); }
+  .es-related-guides__more { margin-top: auto; font-size: 13px; font-weight: 600; color: var(--color-primary, #8B6F4E); }
+</style>

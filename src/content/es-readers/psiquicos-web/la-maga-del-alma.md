@@ -1,17 +1,16 @@
 ---
 title: "La Maga del Alma en Psíquicos Web: La Lectora más Formada del Catálogo — Neurociencias, Yoga, Mindfulness y Tres Generaciones"
-seoTitle: "La Maga del Alma Reseña — Psíquicos Web | 4.9★, 4.561 Lecturas"
-metaDescription: "Reseña de La Maga del Alma en Psíquicos Web: 4.9★, $1.89/min. Lecturas con la formación formal más extensa del catálogo, Tarot Egipcio y Rider Waite."
+seoTitle: "La Maga del Alma Reseña — Psíquicos Web | 4.7★, 4.561 Lecturas"
+metaDescription: "Reseña de La Maga del Alma en Psíquicos Web: 4.7★, $1.89/min. Lecturas con la formación formal más extensa del catálogo, Tarot Egipcio y Rider Waite."
 description: "Análisis independiente de La Maga del Alma en Psíquicos Web: 4.561 lecturas en 4.9★ desde 2025 con insignia most accurate. La lectora con más formación formal del catálogo: Escola Mariño Casal + Master Reiki + Hatha Yoga + Mindfulness + Neurociencias + analista de sistemas. Tres generaciones de linaje: abuela tarotista, abuelo chamán, bisabuela espíritista."
 platformName: "Psíquicos Web: La Maga del Alma"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "La Maga del Alma ocupa el puesto #33 del ranking de Psíquicos Web con 4.561 lecturas en 4.9★ desde 2025, insignia most accurate y una proporción del 98% (970 positivas frente a 20 negativas). Lo que la define es la formación formal más extensa del catálogo: certificada por la Escola Mariño Casal como tarotista y astróloga, Master Reiki, Maestra de Hatha Yoga (World Yoga Alliance), profesora de Mindfulness certificada por dos asociaciones, Instructora en Neurociencias, analista de sistemas y formadora en Tarot Egipcio desde hace 6 años. A ello suma tres generaciones de linaje: abuela tarotista, abuelo chamán, bisabuela espíritista sanadora. A $1.89/min, su precio es uno de los más bajos del top 35 para una lectora con esa formación."
 pricing: "$1.89/min"
 bestFor: "Lecturas con la formación formal más extensa del catálogo, Tarot Egipcio y Rider Waite, enfoque académico e intuitivo, tres generaciones de linaje espiritual, neurociencias aplicadas"
 publishDate: "2026-09-10"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/la-maga-del-alma/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/la-maga-del-alma.webp"

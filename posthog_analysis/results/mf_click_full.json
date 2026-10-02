@@ -1,0 +1,575 @@
+{
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(toString(properties.$host),''),'(no-host)') AS host,\n       coalesce(nullIf(toString(properties.$pathname),''),'') AS path,\n       toString(person_id) AS pid,\n       toString(properties.$insert_id) AS iid,\n       toString(properties.utm_source) AS utm,\n       toString(properties.utm_campaign) AS utmc,\n       toString(properties.click_token) AS tok\nFROM events WHERE event='affiliate_link_click' AND timestamp >= toDateTime(1790006400)\nORDER BY timestamp DESC LIMIT 100\n",
+ "columns": [
+  "t",
+  "host",
+  "path",
+  "pid",
+  "iid",
+  "utm",
+  "utmc",
+  "tok"
+ ],
+ "results": [
+  [
+   "2026-09-29 17:31:14.705000",
+   "easternalignment.com",
+   "/guides/best-love-psychics-keen-ex-recovery/",
+   "a607a4ba-46b4-5c8f-8a3b-50d62cf14df2",
+   "ea-clk-01a0d4cd-bcff-7f89-87fb-5be57e52c0c0-keen-david7-1790674274497",
+   null,
+   null,
+   "ekeutl"
+  ],
+  [
+   "2026-09-29 10:38:58.881000",
+   "easternalignment.com",
+   "/es/resenas/purple-garden-es/lucius-blanco/",
+   "8435b8d5-16b6-5f4b-9b71-f5d4d196ad00",
+   "ea-clk-01a0802e-35ce-70c2-a774-e8de0312253e-purple-garden-es-lucius-blanco-1790649537342",
+   null,
+   null,
+   "lxffad"
+  ],
+  [
+   "2026-09-29 10:32:33.264000",
+   "easternalignment.com",
+   "/es/",
+   "8435b8d5-16b6-5f4b-9b71-f5d4d196ad00",
+   "ea-clk-01a0802e-35ce-70c2-a774-e8de0312253e-psiquicos-1790649151723",
+   null,
+   null,
+   "zilgnt"
+  ],
+  [
+   "2026-09-28 20:56:21.106000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-on-kasamba/",
+   "f54c653e-9647-504b-a3ee-e0df2a08bb2f",
+   "ea-clk-01a0e814-3405-7a2c-97e5-4aca4c223d53-kasamba-divine-spirit-1790600180811",
+   "chatgpt.com",
+   null,
+   "zx1sv7"
+  ],
+  [
+   "2026-09-28 20:55:08.329000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-on-kasamba/",
+   "f54c653e-9647-504b-a3ee-e0df2a08bb2f",
+   "ea-clk-01a0e814-3405-7a2c-97e5-4aca4c223d53-kasamba-miss-bathsheba-1790600107488",
+   "chatgpt.com",
+   null,
+   "6cp8o5"
+  ],
+  [
+   "2026-09-28 18:55:02.707000",
+   "easternalignment.com",
+   "/reviews/kasamba/love-specialist-isabelle-kasamba-review/",
+   "03b26245-b83a-592d-8ac7-7ae647d7d3af",
+   "ea-clk-01a0e7a6-e470-7a88-bc91-89668d92b4b5-kasamba-love-specialist-isabelle-1790592902338",
+   null,
+   null,
+   "wttqy0"
+  ],
+  [
+   "2026-09-28 11:16:26.401000",
+   "easternalignment.com",
+   "/guides/best-mediums-on-purple-garden/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purplegarden-1790565386360",
+   "chatgpt.com",
+   null,
+   "484cmo"
+  ],
+  [
+   "2026-09-28 08:18:13.681000",
+   "easternalignment.com",
+   "/guides/best-mediums-on-purple-garden/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-serena-1790554693608",
+   "chatgpt.com",
+   null,
+   "lm09dl"
+  ],
+  [
+   "2026-09-28 07:29:43.422000",
+   "easternalignment.com",
+   "/reviews/purple-garden/tattooed-psychic/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-tattooed-psychic-1790551783324",
+   "chatgpt.com",
+   null,
+   "1cpyim"
+  ],
+  [
+   "2026-09-28 07:25:36.200000",
+   "easternalignment.com",
+   "/guides/best-mediums-on-purple-garden/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-1790551536107",
+   "chatgpt.com",
+   null,
+   "y05dms"
+  ],
+  [
+   "2026-09-28 06:36:52.396000",
+   "easternalignment.com",
+   "/reviews/purple-garden/psychic-advisor-serena/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-serena-1790548612316",
+   "chatgpt.com",
+   null,
+   "oohwi6"
+  ],
+  [
+   "2026-09-28 06:33:28.267000",
+   "easternalignment.com",
+   "/guides/best-mediums-on-purple-garden/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-1790548408166",
+   "chatgpt.com",
+   null,
+   "a8e1j4"
+  ],
+  [
+   "2026-09-28 06:32:20.821000",
+   "easternalignment.com",
+   "/guides/best-mediums-on-purple-garden/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-1790548340654",
+   "chatgpt.com",
+   null,
+   "gtos2m"
+  ],
+  [
+   "2026-09-28 06:18:07.781000",
+   "easternalignment.com",
+   "/reviews/purple-garden/tattooed-psychic/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-tattooed-psychic-1790547487684",
+   "chatgpt.com",
+   null,
+   "bxteue"
+  ],
+  [
+   "2026-09-28 06:15:46.267000",
+   "easternalignment.com",
+   "/reviews/purple-garden/tattooed-psychic/",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "ea-clk-01a0e4ee-ffe5-714b-bca7-fa56afa674f9-purple-garden-tattooed-psychic-1790547346100",
+   "chatgpt.com",
+   null,
+   "axzuuf"
+  ],
+  [
+   "2026-09-27 16:19:27.502000",
+   "easternalignment.com",
+   "/guides/love-or-career-psychics/",
+   "c86da2f4-acb0-5ed3-a4f2-6a931d926014",
+   "ea-clk-01a0e1be-2269-77e9-a36c-85083d7b6d38-kasamba-stefan-1790497167343",
+   null,
+   null,
+   "83x8eu"
+  ],
+  [
+   "2026-09-27 15:32:01.613000",
+   "easternalignment.com",
+   "/reviews/keen/master-sher/",
+   "c86da2f4-acb0-5ed3-a4f2-6a931d926014",
+   "ea-clk-01a0e1be-2269-77e9-a36c-85083d7b6d38-keen-master-sher-1790494321497",
+   null,
+   null,
+   "pzcicb"
+  ],
+  [
+   "2026-09-27 13:47:08.935000",
+   "easternalignment.com",
+   "/reviews/kasamba/advisor-by-jenny-kasamba-review/",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "ea-clk-01a0e161-1faf-7a0d-b800-d28a149b316c-kasamba-jenny-1790488028713",
+   null,
+   null,
+   "umbczq"
+  ],
+  [
+   "2026-09-27 13:43:37.992000",
+   "easternalignment.com",
+   "/reviews/kasamba/advisor-by-jenny-kasamba-review/",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "ea-clk-01a0e161-1faf-7a0d-b800-d28a149b316c-kasamba-jenny-1790487817769",
+   null,
+   null,
+   "7sm1wt"
+  ],
+  [
+   "2026-09-27 13:40:55.366000",
+   "easternalignment.com",
+   "/guides/best-love-psychics-kasamba-ranked/",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "ea-clk-01a0e161-1faf-7a0d-b800-d28a149b316c-kasamba-1790487655115",
+   null,
+   null,
+   "4mls4g"
+  ],
+  [
+   "2026-09-27 13:40:42.921000",
+   "easternalignment.com",
+   "/guides/best-love-psychics-kasamba-ranked/",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "ea-clk-01a0e161-1faf-7a0d-b800-d28a149b316c-kasamba-1790487642680",
+   null,
+   null,
+   "2u4ume"
+  ],
+  [
+   "2026-09-27 12:17:59.896000",
+   "easternalignment.com",
+   "/guides/best-twin-flame-psychics-online/",
+   "709de596-a755-50b8-95c1-beb25af61aee",
+   "ea-clk-01a0e114-b83b-7d95-aa49-80ad849a62fd-keen-kelly-1790482652292",
+   null,
+   null,
+   "fqwax3"
+  ],
+  [
+   "2026-09-27 09:33:53.634000",
+   "easternalignment.com",
+   "/guides/free-psychic-readings-online-truth/",
+   "88ce76f6-f725-596e-9168-6966fc22efee",
+   "ea-clk-01a0e07f-4331-748b-a11e-fbaa4db86226-kasamba-1790472833458",
+   null,
+   null,
+   "57u0cu"
+  ],
+  [
+   "2026-09-27 07:50:34.145000",
+   "easternalignment.com",
+   "/reviews/purple-garden/psychic-jewels/",
+   "84786848-db63-5d24-8c5b-102da151116b",
+   "ea-clk-01a0e01e-59cb-77db-9ebb-07eafd1011aa-purple-garden-psychic-jewels-1790466634087",
+   "chatgpt.com",
+   null,
+   "eepqvr"
+  ],
+  [
+   "2026-09-27 01:39:09.473000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-for-love/",
+   "0bd4afef-3c60-552c-a6b5-87e66fbc486e",
+   "ea-clk-01a0decc-346c-7e17-9da2-f6b9303c8faf-keen-meg-1790444349421",
+   "chatgpt.com",
+   null,
+   "t972la"
+  ],
+  [
+   "2026-09-26 12:03:21.043000",
+   "easternalignment.com",
+   "/guides/best-kasamba-psychics-first-reading/",
+   "c7fc276f-eaab-52d8-a35a-a7e4c24c5022",
+   "ea-clk-01a0dbe1-47a2-7372-9c38-2e90efcebefd-kasamba-1790395400966",
+   null,
+   null,
+   "cr9svr"
+  ],
+  [
+   "2026-09-26 11:47:53.557000",
+   "easternalignment.com",
+   "/reviews/keen/",
+   "e4dffa8f-95f8-53bb-8aca-cd08ea08588b",
+   "ea-clk-01a0dbd1-1d42-782c-9665-89a978285957-keen-1790394472929",
+   "chatgpt.com",
+   null,
+   "qamdja"
+  ],
+  [
+   "2026-09-26 03:53:21.406000",
+   "easternalignment.com",
+   "/reviews/keen/master-sher/",
+   "1d4a4823-6dc5-5fb1-8b2b-0bfb53f538e9",
+   "ea-clk-01a0da1f-aadc-7e84-b5e4-65322e391a39-keen-master-sher-1790366001232",
+   "chatgpt.com",
+   null,
+   "fa5gn3"
+  ],
+  [
+   "2026-09-25 19:04:32.266000",
+   "easternalignment.com",
+   "/reviews/kasamba/a-psychic-friend-kasamba-review/",
+   "faa2e235-3707-547c-89ce-5d40aa74a40e",
+   "ea-clk-01a0d83b-a4b9-7c11-8724-f98acabce9b3-kasamba-a-psychic-friend-1790334272027",
+   "chatgpt.com",
+   null,
+   "c9xyni"
+  ],
+  [
+   "2026-09-25 19:03:19.510000",
+   "easternalignment.com",
+   "/reviews/kasamba/a-psychic-friend-kasamba-review/",
+   "faa2e235-3707-547c-89ce-5d40aa74a40e",
+   "ea-clk-01a0d83b-a4b9-7c11-8724-f98acabce9b3-kasamba-a-psychic-friend-1790334199265",
+   "chatgpt.com",
+   null,
+   "zbl4st"
+  ],
+  [
+   "2026-09-25 14:19:23.035000",
+   "easternalignment.com",
+   "/guides/evidential-mediums-passed-spouse/",
+   "5f5c3196-01ff-5c9c-b9b4-0e30054a6921",
+   "ea-clk-01a0d736-ec18-7349-88a6-a8eb17d9764a-keen-1790317162884",
+   null,
+   null,
+   "wndsvp"
+  ],
+  [
+   "2026-09-25 14:18:20.409000",
+   "easternalignment.com",
+   "/guides/evidential-mediums-passed-spouse/",
+   "5f5c3196-01ff-5c9c-b9b4-0e30054a6921",
+   "ea-clk-01a0d736-ec18-7349-88a6-a8eb17d9764a-keen-1790317100098",
+   null,
+   null,
+   "czp311"
+  ],
+  [
+   "2026-09-25 11:28:23.256000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-for-love/",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "ea-clk-01a0d666-23c8-749b-8734-429f0ea50fe2-keen-master-sher-1790306903236",
+   "chatgpt.com",
+   null,
+   "46wj6v"
+  ],
+  [
+   "2026-09-25 11:28:13.748000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-for-love/",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "ea-clk-01a0d666-23c8-749b-8734-429f0ea50fe2-kasamba-yazmin-1790306893731",
+   "chatgpt.com",
+   null,
+   "ev3vfw"
+  ],
+  [
+   "2026-09-25 11:27:43.038000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-for-love/",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "ea-clk-01a0d666-23c8-749b-8734-429f0ea50fe2-keen-meg-1790306862881",
+   "chatgpt.com",
+   null,
+   "8qwx6j"
+  ],
+  [
+   "2026-09-25 10:32:24.121000",
+   "easternalignment.com",
+   "/",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "ea-clk-01a0d666-23c8-749b-8734-429f0ea50fe2-purple-garden-rose-soulmates-1790303544095",
+   "chatgpt.com",
+   null,
+   "pq98uh"
+  ],
+  [
+   "2026-09-25 10:31:57.315000",
+   "easternalignment.com",
+   "/",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "ea-clk-01a0d666-23c8-749b-8734-429f0ea50fe2-kasamba-danielle-1790303517281",
+   "chatgpt.com",
+   null,
+   "2pehmh"
+  ],
+  [
+   "2026-09-25 10:31:29.235000",
+   "easternalignment.com",
+   "/",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "ea-clk-01a0d666-23c8-749b-8734-429f0ea50fe2-kasamba-danielle-1790303489130",
+   "chatgpt.com",
+   null,
+   "88lcyx"
+  ],
+  [
+   "2026-09-25 05:07:50.613000",
+   "easternalignment.com",
+   "/reviews/kasamba/",
+   "8c285da1-067d-5bb8-95ee-284e9f806ca2",
+   "ea-clk-01a0d537-5736-718c-ab82-607df9a2100f-kasamba-1790284070492",
+   "chatgpt.com",
+   null,
+   "isjnx3"
+  ],
+  [
+   "2026-09-25 05:02:06.159000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-for-love/",
+   "8c285da1-067d-5bb8-95ee-284e9f806ca2",
+   "ea-clk-01a0d537-5736-718c-ab82-607df9a2100f-keen-1790283726074",
+   "chatgpt.com",
+   null,
+   "wzhql9"
+  ],
+  [
+   "2026-09-25 05:00:14.489000",
+   "easternalignment.com",
+   "/guides/best-tarot-readers-for-love/",
+   "8c285da1-067d-5bb8-95ee-284e9f806ca2",
+   "ea-clk-01a0d537-5736-718c-ab82-607df9a2100f-keen-1790283614400",
+   "chatgpt.com",
+   null,
+   "ki7c8v"
+  ],
+  [
+   "2026-09-24 18:00:34.503000",
+   "easternalignment.com",
+   "/reviews/keen/tarot-with-meg-on-keen-review-2026/",
+   "b91dd709-9379-52a1-90b5-0df87d26027b",
+   "ea-clk-01a0d2da-b25a-79b0-a8c8-64c40233b69f-keen-meg-1790244034284",
+   null,
+   null,
+   "eje3qi"
+  ],
+  [
+   "2026-09-24 12:42:38.689000",
+   "easternalignment.com",
+   "/guides/free-psychic-readings-online-truth/",
+   "1f5bf1f7-0c86-5a98-9b0d-c6f2c019c19d",
+   "ea-clk-01a0d1b8-e20d-7266-978b-1dad370d21c5-kasamba-1790224958234",
+   null,
+   null,
+   "7dv0if"
+  ],
+  [
+   "2026-09-23 06:56:13.166000",
+   "easternalignment.com",
+   "/reviews/purple-garden/athena-love/",
+   "ee5a00e5-12d1-5b2a-90d4-b429f5ca664d",
+   "ea-clk-01a0cb4d-b024-70dc-87d6-fffebf0a7514-purple-garden-athena-love-1790117772899",
+   "chatgpt.com",
+   null,
+   "xyyfwv"
+  ],
+  [
+   "2026-09-23 06:50:28.145000",
+   "easternalignment.com",
+   "/reviews/purple-garden/",
+   "ee5a00e5-12d1-5b2a-90d4-b429f5ca664d",
+   "ea-clk-01a0cb4d-b024-70dc-87d6-fffebf0a7514-purplegarden-1790117428008",
+   "chatgpt.com",
+   null,
+   "h2yu5x"
+  ],
+  [
+   "2026-09-23 06:47:53.373000",
+   "easternalignment.com",
+   "/reviews/purple-garden/niki-medium/",
+   "ee5a00e5-12d1-5b2a-90d4-b429f5ca664d",
+   "ea-clk-01a0cb4d-b024-70dc-87d6-fffebf0a7514-purple-garden-niki-medium-1790117273201",
+   "chatgpt.com",
+   null,
+   "slv647"
+  ],
+  [
+   "2026-09-22 10:29:29.384000",
+   "easternalignment.com",
+   "/reviews/kasamba/simone-guiding-vision-kasamba-review/",
+   "8435b8d5-16b6-5f4b-9b71-f5d4d196ad00",
+   "ea-clk-01a0802e-35ce-70c2-a774-e8de0312253e-kasamba-simone-guiding-vision-1790044167917",
+   null,
+   null,
+   "ttl67z"
+  ],
+  [
+   "2026-09-22 10:28:57.149000",
+   "easternalignment.com",
+   "/reviews/kasamba/master-z-kasamba-review/",
+   "8435b8d5-16b6-5f4b-9b71-f5d4d196ad00",
+   "ea-clk-01a0802e-35ce-70c2-a774-e8de0312253e-kasamba-master-z-1790044135700",
+   null,
+   null,
+   "rk2lvh"
+  ],
+  [
+   "2026-09-22 10:28:34.578000",
+   "easternalignment.com",
+   "/reviews/kasamba/psychic-tsahai-kasamba-review/",
+   "8435b8d5-16b6-5f4b-9b71-f5d4d196ad00",
+   "ea-clk-01a0802e-35ce-70c2-a774-e8de0312253e-kasamba-psychic-tsahai-1790044113107",
+   null,
+   null,
+   "lmwf3j"
+  ],
+  [
+   "2026-09-22 03:11:54.517000",
+   "easternalignment.com",
+   "/guides/top-love-psychics-keen/",
+   "84fa3890-98a2-5439-bc87-87bcf0813d69",
+   "ea-clk-01a0c551-5f2f-7b32-ac85-5f1a66493e90-keen-advisor-suzan-1790017914418",
+   "chatgpt.com",
+   null,
+   "31mdo8"
+  ],
+  [
+   "2026-09-22 03:10:40.680000",
+   "easternalignment.com",
+   "/guides/top-love-psychics-keen/",
+   "84fa3890-98a2-5439-bc87-87bcf0813d69",
+   "ea-clk-01a0c551-5f2f-7b32-ac85-5f1a66493e90-keen-advisor-suzan-1790017840587",
+   "chatgpt.com",
+   null,
+   "i6zduj"
+  ],
+  [
+   "2026-09-22 03:04:58.781000",
+   "easternalignment.com",
+   "/guides/top-love-psychics-keen/",
+   "84fa3890-98a2-5439-bc87-87bcf0813d69",
+   "ea-clk-01a0c551-5f2f-7b32-ac85-5f1a66493e90-keen-advisor-suzan-1790017498685",
+   "chatgpt.com",
+   null,
+   "8rlbf2"
+  ],
+  [
+   "2026-09-22 03:02:46.726000",
+   "easternalignment.com",
+   "/guides/top-love-psychics-keen/",
+   "84fa3890-98a2-5439-bc87-87bcf0813d69",
+   "ea-clk-01a0c551-5f2f-7b32-ac85-5f1a66493e90-keen-advisor-suzan-1790017366631",
+   "chatgpt.com",
+   null,
+   "zk609s"
+  ],
+  [
+   "2026-09-22 02:59:16.361000",
+   "easternalignment.com",
+   "/guides/top-love-psychics-keen/",
+   "84fa3890-98a2-5439-bc87-87bcf0813d69",
+   "ea-clk-01a0c551-5f2f-7b32-ac85-5f1a66493e90-keen-lorrie-c-1790017156261",
+   "chatgpt.com",
+   null,
+   "0h2wrv"
+  ],
+  [
+   "2026-09-22 02:58:12.666000",
+   "easternalignment.com",
+   "/guides/top-love-psychics-keen/",
+   "84fa3890-98a2-5439-bc87-87bcf0813d69",
+   "ea-clk-01a0c551-5f2f-7b32-ac85-5f1a66493e90-keen-lorrie-c-1790017092575",
+   "chatgpt.com",
+   null,
+   "v926cy"
+  ],
+  [
+   "2026-09-22 02:54:56.804000",
+   "easternalignment.com",
+   "/guides/top-love-psychics-keen/",
+   "84fa3890-98a2-5439-bc87-87bcf0813d69",
+   "ea-clk-01a0c551-5f2f-7b32-ac85-5f1a66493e90-keen-1790016896698",
+   "chatgpt.com",
+   null,
+   "4ja8qa"
+  ]
+ ]
+}

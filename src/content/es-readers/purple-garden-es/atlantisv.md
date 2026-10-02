@@ -5,13 +5,12 @@ metaDescription: "Reseña de Atlantisv en Purple Garden: 5.0★, $4.99/min, 983 
 description: "Análisis independiente de Atlantisv en Purple Garden: 3.229 lecturas desde 2023 con 983 reseñas positivas y ninguna negativa — la única anomalía estadística perfecta del top hispanohablante. Médium clarividente, sacerdotisa consagrada y maestra Reiki con lecturas de Registros Akáshicos. Insignia most accurate."
 platformName: "Purple Garden: Atlantisv"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 5
 verdict: "Atlantisv sostiene el récord más difícil de explicar del catálogo hispanohablante de Purple Garden: 3.229 lecturas desde 2023 con 983 reseñas positivas y cero negativas. En un entorno donde hasta los mejores perfiles acumulan tasas de insatisfacción del 0,5–1%, un historial sin una sola reseña negativa durante tres años de actividad intensa es una anomalía estadística que solo se sostiene con dos condiciones: lecturas que aciertan y una gestión de expectativas impecable. Su perfil es el más completo del top hispano en cuanto a repertorio — médium clarividente, tarotista, sacerdotisa consagrada, maestra Reiki, con Registros Akáshicos como especialidad diferencial — y su ética declarada es la contraria a la del lector complaciente: no dice lo que quieres escuchar. El precio es premium ($4.99/min en ambas modalidades) y es coherente con la oferta: es la lectora estructurada más profunda del catálogo hispano de la plataforma."
 pricing: "$4.99/min"
 bestFor: "Lecturas de Registros Akáshicos y vidas pasadas, consultas donde se prefiere verdad sin filtros sobre confort ilusorio, trabajo espiritual estructurado (reiki, rituales, canalización), vínculos y propósito de vida"
 publishDate: "2026-09-25"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/atlantisv/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/atlantisv.webp"

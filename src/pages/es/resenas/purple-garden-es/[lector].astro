@@ -8,6 +8,8 @@ import EsProsCons from '../../../../components/es/EsProsCons.astro';
 import EsCTABox from '../../../../components/es/EsCTABox.astro';
 import EsFAQ from '../../../../components/es/EsFAQ.astro';
 import EsReaderCard from '../../../../components/es/EsReaderCard.astro';
+import EsRelatedGuides from '../../../../components/es/EsRelatedGuides.astro';
+import { getEsGuides, relatedGuidesForReader } from '../../../../lib/esGuides';
 
 export async function getStaticPaths() {
   const posts = import.meta.glob('../../../../content/es-readers/purple-garden-es/*.md');
@@ -28,6 +30,9 @@ export async function getStaticPaths() {
 
 const { default: Content, frontmatter } = Astro.props;
 const currentSlug = Astro.params.lector;
+
+// 2026-10-02: enlaces a guías (las reseñas tenían 0 enlaces hacia contenido informativo)
+const relatedGuides = relatedGuidesForReader({ slug: currentSlug as string, title: frontmatter.title, bestFor: frontmatter.bestFor, verdict: frontmatter.verdict }, getEsGuides(), 3);
 
 const allReaderModules = import.meta.glob('../../../../content/es-readers/purple-garden-es/*.md', { eager: true });
 const allReaders = Object.entries(allReaderModules)
@@ -66,7 +71,7 @@ const fmFaq = (frontmatter.faq || []).filter(
 const genericFaqItems = [
   {
     question: `¿${readerName} es una vidente confiable en Purple Garden?`,
-    answer: `${readerName} tiene una calificación de ${frontmatter.rating} sobre 5 en Purple Garden. Esta reseña analiza su historial verificado, la metodología de sus lecturas y las opiniones documentadas de usuarios reales. Consulta el análisis completo antes de reservar.`,
+    answer: `En nuestro análisis, ${readerName} obtiene una puntuación editorial de ${frontmatter.rating} sobre 5 — es la valoración de Eastern Alignment, no la del perfil. Se apoya en su historial verificado, la metodología de sus lecturas y las opiniones documentadas de usuarios reales; la calificación que muestra su perfil en Purple Garden se cita aparte en esta reseña. Consulta el análisis completo antes de reservar.`,
   },
   {
     question: `¿Cuánto cobra ${readerName} por una sesión en Purple Garden?`,
@@ -160,6 +165,8 @@ const faqItems = [
       </div>
     </section>
   )}
+
+  <EsRelatedGuides guides={relatedGuides} title="Guías para preparar tu consulta" intro="Lo que conviene saber antes de reservar — escrito con el mismo criterio que esta reseña." />
 
   <div class="back-link-row">
     <a href="/es/resenas/" class="btn btn--ghost">← Volver a Todas las Reseñas</a>

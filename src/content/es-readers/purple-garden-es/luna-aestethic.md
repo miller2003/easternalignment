@@ -1,16 +1,16 @@
 ---
 title: "Luna Aestethic en Purple Garden: 3.200 Reseñas en 5★ y Videollamadas en Español"
-seoTitle: "Luna Aestethic Reseña — Purple Garden | 3.200 Opiniones 5★"
-metaDescription: "Reseña de Luna Aestethic en Purple Garden: 5.0★, $2.99/min. Primera sesión en Purple Garden, videollamadas en español, mediumnidad con personas y mascotas."
+seoTitle: "Luna Aestethic Reseña — Purple Garden | 3.200 Opiniones 4.8★"
+metaDescription: "Reseña de Luna Aestethic en Purple Garden: 4.8★, $2.99/min. Primera sesión en Purple Garden, videollamadas en español, mediumnidad con personas y mascotas."
 description: "Análisis independiente de Luna Aestethic en Purple Garden: 3.200+ reseñas verificadas en 5.0★ a $2.99/min, videollamadas en español, medium colombiana con linaje matriarcal. El perfil más completo del catálogo hispano de la plataforma."
 platformName: "Purple Garden: Luna Aestethic"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Con más de 3.200 reseñas verificadas en 5.0★ a $2.99 por minuto, Luna Aestethic tiene el historial más documentado del catálogo hispanohablante de Purple Garden — y posiblemente de cualquier plataforma de videncia en español en el mercado actual. El dato estadístico es contundente: a ese volumen de reseñas, la calificación no es ruido de muestra pequeña. Es el resultado consistente de ocho años de práctica ininterrumpida en la plataforma. La combinación de videollamadas disponibles en español, precio por debajo del promedio para su nivel, y un linaje mediúmnico real (madre y abuela) la convierte en el punto de entrada de menor riesgo para cualquier hispanohablante que pruebe Purple Garden por primera vez. Limitación real: sus sesiones de video tienen disponibilidad variable — no siempre está en línea. Y su honestidad sobre los límites de lo que hará (no hace lecturas de salud, legales ni embarazos) es un indicador de integridad, no una restricción a lamentar."
 pricing: "$2.99/min"
 bestFor: "Primera sesión en Purple Garden, videollamadas en español, mediumnidad con personas y mascotas, bloqueos emocionales íntimos"
 publishDate: "2026-08-17"
-updatedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luna-aestethic/"
 hreflangEn: ""  # Sin equivalente en inglés — dejar vacío (ver _plantilla-resena.md)
 avatarUrl: "/avatars/es-readers/luna-aestethic.webp"

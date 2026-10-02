@@ -1,0 +1,424 @@
+---
+/**
+ * EsGuideLayout — guías editoriales del subsitio /es (/es/guias/<slug>/).
+ * Añadido 2026-10-02. Paridad visual con EsReviewLayout (3 columnas,
+ * superficies CTA del subsitio) + piezas propias de una guía:
+ *   · «Respuesta corta» bajo el título (pieza citable para buscadores/IA)
+ *   · tarjetas en vivo de los lectores citados (frontmatter de es-readers)
+ *   · FAQ con FAQPage JSON-LD, doble CTA de plataforma y guías relacionadas
+ */
+import EsBaseLayout from './EsBaseLayout.astro';
+import EsBreadcrumb from '../components/es/EsBreadcrumb.astro';
+import EsSpanishCTA from '../components/es/EsSpanishCTA.astro';
+import EsLeftSidebar from '../components/es/EsLeftSidebar.astro';
+import EsRightSidebar from '../components/es/EsRightSidebar.astro';
+import EsDealStrip from '../components/es/EsDealStrip.astro';
+import EsInlineCta from '../components/es/EsInlineCta.astro';
+import EsFAQ from '../components/es/EsFAQ.astro';
+import EsReaderCard from '../components/es/EsReaderCard.astro';
+import EsRelatedGuides from '../components/es/EsRelatedGuides.astro';
+import CtaTip from '../components/CtaTip.astro';
+import VerifiedNote from '../components/VerifiedNote.astro';
+import {
+  ES_PLATFORM_OFFERS,
+  ES_PLATFORM_PRIORITY,
+  ES_READER_URLS,
+  esGoPath,
+  esProofTooltip,
+  esPlatformLogo,
+} from '../lib/esOffers';
+import { ES_GUIDE_CATEGORIES, type EsGuide } from '../lib/esGuides';
+
+interface Props {
+  guide: EsGuide;
+  related: EsGuide[];
+  minutes: number;
+}
+
+const { guide, related, minutes } = Astro.props;
+const SITE_URL = 'https://easternalignment.com';
+
+const category = ES_GUIDE_CATEGORIES[guide.category] || { label: 'Guía', blurb: '' };
+const canonical = guide.canonicalUrl || `${SITE_URL}${guide.url}`;
+const ogImage = guide.ogImage || '/og-default.jpg';
+const ogImageAbs = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
+
+const displayDate = guide.updatedDate || guide.publishDate;
+const formattedDate = new Date(displayDate + 'T00:00:00').toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// ── CTA principal: deeplink del lector elegido → plataforma ────────────────
+const platformKey = guide.platform;
+const offer = ES_PLATFORM_OFFERS[platformKey];
+const pageCtaHref = (guide.ctaReader && ES_READER_URLS[guide.ctaReader]) || esGoPath(platformKey);
+
+// ── Lectores citados: datos EN VIVO desde el frontmatter de cada reseña ────
+const readerModules = import.meta.glob('../content/es-readers/**/*.md', { eager: true }) as Record<string, any>;
+const readerBySlug = new Map<string, any>();
+for (const [p, mod] of Object.entries(readerModules)) {
+  const file = p.split('/').pop() || '';
+  if (file.startsWith('_')) continue;
+  readerBySlug.set(file.replace(/\.md$/, ''), { ...mod.frontmatter, slug: file.replace(/\.md$/, '') });
+}
+const featured = (guide.featuredReaders || [])
+  .map((s) => readerBySlug.get(s))
+  .filter(Boolean);
+const ctaReaderData = guide.ctaReader ? readerBySlug.get(guide.ctaReader) : undefined;
+const ctaReaderName = ctaReaderData?.platformName?.split(':').pop()?.trim();
+
+// ── Schema ────────────────────────────────────────────────────────────────
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${canonical}#article`,
+  headline: guide.title,
+  description: guide.description,
+  inLanguage: 'es',
+  articleSection: category.label,
+  datePublished: guide.publishDate,
+  dateModified: guide.updatedDate || guide.publishDate,
+  image: ogImageAbs,
+  author: {
+    '@type': 'Organization',
+    name: 'Equipo editorial de Eastern Alignment',
+    url: `${SITE_URL}/es/acerca-de/`,
+  },
+  publisher: { '@id': `${SITE_URL}/#organization` },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  ...(guide.entities?.length ? { about: guide.entities.map((e) => ({ '@type': 'Thing', name: e })) } : {}),
+  ...(featured.length
+    ? {
+        mentions: featured.map((r) => ({
+          '@type': 'Person',
+          name: r.platformName?.split(':').pop()?.trim(),
+          url: `${SITE_URL}/es/resenas/${r.platform === 'psiquicos' ? 'psiquicos-web' : 'purple-garden-es'}/${r.slug}/`,
+        })),
+      }
+    : {}),
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.es-guide-short'] },
+};
+
+const noindex = guide.metaRobots ? guide.metaRobots.includes('noindex') : false;
+
+const breadcrumbItems = [
+  { label: 'Guías', href: '/es/guias/' },
+  { label: category.label, href: `/es/guias/#${guide.category}` },
+  { label: guide.cardTitle || guide.title },
+];
+
+const sidebarDeal = {
+  platform: platformKey,
+  label: 'Recomendación de esta guía',
+  href: pageCtaHref,
+  heading: ctaReaderName ? `${ctaReaderName} · ${offer.offer}` : undefined,
+};
+---
+
+<EsBaseLayout
+  title={guide.title}
+  description={guide.description}
+  ogType="article"
+  ogImage={ogImage}
+  canonicalUrl={canonical}
+  noindex={noindex}
+  seoTitle={guide.seoTitle}
+  metaDescription={guide.metaDescription}
+  jsonLd={articleSchema}
+  dateModified={guide.updatedDate || guide.publishDate}
+  topOfferPlatform={platformKey}
+  stickyCta={{ slug: pageCtaHref, platform: platformKey }}
+>
+  <div class="page-with-sidebars es-guide">
+    <EsLeftSidebar />
+
+    <div class="main-col">
+      <div class="guide-breadcrumb">
+        <EsBreadcrumb items={breadcrumbItems} />
+      </div>
+
+      <header class="guide-hero">
+        <div class="guide-hero-meta">
+          <a class="badge badge--sage guide-cat" href={`/es/guias/#${guide.category}`}>{category.label}</a>
+          <span class="guide-date">{guide.updatedDate ? 'Actualizado' : 'Publicado'} el {formattedDate}</span>
+          <span class="guide-dot" aria-hidden="true">·</span>
+          <span class="guide-date">{minutes} min de lectura</span>
+        </div>
+
+        <h1 class="guide-title">{guide.title}</h1>
+        <p class="guide-lead">{guide.description}</p>
+
+        {guide.verifiedDate && <VerifiedNote date={guide.verifiedDate} lang="es" />}
+
+        {guide.shortAnswer && (
+          <aside class="es-guide-short" aria-label="Respuesta corta">
+            <span class="es-guide-short__label">Respuesta corta</span>
+            <p set:html={guide.shortAnswer} />
+          </aside>
+        )}
+
+        <div class="guide-hero-cta">
+          <CtaTip text={esProofTooltip(platformKey)}>
+            <EsSpanishCTA
+              platform={platformKey}
+              variant={ctaReaderName ? 'book' : 'discount'}
+              readerName={ctaReaderName}
+              readerSlug={guide.ctaReader}
+              size="lg"
+              source="hero"
+            />
+          </CtaTip>
+          <EsDealStrip platform={platformKey} source="hero" href={pageCtaHref} />
+        </div>
+      </header>
+
+      <article class="guide-content">
+        <div class="prose">
+          <slot />
+        </div>
+
+        <EsInlineCta platform={platformKey} href={pageCtaHref} />
+
+        {featured.length > 0 && (
+          <section class="guide-readers" id="lectores-citados" aria-labelledby="lectores-citados-title">
+            <h2 class="guide-readers__title" id="lectores-citados-title">Lectores citados en esta guía</h2>
+            <p class="guide-readers__intro">
+              Datos tomados de nuestras reseñas individuales, que se actualizan por separado. Cada tarjeta enlaza a la reseña completa: lee los contras antes de reservar.
+            </p>
+            <div class="guide-readers__grid">
+              {featured.map((r) => (
+                <EsReaderCard
+                  name={r.platformName}
+                  slug={r.slug}
+                  platform={r.platform}
+                  rating={r.rating}
+                  verdict={r.verdict}
+                  pricing={r.pricing}
+                  bestFor={r.bestFor}
+                  avatarUrl={r.avatarUrl}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {guide.faq && guide.faq.length > 0 && (
+          <EsFAQ items={guide.faq} title="Preguntas frecuentes" />
+        )}
+
+        <section class="guide-end-cta" aria-labelledby="guide-end-cta-title">
+          <h2 class="guide-end-cta__title" id="guide-end-cta-title">Si vas a consultar, hazlo con ventaja</h2>
+          <p class="guide-end-cta__desc">
+            Las dos plataformas que auditamos en español tienen oferta de bienvenida. Úsala como prueba: si en los primeros minutos el lector no conecta con tu caso, cambia de lector antes de recargar.
+          </p>
+          <div class="guide-end-cta__grid">
+            {ES_PLATFORM_PRIORITY.map((k) => {
+              const o = ES_PLATFORM_OFFERS[k];
+              const href = k === platformKey ? pageCtaHref : esGoPath(k);
+              return (
+                <div class="guide-end-cta__card">
+                  <div class="guide-end-cta__brand">
+                    <img src={esPlatformLogo(k)} alt="" width="28" height="28" loading="lazy" />
+                    <span style={`color:${o.color}`}>{o.name}</span>
+                  </div>
+                  <p class="guide-end-cta__offer">{o.dealLine}</p>
+                  <CtaTip text={esProofTooltip(k)}>
+                    <a href={href} class="btn btn--primary es-cta" rel="nofollow sponsored" target="_blank" data-cta-platform={k} data-cta-source="end">
+                      {o.ctaLabel}
+                    </a>
+                  </CtaTip>
+                  <p class="guide-end-cta__micro">{o.microLine}</p>
+                  <a class="guide-end-cta__review" href={`/es/resenas/${k === 'psiquicos' ? 'psiquicos-web' : 'purple-garden-es'}/`}>Leer el análisis de {o.name} →</a>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <div class="author-bio card">
+          <div class="author-bio-inner">
+            <img src="/logo.jpg" alt="Eastern Alignment" class="author-bio-avatar" width="48" height="48" loading="lazy" />
+            <div class="author-bio-text">
+              <span class="author-bio-name">Equipo editorial de Eastern Alignment</span>
+              <p class="author-bio-desc">
+                Auditamos plataformas de videncia en español con datos públicos de perfil, reseñas documentadas de usuarios y sesiones de prueba. Esta guía es orientación espiritual y de consumo: no sustituye el consejo de un profesional de la salud, legal o financiero. <a href="/es/divulgacion/">Cómo nos financiamos</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <EsRelatedGuides guides={related} title="Sigue leyendo" />
+
+        <div class="back-link-row">
+          <a href="/es/guias/" class="btn btn--ghost">← Todas las guías</a>
+        </div>
+      </article>
+    </div>
+
+    <EsRightSidebar deal={sidebarDeal} />
+  </div>
+</EsBaseLayout>
+
+<style>
+  .page-with-sidebars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6) var(--space-12);
+  }
+  .main-col {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max-width-content, 760px);
+    width: 100%;
+  }
+  .guide-breadcrumb { margin-bottom: var(--space-4); }
+  .guide-hero {
+    padding: var(--space-2) 0 var(--space-4);
+    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--space-6);
+  }
+  .guide-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  .guide-cat { text-decoration: none; }
+  .guide-date, .guide-dot { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .guide-title { margin-bottom: var(--space-4); line-height: 1.15; }
+  .guide-lead {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-5);
+  }
+  .es-guide-short {
+    position: relative;
+    margin: 0 0 var(--space-6);
+    padding: var(--space-5) var(--space-5) var(--space-4);
+    background: linear-gradient(135deg, #fbf7f1 0%, #f6efe6 100%);
+    border: 1px solid var(--color-accent-light, #E8CDB0);
+    border-left: 4px solid var(--color-accent, #C4956A);
+    border-radius: var(--radius-md, 8px);
+  }
+  .es-guide-short__label {
+    display: inline-block;
+    margin-bottom: var(--space-2);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--color-accent-hover, #B07F55);
+  }
+  .es-guide-short p { margin: 0; font-size: var(--text-base); line-height: 1.65; color: var(--color-text); }
+  .guide-hero-cta { margin-bottom: var(--space-2); }
+  .guide-content { padding-bottom: var(--space-8); }
+  .prose { max-width: 100%; }
+
+  .guide-readers {
+    margin: var(--space-10) 0 var(--space-6);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+  .guide-readers__title { font-size: var(--text-xl); margin: 0 0 var(--space-2); }
+  .guide-readers__intro { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0 0 var(--space-5); }
+  .guide-readers__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .guide-end-cta {
+    margin: var(--space-10) 0 var(--space-6);
+    padding: var(--space-8) var(--space-6);
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-surface) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+  .guide-end-cta__title { font-size: var(--text-xl); margin: 0 0 var(--space-2); text-align: center; }
+  .guide-end-cta__desc { max-width: 560px; margin: 0 auto var(--space-6); text-align: center; color: var(--color-text-muted); font-size: var(--text-sm); line-height: var(--leading-relaxed); }
+  .guide-end-cta__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+  .guide-end-cta__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+  .guide-end-cta__brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: var(--text-lg); }
+  .guide-end-cta__brand img { border-radius: 6px; }
+  .guide-end-cta__offer { margin: 0; font-size: var(--text-sm); line-height: 1.55; }
+  .guide-end-cta__micro { margin: 0; font-size: 12px; color: var(--color-text-muted); }
+  .guide-end-cta__review { font-size: 13px; font-weight: 600; }
+  .guide-end-cta__card :global(.es-cta) { white-space: normal; text-align: center; }
+
+  .author-bio { margin-top: var(--space-8); padding: var(--space-5); }
+  .author-bio-inner { display: flex; align-items: flex-start; gap: var(--space-4); }
+  .author-bio-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: contain; flex-shrink: 0; mix-blend-mode: multiply; }
+  .author-bio-name { display: block; font-family: var(--font-heading); font-size: var(--text-base); font-weight: var(--weight-semibold); color: var(--color-text); margin-bottom: var(--space-1); }
+  .author-bio-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); margin: 0; }
+  .back-link-row { margin-top: var(--space-8); text-align: center; }
+
+  @media (max-width: 1300px) { .page-with-sidebars { gap: 2rem; } }
+  @media (max-width: 1100px) { .page-with-sidebars { justify-content: center; padding-top: var(--space-6); } }
+  @media (max-width: 768px) {
+    .page-with-sidebars { flex-direction: column; align-items: center; padding-left: var(--space-4); padding-right: var(--space-4); }
+    .main-col { width: 100%; max-width: 100%; }
+    .guide-title { font-size: var(--text-2xl); }
+    .guide-lead { font-size: var(--text-base); }
+    .guide-hero-cta :global(.es-cta) { width: 100%; text-align: center; white-space: normal; }
+    .guide-end-cta { padding: var(--space-6) var(--space-4); }
+    .guide-end-cta__grid { grid-template-columns: 1fr; }
+    .author-bio-inner { flex-direction: column; }
+  }
+</style>
+
+<!-- Piezas editoriales reutilizables dentro del Markdown de las guías -->
+<style is:global>
+  .es-guide .prose .es-box {
+    margin: var(--space-6, 1.5rem) 0;
+    padding: var(--space-5, 1.25rem) var(--space-5, 1.25rem) var(--space-4, 1rem);
+    border-radius: var(--radius-md, 8px);
+    border: 1px solid var(--color-border, #E8E2DA);
+    background: var(--color-surface, #fff);
+  }
+  .es-guide .prose .es-box > :last-child { margin-bottom: 0; }
+  .es-guide .prose .es-box__label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .es-guide .prose .es-box--key { background: #f7f3ec; border-left: 4px solid var(--color-primary, #8B6F4E); }
+  .es-guide .prose .es-box--key .es-box__label { color: var(--color-primary-dark, #6B5438); }
+  .es-guide .prose .es-box--warn { background: #fdf5ec; border-left: 4px solid #c0712f; }
+  .es-guide .prose .es-box--warn .es-box__label { color: #a2551a; }
+  .es-guide .prose .es-box--truth { background: #f2f6f9; border-left: 4px solid #4b6f8f; }
+  .es-guide .prose .es-box--truth .es-box__label { color: #375674; }
+  .es-guide .prose .es-pick {
+    margin: var(--space-6, 1.5rem) 0 var(--space-4, 1rem);
+    padding: var(--space-4, 1rem) var(--space-5, 1.25rem);
+    border: 1px solid var(--color-border, #E8E2DA);
+    border-radius: var(--radius-md, 8px);
+    background: linear-gradient(135deg, #fffdf9 0%, #faf6f0 100%);
+  }
+  .es-guide .prose .es-pick > :last-child { margin-bottom: 0; }
+  .es-guide .prose .es-pick__meta { font-size: 13px; color: var(--color-text-muted, #7a746b); margin: 0 0 8px; }
+  .es-guide .prose .es-pick__go {
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: 700;
+  }
+</style>

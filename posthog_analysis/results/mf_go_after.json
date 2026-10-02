@@ -1,0 +1,275 @@
+{
+ "sql": "\nWITH m AS (SELECT DISTINCT person_id FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='match_completed' AND timestamp >= toDateTime(1790092800))\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t, event,\n       toString(person_id) AS pid,\n       coalesce(nullIf(toString(properties.slug),''),'') AS slug\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND timestamp >= toDateTime(1790092800)\n  AND (event='aff_go_hit' OR event='affiliate_link_click')\nORDER BY timestamp DESC LIMIT 80\n",
+ "columns": [
+  "t",
+  "event",
+  "pid",
+  "slug"
+ ],
+ "results": [
+  [
+   "2026-09-29 17:31:14.705000",
+   "affiliate_link_click",
+   "a607a4ba-46b4-5c8f-8a3b-50d62cf14df2",
+   "keen-david7"
+  ],
+  [
+   "2026-09-28 20:56:21.106000",
+   "affiliate_link_click",
+   "f54c653e-9647-504b-a3ee-e0df2a08bb2f",
+   "kasamba-divine-spirit"
+  ],
+  [
+   "2026-09-28 20:55:08.329000",
+   "affiliate_link_click",
+   "f54c653e-9647-504b-a3ee-e0df2a08bb2f",
+   "kasamba-miss-bathsheba"
+  ],
+  [
+   "2026-09-28 18:55:02.707000",
+   "affiliate_link_click",
+   "03b26245-b83a-592d-8ac7-7ae647d7d3af",
+   "kasamba-love-specialist-isabelle"
+  ],
+  [
+   "2026-09-28 11:16:26.401000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purplegarden"
+  ],
+  [
+   "2026-09-28 08:18:13.681000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden-serena"
+  ],
+  [
+   "2026-09-28 07:29:43.422000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden-tattooed-psychic"
+  ],
+  [
+   "2026-09-28 07:25:36.200000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden"
+  ],
+  [
+   "2026-09-28 06:36:52.396000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden-serena"
+  ],
+  [
+   "2026-09-28 06:33:28.267000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden"
+  ],
+  [
+   "2026-09-28 06:32:20.821000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden"
+  ],
+  [
+   "2026-09-28 06:18:07.781000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden-tattooed-psychic"
+  ],
+  [
+   "2026-09-28 06:15:46.267000",
+   "affiliate_link_click",
+   "5d320aa9-39cc-5b64-9997-e9c373fc0649",
+   "purple-garden-tattooed-psychic"
+  ],
+  [
+   "2026-09-27 16:19:27.502000",
+   "affiliate_link_click",
+   "c86da2f4-acb0-5ed3-a4f2-6a931d926014",
+   "kasamba-stefan"
+  ],
+  [
+   "2026-09-27 15:32:01.613000",
+   "affiliate_link_click",
+   "c86da2f4-acb0-5ed3-a4f2-6a931d926014",
+   "keen-master-sher"
+  ],
+  [
+   "2026-09-27 13:47:08.935000",
+   "affiliate_link_click",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "kasamba-jenny"
+  ],
+  [
+   "2026-09-27 13:43:37.992000",
+   "affiliate_link_click",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "kasamba-jenny"
+  ],
+  [
+   "2026-09-27 13:40:55.366000",
+   "affiliate_link_click",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "kasamba"
+  ],
+  [
+   "2026-09-27 13:40:42.921000",
+   "affiliate_link_click",
+   "0ddf9584-c41a-59b6-b964-1bfa1708bdab",
+   "kasamba"
+  ],
+  [
+   "2026-09-27 12:17:59.896000",
+   "affiliate_link_click",
+   "709de596-a755-50b8-95c1-beb25af61aee",
+   "keen-kelly"
+  ],
+  [
+   "2026-09-27 09:33:53.634000",
+   "affiliate_link_click",
+   "88ce76f6-f725-596e-9168-6966fc22efee",
+   "kasamba"
+  ],
+  [
+   "2026-09-27 07:50:34.145000",
+   "affiliate_link_click",
+   "84786848-db63-5d24-8c5b-102da151116b",
+   "purple-garden-psychic-jewels"
+  ],
+  [
+   "2026-09-27 01:39:09.473000",
+   "affiliate_link_click",
+   "0bd4afef-3c60-552c-a6b5-87e66fbc486e",
+   "keen-meg"
+  ],
+  [
+   "2026-09-26 12:03:21.043000",
+   "affiliate_link_click",
+   "c7fc276f-eaab-52d8-a35a-a7e4c24c5022",
+   "kasamba"
+  ],
+  [
+   "2026-09-26 11:47:53.557000",
+   "affiliate_link_click",
+   "e4dffa8f-95f8-53bb-8aca-cd08ea08588b",
+   "keen"
+  ],
+  [
+   "2026-09-26 03:53:21.406000",
+   "affiliate_link_click",
+   "1d4a4823-6dc5-5fb1-8b2b-0bfb53f538e9",
+   "keen-master-sher"
+  ],
+  [
+   "2026-09-25 19:04:32.266000",
+   "affiliate_link_click",
+   "faa2e235-3707-547c-89ce-5d40aa74a40e",
+   "kasamba-a-psychic-friend"
+  ],
+  [
+   "2026-09-25 19:03:19.510000",
+   "affiliate_link_click",
+   "faa2e235-3707-547c-89ce-5d40aa74a40e",
+   "kasamba-a-psychic-friend"
+  ],
+  [
+   "2026-09-25 14:19:23.035000",
+   "affiliate_link_click",
+   "5f5c3196-01ff-5c9c-b9b4-0e30054a6921",
+   "keen"
+  ],
+  [
+   "2026-09-25 14:18:20.409000",
+   "affiliate_link_click",
+   "5f5c3196-01ff-5c9c-b9b4-0e30054a6921",
+   "keen"
+  ],
+  [
+   "2026-09-25 11:28:23.256000",
+   "affiliate_link_click",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "keen-master-sher"
+  ],
+  [
+   "2026-09-25 11:28:13.748000",
+   "affiliate_link_click",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "kasamba-yazmin"
+  ],
+  [
+   "2026-09-25 11:27:43.038000",
+   "affiliate_link_click",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "keen-meg"
+  ],
+  [
+   "2026-09-25 10:32:24.121000",
+   "affiliate_link_click",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "purple-garden-rose-soulmates"
+  ],
+  [
+   "2026-09-25 10:31:57.315000",
+   "affiliate_link_click",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "kasamba-danielle"
+  ],
+  [
+   "2026-09-25 10:31:29.235000",
+   "affiliate_link_click",
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "kasamba-danielle"
+  ],
+  [
+   "2026-09-25 05:07:50.613000",
+   "affiliate_link_click",
+   "8c285da1-067d-5bb8-95ee-284e9f806ca2",
+   "kasamba"
+  ],
+  [
+   "2026-09-25 05:02:06.159000",
+   "affiliate_link_click",
+   "8c285da1-067d-5bb8-95ee-284e9f806ca2",
+   "keen"
+  ],
+  [
+   "2026-09-25 05:00:14.489000",
+   "affiliate_link_click",
+   "8c285da1-067d-5bb8-95ee-284e9f806ca2",
+   "keen"
+  ],
+  [
+   "2026-09-24 18:00:34.503000",
+   "affiliate_link_click",
+   "b91dd709-9379-52a1-90b5-0df87d26027b",
+   "keen-meg"
+  ],
+  [
+   "2026-09-24 12:42:38.689000",
+   "affiliate_link_click",
+   "1f5bf1f7-0c86-5a98-9b0d-c6f2c019c19d",
+   "kasamba"
+  ],
+  [
+   "2026-09-23 06:56:13.166000",
+   "affiliate_link_click",
+   "ee5a00e5-12d1-5b2a-90d4-b429f5ca664d",
+   "purple-garden-athena-love"
+  ],
+  [
+   "2026-09-23 06:50:28.145000",
+   "affiliate_link_click",
+   "ee5a00e5-12d1-5b2a-90d4-b429f5ca664d",
+   "purplegarden"
+  ],
+  [
+   "2026-09-23 06:47:53.373000",
+   "affiliate_link_click",
+   "ee5a00e5-12d1-5b2a-90d4-b429f5ca664d",
+   "purple-garden-niki-medium"
+  ]
+ ]
+}

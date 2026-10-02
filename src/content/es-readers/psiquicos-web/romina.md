@@ -5,13 +5,12 @@ metaDescription: "Reseña de Romina en Psíquicos Web: 5.0★, $2.99/min. Lectur
 description: "Análisis independiente de Romina en Psíquicos Web: 44.417 lecturas en 5.0★ desde 2018 con insignia most accurate. Vidente heredada de nacimiento con 25 años de experiencia en gabinetes telefónicos. Repertorio de bola, péndulo, runas, velomancia y fotomancia. 22.672 positivas frente a 207 negativas."
 platformName: "Psíquicos Web: Romina"
 platform: "psiquicos"
-rating: 5.0
+rating: 5
 verdict: "Romina ocupa el puesto #4 del ranking de Psíquicos Web con 44.417 lecturas en 5.0★ desde 2018 y la insignia most accurate de la plataforma. Vidente heredada de nacimiento con 25 años de experiencia — 20 de ellos en gabinetes telefónicos nacionales e internacionales —, opera un repertorio operativo de los más amplios del catálogo: tarot, baraja española, Marsella, Rider, bola de cristal, péndulo, runas, velomancia, fotomancia, Reiki y técnicas energéticas. Con 22.672 positivas frente a 207 negativas, su proporción de satisfacción es del 99,1% — favorable en términos absolutos, con el volumen de reseñas negativas más alto del top 35 (207), reflejo honesto de la fricción estadística de 44 mil sesiones. A $2.99/min, su precio es accesible para una lectora con insignia most accurate y ese volumen."
 pricing: "$2.99/min"
 bestFor: "Lecturas con insignia most accurate y 44 mil sesiones documentadas, vidente heredada de nacimiento, repertorio amplio (bola, péndulo, runas, velomancia), limpiezas de aura y equilibrio de chakras"
 publishDate: "2026-09-18"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/romina/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/romina.webp"

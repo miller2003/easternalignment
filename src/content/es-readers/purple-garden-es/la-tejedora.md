@@ -1,17 +1,16 @@
 ---
 title: "La Tejedora en Purple Garden: La Que Teje los Hilos — 'Dijo Cosas que Yo No Le Dije y Son Ciertas'"
-seoTitle: "La Tejedora Reseña — Purple Garden | 4.6★, 117 Lecturas"
-metaDescription: "Reseña de La Tejedora en Purple Garden: 4.6★, $1.99/min. Lecturas que tejen los hilos de una situación dispersa, tarot intuitivo."
+seoTitle: "La Tejedora Reseña — Purple Garden | 4.4★, 117 Lecturas"
+metaDescription: "Reseña de La Tejedora en Purple Garden: 4.4★, $1.99/min. Lecturas que tejen los hilos de una situación dispersa, tarot intuitivo."
 description: "Análisis independiente de La Tejedora (Aghata) en Purple Garden: 117 lecturas en 4.6★ desde 2026. Su nombre es su método — la que teje los hilos de la situación. La clienta que documentó 'dijo cosas que yo no le dije y son ciertas' — el test de lectura fría superado. Perfil nuevo con oficio temprano."
 platformName: "Purple Garden: La Tejedora"
 platform: "purple-garden-es"
-rating: 4.6
+rating: 4.4
 verdict: "La Tejedora — Aghata — ocupa el puesto #26 del ranking hispanohablante de Purple Garden con un perfil donde el nombre es método: la tejedora, la que teje los hilos que conectan los elementos sueltos de la situación del consultante en una lectura coherente. Con 117 lecturas desde 2026 y una calificación de 4.6★ sobre 50 positivas y 2 negativas, su expediente es el de una lectora en formación temprana — pero con un documento que pocas pueden mostrar tan pronto: una clienta escribió 'dijo cosas que yo no le dije y son ciertas', el test de lectura fría superado y reseñado. A $1.99/min, su tarifa es de entrada — y coherente con un perfil que está construyendo su trayectoria. La nota honesta es obvia: 117 lecturas no son volumen consolidado, y una calificación de 4.6 es susceptible de variar a medida que la muestra crezca. Pero el patrón temprano es excepcionalmente limpio."
 pricing: "$1.99/min"
 bestFor: "Lecturas que tejen los hilos de una situación dispersa, tarot intuitivo, perfiles nuevos con señales tempranas limpias, sesiones con calidez y precisión documentadas"
 publishDate: "2026-09-18"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/la-tejedora/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/la-tejedora.webp"

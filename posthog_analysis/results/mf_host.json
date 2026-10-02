@@ -1,0 +1,24 @@
+{
+ "sql": "\nSELECT coalesce(nullIf(toString(properties.$host),''),'(无)') AS host,\n       coalesce(nullIf(toString(properties.$pathname),''),'(无)') AS pathname,\n       count() AS n,\n       count(DISTINCT person_id) AS users\nFROM events\nWHERE event LIKE 'match_%' AND timestamp >= toDateTime(1790092800)\nGROUP BY host, pathname ORDER BY n DESC LIMIT 40\n",
+ "columns": [
+  "host",
+  "pathname",
+  "n",
+  "users"
+ ],
+ "results": [
+  [
+   "easternalignment.com",
+   "/",
+   44,
+   6
+  ],
+  [
+   "easternalignment.com",
+   "/match/",
+   10,
+   1
+  ]
+ ],
+ "hasMore": null
+}

@@ -1,17 +1,16 @@
 ---
 title: "Carmen Indiga en Purple Garden: 25 Años de Oficio Antes de Llegar — y un Crecimiento que las Plataformas No Suelen Producir"
-seoTitle: "Carmen Indiga Reseña — Purple Garden | 4.8★, 1.585 Lecturas"
-metaDescription: "Reseña de Carmen Indiga en Purple Garden: 4.8★, $1.99/min. Lecturas con oficio presencial acumulado, videncia y tarot + mediumnidad."
+seoTitle: "Carmen Indiga Reseña — Purple Garden | 4.7★, 1.585 Lecturas"
+metaDescription: "Reseña de Carmen Indiga en Purple Garden: 4.7★, $1.99/min. Lecturas con oficio presencial acumulado, videncia y tarot + mediumnidad."
 description: "Análisis independiente de Carmen Indiga en Purple Garden: 1.585 lecturas en 4.8★ desde 2024 — construidas sobre 25 años de práctica presencial previa. Vidente, tarotista y médium que entrega un oráculo por mensaje al cierre de cada consulta. La veteran que llegó nueva y creció más rápido que la mayoría."
 platformName: "Purple Garden: Carmen Indiga"
 platform: "purple-garden-es"
-rating: 4.8
+rating: 4.7
 verdict: "Carmen Indiga es la paradoja positiva del catálogo hispanohablante de Purple Garden: 25 años de oficio previo y, sin embargo, una recién llegada a la plataforma (2024) que en menos de dos años acumula 1.585 lecturas en 4.8★. La combinación explica su crecimiento: cuando una profesional formada fuera de internet aterriza con un método ya maduro, las clientas lo perciben y vuelven. Su sello diferencial no está en el método — vidente, tarotista y médium — sino en un detalle de entrega: al cerrar cada consulta envía un oráculo por mensaje, un cierre ritual que casi ningún perfil del catálogo ofrece. A $1.99/min, su precio es de entrada pero su oficio no lo es. Limitación real: su ritmo de respuesta por chat es más pausado del esperado — cuando la veterana despacio, llega más lejos."
 pricing: "$1.99/min"
 bestFor: "Lecturas con oficio presencial acumulado, videncia y tarot + mediumnidad, consultas que valoran un cierre ritual con oráculo, primera sesión en Purple Garden con veteran formada"
 publishDate: "2026-09-09"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/carmen-indiga/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/carmen-indiga.webp"

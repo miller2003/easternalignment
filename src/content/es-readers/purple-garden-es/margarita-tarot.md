@@ -1,17 +1,16 @@
 ---
 title: "Margarita Tarot en Purple Garden: Santera Coronada por Eleguá y Oshún — y el Repertorio Lucumí Más Completo del Catálogo Hispano"
-seoTitle: "Margarita Tarot Reseña — Purple Garden | 5★, 5.184 Lecturas"
-metaDescription: "Reseña de Margarita Tarot en Purple Garden: 5.0★, $1.99/min. Consulta con santera coronada, lectura de caracol (diloggun), sinastría de pareja con carta natal."
+seoTitle: "Margarita Tarot Reseña — Purple Garden | 4.9★, 5.184 Lecturas"
+metaDescription: "Reseña de Margarita Tarot en Purple Garden: 4.9★, $1.99/min. Consulta con santera coronada, lectura de caracol (diloggun), sinastría de pareja con carta natal."
 description: "Análisis independiente de Margarita Tarot en Purple Garden: 5.184 lecturas en 5.0★ desde 2018. Santera coronada — hija de Eleguá y Oshún — con el repertorio Lucumí más completo del catálogo hispano: caracol, tabaco, carta natal y sinastría de pareja. 20 años de oficio desde los 10 años de edad."
 platformName: "Purple Garden: Margarita Tarot"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.9
 verdict: "Margarita Tarot es la santera coronada del top hispanohablante de Purple Garden — iniciada formalmente en la regla de Ocha (Lucumí), hija de Eleguá y Oshún — y la única del catálogo que opera el repertorio religioso completo: lectura del caracol (el sistema adivinatorio propio de la santería), lectura de tabaco, carta natal y sinastría de pareja, además de obras para atraer amor, fortuna y sanar karma. Con 5.184 lecturas en 5.0★ desde 2018 — ocho años de actividad ininterrumpida — y una trayectoria de 20 años desde los 10 años de edad, su perfil es la oferta más profunda del catálogo hispano para el consultante que busca la tradición religiosa afrocubana en su forma iniciática, no popular. A $1.99/min, su precio es de entrada; su repertorio no lo es. Limitación real: la demanda sostenida de ocho años hace que sus sesiones tiendan a ser ajustadas en tiempo — mejor entrar con preguntas bien enfocadas."
 pricing: "$1.99/min"
 bestFor: "Consulta con santera coronada, lectura de caracol (diloggun), sinastría de pareja con carta natal, obras de amor fortuna y karma, diagnóstico con tabaco, tradición Lucumí iniciática"
 publishDate: "2026-09-10"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/margarita-tarot/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/margarita-tarot.webp"

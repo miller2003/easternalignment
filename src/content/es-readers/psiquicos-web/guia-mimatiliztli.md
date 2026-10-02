@@ -1,17 +1,16 @@
 ---
 title: "Guía Mimatiliztli en Psíquicos Web: Gitana, Bióloga y Socióloga — la Triple Identidad que Ningún Perfil Iguala"
-seoTitle: "Guía Mimatiliztli Reseña — Psíquicos Web | 4.9★, 9.889 Lecturas"
-metaDescription: "Reseña de Guía Mimatiliztli en Psíquicos Web: 4.9★, $1.59/min. Triple identidad (gitana + bióloga + socióloga), lectura de Arcanos Mayores con 3 números."
+seoTitle: "Guía Mimatiliztli Reseña — Psíquicos Web | 4.7★, 9.889 Lecturas"
+metaDescription: "Reseña de Guía Mimatiliztli en Psíquicos Web: 4.7★, $1.59/min. Triple identidad (gitana + bióloga + socióloga), lectura de Arcanos Mayores con 3 números."
 description: "Análisis independiente de Guía Mimatiliztli en Psíquicos Web: 9.889 lecturas en 4.9★ desde 2021. La triple identidad más inusual del catálogo: familia gitana heredada + Licenciada en Biología + diplomados en Sociología. Lectura de Arcanos Mayores con 3 números del 1 al 21. 4.229 positivas frente a 37 negativas."
 platformName: "Psíquicos Web: Guía Mimatiliztli"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "Guía Mimatiliztli ocupa el puesto #23 del ranking de Psíquicos Web con 9.889 lecturas en 4.9★ desde 2021 y una proporción del 99,1% (4.229 positivas frente a 37 negativas). Lo que la define es la triple identidad más inusual del catálogo: heredera de una familia gitana con dones transmitidos de generación en generación, Licenciada en Biología (puede orientar en nutrición) y con diplomados en Sociología. Las tres disciplinas le dan un entendimiento más amplio del consultante que el esoterismo puro no produce. A ello suma la Lectura de Arcanos Mayores con 3 números del 1 al 21 — un sistema propio poco común. A $1.59/min en chat, su precio es uno de los más bajos del top 35."
 pricing: "$1.59/min"
 bestFor: "Triple identidad (gitana + bióloga + socióloga), lectura de Arcanos Mayores con 3 números, orientación en nutrición, comprensión del contexto social y económico, oficio gitano heredado"
 publishDate: "2026-09-10"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/guia-mimatiliztli/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/guia-mimatiliztli.webp"

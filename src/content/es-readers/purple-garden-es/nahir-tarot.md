@@ -1,17 +1,16 @@
 ---
 title: "NAHIR TAROT en Purple Garden: La Profesora de Tarot Coronada por Yemayá — y la Única Docente del Top Hispano"
-seoTitle: "NAHIR TAROT Reseña — Purple Garden | 5★, 2.939 Lecturas"
-metaDescription: "Reseña de NAHIR TAROT en Purple Garden: 5.0★, $5.99/min. Lectura con profesora de tarot (autoridad docente), santera coronada con Yemayá, médium de nacimiento."
+seoTitle: "NAHIR TAROT Reseña — Purple Garden | 4.8★, 2.939 Lecturas"
+metaDescription: "Reseña de NAHIR TAROT en Purple Garden: 4.8★, $5.99/min. Lectura con profesora de tarot (autoridad docente), santera coronada con Yemayá, médium de nacimiento."
 description: "Análisis independiente de NAHIR TAROT en Purple Garden: 2.939 lecturas en 5.0★ desde 2021. La única del top hispano que es profesora de tarot — y coronada con Yemayá, Reina del Mar. Médium de nacimiento con péndulo, cuya narrativa en la lectura es 'mágica'. 1.294 positivas frente a 5 negativas (99,6%)."
 platformName: "Purple Garden: NAHIR TAROT"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "NAHIR TAROT ocupa el puesto #23 del ranking hispanohablante de Purple Garden con una credencial que ningún otro perfil del top 30 reproduce: profesora de tarot — la docente que enseña el oficio, no solo lo practica. Sobre esa autoridad formativa opera una santera coronada con Yemayá (la Reina del Mar, orisha madre de la santería Lucumí), médium de nacimiento y trabajadora con péndulo. Con 2.939 lecturas en 5.0★ desde 2021 y una proporción de satisfacción del 99,6% — 1.294 reseñas positivas frente a solo 5 negativas — su perfil combina la doble autoridad del que enseña y del que practica, operadas desde una tradición religiosa iniciática. A $5.99/min, su tarifa es premium — y coherente con el expediente: pocas lectoras del catálogo hispano pueden mostrar el nivel de docencia y de iniciación que ella documenta."
 pricing: "$5.99/min"
 bestFor: "Lectura con profesora de tarot (autoridad docente), santera coronada con Yemayá, médium de nacimiento, narrativa mágica de la lectura, péndulo para respuestas binarias concretas"
 publishDate: "2026-09-25"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/nahir-tarot/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/nahir-tarot.webp"

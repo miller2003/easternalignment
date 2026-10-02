@@ -1,0 +1,32 @@
+---
+/**
+ * Guía editorial del subsitio /es
+ * Ruta: /es/guias/[slug]/
+ * Contenido: src/content/es-guides/*.md (plantillas `_*.md` no se publican)
+ */
+import EsGuideLayout from '../../../layouts/EsGuideLayout.astro';
+import { getEsGuides, relatedGuidesForGuide, readingMinutes } from '../../../lib/esGuides';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../../../content/es-guides/*.md');
+  const paths = [];
+  for (const path in posts) {
+    const file = path.split('/').pop() || '';
+    if (file.startsWith('_')) continue;
+    const post: any = await posts[path]();
+    paths.push({ params: { slug: file.replace(/\.md$/, '') }, props: { post } });
+  }
+  return paths;
+}
+
+const { post } = Astro.props as { post: any };
+const { default: Content } = post;
+const all = getEsGuides();
+const guide = all.find((g) => g.slug === Astro.params.slug)!;
+const related = relatedGuidesForGuide(guide, all, 3);
+const minutes = readingMinutes(typeof post.rawContent === 'function' ? post.rawContent() : '');
+---
+
+<EsGuideLayout guide={guide} related={related} minutes={minutes}>
+  <Content />
+</EsGuideLayout>

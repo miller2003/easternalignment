@@ -1,17 +1,16 @@
 ---
 title: "Tyr el Vikingo en Psíquicos Web: La Cultura Nórdica y las Runas — el Único Vikingo del Catálogo Hispano"
-seoTitle: "Tyr el Vikingo Reseña — Psíquicos Web | 4.9★, 1.352 Lecturas"
-metaDescription: "Reseña de Tyr el Vikingo en Psíquicos Web: 4.9★, $1.69/min. Lecturas con runas nórdicas, cultura vikinga, cartas y péndulo, voz masculina."
+seoTitle: "Tyr el Vikingo Reseña — Psíquicos Web | 4.7★, 1.352 Lecturas"
+metaDescription: "Reseña de Tyr el Vikingo en Psíquicos Web: 4.7★, $1.69/min. Lecturas con runas nórdicas, cultura vikinga, cartas y péndulo, voz masculina."
 description: "Análisis independiente de Tyr el Vikingo en Psíquicos Web: 1.352 lecturas en 4.9★ desde 2026. El único perfil del catálogo hispano que trabaja desde la cultura nórdica con runas, cartas y péndulo. Ha representado la cultura nórdica en eventos masivos a través de lecturas. 423 positivas frente a 16 negativas."
 platformName: "Psíquicos Web: Tyr el Vikingo"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "Tyr el Vikingo ocupa el puesto #32 del ranking de Psíquicos Web con 1.352 lecturas en 4.9★ desde 2026 y una proporción del 96,3% (423 positivas frente a 16 negativas). Lo que le define es la credencial más inusual del catálogo hispano: el único perfil que trabaja desde la cultura nórdica con runas, cartas y péndulo. Ha representado la cultura nórdica en eventos masivos a través de lecturas — la lectura como表演 público, no solo como consulta privada. A $1.69/min en chat y $1.79/min en voz, su precio es uno de los más bajos del top 35 para una especialidad que nadie más ofrece."
 pricing: "$1.69/min"
 bestFor: "Lecturas con runas nórdicas, cultura vikinga, cartas y péndulo, voz masculina, especialidad nórdica única en el catálogo"
 publishDate: "2026-09-26"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/tyr-el-vikingo/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/tyr-el-vikingo.webp"

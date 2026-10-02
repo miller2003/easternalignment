@@ -1,17 +1,16 @@
 ---
 title: "yanzay en Purple Garden: Baraja Española, Santería Yoruba y 9.534 Lecturas Sin Filtro"
-seoTitle: "yanzay Reseña — Purple Garden | 4.9★, 9.534 Lecturas, $1.99/min"
-metaDescription: "Reseña de yanzay en Purple Garden: 4.9★, $1.99/min, 9.534 lecturas. Baraja española, carta astral y raíces en la santería Yoruba; respuestas directas y sin filtro."
+seoTitle: "yanzay Reseña — Purple Garden | 4.8★, 9.534 Lecturas, $1.99/min"
+metaDescription: "Reseña de yanzay en Purple Garden: 4.8★, $1.99/min, 9.534 lecturas. Baraja española, carta astral y raíces en la santería Yoruba; respuestas directas y sin filtro."
 description: "Análisis independiente de yanzay en Purple Garden: 9.534 lecturas en 4.9★ desde 2020 a $1.99/min. Tarotista con baraja española, carta astral y raíces en la santería Yoruba — la única lectora del top hispano que trabaja la tradición espiritual latinoamericana completa, sin filtro y con certificación coach."
 platformName: "Purple Garden: yanzay"
 platform: "purple-garden-es"
-rating: 4.9
+rating: 4.8
 verdict: "yanzay es el perfil culturalmente más completo del top hispanohablante de Purple Garden: baraja española, tarot, carta astral, reiki y un linaje formado en la tradición Yoruba — el repertorio espiritual que constituye la matriz misma de la religiosidad popular latinoamericana. Con 9.534 lecturas desde 2020 (el segundo mayor volumen del top 10) y una proporción de reseñas positivas del 99,2%, su estilo ha quedado definido por sus propias clientas en tres palabras: habla sin filtro. Para el consultante hispanohablante que busca a alguien que hable su idioma espiritual nativo — el de la baraja de la abuela, los trabajos de raíz y la lectura sin rodeos — es la opción más auténtica del catálogo. Limitación real: su directividad no es un rasgo, es el producto completo — quien busca contención antes que contenido debería elegir otro perfil."
 pricing: "$1.99/min"
 bestFor: "Consultantes que quieren respuestas directas sin filtro, trabajos de amor y reconexión desde la tradición latinoamericana, lectura con baraja española, compatibilidad por carta astral, orientación de metas con enfoque coach"
 publishDate: "2026-09-19"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/yanzay/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/yanzay.webp"

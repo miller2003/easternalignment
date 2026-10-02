@@ -1,17 +1,16 @@
 ---
 title: "Candelifera Laveau en Psíquicos Web: Palo Mayombe e Ifá — el Único Sistema de Adivinación Reconocido por la UNESCO"
-seoTitle: "Candelifera Laveau Reseña — Psíquicos Web | 4.9★, 2.549 Lecturas"
-metaDescription: "Reseña de Candelifera Laveau en Psíquicos Web: 4.9★, $4.99/min. Lecturas con Palo Mayombe e Ifá (sistema UNESCO), 30+ años de experiencia, don desde los 2 años."
+seoTitle: "Candelifera Laveau Reseña — Psíquicos Web | 4.7★, 2.549 Lecturas"
+metaDescription: "Reseña de Candelifera Laveau en Psíquicos Web: 4.7★, $4.99/min. Lecturas con Palo Mayombe e Ifá (sistema UNESCO), 30+ años de experiencia, don desde los 2 años."
 description: "Análisis independiente de Candelifera Laveau en Psíquicos Web: 2.549 lecturas en 4.9★ desde 2025. Madre en Palo Mayombe y practicante del sistema Ifá — el único sistema de adivinación reconocido como Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO (2005). 30+ años de experiencia, don desde los 2 años."
 platformName: "Psíquicos Web: Candelifera Laveau"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "Candelifera Laveau ocupa el puesto #24 del ranking de Psíquicos Web con 2.549 lecturas en 4.9★ desde 2025 y una proporción del 99,1% (844 positivas frente a 8 negativas). Lo que la define es la credencial religiosa más formalmente reconocida del catálogo hispano: Madre en Palo Mayombe — una de las tradiciones religiosas afroamericanas más antiguas, con más de 5000 años — y practicante del sistema de adivinación Ifá, el único sistema adivinatorio reconocido como Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO desde 2005. A $4.99/min, su tarifa es premium — y coherente con la credencial: ninguna otra lectora del catálogo hispano puede documentar un sistema con reconocimiento UNESCO."
 pricing: "$4.99/min"
 bestFor: "Lecturas con Palo Mayombe e Ifá (sistema UNESCO), 30+ años de experiencia, don desde los 2 años, médium + clarividente + espiritista, diagnóstico de origen de problemas"
 publishDate: "2026-09-20"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/candelifera-laveau/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/candelifera-laveau.webp"

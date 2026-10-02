@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'(无)') AS pos,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.time_on_page_ms),''),'') AS tms,\n       toString(properties.$insert_id) AS iid,\n       toString(properties.$session_id) AS sid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'(?)') AS cc\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1789401600) AND timestamp < toDateTime(1790660197)\nORDER BY timestamp DESC LIMIT 300\n",
+ "sql": "\nSELECT toDate(toTimeZone(timestamp,'Asia/Shanghai')) AS day,\n       coalesce(nullIf(toString(properties.location),''),'(空)') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'(无)') AS pos,\n       coalesce(nullIf(toString(properties.slug),''),'(无)') AS slug,\n       coalesce(nullIf(toString(properties.click_token),''),'(无)') AS token,\n       coalesce(nullIf(toString(properties.time_on_page_ms),''),'') AS tms,\n       toString(properties.$insert_id) AS iid,\n       toString(properties.$session_id) AS sid,\n       coalesce(nullIf(toString(properties.$geoip_country_code),''),'(?)') AS cc\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='affiliate_link_click'\n  AND timestamp >= toDateTime(1789574400) AND timestamp < toDateTime(1790864091)\nORDER BY timestamp DESC LIMIT 300\n",
  "columns": [
   "day",
   "page",
@@ -12,6 +12,61 @@
   "cc"
  ],
  "results": [
+  [
+   "2026-10-01",
+   "/reviews/purple-garden/",
+   "side-tab-purplegarden",
+   "purple-garden",
+   "roq5fm",
+   "5476",
+   "ea-clk-01a0f76c-fad3-7948-b1d6-730e22ffd3cb-purple-garden-1790860208203",
+   "01a0f76c-faf8-7cc9-bf99-0751ed6cb7f9",
+   "GB"
+  ],
+  [
+   "2026-10-01",
+   "/guides/best-kasamba-psychics-career-money/",
+   "side-tab-kasamba",
+   "kasamba",
+   "7kr5ga",
+   "4207",
+   "ea-clk-01a0f465-d962-7caa-b7e5-e32d4b553928-kasamba-1790806934331",
+   "01a0f465-d984-7754-b10b-43744b019cf2",
+   "US"
+  ],
+  [
+   "2026-10-01",
+   "/guides/best-purple-garden-psychics-career-money/",
+   "side-tab-purplegarden",
+   "purple-garden",
+   "ap61ev",
+   "32906",
+   "ea-clk-01a0f465-d962-7caa-b7e5-e32d4b553928-purple-garden-1790806743554",
+   "01a0f465-d984-7754-b10b-43744b019cf2",
+   "US"
+  ],
+  [
+   "2026-09-30",
+   "/guides/karmic-relationships-signs-and-lessons/",
+   "hero",
+   "kasamba",
+   "04ih6s",
+   "51054",
+   "ea-clk-01a0edf5-1490-76ec-a80b-2fa66213da0a-kasamba-1790698707833",
+   "01a0edf5-150a-724d-b907-f978c1839010",
+   "GE"
+  ],
+  [
+   "2026-09-29",
+   "/guides/best-love-psychics-keen-ex-recovery/",
+   "above-fold",
+   "keen-david7",
+   "ekeutl",
+   "19463",
+   "ea-clk-01a0d4cd-bcff-7f89-87fb-5be57e52c0c0-keen-david7-1790674274497",
+   "01a0ec80-bce8-7275-8614-7b8ba2c3e005",
+   "BE"
+  ],
   [
    "2026-09-28",
    "/guides/best-tarot-readers-on-kasamba/",
@@ -846,105 +901,6 @@
    "36411",
    "ea-clk-01a0af86-c32a-7585-ad1e-e3a1ea7de2db-kasamba-1789651276024",
    "01a0af86-c331-70f5-9008-a55f24e2043b",
-   "US"
-  ],
-  [
-   "2026-09-16",
-   "/guides/best-love-psychics-kasamba-ranked/",
-   "hero",
-   "kasamba",
-   "dki05i",
-   "2777",
-   "ea-clk-01a0a6cd-97dd-7dd6-97a6-37f0bd533776-kasamba-1789504996252",
-   "01a0a6cd-97ee-7bcf-91bd-09bc87fb0a3a",
-   "NP"
-  ],
-  [
-   "2026-09-16",
-   "/guides/best-love-psychics-kasamba-ranked/",
-   "hero",
-   "kasamba",
-   "tds03d",
-   "6847",
-   "ea-clk-01a0a6cd-97dd-7dd6-97a6-37f0bd533776-kasamba-1789504893101",
-   "01a0a6cd-97ee-7bcf-91bd-09bc87fb0a3a",
-   "NP"
-  ],
-  [
-   "2026-09-15",
-   "/reviews/purple-garden/",
-   "side-tab-purplegarden",
-   "purple-garden",
-   "cleqyq",
-   "4413",
-   "ea-clk-01a0a37e-beb3-7c6d-b165-081e7f9c3e5d-purple-garden-1789450178668",
-   "01a0a37e-becf-7cf3-a9c0-d26c5581419d",
-   "AU"
-  ],
-  [
-   "2026-09-15",
-   "/reviews/purple-garden/truelovetarot/",
-   "hero",
-   "purple-garden-truelovetarot",
-   "k0c383",
-   "13206",
-   "ea-clk-01a0a2e9-321c-7f7b-b24a-bfeb982ed677-purple-garden-truelovetarot-1789439601059",
-   "01a0a2e9-3235-712a-89df-2f7b4b870095",
-   "US"
-  ],
-  [
-   "2026-09-15",
-   "/reviews/keen/gina-marie/",
-   "hero",
-   "keen-gina-marie",
-   "ed6b0v",
-   "4028",
-   "ea-clk-01a0a2a4-8ef1-7ffc-a4f3-1954a172c956-keen-gina-marie-1789435092629",
-   "01a0a2a4-8f14-7cba-b516-24a65f0ea115",
-   "US"
-  ],
-  [
-   "2026-09-15",
-   "/",
-   "comparison",
-   "kasamba",
-   "zuhg11",
-   "17169",
-   "ea-clk-01a0a206-2ee9-713e-8077-402f186db5bd-kasamba-1789424757922",
-   "01a0a206-2efb-74f7-b608-123c80759f75",
-   "SA"
-  ],
-  [
-   "2026-09-15",
-   "/guides/best-tarot-readers-for-love/",
-   "hero",
-   "keen",
-   "hgbl8p",
-   "2714",
-   "ea-clk-01a0a206-2ee9-713e-8077-402f186db5bd-keen-1789424731772",
-   "01a0a206-2efb-74f7-b608-123c80759f75",
-   "SA"
-  ],
-  [
-   "2026-09-15",
-   "/reviews/kasamba/divine-spirit-kasamba-review/",
-   "topbar",
-   "kasamba",
-   "l3q60h",
-   "32159",
-   "ea-clk-01a0a1b7-35c7-73a3-b9a0-97972dd9215c-kasamba-1789419565879",
-   "01a0a1b7-35da-75b5-bdc6-b570ad22c498",
-   "US"
-  ],
-  [
-   "2026-09-15",
-   "/guides/best-tarot-readers-on-kasamba/",
-   "hero",
-   "kasamba",
-   "h26xij",
-   "12189",
-   "ea-clk-01a0a13b-aa52-743e-9000-4b29bc5b12bb-kasamba-1789411449369",
-   "01a0a13b-aa73-76e7-9e6d-07c9c3a38591",
    "US"
   ]
  ],

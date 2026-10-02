@@ -1,0 +1,20 @@
+{
+ "sql": "\nSELECT count(DISTINCT properties.$session_id) AS sessions,\n       count(DISTINCT person_id) AS users,\n       countIf(event='$pageview') AS views,\n       uniqExactIf(toString(properties.$insert_id), event='affiliate_link_click') AS clicks,\n       count(DISTINCT IF(event='affiliate_link_click', person_id, NULL)) AS clickers\nFROM events\nWHERE timestamp >= toDateTime(1785513600) AND timestamp < toDateTime(1788192000) AND coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386'))\nLIMIT 5\n",
+ "columns": [
+  "sessions",
+  "users",
+  "views",
+  "clicks",
+  "clickers"
+ ],
+ "results": [
+  [
+   412,
+   354,
+   595,
+   46,
+   32
+  ]
+ ],
+ "hasMore": null
+}

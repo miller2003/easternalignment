@@ -1,17 +1,16 @@
 ---
 title: "1122Afrodita en Purple Garden: Su Nombre ya es una Predicción — 99,86% de Satisfacción y la Lista más Honesta de lo que No Hace"
-seoTitle: "1122Afrodita Reseña — Purple Garden | 5★, 3.537 Lecturas"
-metaDescription: "Reseña de 1122Afrodita en Purple Garden: 5.0★, $1.99/min. Lecturas con la proporción de satisfacción más limpia del top hispano, velomancia (lectura de velas)."
+seoTitle: "1122Afrodita Reseña — Purple Garden | 4.8★, 3.537 Lecturas"
+metaDescription: "Reseña de 1122Afrodita en Purple Garden: 4.8★, $1.99/min. Lecturas con la proporción de satisfacción más limpia del top hispano, velomancia (lectura de velas)."
 description: "Análisis independiente de 1122Afrodita en Purple Garden: 3.537 lecturas en 5.0★ desde 2020, insignia most accurate y una proporción de satisfacción del 99,86% — 1.441 positivas frente a 2 negativas. Su nombre ya es una predicción: 1122 (número angelical de alineación) + Afrodita (diosa del amor). Velomancia, péndulo y una lista honesta de lo que no hace."
 platformName: "Purple Garden: 1122Afrodita"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "1122Afrodita ocupa el puesto #27 del ranking hispanohablante de Purple Garden con el expediente más limpio del top 30: 3.537 lecturas en 5.0★ desde 2020, con 1.441 reseñas positivas frente a solo 2 negativas — una proporción del 99,86% que ningún otro perfil del top hispano supera, y la insignia most accurate de la plataforma. Pero lo que la define no es solo la estadística: es la coherencia entre su nombre y su método. 1122 es, en la numerología angelical, el número de alineación y manifestación — la señal de que el camino está sincronizándose. Afrodita es la diosa griega del amor. La suma no es decorativa: describe el programa de su lectura. A ello suma velomancia (lectura de velas), péndulo, numerología, mensajes de los ángeles, Reiki y astrología — siete sistemas gestionados por una sola practicante. Y la pieza más inusual de su perfil: una lista honesta y explícita de lo que no hace, que funciona como la credencial más difícil de falsificar del sector."
 pricing: "$1.99/min"
 bestFor: "Lecturas con la proporción de satisfacción más limpia del top hispano, velomancia (lectura de velas), péndulo para respuestas binarias, perfil más_accurate, voz a $0.99/min más económica que el chat"
 publishDate: "2026-09-11"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/1122afrodita/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/1122afrodita.webp"

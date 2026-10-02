@@ -25,6 +25,8 @@ function buildLastmodMap() {
     reviews: (_p, slug) => `/reviews/${slug}/`,
     readers: (platform, slug) => `/reviews/${platform}/${slug}/`,
     'es-readers': (platform, slug) => `/es/resenas/${platform}/${slug}/`,
+    // 2026-10-02: guías del subsitio /es (carpeta plana → /es/guias/<slug>/)
+    'es-guides': (_p, slug) => `/es/guias/${slug}/`,
   };
   const walk = (dir) => {
     let out = [];

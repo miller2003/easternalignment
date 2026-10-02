@@ -1,17 +1,16 @@
 ---
 title: "Lada en Psíquicos Web: Insignia Trending y 15 Años de Oficio — la Lectora Iniciada por su Tía y su Tía Abuela"
-seoTitle: "Lada Reseña — Psíquicos Web | 5★, 15.009 Lecturas, $1.99/min"
-metaDescription: "Reseña de Lada en Psíquicos Web: 5.0★, $1.99/min. Lecturas con linaje familiar (tía + tía abuela), tarot de Marsella y baraja española, radiestesia con péndulo."
+seoTitle: "Lada Reseña — Psíquicos Web | 4.9★, 15.009 Lecturas, $1.99/min"
+metaDescription: "Reseña de Lada en Psíquicos Web: 4.9★, $1.99/min. Lecturas con linaje familiar (tía + tía abuela), tarot de Marsella y baraja española, radiestesia con péndulo."
 description: "Análisis independiente de Lada en Psíquicos Web: 15.009 lecturas en 5.0★ desde 2020 con insignia trending. Iniciada en la espiritualidad por su tía y su tía abuela desde la infancia; comenzó tiradas a los 12 años. Marsella, baraja española, radiestesia y Reiki. 7.096 positivas frente a 32 negativas."
 platformName: "Psíquicos Web: Lada"
 platform: "psiquicos"
-rating: 5.0
+rating: 4.9
 verdict: "Lada ocupa el puesto #9 del ranking de Psíquicos Web con 15.009 lecturas en 5.0★ desde 2020, insignia trending de la plataforma y una proporción del 99,6% (7.096 positivas frente a 32 negativas). Lo que la define es la doble herencia familiar: iniciada en la espiritualidad por su tía y su tía abuela, que le enseñaron tarot, hierbas y menjunjes naturales desde la infancia. A los 12 años ya hacía tiradas con imágenes que se le aparecían en la mente. Sobre esa base, 15+ años de oficio con Marsella, baraja española, radiestesia con péndulo y Reiki a distancia. A $1.99/min en ambas modalidades, su precio es accesible — y su credencial de linaje no lo es."
 pricing: "$1.99/min"
 bestFor: "Lecturas con linaje familiar (tía + tía abuela), tarot de Marsella y baraja española, radiestesia con péndulo, Reiki a distancia, conexión con la Madre Naturaleza"
 publishDate: "2026-09-21"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/lada/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/lada.webp"

@@ -1,17 +1,16 @@
 ---
 title: "Laskmi Yeniree en Psíquicos Web: Insignia Trending y la Elevación del Ser Crístico — Cristales, Aromaterapia y Maestros Ascendidos"
-seoTitle: "Laskmi Yeniree Reseña — Psíquicos Web | 4.9★, 9.647 Lecturas"
-metaDescription: "Reseña de Laskmi Yeniree en Psíquicos Web: 4.9★, $2.99/min. Lecturas con técnicas energéticas exóticas (cristales, aromaterapia, ser crístico)."
+seoTitle: "Laskmi Yeniree Reseña — Psíquicos Web | 4.7★, 9.647 Lecturas"
+metaDescription: "Reseña de Laskmi Yeniree en Psíquicos Web: 4.7★, $2.99/min. Lecturas con técnicas energéticas exóticas (cristales, aromaterapia, ser crístico)."
 description: "Análisis independiente de Laskmi Yeniree en Psíquicos Web: 9.647 lecturas en 4.9★ desde 2022 con insignia trending. Desde los 17 años en la vida espiritual. Astrologa vidente con Marsella, Rider, péndulo, cristales, aromaterapia y elevación del ser crístico. 3.562 positivas frente a 20 negativas."
 platformName: "Psíquicos Web: Laskmi Yeniree"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "Laskmi Yeniree ocupa el puesto #29 del ranking de Psíquicos Web con 9.647 lecturas en 4.9★ desde 2022, insignia trending y una proporción del 99,4% (3.562 positivas frente a 20 negativas). Lo que la define es la combinación más exótica del tramo en técnicas energéticas: cristales, aromaterapia, péndulo, cuarzos y 'elevación del ser crístico' — un marco que integra la tradición cristológica con la práctica energética contemporánea. Astrologa vidente desde los 17 años, con Marsella y Rider Waite como sistemas principales. A $2.99/min en ambas modalidades, su precio es estándar para una lectora con insignia trending."
 pricing: "$2.99/min"
 bestFor: "Lecturas con técnicas energéticas exóticas (cristales, aromaterapia, ser crístico), astrología vidente, Marsella y Rider, péndulo y cuarzos, meditaciones guiadas"
 publishDate: "2026-09-28"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/laskmi-yeniree/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/laskmi-yeniree.webp"

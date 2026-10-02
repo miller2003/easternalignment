@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(toString(properties.transaction_id),''),'') AS txn,\n       coalesce(nullIf(toString(properties.conversion_type),''),'') AS ctype,\n       coalesce(nullIf(toString(properties.platform),''),'') AS platform,\n       coalesce(nullIf(toString(properties.click_token),''),'') AS token,\n       coalesce(nullIf(toString(properties.sub_id_canonical),''),'') AS sub,\n       coalesce(nullIf(toString(properties.distinct_id),''),'') AS did,\n       toString(properties.revenue) AS revenue,\n       coalesce(nullIf(toString(properties.status),''),'') AS status,\n       coalesce(nullIf(toString(properties.type_inference),''),'') AS ti,\n       toString(properties.orphan) AS orphan,\n       event AS ev\nFROM events WHERE coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='Order_Converted'\n  AND timestamp >= toDateTime(1790265600) AND timestamp < toDateTime(1790660334)\n  \n  AND coalesce(toString(properties.transaction_id),'') NOT LIKE 'SELFTEST-%'\n  AND (coalesce(toString(properties.distinct_id),'') = ''\n       OR match(toString(properties.distinct_id), '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-'))\n\nORDER BY timestamp DESC LIMIT 500\n",
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(toString(properties.transaction_id),''),'') AS txn,\n       coalesce(nullIf(toString(properties.conversion_type),''),'') AS ctype,\n       coalesce(nullIf(toString(properties.platform),''),'') AS platform,\n       coalesce(nullIf(toString(properties.click_token),''),'') AS token,\n       coalesce(nullIf(toString(properties.sub_id_canonical),''),'') AS sub,\n       coalesce(nullIf(toString(properties.distinct_id),''),'') AS did,\n       toString(properties.revenue) AS revenue,\n       coalesce(nullIf(toString(properties.status),''),'') AS status,\n       coalesce(nullIf(toString(properties.type_inference),''),'') AS ti,\n       toString(properties.orphan) AS orphan,\n       event AS ev\nFROM events WHERE coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='Order_Converted'\n  AND timestamp >= toDateTime(1785600000) AND timestamp < toDateTime(1790864490)\n  \n  AND coalesce(toString(properties.transaction_id),'') NOT LIKE 'SELFTEST-%'\n  AND (coalesce(toString(properties.distinct_id),'') = ''\n       OR match(toString(properties.distinct_id), '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-'))\n\nORDER BY timestamp DESC LIMIT 500\n",
  "columns": [
   "t",
   "txn",
@@ -69,6 +69,90 @@
    "unspecified",
    "",
    "false",
+   "Order_Converted"
+  ],
+  [
+   "2026-09-19 09:25:22.180000",
+   "102524f5f3d971d4d460ce886709af",
+   "sale",
+   "",
+   "d3si7w",
+   "",
+   "01a0b216-b033-7c86-bf1c-b304f17ec71c",
+   "125",
+   "unspecified",
+   "",
+   "false",
+   "Order_Converted"
+  ],
+  [
+   "2026-09-15 20:30:33.113000",
+   "1024a405690cbea72223c3ecefc0e4",
+   "sale",
+   "",
+   "v6a0be",
+   "",
+   "01a09fde-b35f-79eb-82dd-f53fe4a6baad",
+   "125",
+   "unspecified",
+   "",
+   "false",
+   "Order_Converted"
+  ],
+  [
+   "2026-09-14 06:31:58.467000",
+   "1025b14eca74012aad216ae2f933c9",
+   "sale",
+   "",
+   "ysjyb2",
+   "",
+   "01a097ba-44a4-7421-b162-b3558ee235d8",
+   "125",
+   "unspecified",
+   "",
+   "false",
+   "Order_Converted"
+  ],
+  [
+   "2026-09-11 11:39:16.282000",
+   "102e210fb60b4489ccf90c2eb7aad4",
+   "sale",
+   "",
+   "",
+   "",
+   "01a08960-da64-79be-9fd0-1a7a16d70a9c",
+   "125",
+   "unspecified",
+   "",
+   "false",
+   "Order_Converted"
+  ],
+  [
+   "2026-08-21 09:50:20.201000",
+   "1021eacc4ab09ecee842dd93827242",
+   "",
+   "",
+   "",
+   "",
+   "01a021f8-3353-78d7-81bd-875f487e2277",
+   "50",
+   "",
+   "",
+   null,
+   "Order_Converted"
+  ],
+  [
+   "2026-08-14 23:22:27.206000",
+   "102380548055de713d7c0bea39eab7",
+   "",
+   "",
+   "",
+   "",
+   "019ffb2d-00a3-7c37-9976-a40f82202a5d",
+   "50",
+   "",
+   "",
+   null,
    "Order_Converted"
   ]
  ]

@@ -1,17 +1,16 @@
 ---
 title: "Neo Tarot en Purple Garden: 109 Lecturas, 4.8★ — y la Razón por la que Reseñamos a un Perfil Tan Joven"
-seoTitle: "Neo Tarot Reseña — Purple Garden | 4.8★, 109 Lecturas, $1.49/min"
-metaDescription: "Reseña de Neo Tarot en Purple Garden: 4.8★, $1.49/min, 109 lecturas. Tarot clásico Rider-Waite con las cartas nombradas en voz alta; el acceso más económico del top."
+seoTitle: "Neo Tarot Reseña — Purple Garden | 4.7★, 109 Lecturas, $1.49/min"
+metaDescription: "Reseña de Neo Tarot en Purple Garden: 4.7★, $1.49/min, 109 lecturas. Tarot clásico Rider-Waite con las cartas nombradas en voz alta; el acceso más económico del top."
 description: "Análisis independiente de Neo Tarot en Purple Garden: 109 lecturas en 4.8★ desde su ingreso en 2026. El más nuevo del top hispano — 7 años de experiencia previa, especialista en Tarot Rider-Waite — y la rareza de un lector que nombra las cartas que salen para que el consultante siga la lectura en tiempo real. A $1.49/min en ambas modalidades, la ventana de acceso más económica del top hispano."
 platformName: "Purple Garden: Neo Tarot"
 platform: "purple-garden-es"
-rating: 4.8
+rating: 4.7
 verdict: "Neo Tarot es el perfil más nuevo del top 30 hispanohablante de Purple Garden — ingresó en 2026 y acumula 109 lecturas en 4.8★ con 33 reseñas positivas frente a una sola negativa. La razón por la que aparece en este ranking no es el volumen (es el menor del top) sino la consistencia de sus señales tempranas: 7 años de experiencia previa, especialización en Tarot Rider-Waite — el sistema clásico —, y una práctica poco común en el catálogo: nombrar las cartas que salen en cada tirada para que el consultante siga la lectura en tiempo real, no solo reciba un veredicto. A $1.49/min en ambas modalidades, su precio es el más bajo del top hispano después de Luz Violeta. La nota honesta es obvia: el historial está en formación — 109 lecturas no son 5.000. Pero el perfil de las primeras 33 reseñas es excepcionalmente limpio para alguien tan nuevo."
 pricing: "$1.49/min"
 bestFor: "Primera consulta con tarot clásico Rider-Waite, lector que nombra las cartas para que el consultante siga la lectura, sesiones con presupuesto ajustado, consultas honestas sin endulzar"
 publishDate: "2026-09-27"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/neo-tarot/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/neo-tarot.webp"

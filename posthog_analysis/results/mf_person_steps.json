@@ -1,0 +1,166 @@
+{
+ "sql": "\nSELECT toString(person_id) AS pid,\n       toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       toString(properties.step) AS step,\n       toString(properties.questionId) AS qid,\n       toString(properties.answer) AS answer\nFROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='match_step_completed' AND timestamp >= toDateTime(1790092800)\nORDER BY timestamp LIMIT 200\n",
+ "columns": [
+  "pid",
+  "t",
+  "step",
+  "qid",
+  "answer"
+ ],
+ "results": [
+  [
+   "c796a7b8-e2f6-548c-a025-fd5b1190cb9a",
+   "2026-09-24 01:06:53.072000",
+   "1",
+   "intent",
+   "love_relationship"
+  ],
+  [
+   "c796a7b8-e2f6-548c-a025-fd5b1190cb9a",
+   "2026-09-24 01:06:54.891000",
+   "2",
+   "situationSubject",
+   "myself"
+  ],
+  [
+   "c796a7b8-e2f6-548c-a025-fd5b1190cb9a",
+   "2026-09-24 01:06:57.863000",
+   "3",
+   "preferredPractice",
+   "psychic"
+  ],
+  [
+   "c796a7b8-e2f6-548c-a025-fd5b1190cb9a",
+   "2026-09-24 01:07:00.478000",
+   "4",
+   "preferredFormat",
+   "chat"
+  ],
+  [
+   "c796a7b8-e2f6-548c-a025-fd5b1190cb9a",
+   "2026-09-24 01:07:11.017000",
+   "5",
+   "preferredStyles",
+   "[\"fast_answers\"]"
+  ],
+  [
+   "c796a7b8-e2f6-548c-a025-fd5b1190cb9a",
+   "2026-09-24 01:07:14.135000",
+   "6",
+   "urgency",
+   "right_now"
+  ],
+  [
+   "c796a7b8-e2f6-548c-a025-fd5b1190cb9a",
+   "2026-09-24 01:07:16.313000",
+   "7",
+   "budget",
+   "under_20"
+  ],
+  [
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "2026-09-25 10:30:22.557000",
+   "1",
+   "intent",
+   "another_person_intentions"
+  ],
+  [
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "2026-09-25 10:30:29.004000",
+   "2",
+   "situationSubject",
+   "myself"
+  ],
+  [
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "2026-09-25 10:30:34.927000",
+   "3",
+   "preferredPractice",
+   "psychic"
+  ],
+  [
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "2026-09-25 10:30:37.416000",
+   "4",
+   "preferredFormat",
+   "chat"
+  ],
+  [
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "2026-09-25 10:30:48.505000",
+   "5",
+   "preferredStyles",
+   "[\"direct\"]"
+  ],
+  [
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "2026-09-25 10:30:51.446000",
+   "6",
+   "urgency",
+   "right_now"
+  ],
+  [
+   "581994ba-8949-5f85-8d86-82c951b89214",
+   "2026-09-25 10:30:55.072000",
+   "7",
+   "budget",
+   "under_20"
+  ],
+  [
+   "ec4fca7e-8475-51a8-8c50-6f1831b493af",
+   "2026-09-26 11:23:05.805000",
+   "1",
+   "intent",
+   "another_person_intentions"
+  ],
+  [
+   "ec4fca7e-8475-51a8-8c50-6f1831b493af",
+   "2026-09-26 11:23:22.778000",
+   "2",
+   "situationSubject",
+   "another_person"
+  ],
+  [
+   "ec4fca7e-8475-51a8-8c50-6f1831b493af",
+   "2026-09-26 11:23:40.692000",
+   "3",
+   "preferredPractice",
+   "psychic"
+  ],
+  [
+   "ec4fca7e-8475-51a8-8c50-6f1831b493af",
+   "2026-09-26 11:23:47.511000",
+   "4",
+   "preferredFormat",
+   "chat"
+  ],
+  [
+   "ec4fca7e-8475-51a8-8c50-6f1831b493af",
+   "2026-09-26 11:24:07.130000",
+   "5",
+   "preferredStyles",
+   "[\"direct\",\"reflective\"]"
+  ],
+  [
+   "ec4fca7e-8475-51a8-8c50-6f1831b493af",
+   "2026-09-26 11:24:10.834000",
+   "6",
+   "urgency",
+   "right_now"
+  ],
+  [
+   "ec4fca7e-8475-51a8-8c50-6f1831b493af",
+   "2026-09-26 11:24:13.787000",
+   "7",
+   "budget",
+   "under_20"
+  ],
+  [
+   "bef177f4-8498-55c8-8cfc-323aa7ac7482",
+   "2026-09-28 23:58:45.533000",
+   "1",
+   "intent",
+   "love_relationship"
+  ]
+ ]
+}

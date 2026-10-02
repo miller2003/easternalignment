@@ -1,17 +1,16 @@
 ---
 title: "René en Purple Garden: 8.645 Lecturas Desde 2018 y el Testimonio que Resume Su Don — 'Me Dijo Todo Sin Yo Decirle Nada'"
-seoTitle: "René Reseña — Purple Garden | 5★, 8.645 Lecturas, $2.49/min"
-metaDescription: "Reseña de René en Purple Garden: 5.0★, $2.49/min. Lecturas de tarot con acierto sin contexto previo, análisis de sueños."
+seoTitle: "René Reseña — Purple Garden | 4.9★, 8.645 Lecturas, $2.49/min"
+metaDescription: "Reseña de René en Purple Garden: 4.9★, $2.49/min. Lecturas de tarot con acierto sin contexto previo, análisis de sueños."
 description: "Análisis independiente de René en Purple Garden: 8.645 lecturas en 5.0★ desde 2018 — el tercer mayor volumen del top hispanohablante. Tarot, psiquismo y análisis de sueños con el efecto calmante más documentado del catálogo. A $2.49/min, la combinación de veteranía, volumen y precio más equilibrada del ranking."
 platformName: "Purple Garden: René"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.9
 verdict: "René es uno de los tres perfiles de mayor volumen documentado del catálogo hispanohablante de Purple Garden: 8.645 lecturas en 5.0★ sostenidas durante ocho años desde 2018, con 2.776 reseñas positivas frente a solo 21 negativas (99,25%). Su oferta es la de un asesor psíquico de escuela clásica — tarot, interpretación de sueños y canalización de energía con más de una década de oficio — y su seña de identidad la escribió una consultante en 2026: 'me dijo todo sin yo decirle nada'. Ese testimonio, unido al efecto calmante que sus clientas documentan de forma recurrente, define el perfil: un lector veterano que acierta sin contexto previo y deja a la persona más tranquila de lo que llegó. A $2.49/min en chat con la voz a solo $0.50 más, es la ecuación más equilibrada del top hispano para consultantes que buscan volumen de historial, precisión y calidez en el mismo paquete. Limitación real: su estilo desarrolla el panorama completo antes del veredicto — quien busca respuestas telegráficas puede encontrar el ritmo más pausado de lo esperado."
 pricing: "$2.49/min"
 bestFor: "Lecturas de tarot con acierto sin contexto previo, análisis de sueños, consultas donde se busca tanto precisión como calma, acompañamiento de largo plazo con un lector de referencia, voz a precio casi de chat"
 publishDate: "2026-09-11"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/rene/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/rene.webp"

@@ -1,0 +1,16 @@
+{
+ "sql": "\nSELECT count() AS n, min(timestamp) AS first, max(timestamp) AS last\nFROM events\nWHERE timestamp >= toDateTime(1788192000) AND timestamp < toDateTime(1790784000)\n  AND event='Postback_Orphan'\nLIMIT 5\n",
+ "columns": [
+  "n",
+  "first",
+  "last"
+ ],
+ "results": [
+  [
+   9,
+   "2026-09-28T19:26:32.804000+08:00",
+   "2026-09-29T10:27:13.089000+08:00"
+  ]
+ ],
+ "hasMore": null
+}

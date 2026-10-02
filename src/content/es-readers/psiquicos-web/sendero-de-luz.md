@@ -1,17 +1,16 @@
 ---
 title: "Sendero de Luz en Psíquicos Web: 30 Años de Oficio y el Coach de Relaciones con Sueños Premonitorios"
-seoTitle: "Sendero de Luz Reseña — Psíquicos Web | 5★, 18.161 Lecturas"
-metaDescription: "Reseña de Sendero de Luz en Psíquicos Web: 5.0★, $4.99/min. Coaching de relaciones amorosas con 30 años de oficio, sueños premonitorios documentados."
+seoTitle: "Sendero de Luz Reseña — Psíquicos Web | 4.9★, 18.161 Lecturas"
+metaDescription: "Reseña de Sendero de Luz en Psíquicos Web: 4.9★, $4.99/min. Coaching de relaciones amorosas con 30 años de oficio, sueños premonitorios documentados."
 description: "Análisis independiente de Sendero de Luz en Psíquicos Web: 18.161 lecturas en 5.0★ desde 2018. 30+ años de oficio, coach de relaciones amorosas, con sueños premonitorios y lectura de velas. 9.738 positivas frente a 28 negativas. Una de las tarifas más altas del catálogo — y coherente con la trayectoria."
 platformName: "Psíquicos Web: Sendero de Luz"
 platform: "psiquicos"
-rating: 5.0
+rating: 4.9
 verdict: "Sendero de Luz ocupa el puesto #6 del ranking de Psíquicos Web con 18.161 lecturas en 5.0★ desde 2018 y una proporción del 99,7% (9.738 positivas frente a 28 negativas). Lo que la define es la combinación de tres credenciales que rara vez coinciden en un mismo perfil: 30+ años de oficio, formación específica como coach de relaciones amorosas, y sueños premonitorios documentados. A $4.99/min en ambas modalidades, su tarifa es una de las más altas del catálogo de Psíquicos Web — y coherente con la trayectoria: pocas lectoras del catálogo pueden mostrar tres décadas de práctica con calificación perfecta sostenida."
 pricing: "$4.99/min"
 bestFor: "Coaching de relaciones amorosas con 30 años de oficio, sueños premonitorios documentados, lectura de velas, alineación de chakras, ritual de velas para el amor y la paz interior"
 publishDate: "2026-09-24"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/sendero-de-luz/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/sendero-de-luz.webp"

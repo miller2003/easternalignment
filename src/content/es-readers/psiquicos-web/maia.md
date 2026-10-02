@@ -1,17 +1,16 @@
 ---
 title: "Maia en Psíquicos Web: 40 Años de Oficio — la Carrera Más Larga del Top 35 y la Niña que Diseñó sus Propias Cartas"
-seoTitle: "Maia Reseña — Psíquicos Web | 4.9★, 7.029 Lecturas, $3.99/min"
-metaDescription: "Reseña de Maia en Psíquicos Web: 4.9★, $3.99/min. Lecturas con la carrera más larga del top 35 (40 años), Registros Akáshicos, runas, magia blanca."
+seoTitle: "Maia Reseña — Psíquicos Web | 4.7★, 7.029 Lecturas, $3.99/min"
+metaDescription: "Reseña de Maia en Psíquicos Web: 4.7★, $3.99/min. Lecturas con la carrera más larga del top 35 (40 años), Registros Akáshicos, runas, magia blanca."
 description: "Análisis independiente de Maia en Psíquicos Web: 7.029 lecturas en 4.9★ desde 2018. 59 años de edad y más de 40 de experiencia — la carrera individual más larga del top 35. Diseñó sus propias cartas de niña. Registros Akáshicos, runas, magia blanca y terapias regresivas. 3.785 positivas frente a 23 negativas."
 platformName: "Psíquicos Web: Maia"
 platform: "psiquicos"
-rating: 4.9
+rating: 4.7
 verdict: "Maia ocupa el puesto #35 del ranking de Psíquicos Web con 7.029 lecturas en 4.9★ desde 2018 y una proporción del 99,4% (3.785 positivas frente a 23 negativas). Lo que la define es la carrera individual más larga del top 35: 59 años de edad y más de 40 de experiencia — cuatro décadas de oficio, más que cualquier otra lectora del tramo. Su perfil contiene el detalle biográfico más conmovedor del catálogo: 'comencé diseñando mis propias cartas, sin tener demasiado claro el significado e importancia del tarot.' La niña que diseñó sus cartas antes de saber lo que tenía entre manos — y que cuatro décadas después sigue. A $3.99/min, su tarifa es estándar para una lectora con 40 años de trayectoria."
 pricing: "$3.99/min"
 bestFor: "Lecturas con la carrera más larga del top 35 (40 años), Registros Akáshicos, runas, magia blanca, terapias regresivas, diseño propio de cartas, guía con seres de luz"
 publishDate: "2026-09-13"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/maia/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/maia.webp"

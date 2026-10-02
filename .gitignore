@@ -57,6 +57,22 @@ scripts/*
 !scripts/validate-reviews.mjs
 !scripts/test-postback-classify.mjs
 !scripts/postback-selftest.mjs
+# 2026-10-01: 审计/核验工具从 scratch/ 迁到 scripts/ 并入库。
+# 原因：这些脚本被 skill 引用（ea-site-predeploy-audit / ea-es-reader-rating-sync /
+#   visual-qa-headless-chrome / ea-indexnow-full-push），而 scratch/ 是「只留报告、
+#   脚本用完即删」的本地目录——两者冲突，清理 scratch 会把 skill 依赖的脚本删掉。
+#   移入 scripts/ 并入库后，skill 的依赖变成版本控制中的持久文件。
+# 注意：迁移时 ROOT 由 path.resolve(import.meta.dirname, '../..') 改为 '..'
+#   （scratch/es-readers/ 是两层深，scripts/ 是一层）。
+!scripts/predeploy-audit.mjs
+!scripts/verify-es-dist.mjs
+!scripts/check-es-links.mjs
+!scripts/avatar-render-audit.mjs
+!scripts/verify-pg-deeplinks.mjs
+!scripts/scroll-back-verify.mjs
+!scripts/indexnow.mjs
+# 2026-10-02: auditoría de /es/guias/ (las rutas no pasan por zod; este script es la validación)
+!scripts/audit-es-guides.mjs
 
 # throwaway repo-cleanup audit report (one-time, never commit)
 REPO_CLEANUP_AUDIT_2026-08-27.md

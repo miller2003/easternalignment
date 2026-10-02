@@ -1,0 +1,329 @@
+{
+ "journeys": [
+  {
+   "txn": "1023b5d448bbe99749f66be291ca2e",
+   "platform": "PurpleGarden",
+   "country": "Switzerland",
+   "sale_time": "2026-09-01 16:26:59",
+   "payout": 125.0,
+   "signup": null,
+   "lag_h": null,
+   "in_posthog": false,
+   "attributed": false,
+   "via": null
+  },
+  {
+   "txn": "1024b2bdd4dc155a747f19e7f6aeaa",
+   "platform": "Kasamba",
+   "country": "United States",
+   "sale_time": "2026-09-01 22:31:51",
+   "payout": 125.0,
+   "signup": null,
+   "lag_h": null,
+   "in_posthog": false,
+   "attributed": false,
+   "via": null
+  },
+  {
+   "txn": "1026baec543b750a74a1a01f5d554e",
+   "platform": "Kasamba",
+   "country": "Trinidad And Tobago",
+   "sale_time": "2026-09-05 07:51:19",
+   "payout": 125.0,
+   "signup": "2026-09-04 08:49:41",
+   "lag_h": 23.03,
+   "in_posthog": false,
+   "attributed": false,
+   "via": null
+  },
+  {
+   "txn": "1023af50a2cfe6046ce11afaad152c",
+   "platform": "Kasamba",
+   "country": "United States",
+   "sale_time": "2026-09-06 10:14:25",
+   "payout": 125.0,
+   "signup": "2026-09-05 11:09:57",
+   "lag_h": 23.07,
+   "in_posthog": false,
+   "attributed": false,
+   "via": null
+  },
+  {
+   "txn": "102e210fb60b4489ccf90c2eb7aad4",
+   "platform": "Kasamba",
+   "country": "United States",
+   "sale_time": "2026-09-11 11:39:16",
+   "payout": 125.0,
+   "signup": "2026-09-10 12:38:20",
+   "lag_h": 23.02,
+   "in_posthog": true,
+   "attributed": false,
+   "via": null
+  },
+  {
+   "txn": "1025b14eca74012aad216ae2f933c9",
+   "platform": "Kasamba",
+   "country": "United States",
+   "sale_time": "2026-09-14 06:31:58",
+   "payout": 125.0,
+   "signup": "2026-09-13 07:27:23",
+   "lag_h": 23.08,
+   "in_posthog": true,
+   "attributed": true,
+   "via": "token",
+   "page": "/",
+   "cta": "above-fold",
+   "slug": "kasamba",
+   "ptype": "home",
+   "decision_s": 17.4,
+   "click_time": "2026-09-13 06:42:58",
+   "channel": "AI助手",
+   "ref": "$direct",
+   "entry": "/?utm_source=chatgpt.com",
+   "device": "Mobile",
+   "click_cc": "US",
+   "click_seq": "1",
+   "pages_before": "1",
+   "click_to_sale_h": 23.82
+  },
+  {
+   "txn": "1024a405690cbea72223c3ecefc0e4",
+   "platform": "Kasamba",
+   "country": "Australia",
+   "sale_time": "2026-09-15 20:30:32",
+   "payout": 125.0,
+   "signup": "2026-09-14 21:24:42",
+   "lag_h": 23.1,
+   "in_posthog": true,
+   "attributed": true,
+   "via": "token",
+   "page": "/guides/best-mediums-on-kasamba/",
+   "cta": "inline",
+   "slug": "kasamba",
+   "ptype": "guide",
+   "decision_s": 23.8,
+   "click_time": "2026-09-14 20:23:11",
+   "channel": "AI助手",
+   "ref": "$direct",
+   "entry": "/guides/best-mediums-on-kasamba/?utm_source=chatgpt.com",
+   "device": "Mobile",
+   "click_cc": "AU",
+   "click_seq": "1",
+   "pages_before": "1",
+   "click_to_sale_h": 24.12
+  },
+  {
+   "txn": "102524f5f3d971d4d460ce886709af",
+   "platform": "Kasamba",
+   "country": "Canada",
+   "sale_time": "2026-09-19 09:25:22",
+   "payout": 125.0,
+   "signup": "2026-09-18 10:21:22",
+   "lag_h": 23.07,
+   "in_posthog": true,
+   "attributed": true,
+   "via": "token",
+   "page": "/",
+   "cta": "comparison",
+   "slug": "kasamba",
+   "ptype": "home",
+   "decision_s": 77.9,
+   "click_time": "2026-09-18 09:20:37",
+   "channel": "AI助手",
+   "ref": "$direct",
+   "entry": "/?utm_source=chatgpt.com",
+   "device": "Mobile",
+   "click_cc": "CA",
+   "click_seq": "3",
+   "pages_before": "1",
+   "click_to_sale_h": 24.08
+  },
+  {
+   "txn": "102b6f0db2b44ff5f3f57a362f4335",
+   "platform": "Keen",
+   "country": "United Kingdom",
+   "sale_time": "2026-09-26 04:00:14",
+   "payout": 50.0,
+   "signup": null,
+   "lag_h": null,
+   "in_posthog": true,
+   "attributed": true,
+   "via": "token",
+   "page": "/reviews/keen/master-sher/",
+   "cta": "end",
+   "slug": "keen-master-sher",
+   "ptype": "review",
+   "decision_s": 54.4,
+   "click_time": "2026-09-26 03:53:21",
+   "channel": "AI助手",
+   "ref": "$direct",
+   "entry": "/guides/best-tarot-readers-for-love/?utm_source=chatgpt.com",
+   "device": "Mobile",
+   "click_cc": "GB",
+   "click_seq": "1",
+   "pages_before": "2",
+   "click_to_sale_h": 0.11
+  },
+  {
+   "txn": "1021fa03bbe74546c6111b9cf79db4",
+   "platform": "PurpleGarden",
+   "country": "United States",
+   "sale_time": "2026-09-26 10:35:47",
+   "payout": 125.0,
+   "signup": "2026-09-25 11:34:00",
+   "lag_h": 23.03,
+   "in_posthog": true,
+   "attributed": true,
+   "via": "token",
+   "page": "/",
+   "cta": "quiz-match-top3",
+   "slug": "purple-garden-rose-soulmates",
+   "ptype": "home",
+   "decision_s": 131.0,
+   "click_time": "2026-09-25 10:32:24",
+   "channel": "AI助手",
+   "ref": "$direct",
+   "entry": "/?utm_source=chatgpt.com",
+   "device": "Mobile",
+   "click_cc": "US",
+   "click_seq": "3",
+   "pages_before": "1",
+   "click_to_sale_h": 24.06
+  },
+  {
+   "txn": "10225e81ebeaa44361919beb27804e",
+   "platform": "Keen",
+   "country": "Australia",
+   "sale_time": "2026-09-27 12:25:31",
+   "payout": 50.0,
+   "signup": null,
+   "lag_h": null,
+   "in_posthog": true,
+   "attributed": true,
+   "via": "token",
+   "page": "/guides/best-twin-flame-psychics-online/",
+   "cta": "above-fold",
+   "slug": "keen-kelly",
+   "ptype": "guide",
+   "decision_s": 26.7,
+   "click_time": "2026-09-27 12:17:59",
+   "channel": "搜索引擎",
+   "ref": "www.google.com",
+   "entry": "/guides/best-twin-flame-psychics-online/",
+   "device": "Desktop",
+   "click_cc": "AU",
+   "click_seq": "1",
+   "pages_before": "1",
+   "click_to_sale_h": 0.13
+  },
+  {
+   "txn": "1023ae07b288cc99adcfc9970615c4",
+   "platform": "PurpleGarden",
+   "country": "United States",
+   "sale_time": "2026-09-29 07:36:10",
+   "payout": 125.0,
+   "signup": "2026-09-28 07:17:19",
+   "lag_h": 24.31,
+   "in_posthog": true,
+   "attributed": true,
+   "via": "token",
+   "page": "/reviews/purple-garden/tattooed-psychic/",
+   "cta": "side-tab-purplegarden",
+   "slug": "purple-garden-tattooed-psychic",
+   "ptype": "review",
+   "decision_s": 224.2,
+   "click_time": "2026-09-28 06:18:07",
+   "channel": "AI助手",
+   "ref": "$direct",
+   "entry": "/reviews/purple-garden/tattooed-psychic/?utm_source=chatgpt.com",
+   "device": "Mobile",
+   "click_cc": "US",
+   "click_seq": "2",
+   "pages_before": "1",
+   "click_to_sale_h": 25.3
+  }
+ ],
+ "attributed_sales": 7,
+ "sales_in_posthog": 8,
+ "sales_total": 12,
+ "by_page": {
+  "/": {
+   "sales": 3,
+   "payout": 375.0
+  },
+  "/guides/best-mediums-on-kasamba/": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "/reviews/purple-garden/tattooed-psychic/": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "/reviews/keen/master-sher/": {
+   "sales": 1,
+   "payout": 50.0
+  },
+  "/guides/best-twin-flame-psychics-online/": {
+   "sales": 1,
+   "payout": 50.0
+  }
+ },
+ "by_channel": {
+  "AI助手": {
+   "sales": 6,
+   "payout": 675.0
+  },
+  "搜索引擎": {
+   "sales": 1,
+   "payout": 50.0
+  }
+ },
+ "by_cta": {
+  "above-fold": {
+   "sales": 2,
+   "payout": 175.0
+  },
+  "inline": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "comparison": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "quiz-match-top3": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "side-tab-purplegarden": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "end": {
+   "sales": 1,
+   "payout": 50.0
+  }
+ },
+ "by_slug": {
+  "kasamba": {
+   "sales": 3,
+   "payout": 375.0
+  },
+  "purple-garden-rose-soulmates": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "purple-garden-tattooed-psychic": {
+   "sales": 1,
+   "payout": 125.0
+  },
+  "keen-master-sher": {
+   "sales": 1,
+   "payout": 50.0
+  },
+  "keen-kelly": {
+   "sales": 1,
+   "payout": 50.0
+  }
+ }
+}

@@ -1,17 +1,16 @@
 ---
 title: "Luz de Guia en Purple Garden: El Scout Report — 27 Lecturas, 20 Años Previos y Cero Reseñas Negativas"
-seoTitle: "Luz de Guia Reseña — Purple Garden | 5★, 27 Lecturas"
-metaDescription: "Reseña de Luz de Guia en Purple Garden: 5.0★, Tarifa por confirmar. Primera consulta con perfil nuevo de oficio presencial previo."
+seoTitle: "Luz de Guia Reseña — Purple Garden | 4.8★, 27 Lecturas"
+metaDescription: "Reseña de Luz de Guia en Purple Garden: 4.8★, Tarifa por confirmar. Primera consulta con perfil nuevo de oficio presencial previo."
 description: "Análisis independiente de Luz de Guia en Purple Garden: 27 lecturas en 5.0★ desde 2026, con 17 positivas y cero negativas — un scout report del perfil más nuevo del top hispano. 20 años de consultorio presencial previo, especialista en tarot español y relaciones LGTB. La nota honesta: el historial está en formación."
 platformName: "Purple Garden: Luz de Guia"
 platform: "purple-garden-es"
-rating: 5.0
+rating: 4.8
 verdict: "Luz de Guia es el perfil más nuevo del top hispano que esta reseña cubre — ingresó en 2026 y acumula 27 lecturas en 5.0★ con 17 reseñas positivas y cero negativas. La razón para incluirla no es el volumen (es el menor del ranking), sino la combinación de señales tempranas: 20 años de consultorio presencial previo declarados, especialidad en tarot español (la baraja popular hispana), mención explícita de relaciones LGTB como terreno de trabajo, y un inicio excepcionalmente limpio en sus primeras reseñas. Es un scout report honesto: el historial está en formación, las tarifas aún no figuran publicadas en su perfil, y cualquier lectora nueva puede ver su media variar a medida que crezca. Pero las señales de las primeras 17 clientas son excepcionalmente limpias para alguien tan nuevo."
 pricing: "Tarifa por confirmar"
 bestFor: "Primera consulta con perfil nuevo de oficio presencial previo, tarot español (baraja popular), relaciones LGTB, consultas donde se valora la honestidad y el detalle documentado"
 publishDate: "2026-09-14"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/purple-garden-es/luz-de-guia/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/luz-de-guia.webp"

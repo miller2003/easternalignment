@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1788019200)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
+ "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1788192000)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
  "columns": [
   "ref",
   "host",
@@ -9,27 +9,27 @@
   [
    "$direct",
    "easternalignment.com",
-   521
+   515
   ],
   [
    "www.google.com",
    "easternalignment.com",
-   248
+   241
   ],
   [
    "$direct",
    "mysticdo.com",
-   63
+   66
   ],
   [
    "easternalignment.com",
    "easternalignment.com",
-   27
+   24
   ],
   [
    "chatgpt.com",
    "easternalignment.com",
-   21
+   23
   ],
   [
    "www.bing.com",
@@ -37,12 +37,12 @@
    13
   ],
   [
-   "www.msn.com",
+   "search.yahoo.com",
    "easternalignment.com",
-   7
+   6
   ],
   [
-   "search.yahoo.com",
+   "www.msn.com",
    "easternalignment.com",
    6
   ],
@@ -52,13 +52,23 @@
    5
   ],
   [
+   "www.google.com",
+   "mysticdo.com",
+   5
+  ],
+  [
    "duckduckgo.com",
    "easternalignment.com",
-   5
+   4
   ],
   [
    "$direct",
    "127.0.0.1:4923",
+   3
+  ],
+  [
+   "www.youtube.com",
+   "easternalignment.com",
    3
   ],
   [
@@ -67,37 +77,22 @@
    3
   ],
   [
-   "www.google.com",
-   "mysticdo.com",
-   3
-  ],
-  [
    "$direct",
    "easternalignment.pages.dev",
    3
   ],
   [
-   "www.youtube.com",
-   "easternalignment.com",
-   2
-  ],
-  [
-   "127.0.0.1:8765",
-   "127.0.0.1:8765",
-   2
-  ],
-  [
-   "$direct",
-   "127.0.0.1:4321",
-   2
-  ],
-  [
    "www.facebook.com",
    "easternalignment.com",
+   3
+  ],
+  [
+   "127.0.0.1:8765",
+   "127.0.0.1:8765",
    2
   ],
   [
-   "www.perplexity.ai",
+   "www.google.com.hk",
    "easternalignment.com",
    2
   ],
@@ -107,7 +102,7 @@
    2
   ],
   [
-   "127.0.0.1:8188",
+   "metamask.github.io",
    "easternalignment.com",
    1
   ],
@@ -117,12 +112,12 @@
    1
   ],
   [
-   "172.16.130.48:806",
+   "127.0.0.1:8188",
    "easternalignment.com",
    1
   ],
   [
-   "cn.bing.com",
+   "172.16.130.48:806",
    "easternalignment.com",
    1
   ],
@@ -132,7 +127,7 @@
    1
   ],
   [
-   "www.ecosia.org",
+   "cn.bing.com",
    "easternalignment.com",
    1
   ],
@@ -142,7 +137,7 @@
    1
   ],
   [
-   "r.search.yahoo.com",
+   "yandex.ru",
    "easternalignment.com",
    1
   ],
@@ -152,18 +147,28 @@
    1
   ],
   [
-   "yandex.ru",
-   "easternalignment.com",
-   1
-  ],
-  [
    "www.hiveworkshop.com",
    "easternalignment.com",
    1
   ],
   [
-   "$direct",
-   "0ef55655.easternalignment.pages.dev",
+   "support.google.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "www.ecosia.org",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "search.google.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "172.25.2.150:32293",
+   "easternalignment.com",
    1
   ],
   [
@@ -172,8 +177,8 @@
    1
   ],
   [
-   "search.google.com",
-   "easternalignment.com",
+   "$direct",
+   "0ef55655.easternalignment.pages.dev",
    1
   ],
   [
@@ -187,8 +192,13 @@
    1
   ],
   [
-   "www.google.com.au",
-   "easternalignment.com",
+   "chatgpt.com",
+   "mysticdo.com",
+   1
+  ],
+  [
+   "$direct",
+   "127.0.0.1:8931",
    1
   ],
   [
@@ -202,13 +212,13 @@
    1
   ],
   [
-   "chatgpt.com",
-   "mysticdo.com",
+   "www.perplexity.ai",
+   "easternalignment.com",
    1
   ],
   [
-   "$direct",
-   "127.0.0.1:8931",
+   "www.google.com.au",
+   "easternalignment.com",
    1
   ],
   [

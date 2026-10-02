@@ -1,17 +1,16 @@
 ---
 title: "Vanessa Gal en Psíquicos Web: Tres Generaciones de Familia Gitana — y el Reiki Kundalini que Pocos Ofrecen"
-seoTitle: "Vanessa Gal Reseña — Psíquicos Web | 5★, 2.085 Lecturas"
-metaDescription: "Reseña de Vanessa Gal en Psíquicos Web: 5.0★, $2.09/min. Linaje gitano de tres generaciones, Reiki Kundalini (tipo raro), magia gitana."
+seoTitle: "Vanessa Gal Reseña — Psíquicos Web | 4.8★, 2.085 Lecturas"
+metaDescription: "Reseña de Vanessa Gal en Psíquicos Web: 4.8★, $2.09/min. Linaje gitano de tres generaciones, Reiki Kundalini (tipo raro), magia gitana."
 description: "Análisis independiente de Vanessa Gal en Psíquicos Web: 2.085 lecturas en 5.0★ desde 2019. Tres generaciones de familia gitana con don heredado. Reiki Kundalini, zen, lectura de cartas, runas, sueños y velas. 734 positivas frente a 6 negativas."
 platformName: "Psíquicos Web: Vanessa Gal"
 platform: "psiquicos"
-rating: 5.0
+rating: 4.8
 verdict: "Vanessa Gal ocupa el puesto #30 del ranking de Psíquicos Web con 2.085 lecturas en 5.0★ desde 2019 y una proporción del 99,2% (734 positivas frente a 6 negativas). Lo que la define es la doble credencial que pocos perfiles del catálogo igualan: tres generaciones de familia gitana con don heredado, y formación en Reiki Kundalini — un tipo de Reiki poco común que trabaja con la energía serpentinal de la kundalini. A $2.09/min en ambas modalidades, su precio es uno de los más bajos del tramo para una lectora con linaje gitano y Reiki Kundalini."
 pricing: "$2.09/min"
 bestFor: "Linaje gitano de tres generaciones, Reiki Kundalini (tipo raro), magia gitana, lectura de cartas y velas, sueños, decisiones difíciles"
 publishDate: "2026-09-26"
-updatedDate: "2026-09-28"
-verifiedDate: "2026-09-28"
+updatedDate: "2026-09-29"
 canonicalUrl: "https://easternalignment.com/es/resenas/psiquicos-web/vanessa-gal/"
 hreflangEn: ""
 avatarUrl: "/avatars/es-readers/vanessa-gal.webp"

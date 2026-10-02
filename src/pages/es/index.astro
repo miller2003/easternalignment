@@ -5,6 +5,10 @@ import EsSpanishCTA from '../../components/es/EsSpanishCTA.astro';
 import EsComparisonTable from '../../components/es/EsComparisonTable.astro';
 import EsFAQ from '../../components/es/EsFAQ.astro';
 import StarRating from '../../components/StarRating.astro';
+import { getEsGuides, ES_GUIDE_CATEGORIES } from '../../lib/esGuides';
+
+// 2026-10-02: escaparate de guías (6 más recientes) — enlace interno a /es/guias/
+const homeGuides = getEsGuides().slice(0, 6);
 
 const SITE_URL = 'https://easternalignment.com';
 const canonicalUrl = `${SITE_URL}/es/`;
@@ -362,6 +366,33 @@ const homeSchema = {
       </div>
     </div>
   </section>
+
+  <!-- Guías editoriales (2026-10-02) -->
+  {homeGuides.length > 0 && (
+    <section class="home-guides section" id="guias">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow text-xs text-uppercase text-muted">Guías Editoriales</span>
+          <h2 class="section-title">Antes de Consultar: Guías Sin Humo</h2>
+          <p class="section-desc text-muted">
+            Tu ex, el tarot del amor, las señales que se repiten y las trampas del sector — explicados con el mismo criterio de auditor que aplicamos a cada reseña.
+          </p>
+        </div>
+        <div class="home-guides-grid">
+          {homeGuides.map(g => (
+            <a class="home-guide card" href={g.url}>
+              <span class="home-guide-cat">{ES_GUIDE_CATEGORIES[g.category]?.label}</span>
+              <span class="home-guide-title">{g.cardTitle || g.title}</span>
+              <span class="home-guide-desc text-muted text-sm">{g.description}</span>
+            </a>
+          ))}
+        </div>
+        <div class="section-cta">
+          <a href="/es/guias/" class="btn btn--secondary">Ver Todas las Guías →</a>
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- Notas de campo: evidencia documentada -->
   <section class="field-notes section section--alt">
@@ -1065,4 +1096,12 @@ const homeSchema = {
       text-align: center;
     }
   }
+
+  /* Guías editoriales (2026-10-02) */
+  .home-guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-5); }
+  .home-guide { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-6); text-decoration: none; color: inherit; transition: transform .15s ease, box-shadow .15s ease; }
+  .home-guide:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(107, 84, 56, .10); }
+  .home-guide-cat { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-hover); }
+  .home-guide-title { font-family: var(--font-heading); font-size: var(--text-lg); line-height: 1.3; color: var(--color-text); }
+  .home-guide-desc { line-height: 1.55; }
 </style>
