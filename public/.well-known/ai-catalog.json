@@ -1,10 +1,9 @@
 {
-  "specVersion": "1.0.0",
+  "specVersion": "1.0",
   "host": {
-    "name": "Eastern Alignment",
-    "domain": "easternalignment.com",
-    "description": "Independent testing, price auditing, and buyer guidance for online psychic reading platforms (Kasamba, Keen, Purple Garden). 242 advisor profiles audited with listed rates, audit scores and new-client offers.",
-    "contact": "mailto:sarah@easternalignment.com"
+    "displayName": "Eastern Alignment",
+    "identifier": "easternalignment.com",
+    "documentationUrl": "https://easternalignment.com/llms.txt"
   },
   "entries": [
     {

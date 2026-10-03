@@ -40,7 +40,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #C4956A 0%, #8B6F4E 50%, #C4956A 100%);
+  background: linear-gradient(90deg, #C4956A 0%, #7A5D3D 50%, #C4956A 100%);
   opacity: 0.8;
 }
 
@@ -1273,7 +1273,7 @@
   top: 0; left: 0; right: 0;
   height: 3px;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  background: linear-gradient(90deg, #C4956A, #8B6F4E 50%, #C4956A);
+  background: linear-gradient(90deg, #C4956A, #7A5D3D 50%, #C4956A);
   opacity: 0.8;
 }
 
@@ -1293,7 +1293,7 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(180deg, #C4956A 0%, #8B6F4E 100%);
+  background: linear-gradient(180deg, #C4956A 0%, #7A5D3D 100%);
   color: #FFF9EA;
   font-size: 0.68rem;
   font-weight: 600;

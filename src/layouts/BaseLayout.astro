@@ -251,12 +251,10 @@ const personSchema = {
     <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 
-    <!-- Google Fonts: DM Serif Display + Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- 非阻塞加载字体 CSS（media=print → onload 切回 all）；display=swap 保证先出系统字体 -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+    <!-- Fonts: self-hosted (public/fonts, @font-face in global.css) -->
+    <!-- 字体自托管（见 global.css）：preload 让字体与 HTML 并行下载，不再等 CSS 解析 -->
+    <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- 联盟跳转主机预热：点击 CTA 时省掉 DNS + TLS 握手（2026-09-10） -->
     {affiliateOrigins.map((origin) => (
@@ -303,7 +301,7 @@ const personSchema = {
     )}
     <slot name="head" />
     <!-- Agent Discovery link tags (2026-09-13) -->
-    <link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
+    <link rel="ai-catalog" type="application/ai-catalog+json" href="/.well-known/ai-catalog.json" />
     <link rel="service-desc" type="application/linkset+json" href="/.well-known/api-catalog" />
     <link rel="webmcp" href="/.well-known/webmcp.json" />
 

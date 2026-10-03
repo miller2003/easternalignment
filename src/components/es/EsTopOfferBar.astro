@@ -21,7 +21,8 @@ const { platform } = Astro.props;
 const offer = ES_PLATFORM_OFFERS[platform];
 ---
 
-<div class="top-offer-bar" id="top-offer-bar" hidden>
+<!-- CLS: visible en SSR; si ya fue cerrada en esta sesión se oculta de forma síncrona. -->
+<div class="top-offer-bar" id="top-offer-bar">
   <a
     href={esGoPath(platform)}
     class="top-offer-bar__link"
@@ -59,6 +60,14 @@ const offer = ES_PLATFORM_OFFERS[platform];
     &times;
   </button>
 </div>
+<script is:inline>
+  try { if (sessionStorage.getItem('ea_top_offer_dismissed') === '1') document.getElementById('top-offer-bar').setAttribute('hidden', ''); } catch (e) {}
+</script>
+
+<style is:global>
+  :root { --top-offer-h: 40px; }
+  @media (max-width: 640px) { :root { --top-offer-h: 36px; } }
+</style>
 
 <style>
   .top-offer-bar {
@@ -192,21 +201,16 @@ const offer = ES_PLATFORM_OFFERS[platform];
        ─ Re-medimos en cada resize porque la altura difiere entre
          escritorio (40px) y móvil ≤640px (36px).
     */
-    function syncHeight() {
-      var h = (dismissed || bar.hasAttribute('hidden')) ? 0 : bar.offsetHeight;
-      root.style.setProperty('--top-offer-h', h + 'px');
-    }
+    // 2026-10-03: sin leer offsetHeight en la carga (reflow forzado); la altura inicial
+    // viene de los valores por defecto de --top-offer-h (40px / 36px en ≤640px).
+    if (dismissed) bar.setAttribute('hidden', '');
 
-    if (dismissed) {
-      bar.setAttribute('hidden', '');
-    } else {
-      bar.removeAttribute('hidden');
+    if (dismissed) root.style.setProperty('--top-offer-h', '0px');
+    else if ('ResizeObserver' in window) {
+      new ResizeObserver(function () {
+        if (!bar.hasAttribute('hidden')) root.style.setProperty('--top-offer-h', bar.offsetHeight + 'px');
+      }).observe(bar);
     }
-
-    syncHeight();
-    requestAnimationFrame(syncHeight);
-    setTimeout(syncHeight, 250);
-    window.addEventListener('resize', syncHeight, { passive: true });
 
     if (closeBtn) {
       closeBtn.addEventListener('click', function (e) {
@@ -215,8 +219,7 @@ const offer = ES_PLATFORM_OFFERS[platform];
         dismissed = true;
         bar.setAttribute('hidden', '');
         try { sessionStorage.setItem(KEY, '1'); } catch (err) {}
-        syncHeight();
-        requestAnimationFrame(syncHeight);
+        root.style.setProperty('--top-offer-h', '0px');
       });
     }
   })();

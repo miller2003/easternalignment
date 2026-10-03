@@ -19,8 +19,28 @@ const POSTHOG_HOST = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.postho
       api_host: POSTHOG_HOST,
       person_profiles: 'identified_only',
       autocapture: true,
-      capture_pageview: true
+      capture_pageview: true,
+      // 2026-10-03 性能：PageSpeed 里 PostHog 实际下载 217 KiB，其中 array.js 以外的
+      // 都是按远程配置懒加载的扩展：录屏 recorder 67 KiB、问卷 33 KiB、
+      // web-vitals 8 KiB、dead-clicks 9 KiB。站点没用问卷；web-vitals / dead-clicks
+      // 不在任何分析报告里出现 → 关闭。录屏保留，但推迟到访客第一次交互后才启动
+      // （见下方 startSessionRecording），首屏不再为它付出下载与解析成本。
+      disable_surveys: true,
+      capture_dead_clicks: false,
+      capture_performance: { web_vitals: false },
+      disable_session_recording: true
     });
+    (function () {
+      var started = false;
+      function startReplay() {
+        if (started) return;
+        started = true;
+        try { if (window.posthog && typeof posthog.startSessionRecording === 'function') posthog.startSessionRecording(); } catch (_) {}
+      }
+      ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) {
+        window.addEventListener(ev, startReplay, { once: true, passive: true });
+      });
+    })();
   } else {
     console.warn("PostHog Analytics: PUBLIC_POSTHOG_KEY is not set. Analytics disabled — affiliate redirect attribution still active.");
   }

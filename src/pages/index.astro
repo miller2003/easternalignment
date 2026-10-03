@@ -710,7 +710,7 @@ const pageSchema = {
             {r.proof && <p class="adv-proof">{r.proof}</p>}
             {r.bestFor && <p class="adv-for"><strong>Best for:</strong> {shorten(r.bestFor)}</p>}
             <div class="adv-actions">
-              <a href={r.affiliateUrl} class="btn btn--primary btn--sm" rel="nofollow sponsored" target="_blank" data-cta-source="home-advisor">See profile on {r.platformName} →</a>
+              <a href={r.affiliateUrl} class="btn btn--primary btn--sm" rel="nofollow sponsored" target="_blank" data-cta-source="home-advisor">See profile<span class="sr-only"> of {r.name}</span> on {r.platformName} →</a>
               <a href={r.url} class="adv-audit">Read our audit</a>
             </div>
           </article>
@@ -766,7 +766,7 @@ const pageSchema = {
       </div>
 
       <figure class="author">
-        <img src="/sarah-avatar.jpg" alt="Sarah, founder of Eastern Alignment" width="72" height="72" loading="lazy" />
+        <img src="/sarah-avatar-200.webp" alt="Sarah, founder of Eastern Alignment" width="72" height="72" loading="lazy" />
         <figcaption>
           <p class="author-quote">
             “I’ve studied astrology, tarot, BaZi and feng shui since I was 21, and I’ve spent the last three years
@@ -910,6 +910,14 @@ const pageSchema = {
 
   .data-note a {
     color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* 无障碍：正文段落里的链接不能只靠颜色区分 */
+  .steps p a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   /* ── guide-topic links under the situation router ── */
@@ -1481,7 +1489,7 @@ const pageSchema = {
     right: var(--space-5);
     transform: translateY(-50%);
     font-size: var(--text-lg);
-    color: var(--color-accent);
+    color: var(--color-primary);
     transition: transform var(--transition-fast);
   }
 

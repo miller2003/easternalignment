@@ -92,7 +92,7 @@ const { href, title, description, sectionLabel, position = 4 } = Astro.props;
     padding: var(--space-5, 1.25rem) var(--space-6, 1.5rem);
     background: var(--color-bg-alt, #f7f4ef);
     border: 1px solid var(--color-border, #e3ddd2);
-    border-left: 3px solid var(--color-primary, #8b6f4e);
+    border-left: 3px solid var(--color-primary, #7A5D3D);
     border-radius: var(--radius-md, 8px);
     display: flex;
     flex-direction: column;
@@ -118,13 +118,13 @@ const { href, title, description, sectionLabel, position = 4 } = Astro.props;
   }
 
   .mid-article-link:hover .mid-article-link__title {
-    color: var(--color-primary, #8b6f4e);
+    color: var(--color-primary, #7A5D3D);
   }
 
   .mid-article-link__desc {
     margin: 0;
     font-size: var(--text-sm, 0.875rem);
-    color: var(--color-text-muted, #7a746b);
+    color: var(--color-text-muted, #67615A);
     line-height: var(--leading-normal, 1.5);
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -135,7 +135,7 @@ const { href, title, description, sectionLabel, position = 4 } = Astro.props;
   .mid-article-link__cta {
     font-size: var(--text-sm, 0.875rem);
     font-weight: 500;
-    color: var(--color-primary, #8b6f4e);
+    color: var(--color-primary, #7A5D3D);
   }
 
   /* The whole card behaves as one link target for pointer users. */
@@ -152,6 +152,6 @@ const { href, title, description, sectionLabel, position = 4 } = Astro.props;
   }
 
   :global(.prose) .mid-article-link:hover a {
-    color: var(--color-primary, #8b6f4e);
+    color: var(--color-primary, #7A5D3D);
   }
 </style>

@@ -95,7 +95,7 @@ export const TOPIC_META: Record<string, TopicMeta> = {
   'getting-started': {
     label: 'Getting Started',
     tagline: 'Costs, preparation, red flags and first-reading offers.',
-    accent: '#8B6F4E',
+    accent: '#7A5D3D',
     tint: '#F3EDE7',
     icon: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
     seoTitle: 'Psychic Readings for Beginners 2026: Costs, Red Flags, Offers',

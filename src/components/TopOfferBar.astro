@@ -29,7 +29,10 @@ const { platform } = Astro.props;
 const offer = PLATFORM_OFFERS[platform];
 ---
 
-<div class="top-offer-bar" id="top-offer-bar" hidden>
+<!-- 2026-10-03 CLS：栏位在 SSR 时就是可见的（不再靠 JS 摘掉 hidden 才出现，
+     那会把整页内容往下推 36-40px，实测 CLS 0.117）。已关闭过的会话在栏位
+     解析前同步打上 hidden，仍然不会闪现。 -->
+<div class="top-offer-bar" id="top-offer-bar">
   <a
     href={goPath(platform)}
     class="top-offer-bar__link"
@@ -52,7 +55,7 @@ const offer = PLATFORM_OFFERS[platform];
       class="top-offer-bar__logo"
       width="18"
       height="18"
-      loading="lazy"
+      decoding="async"
       aria-hidden="true"
     />
     <span class="top-offer-bar__text">{offer.topBarLine}</span>
@@ -67,6 +70,14 @@ const offer = PLATFORM_OFFERS[platform];
     &times;
   </button>
 </div>
+<script is:inline>
+  try { if (sessionStorage.getItem('ea_top_offer_dismissed') === '1') document.getElementById('top-offer-bar').setAttribute('hidden', ''); } catch (e) {}
+</script>
+
+<style is:global>
+  :root { --top-offer-h: 40px; }
+  @media (max-width: 640px) { :root { --top-offer-h: 36px; } }
+</style>
 
 <style>
   .top-offer-bar {
@@ -202,22 +213,17 @@ const offer = PLATFORM_OFFERS[platform];
        ─ We re-measure on every resize because the bar's rendered height
          differs between desktop (40px) and mobile ≤640px (36px).
     */
-    function syncHeight() {
-      var h = (dismissed || bar.hasAttribute('hidden')) ? 0 : bar.offsetHeight;
-      root.style.setProperty('--top-offer-h', h + 'px');
-    }
+    // 2026-10-03：不再在加载时读 offsetHeight（强制同步重排）。栏高由下方的全局
+    // CSS 变量默认值（40px / ≤640px 为 36px）给出，ResizeObserver 只在真实尺寸
+    // 变化后才回写；关闭时直接写 0。
+    if (dismissed) bar.setAttribute('hidden', '');
 
-    if (dismissed) {
-      bar.setAttribute('hidden', '');
-    } else {
-      bar.removeAttribute('hidden');
+    if (dismissed) root.style.setProperty('--top-offer-h', '0px');
+    else if ('ResizeObserver' in window) {
+      new ResizeObserver(function () {
+        if (!bar.hasAttribute('hidden')) root.style.setProperty('--top-offer-h', bar.offsetHeight + 'px');
+      }).observe(bar);
     }
-
-    // Sync after layout settles (font load, media-query swap, etc.)
-    syncHeight();
-    requestAnimationFrame(syncHeight);
-    setTimeout(syncHeight, 250);
-    window.addEventListener('resize', syncHeight, { passive: true });
 
     if (closeBtn) {
       closeBtn.addEventListener('click', function (e) {
@@ -226,8 +232,7 @@ const offer = PLATFORM_OFFERS[platform];
         dismissed = true;
         bar.setAttribute('hidden', '');
         try { sessionStorage.setItem(KEY, '1'); } catch (err) {}
-        syncHeight();
-        requestAnimationFrame(syncHeight);
+        root.style.setProperty('--top-offer-h', '0px');
       });
     }
   })();

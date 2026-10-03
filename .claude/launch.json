@@ -4,8 +4,21 @@
     {
       "name": "astro-dev",
       "runtimeExecutable": "cmd",
-      "runtimeArgs": ["/c", "npx astro dev --port %PORT%"],
+      "runtimeArgs": [
+        "/c",
+        "npx astro dev --port %PORT%"
+      ],
       "port": 4321,
+      "autoPort": true
+    },
+    {
+      "name": "astro-preview",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": [
+        "/c",
+        "npx astro preview --port %PORT%"
+      ],
+      "port": 4322,
       "autoPort": true
     }
   ]

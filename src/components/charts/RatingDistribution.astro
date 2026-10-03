@@ -20,11 +20,11 @@ const maxCount = Math.max(...distribution);
 
 const labels = ['5★', '4★', '3★', '2★', '1★'];
 const colors = [
-  '#6B8F5E', // 5-star — green
+  '#4E7142', // 5-star — green
   '#7A8B6F', // 4-star — sage
   '#C4956A', // 3-star — accent
-  '#B85C4A', // 2-star — muted red
-  '#8B6F4E', // 1-star — primary
+  '#A64B3A', // 2-star — muted red
+  '#7A5D3D', // 1-star — primary
 ];
 
 const barHeight = 22;
@@ -79,7 +79,7 @@ const rows = distribution.map((count, i) => {
             text-anchor="end"
             font-size="13"
             font-weight="600"
-            fill="var(--color-text-muted, #7A746B)"
+            fill="var(--color-text-muted, #67615A)"
             font-family="Inter, system-ui, sans-serif"
           >{row.label}</text>
 
@@ -114,7 +114,7 @@ const rows = distribution.map((count, i) => {
             font-family="Inter, system-ui, sans-serif"
           >
             {row.count.toLocaleString()}
-            <tspan font-size="11" fill="var(--color-text-light, #9E9689)"> ({row.pct}%)</tspan>
+            <tspan font-size="11" fill="var(--color-text-light, #6F695F)"> ({row.pct}%)</tspan>
           </text>
         </g>
       ))}

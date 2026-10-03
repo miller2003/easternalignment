@@ -8,10 +8,29 @@ const GA4_ID = 'G-YM1E05QJTK';
 ---
 
 <!-- Google tag (gtag.js) -->
-<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
+<!-- 2026-10-03 性能：gtag.js 175 KiB / 约 190ms 主线程，在 PageSpeed 里是第二大第三方。
+     dataLayer 与 gtag() 存根立即就位（config 命令先排队），脚本本体推迟到
+     「访客第一次交互」或「load 后 10 秒」二者先到者再加载，加载后队列按序回放，
+     页面浏览仍会被记录，只是首屏不再为它付费。 -->
 <script is:inline define:vars={{ GA4_ID }}>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', GA4_ID);
+  (function () {
+    var loaded = false;
+    function loadGtag() {
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+      document.head.appendChild(s);
+    }
+    ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) {
+      window.addEventListener(ev, loadGtag, { once: true, passive: true });
+    });
+    function later() { setTimeout(loadGtag, 10000); }
+    if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
+  })();
 </script>

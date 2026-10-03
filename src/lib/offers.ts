@@ -150,5 +150,5 @@ export function proofTooltip(key: PlatformKey): string {
  * when future revisions land.
  */
 export function platformLogo(key: PlatformKey, _size = 64): string {
-  return `/logos/${key}.png`;
+  return `/logos/${key}.webp`;
 }
