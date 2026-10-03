@@ -1,5 +1,5 @@
 {
- "sql": "\nWITH s AS (\n  SELECT properties.$session_id AS sid,\n         dateDiff('second', min(timestamp), max(timestamp)) AS dur,\n         countIf(event='$pageview') AS pv,\n         countIf(event='affiliate_link_click') AS clicks,\n         any(coalesce(nullIf(properties.$session_entry_referring_domain,''),'')) AS ref,\n         any(coalesce(nullIf(properties.$session_entry_utm_source,''),'')) AS utm\n  FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND timestamp >= toDateTime(1790870400) AND timestamp < toDateTime(1790913078)\n        AND properties.$session_id IS NOT NULL\n  GROUP BY sid\n)\nSELECT CASE\n    WHEN match(concat(coalesce(ref,''),' ',coalesce(utm,'')), '(?i)(chatgpt|openai|perplexity|claude|gemini|copilot|kimi|deepseek|grok)') THEN 'AI助手'\n    WHEN match(coalesce(ref,''), '(?i)(google|bing|yahoo|duckduckgo|yandex|ecosia)') THEN '搜索引擎'\n    WHEN ref = '$direct' OR coalesce(ref,'') = '' THEN '直接访问'\n    ELSE '外链引荐' END AS channel,\n  count() AS sessions, round(avg(dur),1) AS avg_dur,\n  round(100.0*countIf(pv<=1)/count(),1) AS bounce_pct,\n  sum(clicks) AS total_clicks, round(100.0*countIf(clicks>0)/count(),1) AS cvr_pct\nFROM s GROUP BY channel ORDER BY sessions DESC LIMIT 20\n",
+ "sql": "\nWITH s AS (\n  SELECT properties.$session_id AS sid,\n         dateDiff('second', min(timestamp), max(timestamp)) AS dur,\n         countIf(event='$pageview') AS pv,\n         countIf(event='affiliate_link_click') AS clicks,\n         any(coalesce(nullIf(properties.$session_entry_referring_domain,''),'')) AS ref,\n         any(coalesce(nullIf(properties.$session_entry_utm_source,''),'')) AS utm\n  FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND timestamp >= toDateTime(1790956800) AND timestamp < toDateTime(1790992797)\n        AND properties.$session_id IS NOT NULL\n  GROUP BY sid\n)\nSELECT CASE\n    WHEN match(concat(coalesce(ref,''),' ',coalesce(utm,'')), '(?i)(chatgpt|openai|perplexity|claude|gemini|copilot|kimi|deepseek|grok)') THEN 'AI助手'\n    WHEN match(coalesce(ref,''), '(?i)(google|bing|yahoo|duckduckgo|yandex|ecosia)') THEN '搜索引擎'\n    WHEN ref = '$direct' OR coalesce(ref,'') = '' THEN '直接访问'\n    ELSE '外链引荐' END AS channel,\n  count() AS sessions, round(avg(dur),1) AS avg_dur,\n  round(100.0*countIf(pv<=1)/count(),1) AS bounce_pct,\n  sum(clicks) AS total_clicks, round(100.0*countIf(clicks>0)/count(),1) AS cvr_pct\nFROM s GROUP BY channel ORDER BY sessions DESC LIMIT 20\n",
  "columns": [
   "channel",
   "sessions",
@@ -11,27 +11,27 @@
  "results": [
   [
    "搜索引擎",
-   4,
-   80.8,
-   100.0,
+   6,
+   381.2,
+   83.3,
    0,
    0.0
   ],
   [
    "直接访问",
    2,
-   2.0,
-   100.0,
-   0,
-   0.0
+   345.0,
+   50.0,
+   3,
+   50.0
   ],
   [
    "AI助手",
    1,
-   0.0,
+   87.0,
    100.0,
-   0,
-   0.0
+   2,
+   100.0
   ]
  ],
  "hasMore": null

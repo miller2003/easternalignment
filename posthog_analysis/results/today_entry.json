@@ -1,5 +1,5 @@
 {
- "sql": "\nWITH s AS (\n  SELECT properties.$session_id AS sid,\n         countIf(event='affiliate_link_click') AS clicks,\n         any(coalesce(nullIf(properties.$session_entry_pathname,''),'(空)')) AS entry,\n         any(coalesce(nullIf(properties.$session_entry_referring_domain,''),'$direct')) AS ref\n  FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND timestamp >= toDateTime(1790870400) AND timestamp < toDateTime(1790913078)\n        AND properties.$session_id IS NOT NULL\n  GROUP BY sid\n)\nSELECT entry, ref, count() AS sessions, sum(clicks) AS total_clicks,\n       round(100.0*countIf(clicks>0)/count(),1) AS cvr_pct\nFROM s GROUP BY entry, ref ORDER BY sessions DESC LIMIT 40\n",
+ "sql": "\nWITH s AS (\n  SELECT properties.$session_id AS sid,\n         countIf(event='affiliate_link_click') AS clicks,\n         any(coalesce(nullIf(properties.$session_entry_pathname,''),'(空)')) AS entry,\n         any(coalesce(nullIf(properties.$session_entry_referring_domain,''),'$direct')) AS ref\n  FROM events WHERE coalesce(properties.$host,'') = 'easternalignment.com'\n  AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND coalesce(properties.$session_entry_referring_domain,'') NOT IN ('localhost:4321','127.0.0.1:8188','127.0.0.1:8765','localhost:8765','127.0.0.1:8931')\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND timestamp >= toDateTime(1790956800) AND timestamp < toDateTime(1790992797)\n        AND properties.$session_id IS NOT NULL\n  GROUP BY sid\n)\nSELECT entry, ref, count() AS sessions, sum(clicks) AS total_clicks,\n       round(100.0*countIf(clicks>0)/count(),1) AS cvr_pct\nFROM s GROUP BY entry, ref ORDER BY sessions DESC LIMIT 40\n",
  "columns": [
   "entry",
   "ref",
@@ -9,8 +9,29 @@
  ],
  "results": [
   [
-   "/astrology/zodiac/sagittarius",
-   "$direct",
+   "/guides/best-twin-flame-psychics-online/",
+   "www.google.com",
+   1,
+   0,
+   0.0
+  ],
+  [
+   "/reviews/kasamba/love-specialist-isabelle-kasamba-review/",
+   "www.google.com",
+   1,
+   0,
+   0.0
+  ],
+  [
+   "/guides/most-accurate-psychics-kasamba/",
+   "www.google.com",
+   1,
+   0,
+   0.0
+  ],
+  [
+   "/reviews/keen/",
+   "www.google.com",
    1,
    0,
    0.0
@@ -19,8 +40,15 @@
    "/reviews/keen/",
    "$direct",
    1,
-   0,
-   0.0
+   2,
+   100.0
+  ],
+  [
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   "$direct",
+   1,
+   3,
+   100.0
   ],
   [
    "/guides/karmic-relationships-signs-and-lessons/",
@@ -30,29 +58,15 @@
    0.0
   ],
   [
-   "/reviews/keen/gina-marie/",
+   "/guides/love-after-loss-mediums/",
    "www.google.com",
    1,
    0,
    0.0
   ],
   [
-   "/",
+   "/guides/aura-reading-meaning-colors/",
    "$direct",
-   1,
-   0,
-   0.0
-  ],
-  [
-   "/guides/brutally-honest-psychics-keen/",
-   "www.bing.com",
-   1,
-   0,
-   0.0
-  ],
-  [
-   "/guides/best-tarot-readers-for-love/",
-   "www.google.com",
    1,
    0,
    0.0

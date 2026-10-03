@@ -35,8 +35,7 @@
 - es 路由 `[lector].astro` 绕过 content.config.ts 的 zod 校验(写错不报错)。
 - 部署前 `git status --porcelain` 确认工作区已提交。
 
-## 转化回传链路(2026-09-28,勿回退)
-- 事件名只有 `Order_Converted`;lead($0)/sale 靠 `properties.conversion_type` 区分,勿拆事件名。
+## 转化回传链路(2026-09-28,勿回退)- 事件名只有 `Order_Converted`;lead($0)/sale 靠 `properties.conversion_type` 区分,勿拆事件名。
 - `$insert_id = ea-pb-<txn>-<type>-<payout>`,撤销追加 `-<status>` 另开一条。revenue:lead=0、sale=实收、撤销=负值;笔数按 `transaction_id` 去重。
 - 平台识别 = `aff_sub2` 第三段。**未修缺口**:`OFFER_TO_PLATFORM_CODE`(go 页)与 `OFFER_TO_PLATFORM`(postback.js)只有 221/191/30,缺 34/42/209 → psi platform 恒为 null。
 - Lead 收不到:barges 回传页 3 行「目标」全是 First Purchase → 需**新增**注册类目标行(现有 3 行勿动)。代码 `functions/api/postback.js`。
@@ -46,3 +45,15 @@
 - Match quiz 红线:选项不点名平台、无「直接给结果」标签。`mysticdo` 只读。
 - CF zone 开 Hotlink Protection:跨站 Referer 图片 403;PostHog 回放破图是回放侧假象。
 - 勿重复调研:TUNE/HasOffers 无「解读师实时在线状态」API。
+
+## AI 渠道口径(2026-10-03 定版)
+- **AI 会话不能用 referrer 判定**:265 个 AI 会话里 **230 个(87%)是 `referrer=$direct` + `utm_source=chatgpt.com`**
+  (ChatGPT 会剥掉 referrer)。判定必须 `ref + utm_source` 双字段,只看 refdom 会漏掉九成。
+- **「某渠道是不是变少了」用滚动窗口 + 分位**,且**当日(未满日)必须剔除**;同时给全期分位与近 4 周分位
+  (全期含爬升期,会掩盖近期回落)。判「渠道掉了」还是「全站掉了」看**渠道占比**,不看绝对值。
+- **AI 可读性判据 = `Accept: text/markdown` 的 Content-Type 是否变 `text/markdown`**;
+  边缘 Markdown 转换器有 **150KB 上限**,超限页回落 HTML。已知超限页:`/reviews/kasamba/`(467KB)。
+  首页在 2026-10-02 外置 363KB reader JSON 之前也是超限的,已修好。
+- 2026-09-29~10-02 的 AI 低位属**全站性下滑**(AI 占比 28.0%→26.8% 未变),
+  排除项:部署时间对不上 / 埋点未坏 / 内容未停更(最新 lastmod 10-02)/ 爬虫全 200。
+- 盲区:**未接 GSC 与 Bing Webmaster** → 看不到「哪些 query/页面不再被引用」,是最高优先补齐项。

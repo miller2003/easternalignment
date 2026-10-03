@@ -1,0 +1,91 @@
+{
+ "robots": [
+  200,
+  2287,
+  false
+ ],
+ "llms": [
+  200,
+  88104
+ ],
+ "md": [
+  [
+   "/",
+   200,
+   "text/markdown; charset=utf-8",
+   22373
+  ],
+  [
+   "/guides/best-tarot-readers-for-love/",
+   200,
+   "text/markdown; charset=utf-8",
+   19135
+  ],
+  [
+   "/reviews/kasamba/",
+   200,
+   "text/html; charset=utf-8",
+   467715
+  ]
+ ],
+ "ua": [
+  [
+   "GPTBot/1.2",
+   200,
+   120306
+  ],
+  [
+   "OAI-SearchBot/1.0",
+   200,
+   120306
+  ],
+  [
+   "ChatGPT-User/1.0",
+   200,
+   120306
+  ],
+  [
+   "PerplexityBot/1.0",
+   200,
+   120306
+  ],
+  [
+   "ClaudeBot/1.0",
+   200,
+   120306
+  ],
+  [
+   "Googlebot/2.1",
+   200,
+   120306
+  ]
+ ],
+ "sitemap_latest": "2026-10-02",
+ "sitemap_urls": 461,
+ "lastmod_top": [
+  [
+   "2026-10-02",
+   14
+  ],
+  [
+   "2026-09-29",
+   66
+  ],
+  [
+   "2026-09-21",
+   53
+  ],
+  [
+   "2026-09-20",
+   3
+  ],
+  [
+   "2026-09-19",
+   31
+  ],
+  [
+   "2026-09-18",
+   29
+  ]
+ ]
+}

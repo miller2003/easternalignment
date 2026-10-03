@@ -1,0 +1,127 @@
+{
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t, event,\n       coalesce(properties.$pathname,'') AS path,\n       coalesce(properties.$geoip_country_code,'') AS cc,\n       coalesce(toString(properties.slug),'') AS slug,\n       coalesce(toString(properties.ctaSource),'') AS cta,\n       coalesce(toString(properties.text),'') AS txt,\n       toString(properties.time_on_page_ms) AS tms,\n       toString(properties.$session_id) AS sid\nFROM events WHERE (distinct_id='01a0fd5b-647b-7acb-92bc-0b90c9c24b7c' OR toString(person_id)='01a0fd5b-647b-7acb-92bc-0b90c9c24b7c')\n  AND timestamp >= toDateTime(1790784000)\nORDER BY timestamp LIMIT 300\n",
+ "columns": [
+  "t",
+  "event",
+  "path",
+  "cc",
+  "slug",
+  "cta",
+  "txt",
+  "tms",
+  "sid"
+ ],
+ "results": [
+  [
+   "2026-10-02 23:59:54.913000",
+   "$pageview",
+   "/reviews/keen/",
+   "US",
+   "",
+   "",
+   "",
+   null,
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:00:00.221000",
+   "$web_vitals",
+   "/reviews/keen/",
+   "US",
+   "",
+   "",
+   "",
+   null,
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:00:05.526000",
+   "$autocapture",
+   "/reviews/keen/",
+   "US",
+   "",
+   "",
+   "",
+   null,
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:00:05.531000",
+   "affiliate_link_click",
+   "/reviews/keen/",
+   "US",
+   "keen",
+   "hero",
+   "Get 5 Mins for $1 →",
+   "10660",
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:01:21.736000",
+   "$web_vitals",
+   "/reviews/keen/",
+   "US",
+   "",
+   "",
+   "",
+   null,
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:01:21.759000",
+   "$pageleave",
+   "/reviews/keen/",
+   "US",
+   "",
+   "",
+   "",
+   null,
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:01:23.644000",
+   "$pageview",
+   "/reviews/keen/",
+   "US",
+   "",
+   "",
+   "",
+   null,
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:01:27.335000",
+   "affiliate_link_click",
+   "/reviews/keen/",
+   "US",
+   "keen",
+   "hero",
+   "Claim 5 Minutes for $1 →",
+   "3697",
+   "01a0fd5b-64a2-78eb-bbc8-416eb5faadb3"
+  ],
+  [
+   "2026-10-03 00:03:51.239000",
+   "aff_go_hit",
+   "",
+   "US",
+   "keen",
+   "",
+   "",
+   null,
+   null
+  ],
+  [
+   "2026-10-03 00:05:12.841000",
+   "aff_go_hit",
+   "",
+   "US",
+   "keen",
+   "",
+   "",
+   null,
+   null
+  ]
+ ],
+ "hasMore": null
+}

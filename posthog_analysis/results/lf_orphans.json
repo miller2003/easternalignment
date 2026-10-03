@@ -1,11 +1,16 @@
 {
- "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(toString(properties.transaction_id),''),'') AS txn,\n       coalesce(nullIf(toString(properties.raw_params),''),'') AS raw\nFROM events WHERE coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='Postback_Orphan'\n  AND timestamp >= toDateTime(1785686400) AND timestamp < toDateTime(1790913195)\nORDER BY timestamp DESC LIMIT 200\n",
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       coalesce(nullIf(toString(properties.transaction_id),''),'') AS txn,\n       coalesce(nullIf(toString(properties.raw_params),''),'') AS raw\nFROM events WHERE coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386')) AND event='Postback_Orphan'\n  AND timestamp >= toDateTime(1785772800) AND timestamp < toDateTime(1790993107)\nORDER BY timestamp DESC LIMIT 200\n",
  "columns": [
   "t",
   "txn",
   "raw"
  ],
  "results": [
+  [
+   "2026-10-03 06:00:19.991000",
+   "unknown",
+   "{\"click_id\":\"\"}"
+  ],
   [
    "2026-09-29 10:27:13.089000",
    "unknown",

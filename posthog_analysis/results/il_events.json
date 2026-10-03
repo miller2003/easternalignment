@@ -1,0 +1,166 @@
+{
+ "columns": [
+  "t",
+  "event",
+  "path",
+  "tms"
+ ],
+ "results": [
+  [
+   "2026-10-03 06:57:38.559000",
+   "$pageview",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:57:44.771000",
+   "$web_vitals",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:58:01.284000",
+   "aff_go_hit",
+   "",
+   null
+  ],
+  [
+   "2026-10-03 06:58:01.412000",
+   "$autocapture",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:58:01.453000",
+   "affiliate_link_click",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   "22895"
+  ],
+  [
+   "2026-10-03 06:58:05.186000",
+   "$web_vitals",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:09.104000",
+   "$autocapture",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:09.351000",
+   "$pageleave",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:09.647000",
+   "$pageview",
+   "/reviews/kasamba/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:14.692000",
+   "$web_vitals",
+   "/reviews/kasamba/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:24.653000",
+   "$pageleave",
+   "/reviews/kasamba/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:24.725000",
+   "$pageview",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:29.960000",
+   "$web_vitals",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:35.228000",
+   "$pageview",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:40.282000",
+   "$web_vitals",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:50.589000",
+   "aff_go_hit",
+   "",
+   null
+  ],
+  [
+   "2026-10-03 06:59:50.718000",
+   "$autocapture",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 06:59:50.768000",
+   "affiliate_link_click",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   "15514"
+  ],
+  [
+   "2026-10-03 06:59:55.888000",
+   "$web_vitals",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 07:01:48.100000",
+   "$autocapture",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 07:01:58.324000",
+   "$autocapture",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 07:01:59.965000",
+   "$autocapture",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 07:02:07.954000",
+   "aff_go_hit",
+   "",
+   null
+  ],
+  [
+   "2026-10-03 07:02:08.116000",
+   "$autocapture",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ],
+  [
+   "2026-10-03 07:02:08.144000",
+   "affiliate_link_click",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   "152869"
+  ],
+  [
+   "2026-10-03 07:02:26.233000",
+   "$pageleave",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   null
+  ]
+ ]
+}

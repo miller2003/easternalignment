@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT coalesce(nullIf(toString(properties.click_token),''),'') AS token,\n       coalesce(nullIf(toString(properties.location),''),'') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'') AS cta,\n       coalesce(nullIf(toString(properties.slug),''),'') AS slug,\n       coalesce(nullIf(toString(properties.page_type),''),'') AS ptype,\n       toString(properties.$session_entry_utm_source) AS utm,\n       coalesce(nullIf(toString(properties.$session_entry_referring_domain),''),'') AS ref,\n       toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       toString(properties.time_on_page_ms) AS tms\nFROM events WHERE event='affiliate_link_click'\n  AND timestamp >= toDateTime(1785686400 - 86400) AND timestamp < toDateTime(1790913195)\nORDER BY timestamp DESC LIMIT 800\n",
+ "sql": "\nSELECT coalesce(nullIf(toString(properties.click_token),''),'') AS token,\n       coalesce(nullIf(toString(properties.location),''),'') AS page,\n       coalesce(nullIf(toString(properties.ctaSource),''),'') AS cta,\n       coalesce(nullIf(toString(properties.slug),''),'') AS slug,\n       coalesce(nullIf(toString(properties.page_type),''),'') AS ptype,\n       toString(properties.$session_entry_utm_source) AS utm,\n       coalesce(nullIf(toString(properties.$session_entry_referring_domain),''),'') AS ref,\n       toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       toString(properties.time_on_page_ms) AS tms\nFROM events WHERE event='affiliate_link_click'\n  AND timestamp >= toDateTime(1785772800 - 86400) AND timestamp < toDateTime(1790993107)\nORDER BY timestamp DESC LIMIT 800\n",
  "columns": [
   "token",
   "page",
@@ -12,6 +12,72 @@
   "tms"
  ],
  "results": [
+  [
+   "u1492x",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   "topbar",
+   "kasamba",
+   "review",
+   null,
+   "$direct",
+   "2026-10-03 07:02:08.144000",
+   "152869"
+  ],
+  [
+   "ibltcf",
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   "hero",
+   "kasamba-matthew",
+   "review",
+   null,
+   "$direct",
+   "2026-10-03 06:59:50.768000",
+   "15514"
+  ],
+  [
+   "uhmxa8",
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   "hero",
+   "kasamba-the-fruno",
+   "review",
+   null,
+   "$direct",
+   "2026-10-03 06:58:01.453000",
+   "22895"
+  ],
+  [
+   "q867d4",
+   "/reviews/keen/",
+   "hero",
+   "keen",
+   "review",
+   "chatgpt.com",
+   "$direct",
+   "2026-10-03 00:01:27.335000",
+   "3697"
+  ],
+  [
+   "s9wc4s",
+   "/reviews/keen/",
+   "hero",
+   "keen",
+   "review",
+   "chatgpt.com",
+   "$direct",
+   "2026-10-03 00:00:05.531000",
+   "10660"
+  ],
+  [
+   "e2o7s9",
+   "/reviews/purple-garden/psychic-advisor-serena/",
+   "hero",
+   "purple-garden-serena",
+   "review",
+   null,
+   "$direct",
+   "2026-10-02 12:51:37.605000",
+   "14299"
+  ],
   [
    "roq5fm",
    "/reviews/purple-garden/",
@@ -3299,28 +3365,6 @@
    "chatgpt.com",
    "$direct",
    "2026-08-04 06:01:34.878000",
-   null
-  ],
-  [
-   "",
-   "/reviews/kasamba/wisdom-and-love-kasamba-review/",
-   "",
-   "",
-   "",
-   "chatgpt.com",
-   "$direct",
-   "2026-08-02 07:48:37.816000",
-   null
-  ],
-  [
-   "",
-   "/reviews/kasamba/wisdom-and-love-kasamba-review/",
-   "",
-   "",
-   "",
-   "chatgpt.com",
-   "$direct",
-   "2026-08-02 07:48:09.013000",
    null
   ]
  ]

@@ -1,0 +1,28 @@
+{
+ "columns": [
+  "brv",
+  "os",
+  "osv",
+  "dev",
+  "vw",
+  "vh",
+  "tz",
+  "city",
+  "eurl",
+  "ref"
+ ],
+ "results": [
+  [
+   "26.6",
+   "iOS",
+   "18.7.0",
+   "Mobile",
+   "440",
+   "796",
+   "Asia/Jerusalem",
+   "Ganei Tikva",
+   "https://easternalignment.com/reviews/kasamba/the-fruno-kasamba-review/",
+   "$direct"
+  ]
+ ]
+}

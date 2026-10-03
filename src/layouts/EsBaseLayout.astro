@@ -210,7 +210,9 @@ const websiteSchema = {
     <!-- Google Fonts: same as main site -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- 非阻塞加载字体 CSS（media=print → onload 切回 all）；display=swap 保证先出系统字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
     <!-- Affiliate host + PostHog preconnects (parity with BaseLayout) -->
     <link rel="dns-prefetch" href={ES_AFFILIATE_ORIGIN} />

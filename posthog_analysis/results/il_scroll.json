@@ -1,0 +1,28 @@
+{
+ "columns": [
+  "path",
+  "prevdur",
+  "scroll",
+  "content"
+ ],
+ "results": [
+  [
+   "/reviews/kasamba/the-fruno-kasamba-review/",
+   "90.819",
+   "0.20575294857100604",
+   "0.22845957691340732"
+  ],
+  [
+   "/reviews/kasamba/",
+   "15.005",
+   "0.04206746003802549",
+   "0.052687288477876355"
+  ],
+  [
+   "/reviews/kasamba/master-advisor-matthew-kasamba-review/",
+   "171.002",
+   "0.2538255547054323",
+   "0.272292003482154"
+  ]
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "columns": [
+  "click_t",
+  "tok",
+  "slug",
+  "page",
+  "cta",
+  "tms",
+  "pbc",
+  "seq",
+  "first",
+  "cc",
+  "dev"
+ ],
+ "results": [
+  [
+   "2026-09-13 06:42:58.801000",
+   "ysjyb2",
+   "kasamba",
+   "/",
+   "above-fold",
+   "17403",
+   "1",
+   "1",
+   "true",
+   "US",
+   "Mobile"
+  ],
+  [
+   "2026-09-14 20:23:11.331000",
+   "v6a0be",
+   "kasamba",
+   "/guides/best-mediums-on-kasamba/",
+   "inline",
+   "23780",
+   "1",
+   "1",
+   "true",
+   "AU",
+   "Mobile"
+  ],
+  [
+   "2026-09-18 09:20:37.738000",
+   "d3si7w",
+   "kasamba",
+   "/",
+   "comparison",
+   "77898",
+   "1",
+   "3",
+   "false",
+   "CA",
+   "Mobile"
+  ]
+ ]
+}

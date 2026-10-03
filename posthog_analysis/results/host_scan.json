@@ -1,5 +1,5 @@
 {
- "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1788278400)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
+ "sql": "\nSELECT coalesce(nullIf(properties.$session_entry_referring_domain,''),'(empty)') AS ref,\n       coalesce(nullIf(properties.$host,''),'(no-host)') AS host,\n       count(DISTINCT properties.$session_id) AS sessions\nFROM events\nWHERE timestamp >= toDateTime(1788364800)\nGROUP BY ref, host ORDER BY sessions DESC LIMIT 60\n",
  "columns": [
   "ref",
   "host",
@@ -9,7 +9,7 @@
   [
    "$direct",
    "easternalignment.com",
-   500
+   496
   ],
   [
    "www.google.com",
@@ -19,7 +19,7 @@
   [
    "$direct",
    "mysticdo.com",
-   67
+   96
   ],
   [
    "chatgpt.com",
@@ -27,18 +27,23 @@
    23
   ],
   [
-   "easternalignment.com",
-   "easternalignment.com",
-   22
-  ],
-  [
    "www.bing.com",
    "easternalignment.com",
    14
   ],
   [
-   "search.yahoo.com",
    "easternalignment.com",
+   "easternalignment.com",
+   13
+  ],
+  [
+   "$direct",
+   "localhost:4321",
+   6
+  ],
+  [
+   "www.google.com",
+   "mysticdo.com",
    6
   ],
   [
@@ -47,13 +52,8 @@
    6
   ],
   [
-   "$direct",
-   "localhost:4321",
-   5
-  ],
-  [
-   "www.google.com",
-   "mysticdo.com",
+   "search.yahoo.com",
+   "easternalignment.com",
    5
   ],
   [
@@ -77,14 +77,19 @@
    3
   ],
   [
+   "www.facebook.com",
+   "easternalignment.com",
+   3
+  ],
+  [
    "$direct",
    "easternalignment.pages.dev",
    3
   ],
   [
-   "www.facebook.com",
-   "easternalignment.com",
-   3
+   "bing.com",
+   "mysticdo.com",
+   2
   ],
   [
    "127.0.0.1:8765",
@@ -102,6 +107,11 @@
    2
   ],
   [
+   "www.pinterest.com",
+   "easternalignment.com",
+   1
+  ],
+  [
    "metamask.github.io",
    "easternalignment.com",
    1
@@ -112,17 +122,22 @@
    1
   ],
   [
-   "www.pinterest.com",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "172.16.130.48:806",
-   "easternalignment.com",
+   "localhost:52749",
+   "localhost:52749",
    1
   ],
   [
    "cn.bing.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "$direct",
+   "localhost:4323",
+   1
+  ],
+  [
+   "172.16.130.48:806",
    "easternalignment.com",
    1
   ],
@@ -132,8 +147,18 @@
    1
   ],
   [
+   "$direct",
+   "localhost:64383",
+   1
+  ],
+  [
    "grok.com",
    "easternalignment.com",
+   1
+  ],
+  [
+   "$direct",
+   "localhost:64285",
    1
   ],
   [
@@ -142,8 +167,18 @@
    1
   ],
   [
-   "search.google.com",
+   "rtp137.polalexis.pro",
    "easternalignment.com",
+   1
+  ],
+  [
+   "support.google.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "$direct",
+   "localhost:62348",
    1
   ],
   [
@@ -153,11 +188,6 @@
   ],
   [
    "www.hiveworkshop.com",
-   "easternalignment.com",
-   1
-  ],
-  [
-   "support.google.com",
    "easternalignment.com",
    1
   ],
@@ -172,17 +202,17 @@
    1
   ],
   [
-   "rtp137.polalexis.pro",
-   "easternalignment.com",
-   1
-  ],
-  [
    "$direct",
    "0ef55655.easternalignment.pages.dev",
    1
   ],
   [
    "fangguo.com",
+   "easternalignment.com",
+   1
+  ],
+  [
+   "kit-ru2.voximplant.com",
    "easternalignment.com",
    1
   ],
@@ -197,8 +227,18 @@
    1
   ],
   [
-   "www.google.com.au",
-   "easternalignment.com",
+   "$direct",
+   "localhost:52749",
+   1
+  ],
+  [
+   "$direct",
+   "localhost:8765",
+   1
+  ],
+  [
+   "$direct",
+   "localhost:63660",
    1
   ],
   [
@@ -207,13 +247,13 @@
    1
   ],
   [
-   "kit-ru2.voximplant.com",
+   "www.google.com.au",
    "easternalignment.com",
    1
   ],
   [
-   "$direct",
-   "localhost:8765",
+   "localhost:62348",
+   "localhost:62348",
    1
   ],
   [

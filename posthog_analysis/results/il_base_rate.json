@@ -1,0 +1,182 @@
+{
+ "columns": [
+  "ok",
+  "signup",
+  "sale",
+  "both",
+  "sale_only",
+  "signup_only",
+  "pay",
+  "customers",
+  "by_platform",
+  "countries"
+ ],
+ "results": [
+  {
+   "ok": true,
+   "signup": 12,
+   "sale": 7,
+   "both": 6,
+   "sale_only": 1,
+   "signup_only": 6,
+   "pay": 875.0,
+   "customers": [
+    {
+     "ad": "102c000203c50963649823a093db34",
+     "country": "United States",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-25 06:16:47",
+     "purchase": null,
+     "payout": 0.0,
+     "upgrade_h": null
+    },
+    {
+     "ad": "102524f5f3d971d4d460ce886709af",
+     "country": "Canada",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-18 10:21:22",
+     "purchase": "2026-09-19 09:25:22",
+     "payout": 125.0,
+     "upgrade_h": 23.07
+    },
+    {
+     "ad": "10274212e1028daed16844beab2502",
+     "country": "Nepal",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-16 05:45:28",
+     "purchase": null,
+     "payout": 0.0,
+     "upgrade_h": null
+    },
+    {
+     "ad": "1024a405690cbea72223c3ecefc0e4",
+     "country": "Australia",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-14 21:24:42",
+     "purchase": "2026-09-15 20:30:32",
+     "payout": 125.0,
+     "upgrade_h": 23.1
+    },
+    {
+     "ad": "102550ae463644ff8d26b22f2aa923",
+     "country": "Saudi Arabia",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-15 07:26:38",
+     "purchase": null,
+     "payout": 0.0,
+     "upgrade_h": null
+    },
+    {
+     "ad": "1025b14eca74012aad216ae2f933c9",
+     "country": "United States",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-13 07:27:23",
+     "purchase": "2026-09-14 06:31:58",
+     "payout": 125.0,
+     "upgrade_h": 23.08
+    },
+    {
+     "ad": "10214d8edf866dcfe5ebca9b719ca7",
+     "country": "United States",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-12 07:58:54",
+     "purchase": null,
+     "payout": 0.0,
+     "upgrade_h": null
+    },
+    {
+     "ad": "102e210fb60b4489ccf90c2eb7aad4",
+     "country": "United States",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-10 12:38:20",
+     "purchase": "2026-09-11 11:39:16",
+     "payout": 125.0,
+     "upgrade_h": 23.02
+    },
+    {
+     "ad": "102518b51a4acbf22ce7d00899a1af",
+     "country": "Netherlands",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-06 20:12:19",
+     "purchase": null,
+     "payout": 0.0,
+     "upgrade_h": null
+    },
+    {
+     "ad": "1023af50a2cfe6046ce11afaad152c",
+     "country": "United States",
+     "browser": "Android",
+     "signup": "2026-09-05 11:09:57",
+     "purchase": "2026-09-06 10:14:25",
+     "payout": 125.0,
+     "upgrade_h": 23.07
+    },
+    {
+     "ad": "1026baec543b750a74a1a01f5d554e",
+     "country": "Trinidad And Tobago",
+     "browser": "iPhone / iPod",
+     "signup": "2026-09-04 08:49:41",
+     "purchase": "2026-09-05 07:51:19",
+     "payout": 125.0,
+     "upgrade_h": 23.03
+    },
+    {
+     "ad": "102ff655afb2d90841c8dde1f763f5",
+     "country": "United Kingdom",
+     "browser": "Android",
+     "signup": "2026-09-05 06:22:52",
+     "purchase": null,
+     "payout": 0.0,
+     "upgrade_h": null
+    },
+    {
+     "ad": "1024b2bdd4dc155a747f19e7f6aeaa",
+     "country": "United States",
+     "browser": "iPhone / iPod",
+     "signup": null,
+     "purchase": "2026-09-01 22:31:51",
+     "payout": 125.0,
+     "upgrade_h": null
+    }
+   ],
+   "by_platform": {
+    "PurpleGarden": {
+     "s": 2,
+     "p": 3,
+     "both": 2,
+     "so": 0,
+     "po": 1,
+     "pay": 375.0
+    },
+    "Keen": {
+     "s": 2,
+     "p": 2,
+     "both": 0,
+     "so": 2,
+     "po": 2,
+     "pay": 100.0
+    },
+    "Kasamba": {
+     "s": 12,
+     "p": 7,
+     "both": 6,
+     "so": 6,
+     "po": 1,
+     "pay": 875.0
+    }
+   },
+   "countries": {
+    "Australia": 3,
+    "Canada": 2,
+    "Nepal": 1,
+    "Netherlands": 1,
+    "Saudi Arabia": 1,
+    "Sweden": 1,
+    "Switzerland": 1,
+    "Trinidad And Tobago": 2,
+    "United Kingdom": 2,
+    "United States": 14
+   }
+  }
+ ]
+}

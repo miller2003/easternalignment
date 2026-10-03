@@ -94,6 +94,9 @@ try {
 export default defineConfig({
     site: 'https://easternalignment.com',
     trailingSlash: 'always',
+    // 2026-10-03 性能：首页原本有 4 个阻塞渲染的 CSS 请求（PageSpeed 估算可省 ~1s）。
+    // 全部内联进 HTML，彻底去掉 CSS 关键路径请求。
+    build: { inlineStylesheets: 'always' },
     // Affiliate links written inline in Markdown (`[text](/go/slug/)`) used to
     // render as bare dofollow anchors. Google requires paid/affiliate links to
     // carry rel="sponsored". Stamping them at the rehype level means the rule

@@ -1,0 +1,159 @@
+{
+ "sql": "\nSELECT toString(toTimeZone(timestamp,'Asia/Shanghai')) AS t,\n       toString(properties.conversion_type) AS ct,\n       toString(properties.revenue) AS rev,\n       toString(properties.sub_id) AS sub,\n       toString(properties.transaction_id) AS txn,\n       toString(properties.click_token) AS tok,\n       toString(distinct_id) AS did\nFROM events WHERE event='Order_Converted' AND coalesce(properties.$geoip_country_code,'') != 'CN'\n  AND (person_id IS NULL OR toString(person_id) NOT IN ('8435b8d5-16b6-5f4b-9b71-f5d4d196ad00','83b89204-633d-56fa-9e65-202e62d839ff','259d7d34-120f-50a6-a260-3e7fa192ae79','8b444548-d415-5d49-88b2-f717feaba288','b7575d9c-8453-5600-874a-47188ad98ec8','01a0b5bc-770d-7c62-b34d-5416ccb6f386'))\n  AND timestamp >= toDateTime(1785772800)\nORDER BY timestamp LIMIT 200\n",
+ "columns": [
+  "t",
+  "ct",
+  "rev",
+  "sub",
+  "txn",
+  "tok",
+  "did"
+ ],
+ "results": [
+  [
+   "2026-08-14 23:22:27.206000",
+   null,
+   "50",
+   null,
+   "102380548055de713d7c0bea39eab7",
+   null,
+   "019ffb2d-00a3-7c37-9976-a40f82202a5d"
+  ],
+  [
+   "2026-08-21 09:50:20.201000",
+   null,
+   "50",
+   null,
+   "1021eacc4ab09ecee842dd93827242",
+   null,
+   "01a021f8-3353-78d7-81bd-875f487e2277"
+  ],
+  [
+   "2026-09-11 11:39:16.282000",
+   "sale",
+   "125",
+   "01a08960-da64-79be-9fd0-1a7a16d70a9c",
+   "102e210fb60b4489ccf90c2eb7aad4",
+   null,
+   "01a08960-da64-79be-9fd0-1a7a16d70a9c"
+  ],
+  [
+   "2026-09-14 06:31:58.467000",
+   "sale",
+   "125",
+   "01a097ba-44a4-7421-b162-b3558ee235d8.ysjyb2",
+   "1025b14eca74012aad216ae2f933c9",
+   "ysjyb2",
+   "01a097ba-44a4-7421-b162-b3558ee235d8"
+  ],
+  [
+   "2026-09-15 20:30:33.113000",
+   "sale",
+   "125",
+   "01a09fde-b35f-79eb-82dd-f53fe4a6baad.v6a0be",
+   "1024a405690cbea72223c3ecefc0e4",
+   "v6a0be",
+   "01a09fde-b35f-79eb-82dd-f53fe4a6baad"
+  ],
+  [
+   "2026-09-19 09:25:22.180000",
+   "sale",
+   "125",
+   "01a0b216-b033-7c86-bf1c-b304f17ec71c.d3si7w",
+   "102524f5f3d971d4d460ce886709af",
+   "d3si7w",
+   "01a0b216-b033-7c86-bf1c-b304f17ec71c"
+  ],
+  [
+   "2026-09-26 04:00:14.496000",
+   "sale",
+   "50",
+   "01a0da1f-aadc-7e84-b5e4-65322e391a39.fa5gn3",
+   "102b6f0db2b44ff5f3f57a362f4335",
+   "fa5gn3",
+   "01a0da1f-aadc-7e84-b5e4-65322e391a39"
+  ],
+  [
+   "2026-09-26 10:35:47.406000",
+   "sale",
+   "125",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2.pq98uh",
+   "1021fa03bbe74546c6111b9cf79db4",
+   "pq98uh",
+   "01a0d666-23c8-749b-8734-429f0ea50fe2"
+  ],
+  [
+   "2026-09-27 12:25:31.947000",
+   "sale",
+   "50",
+   "01a0e114-b83b-7d95-aa49-80ad849a62fd.fqwax3",
+   "10225e81ebeaa44361919beb27804e",
+   "fqwax3",
+   "01a0e114-b83b-7d95-aa49-80ad849a62fd"
+  ],
+  [
+   "2026-09-29 07:36:10.422000",
+   "sale",
+   "125",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9.bxteue",
+   "1023ae07b288cc99adcfc9970615c4",
+   "bxteue",
+   "01a0e4ee-ffe5-714b-bca7-fa56afa674f9"
+  ],
+  [
+   "2026-09-29 10:26:49.866000",
+   "lead",
+   "0",
+   "test123",
+   "unknown",
+   null,
+   "test123"
+  ],
+  [
+   "2026-09-29 10:27:10.222000",
+   "lead",
+   "0",
+   "test123",
+   "unknown",
+   null,
+   "test123"
+  ],
+  [
+   "2026-09-29 10:27:15.110000",
+   "sale",
+   "125",
+   "abc.def",
+   "zz1",
+   "def",
+   "abc"
+  ],
+  [
+   "2026-09-29 10:27:16.323000",
+   "lead",
+   "0",
+   "x.y",
+   "unknown",
+   "y",
+   "x"
+  ],
+  [
+   "2026-09-29 10:27:17.542000",
+   "lead",
+   "0",
+   "x.y",
+   "unknown",
+   "y",
+   "x"
+  ],
+  [
+   "2026-09-29 10:27:18.958000",
+   "lead",
+   "0",
+   "x.y",
+   "unknown",
+   "y",
+   "x"
+  ]
+ ],
+ "hasMore": null
+}

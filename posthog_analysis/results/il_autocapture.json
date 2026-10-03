@@ -1,0 +1,44 @@
+{
+ "columns": [
+  "t",
+  "et",
+  "txt"
+ ],
+ "results": [
+  [
+   "2026-10-03 06:58:01.412000",
+   "click",
+   "Get 3 Mins Free →"
+  ],
+  [
+   "2026-10-03 06:59:09.104000",
+   "click",
+   "Browse all Kasamba advisors"
+  ],
+  [
+   "2026-10-03 06:59:50.718000",
+   "click",
+   "Get 3 Mins Free →"
+  ],
+  [
+   "2026-10-03 07:01:48.100000",
+   "click",
+   null
+  ],
+  [
+   "2026-10-03 07:01:58.324000",
+   "click",
+   null
+  ],
+  [
+   "2026-10-03 07:01:59.965000",
+   "click",
+   null
+  ],
+  [
+   "2026-10-03 07:02:08.116000",
+   "click",
+   "Kasamba Special Offer: 3 FREE Mins + 50% Off Claim →"
+  ]
+ ]
+}
